@@ -1,0 +1,1310 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.安卓.OCCT几何 <注释 = "OpenCASCADE 7.8.0 全库封装 (自动生成, 请勿手改). 名称已汉化为中文显示名, 注释内附英文原名. TK 库 libTKGeomAlgo: 15 个类 / 166 个方法.">
+
+类 平面曲线间极值 <公开 注释 = "平面曲线间极值: 原类 Geom2dAPI_ExtremaCurveCurve (libTKGeomAlgo, 头文件 Geom2dAPI/Geom2dAPI_ExtremaCurveCurve.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 描述计算两条二维曲线间全部极值的功能. ExtremaCurveCurve 算法最小化或最大化第一条曲线上的点与第二条曲线上的点之间的距离. 因此它计算两曲线的公共垂线的起点与终点(交点不是极值, 除非两曲线在该点相切). 解由点对组成, 极值视为连接解中两点的线段. ExtremaCurveCurve 对象提供以下框架: - 定义极值的构造 - 实现构造算法 - 查询结果. 警告: 某些情况下, 两曲线间的最近点不对应任何已计算的极值. 它们可能由以下给出: - 一条曲线的极限点与以下之一: - 它在另一条曲线上的正投影, - 另一条曲线的极限点; 或 - 两曲线间的交点." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: Geom2dAPI_ExtremaCurveCurve. 官方简介: 计算以下两者之间的极值: - 曲线 C1 由两个参数点 (U1min,U1max) 限定的部分, 以及 - 曲线 C2 由两个参数点 (U2min,U2max) 限定的部分. 警告: 使用函数 NbExtrema 获取解的数量. 若该算法失败, NbExtrema 返回 0." @嵌入式方法 = "">
+    参数 C1 <类型 = 长整数>
+    参数 C2 <类型 = 长整数>
+    参数 U1min <类型 = 小数>
+    参数 U1max <类型 = 小数>
+    参数 U2min <类型 = 小数>
+    参数 U2max <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.Geom2dAPI_ExtremaCurveCurve.构造 (@<C1>, @<C2>, @<U1min>, @<U1max>, @<U2min>, @<U2max>)
+    }
+
+    方法 极值数 <公开 静态 类型 = 整数 注释 = "极值数. 原方法: NbExtrema. 官方简介: 返回该算法计算出的极值数量. 注意: 若该算法失败, NbExtrema 返回 0." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.Geom2dAPI_ExtremaCurveCurve.NbExtrema (@<对象>)
+    }
+
+    方法 转整数 <公开 静态 类型 = 整数 注释 = "转整数. 原转换: operator Standard_Integer." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.Geom2dAPI_ExtremaCurveCurve.转整数 (@<对象>)
+    }
+
+    方法 点 <公开 静态 注释 = "点. 原方法: Points. 官方简介: 返回第一条曲线上的点 P1 与第二条曲线上的点 P2, 它们是该算法求得的索引 Index 极值的端点. 若 Index 不在范围 [ 1,NbExtrema ] 内则抛出 Standard_OutOfRange, 其中 NbExtrema 是该算法计算的极值数量." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    参数 输出P1 <类型 = 长整数>
+    参数 输出P2 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.Geom2dAPI_ExtremaCurveCurve.Points (@<对象>, @<索引>, @<输出P1>, @<输出P2>)
+    }
+
+    方法 参数 <公开 静态 注释 = "参数. 原方法: Parameters. 官方简介: 返回第一条曲线上点的参数 U1 与第二条曲线上点的参数 U2, 它们是该算法求得的索引 Index 极值的端点. 若 Index 不在范围 [ 1,NbExtrema ] 内则抛出 Standard_OutOfRange, 其中 NbExtrema 是该算法计算的极值数量." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    参数 输出U1 <类型 = "小数 []">
+    参数 输出U2 <类型 = "小数 []">
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.Geom2dAPI_ExtremaCurveCurve.Parameters (@<对象>, @<索引>, @<输出U1>, @<输出U2>)
+    }
+
+    方法 距离 <公开 静态 类型 = 小数 注释 = "距离. 原方法: Distance. 官方简介: 计算该算法计算出的序号为 Index 的极值两端点之间的距离. 异常: 若 Index 不在范围 [ 1,NbExtrema ] 内则抛出 Standard_OutOfRange, 其中 NbExtrema 是该算法计算出的极值数量." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.Geom2dAPI_ExtremaCurveCurve.Distance (@<对象>, @<索引>)
+    }
+
+    方法 最近点 <公开 静态 注释 = "最近点. 原方法: NearestPoints. 官方简介: 返回第一条曲线上的点 P1 与第二条曲线上的点 P2, 它们是该算法求得的最短极值的端点. 若该算法失败则抛出 StdFail_NotDone." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 输出P1 <类型 = 长整数>
+    参数 输出P2 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.Geom2dAPI_ExtremaCurveCurve.NearestPoints (@<对象>, @<输出P1>, @<输出P2>)
+    }
+
+    方法 下界距离参数 <公开 静态 注释 = "下界距离参数. 原方法: LowerDistanceParameters. 官方简介: 返回第一条曲线上点的参数 U1 与第二条曲线上点的参数 U2, 它们是该算法求得的最短极值的端点. 若该算法失败则抛出 StdFail_NotDone." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 输出U1 <类型 = "小数 []">
+    参数 输出U2 <类型 = "小数 []">
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.Geom2dAPI_ExtremaCurveCurve.LowerDistanceParameters (@<对象>, @<输出U1>, @<输出U2>)
+    }
+
+    方法 下界距离 <公开 静态 类型 = 小数 注释 = "下界距离. 原方法: LowerDistance. 官方简介: 计算该算法求得的最短极值的两端点之间的距离. 异常 - 若该算法失败则抛出 StdFail_NotDone." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.Geom2dAPI_ExtremaCurveCurve.LowerDistance (@<对象>)
+    }
+
+    方法 转小数 <公开 静态 类型 = 小数 注释 = "转小数. 原转换: operator Standard_Real." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.Geom2dAPI_ExtremaCurveCurve.转小数 (@<对象>)
+    }
+
+}
+
+类 平面曲线求交 <公开 注释 = "平面曲线求交: 原类 Geom2dAPI_InterCurveCurve (libTKGeomAlgo, 头文件 Geom2dAPI/Geom2dAPI_InterCurveCurve.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 此类实现以下计算方法 - 两条二维曲线间的交点, - 一条二维曲线的自交点. 使用 InterCurveCurve 算法可得到以下结果: - 交叉相交时为交点 - 相切相交时为交线段 - 不相交时无结果." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: Geom2dAPI_InterCurveCurve. 官方简介: 创建空的相交器. 使用函数 Init 通过曲线或曲线进一步初始化该相交算法." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.Geom2dAPI_InterCurveCurve.构造 ()
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: Geom2dAPI_InterCurveCurve. 官方简介: 创建对象并计算曲线 C1 与 C2 之间的交点." @嵌入式方法 = "">
+    参数 C1 <类型 = 长整数>
+    参数 C2 <类型 = 长整数>
+    参数 容差 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.Geom2dAPI_InterCurveCurve.构造_2 (@<C1>, @<C2>, @<容差>)
+    }
+
+    方法 创建_3 <公开 静态 类型 = 长整数 注释 = "创建_3. 原构造器: Geom2dAPI_InterCurveCurve. 官方简介: 创建对象并计算曲线 C1 的自交. 公差值 Tol 默认为 1.0e-6, 定义计算交点的精度. 在相切相交的情形, Tol 还定义相交段(曲线的有限部分)的尺寸, 其中两条曲线(或自交情形的一条曲线)上所有点之间的距离小于 Tol. 警告 使用函数 NbPoints 与 NbSegments 获取解的数量. 若算法未找到交点, NbPoints 与 NbSegments 返回 0." @嵌入式方法 = "">
+    参数 C1 <类型 = 长整数>
+    参数 容差 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.Geom2dAPI_InterCurveCurve.构造_3 (@<C1>, @<容差>)
+    }
+
+    方法 初始化 <公开 静态 注释 = "初始化. 原方法: Init. 官方简介: 用给定参数初始化算法, 并计算曲线 C1 与 C2 之间的交点." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 C1 <类型 = 长整数>
+    参数 C2 <类型 = 长整数>
+    参数 容差 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.Geom2dAPI_InterCurveCurve.Init (@<对象>, @<C1>, @<C2>, @<容差>)
+    }
+
+    方法 初始化_2 <公开 静态 注释 = "初始化_2. 原方法: Init. 官方简介: 用给定参数初始化算法, 并计算曲线 C1 的自交. 公差值 Tol 默认为 1.0e-6, 定义计算交点的精度. 在相切相交的情形, Tol 还定义相交段(曲线的有限部分)的尺寸, 其中两条曲线(或自交情形的一条曲线)上所有点之间的距离小于 Tol. 警告 使用函数 NbPoints 与 NbSegments 获取解的数量. 若算法未找到交点, NbPoints 与 NbSegments 返回 0." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 C1 <类型 = 长整数>
+    参数 容差 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.Geom2dAPI_InterCurveCurve.Init_2 (@<对象>, @<C1>, @<容差>)
+    }
+
+    方法 点数 <公开 静态 类型 = 整数 注释 = "点数. 原方法: NbPoints. 官方简介: 返回交叉相交情况下的交点数. 若未找到交点, NbPoints 返回 0." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.Geom2dAPI_InterCurveCurve.NbPoints (@<对象>)
+    }
+
+    方法 点 <公开 静态 类型 = 长整数 注释 = "点. 原方法: Point. 官方简介: 返回索引 Index 的交点. 交点是在交叉相交的情形计算的, 精度等于构造时或函数 Init 中赋予的公差值(该值默认为 1.0e-6). 异常: 若 index 不在范围 [ 1,NbPoints ] 内则抛出 Standard_OutOfRange, 其中 NbPoints 是计算的交点数量." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.Geom2dAPI_InterCurveCurve.Point (@<对象>, @<索引>)
+    }
+
+    方法 段数 <公开 静态 类型 = 整数 注释 = "段数. 原方法: NbSegments. 官方简介: 返回相切交点的数量. 若未找到交点则 NbSegments 返回 0" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.Geom2dAPI_InterCurveCurve.NbSegments (@<对象>)
+    }
+
+    方法 段 <公开 静态 注释 = "段. 原方法: Segment. 官方简介: 仅使用该语法获取两条曲线之间相切相交的解. 输出值 Curve1 与 Curve2 分别是第一条曲线上与第二条曲线上的相交段. 参数 Index 定义计算的解的编号. 相交段是由两个点限制的初始曲线的一部分. 该段每一点到另一条曲线的距离小于或等于构造时或 Init 函数中赋予的公差值(该值默认为 1.0e-6). 异常: 若 Index 不在范围 [ 1,NbSegments ] 内则抛出 Standard_OutOfRange, 其中 NbSegments 是计算的相切相交数量. 若算法初始化为计算曲线上的自交, 则抛出 Standard_NullObject." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    参数 输出曲线1 <类型 = "长整数 []">
+    参数 输出曲线2 <类型 = "长整数 []">
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.Geom2dAPI_InterCurveCurve.Segment (@<对象>, @<索引>, @<输出曲线1>, @<输出曲线2>)
+    }
+
+}
+
+类 平面插值曲线 <公开 注释 = "平面插值曲线: 原类 Geom2dAPI_Interpolate (libTKGeomAlgo, 头文件 Geom2dAPI/Geom2dAPI_Interpolate.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 此类用于插值经过一组点的 B 样条曲线; 若在该点未要求相切则为 C2 连续. 若在该点要求相切则连续为 C1. 若要求周期性, 曲线将闭合且接合处为给定的第一个点. 曲线将只有 C1 连续. 曲线由它经过的点表定义, 如有需要还由给出结果 B 样条曲线经过的各点参数值的平行实数表以及这些点的切向量定义. Interpolate 对象提供以下框架: - 定义 B 样条曲线的约束 - 实现插值算法 - 查询结果." @禁止创建对象 = 真>
+{
+
+    方法 加载 <公开 静态 注释 = "加载. 原方法: Load. 官方简介: 把该约束 BSpline 曲线赋值为在其第一与最后点处分别与向量 InitialTangent 与 FinalTangent 相切(即曲线经过的点表中的第一与最后点, 如初始化时所定义). <Scale> - 布尔标志, 定义切线向量是否按 lagrange 插值的导数进行缩放." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 初始切线 <类型 = 长整数>
+    参数 终止切线 <类型 = 长整数>
+    参数 缩放 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.Geom2dAPI_Interpolate.Load (@<对象>, @<初始切线>, @<终止切线>, @<缩放>)
+    }
+
+    方法 清除切线 <公开 静态 注释 = "桩(本地不可用): 生成期剔除(编译失败). 清除切线. 原方法: ClearTangents. 官方简介: 清除该约束 BSpline 曲线上的所有相切约束(由 Load 函数初始化)." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.Geom2dAPI_Interpolate.ClearTangents (@<对象>)
+    }
+
+    方法 执行 <公开 静态 注释 = "执行. 原方法: Perform. 官方简介: 计算约束 BSpline 曲线. 使用函数 IsDone 验证计算是否成功, 然后使用函数 Curve 获取结果." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.Geom2dAPI_Interpolate.Perform (@<对象>)
+    }
+
+    方法 曲线 <公开 静态 类型 = 长整数 注释 = "曲线. 原方法: Curve. 官方简介: 返回计算得到的 BSpline 曲线. 若插值失败则抛出 StdFail_NotDone." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.Geom2dAPI_Interpolate.Curve (@<对象>)
+    }
+
+    方法 转平面B样条曲线 <公开 静态 类型 = 长整数 注释 = "转平面B样条曲线. 原转换: operator Geom2d_BSplineCurve." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.Geom2dAPI_Interpolate.转Geom2d_BSplineCurve (@<对象>)
+    }
+
+    方法 是否完成 <公开 静态 类型 = 逻辑型 注释 = "是否完成. 原方法: IsDone. 官方简介: 若约束 BSpline 曲线构造成功则返回 true. 注意: 这种情况下结果由函数 Curve 给出." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.Geom2dAPI_Interpolate.IsDone (@<对象>)
+    }
+
+}
+
+类 平面点拟合B样条 <公开 注释 = "平面点拟合B样条: 原类 Geom2dAPI_PointsToBSpline (libTKGeomAlgo, 头文件 Geom2dAPI/Geom2dAPI_PointsToBSpline.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 此类用于按给定连续性逼近经过一组点的 B 样条曲线. 描述构建逼近点集的二维 B 样条曲线的功能. PointsToBSpline 对象提供以下框架: - 定义待构建 B 样条曲线的数据 - 实现逼近算法 - 查询结果." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: Geom2dAPI_PointsToBSpline. 官方简介: 构造空的逼近算法. 使用 Init 函数定义并构造 BSpline 曲线." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.Geom2dAPI_PointsToBSpline.构造 ()
+    }
+
+    方法 曲线 <公开 静态 类型 = 长整数 注释 = "曲线. 原方法: Curve. 官方简介: 返回近似的 BSpline 曲线" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.Geom2dAPI_PointsToBSpline.Curve (@<对象>)
+    }
+
+    方法 转平面B样条曲线 <公开 静态 类型 = 长整数 注释 = "转平面B样条曲线. 原转换: operator Geom2d_BSplineCurve." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.Geom2dAPI_PointsToBSpline.转Geom2d_BSplineCurve (@<对象>)
+    }
+
+    方法 是否完成 <公开 静态 类型 = 逻辑型 注释 = "是否完成. 原方法: IsDone." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.Geom2dAPI_PointsToBSpline.IsDone (@<对象>)
+    }
+
+}
+
+类 点投影到平面曲线 <公开 注释 = "点投影到平面曲线: 原类 Geom2dAPI_ProjectPointOnCurve (libTKGeomAlgo, 头文件 Geom2dAPI/Geom2dAPI_ProjectPointOnCurve.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 此类实现计算平面点到平面曲线全部正投影的方法." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: Geom2dAPI_ProjectPointOnCurve. 官方简介: 构造空的投影器算法. 使用 Init 函数定义它要处理的点与曲线." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.Geom2dAPI_ProjectPointOnCurve.构造 ()
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: Geom2dAPI_ProjectPointOnCurve. 官方简介: 创建点 <P> 在曲线 <Curve> 上的投影" @嵌入式方法 = "">
+    参数 P <类型 = 长整数>
+    参数 曲线 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.Geom2dAPI_ProjectPointOnCurve.构造_2 (@<P>, @<曲线>)
+    }
+
+    方法 创建_3 <公开 静态 类型 = 长整数 注释 = "创建_3. 原构造器: Geom2dAPI_ProjectPointOnCurve. 官方简介: 创建点 <P> 在由参数 Umin 与 Usup 两点限定的曲线 <Curve> 上的投影. 警告: 使用函数 NbPoints 获得解的数量. 若投影失败, NbPoints 返回 0." @嵌入式方法 = "">
+    参数 P <类型 = 长整数>
+    参数 曲线 <类型 = 长整数>
+    参数 Umin <类型 = 小数>
+    参数 U上界 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.Geom2dAPI_ProjectPointOnCurve.构造_3 (@<P>, @<曲线>, @<Umin>, @<U上界>)
+    }
+
+    方法 初始化 <公开 静态 注释 = "初始化. 原方法: Init. 官方简介: 用给定参数初始化该算法, 并计算点 <P> 在曲线 <Curve> 上的正交投影" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 P <类型 = 长整数>
+    参数 曲线 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.Geom2dAPI_ProjectPointOnCurve.Init (@<对象>, @<P>, @<曲线>)
+    }
+
+    方法 初始化_2 <公开 静态 注释 = "初始化_2. 原方法: Init. 官方简介: 用给定参数初始化该算法, 并计算点 P 到曲线 Curve 上由参数 Umin 与 Usup 两点限定的部分的正交投影." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 P <类型 = 长整数>
+    参数 曲线 <类型 = 长整数>
+    参数 Umin <类型 = 小数>
+    参数 U上界 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.Geom2dAPI_ProjectPointOnCurve.Init_2 (@<对象>, @<P>, @<曲线>, @<Umin>, @<U上界>)
+    }
+
+    方法 点数 <公开 静态 类型 = 整数 注释 = "点数. 原方法: NbPoints. 官方简介: 返回已计算的正交投影点数量." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.Geom2dAPI_ProjectPointOnCurve.NbPoints (@<对象>)
+    }
+
+    方法 转整数 <公开 静态 类型 = 整数 注释 = "转整数. 原转换: operator Standard_Integer." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.Geom2dAPI_ProjectPointOnCurve.转整数 (@<对象>)
+    }
+
+    方法 点 <公开 静态 类型 = 长整数 注释 = "点. 原方法: Point. 官方简介: 返回曲线上的正交投影. Index 是所计算点的编号. 若 Index 不在范围 [ 1,NbPoints ] 内则抛出 Standard_OutOfRange, 其中 NbPoints 是解点的数量." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.Geom2dAPI_ProjectPointOnCurve.Point (@<对象>, @<索引>)
+    }
+
+    方法 参数 <公开 静态 类型 = 小数 注释 = "参数. 原方法: Parameter. 官方简介: 返回曲线上某点的参数, 该点是正交投影. Index 是计算所得投影点的编号. 异常: 若 Index 不在范围 [ 1,NbPoints ] 内则抛出 Standard_OutOfRange, 其中 NbPoints 是解点的数量." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.Geom2dAPI_ProjectPointOnCurve.Parameter (@<对象>, @<索引>)
+    }
+
+    方法 参数_2 <公开 静态 注释 = "参数_2. 原方法: Parameter. 官方简介: 返回曲线上某点的参数, 该点是正交投影. Index 是计算所得投影点的编号. 异常: 若 Index 不在范围 [ 1,NbPoints ] 内则抛出 Standard_OutOfRange, 其中 NbPoints 是解点的数量" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    参数 输出U <类型 = "小数 []">
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.Geom2dAPI_ProjectPointOnCurve.Parameter_2 (@<对象>, @<索引>, @<输出U>)
+    }
+
+    方法 距离 <公开 静态 类型 = 小数 注释 = "距离. 原方法: Distance. 官方简介: 计算点到其在曲线上计算出的正交投影之间的距离. Index 是计算出的投影点的编号. 异常: 若 Index 不在范围 [ 1,NbPoints ] 内, 则抛出 Standard_OutOfRange, 其中 NbPoints 是解点的数量." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.Geom2dAPI_ProjectPointOnCurve.Distance (@<对象>, @<索引>)
+    }
+
+    方法 最近点 <公开 静态 类型 = 长整数 注释 = "最近点. 原方法: NearestPoint. 官方简介: 返回点在曲线上的最近正交投影. 若此算法失败则抛出 StdFail_NotDone 异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.Geom2dAPI_ProjectPointOnCurve.NearestPoint (@<对象>)
+    }
+
+    方法 转平面点 <公开 静态 类型 = 长整数 注释 = "转平面点. 原转换: operator gp_Pnt2d." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.Geom2dAPI_ProjectPointOnCurve.转gp_Pnt2d (@<对象>)
+    }
+
+    方法 下界距离参数 <公开 静态 类型 = 小数 注释 = "下界距离参数. 原方法: LowerDistanceParameter. 官方简介: 返回点在曲线上的最近正交投影的参数. 若此算法失败则抛出 StdFail_NotDone 异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.Geom2dAPI_ProjectPointOnCurve.LowerDistanceParameter (@<对象>)
+    }
+
+    方法 下界距离 <公开 静态 类型 = 小数 注释 = "下界距离. 原方法: LowerDistance. 官方简介: 计算点与其在曲线上的最近正交投影之间的距离. 若此算法失败则抛出 StdFail_NotDone 异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.Geom2dAPI_ProjectPointOnCurve.LowerDistance (@<对象>)
+    }
+
+    方法 转小数 <公开 静态 类型 = 小数 注释 = "转小数. 原转换: operator Standard_Real." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.Geom2dAPI_ProjectPointOnCurve.转小数 (@<对象>)
+    }
+
+}
+
+类 曲线间极值 <公开 注释 = "曲线间极值: 原类 GeomAPI_ExtremaCurveCurve (libTKGeomAlgo, 头文件 GeomAPI/GeomAPI_ExtremaCurveCurve.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 描述计算两条三维曲线间全部极值的功能. ExtremaCurveCurve 算法最小化或最大化第一条曲线上的点与第二条曲线上的点之间的距离. 因此它计算两曲线的公共垂线的起点与终点(交点不是极值, 除非两曲线在该点相切). 解由点对组成, 极值视为连接解中两点的线段. ExtremaCurveCurve 对象提供以下框架: - 定义极值的构造 - 实现构造算法 - 查询结果. 警告: 某些情况下, 两曲线间的最近点不对应任何已计算的极值. 它们可能由以下给出: - 一条曲线的极限点与以下之一: - 它在另一条曲线上的正投影, - 另一条曲线的极限点; 或 - 两曲线间的交点." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: GeomAPI_ExtremaCurveCurve. 官方简介: 构造用于计算两条曲线之间极值的空算法. 使用 Init 函数定义它要处理的曲线." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ExtremaCurveCurve.构造 ()
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: GeomAPI_ExtremaCurveCurve. 官方简介: 计算曲线 C1 与 C2 之间的极值." @嵌入式方法 = "">
+    参数 C1 <类型 = 长整数>
+    参数 C2 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ExtremaCurveCurve.构造_2 (@<C1>, @<C2>)
+    }
+
+    方法 创建_3 <公开 静态 类型 = 长整数 注释 = "创建_3. 原构造器: GeomAPI_ExtremaCurveCurve. 官方简介: 计算曲线 C1 由两个参数点 (U1min,U1max) 限定的部分, 以及 - 曲线 C2 由两个参数点 (U2min,U2max) 限定的部分. 警告: 使用函数 NbExtrema 获取解的数量. 若该算法失败, NbExtrema 返回 0." @嵌入式方法 = "">
+    参数 C1 <类型 = 长整数>
+    参数 C2 <类型 = 长整数>
+    参数 U1min <类型 = 小数>
+    参数 U1max <类型 = 小数>
+    参数 U2min <类型 = 小数>
+    参数 U2max <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ExtremaCurveCurve.构造_3 (@<C1>, @<C2>, @<U1min>, @<U1max>, @<U2min>, @<U2max>)
+    }
+
+    方法 初始化 <公开 静态 注释 = "初始化. 原方法: Init. 官方简介: 用给定参数初始化该算法, 并计算曲线 C1 与 C2 之间的极值" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 C1 <类型 = 长整数>
+    参数 C2 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ExtremaCurveCurve.Init (@<对象>, @<C1>, @<C2>)
+    }
+
+    方法 初始化_2 <公开 静态 注释 = "初始化_2. 原方法: Init. 官方简介: 用给定参数初始化该算法, 并计算: - 由参数 (U1min,U1max) 两点限定的曲线 C1 部分, 与 - 由参数 (U2min,U2max) 两点限定的曲线 C2 部分之间的极值. 警告 使用函数 NbExtrema 获取解的数量. 若该算法失败, NbExtrema 返回 0." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 C1 <类型 = 长整数>
+    参数 C2 <类型 = 长整数>
+    参数 U1min <类型 = 小数>
+    参数 U1max <类型 = 小数>
+    参数 U2min <类型 = 小数>
+    参数 U2max <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ExtremaCurveCurve.Init_2 (@<对象>, @<C1>, @<C2>, @<U1min>, @<U1max>, @<U2min>, @<U2max>)
+    }
+
+    方法 极值数 <公开 静态 类型 = 整数 注释 = "极值数. 原方法: NbExtrema. 官方简介: 返回该算法计算出的极值数量. 注意: 若该算法失败, NbExtrema 返回 0." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ExtremaCurveCurve.NbExtrema (@<对象>)
+    }
+
+    方法 转整数 <公开 静态 类型 = 整数 注释 = "转整数. 原转换: operator Standard_Integer." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ExtremaCurveCurve.转整数 (@<对象>)
+    }
+
+    方法 点 <公开 静态 注释 = "点. 原方法: Points. 官方简介: 返回第一条曲线上的点 P1 与第二条曲线上的点 P2, 它们是该算法求得的索引 Index 极值的端点. 若 Index 不在范围 [ 1,NbExtrema ] 内则抛出 Standard_OutOfRange, 其中 NbExtrema 是该算法计算的极值数量." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    参数 输出P1 <类型 = 长整数>
+    参数 输出P2 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ExtremaCurveCurve.Points (@<对象>, @<索引>, @<输出P1>, @<输出P2>)
+    }
+
+    方法 参数 <公开 静态 注释 = "参数. 原方法: Parameters. 官方简介: 返回第一条曲线上点的参数 U1 与第二条曲线上点的参数 U2, 它们是该算法求得的索引 Index 极值的端点. 若 Index 不在范围 [ 1,NbExtrema ] 内则抛出 Standard_OutOfRange, 其中 NbExtrema 是该算法计算的极值数量." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    参数 输出U1 <类型 = "小数 []">
+    参数 输出U2 <类型 = "小数 []">
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ExtremaCurveCurve.Parameters (@<对象>, @<索引>, @<输出U1>, @<输出U2>)
+    }
+
+    方法 距离 <公开 静态 类型 = 小数 注释 = "距离. 原方法: Distance. 官方简介: 计算该算法计算出的序号为 Index 的极值两端点之间的距离. 异常: 若 Index 不在范围 [ 1,NbExtrema ] 内则抛出 Standard_OutOfRange, 其中 NbExtrema 是该算法计算出的极值数量." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ExtremaCurveCurve.Distance (@<对象>, @<索引>)
+    }
+
+    方法 是否平行 <公开 静态 类型 = 逻辑型 注释 = "是否平行. 原方法: IsParallel. 官方简介: 若两条曲线平行则返回 True." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ExtremaCurveCurve.IsParallel (@<对象>)
+    }
+
+    方法 最近点 <公开 静态 注释 = "最近点. 原方法: NearestPoints. 官方简介: 返回第一条曲线上的点 P1 与第二条曲线上的点 P2, 它们是该算法求得的最短极值的端点. 若该算法失败则抛出 StdFail_NotDone." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 输出P1 <类型 = 长整数>
+    参数 输出P2 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ExtremaCurveCurve.NearestPoints (@<对象>, @<输出P1>, @<输出P2>)
+    }
+
+    方法 下界距离参数 <公开 静态 注释 = "下界距离参数. 原方法: LowerDistanceParameters. 官方简介: 返回第一条曲线上点的参数 U1 与第二条曲线上点的参数 U2, 它们是该算法求得的最短极值的端点. 若该算法失败则抛出 StdFail_NotDone." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 输出U1 <类型 = "小数 []">
+    参数 输出U2 <类型 = "小数 []">
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ExtremaCurveCurve.LowerDistanceParameters (@<对象>, @<输出U1>, @<输出U2>)
+    }
+
+    方法 下界距离 <公开 静态 类型 = 小数 注释 = "下界距离. 原方法: LowerDistance. 官方简介: 计算该算法求得的最短极值的两端点之间的距离. 若该算法失败则抛出 StdFail_NotDone." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ExtremaCurveCurve.LowerDistance (@<对象>)
+    }
+
+    方法 转小数 <公开 静态 类型 = 小数 注释 = "转小数. 原转换: operator Standard_Real." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ExtremaCurveCurve.转小数 (@<对象>)
+    }
+
+    方法 总数最近点 <公开 静态 类型 = 逻辑型 注释 = "总数最近点. 原方法: TotalNearestPoints. 官方简介: 在 <P1> 与 <P2> 中设置使距离 [P1,P2] 最小的解点对, 同时考虑曲线的端点." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 输出P1 <类型 = 长整数>
+    参数 输出P2 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ExtremaCurveCurve.TotalNearestPoints (@<对象>, @<输出P1>, @<输出P2>)
+    }
+
+    方法 总数下界距离参数 <公开 静态 类型 = 逻辑型 注释 = "总数下界距离参数. 原方法: TotalLowerDistanceParameters. 官方简介: 在 <U1> 与 <U2> 中设置代表整体最近解的解点对参数." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 输出U1 <类型 = "小数 []">
+    参数 输出U2 <类型 = "小数 []">
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ExtremaCurveCurve.TotalLowerDistanceParameters (@<对象>, @<输出U1>, @<输出U2>)
+    }
+
+    方法 总数下界距离 <公开 静态 类型 = 小数 注释 = "总数下界距离. 原方法: TotalLowerDistance. 官方简介: 返回整体最近解点对的距离. 若 <myExtCC> 未完成" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ExtremaCurveCurve.TotalLowerDistance (@<对象>)
+    }
+
+}
+
+类 曲线曲面间极值 <公开 注释 = "曲线曲面间极值: 原类 GeomAPI_ExtremaCurveSurface (libTKGeomAlgo, 头文件 GeomAPI/GeomAPI_ExtremaCurveSurface.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 提供计算曲线与曲面之间所有极值的函数. ExtremaCurveSurface 算法最小化或最大化曲线上一点与曲面上一点之间的距离. 因此, 它计算曲线与曲面的公垂线的起点与终点(交点不是极值, 除非曲线与曲面在该点相切). 解由点对组成, 极值被视为连接解的这两个点的线段. ExtremaCurveSurface 对象提供以下框架: - 定义极值的构造 - 实现构造算法 - 查询结果. 警告: 某些情况下, 曲线与曲面之间的最近点并不对应于计算出的某个极值. 相反, 它们可能由以下给出: - 曲面的边界曲线上的一点, 以及下列之一: - 该点在曲线上的正投影, - 曲线的极限点; 或 - 曲线的极限点及其在曲面上的投影; 或 - 曲线与曲面之间的交点." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: GeomAPI_ExtremaCurveSurface. 官方简介: 构造一个空算法, 用于计算曲线与曲面之间的极值. 使用 Init 函数定义要处理的曲线和曲面." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ExtremaCurveSurface.构造 ()
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: GeomAPI_ExtremaCurveSurface. 官方简介: 计算曲线 <C> 与曲面 <S> 之间的极值距离." @嵌入式方法 = "">
+    参数 曲线 <类型 = 长整数>
+    参数 曲面 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ExtremaCurveSurface.构造_2 (@<曲线>, @<曲面>)
+    }
+
+    方法 创建_3 <公开 静态 类型 = 长整数 注释 = "创建_3. 原构造器: GeomAPI_ExtremaCurveSurface. 官方简介: 计算曲线 <C> 与曲面 <S> 之间的极值距离. 解点在曲线的域 [Wmin,Wmax] 以及曲面的域 [Umin,Umax] [Vmin,Vmax] 内计算. 警告 使用函数 NbExtrema 获取解的数量. 若该算法失败, NbExtrema 返回 0." @嵌入式方法 = "">
+    参数 曲线 <类型 = 长整数>
+    参数 曲面 <类型 = 长整数>
+    参数 Wmin <类型 = 小数>
+    参数 Wmax <类型 = 小数>
+    参数 Umin <类型 = 小数>
+    参数 Umax <类型 = 小数>
+    参数 Vmin <类型 = 小数>
+    参数 Vmax <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ExtremaCurveSurface.构造_3 (@<曲线>, @<曲面>, @<Wmin>, @<Wmax>, @<Umin>, @<Umax>, @<Vmin>, @<Vmax>)
+    }
+
+    方法 初始化 <公开 静态 注释 = "初始化. 原方法: Init. 官方简介: 计算曲线 <C> 与曲面 <S> 之间的极值距离." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 曲线 <类型 = 长整数>
+    参数 曲面 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ExtremaCurveSurface.Init (@<对象>, @<曲线>, @<曲面>)
+    }
+
+    方法 初始化_2 <公开 静态 注释 = "初始化_2. 原方法: Init. 官方简介: 计算曲线 <C> 与曲面 <S> 之间的极值距离. 解点在曲线的域 [Wmin,Wmax] 以及曲面的域 [Umin,Umax] [Vmin,Vmax] 内计算. 警告 使用函数 NbExtrema 获取解的数量. 若该算法失败, NbExtrema 返回 0." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 曲线 <类型 = 长整数>
+    参数 曲面 <类型 = 长整数>
+    参数 Wmin <类型 = 小数>
+    参数 Wmax <类型 = 小数>
+    参数 Umin <类型 = 小数>
+    参数 Umax <类型 = 小数>
+    参数 Vmin <类型 = 小数>
+    参数 Vmax <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ExtremaCurveSurface.Init_2 (@<对象>, @<曲线>, @<曲面>, @<Wmin>, @<Wmax>, @<Umin>, @<Umax>, @<Vmin>, @<Vmax>)
+    }
+
+    方法 极值数 <公开 静态 类型 = 整数 注释 = "极值数. 原方法: NbExtrema. 官方简介: 返回该算法计算出的极值数量. 注意: 若该算法失败, NbExtrema 返回 0." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ExtremaCurveSurface.NbExtrema (@<对象>)
+    }
+
+    方法 转整数 <公开 静态 类型 = 整数 注释 = "转整数. 原转换: operator Standard_Integer." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ExtremaCurveSurface.转整数 (@<对象>)
+    }
+
+    方法 点 <公开 静态 注释 = "点. 原方法: Points. 官方简介: 返回曲线上的点 P1 与曲面上的点 P2, 它们是该算法计算的索引 Index 的极值的端点. 异常: 若 Index 不在范围 [ 1,NbExtrema ] 内, 则抛出 Standard_OutOfRange, 其中 NbExtrema 是该算法计算的极值数量." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    参数 输出P1 <类型 = 长整数>
+    参数 输出P2 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ExtremaCurveSurface.Points (@<对象>, @<索引>, @<输出P1>, @<输出P2>)
+    }
+
+    方法 参数 <公开 静态 注释 = "参数. 原方法: Parameters. 官方简介: 返回该算法计算的索引 Index 的极值端点: 曲线上的点的参数 W 与曲面上的点的参数 (U,V). 异常: 若 Index 不在范围 [ 1,NbExtrema ] 内, 则抛出 Standard_OutOfRange, 其中 NbExtrema 是该算法计算的极值数量." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    参数 输出W <类型 = "小数 []">
+    参数 输出U <类型 = "小数 []">
+    参数 输出V <类型 = "小数 []">
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ExtremaCurveSurface.Parameters (@<对象>, @<索引>, @<输出W>, @<输出U>, @<输出V>)
+    }
+
+    方法 距离 <公开 静态 类型 = 小数 注释 = "距离. 原方法: Distance. 官方简介: 计算该算法计算所得索引为 Index 的极值两端点之间的距离. 异常: 若 index 不在范围 [ 1,NbExtrema ] 内则抛出 Standard_OutOfRange, 其中 NbExtrema 是该算法计算所得极值的数量." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ExtremaCurveSurface.Distance (@<对象>, @<索引>)
+    }
+
+    方法 是否平行 <公开 静态 类型 = 逻辑型 注释 = "是否平行. 原方法: IsParallel. 官方简介: 若曲线位于平行曲面上则返回 True." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ExtremaCurveSurface.IsParallel (@<对象>)
+    }
+
+    方法 最近点 <公开 静态 注释 = "最近点. 原方法: NearestPoints. 官方简介: 返回该算法计算出的最短极值的端点, 即曲线上的点 PC 和曲面上的点 PS. 异常 - 若该算法失败则抛出 StdFail_NotDone." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 输出PC <类型 = 长整数>
+    参数 输出PS <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ExtremaCurveSurface.NearestPoints (@<对象>, @<输出PC>, @<输出PS>)
+    }
+
+    方法 下界距离参数 <公开 静态 注释 = "下界距离参数. 原方法: LowerDistanceParameters. 官方简介: 返回曲线上点的参数 W 和曲面上点的 (U,V), 它们是该算法计算得到的最短极值的端点. 异常: - 若该算法失败则抛出 StdFail_NotDone." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 输出W <类型 = "小数 []">
+    参数 输出U <类型 = "小数 []">
+    参数 输出V <类型 = "小数 []">
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ExtremaCurveSurface.LowerDistanceParameters (@<对象>, @<输出W>, @<输出U>, @<输出V>)
+    }
+
+    方法 下界距离 <公开 静态 类型 = 小数 注释 = "下界距离. 原方法: LowerDistance. 官方简介: 计算该算法求得的最短极值的两端点之间的距离. 异常 - 若该算法失败则抛出 StdFail_NotDone." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ExtremaCurveSurface.LowerDistance (@<对象>)
+    }
+
+    方法 转小数 <公开 静态 类型 = 小数 注释 = "转小数. 原转换: operator Standard_Real." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ExtremaCurveSurface.转小数 (@<对象>)
+    }
+
+}
+
+类 曲面间极值 <公开 注释 = "曲面间极值: 原类 GeomAPI_ExtremaSurfaceSurface (libTKGeomAlgo, 头文件 GeomAPI/GeomAPI_ExtremaSurfaceSurface.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 描述计算两张曲面间全部极值的功能. ExtremaSurfaceSurface 算法最小化或最大化第一张曲面上的点与第二张曲面上的点之间的距离. 结果为两曲面的公共垂线的起点与终点. 解由点对组成, 极值视为连接解中两点的线段. ExtremaSurfaceSurface 对象提供以下框架: - 定义极值的构造 - 实现构造算法 - 查询结果. 警告: 某些情况下, 两曲面间的最近点不对应任何已计算的极值. 它们可能由以下给出: - 一张曲面边界曲线上的点与以下之一: - 它在另一张曲面上的正投影, - 另一张曲面边界曲线上的点; 或 - 两曲面间交线上的任意点." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: GeomAPI_ExtremaSurfaceSurface. 官方简介: 构造用于计算两个曲面之间极值的空算法. 使用 Init 函数定义它要处理的曲面." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ExtremaSurfaceSurface.构造 ()
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: GeomAPI_ExtremaSurfaceSurface. 官方简介: 计算曲面 <S1> 与 <S2> 之间的极值距离" @嵌入式方法 = "">
+    参数 S1 <类型 = 长整数>
+    参数 S2 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ExtremaSurfaceSurface.构造_2 (@<S1>, @<S2>)
+    }
+
+    方法 创建_3 <公开 静态 类型 = 长整数 注释 = "创建_3. 原构造器: GeomAPI_ExtremaSurfaceSurface. 官方简介: 计算以下两者之间的极值距离: - 由 u 参数方向的两个参数值 (U1min,U1max) 与 v 参数方向的两个参数值 (V1min,V1max) 限定的曲面 S1 部分, 与 - 由 u 参数方向的两个参数值 (U2min,U2max) 与 v 参数方向的两个参数值 (V2min,V2max) 限定的曲面 S2 部分." @嵌入式方法 = "">
+    参数 S1 <类型 = 长整数>
+    参数 S2 <类型 = 长整数>
+    参数 U1min <类型 = 小数>
+    参数 U1max <类型 = 小数>
+    参数 V1min <类型 = 小数>
+    参数 V1max <类型 = 小数>
+    参数 U2min <类型 = 小数>
+    参数 U2max <类型 = 小数>
+    参数 V2min <类型 = 小数>
+    参数 V2max <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ExtremaSurfaceSurface.构造_3 (@<S1>, @<S2>, @<U1min>, @<U1max>, @<V1min>, @<V1max>, @<U2min>, @<U2max>, @<V2min>, @<V2max>)
+    }
+
+    方法 初始化 <公开 静态 注释 = "初始化. 原方法: Init. 官方简介: 用给定参数初始化该算法, 并计算曲面 <S1> 与 <S2> 之间的极值距离" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S1 <类型 = 长整数>
+    参数 S2 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ExtremaSurfaceSurface.Init (@<对象>, @<S1>, @<S2>)
+    }
+
+    方法 初始化_2 <公开 静态 注释 = "初始化_2. 原方法: Init. 官方简介: 用给定参数初始化该算法, 并计算以下两者之间的极值距离: - 由 u 参数方向的两个参数值 (U1min,U1max) 与 v 参数方向的两个参数值 (V1min,V1max) 限定的曲面 S1 部分, 与 - 由 u 参数方向的两个参数值 (U2min,U2max) 与 v 参数方向的两个参数值 (V2min,V2max) 限定的曲面 S2 部分." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S1 <类型 = 长整数>
+    参数 S2 <类型 = 长整数>
+    参数 U1min <类型 = 小数>
+    参数 U1max <类型 = 小数>
+    参数 V1min <类型 = 小数>
+    参数 V1max <类型 = 小数>
+    参数 U2min <类型 = 小数>
+    参数 U2max <类型 = 小数>
+    参数 V2min <类型 = 小数>
+    参数 V2max <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ExtremaSurfaceSurface.Init_2 (@<对象>, @<S1>, @<S2>, @<U1min>, @<U1max>, @<V1min>, @<V1max>, @<U2min>, @<U2max>, @<V2min>, @<V2max>)
+    }
+
+    方法 极值数 <公开 静态 类型 = 整数 注释 = "极值数. 原方法: NbExtrema. 官方简介: 返回该算法计算出的极值数量. 注意: 若该算法失败, NbExtrema 返回 0." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ExtremaSurfaceSurface.NbExtrema (@<对象>)
+    }
+
+    方法 转整数 <公开 静态 类型 = 整数 注释 = "转整数. 原转换: operator Standard_Integer." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ExtremaSurfaceSurface.转整数 (@<对象>)
+    }
+
+    方法 点 <公开 静态 注释 = "点. 原方法: Points. 官方简介: 返回第一曲面上的点 P1 与第二曲面上的点 P2, 它们是该算法计算的索引 Index 的极值的端点. 异常: 若 Index 不在范围 [ 1,NbExtrema ] 内, 则抛出 Standard_OutOfRange, 其中 NbExtrema 是该算法计算的极值数量." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    参数 输出P1 <类型 = 长整数>
+    参数 输出P2 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ExtremaSurfaceSurface.Points (@<对象>, @<索引>, @<输出P1>, @<输出P2>)
+    }
+
+    方法 参数 <公开 静态 注释 = "参数. 原方法: Parameters. 官方简介: 返回第一曲面上点的参数 (U1,V1) 与第二曲面上点的参数 (U2,V2), 它们是该算法计算的索引 Index 的极值的端点. 异常: 若 Index 不在范围 [ 1,NbExtrema ] 内, 则抛出 Standard_OutOfRange, 其中 NbExtrema 是该算法计算的极值数量." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    参数 输出U1 <类型 = "小数 []">
+    参数 输出V1 <类型 = "小数 []">
+    参数 输出U2 <类型 = "小数 []">
+    参数 输出V2 <类型 = "小数 []">
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ExtremaSurfaceSurface.Parameters (@<对象>, @<索引>, @<输出U1>, @<输出V1>, @<输出U2>, @<输出V2>)
+    }
+
+    方法 距离 <公开 静态 类型 = 小数 注释 = "距离. 原方法: Distance. 官方简介: 计算该算法计算出的序号为 Index 的极值两端点之间的距离. 异常: 若 Index 不在范围 [ 1,NbExtrema ] 内则抛出 Standard_OutOfRange, 其中 NbExtrema 是该算法计算出的极值数量." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ExtremaSurfaceSurface.Distance (@<对象>, @<索引>)
+    }
+
+    方法 是否平行 <公开 静态 类型 = 逻辑型 注释 = "是否平行. 原方法: IsParallel. 官方简介: 若曲面平行则返回 True" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ExtremaSurfaceSurface.IsParallel (@<对象>)
+    }
+
+    方法 最近点 <公开 静态 注释 = "最近点. 原方法: NearestPoints. 官方简介: 返回第一个曲面上的点 P1 和第二个曲面上的点 P2, 它们是该算法计算出的最短极值的端点. 若该算法失败则抛出 StdFail_NotDone 异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 输出P1 <类型 = 长整数>
+    参数 输出P2 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ExtremaSurfaceSurface.NearestPoints (@<对象>, @<输出P1>, @<输出P2>)
+    }
+
+    方法 下界距离参数 <公开 静态 注释 = "下界距离参数. 原方法: LowerDistanceParameters. 官方简介: 返回第一个曲面上点的参数 (U1,V1) 和第二个曲面上点的 (U2,V2), 它们是该算法计算得到的最短极值的端点. 异常: - 若该算法失败则抛出 StdFail_NotDone." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 输出U1 <类型 = "小数 []">
+    参数 输出V1 <类型 = "小数 []">
+    参数 输出U2 <类型 = "小数 []">
+    参数 输出V2 <类型 = "小数 []">
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ExtremaSurfaceSurface.LowerDistanceParameters (@<对象>, @<输出U1>, @<输出V1>, @<输出U2>, @<输出V2>)
+    }
+
+    方法 下界距离 <公开 静态 类型 = 小数 注释 = "下界距离. 原方法: LowerDistance. 官方简介: 计算该算法求得的最短极值的两端点之间的距离. 若该算法失败则抛出 StdFail_NotDone." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ExtremaSurfaceSurface.LowerDistance (@<对象>)
+    }
+
+    方法 转小数 <公开 静态 类型 = 小数 注释 = "转小数. 原转换: operator Standard_Real." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ExtremaSurfaceSurface.转小数 (@<对象>)
+    }
+
+}
+
+类 曲线曲面求交 <公开 注释 = "曲线曲面求交: 原类 GeomAPI_IntCS (libTKGeomAlgo, 头文件 GeomAPI/GeomAPI_IntCS.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 此类实现交点与交线段的计算方法." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: GeomAPI_IntCS. 官方简介: 创建空对象. 使用函数 Perform 通过曲线与曲面进一步初始化该算法." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_IntCS.构造 ()
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: GeomAPI_IntCS. 官方简介: 计算曲线 C 与曲面 S 之间的交点. 警告: 使用函数 IsDone 验证交点是否成功计算." @嵌入式方法 = "">
+    参数 C <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_IntCS.构造_2 (@<C>, @<S>)
+    }
+
+    方法 执行 <公开 静态 注释 = "执行. 原方法: Perform. 官方简介: 该函数用曲线 C 和曲面 S 初始化算法, 并计算 C 与 S 之间的交点. 警告: 使用函数 IsDone 验证是否成功计算出交点." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 C <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_IntCS.Perform (@<对象>, @<C>, @<S>)
+    }
+
+    方法 是否完成 <公开 静态 类型 = 逻辑型 注释 = "是否完成. 原方法: IsDone. 官方简介: 若相交计算成功则返回 true." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_IntCS.IsDone (@<对象>)
+    }
+
+    方法 点数 <公开 静态 类型 = 整数 注释 = "点数. 原方法: NbPoints. 官方简介: 若 IsDone 返回 True 则返回交点数量. 否则抛出 NotDone." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_IntCS.NbPoints (@<对象>)
+    }
+
+    方法 点 <公开 静态 类型 = 长整数 注释 = "点. 原方法: Point. 官方简介: 在交叉相交的情况下返回序号 <Index> 的交点. 若计算失败或尚未进行计算则抛出 NotDone, 若 Index 不在范围 <1..NbPoints> 内则抛出 OutOfRange" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_IntCS.Point (@<对象>, @<索引>)
+    }
+
+    方法 参数 <公开 静态 注释 = "参数. 原方法: Parameters. 官方简介: 在交叉相交的情况下, 返回索引 Index 的计算出的交点在曲线上的参数 W 与在曲面上的参数 (U,V). 异常: 若求交算法失败或未初始化则抛出 StdFail_NotDone. 若 Index 不在范围 [ 1,NbPoints ] 内则抛出 Standard_OutOfRange, 其中 NbPoints 是计算出的交点数量." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    参数 输出U <类型 = "小数 []">
+    参数 输出V <类型 = "小数 []">
+    参数 输出W <类型 = "小数 []">
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_IntCS.Parameters (@<对象>, @<索引>, @<输出U>, @<输出V>, @<输出W>)
+    }
+
+    方法 段数 <公开 静态 类型 = 整数 注释 = "段数. 原方法: NbSegments. 官方简介: 在相切相交的情况下返回计算出的相交段数量. 若相交算法失败或未初始化, 则抛出 StdFail_NotDone 异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_IntCS.NbSegments (@<对象>)
+    }
+
+    方法 段 <公开 静态 类型 = 长整数 注释 = "段. 原方法: Segment. 官方简介: 在相切相交的情形返回计算的索引 Index 的相交段. 相交段是初始曲线与曲面相切的部分. 异常: 若求交算法失败或未初始化则抛出 StdFail_NotDone. 若 Index 不在范围 [ 1,NbSegments ] 内则抛出 Standard_OutOfRange, 其中 NbSegments 是计算的相交段数量." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_IntCS.Segment (@<对象>, @<索引>)
+    }
+
+    方法 参数_2 <公开 静态 注释 = "参数_2. 原方法: Parameters. 官方简介: 在相切相交的情形返回曲面上曲线段的第一 (U1,V1) 与最后 (U2,V2) 点的参数. Index 是计算的相交段数量. 异常: 若求交算法失败或未初始化则抛出 StdFail_NotDone. 若 Index 不在范围 [ 1,NbSegments ] 内则抛出 Standard_OutOfRange, 其中 NbSegments 是计算的相交段数量." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    参数 输出U1 <类型 = "小数 []">
+    参数 输出V1 <类型 = "小数 []">
+    参数 输出U2 <类型 = "小数 []">
+    参数 输出V2 <类型 = "小数 []">
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_IntCS.Parameters_2 (@<对象>, @<索引>, @<输出U1>, @<输出V1>, @<输出U2>, @<输出V2>)
+    }
+
+}
+
+类 曲面求交 <公开 注释 = "曲面求交: 原类 GeomAPI_IntSS (libTKGeomAlgo, 头文件 GeomAPI/GeomAPI_IntSS.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 此类实现计算两张曲面间交线的方法. 结果为 Geom 的曲线. 曲面使用的 \"域\" 是自然参数域, 除非该曲面是 Geom 的 RectangularTrimmedSurface." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: GeomAPI_IntSS. 官方简介: 构造空对象. 使用 Perform 函数用两个曲面进一步初始化算法." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_IntSS.构造 ()
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: GeomAPI_IntSS. 官方简介: 计算两个曲面 S1 与 S2 之间的交线. 参数 Tol 定义曲线计算的精度. 大多数情况下建议使用值 1.0e-7. 警告: 使用函数 IsDone 验证交点是否成功计算.I" @嵌入式方法 = "">
+    参数 S1 <类型 = 长整数>
+    参数 S2 <类型 = 长整数>
+    参数 容差 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_IntSS.构造_2 (@<S1>, @<S2>, @<容差>)
+    }
+
+    方法 执行 <公开 静态 注释 = "执行. 原方法: Perform. 官方简介: 用给定参数初始化算法并计算两个曲面 S1 与 S2 之间的交线. 参数 Tol 定义曲线计算的精度. 大多数情况下建议使用值 1.0e-7. 警告: 使用函数 IsDone 验证交点是否成功计算." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S1 <类型 = 长整数>
+    参数 S2 <类型 = 长整数>
+    参数 容差 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_IntSS.Perform (@<对象>, @<S1>, @<S2>, @<容差>)
+    }
+
+    方法 是否完成 <公开 静态 类型 = 逻辑型 注释 = "是否完成. 原方法: IsDone. 官方简介: 若相交成功则返回 True." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_IntSS.IsDone (@<对象>)
+    }
+
+    方法 直线数 <公开 静态 类型 = 整数 注释 = "直线数. 原方法: NbLines. 官方简介: 返回计算得到的相交曲线数量. 若计算失败则抛出 StdFail_NotDone 异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_IntSS.NbLines (@<对象>)
+    }
+
+    方法 直线 <公开 静态 类型 = 长整数 注释 = "直线. 原方法: Line. 官方简介: 返回索引为 Index 的计算所得交线. 异常: 若计算失败则抛出 StdFail_NotDone. 若 Index 超出范围 [1, NbLines] 则抛出 Standard_OutOfRange, 其中 NbLines 是计算所得交线的数量." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_IntSS.Line (@<对象>, @<索引>)
+    }
+
+}
+
+类 插值曲线 <公开 注释 = "插值曲线: 原类 GeomAPI_Interpolate (libTKGeomAlgo, 头文件 GeomAPI/GeomAPI_Interpolate.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 此类用于插值经过一组点的 B 样条曲线; 若在该点未要求相切则为 C2 连续. 若在该点要求相切则连续为 C1. 若要求周期性, 曲线将闭合且接合处为给定的第一个点. 曲线将只有 C1 连续. 描述构建受约束三维 B 样条曲线的功能. 曲线由它经过的点表定义, 如有需要还由以下定义: - 给出结果 B 样条曲线经过的各点参数值的平行实数表, 以及 - 这些点的切向量. Interpolate 对象提供以下框架: - 定义 B 样条曲线的约束 - 实现插值算法 - 查询结果." @禁止创建对象 = 真>
+{
+
+    方法 加载 <公开 静态 注释 = "加载. 原方法: Load. 官方简介: 把该约束 BSpline 曲线设为分别在其第一个与最后一个点处与向量 InitialTangent 和 FinalTangent 相切(即曲线所经过点表的第一个与最后一个点, 如初始化时所定义)." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 初始切线 <类型 = 长整数>
+    参数 终止切线 <类型 = 长整数>
+    参数 缩放 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_Interpolate.Load (@<对象>, @<初始切线>, @<终止切线>, @<缩放>)
+    }
+
+    方法 清除切线 <公开 静态 注释 = "桩(本地不可用): 生成期剔除(编译失败). 清除切线. 原方法: ClearTangents. 官方简介: 清除该约束 BSpline 曲线上的所有相切约束(由 Load 函数初始化)." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_Interpolate.ClearTangents (@<对象>)
+    }
+
+    方法 执行 <公开 静态 注释 = "执行. 原方法: Perform. 官方简介: 计算约束 BSpline 曲线. 使用函数 IsDone 验证计算是否成功, 然后使用函数 Curve 获取结果." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_Interpolate.Perform (@<对象>)
+    }
+
+    方法 曲线 <公开 静态 类型 = 长整数 注释 = "曲线. 原方法: Curve. 官方简介: 返回计算得到的 BSpline 曲线. 若插值失败则抛出 StdFail_NotDone." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_Interpolate.Curve (@<对象>)
+    }
+
+    方法 转B样条曲线 <公开 静态 类型 = 长整数 注释 = "转B样条曲线. 原转换: operator Geom_BSplineCurve." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_Interpolate.转Geom_BSplineCurve (@<对象>)
+    }
+
+    方法 是否完成 <公开 静态 类型 = 逻辑型 注释 = "是否完成. 原方法: IsDone. 官方简介: 若约束 BSpline 曲线构造成功则返回 true. 注意: 这种情况下结果由函数 Curve 给出." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_Interpolate.IsDone (@<对象>)
+    }
+
+}
+
+类 点拟合B样条 <公开 注释 = "点拟合B样条: 原类 GeomAPI_PointsToBSpline (libTKGeomAlgo, 头文件 GeomAPI/GeomAPI_PointsToBSpline.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 此类用于按给定连续性逼近经过一组点的 B 样条曲线. 描述构建逼近点集的三维 B 样条曲线的功能. PointsToBSpline 对象提供以下框架: - 定义待构建 B 样条曲线的数据 - 实现逼近算法 - 查询结果." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: GeomAPI_PointsToBSpline. 官方简介: 构造空的逼近算法. 使用 Init 函数定义并构造 BSpline 曲线." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_PointsToBSpline.构造 ()
+    }
+
+    方法 曲线 <公开 静态 类型 = 长整数 注释 = "曲线. 原方法: Curve. 官方简介: 返回计算得到的 BSpline 曲线. 若曲线未构建则抛出 StdFail_NotDone." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_PointsToBSpline.Curve (@<对象>)
+    }
+
+    方法 转B样条曲线 <公开 静态 类型 = 长整数 注释 = "转B样条曲线. 原转换: operator Geom_BSplineCurve." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_PointsToBSpline.转Geom_BSplineCurve (@<对象>)
+    }
+
+    方法 是否完成 <公开 静态 类型 = 逻辑型 注释 = "是否完成. 原方法: IsDone." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_PointsToBSpline.IsDone (@<对象>)
+    }
+
+}
+
+类 点拟合B样条曲面 <公开 注释 = "点拟合B样条曲面: 原类 GeomAPI_PointsToBSplineSurface (libTKGeomAlgo, 头文件 GeomAPI/GeomAPI_PointsToBSplineSurface.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 此类用于按给定连续性逼近或插值经过二维点阵的 B 样条曲面. 描述构建逼近或插值点集的 B 样条曲面的功能. PointsToBSplineSurface 对象提供以下框架: - 定义待构建 B 样条曲面的数据 - 实现逼近算法或插值算法 - 查询结果. 实际上, 该类包含 3 种算法: 2 种逼近, 1 种插值. 第一种逼近算法基于常用最小二乘准则: 最小化采样点与结果曲面间的平方距离. 第二种逼近算法使用最小二乘准则并额外最小化曲面的某些局部特征(一阶, 二阶与三阶偏导), 从而可以控制曲面形状. 插值算法产生的曲面经过采样点." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: GeomAPI_PointsToBSplineSurface. 官方简介: 构造用于曲面逼近或插值的空算法. 使用: - Init 函数通过逼近定义并构建该 BSpline 曲面, 或 - Interpolate 函数通过插值定义并构建该 BSpline 曲面." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_PointsToBSplineSurface.构造 ()
+    }
+
+    方法 曲面 <公开 静态 类型 = 长整数 注释 = "曲面. 原方法: Surface. 官方简介: 返回近似的 BSpline 曲面" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_PointsToBSplineSurface.Surface (@<对象>)
+    }
+
+    方法 转B样条曲面 <公开 静态 类型 = 长整数 注释 = "转B样条曲面. 原转换: operator Geom_BSplineSurface." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_PointsToBSplineSurface.转Geom_BSplineSurface (@<对象>)
+    }
+
+    方法 是否完成 <公开 静态 类型 = 逻辑型 注释 = "是否完成. 原方法: IsDone." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_PointsToBSplineSurface.IsDone (@<对象>)
+    }
+
+}
+
+类 点投影到曲线 <公开 注释 = "点投影到曲线: 原类 GeomAPI_ProjectPointOnCurve (libTKGeomAlgo, 头文件 GeomAPI/GeomAPI_ProjectPointOnCurve.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 此类实现计算三维点到三维曲线全部正投影的方法." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: GeomAPI_ProjectPointOnCurve. 官方简介: 创建空对象. 使用 Init 函数进行进一步初始化." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ProjectPointOnCurve.构造 ()
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: GeomAPI_ProjectPointOnCurve. 官方简介: 创建点 <P> 在曲线 <Curve> 上的投影" @嵌入式方法 = "">
+    参数 P <类型 = 长整数>
+    参数 曲线 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ProjectPointOnCurve.构造_2 (@<P>, @<曲线>)
+    }
+
+    方法 创建_3 <公开 静态 类型 = 长整数 注释 = "创建_3. 原构造器: GeomAPI_ProjectPointOnCurve. 官方简介: 创建点 <P> 在曲线 <Curve> 上、由参数 Umin 与 Usup 两点限定的投影." @嵌入式方法 = "">
+    参数 P <类型 = 长整数>
+    参数 曲线 <类型 = 长整数>
+    参数 Umin <类型 = 小数>
+    参数 U上界 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ProjectPointOnCurve.构造_3 (@<P>, @<曲线>, @<Umin>, @<U上界>)
+    }
+
+    方法 初始化 <公开 静态 注释 = "初始化. 原方法: Init. 官方简介: 初始化点 <P> 在曲线 <Curve> 上的投影" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 P <类型 = 长整数>
+    参数 曲线 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ProjectPointOnCurve.Init (@<对象>, @<P>, @<曲线>)
+    }
+
+    方法 初始化_2 <公开 静态 注释 = "初始化_2. 原方法: Init. 官方简介: 初始化点 <P> 在曲线 <Curve> 上的投影, 由参数 Umin 与 Usup 的两点限定." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 P <类型 = 长整数>
+    参数 曲线 <类型 = 长整数>
+    参数 Umin <类型 = 小数>
+    参数 U上界 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ProjectPointOnCurve.Init_2 (@<对象>, @<P>, @<曲线>, @<Umin>, @<U上界>)
+    }
+
+    方法 初始化_3 <公开 静态 注释 = "初始化_3. 原方法: Init. 官方简介: 初始化点 <P> 在曲线 <Curve> 上的投影, 由参数 Umin 与 Usup 的两点限定." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 曲线 <类型 = 长整数>
+    参数 Umin <类型 = 小数>
+    参数 U上界 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ProjectPointOnCurve.Init_3 (@<对象>, @<曲线>, @<Umin>, @<U上界>)
+    }
+
+    方法 执行 <公开 静态 注释 = "执行. 原方法: Perform. 官方简介: 把点投影到当前曲线上." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 P <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ProjectPointOnCurve.Perform (@<对象>, @<P>)
+    }
+
+    方法 点数 <公开 静态 类型 = 整数 注释 = "点数. 原方法: NbPoints. 官方简介: 返回计算出的正交投影点数量. 注意: 若此算法失败, NbPoints 返回 0." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ProjectPointOnCurve.NbPoints (@<对象>)
+    }
+
+    方法 转整数 <公开 静态 类型 = 整数 注释 = "转整数. 原转换: operator Standard_Integer." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ProjectPointOnCurve.转整数 (@<对象>)
+    }
+
+    方法 点 <公开 静态 类型 = 长整数 注释 = "点. 原方法: Point. 官方简介: 返回曲线上的正交投影. Index 是所计算点的编号. 若 Index 不在范围 [ 1,NbPoints ] 内则抛出 Standard_OutOfRange, 其中 NbPoints 是解点的数量." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ProjectPointOnCurve.Point (@<对象>, @<索引>)
+    }
+
+    方法 参数 <公开 静态 类型 = 小数 注释 = "参数. 原方法: Parameter. 官方简介: 返回曲线上某点的参数, 该点是正交投影. Index 是计算所得点的编号. 异常: 若 Index 不在范围 [ 1,NbPoints ] 内则抛出 Standard_OutOfRange, 其中 NbPoints 是解点的数量." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ProjectPointOnCurve.Parameter (@<对象>, @<索引>)
+    }
+
+    方法 参数_2 <公开 静态 注释 = "参数_2. 原方法: Parameter. 官方简介: 返回曲线上某点的参数, 该点是正交投影. Index 是计算所得点的编号. 异常: 若 Index 不在范围 [ 1,NbPoints ] 内则抛出 Standard_OutOfRange, 其中 NbPoints 是解点的数量.-" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    参数 输出U <类型 = "小数 []">
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ProjectPointOnCurve.Parameter_2 (@<对象>, @<索引>, @<输出U>)
+    }
+
+    方法 距离 <公开 静态 类型 = 小数 注释 = "距离. 原方法: Distance. 官方简介: 计算点与其在曲线上正交投影之间的距离. Index 是计算所得点的编号. 异常: 若 Index 不在范围 [ 1,NbPoints ] 内则抛出 Standard_OutOfRange, 其中 NbPoints 是解点的数量." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ProjectPointOnCurve.Distance (@<对象>, @<索引>)
+    }
+
+    方法 最近点 <公开 静态 类型 = 长整数 注释 = "最近点. 原方法: NearestPoint. 官方简介: 返回点在曲线上的最近正交投影. 异常: 若此算法失败则抛出 StdFail_NotDone." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ProjectPointOnCurve.NearestPoint (@<对象>)
+    }
+
+    方法 转三维点 <公开 静态 类型 = 长整数 注释 = "转三维点. 原转换: operator gp_Pnt." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ProjectPointOnCurve.转gp_Pnt (@<对象>)
+    }
+
+    方法 下界距离参数 <公开 静态 类型 = 小数 注释 = "下界距离参数. 原方法: LowerDistanceParameter. 官方简介: 返回点在曲线上的最近正交投影的参数. 异常: 若此算法失败则抛出 StdFail_NotDone." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ProjectPointOnCurve.LowerDistanceParameter (@<对象>)
+    }
+
+    方法 下界距离 <公开 静态 类型 = 小数 注释 = "下界距离. 原方法: LowerDistance. 官方简介: 计算点与其在曲线上的最近正交投影之间的距离. 异常: 若此算法失败则抛出 StdFail_NotDone." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ProjectPointOnCurve.LowerDistance (@<对象>)
+    }
+
+    方法 转小数 <公开 静态 类型 = 小数 注释 = "转小数. 原转换: operator Standard_Real." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ProjectPointOnCurve.转小数 (@<对象>)
+    }
+
+}
+
+类 点投影到曲面 <公开 注释 = "点投影到曲面: 原类 GeomAPI_ProjectPointOnSurf (libTKGeomAlgo, 头文件 GeomAPI/GeomAPI_ProjectPointOnSurf.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 此类实现计算点到曲面全部正投影的方法." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: GeomAPI_ProjectPointOnSurf. 官方简介: 创建空对象. 使用 Init 函数进行进一步初始化." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ProjectPointOnSurf.构造 ()
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: GeomAPI_ProjectPointOnSurf. 官方简介: 创建点 <P> 在曲面 <Surface> 上的投影" @嵌入式方法 = "">
+    参数 P <类型 = 长整数>
+    参数 曲面 <类型 = 长整数>
+    参数 算法 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ProjectPointOnSurf.构造_2 (@<P>, @<曲面>, @<算法>)
+    }
+
+    方法 创建_3 <公开 静态 类型 = 长整数 注释 = "创建_3. 原构造器: GeomAPI_ProjectPointOnSurf. 官方简介: 创建点 <P> 在曲面 <Surface> 上的投影 创建点 <P> 在曲面 <Surface> 上的投影. 解在曲面的域 [Umin,Usup] [Vmin,Vsup] 内计算." @嵌入式方法 = "">
+    参数 P <类型 = 长整数>
+    参数 曲面 <类型 = 长整数>
+    参数 容差 <类型 = 小数>
+    参数 算法 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ProjectPointOnSurf.构造_3 (@<P>, @<曲面>, @<容差>, @<算法>)
+    }
+
+    方法 创建_4 <公开 静态 类型 = 长整数 注释 = "创建_4. 原构造器: GeomAPI_ProjectPointOnSurf." @嵌入式方法 = "">
+    参数 P <类型 = 长整数>
+    参数 曲面 <类型 = 长整数>
+    参数 Umin <类型 = 小数>
+    参数 U上界 <类型 = 小数>
+    参数 Vmin <类型 = 小数>
+    参数 V上界 <类型 = 小数>
+    参数 容差 <类型 = 小数>
+    参数 算法 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ProjectPointOnSurf.构造_4 (@<P>, @<曲面>, @<Umin>, @<U上界>, @<Vmin>, @<V上界>, @<容差>, @<算法>)
+    }
+
+    方法 创建_5 <公开 静态 类型 = 长整数 注释 = "创建_5. 原构造器: GeomAPI_ProjectPointOnSurf. 官方简介: 初始化点 <P> 在曲面 <Surface> 上的投影" @嵌入式方法 = "">
+    参数 P <类型 = 长整数>
+    参数 曲面 <类型 = 长整数>
+    参数 Umin <类型 = 小数>
+    参数 U上界 <类型 = 小数>
+    参数 Vmin <类型 = 小数>
+    参数 V上界 <类型 = 小数>
+    参数 算法 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ProjectPointOnSurf.构造_5 (@<P>, @<曲面>, @<Umin>, @<U上界>, @<Vmin>, @<V上界>, @<算法>)
+    }
+
+    方法 初始化 <公开 静态 注释 = "初始化. 原方法: Init." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 P <类型 = 长整数>
+    参数 曲面 <类型 = 长整数>
+    参数 容差 <类型 = 小数>
+    参数 算法 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ProjectPointOnSurf.Init (@<对象>, @<P>, @<曲面>, @<容差>, @<算法>)
+    }
+
+    方法 初始化_2 <公开 静态 注释 = "初始化_2. 原方法: Init. 官方简介: 初始化点 <P> 在曲面 <Surface> 上的投影. 解在曲面的域 [Umin,Usup] [Vmin,Vsup] 内计算." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 P <类型 = 长整数>
+    参数 曲面 <类型 = 长整数>
+    参数 算法 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ProjectPointOnSurf.Init_2 (@<对象>, @<P>, @<曲面>, @<算法>)
+    }
+
+    方法 初始化_3 <公开 静态 注释 = "初始化_3. 原方法: Init." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 P <类型 = 长整数>
+    参数 曲面 <类型 = 长整数>
+    参数 Umin <类型 = 小数>
+    参数 U上界 <类型 = 小数>
+    参数 Vmin <类型 = 小数>
+    参数 V上界 <类型 = 小数>
+    参数 容差 <类型 = 小数>
+    参数 算法 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ProjectPointOnSurf.Init_3 (@<对象>, @<P>, @<曲面>, @<Umin>, @<U上界>, @<Vmin>, @<V上界>, @<容差>, @<算法>)
+    }
+
+    方法 初始化_4 <公开 静态 注释 = "初始化_4. 原方法: Init. 官方简介: 初始化多个点在曲面 <Surface> 上的投影. 解将在曲面的域 [Umin,Usup] [Vmin,Vsup] 内计算." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 P <类型 = 长整数>
+    参数 曲面 <类型 = 长整数>
+    参数 Umin <类型 = 小数>
+    参数 U上界 <类型 = 小数>
+    参数 Vmin <类型 = 小数>
+    参数 V上界 <类型 = 小数>
+    参数 算法 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ProjectPointOnSurf.Init_4 (@<对象>, @<P>, @<曲面>, @<Umin>, @<U上界>, @<Vmin>, @<V上界>, @<算法>)
+    }
+
+    方法 初始化_5 <公开 静态 注释 = "初始化_5. 原方法: Init." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 曲面 <类型 = 长整数>
+    参数 Umin <类型 = 小数>
+    参数 U上界 <类型 = 小数>
+    参数 Vmin <类型 = 小数>
+    参数 V上界 <类型 = 小数>
+    参数 容差 <类型 = 小数>
+    参数 算法 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ProjectPointOnSurf.Init_5 (@<对象>, @<曲面>, @<Umin>, @<U上界>, @<Vmin>, @<V上界>, @<容差>, @<算法>)
+    }
+
+    方法 初始化_6 <公开 静态 注释 = "初始化_6. 原方法: Init." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 曲面 <类型 = 长整数>
+    参数 Umin <类型 = 小数>
+    参数 U上界 <类型 = 小数>
+    参数 Vmin <类型 = 小数>
+    参数 V上界 <类型 = 小数>
+    参数 算法 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ProjectPointOnSurf.Init_6 (@<对象>, @<曲面>, @<Umin>, @<U上界>, @<Vmin>, @<V上界>, @<算法>)
+    }
+
+    方法 设置极值算法 <公开 静态 注释 = "设置极值算法. 原方法: SetExtremaAlgo. 官方简介: 设置 Extrema 搜索算法 - Grad 或 Tree. 默认情况下 Extrema 用 Grad 算法初始化." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 算法 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ProjectPointOnSurf.SetExtremaAlgo (@<对象>, @<算法>)
+    }
+
+    方法 设置极值标志 <公开 静态 注释 = "设置极值标志. 原方法: SetExtremaFlag. 官方简介: 设置 Extrema 搜索标志 - MIN 或 MAX 或 MINMAX. 默认情况下 Extrema 设置为搜索 MinMax 解." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 极值标志 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ProjectPointOnSurf.SetExtremaFlag (@<对象>, @<极值标志>)
+    }
+
+    方法 执行 <公开 静态 注释 = "执行. 原方法: Perform. 官方简介: 把点投影到当前曲面上." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 P <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ProjectPointOnSurf.Perform (@<对象>, @<P>)
+    }
+
+    方法 是否完成 <公开 静态 类型 = 逻辑型 注释 = "是否完成. 原方法: IsDone." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ProjectPointOnSurf.IsDone (@<对象>)
+    }
+
+    方法 点数 <公开 静态 类型 = 整数 注释 = "点数. 原方法: NbPoints. 官方简介: 返回计算出的正交投影点数量. 注意: 若投影失败, NbPoints 返回 0." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ProjectPointOnSurf.NbPoints (@<对象>)
+    }
+
+    方法 转整数 <公开 静态 类型 = 整数 注释 = "转整数. 原转换: operator Standard_Integer." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ProjectPointOnSurf.转整数 (@<对象>)
+    }
+
+    方法 点 <公开 静态 类型 = 长整数 注释 = "点. 原方法: Point. 官方简介: 返回在曲面上的正交投影. Index 是计算所得点的编号. 异常: 若 Index 不在范围 [ 1,NbPoints ] 内则抛出 Standard_OutOfRange, 其中 NbPoints 是解点的数量." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ProjectPointOnSurf.Point (@<对象>, @<索引>)
+    }
+
+    方法 参数 <公开 静态 注释 = "参数. 原方法: Parameters. 官方简介: 返回正交投影在曲面上的参数 (U,V). Index 是计算所得点的编号. 异常: 若 Index 不在范围 [ 1,NbPoints ] 内则抛出 Standard_OutOfRange, 其中 NbPoints 是解点的数量." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    参数 输出U <类型 = "小数 []">
+    参数 输出V <类型 = "小数 []">
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ProjectPointOnSurf.Parameters (@<对象>, @<索引>, @<输出U>, @<输出V>)
+    }
+
+    方法 距离 <公开 静态 类型 = 小数 注释 = "距离. 原方法: Distance. 官方简介: 计算点与其在曲面上正交投影之间的距离. Index 是计算所得点的编号. 异常: 若 Index 不在范围 [ 1,NbPoints ] 内则抛出 Standard_OutOfRange, 其中 NbPoints 是解点的数量." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ProjectPointOnSurf.Distance (@<对象>, @<索引>)
+    }
+
+    方法 最近点 <公开 静态 类型 = 长整数 注释 = "最近点. 原方法: NearestPoint. 官方简介: 返回点在曲面上的最近正交投影. 若投影失败则抛出 StdFail_NotDone 异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ProjectPointOnSurf.NearestPoint (@<对象>)
+    }
+
+    方法 转三维点 <公开 静态 类型 = 长整数 注释 = "转三维点. 原转换: operator gp_Pnt." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ProjectPointOnSurf.转gp_Pnt (@<对象>)
+    }
+
+    方法 下界距离参数 <公开 静态 注释 = "下界距离参数. 原方法: LowerDistanceParameters. 官方简介: 返回点在曲面上最近计算出的正交投影的参数 (U,V). 若投影失败则抛出 StdFail_NotDone 异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 输出U <类型 = "小数 []">
+    参数 输出V <类型 = "小数 []">
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ProjectPointOnSurf.LowerDistanceParameters (@<对象>, @<输出U>, @<输出V>)
+    }
+
+    方法 下界距离 <公开 静态 类型 = 小数 注释 = "下界距离. 原方法: LowerDistance. 官方简介: 计算点与其在曲面上的最近正交投影之间的距离. 若投影失败则抛出 StdFail_NotDone 异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ProjectPointOnSurf.LowerDistance (@<对象>)
+    }
+
+    方法 转小数 <公开 静态 类型 = 小数 注释 = "转小数. 原转换: operator Standard_Real." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomAlgo.GeomAPI_ProjectPointOnSurf.转小数 (@<对象>)
+    }
+
+}

@@ -1,0 +1,2275 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.安卓.XUI <注释 = "XUI 安卓 UI 工具库封装" @文档 = "category = \"XUI\"">
+
+
+类 XUI可展开布局 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.layout.ExpandableLayout)."
+        @文档 = "category = \"XUI.布局\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.layout.ExpandableLayout\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.el_duration\n        shown_name = \"动画持续的时间\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.el_expanded\n        shown_name = \"是否是展开的\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.el_parallax\n        shown_name = \"视差效果\"\n        data_type = double\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI可展开布局, ExpandableLayout, com.xuexiang.xui.widget.layout.ExpandableLayout)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetExpandableLayout ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI可展开布局的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI可展开布局.getAlpha()">
+    {
+        @ (double)@sn<this>.GetExpandableLayout ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI可展开布局的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI可展开布局.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetExpandableLayout ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI可展开布局的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI可展开布局.isEnabled()">
+    {
+        @ @sn<this>.GetExpandableLayout ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI可展开布局的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI可展开布局.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetExpandableLayout ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI可展开布局的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI可展开布局.isClickable()">
+    {
+        @ @sn<this>.GetExpandableLayout ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI可展开布局的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI可展开布局.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetExpandableLayout ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI可展开布局的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI可展开布局.getElevation()">
+    {
+        @ (double)@sn<this>.GetExpandableLayout ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI可展开布局的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI可展开布局.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetExpandableLayout ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI可展开布局的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI可展开布局.getMinimumHeight()">
+    {
+        @ @sn<this>.GetExpandableLayout ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI可展开布局的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI可展开布局.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetExpandableLayout ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI可展开布局的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI可展开布局.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetExpandableLayout ().setBackgroundColor (@<新值>))
+    }
+
+    方法 取状态 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI可展开布局的状态。 参数：无。 返回：整数。 原方法：XUI可展开布局.getState()">
+    {
+        @ @sn<this>.GetExpandableLayout ().getState ()
+    }
+
+    方法 是否已展开 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断XUI可展开布局是否已展开。 参数：无。 返回：逻辑型。 原方法：XUI可展开布局.isExpanded()">
+    {
+        @ @sn<this>.GetExpandableLayout ().isExpanded ()
+    }
+
+    方法 切换 <公开 注释 = "用法：切换XUI可展开布局的相关内容状态。 参数：无。 返回：无。 原方法：XUI可展开布局.toggle()">
+    {
+        @ @m<RUN_UI_ACTION> (GetExpandableLayout ().toggle ())
+    }
+
+    方法 切换_2 <公开 注释 = "用法：切换XUI可展开布局的_2状态。 参数：值1=真/假。 返回：无。 原方法：XUI可展开布局.toggle()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetExpandableLayout ().toggle (@<值1>))
+    }
+
+    方法 展开 <公开 注释 = "用法：展开XUI可展开布局的相关内容。 参数：无。 返回：无。 原方法：XUI可展开布局.expand()">
+    {
+        @ @m<RUN_UI_ACTION> (GetExpandableLayout ().expand ())
+    }
+
+    方法 展开_2 <公开 注释 = "用法：展开XUI可展开布局的_2。 参数：值1=真/假。 返回：无。 原方法：XUI可展开布局.expand()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetExpandableLayout ().expand (@<值1>))
+    }
+
+    方法 折叠 <公开 注释 = "用法：折叠XUI可展开布局的相关内容。 参数：无。 返回：无。 原方法：XUI可展开布局.collapse()">
+    {
+        @ @m<RUN_UI_ACTION> (GetExpandableLayout ().collapse ())
+    }
+
+    方法 折叠_2 <公开 注释 = "用法：折叠XUI可展开布局的_2。 参数：值1=真/假。 返回：无。 原方法：XUI可展开布局.collapse()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetExpandableLayout ().collapse (@<值1>))
+    }
+
+    方法 设置已展开 <公开 注释 = "用法：把XUI可展开布局的已展开设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI可展开布局.setExpanded()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetExpandableLayout ().setExpanded (@<值1>))
+    }
+
+    方法 设置已展开_2 <公开 注释 = "用法：把XUI可展开布局的已展开_2设为给定值。 参数：值1=真/假、值2=真/假。 返回：无。 原方法：XUI可展开布局.setExpanded()">
+    参数 值1 <类型 = 逻辑型>
+    参数 值2 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetExpandableLayout ().setExpanded (@<值1>, @<值2>))
+    }
+
+    方法 取时长 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI可展开布局的时长。 参数：无。 返回：整数。 原方法：XUI可展开布局.getDuration()">
+    {
+        @ @sn<this>.GetExpandableLayout ().getDuration ()
+    }
+
+    方法 设置时长 <公开 注释 = "用法：把XUI可展开布局的时长设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI可展开布局.setDuration()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetExpandableLayout ().setDuration (@<值1>))
+    }
+
+    方法 取展开 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读出XUI可展开布局的展开。 参数：无。 返回：小数。 原方法：XUI可展开布局.getExpansion()">
+    {
+        @ (double)@sn<this>.GetExpandableLayout ().getExpansion ()
+    }
+
+    方法 设置展开 <公开 注释 = "用法：把XUI可展开布局的展开设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI可展开布局.setExpansion()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetExpandableLayout ().setExpansion ((float) @<值1>))
+    }
+
+    方法 取视差 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读出XUI可展开布局的视差。 参数：无。 返回：小数。 原方法：XUI可展开布局.getParallax()">
+    {
+        @ (double)@sn<this>.GetExpandableLayout ().getParallax ()
+    }
+
+    方法 设置视差 <公开 注释 = "用法：把XUI可展开布局的视差设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI可展开布局.setParallax()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetExpandableLayout ().setParallax ((float) @<值1>))
+    }
+
+    方法 取方位 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI可展开布局的方位。 参数：无。 返回：整数。 原方法：XUI可展开布局.getOrientation()">
+    {
+        @ @sn<this>.GetExpandableLayout ().getOrientation ()
+    }
+
+    方法 设置方位 <公开 注释 = "用法：把XUI可展开布局的方位设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI可展开布局.setOrientation()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetExpandableLayout ().setOrientation (@<值1>))
+    }
+
+}
+
+类 XUI按钮 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.layout.XUIButton)."
+        @文档 = "category = \"XUI.布局\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.layout.XUIButton\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.xui_bottomDividerHeight\n        shown_name = \"底部分割线的高度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_bottomDividerColor\n        shown_name = \"底部分割线的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.xui_bottomDividerInsetLeft\n        shown_name = \"底部分割线左侧的边距\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_bottomDividerInsetRight\n        shown_name = \"底部分割线右侧的边距\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_topDividerHeight\n        shown_name = \"顶部分割线的高度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_topDividerColor\n        shown_name = \"顶部分割线的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.xui_topDividerInsetLeft\n        shown_name = \"顶部分割线左侧的边距\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_topDividerInsetRight\n        shown_name = \"顶部分割线右侧的边距\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_leftDividerWidth\n        shown_name = \"左侧分割线的宽度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_leftDividerColor\n        shown_name = \"左侧分割线的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.xui_leftDividerInsetTop\n        shown_name = \"左侧分割线顶部的边距\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_leftDividerInsetBottom\n        shown_name = \"左侧分割线底部的边距\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_rightDividerWidth\n        shown_name = \"右侧分割线的宽度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_rightDividerColor\n        shown_name = \"右侧分割线的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.xui_rightDividerInsetTop\n        shown_name = \"右侧分割线顶部的边距\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_rightDividerInsetBottom\n        shown_name = \"右侧分割线底部的边距\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_radius\n        shown_name = \"圆角度数\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_borderColor\n        shown_name = \"边框颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.xui_borderWidth\n        shown_name = \"边框宽度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_outerNormalColor\n        shown_name = \"21版本下\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.xui_hideRadiusSide\n        shown_name = \"隐藏圆角的类型\"\n        data_type = string\n        detail_type = enum\n        item\n        {\n            name = none\n            shown_name = \"none\"\n        }\n        item\n        {\n            name = top\n            shown_name = \"top\"\n        }\n        item\n        {\n            name = right\n            shown_name = \"right\"\n        }\n        item\n        {\n            name = bottom\n            shown_name = \"bottom\"\n        }\n        item\n        {\n            name = left\n            shown_name = \"left\"\n        }\n    }\n    attr\n    {\n        name = app.xui_showBorderOnlyBeforeL\n        shown_name = \"是否显示边框\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.xui_shadowElevation\n        shown_name = \"阴影的大小\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_useThemeGeneralShadowElevation\n        shown_name = \"是否使用主题的阴影大小\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.xui_shadowAlpha\n        shown_name = \"阴影的透明度\"\n        data_type = double\n    }\n    attr\n    {\n        name = app.xui_outlineInsetTop\n        shown_name = \"轮廓的顶部边距\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_outlineInsetLeft\n        shown_name = \"轮廓的左侧边距\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_outlineInsetRight\n        shown_name = \"轮廓的右侧边距\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_outlineInsetBottom\n        shown_name = \"轮廓的底部边距\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_outlineExcludePadding\n        shown_name = \"轮廓是否使用内边距\"\n        data_type = boolean\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI按钮, XUIButton, com.xuexiang.xui.widget.layout.XUIButton)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetXUIButton ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI按钮的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI按钮.getAlpha()">
+    {
+        @ (double)@sn<this>.GetXUIButton ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI按钮的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI按钮.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIButton ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI按钮的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI按钮.isEnabled()">
+    {
+        @ @sn<this>.GetXUIButton ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI按钮的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI按钮.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIButton ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI按钮的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI按钮.isClickable()">
+    {
+        @ @sn<this>.GetXUIButton ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI按钮的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI按钮.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIButton ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI按钮的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI按钮.getElevation()">
+    {
+        @ (double)@sn<this>.GetXUIButton ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI按钮的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI按钮.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIButton ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI按钮的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI按钮.getMinimumHeight()">
+    {
+        @ @sn<this>.GetXUIButton ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI按钮的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI按钮.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIButton ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI按钮的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI按钮.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIButton ().setBackgroundColor (@<新值>))
+    }
+
+    方法 XUI文本 <公开 属性读 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读取XUI按钮的XUI文本当前值。 参数：无。 返回：文本型。 原方法：XUI按钮.getText()">
+    {
+        @ java.lang.String.valueOf (@sn<this>.GetXUIButton ().getText ())
+    }
+
+    方法 XUI文本 <公开 属性写 注释 = "用法：设置XUI按钮的XUI文本, 传入新值后立刻生效。 参数：新值=文本。 返回：无。 原方法：XUI按钮.setText()">
+    参数 新值 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIButton ().setText (@<新值>))
+    }
+
+    方法 XUI文字颜色 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI按钮的XUI文字颜色当前值。 参数：无。 返回：整数。 原方法：XUI按钮.getCurrentTextColor()">
+    {
+        @ @sn<this>.GetXUIButton ().getCurrentTextColor ()
+    }
+
+    方法 XUI文字颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI按钮的XUI文字颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI按钮.setTextColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIButton ().setTextColor (@<新值>))
+    }
+
+    方法 XUI文字大小 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI按钮的XUI文字大小当前值。 参数：无。 返回：小数。 原方法：XUI按钮.getTextSize()">
+    {
+        @ (double)@sn<this>.GetXUIButton ().getTextSize ()
+    }
+
+    方法 XUI文字大小 <公开 属性写 注释 = "用法：设置XUI按钮的XUI文字大小, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI按钮.setTextSize()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIButton ().setTextSize ((float) @<新值>))
+    }
+
+    方法 XUI提示文字 <公开 属性读 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读取XUI按钮的XUI提示文字当前值。 参数：无。 返回：文本型。 原方法：XUI按钮.getHint()">
+    {
+        @ java.lang.String.valueOf (@sn<this>.GetXUIButton ().getHint ())
+    }
+
+    方法 XUI提示文字 <公开 属性写 注释 = "用法：设置XUI按钮的XUI提示文字, 传入新值后立刻生效。 参数：新值=文本。 返回：无。 原方法：XUI按钮.setHint()">
+    参数 新值 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIButton ().setHint (@<新值>))
+    }
+
+    方法 XUI最大行数 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI按钮的XUI最大行数当前值。 参数：无。 返回：整数。 原方法：XUI按钮.getMaxLines()">
+    {
+        @ @sn<this>.GetXUIButton ().getMaxLines ()
+    }
+
+    方法 XUI最大行数 <公开 属性写 注释 = "用法：设置XUI按钮的XUI最大行数, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI按钮.setMaxLines()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIButton ().setMaxLines (@<新值>))
+    }
+
+    方法 XUI单行 <公开 属性写 注释 = "用法：设置XUI按钮的XUI单行, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI按钮.setSingleLine()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIButton ().setSingleLine (@<新值>))
+    }
+
+    方法 更新上分隔线 <公开 注释 = "用法：用传入值刷新XUI按钮的上分隔线。 参数：值1=整数、值2=整数、值3=整数、值4=整数。 返回：无。 原方法：XUI按钮.updateTopDivider()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIButton ().updateTopDivider (@<值1>, @<值2>, @<值3>, @<值4>))
+    }
+
+    方法 更新下分隔线 <公开 注释 = "用法：用传入值刷新XUI按钮的下分隔线。 参数：值1=整数、值2=整数、值3=整数、值4=整数。 返回：无。 原方法：XUI按钮.updateBottomDivider()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIButton ().updateBottomDivider (@<值1>, @<值2>, @<值3>, @<值4>))
+    }
+
+    方法 更新左分隔线 <公开 注释 = "用法：用传入值刷新XUI按钮的左分隔线。 参数：值1=整数、值2=整数、值3=整数、值4=整数。 返回：无。 原方法：XUI按钮.updateLeftDivider()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIButton ().updateLeftDivider (@<值1>, @<值2>, @<值3>, @<值4>))
+    }
+
+    方法 更新右分隔线 <公开 注释 = "用法：用传入值刷新XUI按钮的右分隔线。 参数：值1=整数、值2=整数、值3=整数、值4=整数。 返回：无。 原方法：XUI按钮.updateRightDivider()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIButton ().updateRightDivider (@<值1>, @<值2>, @<值3>, @<值4>))
+    }
+
+    方法 仅显示上分隔线 <公开 注释 = "用法：调用XUI按钮的仅显示上分隔线。 参数：值1=整数、值2=整数、值3=整数、值4=整数。 返回：无。 原方法：XUI按钮.onlyShowTopDivider()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIButton ().onlyShowTopDivider (@<值1>, @<值2>, @<值3>, @<值4>))
+    }
+
+    方法 仅显示下分隔线 <公开 注释 = "用法：调用XUI按钮的仅显示下分隔线。 参数：值1=整数、值2=整数、值3=整数、值4=整数。 返回：无。 原方法：XUI按钮.onlyShowBottomDivider()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIButton ().onlyShowBottomDivider (@<值1>, @<值2>, @<值3>, @<值4>))
+    }
+
+    方法 仅显示左分隔线 <公开 注释 = "用法：调用XUI按钮的仅显示左分隔线。 参数：值1=整数、值2=整数、值3=整数、值4=整数。 返回：无。 原方法：XUI按钮.onlyShowLeftDivider()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIButton ().onlyShowLeftDivider (@<值1>, @<值2>, @<值3>, @<值4>))
+    }
+
+    方法 仅显示右分隔线 <公开 注释 = "用法：调用XUI按钮的仅显示右分隔线。 参数：值1=整数、值2=整数、值3=整数、值4=整数。 返回：无。 原方法：XUI按钮.onlyShowRightDivider()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIButton ().onlyShowRightDivider (@<值1>, @<值2>, @<值3>, @<值4>))
+    }
+
+    方法 设置上分隔线透明度 <公开 注释 = "用法：把XUI按钮的上分隔线透明度设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI按钮.setTopDividerAlpha()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIButton ().setTopDividerAlpha (@<值1>))
+    }
+
+    方法 设置下分隔线透明度 <公开 注释 = "用法：把XUI按钮的下分隔线透明度设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI按钮.setBottomDividerAlpha()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIButton ().setBottomDividerAlpha (@<值1>))
+    }
+
+    方法 设置左分隔线透明度 <公开 注释 = "用法：把XUI按钮的左分隔线透明度设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI按钮.setLeftDividerAlpha()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIButton ().setLeftDividerAlpha (@<值1>))
+    }
+
+    方法 设置右分隔线透明度 <公开 注释 = "用法：把XUI按钮的右分隔线透明度设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI按钮.setRightDividerAlpha()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIButton ().setRightDividerAlpha (@<值1>))
+    }
+
+    方法 设置隐藏圆角侧 <公开 注释 = "用法：把XUI按钮的隐藏圆角侧设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI按钮.setHideRadiusSide()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIButton ().setHideRadiusSide (@<值1>))
+    }
+
+    方法 取隐藏圆角侧 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI按钮的隐藏圆角侧。 参数：无。 返回：整数。 原方法：XUI按钮.getHideRadiusSide()">
+    {
+        @ @sn<this>.GetXUIButton ().getHideRadiusSide ()
+    }
+
+    方法 设置圆角与阴影 <公开 注释 = "用法：把XUI按钮的圆角与阴影设为给定值。 参数：值1=整数、值2=整数、值3=小数。 返回：无。 原方法：XUI按钮.setRadiusAndShadow()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIButton ().setRadiusAndShadow (@<值1>, @<值2>, (float) @<值3>))
+    }
+
+    方法 设置圆角与阴影_2 <公开 注释 = "用法：把XUI按钮的圆角与阴影_2设为给定值。 参数：值1=整数、值2=整数、值3=整数、值4=小数。 返回：无。 原方法：XUI按钮.setRadiusAndShadow()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIButton ().setRadiusAndShadow (@<值1>, @<值2>, @<值3>, (float) @<值4>))
+    }
+
+    方法 设置圆角与阴影_3 <公开 注释 = "用法：把XUI按钮的圆角与阴影_3设为给定值。 参数：值1=整数、值2=整数、值3=整数、值4=整数、值5=小数。 返回：无。 原方法：XUI按钮.setRadiusAndShadow()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 整数>
+    参数 值5 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIButton ().setRadiusAndShadow (@<值1>, @<值2>, @<值3>, @<值4>, (float) @<值5>))
+    }
+
+    方法 设置圆角 <公开 注释 = "用法：把XUI按钮的圆角设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI按钮.setRadius()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIButton ().setRadius (@<值1>))
+    }
+
+    方法 设置圆角_2 <公开 注释 = "用法：把XUI按钮的圆角_2设为给定值。 参数：值1=整数、值2=整数。 返回：无。 原方法：XUI按钮.setRadius()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIButton ().setRadius (@<值1>, @<值2>))
+    }
+
+    方法 取圆角 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI按钮的圆角。 参数：无。 返回：整数。 原方法：XUI按钮.getRadius()">
+    {
+        @ @sn<this>.GetXUIButton ().getRadius ()
+    }
+
+    方法 设置外轮廓内缩 <公开 注释 = "用法：把XUI按钮的外轮廓内缩设为给定值。 参数：值1=整数、值2=整数、值3=整数、值4=整数。 返回：无。 原方法：XUI按钮.setOutlineInset()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIButton ().setOutlineInset (@<值1>, @<值2>, @<值3>, @<值4>))
+    }
+
+    方法 设置边框颜色 <公开 注释 = "用法：把XUI按钮的边框颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI按钮.setBorderColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIButton ().setBorderColor (@<值1>))
+    }
+
+    方法 设置边框宽度 <公开 注释 = "用法：把XUI按钮的边框宽度设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI按钮.setBorderWidth()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIButton ().setBorderWidth (@<值1>))
+    }
+
+    方法 设置显示边框仅之前L <公开 注释 = "用法：把XUI按钮的显示边框仅之前L设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI按钮.setShowBorderOnlyBeforeL()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIButton ().setShowBorderOnlyBeforeL (@<值1>))
+    }
+
+    方法 设置宽度限制 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：把XUI按钮的宽度限制设为给定值。 参数：值1=整数。 返回：逻辑型。 原方法：XUI按钮.setWidthLimit()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @sn<this>.GetXUIButton ().setWidthLimit (@<值1>)
+    }
+
+    方法 设置高度限制 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：把XUI按钮的高度限制设为给定值。 参数：值1=整数。 返回：逻辑型。 原方法：XUI按钮.setHeightLimit()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @sn<this>.GetXUIButton ().setHeightLimit (@<值1>)
+    }
+
+    方法 设置使用主题通用阴影高度差 <公开 注释 = "用法：把XUI按钮的使用主题通用阴影高度差设为给定值。 参数：无。 返回：无。 原方法：XUI按钮.setUseThemeGeneralShadowElevation()">
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIButton ().setUseThemeGeneralShadowElevation ())
+    }
+
+    方法 设置外轮廓排除内边距 <公开 注释 = "用法：把XUI按钮的外轮廓排除内边距设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI按钮.setOutlineExcludePadding()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIButton ().setOutlineExcludePadding (@<值1>))
+    }
+
+    方法 设置阴影高度差 <公开 注释 = "用法：把XUI按钮的阴影高度差设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI按钮.setShadowElevation()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIButton ().setShadowElevation (@<值1>))
+    }
+
+    方法 取阴影高度差 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI按钮的阴影高度差。 参数：无。 返回：整数。 原方法：XUI按钮.getShadowElevation()">
+    {
+        @ @sn<this>.GetXUIButton ().getShadowElevation ()
+    }
+
+    方法 设置阴影透明度 <公开 注释 = "用法：把XUI按钮的阴影透明度设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI按钮.setShadowAlpha()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIButton ().setShadowAlpha ((float) @<值1>))
+    }
+
+    方法 取阴影透明度 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读出XUI按钮的阴影透明度。 参数：无。 返回：小数。 原方法：XUI按钮.getShadowAlpha()">
+    {
+        @ (double)@sn<this>.GetXUIButton ().getShadowAlpha ()
+    }
+
+    方法 设置阴影颜色 <公开 注释 = "用法：把XUI按钮的阴影颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI按钮.setShadowColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIButton ().setShadowColor (@<值1>))
+    }
+
+    方法 取阴影颜色 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI按钮的阴影颜色。 参数：无。 返回：整数。 原方法：XUI按钮.getShadowColor()">
+    {
+        @ @sn<this>.GetXUIButton ().getShadowColor ()
+    }
+
+    方法 设置外部常规颜色 <公开 注释 = "用法：把XUI按钮的外部常规颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI按钮.setOuterNormalColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIButton ().setOuterNormalColor (@<值1>))
+    }
+
+}
+
+类 XUI框架布局 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.layout.XUIFrameLayout)."
+        @文档 = "category = \"XUI.布局\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.layout.XUIFrameLayout\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.xui_bottomDividerHeight\n        shown_name = \"底部分割线的高度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_bottomDividerColor\n        shown_name = \"底部分割线的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.xui_bottomDividerInsetLeft\n        shown_name = \"底部分割线左侧的边距\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_bottomDividerInsetRight\n        shown_name = \"底部分割线右侧的边距\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_topDividerHeight\n        shown_name = \"顶部分割线的高度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_topDividerColor\n        shown_name = \"顶部分割线的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.xui_topDividerInsetLeft\n        shown_name = \"顶部分割线左侧的边距\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_topDividerInsetRight\n        shown_name = \"顶部分割线右侧的边距\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_leftDividerWidth\n        shown_name = \"左侧分割线的宽度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_leftDividerColor\n        shown_name = \"左侧分割线的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.xui_leftDividerInsetTop\n        shown_name = \"左侧分割线顶部的边距\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_leftDividerInsetBottom\n        shown_name = \"左侧分割线底部的边距\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_rightDividerWidth\n        shown_name = \"右侧分割线的宽度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_rightDividerColor\n        shown_name = \"右侧分割线的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.xui_rightDividerInsetTop\n        shown_name = \"右侧分割线顶部的边距\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_rightDividerInsetBottom\n        shown_name = \"右侧分割线底部的边距\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_radius\n        shown_name = \"圆角度数\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_borderColor\n        shown_name = \"边框颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.xui_borderWidth\n        shown_name = \"边框宽度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_outerNormalColor\n        shown_name = \"21版本下\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.xui_hideRadiusSide\n        shown_name = \"隐藏圆角的类型\"\n        data_type = string\n        detail_type = enum\n        item\n        {\n            name = none\n            shown_name = \"none\"\n        }\n        item\n        {\n            name = top\n            shown_name = \"top\"\n        }\n        item\n        {\n            name = right\n            shown_name = \"right\"\n        }\n        item\n        {\n            name = bottom\n            shown_name = \"bottom\"\n        }\n        item\n        {\n            name = left\n            shown_name = \"left\"\n        }\n    }\n    attr\n    {\n        name = app.xui_showBorderOnlyBeforeL\n        shown_name = \"是否显示边框\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.xui_shadowElevation\n        shown_name = \"阴影的大小\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_useThemeGeneralShadowElevation\n        shown_name = \"是否使用主题的阴影大小\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.xui_shadowAlpha\n        shown_name = \"阴影的透明度\"\n        data_type = double\n    }\n    attr\n    {\n        name = app.xui_outlineInsetTop\n        shown_name = \"轮廓的顶部边距\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_outlineInsetLeft\n        shown_name = \"轮廓的左侧边距\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_outlineInsetRight\n        shown_name = \"轮廓的右侧边距\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_outlineInsetBottom\n        shown_name = \"轮廓的底部边距\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_outlineExcludePadding\n        shown_name = \"轮廓是否使用内边距\"\n        data_type = boolean\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI框架布局, XUIFrameLayout, com.xuexiang.xui.widget.layout.XUIFrameLayout)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetXUIFrameLayout ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI框架布局的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI框架布局.getAlpha()">
+    {
+        @ (double)@sn<this>.GetXUIFrameLayout ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI框架布局的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI框架布局.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIFrameLayout ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI框架布局的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI框架布局.isEnabled()">
+    {
+        @ @sn<this>.GetXUIFrameLayout ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI框架布局的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI框架布局.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIFrameLayout ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI框架布局的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI框架布局.isClickable()">
+    {
+        @ @sn<this>.GetXUIFrameLayout ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI框架布局的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI框架布局.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIFrameLayout ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI框架布局的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI框架布局.getElevation()">
+    {
+        @ (double)@sn<this>.GetXUIFrameLayout ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI框架布局的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI框架布局.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIFrameLayout ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI框架布局的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI框架布局.getMinimumHeight()">
+    {
+        @ @sn<this>.GetXUIFrameLayout ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI框架布局的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI框架布局.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIFrameLayout ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI框架布局的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI框架布局.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIFrameLayout ().setBackgroundColor (@<新值>))
+    }
+
+    方法 更新上分隔线 <公开 注释 = "用法：用传入值刷新XUI框架布局的上分隔线。 参数：值1=整数、值2=整数、值3=整数、值4=整数。 返回：无。 原方法：XUI框架布局.updateTopDivider()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIFrameLayout ().updateTopDivider (@<值1>, @<值2>, @<值3>, @<值4>))
+    }
+
+    方法 更新下分隔线 <公开 注释 = "用法：用传入值刷新XUI框架布局的下分隔线。 参数：值1=整数、值2=整数、值3=整数、值4=整数。 返回：无。 原方法：XUI框架布局.updateBottomDivider()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIFrameLayout ().updateBottomDivider (@<值1>, @<值2>, @<值3>, @<值4>))
+    }
+
+    方法 更新左分隔线 <公开 注释 = "用法：用传入值刷新XUI框架布局的左分隔线。 参数：值1=整数、值2=整数、值3=整数、值4=整数。 返回：无。 原方法：XUI框架布局.updateLeftDivider()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIFrameLayout ().updateLeftDivider (@<值1>, @<值2>, @<值3>, @<值4>))
+    }
+
+    方法 更新右分隔线 <公开 注释 = "用法：用传入值刷新XUI框架布局的右分隔线。 参数：值1=整数、值2=整数、值3=整数、值4=整数。 返回：无。 原方法：XUI框架布局.updateRightDivider()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIFrameLayout ().updateRightDivider (@<值1>, @<值2>, @<值3>, @<值4>))
+    }
+
+    方法 仅显示上分隔线 <公开 注释 = "用法：调用XUI框架布局的仅显示上分隔线。 参数：值1=整数、值2=整数、值3=整数、值4=整数。 返回：无。 原方法：XUI框架布局.onlyShowTopDivider()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIFrameLayout ().onlyShowTopDivider (@<值1>, @<值2>, @<值3>, @<值4>))
+    }
+
+    方法 仅显示下分隔线 <公开 注释 = "用法：调用XUI框架布局的仅显示下分隔线。 参数：值1=整数、值2=整数、值3=整数、值4=整数。 返回：无。 原方法：XUI框架布局.onlyShowBottomDivider()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIFrameLayout ().onlyShowBottomDivider (@<值1>, @<值2>, @<值3>, @<值4>))
+    }
+
+    方法 仅显示左分隔线 <公开 注释 = "用法：调用XUI框架布局的仅显示左分隔线。 参数：值1=整数、值2=整数、值3=整数、值4=整数。 返回：无。 原方法：XUI框架布局.onlyShowLeftDivider()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIFrameLayout ().onlyShowLeftDivider (@<值1>, @<值2>, @<值3>, @<值4>))
+    }
+
+    方法 仅显示右分隔线 <公开 注释 = "用法：调用XUI框架布局的仅显示右分隔线。 参数：值1=整数、值2=整数、值3=整数、值4=整数。 返回：无。 原方法：XUI框架布局.onlyShowRightDivider()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIFrameLayout ().onlyShowRightDivider (@<值1>, @<值2>, @<值3>, @<值4>))
+    }
+
+    方法 设置上分隔线透明度 <公开 注释 = "用法：把XUI框架布局的上分隔线透明度设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI框架布局.setTopDividerAlpha()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIFrameLayout ().setTopDividerAlpha (@<值1>))
+    }
+
+    方法 设置下分隔线透明度 <公开 注释 = "用法：把XUI框架布局的下分隔线透明度设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI框架布局.setBottomDividerAlpha()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIFrameLayout ().setBottomDividerAlpha (@<值1>))
+    }
+
+    方法 设置左分隔线透明度 <公开 注释 = "用法：把XUI框架布局的左分隔线透明度设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI框架布局.setLeftDividerAlpha()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIFrameLayout ().setLeftDividerAlpha (@<值1>))
+    }
+
+    方法 设置右分隔线透明度 <公开 注释 = "用法：把XUI框架布局的右分隔线透明度设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI框架布局.setRightDividerAlpha()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIFrameLayout ().setRightDividerAlpha (@<值1>))
+    }
+
+    方法 设置圆角与阴影 <公开 注释 = "用法：把XUI框架布局的圆角与阴影设为给定值。 参数：值1=整数、值2=整数、值3=小数。 返回：无。 原方法：XUI框架布局.setRadiusAndShadow()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIFrameLayout ().setRadiusAndShadow (@<值1>, @<值2>, (float) @<值3>))
+    }
+
+    方法 设置圆角与阴影_2 <公开 注释 = "用法：把XUI框架布局的圆角与阴影_2设为给定值。 参数：值1=整数、值2=整数、值3=整数、值4=小数。 返回：无。 原方法：XUI框架布局.setRadiusAndShadow()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIFrameLayout ().setRadiusAndShadow (@<值1>, @<值2>, @<值3>, (float) @<值4>))
+    }
+
+    方法 设置圆角与阴影_3 <公开 注释 = "用法：把XUI框架布局的圆角与阴影_3设为给定值。 参数：值1=整数、值2=整数、值3=整数、值4=整数、值5=小数。 返回：无。 原方法：XUI框架布局.setRadiusAndShadow()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 整数>
+    参数 值5 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIFrameLayout ().setRadiusAndShadow (@<值1>, @<值2>, @<值3>, @<值4>, (float) @<值5>))
+    }
+
+    方法 设置圆角 <公开 注释 = "用法：把XUI框架布局的圆角设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI框架布局.setRadius()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIFrameLayout ().setRadius (@<值1>))
+    }
+
+    方法 设置圆角_2 <公开 注释 = "用法：把XUI框架布局的圆角_2设为给定值。 参数：值1=整数、值2=整数。 返回：无。 原方法：XUI框架布局.setRadius()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIFrameLayout ().setRadius (@<值1>, @<值2>))
+    }
+
+    方法 取圆角 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI框架布局的圆角。 参数：无。 返回：整数。 原方法：XUI框架布局.getRadius()">
+    {
+        @ @sn<this>.GetXUIFrameLayout ().getRadius ()
+    }
+
+    方法 设置外轮廓内缩 <公开 注释 = "用法：把XUI框架布局的外轮廓内缩设为给定值。 参数：值1=整数、值2=整数、值3=整数、值4=整数。 返回：无。 原方法：XUI框架布局.setOutlineInset()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIFrameLayout ().setOutlineInset (@<值1>, @<值2>, @<值3>, @<值4>))
+    }
+
+    方法 设置隐藏圆角侧 <公开 注释 = "用法：把XUI框架布局的隐藏圆角侧设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI框架布局.setHideRadiusSide()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIFrameLayout ().setHideRadiusSide (@<值1>))
+    }
+
+    方法 取隐藏圆角侧 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI框架布局的隐藏圆角侧。 参数：无。 返回：整数。 原方法：XUI框架布局.getHideRadiusSide()">
+    {
+        @ @sn<this>.GetXUIFrameLayout ().getHideRadiusSide ()
+    }
+
+    方法 设置边框颜色 <公开 注释 = "用法：把XUI框架布局的边框颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI框架布局.setBorderColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIFrameLayout ().setBorderColor (@<值1>))
+    }
+
+    方法 设置边框宽度 <公开 注释 = "用法：把XUI框架布局的边框宽度设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI框架布局.setBorderWidth()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIFrameLayout ().setBorderWidth (@<值1>))
+    }
+
+    方法 设置显示边框仅之前L <公开 注释 = "用法：把XUI框架布局的显示边框仅之前L设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI框架布局.setShowBorderOnlyBeforeL()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIFrameLayout ().setShowBorderOnlyBeforeL (@<值1>))
+    }
+
+    方法 设置宽度限制 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：把XUI框架布局的宽度限制设为给定值。 参数：值1=整数。 返回：逻辑型。 原方法：XUI框架布局.setWidthLimit()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @sn<this>.GetXUIFrameLayout ().setWidthLimit (@<值1>)
+    }
+
+    方法 设置高度限制 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：把XUI框架布局的高度限制设为给定值。 参数：值1=整数。 返回：逻辑型。 原方法：XUI框架布局.setHeightLimit()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @sn<this>.GetXUIFrameLayout ().setHeightLimit (@<值1>)
+    }
+
+    方法 设置使用主题通用阴影高度差 <公开 注释 = "用法：把XUI框架布局的使用主题通用阴影高度差设为给定值。 参数：无。 返回：无。 原方法：XUI框架布局.setUseThemeGeneralShadowElevation()">
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIFrameLayout ().setUseThemeGeneralShadowElevation ())
+    }
+
+    方法 设置外轮廓排除内边距 <公开 注释 = "用法：把XUI框架布局的外轮廓排除内边距设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI框架布局.setOutlineExcludePadding()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIFrameLayout ().setOutlineExcludePadding (@<值1>))
+    }
+
+    方法 设置阴影高度差 <公开 注释 = "用法：把XUI框架布局的阴影高度差设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI框架布局.setShadowElevation()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIFrameLayout ().setShadowElevation (@<值1>))
+    }
+
+    方法 取阴影高度差 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI框架布局的阴影高度差。 参数：无。 返回：整数。 原方法：XUI框架布局.getShadowElevation()">
+    {
+        @ @sn<this>.GetXUIFrameLayout ().getShadowElevation ()
+    }
+
+    方法 设置阴影透明度 <公开 注释 = "用法：把XUI框架布局的阴影透明度设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI框架布局.setShadowAlpha()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIFrameLayout ().setShadowAlpha ((float) @<值1>))
+    }
+
+    方法 取阴影透明度 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读出XUI框架布局的阴影透明度。 参数：无。 返回：小数。 原方法：XUI框架布局.getShadowAlpha()">
+    {
+        @ (double)@sn<this>.GetXUIFrameLayout ().getShadowAlpha ()
+    }
+
+    方法 设置阴影颜色 <公开 注释 = "用法：把XUI框架布局的阴影颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI框架布局.setShadowColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIFrameLayout ().setShadowColor (@<值1>))
+    }
+
+    方法 取阴影颜色 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI框架布局的阴影颜色。 参数：无。 返回：整数。 原方法：XUI框架布局.getShadowColor()">
+    {
+        @ @sn<this>.GetXUIFrameLayout ().getShadowColor ()
+    }
+
+    方法 设置外部常规颜色 <公开 注释 = "用法：把XUI框架布局的外部常规颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI框架布局.setOuterNormalColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIFrameLayout ().setOuterNormalColor (@<值1>))
+    }
+
+}
+
+类 XUI线性布局 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.layout.XUILinearLayout)."
+        @文档 = "category = \"XUI.布局\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.layout.XUILinearLayout\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.xui_bottomDividerHeight\n        shown_name = \"底部分割线的高度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_bottomDividerColor\n        shown_name = \"底部分割线的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.xui_bottomDividerInsetLeft\n        shown_name = \"底部分割线左侧的边距\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_bottomDividerInsetRight\n        shown_name = \"底部分割线右侧的边距\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_topDividerHeight\n        shown_name = \"顶部分割线的高度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_topDividerColor\n        shown_name = \"顶部分割线的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.xui_topDividerInsetLeft\n        shown_name = \"顶部分割线左侧的边距\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_topDividerInsetRight\n        shown_name = \"顶部分割线右侧的边距\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_leftDividerWidth\n        shown_name = \"左侧分割线的宽度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_leftDividerColor\n        shown_name = \"左侧分割线的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.xui_leftDividerInsetTop\n        shown_name = \"左侧分割线顶部的边距\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_leftDividerInsetBottom\n        shown_name = \"左侧分割线底部的边距\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_rightDividerWidth\n        shown_name = \"右侧分割线的宽度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_rightDividerColor\n        shown_name = \"右侧分割线的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.xui_rightDividerInsetTop\n        shown_name = \"右侧分割线顶部的边距\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_rightDividerInsetBottom\n        shown_name = \"右侧分割线底部的边距\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_radius\n        shown_name = \"圆角度数\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_borderColor\n        shown_name = \"边框颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.xui_borderWidth\n        shown_name = \"边框宽度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_outerNormalColor\n        shown_name = \"21版本下\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.xui_hideRadiusSide\n        shown_name = \"隐藏圆角的类型\"\n        data_type = string\n        detail_type = enum\n        item\n        {\n            name = none\n            shown_name = \"none\"\n        }\n        item\n        {\n            name = top\n            shown_name = \"top\"\n        }\n        item\n        {\n            name = right\n            shown_name = \"right\"\n        }\n        item\n        {\n            name = bottom\n            shown_name = \"bottom\"\n        }\n        item\n        {\n            name = left\n            shown_name = \"left\"\n        }\n    }\n    attr\n    {\n        name = app.xui_showBorderOnlyBeforeL\n        shown_name = \"是否显示边框\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.xui_shadowElevation\n        shown_name = \"阴影的大小\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_useThemeGeneralShadowElevation\n        shown_name = \"是否使用主题的阴影大小\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.xui_shadowAlpha\n        shown_name = \"阴影的透明度\"\n        data_type = double\n    }\n    attr\n    {\n        name = app.xui_outlineInsetTop\n        shown_name = \"轮廓的顶部边距\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_outlineInsetLeft\n        shown_name = \"轮廓的左侧边距\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_outlineInsetRight\n        shown_name = \"轮廓的右侧边距\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_outlineInsetBottom\n        shown_name = \"轮廓的底部边距\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_outlineExcludePadding\n        shown_name = \"轮廓是否使用内边距\"\n        data_type = boolean\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI线性布局, XUILinearLayout, com.xuexiang.xui.widget.layout.XUILinearLayout)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetXUILinearLayout ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI线性布局的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI线性布局.getAlpha()">
+    {
+        @ (double)@sn<this>.GetXUILinearLayout ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI线性布局的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI线性布局.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUILinearLayout ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI线性布局的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI线性布局.isEnabled()">
+    {
+        @ @sn<this>.GetXUILinearLayout ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI线性布局的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI线性布局.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUILinearLayout ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI线性布局的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI线性布局.isClickable()">
+    {
+        @ @sn<this>.GetXUILinearLayout ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI线性布局的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI线性布局.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUILinearLayout ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI线性布局的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI线性布局.getElevation()">
+    {
+        @ (double)@sn<this>.GetXUILinearLayout ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI线性布局的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI线性布局.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUILinearLayout ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI线性布局的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI线性布局.getMinimumHeight()">
+    {
+        @ @sn<this>.GetXUILinearLayout ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI线性布局的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI线性布局.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUILinearLayout ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI线性布局的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI线性布局.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUILinearLayout ().setBackgroundColor (@<新值>))
+    }
+
+    方法 更新上分隔线 <公开 注释 = "用法：用传入值刷新XUI线性布局的上分隔线。 参数：值1=整数、值2=整数、值3=整数、值4=整数。 返回：无。 原方法：XUI线性布局.updateTopDivider()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUILinearLayout ().updateTopDivider (@<值1>, @<值2>, @<值3>, @<值4>))
+    }
+
+    方法 更新下分隔线 <公开 注释 = "用法：用传入值刷新XUI线性布局的下分隔线。 参数：值1=整数、值2=整数、值3=整数、值4=整数。 返回：无。 原方法：XUI线性布局.updateBottomDivider()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUILinearLayout ().updateBottomDivider (@<值1>, @<值2>, @<值3>, @<值4>))
+    }
+
+    方法 更新左分隔线 <公开 注释 = "用法：用传入值刷新XUI线性布局的左分隔线。 参数：值1=整数、值2=整数、值3=整数、值4=整数。 返回：无。 原方法：XUI线性布局.updateLeftDivider()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUILinearLayout ().updateLeftDivider (@<值1>, @<值2>, @<值3>, @<值4>))
+    }
+
+    方法 更新右分隔线 <公开 注释 = "用法：用传入值刷新XUI线性布局的右分隔线。 参数：值1=整数、值2=整数、值3=整数、值4=整数。 返回：无。 原方法：XUI线性布局.updateRightDivider()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUILinearLayout ().updateRightDivider (@<值1>, @<值2>, @<值3>, @<值4>))
+    }
+
+    方法 仅显示上分隔线 <公开 注释 = "用法：调用XUI线性布局的仅显示上分隔线。 参数：值1=整数、值2=整数、值3=整数、值4=整数。 返回：无。 原方法：XUI线性布局.onlyShowTopDivider()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUILinearLayout ().onlyShowTopDivider (@<值1>, @<值2>, @<值3>, @<值4>))
+    }
+
+    方法 仅显示下分隔线 <公开 注释 = "用法：调用XUI线性布局的仅显示下分隔线。 参数：值1=整数、值2=整数、值3=整数、值4=整数。 返回：无。 原方法：XUI线性布局.onlyShowBottomDivider()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUILinearLayout ().onlyShowBottomDivider (@<值1>, @<值2>, @<值3>, @<值4>))
+    }
+
+    方法 仅显示左分隔线 <公开 注释 = "用法：调用XUI线性布局的仅显示左分隔线。 参数：值1=整数、值2=整数、值3=整数、值4=整数。 返回：无。 原方法：XUI线性布局.onlyShowLeftDivider()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUILinearLayout ().onlyShowLeftDivider (@<值1>, @<值2>, @<值3>, @<值4>))
+    }
+
+    方法 仅显示右分隔线 <公开 注释 = "用法：调用XUI线性布局的仅显示右分隔线。 参数：值1=整数、值2=整数、值3=整数、值4=整数。 返回：无。 原方法：XUI线性布局.onlyShowRightDivider()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUILinearLayout ().onlyShowRightDivider (@<值1>, @<值2>, @<值3>, @<值4>))
+    }
+
+    方法 设置上分隔线透明度 <公开 注释 = "用法：把XUI线性布局的上分隔线透明度设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI线性布局.setTopDividerAlpha()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUILinearLayout ().setTopDividerAlpha (@<值1>))
+    }
+
+    方法 设置下分隔线透明度 <公开 注释 = "用法：把XUI线性布局的下分隔线透明度设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI线性布局.setBottomDividerAlpha()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUILinearLayout ().setBottomDividerAlpha (@<值1>))
+    }
+
+    方法 设置左分隔线透明度 <公开 注释 = "用法：把XUI线性布局的左分隔线透明度设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI线性布局.setLeftDividerAlpha()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUILinearLayout ().setLeftDividerAlpha (@<值1>))
+    }
+
+    方法 设置右分隔线透明度 <公开 注释 = "用法：把XUI线性布局的右分隔线透明度设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI线性布局.setRightDividerAlpha()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUILinearLayout ().setRightDividerAlpha (@<值1>))
+    }
+
+    方法 设置圆角与阴影 <公开 注释 = "用法：把XUI线性布局的圆角与阴影设为给定值。 参数：值1=整数、值2=整数、值3=小数。 返回：无。 原方法：XUI线性布局.setRadiusAndShadow()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUILinearLayout ().setRadiusAndShadow (@<值1>, @<值2>, (float) @<值3>))
+    }
+
+    方法 设置圆角与阴影_2 <公开 注释 = "用法：把XUI线性布局的圆角与阴影_2设为给定值。 参数：值1=整数、值2=整数、值3=整数、值4=小数。 返回：无。 原方法：XUI线性布局.setRadiusAndShadow()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUILinearLayout ().setRadiusAndShadow (@<值1>, @<值2>, @<值3>, (float) @<值4>))
+    }
+
+    方法 设置圆角与阴影_3 <公开 注释 = "用法：把XUI线性布局的圆角与阴影_3设为给定值。 参数：值1=整数、值2=整数、值3=整数、值4=整数、值5=小数。 返回：无。 原方法：XUI线性布局.setRadiusAndShadow()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 整数>
+    参数 值5 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUILinearLayout ().setRadiusAndShadow (@<值1>, @<值2>, @<值3>, @<值4>, (float) @<值5>))
+    }
+
+    方法 设置圆角 <公开 注释 = "用法：把XUI线性布局的圆角设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI线性布局.setRadius()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUILinearLayout ().setRadius (@<值1>))
+    }
+
+    方法 设置圆角_2 <公开 注释 = "用法：把XUI线性布局的圆角_2设为给定值。 参数：值1=整数、值2=整数。 返回：无。 原方法：XUI线性布局.setRadius()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUILinearLayout ().setRadius (@<值1>, @<值2>))
+    }
+
+    方法 取圆角 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI线性布局的圆角。 参数：无。 返回：整数。 原方法：XUI线性布局.getRadius()">
+    {
+        @ @sn<this>.GetXUILinearLayout ().getRadius ()
+    }
+
+    方法 设置外轮廓内缩 <公开 注释 = "用法：把XUI线性布局的外轮廓内缩设为给定值。 参数：值1=整数、值2=整数、值3=整数、值4=整数。 返回：无。 原方法：XUI线性布局.setOutlineInset()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUILinearLayout ().setOutlineInset (@<值1>, @<值2>, @<值3>, @<值4>))
+    }
+
+    方法 设置边框颜色 <公开 注释 = "用法：把XUI线性布局的边框颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI线性布局.setBorderColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUILinearLayout ().setBorderColor (@<值1>))
+    }
+
+    方法 设置边框宽度 <公开 注释 = "用法：把XUI线性布局的边框宽度设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI线性布局.setBorderWidth()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUILinearLayout ().setBorderWidth (@<值1>))
+    }
+
+    方法 设置显示边框仅之前L <公开 注释 = "用法：把XUI线性布局的显示边框仅之前L设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI线性布局.setShowBorderOnlyBeforeL()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUILinearLayout ().setShowBorderOnlyBeforeL (@<值1>))
+    }
+
+    方法 设置隐藏圆角侧 <公开 注释 = "用法：把XUI线性布局的隐藏圆角侧设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI线性布局.setHideRadiusSide()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUILinearLayout ().setHideRadiusSide (@<值1>))
+    }
+
+    方法 取隐藏圆角侧 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI线性布局的隐藏圆角侧。 参数：无。 返回：整数。 原方法：XUI线性布局.getHideRadiusSide()">
+    {
+        @ @sn<this>.GetXUILinearLayout ().getHideRadiusSide ()
+    }
+
+    方法 设置宽度限制 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：把XUI线性布局的宽度限制设为给定值。 参数：值1=整数。 返回：逻辑型。 原方法：XUI线性布局.setWidthLimit()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @sn<this>.GetXUILinearLayout ().setWidthLimit (@<值1>)
+    }
+
+    方法 设置高度限制 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：把XUI线性布局的高度限制设为给定值。 参数：值1=整数。 返回：逻辑型。 原方法：XUI线性布局.setHeightLimit()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @sn<this>.GetXUILinearLayout ().setHeightLimit (@<值1>)
+    }
+
+    方法 设置使用主题通用阴影高度差 <公开 注释 = "用法：把XUI线性布局的使用主题通用阴影高度差设为给定值。 参数：无。 返回：无。 原方法：XUI线性布局.setUseThemeGeneralShadowElevation()">
+    {
+        @ @m<RUN_UI_ACTION> (GetXUILinearLayout ().setUseThemeGeneralShadowElevation ())
+    }
+
+    方法 设置外轮廓排除内边距 <公开 注释 = "用法：把XUI线性布局的外轮廓排除内边距设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI线性布局.setOutlineExcludePadding()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUILinearLayout ().setOutlineExcludePadding (@<值1>))
+    }
+
+    方法 设置阴影高度差 <公开 注释 = "用法：把XUI线性布局的阴影高度差设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI线性布局.setShadowElevation()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUILinearLayout ().setShadowElevation (@<值1>))
+    }
+
+    方法 取阴影高度差 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI线性布局的阴影高度差。 参数：无。 返回：整数。 原方法：XUI线性布局.getShadowElevation()">
+    {
+        @ @sn<this>.GetXUILinearLayout ().getShadowElevation ()
+    }
+
+    方法 设置阴影透明度 <公开 注释 = "用法：把XUI线性布局的阴影透明度设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI线性布局.setShadowAlpha()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUILinearLayout ().setShadowAlpha ((float) @<值1>))
+    }
+
+    方法 设置阴影颜色 <公开 注释 = "用法：把XUI线性布局的阴影颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI线性布局.setShadowColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUILinearLayout ().setShadowColor (@<值1>))
+    }
+
+    方法 取阴影颜色 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI线性布局的阴影颜色。 参数：无。 返回：整数。 原方法：XUI线性布局.getShadowColor()">
+    {
+        @ @sn<this>.GetXUILinearLayout ().getShadowColor ()
+    }
+
+    方法 设置外部常规颜色 <公开 注释 = "用法：把XUI线性布局的外部常规颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI线性布局.setOuterNormalColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUILinearLayout ().setOuterNormalColor (@<值1>))
+    }
+
+    方法 取阴影透明度 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读出XUI线性布局的阴影透明度。 参数：无。 返回：小数。 原方法：XUI线性布局.getShadowAlpha()">
+    {
+        @ (double)@sn<this>.GetXUILinearLayout ().getShadowAlpha ()
+    }
+
+}
+
+类 XUI相对布局 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.layout.XUIRelativeLayout)."
+        @文档 = "category = \"XUI.布局\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.layout.XUIRelativeLayout\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.xui_bottomDividerHeight\n        shown_name = \"底部分割线的高度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_bottomDividerColor\n        shown_name = \"底部分割线的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.xui_bottomDividerInsetLeft\n        shown_name = \"底部分割线左侧的边距\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_bottomDividerInsetRight\n        shown_name = \"底部分割线右侧的边距\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_topDividerHeight\n        shown_name = \"顶部分割线的高度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_topDividerColor\n        shown_name = \"顶部分割线的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.xui_topDividerInsetLeft\n        shown_name = \"顶部分割线左侧的边距\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_topDividerInsetRight\n        shown_name = \"顶部分割线右侧的边距\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_leftDividerWidth\n        shown_name = \"左侧分割线的宽度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_leftDividerColor\n        shown_name = \"左侧分割线的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.xui_leftDividerInsetTop\n        shown_name = \"左侧分割线顶部的边距\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_leftDividerInsetBottom\n        shown_name = \"左侧分割线底部的边距\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_rightDividerWidth\n        shown_name = \"右侧分割线的宽度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_rightDividerColor\n        shown_name = \"右侧分割线的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.xui_rightDividerInsetTop\n        shown_name = \"右侧分割线顶部的边距\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_rightDividerInsetBottom\n        shown_name = \"右侧分割线底部的边距\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_radius\n        shown_name = \"圆角度数\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_borderColor\n        shown_name = \"边框颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.xui_borderWidth\n        shown_name = \"边框宽度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_outerNormalColor\n        shown_name = \"21版本下\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.xui_hideRadiusSide\n        shown_name = \"隐藏圆角的类型\"\n        data_type = string\n        detail_type = enum\n        item\n        {\n            name = none\n            shown_name = \"none\"\n        }\n        item\n        {\n            name = top\n            shown_name = \"top\"\n        }\n        item\n        {\n            name = right\n            shown_name = \"right\"\n        }\n        item\n        {\n            name = bottom\n            shown_name = \"bottom\"\n        }\n        item\n        {\n            name = left\n            shown_name = \"left\"\n        }\n    }\n    attr\n    {\n        name = app.xui_showBorderOnlyBeforeL\n        shown_name = \"是否显示边框\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.xui_shadowElevation\n        shown_name = \"阴影的大小\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_useThemeGeneralShadowElevation\n        shown_name = \"是否使用主题的阴影大小\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.xui_shadowAlpha\n        shown_name = \"阴影的透明度\"\n        data_type = double\n    }\n    attr\n    {\n        name = app.xui_outlineInsetTop\n        shown_name = \"轮廓的顶部边距\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_outlineInsetLeft\n        shown_name = \"轮廓的左侧边距\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_outlineInsetRight\n        shown_name = \"轮廓的右侧边距\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_outlineInsetBottom\n        shown_name = \"轮廓的底部边距\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xui_outlineExcludePadding\n        shown_name = \"轮廓是否使用内边距\"\n        data_type = boolean\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI相对布局, XUIRelativeLayout, com.xuexiang.xui.widget.layout.XUIRelativeLayout)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetXUIRelativeLayout ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI相对布局的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI相对布局.getAlpha()">
+    {
+        @ (double)@sn<this>.GetXUIRelativeLayout ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI相对布局的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI相对布局.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIRelativeLayout ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI相对布局的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI相对布局.isEnabled()">
+    {
+        @ @sn<this>.GetXUIRelativeLayout ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI相对布局的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI相对布局.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIRelativeLayout ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI相对布局的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI相对布局.isClickable()">
+    {
+        @ @sn<this>.GetXUIRelativeLayout ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI相对布局的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI相对布局.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIRelativeLayout ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI相对布局的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI相对布局.getElevation()">
+    {
+        @ (double)@sn<this>.GetXUIRelativeLayout ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI相对布局的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI相对布局.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIRelativeLayout ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI相对布局的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI相对布局.getMinimumHeight()">
+    {
+        @ @sn<this>.GetXUIRelativeLayout ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI相对布局的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI相对布局.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIRelativeLayout ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI相对布局的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI相对布局.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIRelativeLayout ().setBackgroundColor (@<新值>))
+    }
+
+    方法 更新上分隔线 <公开 注释 = "用法：用传入值刷新XUI相对布局的上分隔线。 参数：值1=整数、值2=整数、值3=整数、值4=整数。 返回：无。 原方法：XUI相对布局.updateTopDivider()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIRelativeLayout ().updateTopDivider (@<值1>, @<值2>, @<值3>, @<值4>))
+    }
+
+    方法 更新下分隔线 <公开 注释 = "用法：用传入值刷新XUI相对布局的下分隔线。 参数：值1=整数、值2=整数、值3=整数、值4=整数。 返回：无。 原方法：XUI相对布局.updateBottomDivider()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIRelativeLayout ().updateBottomDivider (@<值1>, @<值2>, @<值3>, @<值4>))
+    }
+
+    方法 更新左分隔线 <公开 注释 = "用法：用传入值刷新XUI相对布局的左分隔线。 参数：值1=整数、值2=整数、值3=整数、值4=整数。 返回：无。 原方法：XUI相对布局.updateLeftDivider()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIRelativeLayout ().updateLeftDivider (@<值1>, @<值2>, @<值3>, @<值4>))
+    }
+
+    方法 更新右分隔线 <公开 注释 = "用法：用传入值刷新XUI相对布局的右分隔线。 参数：值1=整数、值2=整数、值3=整数、值4=整数。 返回：无。 原方法：XUI相对布局.updateRightDivider()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIRelativeLayout ().updateRightDivider (@<值1>, @<值2>, @<值3>, @<值4>))
+    }
+
+    方法 仅显示上分隔线 <公开 注释 = "用法：调用XUI相对布局的仅显示上分隔线。 参数：值1=整数、值2=整数、值3=整数、值4=整数。 返回：无。 原方法：XUI相对布局.onlyShowTopDivider()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIRelativeLayout ().onlyShowTopDivider (@<值1>, @<值2>, @<值3>, @<值4>))
+    }
+
+    方法 仅显示下分隔线 <公开 注释 = "用法：调用XUI相对布局的仅显示下分隔线。 参数：值1=整数、值2=整数、值3=整数、值4=整数。 返回：无。 原方法：XUI相对布局.onlyShowBottomDivider()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIRelativeLayout ().onlyShowBottomDivider (@<值1>, @<值2>, @<值3>, @<值4>))
+    }
+
+    方法 仅显示左分隔线 <公开 注释 = "用法：调用XUI相对布局的仅显示左分隔线。 参数：值1=整数、值2=整数、值3=整数、值4=整数。 返回：无。 原方法：XUI相对布局.onlyShowLeftDivider()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIRelativeLayout ().onlyShowLeftDivider (@<值1>, @<值2>, @<值3>, @<值4>))
+    }
+
+    方法 仅显示右分隔线 <公开 注释 = "用法：调用XUI相对布局的仅显示右分隔线。 参数：值1=整数、值2=整数、值3=整数、值4=整数。 返回：无。 原方法：XUI相对布局.onlyShowRightDivider()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIRelativeLayout ().onlyShowRightDivider (@<值1>, @<值2>, @<值3>, @<值4>))
+    }
+
+    方法 设置上分隔线透明度 <公开 注释 = "用法：把XUI相对布局的上分隔线透明度设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI相对布局.setTopDividerAlpha()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIRelativeLayout ().setTopDividerAlpha (@<值1>))
+    }
+
+    方法 设置下分隔线透明度 <公开 注释 = "用法：把XUI相对布局的下分隔线透明度设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI相对布局.setBottomDividerAlpha()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIRelativeLayout ().setBottomDividerAlpha (@<值1>))
+    }
+
+    方法 设置左分隔线透明度 <公开 注释 = "用法：把XUI相对布局的左分隔线透明度设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI相对布局.setLeftDividerAlpha()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIRelativeLayout ().setLeftDividerAlpha (@<值1>))
+    }
+
+    方法 设置右分隔线透明度 <公开 注释 = "用法：把XUI相对布局的右分隔线透明度设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI相对布局.setRightDividerAlpha()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIRelativeLayout ().setRightDividerAlpha (@<值1>))
+    }
+
+    方法 设置圆角与阴影 <公开 注释 = "用法：把XUI相对布局的圆角与阴影设为给定值。 参数：值1=整数、值2=整数、值3=小数。 返回：无。 原方法：XUI相对布局.setRadiusAndShadow()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIRelativeLayout ().setRadiusAndShadow (@<值1>, @<值2>, (float) @<值3>))
+    }
+
+    方法 设置圆角与阴影_2 <公开 注释 = "用法：把XUI相对布局的圆角与阴影_2设为给定值。 参数：值1=整数、值2=整数、值3=整数、值4=小数。 返回：无。 原方法：XUI相对布局.setRadiusAndShadow()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIRelativeLayout ().setRadiusAndShadow (@<值1>, @<值2>, @<值3>, (float) @<值4>))
+    }
+
+    方法 设置圆角与阴影_3 <公开 注释 = "用法：把XUI相对布局的圆角与阴影_3设为给定值。 参数：值1=整数、值2=整数、值3=整数、值4=整数、值5=小数。 返回：无。 原方法：XUI相对布局.setRadiusAndShadow()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 整数>
+    参数 值5 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIRelativeLayout ().setRadiusAndShadow (@<值1>, @<值2>, @<值3>, @<值4>, (float) @<值5>))
+    }
+
+    方法 设置圆角 <公开 注释 = "用法：把XUI相对布局的圆角设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI相对布局.setRadius()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIRelativeLayout ().setRadius (@<值1>))
+    }
+
+    方法 设置圆角_2 <公开 注释 = "用法：把XUI相对布局的圆角_2设为给定值。 参数：值1=整数、值2=整数。 返回：无。 原方法：XUI相对布局.setRadius()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIRelativeLayout ().setRadius (@<值1>, @<值2>))
+    }
+
+    方法 取圆角 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI相对布局的圆角。 参数：无。 返回：整数。 原方法：XUI相对布局.getRadius()">
+    {
+        @ @sn<this>.GetXUIRelativeLayout ().getRadius ()
+    }
+
+    方法 设置外轮廓内缩 <公开 注释 = "用法：把XUI相对布局的外轮廓内缩设为给定值。 参数：值1=整数、值2=整数、值3=整数、值4=整数。 返回：无。 原方法：XUI相对布局.setOutlineInset()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIRelativeLayout ().setOutlineInset (@<值1>, @<值2>, @<值3>, @<值4>))
+    }
+
+    方法 设置隐藏圆角侧 <公开 注释 = "用法：把XUI相对布局的隐藏圆角侧设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI相对布局.setHideRadiusSide()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIRelativeLayout ().setHideRadiusSide (@<值1>))
+    }
+
+    方法 取隐藏圆角侧 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI相对布局的隐藏圆角侧。 参数：无。 返回：整数。 原方法：XUI相对布局.getHideRadiusSide()">
+    {
+        @ @sn<this>.GetXUIRelativeLayout ().getHideRadiusSide ()
+    }
+
+    方法 设置边框颜色 <公开 注释 = "用法：把XUI相对布局的边框颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI相对布局.setBorderColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIRelativeLayout ().setBorderColor (@<值1>))
+    }
+
+    方法 设置边框宽度 <公开 注释 = "用法：把XUI相对布局的边框宽度设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI相对布局.setBorderWidth()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIRelativeLayout ().setBorderWidth (@<值1>))
+    }
+
+    方法 设置显示边框仅之前L <公开 注释 = "用法：把XUI相对布局的显示边框仅之前L设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI相对布局.setShowBorderOnlyBeforeL()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIRelativeLayout ().setShowBorderOnlyBeforeL (@<值1>))
+    }
+
+    方法 设置宽度限制 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：把XUI相对布局的宽度限制设为给定值。 参数：值1=整数。 返回：逻辑型。 原方法：XUI相对布局.setWidthLimit()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @sn<this>.GetXUIRelativeLayout ().setWidthLimit (@<值1>)
+    }
+
+    方法 设置高度限制 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：把XUI相对布局的高度限制设为给定值。 参数：值1=整数。 返回：逻辑型。 原方法：XUI相对布局.setHeightLimit()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @sn<this>.GetXUIRelativeLayout ().setHeightLimit (@<值1>)
+    }
+
+    方法 设置使用主题通用阴影高度差 <公开 注释 = "用法：把XUI相对布局的使用主题通用阴影高度差设为给定值。 参数：无。 返回：无。 原方法：XUI相对布局.setUseThemeGeneralShadowElevation()">
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIRelativeLayout ().setUseThemeGeneralShadowElevation ())
+    }
+
+    方法 设置外轮廓排除内边距 <公开 注释 = "用法：把XUI相对布局的外轮廓排除内边距设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI相对布局.setOutlineExcludePadding()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIRelativeLayout ().setOutlineExcludePadding (@<值1>))
+    }
+
+    方法 设置阴影高度差 <公开 注释 = "用法：把XUI相对布局的阴影高度差设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI相对布局.setShadowElevation()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIRelativeLayout ().setShadowElevation (@<值1>))
+    }
+
+    方法 取阴影高度差 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI相对布局的阴影高度差。 参数：无。 返回：整数。 原方法：XUI相对布局.getShadowElevation()">
+    {
+        @ @sn<this>.GetXUIRelativeLayout ().getShadowElevation ()
+    }
+
+    方法 设置阴影透明度 <公开 注释 = "用法：把XUI相对布局的阴影透明度设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI相对布局.setShadowAlpha()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIRelativeLayout ().setShadowAlpha ((float) @<值1>))
+    }
+
+    方法 设置阴影颜色 <公开 注释 = "用法：把XUI相对布局的阴影颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI相对布局.setShadowColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIRelativeLayout ().setShadowColor (@<值1>))
+    }
+
+    方法 取阴影颜色 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI相对布局的阴影颜色。 参数：无。 返回：整数。 原方法：XUI相对布局.getShadowColor()">
+    {
+        @ @sn<this>.GetXUIRelativeLayout ().getShadowColor ()
+    }
+
+    方法 设置外部常规颜色 <公开 注释 = "用法：把XUI相对布局的外部常规颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI相对布局.setOuterNormalColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIRelativeLayout ().setOuterNormalColor (@<值1>))
+    }
+
+    方法 取阴影透明度 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读出XUI相对布局的阴影透明度。 参数：无。 返回：小数。 原方法：XUI相对布局.getShadowAlpha()">
+    {
+        @ (double)@sn<this>.GetXUIRelativeLayout ().getShadowAlpha ()
+    }
+
+}
+
+类 XUI联动滚动布局 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.layout.linkage.LinkageScrollLayout)."
+        @文档 = "category = \"XUI.布局\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.layout.linkage.LinkageScrollLayout\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI联动滚动布局, LinkageScrollLayout, com.xuexiang.xui.widget.layout.linkage.LinkageScrollLayout)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetLinkageScrollLayout ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI联动滚动布局的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI联动滚动布局.getAlpha()">
+    {
+        @ (double)@sn<this>.GetLinkageScrollLayout ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI联动滚动布局的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI联动滚动布局.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLinkageScrollLayout ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI联动滚动布局的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI联动滚动布局.isEnabled()">
+    {
+        @ @sn<this>.GetLinkageScrollLayout ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI联动滚动布局的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI联动滚动布局.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLinkageScrollLayout ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI联动滚动布局的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI联动滚动布局.isClickable()">
+    {
+        @ @sn<this>.GetLinkageScrollLayout ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI联动滚动布局的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI联动滚动布局.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLinkageScrollLayout ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI联动滚动布局的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI联动滚动布局.getElevation()">
+    {
+        @ (double)@sn<this>.GetLinkageScrollLayout ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI联动滚动布局的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI联动滚动布局.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLinkageScrollLayout ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI联动滚动布局的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI联动滚动布局.getMinimumHeight()">
+    {
+        @ @sn<this>.GetLinkageScrollLayout ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI联动滚动布局的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI联动滚动布局.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLinkageScrollLayout ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI联动滚动布局的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI联动滚动布局.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLinkageScrollLayout ().setBackgroundColor (@<新值>))
+    }
+
+    方法 计算滚动 <公开 注释 = "用法：调用XUI联动滚动布局的计算滚动。 参数：无。 返回：无。 原方法：XUI联动滚动布局.computeScroll()">
+    {
+        @ @m<RUN_UI_ACTION> (GetLinkageScrollLayout ().computeScroll ())
+    }
+
+    方法 滚动到 <公开 注释 = "用法：让XUI联动滚动布局滚动到到。 参数：值1=整数、值2=整数、值3=真/假。 返回：无。 原方法：XUI联动滚动布局.scrollTo()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLinkageScrollLayout ().scrollTo (@<值1>, @<值2>, @<值3>))
+    }
+
+    方法 滚动按 <公开 注释 = "用法：让XUI联动滚动布局滚动到按。 参数：值1=整数、值2=整数。 返回：无。 原方法：XUI联动滚动布局.scrollBy()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLinkageScrollLayout ().scrollBy (@<值1>, @<值2>))
+    }
+
+    方法 跳转到子项 <公开 注释 = "用法：调用XUI联动滚动布局的跳转到子项。 参数：值1=整数。 返回：无。 原方法：XUI联动滚动布局.gotoChild()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLinkageScrollLayout ().gotoChild (@<值1>))
+    }
+
+    方法 取嵌套滚动坐标轴 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI联动滚动布局的嵌套滚动坐标轴。 参数：无。 返回：整数。 原方法：XUI联动滚动布局.getNestedScrollAxes()">
+    {
+        @ @sn<this>.GetLinkageScrollLayout ().getNestedScrollAxes ()
+    }
+
+}
+
+类 XUI联动线性布局 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.layout.linkage.view.LinkageLinearLayout)."
+        @文档 = "category = \"XUI.布局\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.layout.linkage.view.LinkageLinearLayout\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI联动线性布局, LinkageLinearLayout, com.xuexiang.xui.widget.layout.linkage.view.LinkageLinearLayout)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetLinkageLinearLayout ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI联动线性布局的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI联动线性布局.getAlpha()">
+    {
+        @ (double)@sn<this>.GetLinkageLinearLayout ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI联动线性布局的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI联动线性布局.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLinkageLinearLayout ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI联动线性布局的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI联动线性布局.isEnabled()">
+    {
+        @ @sn<this>.GetLinkageLinearLayout ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI联动线性布局的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI联动线性布局.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLinkageLinearLayout ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI联动线性布局的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI联动线性布局.isClickable()">
+    {
+        @ @sn<this>.GetLinkageLinearLayout ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI联动线性布局的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI联动线性布局.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLinkageLinearLayout ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI联动线性布局的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI联动线性布局.getElevation()">
+    {
+        @ (double)@sn<this>.GetLinkageLinearLayout ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI联动线性布局的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI联动线性布局.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLinkageLinearLayout ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI联动线性布局的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI联动线性布局.getMinimumHeight()">
+    {
+        @ @sn<this>.GetLinkageLinearLayout ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI联动线性布局的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI联动线性布局.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLinkageLinearLayout ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI联动线性布局的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI联动线性布局.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLinkageLinearLayout ().setBackgroundColor (@<新值>))
+    }
+
+}
+
+类 XUI联动列表视图 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.layout.linkage.view.LinkageRecyclerView)."
+        @文档 = "category = \"XUI.布局\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.layout.linkage.view.LinkageRecyclerView\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI联动列表视图, LinkageRecyclerView, com.xuexiang.xui.widget.layout.linkage.view.LinkageRecyclerView)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetLinkageRecyclerView ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI联动列表视图的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI联动列表视图.getAlpha()">
+    {
+        @ (double)@sn<this>.GetLinkageRecyclerView ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI联动列表视图的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI联动列表视图.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLinkageRecyclerView ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI联动列表视图的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI联动列表视图.isEnabled()">
+    {
+        @ @sn<this>.GetLinkageRecyclerView ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI联动列表视图的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI联动列表视图.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLinkageRecyclerView ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI联动列表视图的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI联动列表视图.isClickable()">
+    {
+        @ @sn<this>.GetLinkageRecyclerView ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI联动列表视图的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI联动列表视图.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLinkageRecyclerView ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI联动列表视图的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI联动列表视图.getElevation()">
+    {
+        @ (double)@sn<this>.GetLinkageRecyclerView ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI联动列表视图的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI联动列表视图.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLinkageRecyclerView ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI联动列表视图的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI联动列表视图.getMinimumHeight()">
+    {
+        @ @sn<this>.GetLinkageRecyclerView ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI联动列表视图的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI联动列表视图.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLinkageRecyclerView ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI联动列表视图的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI联动列表视图.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLinkageRecyclerView ().setBackgroundColor (@<新值>))
+    }
+
+}
+
+类 XUI联动滚动视图 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.layout.linkage.view.LinkageScrollView)."
+        @文档 = "category = \"XUI.布局\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.layout.linkage.view.LinkageScrollView\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI联动滚动视图, LinkageScrollView, com.xuexiang.xui.widget.layout.linkage.view.LinkageScrollView)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetLinkageScrollView ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI联动滚动视图的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI联动滚动视图.getAlpha()">
+    {
+        @ (double)@sn<this>.GetLinkageScrollView ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI联动滚动视图的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI联动滚动视图.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLinkageScrollView ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI联动滚动视图的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI联动滚动视图.isEnabled()">
+    {
+        @ @sn<this>.GetLinkageScrollView ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI联动滚动视图的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI联动滚动视图.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLinkageScrollView ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI联动滚动视图的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI联动滚动视图.isClickable()">
+    {
+        @ @sn<this>.GetLinkageScrollView ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI联动滚动视图的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI联动滚动视图.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLinkageScrollView ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI联动滚动视图的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI联动滚动视图.getElevation()">
+    {
+        @ (double)@sn<this>.GetLinkageScrollView ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI联动滚动视图的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI联动滚动视图.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLinkageScrollView ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI联动滚动视图的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI联动滚动视图.getMinimumHeight()">
+    {
+        @ @sn<this>.GetLinkageScrollView ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI联动滚动视图的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI联动滚动视图.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLinkageScrollView ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI联动滚动视图的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI联动滚动视图.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLinkageScrollView ().setBackgroundColor (@<新值>))
+    }
+
+}
+
+类 XUI联动文本框 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.layout.linkage.view.LinkageTextView)."
+        @文档 = "category = \"XUI.布局\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.layout.linkage.view.LinkageTextView\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI联动文本框, LinkageTextView, com.xuexiang.xui.widget.layout.linkage.view.LinkageTextView)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetLinkageTextView ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI联动文本框的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI联动文本框.getAlpha()">
+    {
+        @ (double)@sn<this>.GetLinkageTextView ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI联动文本框的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI联动文本框.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLinkageTextView ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI联动文本框的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI联动文本框.isEnabled()">
+    {
+        @ @sn<this>.GetLinkageTextView ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI联动文本框的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI联动文本框.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLinkageTextView ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI联动文本框的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI联动文本框.isClickable()">
+    {
+        @ @sn<this>.GetLinkageTextView ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI联动文本框的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI联动文本框.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLinkageTextView ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI联动文本框的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI联动文本框.getElevation()">
+    {
+        @ (double)@sn<this>.GetLinkageTextView ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI联动文本框的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI联动文本框.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLinkageTextView ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI联动文本框的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI联动文本框.getMinimumHeight()">
+    {
+        @ @sn<this>.GetLinkageTextView ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI联动文本框的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI联动文本框.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLinkageTextView ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI联动文本框的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI联动文本框.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLinkageTextView ().setBackgroundColor (@<新值>))
+    }
+
+    方法 XUI文本 <公开 属性读 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读取XUI联动文本框的XUI文本当前值。 参数：无。 返回：文本型。 原方法：XUI联动文本框.getText()">
+    {
+        @ java.lang.String.valueOf (@sn<this>.GetLinkageTextView ().getText ())
+    }
+
+    方法 XUI文本 <公开 属性写 注释 = "用法：设置XUI联动文本框的XUI文本, 传入新值后立刻生效。 参数：新值=文本。 返回：无。 原方法：XUI联动文本框.setText()">
+    参数 新值 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLinkageTextView ().setText (@<新值>))
+    }
+
+    方法 XUI文字颜色 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI联动文本框的XUI文字颜色当前值。 参数：无。 返回：整数。 原方法：XUI联动文本框.getCurrentTextColor()">
+    {
+        @ @sn<this>.GetLinkageTextView ().getCurrentTextColor ()
+    }
+
+    方法 XUI文字颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI联动文本框的XUI文字颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI联动文本框.setTextColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLinkageTextView ().setTextColor (@<新值>))
+    }
+
+    方法 XUI文字大小 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI联动文本框的XUI文字大小当前值。 参数：无。 返回：小数。 原方法：XUI联动文本框.getTextSize()">
+    {
+        @ (double)@sn<this>.GetLinkageTextView ().getTextSize ()
+    }
+
+    方法 XUI文字大小 <公开 属性写 注释 = "用法：设置XUI联动文本框的XUI文字大小, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI联动文本框.setTextSize()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLinkageTextView ().setTextSize ((float) @<新值>))
+    }
+
+    方法 XUI提示文字 <公开 属性读 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读取XUI联动文本框的XUI提示文字当前值。 参数：无。 返回：文本型。 原方法：XUI联动文本框.getHint()">
+    {
+        @ java.lang.String.valueOf (@sn<this>.GetLinkageTextView ().getHint ())
+    }
+
+    方法 XUI提示文字 <公开 属性写 注释 = "用法：设置XUI联动文本框的XUI提示文字, 传入新值后立刻生效。 参数：新值=文本。 返回：无。 原方法：XUI联动文本框.setHint()">
+    参数 新值 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLinkageTextView ().setHint (@<新值>))
+    }
+
+    方法 XUI最大行数 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI联动文本框的XUI最大行数当前值。 参数：无。 返回：整数。 原方法：XUI联动文本框.getMaxLines()">
+    {
+        @ @sn<this>.GetLinkageTextView ().getMaxLines ()
+    }
+
+    方法 XUI最大行数 <公开 属性写 注释 = "用法：设置XUI联动文本框的XUI最大行数, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI联动文本框.setMaxLines()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLinkageTextView ().setMaxLines (@<新值>))
+    }
+
+    方法 XUI单行 <公开 属性写 注释 = "用法：设置XUI联动文本框的XUI单行, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI联动文本框.setSingleLine()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLinkageTextView ().setSingleLine (@<新值>))
+    }
+
+}
+
+类 XUI联动网页视图 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.layout.linkage.view.LinkageWebView)."
+        @文档 = "category = \"XUI.布局\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.layout.linkage.view.LinkageWebView\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI联动网页视图, LinkageWebView, com.xuexiang.xui.widget.layout.linkage.view.LinkageWebView)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetLinkageWebView ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI联动网页视图的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI联动网页视图.getAlpha()">
+    {
+        @ (double)@sn<this>.GetLinkageWebView ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI联动网页视图的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI联动网页视图.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLinkageWebView ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI联动网页视图的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI联动网页视图.isEnabled()">
+    {
+        @ @sn<this>.GetLinkageWebView ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI联动网页视图的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI联动网页视图.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLinkageWebView ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI联动网页视图的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI联动网页视图.isClickable()">
+    {
+        @ @sn<this>.GetLinkageWebView ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI联动网页视图的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI联动网页视图.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLinkageWebView ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI联动网页视图的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI联动网页视图.getElevation()">
+    {
+        @ (double)@sn<this>.GetLinkageWebView ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI联动网页视图的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI联动网页视图.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLinkageWebView ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI联动网页视图的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI联动网页视图.getMinimumHeight()">
+    {
+        @ @sn<this>.GetLinkageWebView ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI联动网页视图的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI联动网页视图.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLinkageWebView ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI联动网页视图的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI联动网页视图.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLinkageWebView ().setBackgroundColor (@<新值>))
+    }
+
+    方法 计算滚动 <公开 注释 = "用法：调用XUI联动网页视图的计算滚动。 参数：无。 返回：无。 原方法：XUI联动网页视图.computeScroll()">
+    {
+        @ @m<RUN_UI_ACTION> (GetLinkageWebView ().computeScroll ())
+    }
+
+    方法 甩动滚动 <公开 注释 = "用法：调用XUI联动网页视图的甩动滚动。 参数：值1=整数、值2=整数。 返回：无。 原方法：XUI联动网页视图.flingScroll()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLinkageWebView ().flingScroll (@<值1>, @<值2>))
+    }
+
+    方法 取网页视图内容高度 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI联动网页视图的网页视图内容高度。 参数：无。 返回：整数。 原方法：XUI联动网页视图.getWebViewContentHeight()">
+    {
+        @ @sn<this>.GetLinkageWebView ().getWebViewContentHeight ()
+    }
+
+    方法 取滚动范围 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI联动网页视图的滚动范围。 参数：无。 返回：整数。 原方法：XUI联动网页视图.getScrollRange()">
+    {
+        @ @sn<this>.GetLinkageWebView ().getScrollRange ()
+    }
+
+    方法 滚动到下 <公开 注释 = "用法：让XUI联动网页视图滚动到到下。 参数：无。 返回：无。 原方法：XUI联动网页视图.scrollToBottom()">
+    {
+        @ @m<RUN_UI_ACTION> (GetLinkageWebView ().scrollToBottom ())
+    }
+
+    方法 平滑滚动到下 <公开 注释 = "用法：调用XUI联动网页视图的平滑滚动到下。 参数：无。 返回：无。 原方法：XUI联动网页视图.smoothScrollToBottom()">
+    {
+        @ @m<RUN_UI_ACTION> (GetLinkageWebView ().smoothScrollToBottom ())
+    }
+
+    方法 滚动到 <公开 注释 = "用法：让XUI联动网页视图滚动到到。 参数：值1=整数、值2=整数。 返回：无。 原方法：XUI联动网页视图.scrollTo()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLinkageWebView ().scrollTo (@<值1>, @<值2>))
+    }
+
+    方法 设置嵌套滚动可用 <公开 注释 = "用法：把XUI联动网页视图的嵌套滚动可用设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI联动网页视图.setNestedScrollingEnabled()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLinkageWebView ().setNestedScrollingEnabled (@<值1>))
+    }
+
+    方法 是否嵌套滚动可用 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断XUI联动网页视图是否嵌套滚动可用。 参数：无。 返回：逻辑型。 原方法：XUI联动网页视图.isNestedScrollingEnabled()">
+    {
+        @ @sn<this>.GetLinkageWebView ().isNestedScrollingEnabled ()
+    }
+
+    方法 开始嵌套滚动 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：让XUI联动网页视图开始嵌套滚动。 参数：值1=整数。 返回：逻辑型。 原方法：XUI联动网页视图.startNestedScroll()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @sn<this>.GetLinkageWebView ().startNestedScroll (@<值1>)
+    }
+
+    方法 停止嵌套滚动 <公开 注释 = "用法：让XUI联动网页视图停止嵌套滚动。 参数：无。 返回：无。 原方法：XUI联动网页视图.stopNestedScroll()">
+    {
+        @ @m<RUN_UI_ACTION> (GetLinkageWebView ().stopNestedScroll ())
+    }
+
+    方法 是否含嵌套滚动父项 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断XUI联动网页视图是否含有嵌套滚动父项。 参数：无。 返回：逻辑型。 原方法：XUI联动网页视图.hasNestedScrollingParent()">
+    {
+        @ @sn<this>.GetLinkageWebView ().hasNestedScrollingParent ()
+    }
+
+    方法 派发嵌套滚动 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：把事件派发给XUI联动网页视图。 参数：值1=整数、值2=整数、值3=整数、值4=整数、值5=整数。 返回：逻辑型。 原方法：XUI联动网页视图.dispatchNestedScroll()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 整数>
+    参数 值5 <类型 = "整数 []">
+    {
+        @ @sn<this>.GetLinkageWebView ().dispatchNestedScroll (@<值1>, @<值2>, @<值3>, @<值4>, @<值5>)
+    }
+
+    方法 派发嵌套预滚动 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：把事件派发给XUI联动网页视图。 参数：值1=整数、值2=整数、值3=整数、值4=整数。 返回：逻辑型。 原方法：XUI联动网页视图.dispatchNestedPreScroll()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = "整数 []">
+    参数 值4 <类型 = "整数 []">
+    {
+        @ @sn<this>.GetLinkageWebView ().dispatchNestedPreScroll (@<值1>, @<值2>, @<值3>, @<值4>)
+    }
+
+    方法 派发嵌套甩动 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：把事件派发给XUI联动网页视图。 参数：值1=小数、值2=小数、值3=真/假。 返回：逻辑型。 原方法：XUI联动网页视图.dispatchNestedFling()">
+    参数 值1 <类型 = 小数>
+    参数 值2 <类型 = 小数>
+    参数 值3 <类型 = 逻辑型>
+    {
+        @ @sn<this>.GetLinkageWebView ().dispatchNestedFling ((float) @<值1>, (float) @<值2>, @<值3>)
+    }
+
+    方法 派发嵌套预甩动 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：把事件派发给XUI联动网页视图。 参数：值1=小数、值2=小数。 返回：逻辑型。 原方法：XUI联动网页视图.dispatchNestedPreFling()">
+    参数 值1 <类型 = 小数>
+    参数 值2 <类型 = 小数>
+    {
+        @ @sn<this>.GetLinkageWebView ().dispatchNestedPreFling ((float) @<值1>, (float) @<值2>)
+    }
+
+}
+
+类 XUI嵌套框架布局 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.layout.linkage.view.NestedFrameLayout)."
+        @文档 = "category = \"XUI.布局\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.layout.linkage.view.NestedFrameLayout\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI嵌套框架布局, NestedFrameLayout, com.xuexiang.xui.widget.layout.linkage.view.NestedFrameLayout)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetNestedFrameLayout ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI嵌套框架布局的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI嵌套框架布局.getAlpha()">
+    {
+        @ (double)@sn<this>.GetNestedFrameLayout ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI嵌套框架布局的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI嵌套框架布局.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetNestedFrameLayout ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI嵌套框架布局的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI嵌套框架布局.isEnabled()">
+    {
+        @ @sn<this>.GetNestedFrameLayout ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI嵌套框架布局的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI嵌套框架布局.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetNestedFrameLayout ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI嵌套框架布局的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI嵌套框架布局.isClickable()">
+    {
+        @ @sn<this>.GetNestedFrameLayout ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI嵌套框架布局的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI嵌套框架布局.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetNestedFrameLayout ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI嵌套框架布局的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI嵌套框架布局.getElevation()">
+    {
+        @ (double)@sn<this>.GetNestedFrameLayout ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI嵌套框架布局的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI嵌套框架布局.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetNestedFrameLayout ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI嵌套框架布局的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI嵌套框架布局.getMinimumHeight()">
+    {
+        @ @sn<this>.GetNestedFrameLayout ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI嵌套框架布局的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI嵌套框架布局.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetNestedFrameLayout ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI嵌套框架布局的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI嵌套框架布局.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetNestedFrameLayout ().setBackgroundColor (@<新值>))
+    }
+
+    方法 设置嵌套滚动可用 <公开 注释 = "用法：把XUI嵌套框架布局的嵌套滚动可用设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI嵌套框架布局.setNestedScrollingEnabled()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetNestedFrameLayout ().setNestedScrollingEnabled (@<值1>))
+    }
+
+    方法 是否嵌套滚动可用 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断XUI嵌套框架布局是否嵌套滚动可用。 参数：无。 返回：逻辑型。 原方法：XUI嵌套框架布局.isNestedScrollingEnabled()">
+    {
+        @ @sn<this>.GetNestedFrameLayout ().isNestedScrollingEnabled ()
+    }
+
+    方法 开始嵌套滚动 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：让XUI嵌套框架布局开始嵌套滚动。 参数：值1=整数。 返回：逻辑型。 原方法：XUI嵌套框架布局.startNestedScroll()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @sn<this>.GetNestedFrameLayout ().startNestedScroll (@<值1>)
+    }
+
+    方法 停止嵌套滚动 <公开 注释 = "用法：让XUI嵌套框架布局停止嵌套滚动。 参数：无。 返回：无。 原方法：XUI嵌套框架布局.stopNestedScroll()">
+    {
+        @ @m<RUN_UI_ACTION> (GetNestedFrameLayout ().stopNestedScroll ())
+    }
+
+    方法 是否含嵌套滚动父项 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断XUI嵌套框架布局是否含有嵌套滚动父项。 参数：无。 返回：逻辑型。 原方法：XUI嵌套框架布局.hasNestedScrollingParent()">
+    {
+        @ @sn<this>.GetNestedFrameLayout ().hasNestedScrollingParent ()
+    }
+
+    方法 派发嵌套滚动 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：把事件派发给XUI嵌套框架布局。 参数：值1=整数、值2=整数、值3=整数、值4=整数、值5=整数。 返回：逻辑型。 原方法：XUI嵌套框架布局.dispatchNestedScroll()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 整数>
+    参数 值5 <类型 = "整数 []">
+    {
+        @ @sn<this>.GetNestedFrameLayout ().dispatchNestedScroll (@<值1>, @<值2>, @<值3>, @<值4>, @<值5>)
+    }
+
+    方法 派发嵌套预滚动 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：把事件派发给XUI嵌套框架布局。 参数：值1=整数、值2=整数、值3=整数、值4=整数。 返回：逻辑型。 原方法：XUI嵌套框架布局.dispatchNestedPreScroll()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = "整数 []">
+    参数 值4 <类型 = "整数 []">
+    {
+        @ @sn<this>.GetNestedFrameLayout ().dispatchNestedPreScroll (@<值1>, @<值2>, @<值3>, @<值4>)
+    }
+
+    方法 派发嵌套甩动 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：把事件派发给XUI嵌套框架布局。 参数：值1=小数、值2=小数、值3=真/假。 返回：逻辑型。 原方法：XUI嵌套框架布局.dispatchNestedFling()">
+    参数 值1 <类型 = 小数>
+    参数 值2 <类型 = 小数>
+    参数 值3 <类型 = 逻辑型>
+    {
+        @ @sn<this>.GetNestedFrameLayout ().dispatchNestedFling ((float) @<值1>, (float) @<值2>, @<值3>)
+    }
+
+    方法 派发嵌套预甩动 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：把事件派发给XUI嵌套框架布局。 参数：值1=小数、值2=小数。 返回：逻辑型。 原方法：XUI嵌套框架布局.dispatchNestedPreFling()">
+    参数 值1 <类型 = 小数>
+    参数 值2 <类型 = 小数>
+    {
+        @ @sn<this>.GetNestedFrameLayout ().dispatchNestedPreFling ((float) @<值1>, (float) @<值2>)
+    }
+
+    方法 取嵌套滚动坐标轴 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI嵌套框架布局的嵌套滚动坐标轴。 参数：无。 返回：整数。 原方法：XUI嵌套框架布局.getNestedScrollAxes()">
+    {
+        @ @sn<this>.GetNestedFrameLayout ().getNestedScrollAxes ()
+    }
+
+}

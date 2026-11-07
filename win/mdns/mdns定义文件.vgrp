@@ -1,0 +1,7 @@
+doc_format_version = 1
+project_identifier = "wutao.vproject.pc.win.1"
+author = 搬码渔
+name = mdns网络工具
+version = 1
+explain = mdns网络工具
+file.name = "mdns_toolkit.wsv"

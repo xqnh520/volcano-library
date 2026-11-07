@@ -1,0 +1,194 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.Box2D <注释 = "回放：回放对象全套接口 · Box2D 3.2.0 单精度" @视窗.头文件搜寻目录 = "include"
+        @视窗.外部头文件 = "b2vol.h" @视窗.库文件搜寻目录 = "lib/x64"
+        @视窗.外部库 = "box2d$(d).lib">
+
+类 B2回放信息 <公开 注释 = "回放信息 · b2ReplayInfo" @别名 = "b2ReplayInfo" @别名类型 = 本地结构>
+{
+    变量 帧数量 <公开 类型 = 整数 注释 = "帧数量 · b2ReplayInfo.frameCount" @输出名 = "frameCount">
+    变量 工作线程数量 <公开 类型 = 整数 注释 = "工作线程数量 · b2ReplayInfo.workerCount" @输出名 = "workerCount">
+    变量 时间步 <公开 类型 = 单精度小数 注释 = "时间步 · b2ReplayInfo.timeStep" @输出名 = "timeStep">
+    变量 子步数量 <公开 类型 = 整数 注释 = "子步数量 · b2ReplayInfo.subStepCount" @输出名 = "subStepCount">
+    变量 长度倍率 <公开 类型 = 单精度小数 注释 = "长度倍率 · b2ReplayInfo.lengthScale" @输出名 = "lengthScale">
+    变量 范围包围盒 <公开 类型 = B2包围盒 注释 = "范围包围盒 · b2ReplayInfo.bounds" @输出名 = "bounds">
+}
+
+类 B2回放查询信息 <公开 注释 = "回放查询信息 · b2ReplayQueryInfo" @别名 = "b2ReplayQueryInfo" @别名类型 = 本地结构>
+{
+    变量 过滤器 <公开 类型 = B2查询过滤 注释 = "过滤器 · b2ReplayQueryInfo.filter" @输出名 = "filter">
+    变量 轴对齐包围盒 <公开 类型 = B2包围盒 注释 = "轴对齐包围盒 · b2ReplayQueryInfo.aabb" @输出名 = "aabb">
+    变量 原点 <公开 类型 = B2向量 注释 = "原点 · b2ReplayQueryInfo.origin" @输出名 = "origin">
+    变量 平移 <公开 类型 = B2向量 注释 = "平移 · b2ReplayQueryInfo.translation" @输出名 = "translation">
+    变量 撞击数量 <公开 类型 = 整数 注释 = "撞击数量 · b2ReplayQueryInfo.hitCount" @输出名 = "hitCount">
+
+    方法 取查询类型 <公开 静态 类型 = 整数 注释 = "读取查询类型字段 · b2vol_replayQueryInfo_getType" @嵌入式方法 = "">
+    参数 定义 <类型 = B2回放查询信息>
+    {
+        @ b2vol_replayQueryInfo_getType(&@<定义>)
+    }
+
+    方法 置查询类型 <公开 静态 注释 = "写入查询类型字段 · b2vol_replayQueryInfo_setType" @嵌入式方法 = "">
+    参数 定义 <类型 = B2回放查询信息>
+    参数 新值 <类型 = 整数>
+    {
+        @ b2vol_replayQueryInfo_setType(&@<定义>, @<新值>)
+    }
+
+}
+
+类 B2回放查询命中 <公开 注释 = "回放查询命中 · b2ReplayQueryHit" @别名 = "b2ReplayQueryHit" @别名类型 = 本地结构>
+{
+    变量 形状标识 <公开 类型 = B2形状标识 注释 = "形状标识 · b2ReplayQueryHit.shapeId" @输出名 = "shapeId">
+    变量 点 <公开 类型 = B2向量 注释 = "点 · b2ReplayQueryHit.point" @输出名 = "point">
+    变量 法线 <公开 类型 = B2向量 注释 = "法线 · b2ReplayQueryHit.normal" @输出名 = "normal">
+    变量 比例 <公开 类型 = 单精度小数 注释 = "比例 · b2ReplayQueryHit.fraction" @输出名 = "fraction">
+}
+
+类 B2回放 <公开 注释 = "回放 · 接口包装类">
+{
+    方法 创建回放 <公开 静态 类型 = 变整数 注释 = "打开一段录制并回放到第一步 · b2CreateReplay" @嵌入式方法 = "">
+    参数 值甲 <类型 = 变整数>
+    参数 尺寸 <类型 = 整数>
+    参数 工作线程数 <类型 = 整数>
+    {
+        @ (intptr_t)b2CreateReplay((void*)@<值甲>, @<尺寸>, @<工作线程数>)
+    }
+
+    方法 销毁回放 <公开 静态 注释 = "关闭回放器并释放其回放世界与文件缓冲 · b2DestroyReplay" @嵌入式方法 = "">
+    参数 回放器 <类型 = 变整数>
+    {
+        @ b2DestroyReplay((b2Replay*)@<回放器>)
+    }
+
+    方法 步进坐标系 <公开 静态 类型 = 逻辑型 注释 = "把回放推进一个录制的时间步 · b2Replay_StepFrame" @嵌入式方法 = "">
+    参数 回放器 <类型 = 变整数>
+    {
+        @ (b2Replay_StepFrame((b2Replay*)@<回放器>) != 0)
+    }
+
+    方法 取世界标识 <公开 静态 类型 = B2世界标识 注释 = "取回放世界的标识 · b2Replay_GetWorldId" @嵌入式方法 = "">
+    参数 回放器 <类型 = 变整数>
+    {
+        @ b2Replay_GetWorldId((const b2Replay*)@<回放器>)
+    }
+
+    方法 重启 <公开 静态 注释 = "把播放器回到第一步，并由文件重建回放世界 · b2Replay_Restart" @嵌入式方法 = "">
+    参数 回放器 <类型 = 变整数>
+    {
+        @ b2Replay_Restart((b2Replay*)@<回放器>)
+    }
+
+    方法 跳转坐标系 <公开 静态 注释 = "定位到某个录制的时间步 · b2Replay_SeekFrame" @嵌入式方法 = "">
+    参数 回放器 <类型 = 变整数>
+    参数 目标帧 <类型 = 整数>
+    {
+        @ b2Replay_SeekFrame((b2Replay*)@<回放器>, @<目标帧>)
+    }
+
+    方法 取坐标系 <公开 静态 类型 = 整数 注释 = "取已回放的时间步数量 · b2Replay_GetFrame" @嵌入式方法 = "">
+    参数 回放器 <类型 = 变整数>
+    {
+        @ b2Replay_GetFrame((const b2Replay*)@<回放器>)
+    }
+
+    方法 取信息 <公开 静态 类型 = B2回放信息 注释 = "取录制的静态元数据（帧数、录制参数、时间） · b2Replay_GetInfo" @嵌入式方法 = "">
+    参数 回放器 <类型 = 变整数>
+    {
+        @ b2Replay_GetInfo((const b2Replay*)@<回放器>)
+    }
+
+    方法 是否末尾 <公开 静态 类型 = 逻辑型 注释 = "是否已到达录制末尾 · b2Replay_IsAtEnd" @嵌入式方法 = "">
+    参数 回放器 <类型 = 变整数>
+    {
+        @ (b2Replay_IsAtEnd((const b2Replay*)@<回放器>) != 0)
+    }
+
+    方法 是否发散 <公开 静态 类型 = 逻辑型 注释 = "录制状态哈希是否复现失败，即回放是否已发散 · b2Replay_HasDiverged" @嵌入式方法 = "">
+    参数 回放器 <类型 = 变整数>
+    {
+        @ (b2Replay_HasDiverged((const b2Replay*)@<回放器>) != 0)
+    }
+
+    方法 取发散坐标系 <公开 静态 类型 = 整数 注释 = "取回放首次发散的时间步，未发散返回负一 · b2Replay_GetDivergeFrame" @嵌入式方法 = "">
+    参数 回放器 <类型 = 变整数>
+    {
+        @ b2Replay_GetDivergeFrame((const b2Replay*)@<回放器>)
+    }
+
+    方法 置关键帧策略 <公开 静态 注释 = "调整用于加速反向定位的关键帧环参数 · b2Replay_SetKeyframePolicy" @嵌入式方法 = "">
+    参数 回放器 <类型 = 变整数>
+    参数 预算字节数 <类型 = 长整数>
+    参数 最小间隔帧数 <类型 = 整数>
+    {
+        @ b2Replay_SetKeyframePolicy((b2Replay*)@<回放器>, @<预算字节数>, @<最小间隔帧数>)
+    }
+
+    方法 取关键帧预算 <公开 静态 类型 = 长整数 注释 = "取关键帧内存预算，单位为字节 · b2Replay_GetKeyframeBudget" @嵌入式方法 = "">
+    参数 回放器 <类型 = 变整数>
+    {
+        @ (int64_t)b2Replay_GetKeyframeBudget((const b2Replay*)@<回放器>)
+    }
+
+    方法 取关键帧最小间隔 <公开 静态 类型 = 整数 注释 = "取最小关键帧间隔，单位为帧 · b2Replay_GetKeyframeMinInterval" @嵌入式方法 = "">
+    参数 回放器 <类型 = 变整数>
+    {
+        @ b2Replay_GetKeyframeMinInterval((const b2Replay*)@<回放器>)
+    }
+
+    方法 取关键帧间隔 <公开 静态 类型 = 整数 注释 = "取当前关键帧间隔，单位为帧 · b2Replay_GetKeyframeInterval" @嵌入式方法 = "">
+    参数 回放器 <类型 = 变整数>
+    {
+        @ b2Replay_GetKeyframeInterval((const b2Replay*)@<回放器>)
+    }
+
+    方法 取关键帧字节 <公开 静态 类型 = 长整数 注释 = "取关键帧快照当前占用的内存，单位为字节 · b2Replay_GetKeyframeBytes" @嵌入式方法 = "">
+    参数 回放器 <类型 = 变整数>
+    {
+        @ (int64_t)b2Replay_GetKeyframeBytes((const b2Replay*)@<回放器>)
+    }
+
+    方法 绘制坐标系查询 <公开 静态 注释 = "绘制最近回放帧中记录的查询 · b2Replay_DrawFrameQueries" @嵌入式方法 = "">
+    参数 回放器 <类型 = 变整数>
+    参数 绘制 <类型 = B2调试绘制>
+    参数 查询序号 <类型 = 整数>
+    {
+        @ b2Replay_DrawFrameQueries((b2Replay*)@<回放器>, &@<绘制>, @<查询序号>)
+    }
+
+    方法 取坐标系查询数量 <公开 静态 类型 = 整数 注释 = "取最近回放帧中记录的查询数量 · b2Replay_GetFrameQueryCount" @嵌入式方法 = "">
+    参数 回放器 <类型 = 变整数>
+    {
+        @ b2Replay_GetFrameQueryCount((const b2Replay*)@<回放器>)
+    }
+
+    方法 取坐标系查询 <公开 静态 类型 = B2回放查询信息 注释 = "按序号取最近回放帧中记录的查询 · b2Replay_GetFrameQuery" @嵌入式方法 = "">
+    参数 回放器 <类型 = 变整数>
+    参数 序号 <类型 = 整数>
+    {
+        @ b2Replay_GetFrameQuery((const b2Replay*)@<回放器>, @<序号>)
+    }
+
+    方法 取坐标系查询撞击 <公开 静态 类型 = B2回放查询命中 注释 = "取最近回放帧某个记录查询的一条结果 · b2Replay_GetFrameQueryHit" @嵌入式方法 = "">
+    参数 回放器 <类型 = 变整数>
+    参数 查询序号 <类型 = 整数>
+    参数 命中序号 <类型 = 整数>
+    {
+        @ b2Replay_GetFrameQueryHit((const b2Replay*)@<回放器>, @<查询序号>, @<命中序号>)
+    }
+
+    方法 取刚体数量 <公开 静态 类型 = 整数 注释 = "取为总览器跟踪的刚体槽数量 · b2Replay_GetBodyCount" @嵌入式方法 = "">
+    参数 回放器 <类型 = 变整数>
+    {
+        @ b2Replay_GetBodyCount((const b2Replay*)@<回放器>)
+    }
+
+    方法 取刚体标识 <公开 静态 类型 = B2刚体标识 注释 = "按创建序号取被跟踪的刚体 · b2Replay_GetBodyId" @嵌入式方法 = "">
+    参数 回放器 <类型 = 变整数>
+    参数 序号 <类型 = 整数>
+    {
+        @ b2Replay_GetBodyId((const b2Replay*)@<回放器>, @<序号>)
+    }
+
+}
+

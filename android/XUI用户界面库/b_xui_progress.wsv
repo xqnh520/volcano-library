@@ -1,0 +1,1412 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.安卓.XUI <注释 = "XUI 安卓 UI 工具库封装" @文档 = "category = \"XUI\"">
+
+
+类 XUI圆形进度视图 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.progress.CircleProgressView)."
+        @文档 = "category = \"XUI.进度\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.progress.CircleProgressView\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.cpv_start_progress\n        shown_name = \"起始进度\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.cpv_end_progress\n        shown_name = \"终止进度\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.cpv_start_color\n        shown_name = \"渐变效果的起始颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.cpv_end_color\n        shown_name = \"渐变效果的终止颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.cpv_isTracked\n        shown_name = \"是否显示轨迹背景\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.cpv_track_width\n        shown_name = \"轨迹宽度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.cpv_progress_width\n        shown_name = \"进度条的宽度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.cpv_track_color\n        shown_name = \"轨迹背景的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.cpv_progress_duration\n        shown_name = \"动画时长\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.cpv_progress_textVisibility\n        shown_name = \"是否显示进度值文本\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.cpv_progress_textColor\n        shown_name = \"进度值的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.cpv_progress_textSize\n        shown_name = \"进度值的文本字体大小\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.cpv_animate_type\n        shown_name = \"动画类型\"\n        data_type = string\n        detail_type = enum\n        item\n        {\n            name = AccelerateDecelerateInterpolator\n            shown_name = \"AccelerateDecelerateInterpolator\"\n        }\n        item\n        {\n            name = LinearInterpolator\n            shown_name = \"LinearInterpolator\"\n        }\n        item\n        {\n            name = AccelerateInterpolator\n            shown_name = \"AccelerateInterpolator\"\n        }\n        item\n        {\n            name = DecelerateInterpolator\n            shown_name = \"DecelerateInterpolator\"\n        }\n        item\n        {\n            name = OvershootInterpolator\n            shown_name = \"OvershootInterpolator\"\n        }\n    }\n    attr\n    {\n        name = app.cpv_isFilled\n        shown_name = \"是否内部填充\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.cpv_circle_broken\n        shown_name = \"是选择圆形还是弧形进度条[true:\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.cpv_isGraduated\n        shown_name = \"圆弧是否是分层级的\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.cpv_scaleZone_width\n        shown_name = \"指示条的宽度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.cpv_scaleZone_length\n        shown_name = \"指示条的长度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.cpv_scaleZone_corner_radius\n        shown_name = \"指示条的圆角\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.cpv_scaleZone_padding\n        shown_name = \"指示条的padding\"\n        data_type = double\n        detail_type = dim\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI圆形进度视图, CircleProgressView, com.xuexiang.xui.widget.progress.CircleProgressView)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetCircleProgressView ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI圆形进度视图的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI圆形进度视图.getAlpha()">
+    {
+        @ (double)@sn<this>.GetCircleProgressView ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI圆形进度视图的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI圆形进度视图.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCircleProgressView ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI圆形进度视图的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI圆形进度视图.isEnabled()">
+    {
+        @ @sn<this>.GetCircleProgressView ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI圆形进度视图的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI圆形进度视图.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetCircleProgressView ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI圆形进度视图的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI圆形进度视图.isClickable()">
+    {
+        @ @sn<this>.GetCircleProgressView ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI圆形进度视图的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI圆形进度视图.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetCircleProgressView ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI圆形进度视图的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI圆形进度视图.getElevation()">
+    {
+        @ (double)@sn<this>.GetCircleProgressView ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI圆形进度视图的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI圆形进度视图.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCircleProgressView ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI圆形进度视图的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI圆形进度视图.getMinimumHeight()">
+    {
+        @ @sn<this>.GetCircleProgressView ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI圆形进度视图的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI圆形进度视图.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCircleProgressView ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI圆形进度视图的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI圆形进度视图.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCircleProgressView ().setBackgroundColor (@<新值>))
+    }
+
+    方法 设置动画类型 <公开 注释 = "用法：把XUI圆形进度视图的动画类型设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI圆形进度视图.setAnimateType()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCircleProgressView ().setAnimateType (@<值1>))
+    }
+
+    方法 设置进度 <公开 注释 = "用法：把XUI圆形进度视图的进度设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI圆形进度视图.setProgress()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCircleProgressView ().setProgress ((float) @<值1>))
+    }
+
+    方法 取进度 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读出XUI圆形进度视图的进度。 参数：无。 返回：小数。 原方法：XUI圆形进度视图.getProgress()">
+    {
+        @ (double)@sn<this>.GetCircleProgressView ().getProgress ()
+    }
+
+    方法 设置开始进度 <公开 注释 = "用法：把XUI圆形进度视图的开始进度设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI圆形进度视图.setStartProgress()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCircleProgressView ().setStartProgress ((float) @<值1>))
+    }
+
+    方法 设置结束进度 <公开 注释 = "用法：把XUI圆形进度视图的结束进度设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI圆形进度视图.setEndProgress()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCircleProgressView ().setEndProgress ((float) @<值1>))
+    }
+
+    方法 设置开始颜色 <公开 注释 = "用法：把XUI圆形进度视图的开始颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI圆形进度视图.setStartColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCircleProgressView ().setStartColor (@<值1>))
+    }
+
+    方法 设置结束颜色 <公开 注释 = "用法：把XUI圆形进度视图的结束颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI圆形进度视图.setEndColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCircleProgressView ().setEndColor (@<值1>))
+    }
+
+    方法 设置轨道宽度 <公开 注释 = "用法：把XUI圆形进度视图的轨道宽度设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI圆形进度视图.setTrackWidth()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCircleProgressView ().setTrackWidth (@<值1>))
+    }
+
+    方法 设置进度宽度 <公开 注释 = "用法：把XUI圆形进度视图的进度宽度设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI圆形进度视图.setProgressWidth()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCircleProgressView ().setProgressWidth (@<值1>))
+    }
+
+    方法 设置进度文本大小 <公开 注释 = "用法：把XUI圆形进度视图的进度文本大小设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI圆形进度视图.setProgressTextSize()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCircleProgressView ().setProgressTextSize (@<值1>))
+    }
+
+    方法 设置进度文本颜色 <公开 注释 = "用法：把XUI圆形进度视图的进度文本颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI圆形进度视图.setProgressTextColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCircleProgressView ().setProgressTextColor (@<值1>))
+    }
+
+    方法 设置进度时长 <公开 注释 = "用法：把XUI圆形进度视图的进度时长设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI圆形进度视图.setProgressDuration()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCircleProgressView ().setProgressDuration (@<值1>))
+    }
+
+    方法 设置轨道可用 <公开 注释 = "用法：把XUI圆形进度视图的轨道可用设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI圆形进度视图.setTrackEnabled()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetCircleProgressView ().setTrackEnabled (@<值1>))
+    }
+
+    方法 设置轨道颜色 <公开 注释 = "用法：把XUI圆形进度视图的轨道颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI圆形进度视图.setTrackColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCircleProgressView ().setTrackColor (@<值1>))
+    }
+
+    方法 设置填充可用 <公开 注释 = "用法：把XUI圆形进度视图的填充可用设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI圆形进度视图.setFillEnabled()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetCircleProgressView ().setFillEnabled (@<值1>))
+    }
+
+    方法 设置圆形断开 <公开 注释 = "用法：把XUI圆形进度视图的圆形断开设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI圆形进度视图.setCircleBroken()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetCircleProgressView ().setCircleBroken (@<值1>))
+    }
+
+    方法 设置渐变刻度可用 <公开 注释 = "用法：把XUI圆形进度视图的渐变刻度可用设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI圆形进度视图.setGraduatedEnabled()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetCircleProgressView ().setGraduatedEnabled (@<值1>))
+    }
+
+    方法 设置缩放时区宽度 <公开 注释 = "用法：把XUI圆形进度视图的缩放时区宽度设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI圆形进度视图.setScaleZoneWidth()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCircleProgressView ().setScaleZoneWidth ((float) @<值1>))
+    }
+
+    方法 设置缩放时区长度 <公开 注释 = "用法：把XUI圆形进度视图的缩放时区长度设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI圆形进度视图.setScaleZoneLength()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCircleProgressView ().setScaleZoneLength ((float) @<值1>))
+    }
+
+    方法 设置缩放时区内边距 <公开 注释 = "用法：把XUI圆形进度视图的缩放时区内边距设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI圆形进度视图.setScaleZonePadding()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCircleProgressView ().setScaleZonePadding (@<值1>))
+    }
+
+    方法 设置缩放时区角圆角 <公开 注释 = "用法：把XUI圆形进度视图的缩放时区角圆角设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI圆形进度视图.setScaleZoneCornerRadius()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCircleProgressView ().setScaleZoneCornerRadius (@<值1>))
+    }
+
+    方法 设置进度文本可见性 <公开 注释 = "用法：把XUI圆形进度视图的进度文本可见性设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI圆形进度视图.setProgressTextVisibility()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetCircleProgressView ().setProgressTextVisibility (@<值1>))
+    }
+
+    方法 开始进度动画 <公开 注释 = "用法：让XUI圆形进度视图开始进度动画。 参数：无。 返回：无。 原方法：XUI圆形进度视图.startProgressAnimation()">
+    {
+        @ @m<RUN_UI_ACTION> (GetCircleProgressView ().startProgressAnimation ())
+    }
+
+    方法 停止进度动画 <公开 注释 = "用法：让XUI圆形进度视图停止进度动画。 参数：无。 返回：无。 原方法：XUI圆形进度视图.stopProgressAnimation()">
+    {
+        @ @m<RUN_UI_ACTION> (GetCircleProgressView ().stopProgressAnimation ())
+    }
+
+}
+
+类 XUI水平进度视图 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.progress.HorizontalProgressView)."
+        @文档 = "category = \"XUI.进度\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.progress.HorizontalProgressView\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.hpv_start_progress\n        shown_name = \"起始进度\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.hpv_end_progress\n        shown_name = \"终止进度\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.hpv_start_color\n        shown_name = \"渐变效果的起始颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.hpv_end_color\n        shown_name = \"渐变效果的终止颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.hpv_isTracked\n        shown_name = \"是否显示轨迹背景\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.hpv_track_width\n        shown_name = \"进度条的宽度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.hpv_track_color\n        shown_name = \"轨迹背景的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.hpv_progress_duration\n        shown_name = \"动画时长\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.hpv_progress_textVisibility\n        shown_name = \"是否显示进度值文本\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.hpv_progress_textColor\n        shown_name = \"进度值的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.hpv_progress_textSize\n        shown_name = \"进度值的文本字体大小\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.hpv_animate_type\n        shown_name = \"动画类型\"\n        data_type = string\n        detail_type = enum\n        item\n        {\n            name = AccelerateDecelerateInterpolator\n            shown_name = \"AccelerateDecelerateInterpolator\"\n        }\n        item\n        {\n            name = LinearInterpolator\n            shown_name = \"LinearInterpolator\"\n        }\n        item\n        {\n            name = AccelerateInterpolator\n            shown_name = \"AccelerateInterpolator\"\n        }\n        item\n        {\n            name = DecelerateInterpolator\n            shown_name = \"DecelerateInterpolator\"\n        }\n        item\n        {\n            name = OvershootInterpolator\n            shown_name = \"OvershootInterpolator\"\n        }\n    }\n    attr\n    {\n        name = app.hpv_corner_radius\n        shown_name = \"圆角半径\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.hpv_text_padding_bottom\n        shown_name = \"文字距离view的padding\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.hpv_text_movedEnable\n        shown_name = \"设置进度值是否跟随控件动画移动\"\n        data_type = boolean\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI水平进度视图, HorizontalProgressView, com.xuexiang.xui.widget.progress.HorizontalProgressView)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetHorizontalProgressView ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI水平进度视图的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI水平进度视图.getAlpha()">
+    {
+        @ (double)@sn<this>.GetHorizontalProgressView ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI水平进度视图的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI水平进度视图.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetHorizontalProgressView ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI水平进度视图的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI水平进度视图.isEnabled()">
+    {
+        @ @sn<this>.GetHorizontalProgressView ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI水平进度视图的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI水平进度视图.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetHorizontalProgressView ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI水平进度视图的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI水平进度视图.isClickable()">
+    {
+        @ @sn<this>.GetHorizontalProgressView ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI水平进度视图的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI水平进度视图.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetHorizontalProgressView ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI水平进度视图的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI水平进度视图.getElevation()">
+    {
+        @ (double)@sn<this>.GetHorizontalProgressView ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI水平进度视图的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI水平进度视图.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetHorizontalProgressView ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI水平进度视图的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI水平进度视图.getMinimumHeight()">
+    {
+        @ @sn<this>.GetHorizontalProgressView ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI水平进度视图的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI水平进度视图.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetHorizontalProgressView ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI水平进度视图的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI水平进度视图.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetHorizontalProgressView ().setBackgroundColor (@<新值>))
+    }
+
+    方法 设置动画类型 <公开 注释 = "用法：把XUI水平进度视图的动画类型设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI水平进度视图.setAnimateType()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetHorizontalProgressView ().setAnimateType (@<值1>))
+    }
+
+    方法 设置进度 <公开 注释 = "用法：把XUI水平进度视图的进度设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI水平进度视图.setProgress()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetHorizontalProgressView ().setProgress ((float) @<值1>))
+    }
+
+    方法 取进度 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读出XUI水平进度视图的进度。 参数：无。 返回：小数。 原方法：XUI水平进度视图.getProgress()">
+    {
+        @ (double)@sn<this>.GetHorizontalProgressView ().getProgress ()
+    }
+
+    方法 设置开始进度 <公开 注释 = "用法：把XUI水平进度视图的开始进度设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI水平进度视图.setStartProgress()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetHorizontalProgressView ().setStartProgress ((float) @<值1>))
+    }
+
+    方法 设置结束进度 <公开 注释 = "用法：把XUI水平进度视图的结束进度设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI水平进度视图.setEndProgress()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetHorizontalProgressView ().setEndProgress ((float) @<值1>))
+    }
+
+    方法 设置开始颜色 <公开 注释 = "用法：把XUI水平进度视图的开始颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI水平进度视图.setStartColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetHorizontalProgressView ().setStartColor (@<值1>))
+    }
+
+    方法 设置结束颜色 <公开 注释 = "用法：把XUI水平进度视图的结束颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI水平进度视图.setEndColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetHorizontalProgressView ().setEndColor (@<值1>))
+    }
+
+    方法 设置轨道宽度 <公开 注释 = "用法：把XUI水平进度视图的轨道宽度设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI水平进度视图.setTrackWidth()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetHorizontalProgressView ().setTrackWidth (@<值1>))
+    }
+
+    方法 设置轨道颜色 <公开 注释 = "用法：把XUI水平进度视图的轨道颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI水平进度视图.setTrackColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetHorizontalProgressView ().setTrackColor (@<值1>))
+    }
+
+    方法 设置进度文本颜色 <公开 注释 = "用法：把XUI水平进度视图的进度文本颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI水平进度视图.setProgressTextColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetHorizontalProgressView ().setProgressTextColor (@<值1>))
+    }
+
+    方法 设置进度文本大小 <公开 注释 = "用法：把XUI水平进度视图的进度文本大小设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI水平进度视图.setProgressTextSize()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetHorizontalProgressView ().setProgressTextSize (@<值1>))
+    }
+
+    方法 设置进度时长 <公开 注释 = "用法：把XUI水平进度视图的进度时长设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI水平进度视图.setProgressDuration()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetHorizontalProgressView ().setProgressDuration (@<值1>))
+    }
+
+    方法 设置轨道可用 <公开 注释 = "用法：把XUI水平进度视图的轨道可用设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI水平进度视图.setTrackEnabled()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetHorizontalProgressView ().setTrackEnabled (@<值1>))
+    }
+
+    方法 设置进度文本可见性 <公开 注释 = "用法：把XUI水平进度视图的进度文本可见性设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI水平进度视图.setProgressTextVisibility()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetHorizontalProgressView ().setProgressTextVisibility (@<值1>))
+    }
+
+    方法 设置进度文本已移动 <公开 注释 = "用法：把XUI水平进度视图的进度文本已移动设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI水平进度视图.setProgressTextMoved()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetHorizontalProgressView ().setProgressTextMoved (@<值1>))
+    }
+
+    方法 开始进度动画 <公开 注释 = "用法：让XUI水平进度视图开始进度动画。 参数：无。 返回：无。 原方法：XUI水平进度视图.startProgressAnimation()">
+    {
+        @ @m<RUN_UI_ACTION> (GetHorizontalProgressView ().startProgressAnimation ())
+    }
+
+    方法 停止进度动画 <公开 注释 = "用法：让XUI水平进度视图停止进度动画。 参数：无。 返回：无。 原方法：XUI水平进度视图.stopProgressAnimation()">
+    {
+        @ @m<RUN_UI_ACTION> (GetHorizontalProgressView ().stopProgressAnimation ())
+    }
+
+    方法 设置进度角圆角 <公开 注释 = "用法：把XUI水平进度视图的进度角圆角设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI水平进度视图.setProgressCornerRadius()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetHorizontalProgressView ().setProgressCornerRadius (@<值1>))
+    }
+
+    方法 设置进度文本内边距下 <公开 注释 = "用法：把XUI水平进度视图的进度文本内边距下设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI水平进度视图.setProgressTextPaddingBottom()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetHorizontalProgressView ().setProgressTextPaddingBottom (@<值1>))
+    }
+
+}
+
+类 XUI弧形加载视图 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.progress.loading.ARCLoadingView)."
+        @文档 = "category = \"XUI.进度\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.progress.loading.ARCLoadingView\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.lv_width\n        shown_name = \"loading加载画笔的粗细\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.lv_color\n        shown_name = \"loading加载画笔的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.lv_speed\n        shown_name = \"loading加载旋转的速度\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.lv_has_icon\n        shown_name = \"是否有loading中心的图标\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.lv_icon\n        shown_name = \"loading中心的图标\"\n        data_type = string\n        detail_type = drawable_res_file\n    }\n    attr\n    {\n        name = app.lv_icon_scale\n        shown_name = \"loading中心图标缩放的比例\"\n        data_type = double\n    }\n    attr\n    {\n        name = app.lv_arc_degree\n        shown_name = \"圆弧的角度\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.lv_auto\n        shown_name = \"是否自动旋转\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.lv_arc_single\n        shown_name = \"是否单弧旋转\"\n        data_type = boolean\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI弧形加载视图, ARCLoadingView, com.xuexiang.xui.widget.progress.loading.ARCLoadingView)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetARCLoadingView ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI弧形加载视图的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI弧形加载视图.getAlpha()">
+    {
+        @ (double)@sn<this>.GetARCLoadingView ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI弧形加载视图的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI弧形加载视图.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetARCLoadingView ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI弧形加载视图的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI弧形加载视图.isEnabled()">
+    {
+        @ @sn<this>.GetARCLoadingView ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI弧形加载视图的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI弧形加载视图.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetARCLoadingView ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI弧形加载视图的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI弧形加载视图.isClickable()">
+    {
+        @ @sn<this>.GetARCLoadingView ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI弧形加载视图的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI弧形加载视图.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetARCLoadingView ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI弧形加载视图的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI弧形加载视图.getElevation()">
+    {
+        @ (double)@sn<this>.GetARCLoadingView ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI弧形加载视图的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI弧形加载视图.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetARCLoadingView ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI弧形加载视图的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI弧形加载视图.getMinimumHeight()">
+    {
+        @ @sn<this>.GetARCLoadingView ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI弧形加载视图的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI弧形加载视图.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetARCLoadingView ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI弧形加载视图的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI弧形加载视图.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetARCLoadingView ().setBackgroundColor (@<新值>))
+    }
+
+    方法 设置加载中图标 <公开 注释 = "用法：把XUI弧形加载视图的加载中图标设为给定值。 参数：值1=可绘制对象类。 返回：无。 原方法：XUI弧形加载视图.setLoadingIcon()">
+    参数 值1 <类型 = 可绘制对象类>
+    {
+        @ @m<RUN_UI_ACTION> (GetARCLoadingView ().setLoadingIcon (@<值1>))
+    }
+
+    方法 设置加载中图标_2 <公开 注释 = "用法：把XUI弧形加载视图的加载中图标_2设为给定值。 参数：值1=位图类。 返回：无。 原方法：XUI弧形加载视图.setLoadingIcon()">
+    参数 值1 <类型 = 位图类>
+    {
+        @ @m<RUN_UI_ACTION> (GetARCLoadingView ().setLoadingIcon (@<值1>))
+    }
+
+    方法 设置加载中颜色 <公开 注释 = "用法：把XUI弧形加载视图的加载中颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI弧形加载视图.setLoadingColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetARCLoadingView ().setLoadingColor (@<值1>))
+    }
+
+    方法 取加载中颜色 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI弧形加载视图的加载中颜色。 参数：无。 返回：整数。 原方法：XUI弧形加载视图.getLoadingColor()">
+    {
+        @ @sn<this>.GetARCLoadingView ().getLoadingColor ()
+    }
+
+    方法 设置速度的度数 <公开 注释 = "用法：把XUI弧形加载视图的速度的度数设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI弧形加载视图.setSpeedOfDegree()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetARCLoadingView ().setSpeedOfDegree (@<值1>))
+    }
+
+    方法 设置图标缩放 <公开 注释 = "用法：把XUI弧形加载视图的图标缩放设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI弧形加载视图.setIconScale()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetARCLoadingView ().setIconScale ((float) @<值1>))
+    }
+
+    方法 取图标缩放 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读出XUI弧形加载视图的图标缩放。 参数：无。 返回：小数。 原方法：XUI弧形加载视图.getIconScale()">
+    {
+        @ (double)@sn<this>.GetARCLoadingView ().getIconScale ()
+    }
+
+    方法 开始 <公开 注释 = "用法：让XUI弧形加载视图开始相关内容。 参数：无。 返回：无。 原方法：XUI弧形加载视图.start()">
+    {
+        @ @m<RUN_UI_ACTION> (GetARCLoadingView ().start ())
+    }
+
+    方法 停止 <公开 注释 = "用法：让XUI弧形加载视图停止相关内容。 参数：无。 返回：无。 原方法：XUI弧形加载视图.stop()">
+    {
+        @ @m<RUN_UI_ACTION> (GetARCLoadingView ().stop ())
+    }
+
+    方法 是否开始 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断XUI弧形加载视图是否开始。 参数：无。 返回：逻辑型。 原方法：XUI弧形加载视图.isStart()">
+    {
+        @ @sn<this>.GetARCLoadingView ().isStart ()
+    }
+
+    方法 回收 <公开 注释 = "用法：回收XUI弧形加载视图占用的资源。 参数：无。 返回：无。 原方法：XUI弧形加载视图.recycle()">
+    {
+        @ @m<RUN_UI_ACTION> (GetARCLoadingView ().recycle ())
+    }
+
+}
+
+类 XUI加载布局 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.progress.loading.LoadingViewLayout)."
+        @文档 = "category = \"XUI.进度\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.progress.loading.LoadingViewLayout\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.lvl_icon\n        shown_name = \"loading中心的图标\"\n        data_type = string\n        detail_type = drawable_res_file\n    }\n    attr\n    {\n        name = app.lvl_message\n        shown_name = \"loading提示信息\"\n        data_type = string\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI加载布局, LoadingViewLayout, com.xuexiang.xui.widget.progress.loading.LoadingViewLayout)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetLoadingViewLayout ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI加载布局的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI加载布局.getAlpha()">
+    {
+        @ (double)@sn<this>.GetLoadingViewLayout ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI加载布局的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI加载布局.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLoadingViewLayout ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI加载布局的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI加载布局.isEnabled()">
+    {
+        @ @sn<this>.GetLoadingViewLayout ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI加载布局的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI加载布局.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLoadingViewLayout ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI加载布局的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI加载布局.isClickable()">
+    {
+        @ @sn<this>.GetLoadingViewLayout ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI加载布局的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI加载布局.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLoadingViewLayout ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI加载布局的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI加载布局.getElevation()">
+    {
+        @ (double)@sn<this>.GetLoadingViewLayout ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI加载布局的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI加载布局.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLoadingViewLayout ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI加载布局的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI加载布局.getMinimumHeight()">
+    {
+        @ @sn<this>.GetLoadingViewLayout ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI加载布局的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI加载布局.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLoadingViewLayout ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI加载布局的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI加载布局.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLoadingViewLayout ().setBackgroundColor (@<新值>))
+    }
+
+    方法 更新消息 <公开 注释 = "用法：用传入值刷新XUI加载布局的消息。 参数：值1=文本。 返回：无。 原方法：XUI加载布局.updateMessage()">
+    参数 值1 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLoadingViewLayout ().updateMessage (@<值1>))
+    }
+
+    方法 更新消息_2 <公开 注释 = "用法：用传入值刷新XUI加载布局的消息_2。 参数：值1=整数。 返回：无。 原方法：XUI加载布局.updateMessage()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLoadingViewLayout ().updateMessage (@<值1>))
+    }
+
+    方法 设置加载中图标 <公开 注释 = "用法：把XUI加载布局的加载中图标设为给定值。 参数：值1=可绘制对象类。 返回：无。 原方法：XUI加载布局.setLoadingIcon()">
+    参数 值1 <类型 = 可绘制对象类>
+    {
+        @ @m<RUN_UI_ACTION> (GetLoadingViewLayout ().setLoadingIcon (@<值1>))
+    }
+
+    方法 设置图标缩放 <公开 注释 = "用法：把XUI加载布局的图标缩放设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI加载布局.setIconScale()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLoadingViewLayout ().setIconScale ((float) @<值1>))
+    }
+
+    方法 设置加载中图标_2 <公开 注释 = "用法：把XUI加载布局的加载中图标_2设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI加载布局.setLoadingIcon()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLoadingViewLayout ().setLoadingIcon (@<值1>))
+    }
+
+    方法 显示 <公开 注释 = "用法：让XUI加载布局显示出来。 参数：无。 返回：无。 原方法：XUI加载布局.show()">
+    {
+        @ @m<RUN_UI_ACTION> (GetLoadingViewLayout ().show ())
+    }
+
+    方法 关闭 <公开 注释 = "用法：关闭XUI加载布局。 参数：无。 返回：无。 原方法：XUI加载布局.dismiss()">
+    {
+        @ @m<RUN_UI_ACTION> (GetLoadingViewLayout ().dismiss ())
+    }
+
+    方法 回收 <公开 注释 = "用法：回收XUI加载布局占用的资源。 参数：无。 返回：无。 原方法：XUI加载布局.recycle()">
+    {
+        @ @m<RUN_UI_ACTION> (GetLoadingViewLayout ().recycle ())
+    }
+
+    方法 是否加载中 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断XUI加载布局是否加载中。 参数：无。 返回：逻辑型。 原方法：XUI加载布局.isLoading()">
+    {
+        @ @sn<this>.GetLoadingViewLayout ().isLoading ()
+    }
+
+    方法 设置可取消 <公开 注释 = "用法：把XUI加载布局的可取消设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI加载布局.setCancelable()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLoadingViewLayout ().setCancelable (@<值1>))
+    }
+
+    方法 取字符串 <公开 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读出XUI加载布局的字符串。 参数：值1=整数。 返回：文本型。 原方法：XUI加载布局.getString()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @sn<this>.GetLoadingViewLayout ().getString (@<值1>)
+    }
+
+    方法 取图形 <公开 类型 = 可绘制对象类 @嵌入式方法 = "" 注释 = "用法：读出XUI加载布局的图形。 参数：值1=整数。 返回：可绘制对象类。 原方法：XUI加载布局.getDrawable()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @sn<this>.GetLoadingViewLayout ().getDrawable (@<值1>)
+    }
+
+}
+
+类 XUI迷你加载视图 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.progress.loading.MiniLoadingView)."
+        @文档 = "category = \"XUI.进度\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.progress.loading.MiniLoadingView\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.mlv_loading_view_size\n        shown_name = \"loading控件的大小\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.mlv_loading_view_color\n        shown_name = \"loading控件的颜色\"\n        data_type = string\n        detail_type = color\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI迷你加载视图, MiniLoadingView, com.xuexiang.xui.widget.progress.loading.MiniLoadingView)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetMiniLoadingView ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI迷你加载视图的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI迷你加载视图.getAlpha()">
+    {
+        @ (double)@sn<this>.GetMiniLoadingView ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI迷你加载视图的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI迷你加载视图.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMiniLoadingView ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI迷你加载视图的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI迷你加载视图.isEnabled()">
+    {
+        @ @sn<this>.GetMiniLoadingView ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI迷你加载视图的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI迷你加载视图.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetMiniLoadingView ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI迷你加载视图的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI迷你加载视图.isClickable()">
+    {
+        @ @sn<this>.GetMiniLoadingView ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI迷你加载视图的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI迷你加载视图.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetMiniLoadingView ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI迷你加载视图的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI迷你加载视图.getElevation()">
+    {
+        @ (double)@sn<this>.GetMiniLoadingView ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI迷你加载视图的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI迷你加载视图.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMiniLoadingView ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI迷你加载视图的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI迷你加载视图.getMinimumHeight()">
+    {
+        @ @sn<this>.GetMiniLoadingView ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI迷你加载视图的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI迷你加载视图.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMiniLoadingView ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI迷你加载视图的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI迷你加载视图.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMiniLoadingView ().setBackgroundColor (@<新值>))
+    }
+
+    方法 设置颜色 <公开 注释 = "用法：把XUI迷你加载视图的颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI迷你加载视图.setColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMiniLoadingView ().setColor (@<值1>))
+    }
+
+    方法 设置大小 <公开 注释 = "用法：把XUI迷你加载视图的大小设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI迷你加载视图.setSize()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMiniLoadingView ().setSize (@<值1>))
+    }
+
+    方法 开始 <公开 注释 = "用法：让XUI迷你加载视图开始相关内容。 参数：无。 返回：无。 原方法：XUI迷你加载视图.start()">
+    {
+        @ @m<RUN_UI_ACTION> (GetMiniLoadingView ().start ())
+    }
+
+    方法 停止 <公开 注释 = "用法：让XUI迷你加载视图停止相关内容。 参数：无。 返回：无。 原方法：XUI迷你加载视图.stop()">
+    {
+        @ @m<RUN_UI_ACTION> (GetMiniLoadingView ().stop ())
+    }
+
+}
+
+类 XUI旋转加载视图 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.progress.loading.RotateLoadingView)."
+        @文档 = "category = \"XUI.进度\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.progress.loading.RotateLoadingView\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.lv_width\n        shown_name = \"loading加载画笔的粗细\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.lv_color\n        shown_name = \"loading加载画笔的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.lv_speed\n        shown_name = \"loading加载旋转的速度\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.lv_has_icon\n        shown_name = \"是否有loading中心的图标\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.lv_icon\n        shown_name = \"loading中心的图标\"\n        data_type = string\n        detail_type = drawable_res_file\n    }\n    attr\n    {\n        name = app.lv_icon_scale\n        shown_name = \"loading中心图标缩放的比例\"\n        data_type = double\n    }\n    attr\n    {\n        name = app.lv_arc_degree\n        shown_name = \"圆弧的角度\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.lv_auto\n        shown_name = \"是否自动旋转\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.lv_arc_single\n        shown_name = \"是否单弧旋转\"\n        data_type = boolean\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI旋转加载视图, RotateLoadingView, com.xuexiang.xui.widget.progress.loading.RotateLoadingView)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetRotateLoadingView ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI旋转加载视图的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI旋转加载视图.getAlpha()">
+    {
+        @ (double)@sn<this>.GetRotateLoadingView ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI旋转加载视图的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI旋转加载视图.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRotateLoadingView ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI旋转加载视图的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI旋转加载视图.isEnabled()">
+    {
+        @ @sn<this>.GetRotateLoadingView ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI旋转加载视图的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI旋转加载视图.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetRotateLoadingView ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI旋转加载视图的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI旋转加载视图.isClickable()">
+    {
+        @ @sn<this>.GetRotateLoadingView ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI旋转加载视图的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI旋转加载视图.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetRotateLoadingView ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI旋转加载视图的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI旋转加载视图.getElevation()">
+    {
+        @ (double)@sn<this>.GetRotateLoadingView ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI旋转加载视图的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI旋转加载视图.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRotateLoadingView ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI旋转加载视图的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI旋转加载视图.getMinimumHeight()">
+    {
+        @ @sn<this>.GetRotateLoadingView ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI旋转加载视图的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI旋转加载视图.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRotateLoadingView ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI旋转加载视图的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI旋转加载视图.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRotateLoadingView ().setBackgroundColor (@<新值>))
+    }
+
+    方法 设置加载中图标 <公开 注释 = "用法：把XUI旋转加载视图的加载中图标设为给定值。 参数：值1=可绘制对象类。 返回：无。 原方法：XUI旋转加载视图.setLoadingIcon()">
+    参数 值1 <类型 = 可绘制对象类>
+    {
+        @ @m<RUN_UI_ACTION> (GetRotateLoadingView ().setLoadingIcon (@<值1>))
+    }
+
+    方法 设置加载中图标_2 <公开 注释 = "用法：把XUI旋转加载视图的加载中图标_2设为给定值。 参数：值1=位图类。 返回：无。 原方法：XUI旋转加载视图.setLoadingIcon()">
+    参数 值1 <类型 = 位图类>
+    {
+        @ @m<RUN_UI_ACTION> (GetRotateLoadingView ().setLoadingIcon (@<值1>))
+    }
+
+    方法 设置加载中颜色 <公开 注释 = "用法：把XUI旋转加载视图的加载中颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI旋转加载视图.setLoadingColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRotateLoadingView ().setLoadingColor (@<值1>))
+    }
+
+    方法 取加载中颜色 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI旋转加载视图的加载中颜色。 参数：无。 返回：整数。 原方法：XUI旋转加载视图.getLoadingColor()">
+    {
+        @ @sn<this>.GetRotateLoadingView ().getLoadingColor ()
+    }
+
+    方法 开始 <公开 注释 = "用法：让XUI旋转加载视图开始相关内容。 参数：无。 返回：无。 原方法：XUI旋转加载视图.start()">
+    {
+        @ @m<RUN_UI_ACTION> (GetRotateLoadingView ().start ())
+    }
+
+    方法 停止 <公开 注释 = "用法：让XUI旋转加载视图停止相关内容。 参数：无。 返回：无。 原方法：XUI旋转加载视图.stop()">
+    {
+        @ @m<RUN_UI_ACTION> (GetRotateLoadingView ().stop ())
+    }
+
+    方法 是否开始 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断XUI旋转加载视图是否开始。 参数：无。 返回：逻辑型。 原方法：XUI旋转加载视图.isStart()">
+    {
+        @ @sn<this>.GetRotateLoadingView ().isStart ()
+    }
+
+    方法 回收 <公开 注释 = "用法：回收XUI旋转加载视图占用的资源。 参数：无。 返回：无。 原方法：XUI旋转加载视图.recycle()">
+    {
+        @ @m<RUN_UI_ACTION> (GetRotateLoadingView ().recycle ())
+    }
+
+}
+
+类 XUIMaterial进度条 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.progress.materialprogressbar.MaterialProgressBar)."
+        @文档 = "category = \"XUI.进度\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.progress.materialprogressbar.MaterialProgressBar\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.mpb_progressStyle\n        shown_name = \"进度条的样式：环形或水平\"\n        data_type = string\n        detail_type = enum\n        item\n        {\n            name = circular\n            shown_name = \"circular\"\n        }\n        item\n        {\n            name = horizontal\n            shown_name = \"horizontal\"\n        }\n    }\n    attr\n    {\n        name = app.mpb_setBothDrawables\n        shown_name = \"无论进度 determinate\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.mpb_useIntrinsicPadding\n        shown_name = \"是否使用进度条内部的padding\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.mpb_showProgressBackground\n        shown_name = \"进度条是否必须有背景\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.mpb_determinateCircularProgressStyle\n        shown_name = \"进度确定的环形进度条样式：norma\"\n        data_type = string\n        detail_type = enum\n        item\n        {\n            name = normal\n            shown_name = \"normal\"\n        }\n        item\n        {\n            name = dynamic\n            shown_name = \"dynamic\"\n        }\n    }\n    attr\n    {\n        name = app.mpb_progressTint\n        shown_name = \"进度条的主色调\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.mpb_progressTintMode\n        shown_name = \"进度条色调的叠加模式\"\n        data_type = string\n        detail_type = enum\n        item\n        {\n            name = src_over\n            shown_name = \"src_over\"\n        }\n        item\n        {\n            name = src_in\n            shown_name = \"src_in\"\n        }\n        item\n        {\n            name = src_atop\n            shown_name = \"src_atop\"\n        }\n        item\n        {\n            name = multiply\n            shown_name = \"multiply\"\n        }\n        item\n        {\n            name = screen\n            shown_name = \"screen\"\n        }\n        item\n        {\n            name = add\n            shown_name = \"add\"\n        }\n    }\n    attr\n    {\n        name = app.mpb_secondaryProgressTint\n        shown_name = \"进度条的次色调\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.mpb_secondaryProgressTintMode\n        shown_name = \"进度条次色调的叠加模式\"\n        data_type = string\n        detail_type = enum\n        item\n        {\n            name = src_over\n            shown_name = \"src_over\"\n        }\n        item\n        {\n            name = src_in\n            shown_name = \"src_in\"\n        }\n        item\n        {\n            name = src_atop\n            shown_name = \"src_atop\"\n        }\n        item\n        {\n            name = multiply\n            shown_name = \"multiply\"\n        }\n        item\n        {\n            name = screen\n            shown_name = \"screen\"\n        }\n        item\n        {\n            name = add\n            shown_name = \"add\"\n        }\n    }\n    attr\n    {\n        name = app.mpb_progressBackgroundTint\n        shown_name = \"进度条背景的色调\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.mpb_progressBackgroundTintMode\n        shown_name = \"进度条背景色调的叠加模式\"\n        data_type = string\n        detail_type = enum\n        item\n        {\n            name = src_over\n            shown_name = \"src_over\"\n        }\n        item\n        {\n            name = src_in\n            shown_name = \"src_in\"\n        }\n        item\n        {\n            name = src_atop\n            shown_name = \"src_atop\"\n        }\n        item\n        {\n            name = multiply\n            shown_name = \"multiply\"\n        }\n        item\n        {\n            name = screen\n            shown_name = \"screen\"\n        }\n        item\n        {\n            name = add\n            shown_name = \"add\"\n        }\n    }\n    attr\n    {\n        name = app.mpb_indeterminateTint\n        shown_name = \"不确定进度的进度条色调\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.mpb_indeterminateTintMode\n        shown_name = \"不确定进度的进度条色调的叠加模式\"\n        data_type = string\n        detail_type = enum\n        item\n        {\n            name = src_over\n            shown_name = \"src_over\"\n        }\n        item\n        {\n            name = src_in\n            shown_name = \"src_in\"\n        }\n        item\n        {\n            name = src_atop\n            shown_name = \"src_atop\"\n        }\n        item\n        {\n            name = multiply\n            shown_name = \"multiply\"\n        }\n        item\n        {\n            name = screen\n            shown_name = \"screen\"\n        }\n        item\n        {\n            name = add\n            shown_name = \"add\"\n        }\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUIMaterial进度条, MaterialProgressBar, com.xuexiang.xui.widget.progress.materialprogressbar.MaterialProgressBar)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetMaterialProgressBar ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUIMaterial进度条的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUIMaterial进度条.getAlpha()">
+    {
+        @ (double)@sn<this>.GetMaterialProgressBar ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUIMaterial进度条的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUIMaterial进度条.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialProgressBar ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUIMaterial进度条的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUIMaterial进度条.isEnabled()">
+    {
+        @ @sn<this>.GetMaterialProgressBar ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUIMaterial进度条的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUIMaterial进度条.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialProgressBar ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUIMaterial进度条的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUIMaterial进度条.isClickable()">
+    {
+        @ @sn<this>.GetMaterialProgressBar ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUIMaterial进度条的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUIMaterial进度条.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialProgressBar ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUIMaterial进度条的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUIMaterial进度条.getElevation()">
+    {
+        @ (double)@sn<this>.GetMaterialProgressBar ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUIMaterial进度条的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUIMaterial进度条.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialProgressBar ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUIMaterial进度条的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUIMaterial进度条.getMinimumHeight()">
+    {
+        @ @sn<this>.GetMaterialProgressBar ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUIMaterial进度条的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUIMaterial进度条.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialProgressBar ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUIMaterial进度条的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUIMaterial进度条.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialProgressBar ().setBackgroundColor (@<新值>))
+    }
+
+    方法 XUI进度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUIMaterial进度条的XUI进度当前值。 参数：无。 返回：整数。 原方法：XUIMaterial进度条.getProgress()">
+    {
+        @ @sn<this>.GetMaterialProgressBar ().getProgress ()
+    }
+
+    方法 XUI进度 <公开 属性写 注释 = "用法：设置XUIMaterial进度条的XUI进度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUIMaterial进度条.setProgress()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialProgressBar ().setProgress (@<新值>))
+    }
+
+    方法 XUI最大值 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUIMaterial进度条的XUI最大值当前值。 参数：无。 返回：整数。 原方法：XUIMaterial进度条.getMax()">
+    {
+        @ @sn<this>.GetMaterialProgressBar ().getMax ()
+    }
+
+    方法 XUI最大值 <公开 属性写 注释 = "用法：设置XUIMaterial进度条的XUI最大值, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUIMaterial进度条.setMax()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialProgressBar ().setMax (@<新值>))
+    }
+
+    方法 XUI不确定 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUIMaterial进度条的XUI不确定当前值。 参数：无。 返回：逻辑型。 原方法：XUIMaterial进度条.isIndeterminate()">
+    {
+        @ @sn<this>.GetMaterialProgressBar ().isIndeterminate ()
+    }
+
+    方法 XUI不确定 <公开 属性写 注释 = "用法：设置XUIMaterial进度条的XUI不确定, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUIMaterial进度条.setIndeterminate()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialProgressBar ().setIndeterminate (@<新值>))
+    }
+
+    方法 设置不确定 <公开 注释 = "用法：把XUIMaterial进度条的不确定设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUIMaterial进度条.setIndeterminate()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialProgressBar ().setIndeterminate (@<值1>))
+    }
+
+    方法 取进度样式 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUIMaterial进度条的进度样式。 参数：无。 返回：整数。 原方法：XUIMaterial进度条.getProgressStyle()">
+    {
+        @ @sn<this>.GetMaterialProgressBar ().getProgressStyle ()
+    }
+
+    方法 取当前图形 <公开 类型 = 可绘制对象类 @嵌入式方法 = "" 注释 = "用法：读出XUIMaterial进度条的当前图形。 参数：无。 返回：可绘制对象类。 原方法：XUIMaterial进度条.getCurrentDrawable()">
+    {
+        @ @sn<this>.GetMaterialProgressBar ().getCurrentDrawable ()
+    }
+
+    方法 取使用固有内边距 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读出XUIMaterial进度条的使用固有内边距。 参数：无。 返回：逻辑型。 原方法：XUIMaterial进度条.getUseIntrinsicPadding()">
+    {
+        @ @sn<this>.GetMaterialProgressBar ().getUseIntrinsicPadding ()
+    }
+
+    方法 设置使用固有内边距 <公开 注释 = "用法：把XUIMaterial进度条的使用固有内边距设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUIMaterial进度条.setUseIntrinsicPadding()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialProgressBar ().setUseIntrinsicPadding (@<值1>))
+    }
+
+    方法 取显示进度背景 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读出XUIMaterial进度条的显示进度背景。 参数：无。 返回：逻辑型。 原方法：XUIMaterial进度条.getShowProgressBackground()">
+    {
+        @ @sn<this>.GetMaterialProgressBar ().getShowProgressBackground ()
+    }
+
+    方法 设置显示进度背景 <公开 注释 = "用法：把XUIMaterial进度条的显示进度背景设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUIMaterial进度条.setShowProgressBackground()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialProgressBar ().setShowProgressBackground (@<值1>))
+    }
+
+    方法 设置进度图形 <公开 注释 = "用法：把XUIMaterial进度条的进度图形设为给定值。 参数：值1=可绘制对象类。 返回：无。 原方法：XUIMaterial进度条.setProgressDrawable()">
+    参数 值1 <类型 = 可绘制对象类>
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialProgressBar ().setProgressDrawable (@<值1>))
+    }
+
+    方法 设置不确定图形 <公开 注释 = "用法：把XUIMaterial进度条的不确定图形设为给定值。 参数：值1=可绘制对象类。 返回：无。 原方法：XUIMaterial进度条.setIndeterminateDrawable()">
+    参数 值1 <类型 = 可绘制对象类>
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialProgressBar ().setIndeterminateDrawable (@<值1>))
+    }
+
+}
+
+类 XUI评分条 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.progress.ratingbar.RatingBar)."
+        @文档 = "category = \"XUI.进度\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.progress.ratingbar.RatingBar\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.srb_numStars\n        shown_name = \"总共最大的星级数\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.srb_minimumStars\n        shown_name = \"最小星级数\"\n        data_type = double\n    }\n    attr\n    {\n        name = app.srb_rating\n        shown_name = \"当前的星级\"\n        data_type = double\n    }\n    attr\n    {\n        name = app.srb_starPadding\n        shown_name = \"星星之间的间距\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.srb_drawableEmpty\n        shown_name = \"星星为空时的图案\"\n        data_type = string\n        detail_type = drawable_res_file\n    }\n    attr\n    {\n        name = app.srb_drawableFilled\n        shown_name = \"星星填充时的图案\"\n        data_type = string\n        detail_type = drawable_res_file\n    }\n    attr\n    {\n        name = app.srb_isIndicator\n        shown_name = \"是否只是指示器\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.srb_scrollable\n        shown_name = \"是否可以滑动设置评分\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.srb_clickable\n        shown_name = \"是否可以点击设置评分\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.srb_clearRatingEnabled\n        shown_name = \"重复点击是否可以清空评分\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.srb_starWidth\n        shown_name = \"星星的宽度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.srb_starHeight\n        shown_name = \"星星的高度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.srb_stepSize\n        shown_name = \"星星的进度单位\"\n        data_type = double\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI评分条, RatingBar, com.xuexiang.xui.widget.progress.ratingbar.RatingBar)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetRatingBar ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI评分条的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI评分条.getAlpha()">
+    {
+        @ (double)@sn<this>.GetRatingBar ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI评分条的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI评分条.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRatingBar ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI评分条的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI评分条.isEnabled()">
+    {
+        @ @sn<this>.GetRatingBar ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI评分条的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI评分条.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetRatingBar ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI评分条的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI评分条.isClickable()">
+    {
+        @ @sn<this>.GetRatingBar ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI评分条的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI评分条.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetRatingBar ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI评分条的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI评分条.getElevation()">
+    {
+        @ (double)@sn<this>.GetRatingBar ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI评分条的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI评分条.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRatingBar ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI评分条的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI评分条.getMinimumHeight()">
+    {
+        @ @sn<this>.GetRatingBar ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI评分条的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI评分条.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRatingBar ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI评分条的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI评分条.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRatingBar ().setBackgroundColor (@<新值>))
+    }
+
+    方法 设置数目星标 <公开 注释 = "用法：把XUI评分条的数目星标设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI评分条.setNumStars()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRatingBar ().setNumStars (@<值1>))
+    }
+
+    方法 取数目星标 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI评分条的数目星标。 参数：无。 返回：整数。 原方法：XUI评分条.getNumStars()">
+    {
+        @ @sn<this>.GetRatingBar ().getNumStars ()
+    }
+
+    方法 设置评分 <公开 注释 = "用法：把XUI评分条的评分设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI评分条.setRating()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRatingBar ().setRating ((float) @<值1>))
+    }
+
+    方法 取评分 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读出XUI评分条的评分。 参数：无。 返回：小数。 原方法：XUI评分条.getRating()">
+    {
+        @ (double)@sn<this>.GetRatingBar ().getRating ()
+    }
+
+    方法 设置星宽度 <公开 注释 = "用法：把XUI评分条的星宽度设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI评分条.setStarWidth()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRatingBar ().setStarWidth (@<值1>))
+    }
+
+    方法 取星宽度 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI评分条的星宽度。 参数：无。 返回：整数。 原方法：XUI评分条.getStarWidth()">
+    {
+        @ @sn<this>.GetRatingBar ().getStarWidth ()
+    }
+
+    方法 设置星高度 <公开 注释 = "用法：把XUI评分条的星高度设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI评分条.setStarHeight()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRatingBar ().setStarHeight (@<值1>))
+    }
+
+    方法 取星高度 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI评分条的星高度。 参数：无。 返回：整数。 原方法：XUI评分条.getStarHeight()">
+    {
+        @ @sn<this>.GetRatingBar ().getStarHeight ()
+    }
+
+    方法 设置星内边距 <公开 注释 = "用法：把XUI评分条的星内边距设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI评分条.setStarPadding()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRatingBar ().setStarPadding (@<值1>))
+    }
+
+    方法 取星内边距 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI评分条的星内边距。 参数：无。 返回：整数。 原方法：XUI评分条.getStarPadding()">
+    {
+        @ @sn<this>.GetRatingBar ().getStarPadding ()
+    }
+
+    方法 设置空图形资源 <公开 注释 = "用法：把XUI评分条的空图形资源设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI评分条.setEmptyDrawableRes()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRatingBar ().setEmptyDrawableRes (@<值1>))
+    }
+
+    方法 设置已填充图形资源 <公开 注释 = "用法：把XUI评分条的已填充图形资源设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI评分条.setFilledDrawableRes()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRatingBar ().setFilledDrawableRes (@<值1>))
+    }
+
+    方法 设置空图形 <公开 注释 = "用法：把XUI评分条的空图形设为给定值。 参数：值1=可绘制对象类。 返回：无。 原方法：XUI评分条.setEmptyDrawable()">
+    参数 值1 <类型 = 可绘制对象类>
+    {
+        @ @m<RUN_UI_ACTION> (GetRatingBar ().setEmptyDrawable (@<值1>))
+    }
+
+    方法 设置已填充图形 <公开 注释 = "用法：把XUI评分条的已填充图形设为给定值。 参数：值1=可绘制对象类。 返回：无。 原方法：XUI评分条.setFilledDrawable()">
+    参数 值1 <类型 = 可绘制对象类>
+    {
+        @ @m<RUN_UI_ACTION> (GetRatingBar ().setFilledDrawable (@<值1>))
+    }
+
+    方法 设置最小值星标 <公开 注释 = "用法：把XUI评分条的最小值星标设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI评分条.setMinimumStars()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRatingBar ().setMinimumStars ((float) @<值1>))
+    }
+
+    方法 是否指示器 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断XUI评分条是否指示器。 参数：无。 返回：逻辑型。 原方法：XUI评分条.isIndicator()">
+    {
+        @ @sn<this>.GetRatingBar ().isIndicator ()
+    }
+
+    方法 设置是否指示器 <公开 注释 = "用法：把XUI评分条的是否指示器设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI评分条.setIsIndicator()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetRatingBar ().setIsIndicator (@<值1>))
+    }
+
+    方法 是否可滚动 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断XUI评分条是否可滚动。 参数：无。 返回：逻辑型。 原方法：XUI评分条.isScrollable()">
+    {
+        @ @sn<this>.GetRatingBar ().isScrollable ()
+    }
+
+    方法 设置可滚动 <公开 注释 = "用法：把XUI评分条的可滚动设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI评分条.setScrollable()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetRatingBar ().setScrollable (@<值1>))
+    }
+
+    方法 是否可点击 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断XUI评分条是否可点击。 参数：无。 返回：逻辑型。 原方法：XUI评分条.isClickable()">
+    {
+        @ @sn<this>.GetRatingBar ().isClickable ()
+    }
+
+    方法 设置可点击 <公开 注释 = "用法：把XUI评分条的可点击设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI评分条.setClickable()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetRatingBar ().setClickable (@<值1>))
+    }
+
+    方法 设置清空评分可用 <公开 注释 = "用法：把XUI评分条的清空评分可用设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI评分条.setClearRatingEnabled()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetRatingBar ().setClearRatingEnabled (@<值1>))
+    }
+
+    方法 是否清空评分可用 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断XUI评分条是否清空评分可用。 参数：无。 返回：逻辑型。 原方法：XUI评分条.isClearRatingEnabled()">
+    {
+        @ @sn<this>.GetRatingBar ().isClearRatingEnabled ()
+    }
+
+    方法 取步进大小 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读出XUI评分条的步进大小。 参数：无。 返回：小数。 原方法：XUI评分条.getStepSize()">
+    {
+        @ (double)@sn<this>.GetRatingBar ().getStepSize ()
+    }
+
+    方法 设置步进大小 <公开 注释 = "用法：把XUI评分条的步进大小设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI评分条.setStepSize()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRatingBar ().setStepSize ((float) @<值1>))
+    }
+
+}
+
+类 XUI旋转评分条 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.progress.ratingbar.RotationRatingBar)."
+        @文档 = "category = \"XUI.进度\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.progress.ratingbar.RotationRatingBar\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.srb_numStars\n        shown_name = \"总共最大的星级数\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.srb_minimumStars\n        shown_name = \"最小星级数\"\n        data_type = double\n    }\n    attr\n    {\n        name = app.srb_rating\n        shown_name = \"当前的星级\"\n        data_type = double\n    }\n    attr\n    {\n        name = app.srb_starPadding\n        shown_name = \"星星之间的间距\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.srb_drawableEmpty\n        shown_name = \"星星为空时的图案\"\n        data_type = string\n        detail_type = drawable_res_file\n    }\n    attr\n    {\n        name = app.srb_drawableFilled\n        shown_name = \"星星填充时的图案\"\n        data_type = string\n        detail_type = drawable_res_file\n    }\n    attr\n    {\n        name = app.srb_isIndicator\n        shown_name = \"是否只是指示器\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.srb_scrollable\n        shown_name = \"是否可以滑动设置评分\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.srb_clickable\n        shown_name = \"是否可以点击设置评分\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.srb_clearRatingEnabled\n        shown_name = \"重复点击是否可以清空评分\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.srb_starWidth\n        shown_name = \"星星的宽度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.srb_starHeight\n        shown_name = \"星星的高度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.srb_stepSize\n        shown_name = \"星星的进度单位\"\n        data_type = double\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI旋转评分条, RotationRatingBar, com.xuexiang.xui.widget.progress.ratingbar.RotationRatingBar)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetRotationRatingBar ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI旋转评分条的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI旋转评分条.getAlpha()">
+    {
+        @ (double)@sn<this>.GetRotationRatingBar ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI旋转评分条的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI旋转评分条.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRotationRatingBar ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI旋转评分条的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI旋转评分条.isEnabled()">
+    {
+        @ @sn<this>.GetRotationRatingBar ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI旋转评分条的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI旋转评分条.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetRotationRatingBar ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI旋转评分条的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI旋转评分条.isClickable()">
+    {
+        @ @sn<this>.GetRotationRatingBar ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI旋转评分条的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI旋转评分条.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetRotationRatingBar ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI旋转评分条的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI旋转评分条.getElevation()">
+    {
+        @ (double)@sn<this>.GetRotationRatingBar ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI旋转评分条的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI旋转评分条.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRotationRatingBar ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI旋转评分条的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI旋转评分条.getMinimumHeight()">
+    {
+        @ @sn<this>.GetRotationRatingBar ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI旋转评分条的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI旋转评分条.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRotationRatingBar ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI旋转评分条的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI旋转评分条.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRotationRatingBar ().setBackgroundColor (@<新值>))
+    }
+
+}
+
+类 XUI缩放评分条 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.progress.ratingbar.ScaleRatingBar)."
+        @文档 = "category = \"XUI.进度\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.progress.ratingbar.ScaleRatingBar\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.srb_numStars\n        shown_name = \"总共最大的星级数\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.srb_minimumStars\n        shown_name = \"最小星级数\"\n        data_type = double\n    }\n    attr\n    {\n        name = app.srb_rating\n        shown_name = \"当前的星级\"\n        data_type = double\n    }\n    attr\n    {\n        name = app.srb_starPadding\n        shown_name = \"星星之间的间距\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.srb_drawableEmpty\n        shown_name = \"星星为空时的图案\"\n        data_type = string\n        detail_type = drawable_res_file\n    }\n    attr\n    {\n        name = app.srb_drawableFilled\n        shown_name = \"星星填充时的图案\"\n        data_type = string\n        detail_type = drawable_res_file\n    }\n    attr\n    {\n        name = app.srb_isIndicator\n        shown_name = \"是否只是指示器\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.srb_scrollable\n        shown_name = \"是否可以滑动设置评分\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.srb_clickable\n        shown_name = \"是否可以点击设置评分\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.srb_clearRatingEnabled\n        shown_name = \"重复点击是否可以清空评分\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.srb_starWidth\n        shown_name = \"星星的宽度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.srb_starHeight\n        shown_name = \"星星的高度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.srb_stepSize\n        shown_name = \"星星的进度单位\"\n        data_type = double\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI缩放评分条, ScaleRatingBar, com.xuexiang.xui.widget.progress.ratingbar.ScaleRatingBar)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetScaleRatingBar ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI缩放评分条的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI缩放评分条.getAlpha()">
+    {
+        @ (double)@sn<this>.GetScaleRatingBar ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI缩放评分条的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI缩放评分条.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetScaleRatingBar ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI缩放评分条的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI缩放评分条.isEnabled()">
+    {
+        @ @sn<this>.GetScaleRatingBar ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI缩放评分条的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI缩放评分条.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetScaleRatingBar ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI缩放评分条的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI缩放评分条.isClickable()">
+    {
+        @ @sn<this>.GetScaleRatingBar ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI缩放评分条的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI缩放评分条.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetScaleRatingBar ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI缩放评分条的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI缩放评分条.getElevation()">
+    {
+        @ (double)@sn<this>.GetScaleRatingBar ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI缩放评分条的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI缩放评分条.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetScaleRatingBar ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI缩放评分条的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI缩放评分条.getMinimumHeight()">
+    {
+        @ @sn<this>.GetScaleRatingBar ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI缩放评分条的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI缩放评分条.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetScaleRatingBar ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI缩放评分条的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI缩放评分条.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetScaleRatingBar ().setBackgroundColor (@<新值>))
+    }
+
+}

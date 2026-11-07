@@ -1,0 +1,25 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.安卓.OCCT几何 <注释 = "OpenCASCADE 7.8.0 全库封装锚点 (自动生成, 请勿手改). 本类挂载 Java 门面源文件清单, 并提供通用方法.">
+
+类 OCCT核心 <公开 注释 = "OCCT 全库门面公共入口. 本模块 354 个 OCCT 类均为静态句柄式封装, 其 Java 支撑源文件由本类统一挂载." 注释 = "OcctGen.java 为通用入口(释放/错误/元信息), Gen_TK*.java 为 18 个 TK 库的类与方法薄壳, 其嵌套类名保持 OCCT 英文原名; 本模块火山类名已汉化 (中文显示名), 与 Java 内名解耦, 方法注释内均含原类/原方法名可对照." 注释 = "类/方法注释为自动生成: 中文显示名 + 原类/原方法名 + 官方 doxygen 简介中文译文 (自动翻译, 未经人工逐条校对). 方法注释含 桩(本地不可用) 前缀的, 表示该方法因参数类型未支持而不可调用." 注释 = "注意: 本门面句柄与 几何内核 旧门面的形状句柄是两套空间 (旧=裸指针, 新=槽表代次), 必须各用各的释放方法: 旧句柄->几何内核.释放形状, 新句柄->本类.释放句柄; 混用会崩溃." 注释 = "注意: 方法语义沿用 OCCT 原样, 个别反直觉. 例: 几何属性.体积属性_2 (Eps 重载) 的返回值是体积的误差估计而非体积本身, 体积需在调用后经输出参数 (几何属性集) 的 取质量 读取; 拿不准时以 OCCT 官方文档为准." @禁止创建对象 = 真
+        @java.外部源文件 = "java\\OcctGen.java, java\\Gen_TKBO.java, java\\Gen_TKBRep.java, java\\Gen_TKBool.java, java\\Gen_TKFeat.java, java\\Gen_TKFillet.java, java\\Gen_TKG2d.java, java\\Gen_TKG3d.java, java\\Gen_TKGeomAlgo.java, java\\Gen_TKGeomBase.java, java\\Gen_TKHLR.java, java\\Gen_TKMath.java, java\\Gen_TKMesh.java, java\\Gen_TKOffset.java, java\\Gen_TKPrim.java, java\\Gen_TKShHealing.java, java\\Gen_TKTopAlgo.java, java\\Gen_TKXMesh.java, java\\Gen_TKernel.java">
+{
+    方法 释放句柄 <公开 静态 注释 = "释放 任何 全库封装方法 返回的句柄 (0 忽略; 重复释放报错而不崩溃)." @嵌入式方法 = "">
+    参数 句柄 <类型 = 长整数>
+    {
+        @ com.volcano.occt.OcctGen.free (@<句柄>)
+    }
+
+    方法 取错误 <公开 静态 类型 = 文本型 注释 = "读取并清空最近一次错误; 空文本表示没有错误." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.OcctGen.lastError ()
+    }
+
+    方法 取内核信息 <公开 静态 类型 = 长整数 注释 = "1=方法槽数, 2=类数, 3=OCC_VERSION_HEX, 4=池槽总数(含已释放空槽)." @嵌入式方法 = "">
+    参数 项 <类型 = 整数>
+    参数 参数 <类型 = 长整数>
+    {
+        @ com.volcano.occt.OcctGen.meta (@<项>, @<参数>)
+    }
+}

@@ -1,0 +1,848 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.安卓.OCCT几何 <注释 = "OpenCASCADE 7.8.0 全库封装 (自动生成, 请勿手改). 名称已汉化为中文显示名, 注释内附英文原名. TK 库 libTKFeat: 12 个类 / 107 个方法.">
+
+类 特征构建器 <公开 注释 = "特征构建器: 原类 BRepFeat_Builder (libTKFeat, 头文件 BRepFeat/BRepFeat_Builder.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 提供实现特征拓扑运算的基础工具. 算法的主要目标是根据工具的保留部分执行运算结果. 输入数据: a) DS; b) 工具的保留部分; 若工具的保留部分映射未填充, 将执行给定类型的布尔运算; c) 所需运算. 步骤: a) 填充 myShapes, myRemoved 映射; b) 重建边与面; c) 构建对象的映像; d) 构建运算结果. 结果: 所需运算的结果形状." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: BRepFeat_Builder." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_Builder.构造 ()
+    }
+
+    方法 清除 <公开 静态 注释 = "清除. 原方法: Clear. 官方简介: 清除内部字段与参数." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_Builder.Clear (@<对象>)
+    }
+
+    方法 初始化 <公开 静态 注释 = "初始化. 原方法: Init. 官方简介: 初始化局部布尔运算对象." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 形状 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_Builder.Init (@<对象>, @<形状>)
+    }
+
+    方法 初始化_2 <公开 静态 注释 = "初始化_2. 原方法: Init. 官方简介: 初始化局部布尔运算的参数." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 形状 <类型 = 长整数>
+    参数 工具形状 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_Builder.Init_2 (@<对象>, @<形状>, @<工具形状>)
+    }
+
+    方法 设置操作 <公开 静态 注释 = "设置操作. 原方法: SetOperation. 官方简介: 设置局部布尔运算的操作. 若 theFuse = 0 则操作为 CUT, 否则为 FUSE." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 融合 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_Builder.SetOperation (@<对象>, @<融合>)
+    }
+
+    方法 设置操作_2 <公开 静态 注释 = "设置操作_2. 原方法: SetOperation. 官方简介: 设置局部布尔运算的操作. 若 theFlag = TRUE, 意味着不需要选择工具的部分, 即无第二部分. 在这种情况下, 若 theFuse = 0 则运算为 COMMON, 否则为 CUT21. 若 theFlag = FALSE, 则调用 SetOperation(theFuse) 函数." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 融合 <类型 = 整数>
+    参数 标志 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_Builder.SetOperation_2 (@<对象>, @<融合>, @<标志>)
+    }
+
+    方法 保留部分 <公开 静态 注释 = "保留部分. 原方法: KeepPart. 官方简介: 把形状 theS 及其所有子形状添加到 myShapes 映射中." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_Builder.KeepPart (@<对象>, @<S>)
+    }
+
+    方法 执行结果 <公开 静态 注释 = "执行结果. 原方法: PerformResult. 官方简介: 构建所需局部运算结果的主函数." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_Builder.PerformResult (@<对象>)
+    }
+
+    方法 重建面 <公开 静态 注释 = "重建面. 原方法: RebuildFaces. 官方简介: 按照工具保留的部分重建面." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_Builder.RebuildFaces (@<对象>)
+    }
+
+    方法 检查实体映像 <公开 静态 注释 = "检查实体映像. 原方法: CheckSolidImages. 官方简介: 收集包含于工具映像中的对象的映像." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_Builder.CheckSolidImages (@<对象>)
+    }
+
+    方法 填充已移除 <公开 静态 注释 = "填充已移除. 原方法: FillRemoved. 官方简介: 把工具被移除的部分收集到 myRemoved 映射中." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_Builder.FillRemoved (@<对象>)
+    }
+
+}
+
+类 特征成形 <公开 注释 = "特征成形: 原类 BRepFeat_Form (libTKFeat, 头文件 BRepFeat/BRepFeat_Form.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 提供构造形体特征的一般函数. 形体特征可以是凹陷或凸起, 包括以下类型: - 圆柱 - 拔模棱柱 - 棱柱 - 旋转特征 - 管道 在每种情况下, 你都可以在以下操作类型中选择: - 去除材料(布尔切割: Fuse 设置为 0) - 添加材料(布尔融合: Fuse 设置为 1) 形体特征创建的语义基于形状的构造: - 沿某个长度 - 到一个限制面为止 - 从一个限制面到某个高度 - 在某个平面之上和/或之下 定义特征构造的形状可以是支撑边, 也可以是面的相关区域. 对于支撑边, 该轮廓可以通过绑定附着到基体形状的某个面上. 当轮廓绑定到该面时, 轮廓将沿该面滑动的信息对相关类方法可用. 对于面的相关区域, 例如你可以把它切出并移动到不同高度, 从而定义凸起或凹陷的限制面. 这种局部操作的拓扑定义使计算比全局操作更简单更快速. 后者需要第二阶段去除多余材料才能得到相同结果." @禁止创建对象 = 真>
+{
+
+    方法 是否已删除 <公开 静态 类型 = 逻辑型 注释 = "是否已删除. 原方法: IsDeleted." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_Form.IsDeleted (@<对象>, @<S>)
+    }
+
+    方法 基形状有效 <公开 静态 注释 = "基形状有效. 原方法: BasisShapeValid. 官方简介: 若基础形状存在则初始化拓扑构造." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_Form.BasisShapeValid (@<对象>)
+    }
+
+    方法 已生成形状有效 <公开 静态 注释 = "已生成形状有效. 原方法: GeneratedShapeValid. 官方简介: 若生成形状 S 存在则初始化拓扑构造." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_Form.GeneratedShapeValid (@<对象>)
+    }
+
+    方法 形状起始有效 <公开 静态 注释 = "形状起始有效. 原方法: ShapeFromValid. 官方简介: 若形状存在, 则从指定整数起初始化拓扑构造." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_Form.ShapeFromValid (@<对象>)
+    }
+
+    方法 形状直到有效 <公开 静态 注释 = "形状直到有效. 原方法: ShapeUntilValid. 官方简介: 若形状存在, 则初始化直至指定整数为止的拓扑构造." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_Form.ShapeUntilValid (@<对象>)
+    }
+
+    方法 已粘合面有效 <公开 静态 注释 = "已粘合面有效. 原方法: GluedFacesValid. 官方简介: 若粘合面存在则初始化拓扑构造." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_Form.GluedFacesValid (@<对象>)
+    }
+
+    方法 草图面有效 <公开 静态 注释 = "草图面有效. 原方法: SketchFaceValid. 官方简介: 若草图面存在则初始化拓扑构造. 若草图面位于基体形状内部, 则可执行粘合等局部操作." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_Form.SketchFaceValid (@<对象>)
+    }
+
+    方法 性能选择有效 <公开 静态 注释 = "性能选择有效. 原方法: PerfSelectionValid. 官方简介: 若选定面存在则初始化拓扑构造." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_Form.PerfSelectionValid (@<对象>)
+    }
+
+    方法 当前状态错误 <公开 静态 类型 = 整数 注释 = "当前状态错误. 原方法: CurrentStatusError." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_Form.CurrentStatusError (@<对象>)
+    }
+
+}
+
+类 特征粘合器 <公开 注释 = "特征粘合器: 原类 BRepFeat_Gluer (libTKFeat, 头文件 BRepFeat/BRepFeat_Gluer.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: BRepFeat 功能最重要的方面之一是使用局部运算而非全局运算. 在全局运算中, 先构造最终特征所需类型的形状, 再移除材料使其适配初始基础对象. 而在局部运算中, 用特征创建所在形状的要素来指定特征构造的定义域. 这些语义以基础形状的成员形状表达, 材料将从它 - 或直到它 - 被添加或移除. 因此, 局部运算比全局运算更简单快速. 粘接(Glueing)使用基础形状中面的线框或边. 它们将成为特征的一部分. 先被切出, 然后投影到基础形状外或内的平面. 通过把工具的边与面并入重建初始形状, 可以构建凸起特征." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: BRepFeat_Gluer. 官方简介: 初始化空构造函数" @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_Gluer.构造 ()
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: BRepFeat_Gluer. 官方简介: 初始化待粘合的形状, 即新形状 Snew 与基体形状 Sbase." @嵌入式方法 = "">
+    参数 新形状 <类型 = 长整数>
+    参数 基形状 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_Gluer.构造_2 (@<新形状>, @<基形状>)
+    }
+
+    方法 初始化 <公开 静态 注释 = "初始化. 原方法: Init. 官方简介: 为局部粘合操作初始化新形状 Snew 与基础形状 Sbase." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 新形状 <类型 = 长整数>
+    参数 基形状 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_Gluer.Init (@<对象>, @<新形状>, @<基形状>)
+    }
+
+    方法 绑定 <公开 静态 注释 = "绑定. 原方法: Bind. 官方简介: 定义新形状 Snew 上的 Fnew 与基础形状 Sbase 上的 Fbase 之间的接触. 告知其他方法: 新形状 Snew 中的 Fnew 与基础形状 Sbase 中的面 Fbase 相连. 粘合形状的接触面不得有超出基础形状接触面的部分. 这表明可以进行粘合." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 新面 <类型 = 长整数>
+    参数 基面 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_Gluer.Bind (@<对象>, @<新面>, @<基面>)
+    }
+
+    方法 绑定_2 <公开 静态 注释 = "绑定_2. 原方法: Bind. 官方简介: 告知其他方法: 新形状中的边 Enew 与基体形状中的边 Ebase 相同, 因此附着在基体形状上. 这表明可以进行粘合." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 新边 <类型 = 长整数>
+    参数 基边 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_Gluer.Bind_2 (@<对象>, @<新边>, @<基边>)
+    }
+
+    方法 操作类型 <公开 静态 类型 = 整数 注释 = "操作类型. 原方法: OpeType. 官方简介: 确定要使用的运算类型: 粘合还是滑动." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_Gluer.OpeType (@<对象>)
+    }
+
+    方法 基形状 <公开 静态 类型 = 长整数 注释 = "基形状. 原方法: BasisShape. 官方简介: 返回复合形状的基础形状." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_Gluer.BasisShape (@<对象>)
+    }
+
+    方法 已粘合形状 <公开 静态 类型 = 长整数 注释 = "已粘合形状. 原方法: GluedShape. 官方简介: 返回结果复合形状." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_Gluer.GluedShape (@<对象>)
+    }
+
+    方法 构建 <公开 静态 注释 = "构建. 原方法: Build. 官方简介: 该方法由 Shape() 调用. 它不做任何事, 但可以重定义." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_Gluer.Build (@<对象>)
+    }
+
+    方法 是否已删除 <公开 静态 类型 = 逻辑型 注释 = "是否已删除. 原方法: IsDeleted. 官方简介: 返回形状创建后的面状态." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 F <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_Gluer.IsDeleted (@<对象>, @<F>)
+    }
+
+}
+
+类 圆柱孔特征 <公开 注释 = "圆柱孔特征: 原类 BRepFeat_MakeCylindricalHole (libTKFeat, 头文件 BRepFeat/BRepFeat_MakeCylindricalHole.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 提供在形状上打圆柱孔的工具." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: BRepFeat_MakeCylindricalHole. 官方简介: 空构造函数." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_MakeCylindricalHole.构造 ()
+    }
+
+    方法 初始化 <公开 静态 注释 = "初始化. 原方法: Init. 官方简介: 设置孔的轴." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 轴 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_MakeCylindricalHole.Init (@<对象>, @<轴>)
+    }
+
+    方法 初始化_2 <公开 静态 注释 = "初始化_2. 原方法: Init. 官方简介: 设置将在其上执行孔的形状与轴." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    参数 轴 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_MakeCylindricalHole.Init_2 (@<对象>, @<S>, @<轴>)
+    }
+
+    方法 执行 <公开 静态 注释 = "执行. 原方法: Perform. 官方简介: 执行所有半径为 <Radius> 的孔. 该命令的效果与用给定轴和 <Radius> 定义的无限圆柱进行切除操作相同." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 半径 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_MakeCylindricalHole.Perform (@<对象>, @<半径>)
+    }
+
+    方法 执行_2 <公开 静态 注释 = "执行_2. 原方法: Perform. 官方简介: 执行给定轴上位于 PFrom 与 PTo 之间的所有半径 <Radius> 的孔. 若 <WithControl> 被设为 Standard_False, 则操作完成后不对结果形状进行任何控制." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 半径 <类型 = 小数>
+    参数 起点 <类型 = 小数>
+    参数 终点 <类型 = 小数>
+    参数 带控制 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_MakeCylindricalHole.Perform_2 (@<对象>, @<半径>, @<起点>, @<终点>, @<带控制>)
+    }
+
+    方法 执行贯穿下一个 <公开 静态 注释 = "执行贯穿下一个. 原方法: PerformThruNext. 官方简介: 沿定义轴的方向执行半径为 <Radius> 的第一个孔. 第一个孔指从轴的原点起首先遇到的孔. 若 <WithControl> 被设为 Standard_False, 则操作完成后不对结果形状进行任何控制." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 半径 <类型 = 小数>
+    参数 带控制 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_MakeCylindricalHole.PerformThruNext (@<对象>, @<半径>, @<带控制>)
+    }
+
+    方法 执行直到末端 <公开 静态 注释 = "执行直到末端. 原方法: PerformUntilEnd. 官方简介: 执行位于给定轴原点之后的所有半径 <Radius> 的孔. 若 <WithControl> 被设为 Standard_False, 则操作完成后不对结果形状进行任何控制." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 半径 <类型 = 小数>
+    参数 带控制 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_MakeCylindricalHole.PerformUntilEnd (@<对象>, @<半径>, @<带控制>)
+    }
+
+    方法 执行盲 <公开 静态 注释 = "执行盲. 原方法: PerformBlind. 官方简介: 执行半径为 <Radius>, 长度为 <Length> 的盲孔. 长度从给定轴的原点起测量. 若 <WithControl> 被设为 Standard_False, 则操作完成后不进行任何控制." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 半径 <类型 = 小数>
+    参数 长度 <类型 = 小数>
+    参数 带控制 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_MakeCylindricalHole.PerformBlind (@<对象>, @<半径>, @<长度>, @<带控制>)
+    }
+
+    方法 状态 <公开 静态 类型 = 整数 注释 = "状态. 原方法: Status. 官方简介: 返回执行孔之后的状态." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_MakeCylindricalHole.Status (@<对象>)
+    }
+
+    方法 构建 <公开 静态 注释 = "构建. 原方法: Build. 官方简介: 构建结果形状(从 MakeShape 重定义). 使给定工具部分(若有)失效, 并执行局部运算的结果." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_MakeCylindricalHole.Build (@<对象>)
+    }
+
+}
+
+类 拔模棱柱特征 <公开 注释 = "拔模棱柱特征: 原类 BRepFeat_MakeDPrism (libTKFeat, 头文件 BRepFeat/BRepFeat_MakeDPrism.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 描述从基础形状曲面构建拔模棱柱拓扑的功能. 这些特征可以是凹陷或凸起. 拔模棱柱特征创建的语义基于形状的构造: - 沿某一长度 - 直到限界面 - 从限界面到某一高度. 定义拔模棱柱特征构造的形状可以是支撑边或面的相关区域. 对于支撑边, 该轮廓可通过绑定附着到基础形状的一个面上. 轮廓绑定到该面后, 轮廓将在面上滑动的信息对相关类方法可用. 对于面的相关区域, 例如可以把它切出并移到不同高度, 从而定义凸起或凹陷的限界面." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: BRepFeat_MakeDPrism. 官方简介: 在形状 Sbase 中选择一个面 Pbase 作为拔模棱柱的基础. 拔模将由角度 Angle 定义, 且 Fuse 提供以下选择: - 用设置 0 的布尔切割去除材料 - 用设置 1 的布尔融合添加材料. 草图面 Skface 用于确定运算类型. 若它位于基础形状内部, 则可执行诸如粘合等局部操作. 初始化拔模棱柱类" @嵌入式方法 = "">
+    参数 基形状 <类型 = 长整数>
+    参数 基轮廓 <类型 = 长整数>
+    参数 草图面 <类型 = 长整数>
+    参数 角度 <类型 = 小数>
+    参数 融合 <类型 = 整数>
+    参数 修改 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_MakeDPrism.构造 (@<基形状>, @<基轮廓>, @<草图面>, @<角度>, @<融合>, @<修改>)
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: BRepFeat_MakeDPrism." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_MakeDPrism.构造_2 ()
+    }
+
+    方法 初始化 <公开 静态 注释 = "初始化. 原方法: Init. 官方简介: 初始化该算法以沿曲面构建拔模棱柱. 在基础形状 Sbase 中选择一个面 Pbase 作为拔模棱柱的基础. 拔模将由角度 Angle 定义, 且 Fuse 提供以下选择: - 用设置 0 的布尔切割去除材料 - 用设置 1 的布尔融合添加材料. 草图面 Skface 用于确定运算类型. 若它位于基础形状内部, 则可执行诸如粘合等局部操作." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 基形状 <类型 = 长整数>
+    参数 基轮廓 <类型 = 长整数>
+    参数 草图面 <类型 = 长整数>
+    参数 角度 <类型 = 小数>
+    参数 融合 <类型 = 整数>
+    参数 修改 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_MakeDPrism.Init (@<对象>, @<基形状>, @<基轮廓>, @<草图面>, @<角度>, @<融合>, @<修改>)
+    }
+
+    方法 添加 <公开 静态 注释 = "添加. 原方法: Add. 官方简介: 指示边 <E> 将在面 <OnFace> 上滑动. 若该面不属于基体形状, 或该边不属于棱柱化形状, 则抛出 ConstructionError." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 E <类型 = 长整数>
+    参数 在面 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_MakeDPrism.Add (@<对象>, @<E>, @<在面>)
+    }
+
+    方法 执行 <公开 静态 注释 = "执行. 原方法: Perform." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 高度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_MakeDPrism.Perform (@<对象>, @<高度>)
+    }
+
+    方法 执行_2 <公开 静态 注释 = "执行_2. 原方法: Perform." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 直到 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_MakeDPrism.Perform_2 (@<对象>, @<直到>)
+    }
+
+    方法 执行_3 <公开 静态 注释 = "执行_3. 原方法: Perform. 官方简介: 赋予以下语义之一 - 到一个高度 Height - 到一个面 Until - 从一个面 From 到一个高度 Until. 根据所选语义选项在拓扑上重建该特征." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 起始 <类型 = 长整数>
+    参数 直到 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_MakeDPrism.Perform_3 (@<对象>, @<起始>, @<直到>)
+    }
+
+    方法 执行直到末端 <公开 静态 注释 = "执行直到末端. 原方法: PerformUntilEnd. 官方简介: 实现半无限棱柱, 受棱柱底面位置限制." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_MakeDPrism.PerformUntilEnd (@<对象>)
+    }
+
+    方法 从末端执行 <公开 静态 注释 = "从末端执行. 原方法: PerformFromEnd. 官方简介: 生成半无限棱柱, 由面 Funtil 限定." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 F直到 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_MakeDPrism.PerformFromEnd (@<对象>, @<F直到>)
+    }
+
+    方法 执行贯穿全部 <公开 静态 注释 = "执行贯穿全部. 原方法: PerformThruAll. 官方简介: 构建无限棱柱. 无限延伸的派生形状不会保留在结果中." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_MakeDPrism.PerformThruAll (@<对象>)
+    }
+
+    方法 执行直到高度 <公开 静态 注释 = "执行直到高度. 原方法: PerformUntilHeight. 官方简介: 设置限制形状 Until(来自 TopoDS_Shape)与高度 Height, 以停止棱柱特征的生成." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 直到 <类型 = 长整数>
+    参数 高度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_MakeDPrism.PerformUntilHeight (@<对象>, @<直到>, @<高度>)
+    }
+
+    方法 重心曲线 <公开 静态 类型 = 长整数 注释 = "重心曲线. 原方法: BarycCurve." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_MakeDPrism.BarycCurve (@<对象>)
+    }
+
+    方法 凸台边 <公开 静态 注释 = "凸台边. 原方法: BossEdges. 官方简介: 确定 TopEdges 与 LatEdges. sig = 1 -> TopEdges = DPrism 的 FirstShape sig = 2 -> TopEdges = DPrism 的 LastShape" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 签名 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_MakeDPrism.BossEdges (@<对象>, @<签名>)
+    }
+
+}
+
+类 线性成形特征 <公开 注释 = "线性成形特征: 原类 BRepFeat_MakeLinearForm (libTKFeat, 头文件 BRepFeat/BRepFeat_MakeLinearForm.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 沿可展平面曲面构建筋或槽. 机械特征的语义围绕给轮廓赋厚度展开. 该厚度可以是对称的 - 轮廓单侧 - 或非对称的 - 两侧. 与形状特征的语义一样, 厚度通过在特定语境中构造形状来定义. 但就机械特征而言, 展开语境有所不同. 这里包括拉伸: - 到基础形状的限界面 - 到限制平面或从限制平面起 - 到某一高度." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: BRepFeat_MakeLinearForm. 官方简介: 初始化线性形式类" @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_MakeLinearForm.构造 ()
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: BRepFeat_MakeLinearForm. 官方简介: 轮廓 W, 形状 Sbase 与平面 P 被初始化, 作为筋或槽构造中的基本元素. Direction 与 Direction1 给出用于定义厚度构造方向(或多个方向)的向量. Fuse 提供以下选择: - 在槽的情形用设置 0 的布尔切割去除材料 - 在筋的情形用设置 1 的布尔融合添加材料." @嵌入式方法 = "">
+    参数 基形状 <类型 = 长整数>
+    参数 W <类型 = 长整数>
+    参数 P <类型 = 长整数>
+    参数 方向 <类型 = 长整数>
+    参数 方向1 <类型 = 长整数>
+    参数 融合 <类型 = 整数>
+    参数 修改 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_MakeLinearForm.构造_2 (@<基形状>, @<W>, @<P>, @<方向>, @<方向1>, @<融合>, @<修改>)
+    }
+
+    方法 初始化 <公开 静态 注释 = "初始化. 原方法: Init. 官方简介: 初始化该构造算法. 轮廓 W, 形状 Sbase 与平面 P 被初始化, 作为筋或槽构造中的基本元素. 用于定义厚度构造方向(或多个方向)的向量由 Direction 与 Direction1 给出. Fuse 提供以下选择: - 在槽的情形用设置 0 的布尔切割去除材料 - 在筋的情形用设置 1 的布尔融合添加材料." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 基形状 <类型 = 长整数>
+    参数 W <类型 = 长整数>
+    参数 P <类型 = 长整数>
+    参数 方向 <类型 = 长整数>
+    参数 方向1 <类型 = 长整数>
+    参数 融合 <类型 = 整数>
+    参数 修改 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_MakeLinearForm.Init (@<对象>, @<基形状>, @<W>, @<P>, @<方向>, @<方向1>, @<融合>, @<修改>)
+    }
+
+    方法 添加 <公开 静态 注释 = "添加. 原方法: Add. 官方简介: 指示边 <E> 将在面 <OnFace> 上滑动. 若该面不属于基体形状, 或该边不属于棱柱化形状, 则抛出 ConstructionError." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 E <类型 = 长整数>
+    参数 在面 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_MakeLinearForm.Add (@<对象>, @<E>, @<在面>)
+    }
+
+    方法 执行 <公开 静态 注释 = "执行. 原方法: Perform. 官方简介: 执行从线框沿基础形状 Sbase 到平面的棱柱操作. 重新按拓扑构造该特征." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_MakeLinearForm.Perform (@<对象>)
+    }
+
+    方法 设置起止模式 <公开 静态 注释 = "桩(本地不可用): 生成期剔除(编译失败). 设置起止模式. 原方法: TransformShapeFU. 官方简介: 使用以下三种语义之一限制线性形式特征的构造: - 从一个限制平面 - 到一个限制平面 - 从一个限制平面到另一个限制平面. 该设置由标志 flag 提供, 它可以被设为 from 和/或 until. 通过同时显示 from 与 until 来选择上述第三种语义可能." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 标志 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_MakeLinearForm.TransformShapeFU (@<对象>, @<标志>)
+    }
+
+}
+
+类 管道特征 <公开 注释 = "管道特征: 原类 BRepFeat_MakePipe (libTKFeat, 头文件 BRepFeat/BRepFeat_MakePipe.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 构建带管道特征的复合形状. 这些特征可以是凹陷或凸起. 管道特征创建的语义基于形状的构造: - 沿某一长度 - 直到限界面 - 从限界面到某一高度. 定义管道特征构造的形状可以是支撑边或面的相关区域. 对于支撑边, 该轮廓可通过绑定附着到基础形状的一个面上. 轮廓绑定到该面后, 轮廓将在面上滑动的信息对相关类方法可用. 对于面的相关区域, 例如可以把它切出并移到不同高度, 从而定义凸起或凹陷的限界面." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: BRepFeat_MakePipe. 官方简介: 初始化管道类." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_MakePipe.构造 ()
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: BRepFeat_MakePipe. 官方简介: 在形状 Sbase 中选择一个面 Pbase 作为管道的基础. 它将由线框 Spine 定义. Fuse 提供以下选择: - 用设置 0 的布尔切割去除材料 - 用设置 1 的布尔融合添加材料. 草图面 Skface 用于确定运算类型. 若它位于基础形状内部, 则可执行诸如粘合等局部操作." @嵌入式方法 = "">
+    参数 基形状 <类型 = 长整数>
+    参数 基轮廓 <类型 = 长整数>
+    参数 草图面 <类型 = 长整数>
+    参数 脊线 <类型 = 长整数>
+    参数 融合 <类型 = 整数>
+    参数 修改 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_MakePipe.构造_2 (@<基形状>, @<基轮廓>, @<草图面>, @<脊线>, @<融合>, @<修改>)
+    }
+
+    方法 初始化 <公开 静态 注释 = "初始化. 原方法: Init. 官方简介: 初始化该算法以向形状添加管道. 在形状 Sbase 中选择一个面 Pbase 作为管道的基础. 它将由线框 Spine 定义. Fuse 提供以下选择: - 用设置 0 的布尔切割去除材料 - 用设置 1 的布尔融合添加材料. 草图面 Skface 用于确定运算类型. 若它位于基础形状内部, 则可执行诸如粘合等局部操作." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 基形状 <类型 = 长整数>
+    参数 基轮廓 <类型 = 长整数>
+    参数 草图面 <类型 = 长整数>
+    参数 脊线 <类型 = 长整数>
+    参数 融合 <类型 = 整数>
+    参数 修改 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_MakePipe.Init (@<对象>, @<基形状>, @<基轮廓>, @<草图面>, @<脊线>, @<融合>, @<修改>)
+    }
+
+    方法 添加 <公开 静态 注释 = "添加. 原方法: Add. 官方简介: 指示边 <E> 将在面 <OnFace> 上滑动. 若该面不属于基体形状, 或该边不属于棱柱化形状, 则抛出 ConstructionError." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 E <类型 = 长整数>
+    参数 在面 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_MakePipe.Add (@<对象>, @<E>, @<在面>)
+    }
+
+    方法 执行 <公开 静态 注释 = "执行. 原方法: Perform." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_MakePipe.Perform (@<对象>)
+    }
+
+    方法 执行_2 <公开 静态 注释 = "执行_2. 原方法: Perform." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 直到 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_MakePipe.Perform_2 (@<对象>, @<直到>)
+    }
+
+    方法 执行_3 <公开 静态 注释 = "执行_3. 原方法: Perform. 官方简介: 赋予以下语义之一 - 到一个面 Until - 从一个面 From 到一个高度 Until. 根据所选语义选项在拓扑上重建该特征." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 起始 <类型 = 长整数>
+    参数 直到 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_MakePipe.Perform_3 (@<对象>, @<起始>, @<直到>)
+    }
+
+    方法 重心曲线 <公开 静态 类型 = 长整数 注释 = "重心曲线. 原方法: BarycCurve." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_MakePipe.BarycCurve (@<对象>)
+    }
+
+}
+
+类 棱柱特征 <公开 注释 = "棱柱特征: 原类 BRepFeat_MakePrism (libTKFeat, 头文件 BRepFeat/BRepFeat_MakePrism.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 描述构建棱柱特征的功能. 这些特征可以是凹陷或凸起. 棱柱特征创建的语义基于形状的构造: - 沿某一长度 - 直到限界面 - 从限界面到某一高度. 定义棱柱特征构造的形状可以是支撑边或面的相关区域. 对于支撑边, 该轮廓可通过绑定附着到基础形状的一个面上. 轮廓绑定到该面后, 轮廓将在面上滑动的信息对相关类方法可用. 对于面的相关区域, 例如可以把它切出并移到不同高度, 从而定义凸起或凹陷的限界面." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: BRepFeat_MakePrism. 官方简介: 通过把线框沿形状的面投影来构建棱柱. 初始化棱柱类." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_MakePrism.构造 ()
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: BRepFeat_MakePrism. 官方简介: 通过把线框沿形状的面投影来构建棱柱. 在形状 Sbase 中选择一个面 Pbase 作为棱柱的基础. 棱柱的朝向将由向量 Direction 定义. Fuse 提供以下选择: - 用设置 0 的布尔切割去除材料 - 用设置 1 的布尔融合添加材料. 草图面 Skface 用于确定运算类型. 若它位于基础形状内部, 则可执行诸如粘合等局部操作. 异常: 若该面不属于基础形状或棱柱形状则抛出 Standard_ConstructionError." @嵌入式方法 = "">
+    参数 基形状 <类型 = 长整数>
+    参数 基轮廓 <类型 = 长整数>
+    参数 草图面 <类型 = 长整数>
+    参数 方向 <类型 = 长整数>
+    参数 融合 <类型 = 整数>
+    参数 修改 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_MakePrism.构造_2 (@<基形状>, @<基轮廓>, @<草图面>, @<方向>, @<融合>, @<修改>)
+    }
+
+    方法 初始化 <公开 静态 注释 = "初始化. 原方法: Init. 官方简介: 初始化该算法以沿曲面构建棱柱. 在形状 Sbase 中选择一个面 Pbase 作为棱柱的基础. 棱柱的朝向将由向量 Direction 定义. Fuse 提供以下选择: - 用设置 0 的布尔切割去除材料 - 用设置 1 的布尔融合添加材料. 草图面 Skface 用于确定运算类型. 若它位于基础形状内部, 则可执行诸如粘合等局部操作." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 基形状 <类型 = 长整数>
+    参数 基轮廓 <类型 = 长整数>
+    参数 草图面 <类型 = 长整数>
+    参数 方向 <类型 = 长整数>
+    参数 融合 <类型 = 整数>
+    参数 修改 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_MakePrism.Init (@<对象>, @<基形状>, @<基轮廓>, @<草图面>, @<方向>, @<融合>, @<修改>)
+    }
+
+    方法 添加 <公开 静态 注释 = "添加. 原方法: Add. 官方简介: 指示边 <E> 将在面 <OnFace> 上滑动. 若该面不属于基体形状, 或该边不属于棱柱化形状, 则抛出 ConstructionError." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 E <类型 = 长整数>
+    参数 在面 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_MakePrism.Add (@<对象>, @<E>, @<在面>)
+    }
+
+    方法 执行 <公开 静态 注释 = "执行. 原方法: Perform." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 长度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_MakePrism.Perform (@<对象>, @<长度>)
+    }
+
+    方法 执行_2 <公开 静态 注释 = "执行_2. 原方法: Perform." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 直到 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_MakePrism.Perform_2 (@<对象>, @<直到>)
+    }
+
+    方法 执行_3 <公开 静态 注释 = "执行_3. 原方法: Perform. 官方简介: 赋予以下语义之一 - 到一个高度 Length - 到一个面 Until - 从一个面 From 到一个高度 Until. 根据所选语义选项在拓扑上重建该特征." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 起始 <类型 = 长整数>
+    参数 直到 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_MakePrism.Perform_3 (@<对象>, @<起始>, @<直到>)
+    }
+
+    方法 执行直到末端 <公开 静态 注释 = "执行直到末端. 原方法: PerformUntilEnd. 官方简介: 实现半无限棱柱, 受棱柱底面位置限制. 所有其他面无限延伸." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_MakePrism.PerformUntilEnd (@<对象>)
+    }
+
+    方法 从末端执行 <公开 静态 注释 = "从末端执行. 原方法: PerformFromEnd. 官方简介: 生成半无限棱柱, 由面 Funtil 限定." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 F直到 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_MakePrism.PerformFromEnd (@<对象>, @<F直到>)
+    }
+
+    方法 执行贯穿全部 <公开 静态 注释 = "执行贯穿全部. 原方法: PerformThruAll. 官方简介: 构建无限棱柱. 无限延伸的派生形状不会保留在结果中." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_MakePrism.PerformThruAll (@<对象>)
+    }
+
+    方法 执行直到高度 <公开 静态 注释 = "执行直到高度. 原方法: PerformUntilHeight. 官方简介: 设置限制形状 Until(来自 TopoDS_Shape)与高度 Length, 以停止棱柱特征的生成." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 直到 <类型 = 长整数>
+    参数 长度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_MakePrism.PerformUntilHeight (@<对象>, @<直到>, @<长度>)
+    }
+
+    方法 重心曲线 <公开 静态 类型 = 长整数 注释 = "重心曲线. 原方法: BarycCurve. 官方简介: 沿基本体的质心生成曲线." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_MakePrism.BarycCurve (@<对象>)
+    }
+
+}
+
+类 旋转特征 <公开 注释 = "旋转特征: 原类 BRepFeat_MakeRevol (libTKFeat, 头文件 BRepFeat/BRepFeat_MakeRevol.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 描述从基体形状构建旋转壳的功能." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: BRepFeat_MakeRevol. 官方简介: 初始化旋转壳类." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_MakeRevol.构造 ()
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: BRepFeat_MakeRevol. 官方简介: 在形状 Sbase 中选择一个面 Pbase 作为回转壳的基础. 回转将由轴 Axis 定义, 且 Fuse 提供以下选择: - 用设置 0 的布尔切割去除材料 - 用设置 1 的布尔融合添加材料. 草图面 Skface 用于确定运算类型. 若它位于基础形状内部, 则可执行诸如粘合等局部操作." @嵌入式方法 = "">
+    参数 基形状 <类型 = 长整数>
+    参数 基轮廓 <类型 = 长整数>
+    参数 草图面 <类型 = 长整数>
+    参数 轴 <类型 = 长整数>
+    参数 融合 <类型 = 整数>
+    参数 修改 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_MakeRevol.构造_2 (@<基形状>, @<基轮廓>, @<草图面>, @<轴>, @<融合>, @<修改>)
+    }
+
+    方法 初始化 <公开 静态 注释 = "初始化. 原方法: Init." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 基形状 <类型 = 长整数>
+    参数 基轮廓 <类型 = 长整数>
+    参数 草图面 <类型 = 长整数>
+    参数 轴 <类型 = 长整数>
+    参数 融合 <类型 = 整数>
+    参数 修改 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_MakeRevol.Init (@<对象>, @<基形状>, @<基轮廓>, @<草图面>, @<轴>, @<融合>, @<修改>)
+    }
+
+    方法 添加 <公开 静态 注释 = "添加. 原方法: Add. 官方简介: 指示边 <E> 将在面 <OnFace> 上滑动. 若该面不属于基体形状, 或该边不属于棱柱化形状, 则抛出 ConstructionError." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 E <类型 = 长整数>
+    参数 在面 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_MakeRevol.Add (@<对象>, @<E>, @<在面>)
+    }
+
+    方法 执行 <公开 静态 注释 = "执行. 原方法: Perform." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 角度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_MakeRevol.Perform (@<对象>, @<角度>)
+    }
+
+    方法 执行_2 <公开 静态 注释 = "执行_2. 原方法: Perform." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 直到 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_MakeRevol.Perform_2 (@<对象>, @<直到>)
+    }
+
+    方法 执行_3 <公开 静态 注释 = "执行_3. 原方法: Perform. 官方简介: 从拓扑上重建特征." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 起始 <类型 = 长整数>
+    参数 直到 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_MakeRevol.Perform_3 (@<对象>, @<起始>, @<直到>)
+    }
+
+    方法 执行贯穿全部 <公开 静态 注释 = "执行贯穿全部. 原方法: PerformThruAll. 官方简介: 构建无限壳. 无限后代不会保留在结果中." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_MakeRevol.PerformThruAll (@<对象>)
+    }
+
+    方法 执行直到角度 <公开 静态 注释 = "执行直到角度. 原方法: PerformUntilAngle. 官方简介: 设置限制形状 Until(来自 TopoDS_Shape)与角度 Angle, 以停止回转壳特征的生成." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 直到 <类型 = 长整数>
+    参数 角度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_MakeRevol.PerformUntilAngle (@<对象>, @<直到>, @<角度>)
+    }
+
+    方法 重心曲线 <公开 静态 类型 = 长整数 注释 = "重心曲线. 原方法: BarycCurve." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_MakeRevol.BarycCurve (@<对象>)
+    }
+
+}
+
+类 旋转成形特征 <公开 注释 = "旋转成形特征: 原类 BRepFeat_MakeRevolutionForm (libTKFeat, 头文件 BRepFeat/BRepFeat_MakeRevolutionForm.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: MakeRevolutionForm 在特征沿基础形状中的回转面滑动时生成回转曲面. 机械特征的语义围绕给轮廓赋厚度展开. 该厚度可以是单侧的 - 轮廓单侧 - 或双侧的 - 两侧. 与形状特征的语义一样, 厚度通过在特定语境中构造形状来定义. 但就机械特征而言, 展开语境有所不同. 这里包括拉伸: - 到基础形状的限界面 - 到限制平面或从限制平面起 - 到某一高度." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: BRepFeat_MakeRevolutionForm. 官方简介: 初始化线性形式类." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_MakeRevolutionForm.构造 ()
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: BRepFeat_MakeRevolutionForm. 官方简介: 轮廓 W, 形状 Sbase 与平面 P 被初始化, 作为筋或槽构造中的基本元素. 基础形状中回转曲面的轴 Axis 定义该特征的回转轴. Height1 与 Height2 可以用作该特征构造的限制. Fuse 提供以下选择: - 在槽的情形用设置 0 的布尔切割去除材料 - 在筋的情形用设置 1 的布尔融合添加材料." @嵌入式方法 = "">
+    参数 基形状 <类型 = 长整数>
+    参数 W <类型 = 长整数>
+    参数 平面 <类型 = 长整数>
+    参数 轴 <类型 = 长整数>
+    参数 高度1 <类型 = 小数>
+    参数 高度2 <类型 = 小数>
+    参数 融合 <类型 = 整数>
+    参数 输出滑动 <类型 = "逻辑型 []">
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_MakeRevolutionForm.构造_2 (@<基形状>, @<W>, @<平面>, @<轴>, @<高度1>, @<高度2>, @<融合>, @<输出滑动>)
+    }
+
+    方法 初始化 <公开 静态 注释 = "初始化. 原方法: Init. 官方简介: 初始化该构造算法. 轮廓 W, 形状 Sbase 与平面 P 被初始化, 作为筋或槽构造中的基本元素. 基础形状中回转曲面的轴 Axis 定义该特征的回转轴. Height1 与 Height2 可以用作该特征构造的限制. Fuse 提供以下选择: - 在槽的情形用设置 0 的布尔切割去除材料 - 在筋的情形用设置 1 的布尔融合添加材料." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 基形状 <类型 = 长整数>
+    参数 W <类型 = 长整数>
+    参数 平面 <类型 = 长整数>
+    参数 轴 <类型 = 长整数>
+    参数 高度1 <类型 = 小数>
+    参数 高度2 <类型 = 小数>
+    参数 融合 <类型 = 整数>
+    参数 输出滑动 <类型 = "逻辑型 []">
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_MakeRevolutionForm.Init (@<对象>, @<基形状>, @<W>, @<平面>, @<轴>, @<高度1>, @<高度2>, @<融合>, @<输出滑动>)
+    }
+
+    方法 添加 <公开 静态 注释 = "添加. 原方法: Add. 官方简介: 指示边 <E> 将在面 <OnFace> 上滑动. 若该面不属于基体形状, 或该边不属于棱柱化形状, 则抛出 ConstructionError." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 E <类型 = 长整数>
+    参数 在面 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_MakeRevolutionForm.Add (@<对象>, @<E>, @<在面>)
+    }
+
+    方法 执行 <公开 静态 注释 = "执行. 原方法: Perform. 官方简介: 执行从线框沿基础形状 S 到平面的棱柱操作. 重新按拓扑构造该特征." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_MakeRevolutionForm.Perform (@<对象>)
+    }
+
+}
+
+类 肋槽特征 <公开 注释 = "肋槽特征: 原类 BRepFeat_RibSlot (libTKFeat, 头文件 BRepFeat/BRepFeat_RibSlot.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 提供构建机械特征的功能. 机械特征包括沿平面(线性)曲面或回转曲面的筋 - 凸起与槽(或凹槽) - 凹陷. 机械特征的语义围绕给轮廓赋厚度展开. 该厚度可以是单侧的 - 轮廓单侧 - 或双侧的 - 两侧. 与形状特征的语义一样, 厚度通过在特定语境中构造形状来定义. 但就机械特征而言, 展开语境有所不同. 这里包括拉伸: - 到基础形状的限界面 - 到限制平面或从限制平面起 - 到某一高度." @禁止创建对象 = 真>
+{
+
+    方法 是否已删除 <公开 静态 类型 = 逻辑型 注释 = "是否已删除. 原方法: IsDeleted. 官方简介: 若类型为边或面的 TopoDS_Shape F 已被删除则返回 true." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 F <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_RibSlot.IsDeleted (@<对象>, @<F>)
+    }
+
+    方法 取点参数 <公开 静态 类型 = 小数 注释 = "取点参数. 原方法: IntPar." @嵌入式方法 = "">
+    参数 C <类型 = 长整数>
+    参数 P <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_RibSlot.IntPar (@<C>, @<P>)
+    }
+
+    方法 当前状态错误 <公开 静态 类型 = 整数 注释 = "当前状态错误. 原方法: CurrentStatusError." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_RibSlot.CurrentStatusError (@<对象>)
+    }
+
+}
+
+类 形状分割器 <公开 注释 = "形状分割器: 原类 BRepFeat_SplitShape (libTKFeat, 头文件 BRepFeat/BRepFeat_SplitShape.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: BRepFeat 功能最重要的特点之一是使用局部操作而非全局操作. 在全局操作中, 你会先在最终特征中构造所需类型的形体, 然后去除材料使其适合初始基体对象. 而在局部操作中, 你借助正在创建特征的形状的各方面来指定特征构造的域. 这些语义以基体形状的成员形状来表达, 从该成员形状处或到该成员形状为止添加或去除材料. 因此, 局部操作使计算比全局操作更简单更快速. 在 BRepFeat 中, 局部操作的语义定义从轮廓或基体形状的一部分(称为工具)构造的特征. 在 SplitShape 对象中, 基体形状中某个面的线框或边被切出, 并投影到基体形状外部或内部的平面上, 以用作特征的一部分. 通过结合工具的边与面重建初始形状, 可以构造凸起或凹陷特征." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: BRepFeat_SplitShape. 官方简介: 空构造函数" @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_SplitShape.构造 ()
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: BRepFeat_SplitShape. 官方简介: 用形状 <S> 创建过程." @嵌入式方法 = "">
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_SplitShape.构造_2 (@<S>)
+    }
+
+    方法 初始化 <公开 静态 注释 = "初始化. 原方法: Init. 官方简介: 在形状 <S> 上初始化过程." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_SplitShape.Init (@<对象>, @<S>)
+    }
+
+    方法 设置检查内部 <公开 静态 注释 = "设置检查内部. 原方法: SetCheckInterior. 官方简介: 设置内部相交检查的标志, 默认值为 True(进行检查)" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 检查内部 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_SplitShape.SetCheckInterior (@<对象>, @<检查内部>)
+    }
+
+    方法 添加 <公开 静态 注释 = "添加. 原方法: Add. 官方简介: 把线框 <W> 添加到面 <F> 上. 若 <F> 不属于原始形状则抛出 NoSuchObject." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 W <类型 = 长整数>
+    参数 F <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_SplitShape.Add (@<对象>, @<W>, @<F>)
+    }
+
+    方法 添加_2 <公开 静态 注释 = "添加_2. 原方法: Add. 官方简介: 把边 <E> 添加到面 <F> 上." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 E <类型 = 长整数>
+    参数 F <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_SplitShape.Add_2 (@<对象>, @<E>, @<F>)
+    }
+
+    方法 添加_3 <公开 静态 注释 = "添加_3. 原方法: Add. 官方简介: 把复合体 <Comp> 添加到面 <F> 上. 复合体 <Comp> 必须由位于面 <F> 上的边组成. 若边在几何上相连, 则它们在拓扑上也必须相连, 即它们必须共享公共顶点." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 复合 <类型 = 长整数>
+    参数 F <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_SplitShape.Add_3 (@<对象>, @<复合>, @<F>)
+    }
+
+    方法 添加_4 <公开 静态 注释 = "添加_4. 原方法: Add. 官方简介: 把边 <E> 添加到已有边 <EOn> 上." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 E <类型 = 长整数>
+    参数 E在 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_SplitShape.Add_4 (@<对象>, @<E>, @<E在>)
+    }
+
+    方法 构建 <公开 静态 注释 = "构建. 原方法: Build. 官方简介: 构建切割操作及所得到的面和边." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_SplitShape.Build (@<对象>)
+    }
+
+    方法 是否已删除 <公开 静态 类型 = 逻辑型 注释 = "是否已删除. 原方法: IsDeleted. 官方简介: 若形状已被删除则返回 true." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFeat.BRepFeat_SplitShape.IsDeleted (@<对象>, @<S>)
+    }
+
+}

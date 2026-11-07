@@ -1,0 +1,43 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.即时界面 <注释 = "Dear ImGui v1.91.9b-docking 的火山视窗中文封装，全中文类名/方法名/参数名/注释。" @视窗.头文件搜寻目录 = "imgui"
+        @视窗.外部头文件 = "imcn_helper.h, imcn_host.h"
+        @视窗.外部源文件 = "imgui\\imgui.cpp, imgui\\imgui_draw.cpp, imgui\\imgui_tables.cpp, imgui\\imgui_widgets.cpp, imgui\\imgui_demo.cpp, imgui\\misc\\cpp\\imgui_stdlib.cpp, imgui\\backends\\imgui_impl_win32.cpp, imgui\\backends\\imgui_impl_dx11.cpp">
+
+类 弹出标志 <公开 注释 = "弹出窗口标志" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 无 <公开 类型 = 整数 值 = @ImGuiPopupFlags_None>
+    常量 鼠标左键 <公开 类型 = 整数 值 = @ImGuiPopupFlags_MouseButtonLeft>
+    常量 鼠标右键 <公开 类型 = 整数 值 = @ImGuiPopupFlags_MouseButtonRight>
+    常量 鼠标中键 <公开 类型 = 整数 值 = @ImGuiPopupFlags_MouseButtonMiddle>
+    常量 禁止重复打开 <公开 类型 = 整数 值 = @ImGuiPopupFlags_NoReopen>
+    常量 已有弹出时不打开 <公开 类型 = 整数 值 = @ImGuiPopupFlags_NoOpenOverExistingPopup>
+    常量 不覆盖项目打开 <公开 类型 = 整数 值 = @ImGuiPopupFlags_NoOpenOverItems>
+    常量 任意弹出ID <公开 类型 = 整数 值 = @ImGuiPopupFlags_AnyPopupId>
+    常量 任意弹出层级 <公开 类型 = 整数 值 = @ImGuiPopupFlags_AnyPopupLevel>
+    常量 任意弹出窗口 <公开 类型 = 整数 值 = @ImGuiPopupFlags_AnyPopup>
+}
+类 悬停标志 <公开 注释 = "悬停判定标志" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 无 <公开 类型 = 整数 值 = @ImGuiHoveredFlags_None>
+    常量 包含子窗口 <公开 类型 = 整数 值 = @ImGuiHoveredFlags_ChildWindows>
+    常量 根窗口 <公开 类型 = 整数 值 = @ImGuiHoveredFlags_RootWindow>
+    常量 任意窗口 <公开 类型 = 整数 值 = @ImGuiHoveredFlags_AnyWindow>
+    常量 忽略弹出层级 <公开 类型 = 整数 值 = @ImGuiHoveredFlags_NoPopupHierarchy>
+    常量 包含停靠层级 <公开 类型 = 整数 值 = @ImGuiHoveredFlags_DockHierarchy>
+    常量 弹出窗口阻挡仍算 <公开 类型 = 整数 值 = @ImGuiHoveredFlags_AllowWhenBlockedByPopup>
+    常量 项目激活阻挡仍算 <公开 类型 = 整数 值 = @ImGuiHoveredFlags_AllowWhenBlockedByActiveItem>
+    常量 项目重叠仍算 <公开 类型 = 整数 值 = @ImGuiHoveredFlags_AllowWhenOverlappedByItem>
+    常量 窗口重叠仍算 <公开 类型 = 整数 值 = @ImGuiHoveredFlags_AllowWhenOverlappedByWindow>
+    常量 禁用状态仍算 <公开 类型 = 整数 值 = @ImGuiHoveredFlags_AllowWhenDisabled>
+    常量 不采用导航覆盖 <公开 类型 = 整数 值 = @ImGuiHoveredFlags_NoNavOverride>
+    常量 重叠仍算 <公开 类型 = 整数 值 = @ImGuiHoveredFlags_AllowWhenOverlapped>
+    常量 仅矩形判定 <公开 类型 = 整数 值 = @ImGuiHoveredFlags_RectOnly>
+    常量 根窗口与子窗口 <公开 类型 = 整数 值 = @ImGuiHoveredFlags_RootAndChildWindows>
+    常量 用于提示框判定 <公开 类型 = 整数 值 = @ImGuiHoveredFlags_ForTooltip>
+    常量 需鼠标静止 <公开 类型 = 整数 值 = @ImGuiHoveredFlags_Stationary>
+    常量 无延迟 <公开 类型 = 整数 值 = @ImGuiHoveredFlags_DelayNone>
+    常量 短延迟 <公开 类型 = 整数 值 = @ImGuiHoveredFlags_DelayShort>
+    常量 常规延迟 <公开 类型 = 整数 值 = @ImGuiHoveredFlags_DelayNormal>
+    常量 不共享延迟 <公开 类型 = 整数 值 = @ImGuiHoveredFlags_NoSharedDelay>
+}

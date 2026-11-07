@@ -1,0 +1,29 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.即时界面 <注释 = "Dear ImGui v1.91.9b-docking 的火山视窗中文封装，全中文类名/方法名/参数名/注释。" @视窗.头文件搜寻目录 = "imgui"
+        @视窗.外部头文件 = "imcn_helper.h, imcn_host.h"
+        @视窗.外部源文件 = "imgui\\imgui.cpp, imgui\\imgui_draw.cpp, imgui\\imgui_tables.cpp, imgui\\imgui_widgets.cpp, imgui\\imgui_demo.cpp, imgui\\misc\\cpp\\imgui_stdlib.cpp, imgui\\backends\\imgui_impl_win32.cpp, imgui\\backends\\imgui_impl_dx11.cpp">
+
+类 绘制标志 <公开 注释 = "绘制标志，用于绘制列表" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 无 <公开 类型 = 整数 值 = @ImDrawFlags_None>
+    常量 闭合路径 <公开 类型 = 整数 值 = @ImDrawFlags_Closed>
+    常量 左上圆角 <公开 类型 = 整数 值 = @ImDrawFlags_RoundCornersTopLeft>
+    常量 右上圆角 <公开 类型 = 整数 值 = @ImDrawFlags_RoundCornersTopRight>
+    常量 左下圆角 <公开 类型 = 整数 值 = @ImDrawFlags_RoundCornersBottomLeft>
+    常量 右下圆角 <公开 类型 = 整数 值 = @ImDrawFlags_RoundCornersBottomRight>
+    常量 无圆角 <公开 类型 = 整数 值 = @ImDrawFlags_RoundCornersNone>
+    常量 顶部圆角 <公开 类型 = 整数 值 = @ImDrawFlags_RoundCornersTop>
+    常量 底部圆角 <公开 类型 = 整数 值 = @ImDrawFlags_RoundCornersBottom>
+    常量 左侧圆角 <公开 类型 = 整数 值 = @ImDrawFlags_RoundCornersLeft>
+    常量 右侧圆角 <公开 类型 = 整数 值 = @ImDrawFlags_RoundCornersRight>
+    常量 全部圆角 <公开 类型 = 整数 值 = @ImDrawFlags_RoundCornersAll>
+}
+类 绘制列表标志 <公开 注释 = "绘制列表标志" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 无 <公开 类型 = 整数 值 = @ImDrawListFlags_None>
+    常量 抗锯齿线 <公开 类型 = 整数 值 = @ImDrawListFlags_AntiAliasedLines>
+    常量 抗锯齿线使用纹理 <公开 类型 = 整数 值 = @ImDrawListFlags_AntiAliasedLinesUseTex>
+    常量 抗锯齿填充 <公开 类型 = 整数 值 = @ImDrawListFlags_AntiAliasedFill>
+    常量 允许顶点偏移 <公开 类型 = 整数 值 = @ImDrawListFlags_AllowVtxOffset>
+}

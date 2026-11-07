@@ -1,0 +1,692 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.安卓.组件.MP图表
+
+类 MP高亮器接口 <公开 @别名 = "com.github.mikephil.charting.highlight.IHighlighter" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.highlight.IHighlighter.">
+{
+
+    方法 取高亮 <公开 静态 类型 = MP高亮信息类 @嵌入式方法 = "" 注释 = "java: public abstract com.github.mikephil.charting.highlight.Highlight getHighlight(float, float)">
+    参数 当前对象 <类型 = MP高亮器接口>
+    参数 横坐标 <类型 = 小数>
+    参数 纵坐标 <类型 = 小数>
+    {
+        @ @<当前对象>.getHighlight ((float) @<横坐标>, (float) @<纵坐标>)
+    }
+
+}
+
+类 MP高亮器基础类 <公开 基础类 = MP高亮器接口 @别名 = "com.github.mikephil.charting.highlight.ChartHighlighter" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.highlight.ChartHighlighter.">
+{
+
+    方法 新建高亮器基础 <公开 静态 类型 = MP高亮器基础类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.highlight.ChartHighlighter(T)">
+    参数 图表 <类型 = MP线柱散蜡气数据供给接口>
+    {
+        @ new com.github.mikephil.charting.highlight.ChartHighlighter (@<图表>)
+    }
+
+    方法 取最近高亮按像素 <公开 静态 类型 = MP高亮信息类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.highlight.Highlight getClosestHighlightByPixel(java.util.List<com.github.mikephil.charting.highlight.Highlight>, float, float, com.github.mikephil.charting.components.YAxis$AxisDependency, float)">
+    参数 当前对象 <类型 = MP高亮器基础类>
+    参数 最近数值集 <类型 = MP列表类>
+    参数 横坐标 <类型 = 小数>
+    参数 纵坐标 <类型 = 小数>
+    参数 轴 <类型 = MP纵轴依附>
+    参数 最小选取距离 <类型 = 小数>
+    {
+        @ @<当前对象>.getClosestHighlightByPixel (@<最近数值集>, (float) @<横坐标>, (float) @<纵坐标>, @<轴>, (float) @<最小选取距离>)
+    }
+
+}
+
+类 MP柱形高亮器类 <公开 基础类 = MP高亮器基础类 @别名 = "com.github.mikephil.charting.highlight.BarHighlighter" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.highlight.BarHighlighter.">
+{
+
+    方法 新建柱形高亮器 <公开 静态 类型 = MP柱形高亮器类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.highlight.BarHighlighter(com.github.mikephil.charting.interfaces.dataprovider.BarDataProvider)">
+    参数 图表 <类型 = MP柱形数据供给接口>
+    {
+        @ new com.github.mikephil.charting.highlight.BarHighlighter (@<图表>)
+    }
+
+    方法 取已堆叠高亮 <公开 静态 类型 = MP高亮信息类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.highlight.Highlight getStackedHighlight(com.github.mikephil.charting.highlight.Highlight, com.github.mikephil.charting.interfaces.datasets.IBarDataSet, float, float)">
+    参数 当前对象 <类型 = MP柱形高亮器类>
+    参数 高 <类型 = MP高亮信息类>
+    参数 设置 <类型 = MP柱形数据集接口>
+    参数 横坐标数值 <类型 = 小数>
+    参数 纵坐标数值 <类型 = 小数>
+    {
+        @ @<当前对象>.getStackedHighlight (@<高>, @<设置>, (float) @<横坐标数值>, (float) @<纵坐标数值>)
+    }
+
+}
+
+类 MP复合高亮器类 <公开 基础类 = MP高亮器基础类 @别名 = "com.github.mikephil.charting.highlight.CombinedHighlighter" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.highlight.CombinedHighlighter.">
+{
+
+    方法 新建复合高亮器 <公开 静态 类型 = MP复合高亮器类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.highlight.CombinedHighlighter(com.github.mikephil.charting.interfaces.dataprovider.CombinedDataProvider, com.github.mikephil.charting.interfaces.dataprovider.BarDataProvider)">
+    参数 图表 <类型 = MP复合数据供给接口>
+    参数 柱图表 <类型 = MP柱形数据供给接口>
+    {
+        @ new com.github.mikephil.charting.highlight.CombinedHighlighter (@<图表>, @<柱图表>)
+    }
+
+}
+
+类 MP高亮信息类 <公开 @别名 = "com.github.mikephil.charting.highlight.Highlight" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.highlight.Highlight.">
+{
+
+    方法 新建高亮信息 <公开 静态 类型 = MP高亮信息类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.highlight.Highlight(float, float, int, int)">
+    参数 横坐标 <类型 = 小数>
+    参数 纵坐标 <类型 = 小数>
+    参数 数据集索引 <类型 = 整数>
+    参数 数据索引 <类型 = 整数>
+    {
+        @ new com.github.mikephil.charting.highlight.Highlight ((float) @<横坐标>, (float) @<纵坐标>, @<数据集索引>, @<数据索引>)
+    }
+
+    方法 新建高亮信息_2 <公开 静态 类型 = MP高亮信息类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.highlight.Highlight(float, float, int)">
+    参数 横坐标 <类型 = 小数>
+    参数 纵坐标 <类型 = 小数>
+    参数 数据集索引 <类型 = 整数>
+    {
+        @ new com.github.mikephil.charting.highlight.Highlight ((float) @<横坐标>, (float) @<纵坐标>, @<数据集索引>)
+    }
+
+    方法 新建高亮信息_3 <公开 静态 类型 = MP高亮信息类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.highlight.Highlight(float, int, int)">
+    参数 横坐标 <类型 = 小数>
+    参数 数据集索引 <类型 = 整数>
+    参数 堆叠索引 <类型 = 整数>
+    {
+        @ new com.github.mikephil.charting.highlight.Highlight ((float) @<横坐标>, @<数据集索引>, @<堆叠索引>)
+    }
+
+    方法 新建高亮信息_4 <公开 静态 类型 = MP高亮信息类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.highlight.Highlight(float, float, float, float, int, com.github.mikephil.charting.components.YAxis$AxisDependency)">
+    参数 横坐标 <类型 = 小数>
+    参数 纵坐标 <类型 = 小数>
+    参数 横坐标像素 <类型 = 小数>
+    参数 纵坐标像素 <类型 = 小数>
+    参数 数据集索引 <类型 = 整数>
+    参数 轴 <类型 = MP纵轴依附>
+    {
+        @ new com.github.mikephil.charting.highlight.Highlight ((float) @<横坐标>, (float) @<纵坐标>, (float) @<横坐标像素>, (float) @<纵坐标像素>, @<数据集索引>, @<轴>)
+    }
+
+    方法 新建高亮信息_5 <公开 静态 类型 = MP高亮信息类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.highlight.Highlight(float, float, float, float, int, int, com.github.mikephil.charting.components.YAxis$AxisDependency)">
+    参数 横坐标 <类型 = 小数>
+    参数 纵坐标 <类型 = 小数>
+    参数 横坐标像素 <类型 = 小数>
+    参数 纵坐标像素 <类型 = 小数>
+    参数 数据集索引 <类型 = 整数>
+    参数 堆叠索引 <类型 = 整数>
+    参数 轴 <类型 = MP纵轴依附>
+    {
+        @ new com.github.mikephil.charting.highlight.Highlight ((float) @<横坐标>, (float) @<纵坐标>, (float) @<横坐标像素>, (float) @<纵坐标像素>, @<数据集索引>, @<堆叠索引>, @<轴>)
+    }
+
+    方法 取横坐标 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getX()">
+    参数 当前对象 <类型 = MP高亮信息类>
+    {
+        @ @<当前对象>.getX ()
+    }
+
+    方法 取纵坐标 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getY()">
+    参数 当前对象 <类型 = MP高亮信息类>
+    {
+        @ @<当前对象>.getY ()
+    }
+
+    方法 取横坐标像素 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getXPx()">
+    参数 当前对象 <类型 = MP高亮信息类>
+    {
+        @ @<当前对象>.getXPx ()
+    }
+
+    方法 取纵坐标像素 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getYPx()">
+    参数 当前对象 <类型 = MP高亮信息类>
+    {
+        @ @<当前对象>.getYPx ()
+    }
+
+    方法 取数据索引 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getDataIndex()">
+    参数 当前对象 <类型 = MP高亮信息类>
+    {
+        @ @<当前对象>.getDataIndex ()
+    }
+
+    方法 设置数据索引 <公开 静态 注释 = "java: public void setDataIndex(int)">
+    参数 当前对象 <类型 = MP高亮信息类>
+    参数 矩阵数据索引 <类型 = 整数>
+    {
+        @ @<当前对象>.setDataIndex (@<矩阵数据索引>);
+    }
+
+    方法 取数据集索引 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getDataSetIndex()">
+    参数 当前对象 <类型 = MP高亮信息类>
+    {
+        @ @<当前对象>.getDataSetIndex ()
+    }
+
+    方法 取堆叠索引 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getStackIndex()">
+    参数 当前对象 <类型 = MP高亮信息类>
+    {
+        @ @<当前对象>.getStackIndex ()
+    }
+
+    方法 是否已堆叠 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isStacked()">
+    参数 当前对象 <类型 = MP高亮信息类>
+    {
+        @ @<当前对象>.isStacked ()
+    }
+
+    方法 取轴 <公开 静态 类型 = MP纵轴依附 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.components.YAxis$AxisDependency getAxis()">
+    参数 当前对象 <类型 = MP高亮信息类>
+    {
+        @ @<当前对象>.getAxis ()
+    }
+
+    方法 设置绘制 <公开 静态 注释 = "java: public void setDraw(float, float)">
+    参数 当前对象 <类型 = MP高亮信息类>
+    参数 横坐标 <类型 = 小数>
+    参数 纵坐标 <类型 = 小数>
+    {
+        @ @<当前对象>.setDraw ((float) @<横坐标>, (float) @<纵坐标>);
+    }
+
+    方法 取绘制横坐标 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getDrawX()">
+    参数 当前对象 <类型 = MP高亮信息类>
+    {
+        @ @<当前对象>.getDrawX ()
+    }
+
+    方法 取绘制纵坐标 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getDrawY()">
+    参数 当前对象 <类型 = MP高亮信息类>
+    {
+        @ @<当前对象>.getDrawY ()
+    }
+
+    方法 相等至 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean equalTo(com.github.mikephil.charting.highlight.Highlight)">
+    参数 当前对象 <类型 = MP高亮信息类>
+    参数 高亮 <类型 = MP高亮信息类>
+    {
+        @ @<当前对象>.equalTo (@<高亮>)
+    }
+
+    方法 转为字符串 <公开 静态 类型 = 文本型 @嵌入式方法 = "" 注释 = "java: public java.lang.String toString()">
+    参数 当前对象 <类型 = MP高亮信息类>
+    {
+        @ @<当前对象>.toString ()
+    }
+
+}
+
+类 MP横向柱形高亮器类 <公开 基础类 = MP柱形高亮器类 @别名 = "com.github.mikephil.charting.highlight.HorizontalBarHighlighter" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.highlight.HorizontalBarHighlighter.">
+{
+
+    方法 新建横向柱形高亮器 <公开 静态 类型 = MP横向柱形高亮器类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.highlight.HorizontalBarHighlighter(com.github.mikephil.charting.interfaces.dataprovider.BarDataProvider)">
+    参数 图表 <类型 = MP柱形数据供给接口>
+    {
+        @ new com.github.mikephil.charting.highlight.HorizontalBarHighlighter (@<图表>)
+    }
+
+}
+
+类 MP饼径高亮器类 <公开 基础类 = MP高亮器接口 @别名 = "com.github.mikephil.charting.highlight.PieRadarHighlighter" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.highlight.PieRadarHighlighter.">
+{
+
+}
+
+类 MP饼状高亮器类 <公开 基础类 = MP饼径高亮器类 @别名 = "com.github.mikephil.charting.highlight.PieHighlighter" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.highlight.PieHighlighter.">
+{
+
+    方法 新建饼状高亮器 <公开 静态 类型 = MP饼状高亮器类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.highlight.PieHighlighter(com.github.mikephil.charting.charts.PieChart)">
+    参数 图表 <类型 = MP饼状图>
+    {
+        @ new com.github.mikephil.charting.highlight.PieHighlighter (@<图表>)
+    }
+
+}
+
+类 MP雷达高亮器类 <公开 基础类 = MP饼径高亮器类 @别名 = "com.github.mikephil.charting.highlight.RadarHighlighter" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.highlight.RadarHighlighter.">
+{
+
+    方法 新建雷达高亮器 <公开 静态 类型 = MP雷达高亮器类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.highlight.RadarHighlighter(com.github.mikephil.charting.charts.RadarChart)">
+    参数 图表 <类型 = MP雷达图>
+    {
+        @ new com.github.mikephil.charting.highlight.RadarHighlighter (@<图表>)
+    }
+
+}
+
+类 MP高亮区间类 <公开 @别名 = "com.github.mikephil.charting.highlight.Range" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.highlight.Range.">
+{
+
+    方法 新建高亮区间 <公开 静态 类型 = MP高亮区间类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.highlight.Range(float, float)">
+    参数 来自 <类型 = 小数>
+    参数 至 <类型 = 小数>
+    {
+        @ new com.github.mikephil.charting.highlight.Range ((float) @<来自>, (float) @<至>)
+    }
+
+    方法 包含 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean contains(float)">
+    参数 当前对象 <类型 = MP高亮区间类>
+    参数 数值 <类型 = 小数>
+    {
+        @ @<当前对象>.contains ((float) @<数值>)
+    }
+
+    方法 是否较大 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isLarger(float)">
+    参数 当前对象 <类型 = MP高亮区间类>
+    参数 数值 <类型 = 小数>
+    {
+        @ @<当前对象>.isLarger ((float) @<数值>)
+    }
+
+    方法 是否较小 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isSmaller(float)">
+    参数 当前对象 <类型 = MP高亮区间类>
+    参数 数值 <类型 = 小数>
+    {
+        @ @<当前对象>.isSmaller ((float) @<数值>)
+    }
+
+    方法 取来自 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java 常量: public float from">
+    {
+        @ com.github.mikephil.charting.highlight.Range.from
+    }
+
+    方法 取至 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java 常量: public float to">
+    {
+        @ com.github.mikephil.charting.highlight.Range.to
+    }
+
+}
+
+类 MP图表触摸监听器类 <公开 @别名 = "com.github.mikephil.charting.listener.ChartTouchListener" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.listener.ChartTouchListener.">
+{
+
+    方法 起始动作 <公开 静态 注释 = "java: public void startAction(android.view.MotionEvent)">
+    参数 当前对象 <类型 = MP图表触摸监听器类>
+    参数 参数1 <类型 = 动作事件类>
+    {
+        @ @<当前对象>.startAction (@<参数1>);
+    }
+
+    方法 结束动作 <公开 静态 注释 = "java: public void endAction(android.view.MotionEvent)">
+    参数 当前对象 <类型 = MP图表触摸监听器类>
+    参数 参数1 <类型 = 动作事件类>
+    {
+        @ @<当前对象>.endAction (@<参数1>);
+    }
+
+    方法 设置末个已高亮 <公开 静态 注释 = "java: public void setLastHighlighted(com.github.mikephil.charting.highlight.Highlight)">
+    参数 当前对象 <类型 = MP图表触摸监听器类>
+    参数 高 <类型 = MP高亮信息类>
+    {
+        @ @<当前对象>.setLastHighlighted (@<高>);
+    }
+
+    方法 取触摸模式 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getTouchMode()">
+    参数 当前对象 <类型 = MP图表触摸监听器类>
+    {
+        @ @<当前对象>.getTouchMode ()
+    }
+
+    方法 取末个手势 <公开 静态 类型 = MP图表手势类型 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.listener.ChartTouchListener$ChartGesture getLastGesture()">
+    参数 当前对象 <类型 = MP图表触摸监听器类>
+    {
+        @ @<当前对象>.getLastGesture ()
+    }
+
+}
+
+类 MP线柱图触摸监听器类 <公开 基础类 = MP图表触摸监听器类 @别名 = "com.github.mikephil.charting.listener.BarLineChartTouchListener" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.listener.BarLineChartTouchListener.">
+{
+
+    方法 新建线柱图触摸监听器 <公开 静态 类型 = MP线柱图触摸监听器类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.listener.BarLineChartTouchListener(com.github.mikephil.charting.charts.BarLineChartBase<? extends com.github.mikephil.charting.data.BarLineScatterCandleBubbleData<? extends com.github.mikephil.charting.interfaces.datasets.IBarLineScatterCandleBubbleDataSet<? extends com.github.mikephil.charting.data.Entry>>>, android.graphics.Matrix, float)">
+    参数 图表 <类型 = MP线柱基础图类>
+    参数 触摸矩阵 <类型 = 矩阵类>
+    参数 拖动触发距离 <类型 = 小数>
+    {
+        @ new com.github.mikephil.charting.listener.BarLineChartTouchListener (@<图表>, @<触摸矩阵>, (float) @<拖动触发距离>)
+    }
+
+    方法 响应触摸 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean onTouch(android.view.View, android.view.MotionEvent)">
+    参数 当前对象 <类型 = MP线柱图触摸监听器类>
+    参数 数值 <类型 = 安卓窗口组件>
+    参数 事件 <类型 = 动作事件类>
+    {
+        @ @<当前对象>.onTouch (@<数值>, @<事件>)
+    }
+
+    方法 取变换 <公开 静态 类型 = MP单精度坐标类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.utils.MPPointF getTrans(float, float)">
+    参数 当前对象 <类型 = MP线柱图触摸监听器类>
+    参数 横坐标 <类型 = 小数>
+    参数 纵坐标 <类型 = 小数>
+    {
+        @ @<当前对象>.getTrans ((float) @<横坐标>, (float) @<纵坐标>)
+    }
+
+    方法 取矩阵 <公开 静态 类型 = 矩阵类 @嵌入式方法 = "" 注释 = "java: public android.graphics.Matrix getMatrix()">
+    参数 当前对象 <类型 = MP线柱图触摸监听器类>
+    {
+        @ @<当前对象>.getMatrix ()
+    }
+
+    方法 设置拖动触发距离 <公开 静态 注释 = "java: public void setDragTriggerDist(float)">
+    参数 当前对象 <类型 = MP线柱图触摸监听器类>
+    参数 拖动触发距离 <类型 = 小数>
+    {
+        @ @<当前对象>.setDragTriggerDist ((float) @<拖动触发距离>);
+    }
+
+    方法 响应双击 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean onDoubleTap(android.view.MotionEvent)">
+    参数 当前对象 <类型 = MP线柱图触摸监听器类>
+    参数 数据点 <类型 = 动作事件类>
+    {
+        @ @<当前对象>.onDoubleTap (@<数据点>)
+    }
+
+    方法 响应长按按压 <公开 静态 注释 = "java: public void onLongPress(android.view.MotionEvent)">
+    参数 当前对象 <类型 = MP线柱图触摸监听器类>
+    参数 数据点 <类型 = 动作事件类>
+    {
+        @ @<当前对象>.onLongPress (@<数据点>);
+    }
+
+    方法 响应单击向上 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean onSingleTapUp(android.view.MotionEvent)">
+    参数 当前对象 <类型 = MP线柱图触摸监听器类>
+    参数 数据点 <类型 = 动作事件类>
+    {
+        @ @<当前对象>.onSingleTapUp (@<数据点>)
+    }
+
+    方法 响应甩动 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean onFling(android.view.MotionEvent, android.view.MotionEvent, float, float)">
+    参数 当前对象 <类型 = MP线柱图触摸监听器类>
+    参数 数据点一 <类型 = 动作事件类>
+    参数 数据点二 <类型 = 动作事件类>
+    参数 速度横坐标 <类型 = 小数>
+    参数 速度纵坐标 <类型 = 小数>
+    {
+        @ @<当前对象>.onFling (@<数据点一>, @<数据点二>, (float) @<速度横坐标>, (float) @<速度纵坐标>)
+    }
+
+    方法 停止减速 <公开 静态 注释 = "java: public void stopDeceleration()">
+    参数 当前对象 <类型 = MP线柱图触摸监听器类>
+    {
+        @ @<当前对象>.stopDeceleration ();
+    }
+
+    方法 算出滚动 <公开 静态 注释 = "java: public void computeScroll()">
+    参数 当前对象 <类型 = MP线柱图触摸监听器类>
+    {
+        @ @<当前对象>.computeScroll ();
+    }
+
+}
+
+类 MP图表手势类型 <公开 @别名 = "com.github.mikephil.charting.listener.ChartTouchListener$ChartGesture" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.listener.ChartTouchListener$ChartGesture.">
+{
+
+    方法 数值集 <公开 静态 类型 = "MP图表手势类型 []" @嵌入式方法 = "" 注释 = "java: public static com.github.mikephil.charting.listener.ChartTouchListener$ChartGesture[] values()">
+    参数 当前对象 <类型 = MP图表手势类型>
+    {
+        @ com.github.mikephil.charting.listener.ChartTouchListener$ChartGesture.values ()
+    }
+
+    方法 取枚举值 <公开 静态 类型 = MP图表手势类型 @嵌入式方法 = "" 注释 = "java: public static com.github.mikephil.charting.listener.ChartTouchListener$ChartGesture valueOf(java.lang.String)">
+    参数 当前对象 <类型 = MP图表手势类型>
+    参数 名称 <类型 = 文本型>
+    {
+        @ com.github.mikephil.charting.listener.ChartTouchListener$ChartGesture.valueOf (@<名称>)
+    }
+
+    方法 取无形状 <公开 静态 类型 = MP图表手势类型 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.listener.ChartTouchListener$ChartGesture NONE">
+    {
+        @ com.github.mikephil.charting.listener.ChartTouchListener$ChartGesture.NONE
+    }
+
+    方法 取拖动 <公开 静态 类型 = MP图表手势类型 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.listener.ChartTouchListener$ChartGesture DRAG">
+    {
+        @ com.github.mikephil.charting.listener.ChartTouchListener$ChartGesture.DRAG
+    }
+
+    方法 取横坐标缩放 <公开 静态 类型 = MP图表手势类型 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.listener.ChartTouchListener$ChartGesture X_ZOOM">
+    {
+        @ com.github.mikephil.charting.listener.ChartTouchListener$ChartGesture.X_ZOOM
+    }
+
+    方法 取纵坐标缩放 <公开 静态 类型 = MP图表手势类型 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.listener.ChartTouchListener$ChartGesture Y_ZOOM">
+    {
+        @ com.github.mikephil.charting.listener.ChartTouchListener$ChartGesture.Y_ZOOM
+    }
+
+    方法 取捏合缩放 <公开 静态 类型 = MP图表手势类型 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.listener.ChartTouchListener$ChartGesture PINCH_ZOOM">
+    {
+        @ com.github.mikephil.charting.listener.ChartTouchListener$ChartGesture.PINCH_ZOOM
+    }
+
+    方法 取旋转 <公开 静态 类型 = MP图表手势类型 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.listener.ChartTouchListener$ChartGesture ROTATE">
+    {
+        @ com.github.mikephil.charting.listener.ChartTouchListener$ChartGesture.ROTATE
+    }
+
+    方法 取单击 <公开 静态 类型 = MP图表手势类型 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.listener.ChartTouchListener$ChartGesture SINGLE_TAP">
+    {
+        @ com.github.mikephil.charting.listener.ChartTouchListener$ChartGesture.SINGLE_TAP
+    }
+
+    方法 取双击 <公开 静态 类型 = MP图表手势类型 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.listener.ChartTouchListener$ChartGesture DOUBLE_TAP">
+    {
+        @ com.github.mikephil.charting.listener.ChartTouchListener$ChartGesture.DOUBLE_TAP
+    }
+
+    方法 取长按按压 <公开 静态 类型 = MP图表手势类型 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.listener.ChartTouchListener$ChartGesture LONG_PRESS">
+    {
+        @ com.github.mikephil.charting.listener.ChartTouchListener$ChartGesture.LONG_PRESS
+    }
+
+    方法 取甩动 <公开 静态 类型 = MP图表手势类型 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.listener.ChartTouchListener$ChartGesture FLING">
+    {
+        @ com.github.mikephil.charting.listener.ChartTouchListener$ChartGesture.FLING
+    }
+
+}
+
+类 MP图表手势监听接口 <公开 @别名 = "com.github.mikephil.charting.listener.OnChartGestureListener" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.listener.OnChartGestureListener.">
+{
+
+    方法 响应图表手势起始 <公开 静态 注释 = "java: public abstract void onChartGestureStart(android.view.MotionEvent, com.github.mikephil.charting.listener.ChartTouchListener$ChartGesture)">
+    参数 当前对象 <类型 = MP图表手势监听接口>
+    参数 参数1 <类型 = 动作事件类>
+    参数 末个已执行手势 <类型 = MP图表手势类型>
+    {
+        @ @<当前对象>.onChartGestureStart (@<参数1>, @<末个已执行手势>);
+    }
+
+    方法 响应图表手势结束 <公开 静态 注释 = "java: public abstract void onChartGestureEnd(android.view.MotionEvent, com.github.mikephil.charting.listener.ChartTouchListener$ChartGesture)">
+    参数 当前对象 <类型 = MP图表手势监听接口>
+    参数 参数1 <类型 = 动作事件类>
+    参数 末个已执行手势 <类型 = MP图表手势类型>
+    {
+        @ @<当前对象>.onChartGestureEnd (@<参数1>, @<末个已执行手势>);
+    }
+
+    方法 响应图表长按按下 <公开 静态 注释 = "java: public abstract void onChartLongPressed(android.view.MotionEvent)">
+    参数 当前对象 <类型 = MP图表手势监听接口>
+    参数 参数1 <类型 = 动作事件类>
+    {
+        @ @<当前对象>.onChartLongPressed (@<参数1>);
+    }
+
+    方法 响应图表双精度已单击 <公开 静态 注释 = "java: public abstract void onChartDoubleTapped(android.view.MotionEvent)">
+    参数 当前对象 <类型 = MP图表手势监听接口>
+    参数 参数1 <类型 = 动作事件类>
+    {
+        @ @<当前对象>.onChartDoubleTapped (@<参数1>);
+    }
+
+    方法 响应图表单击已单击 <公开 静态 注释 = "java: public abstract void onChartSingleTapped(android.view.MotionEvent)">
+    参数 当前对象 <类型 = MP图表手势监听接口>
+    参数 参数1 <类型 = 动作事件类>
+    {
+        @ @<当前对象>.onChartSingleTapped (@<参数1>);
+    }
+
+    方法 响应图表甩动 <公开 静态 注释 = "java: public abstract void onChartFling(android.view.MotionEvent, android.view.MotionEvent, float, float)">
+    参数 当前对象 <类型 = MP图表手势监听接口>
+    参数 本对象一 <类型 = 动作事件类>
+    参数 本对象二 <类型 = 动作事件类>
+    参数 速度横坐标 <类型 = 小数>
+    参数 速度纵坐标 <类型 = 小数>
+    {
+        @ @<当前对象>.onChartFling (@<本对象一>, @<本对象二>, (float) @<速度横坐标>, (float) @<速度纵坐标>);
+    }
+
+    方法 响应图表比例 <公开 静态 注释 = "java: public abstract void onChartScale(android.view.MotionEvent, float, float)">
+    参数 当前对象 <类型 = MP图表手势监听接口>
+    参数 参数1 <类型 = 动作事件类>
+    参数 比例横坐标 <类型 = 小数>
+    参数 比例纵坐标 <类型 = 小数>
+    {
+        @ @<当前对象>.onChartScale (@<参数1>, (float) @<比例横坐标>, (float) @<比例纵坐标>);
+    }
+
+    方法 响应图表平移 <公开 静态 注释 = "java: public abstract void onChartTranslate(android.view.MotionEvent, float, float)">
+    参数 当前对象 <类型 = MP图表手势监听接口>
+    参数 参数1 <类型 = 动作事件类>
+    参数 数据集横坐标 <类型 = 小数>
+    参数 数据集纵坐标 <类型 = 小数>
+    {
+        @ @<当前对象>.onChartTranslate (@<参数1>, (float) @<数据集横坐标>, (float) @<数据集纵坐标>);
+    }
+
+}
+
+类 MP值选中监听接口 <公开 @别名 = "com.github.mikephil.charting.listener.OnChartValueSelectedListener" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.listener.OnChartValueSelectedListener.">
+{
+
+    方法 响应数值已选中 <公开 静态 注释 = "java: public abstract void onValueSelected(com.github.mikephil.charting.data.Entry, com.github.mikephil.charting.highlight.Highlight)">
+    参数 当前对象 <类型 = MP值选中监听接口>
+    参数 数据点 <类型 = MP数据点类>
+    参数 高亮 <类型 = MP高亮信息类>
+    {
+        @ @<当前对象>.onValueSelected (@<数据点>, @<高亮>);
+    }
+
+    方法 响应未选中 <公开 静态 注释 = "java: public abstract void onNothingSelected()">
+    参数 当前对象 <类型 = MP值选中监听接口>
+    {
+        @ @<当前对象>.onNothingSelected ();
+    }
+
+}
+
+类 MP绘制线回调监听器类 <公开 @别名 = "com.github.mikephil.charting.listener.OnDrawLineChartTouchListener" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.listener.OnDrawLineChartTouchListener.">
+{
+
+    方法 新建绘制线回调监听器 <公开 静态 类型 = MP绘制线回调监听器类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.listener.OnDrawLineChartTouchListener()">
+    {
+        @ new com.github.mikephil.charting.listener.OnDrawLineChartTouchListener ()
+    }
+
+    方法 响应触摸 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean onTouch(android.view.View, android.view.MotionEvent)">
+    参数 当前对象 <类型 = MP绘制线回调监听器类>
+    参数 数值 <类型 = 安卓窗口组件>
+    参数 事件 <类型 = 动作事件类>
+    {
+        @ @<当前对象>.onTouch (@<数值>, @<事件>)
+    }
+
+}
+
+类 MP绘制监听接口 <公开 @别名 = "com.github.mikephil.charting.listener.OnDrawListener" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.listener.OnDrawListener.">
+{
+
+    方法 响应数据点已添加 <公开 静态 注释 = "java: public abstract void onEntryAdded(com.github.mikephil.charting.data.Entry)">
+    参数 当前对象 <类型 = MP绘制监听接口>
+    参数 数据点 <类型 = MP数据点类>
+    {
+        @ @<当前对象>.onEntryAdded (@<数据点>);
+    }
+
+    方法 响应数据点已移动 <公开 静态 注释 = "java: public abstract void onEntryMoved(com.github.mikephil.charting.data.Entry)">
+    参数 当前对象 <类型 = MP绘制监听接口>
+    参数 数据点 <类型 = MP数据点类>
+    {
+        @ @<当前对象>.onEntryMoved (@<数据点>);
+    }
+
+    方法 响应绘制已完成 <公开 静态 注释 = "java: public abstract void onDrawFinished(com.github.mikephil.charting.data.DataSet<?>)">
+    参数 当前对象 <类型 = MP绘制监听接口>
+    参数 数据集 <类型 = MP数据集类>
+    {
+        @ @<当前对象>.onDrawFinished (@<数据集>);
+    }
+
+}
+
+类 MP饼径图触摸监听器类 <公开 基础类 = MP图表触摸监听器类 @别名 = "com.github.mikephil.charting.listener.PieRadarChartTouchListener" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.listener.PieRadarChartTouchListener.">
+{
+
+    方法 新建饼径图触摸监听器 <公开 静态 类型 = MP饼径图触摸监听器类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.listener.PieRadarChartTouchListener(com.github.mikephil.charting.charts.PieRadarChartBase<?>)">
+    参数 图表 <类型 = MP饼径基础图类>
+    {
+        @ new com.github.mikephil.charting.listener.PieRadarChartTouchListener (@<图表>)
+    }
+
+    方法 响应触摸 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean onTouch(android.view.View, android.view.MotionEvent)">
+    参数 当前对象 <类型 = MP饼径图触摸监听器类>
+    参数 数值 <类型 = 安卓窗口组件>
+    参数 事件 <类型 = 动作事件类>
+    {
+        @ @<当前对象>.onTouch (@<数值>, @<事件>)
+    }
+
+    方法 响应长按按压 <公开 静态 注释 = "java: public void onLongPress(android.view.MotionEvent)">
+    参数 当前对象 <类型 = MP饼径图触摸监听器类>
+    参数 参数1 <类型 = 动作事件类>
+    {
+        @ @<当前对象>.onLongPress (@<参数1>);
+    }
+
+    方法 响应单击已确认 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean onSingleTapConfirmed(android.view.MotionEvent)">
+    参数 当前对象 <类型 = MP饼径图触摸监听器类>
+    参数 数据点 <类型 = 动作事件类>
+    {
+        @ @<当前对象>.onSingleTapConfirmed (@<数据点>)
+    }
+
+    方法 响应单击向上 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean onSingleTapUp(android.view.MotionEvent)">
+    参数 当前对象 <类型 = MP饼径图触摸监听器类>
+    参数 数据点 <类型 = 动作事件类>
+    {
+        @ @<当前对象>.onSingleTapUp (@<数据点>)
+    }
+
+    方法 设置手势起始角度 <公开 静态 注释 = "java: public void setGestureStartAngle(float, float)">
+    参数 当前对象 <类型 = MP饼径图触摸监听器类>
+    参数 横坐标 <类型 = 小数>
+    参数 纵坐标 <类型 = 小数>
+    {
+        @ @<当前对象>.setGestureStartAngle ((float) @<横坐标>, (float) @<纵坐标>);
+    }
+
+    方法 更新手势旋转角 <公开 静态 注释 = "java: public void updateGestureRotation(float, float)">
+    参数 当前对象 <类型 = MP饼径图触摸监听器类>
+    参数 横坐标 <类型 = 小数>
+    参数 纵坐标 <类型 = 小数>
+    {
+        @ @<当前对象>.updateGestureRotation ((float) @<横坐标>, (float) @<纵坐标>);
+    }
+
+    方法 停止减速 <公开 静态 注释 = "java: public void stopDeceleration()">
+    参数 当前对象 <类型 = MP饼径图触摸监听器类>
+    {
+        @ @<当前对象>.stopDeceleration ();
+    }
+
+    方法 算出滚动 <公开 静态 注释 = "java: public void computeScroll()">
+    参数 当前对象 <类型 = MP饼径图触摸监听器类>
+    {
+        @ @<当前对象>.computeScroll ();
+    }
+
+}
+

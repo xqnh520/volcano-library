@@ -1,0 +1,18 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.即时界面 <注释 = "Dear ImGui v1.91.9b-docking 的火山视窗中文封装，全中文类名/方法名/参数名/注释。" @视窗.头文件搜寻目录 = "imgui"
+        @视窗.外部头文件 = "imcn_helper.h, imcn_host.h"
+        @视窗.外部源文件 = "imgui\\imgui.cpp, imgui\\imgui_draw.cpp, imgui\\imgui_tables.cpp, imgui\\imgui_widgets.cpp, imgui\\imgui_demo.cpp, imgui\\misc\\cpp\\imgui_stdlib.cpp, imgui\\backends\\imgui_impl_win32.cpp, imgui\\backends\\imgui_impl_dx11.cpp">
+
+类 表格行标志 <公开 注释 = "表格行标志，用于界面表格.下一行" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 无 <公开 类型 = 整数 值 = @ImGuiTableRowFlags_None>
+    常量 表头行 <公开 类型 = 整数 值 = @ImGuiTableRowFlags_Headers>
+}
+类 表格背景目标 <公开 注释 = "表格背景目标，用于界面表格.置背景色" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 无 <公开 类型 = 整数 值 = @ImGuiTableBgTarget_None>
+    常量 行背景色0 <公开 类型 = 整数 值 = @ImGuiTableBgTarget_RowBg0>
+    常量 行背景色1 <公开 类型 = 整数 值 = @ImGuiTableBgTarget_RowBg1>
+    常量 单元格背景色 <公开 类型 = 整数 值 = @ImGuiTableBgTarget_CellBg>
+}

@@ -1,0 +1,695 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.AnyCAD <注释 = "AnyCAD 全量封装 - 按程序集分域的分片 (自动生成, 请勿手改)。"
+        @视窗.库文件搜寻目录.x64 = "native\\lib"
+        @视窗.外部库.x64 = "AnyCADBridge.lib">
+
+类 AnyCAD基础_极值点曲线 <公开 基础类 = AnyCAD句柄 注释 = "对应 AnyCAD.Foundation.ExtremaPointCurve。句柄类型; 新句柄用完必须调用 释放 () 归还。"
+        @视窗.外部头文件 = "native\\anycad_full_bridge.h">
+{
+    方法 创建 <公开 静态 类型 = 变整数 注释 = "创建: 构造新对象。返回新句柄, 用完必须调用 AnyCAD基础_极值点曲线.释放 () 归还; 失败返回 0 并置错误码。" 折叠 @嵌入式方法 = "">
+    {
+        @ (intptr_t)(af_extrema_point_curve_ctor())
+    }
+
+    方法 取最小距离参数 <公开 静态 类型 = 小数 注释 = "取最小距离参数。失败返回 NaN (值 != 值)。" 折叠 @嵌入式方法 = "">
+    参数 句柄 <类型 = 变整数 注释 = "目标AnyCAD基础_极值点曲线句柄">
+    {
+        @ af_extrema_point_curve_get_minimum_distance_parameter((void*)@<句柄>)
+    }
+
+    方法 取最小距离点 <公开 静态 类型 = 变整数 注释 = "取最小距离点。返回新句柄, 用完必须调用 AnyCAD基础_极值点曲线.释放 () 归还; 失败返回 0 并置错误码。" 折叠 @嵌入式方法 = "">
+    参数 句柄 <类型 = 变整数 注释 = "目标AnyCAD基础_极值点曲线句柄">
+    {
+        @ (intptr_t)(af_extrema_point_curve_get_minimum_distance_point((void*)@<句柄>))
+    }
+
+    方法 取最小平方距离 <公开 静态 类型 = 小数 注释 = "取最小平方距离。失败返回 NaN (值 != 值)。" 折叠 @嵌入式方法 = "">
+    参数 句柄 <类型 = 变整数 注释 = "目标AnyCAD基础_极值点曲线句柄">
+    {
+        @ af_extrema_point_curve_get_minimum_square_distance((void*)@<句柄>)
+    }
+
+    方法 取参数 <公开 静态 类型 = 小数 注释 = "取参数。参数 序号=整数。失败返回 NaN (值 != 值)。" 折叠 @嵌入式方法 = "">
+    参数 句柄 <类型 = 变整数 注释 = "目标AnyCAD基础_极值点曲线句柄">
+    参数 序号 <类型 = 整数 注释 = "idx">
+    {
+        @ af_extrema_point_curve_get_parameter((void*)@<句柄>, @<序号>)
+    }
+
+    方法 取点 <公开 静态 类型 = 变整数 注释 = "取点。参数 序号=整数。返回新句柄, 用完必须调用 AnyCAD基础_极值点曲线.释放 () 归还; 失败返回 0 并置错误码。" 折叠 @嵌入式方法 = "">
+    参数 句柄 <类型 = 变整数 注释 = "目标AnyCAD基础_极值点曲线句柄">
+    参数 序号 <类型 = 整数 注释 = "idx">
+    {
+        @ (intptr_t)(af_extrema_point_curve_get_point((void*)@<句柄>, @<序号>))
+    }
+
+    方法 取点数量 <公开 静态 类型 = 整数 注释 = "取点数量。失败返回 -1 并置错误码。" 折叠 @嵌入式方法 = "">
+    参数 句柄 <类型 = 变整数 注释 = "目标AnyCAD基础_极值点曲线句柄">
+    {
+        @ af_extrema_point_curve_get_point_count((void*)@<句柄>)
+    }
+
+    方法 取平方距离 <公开 静态 类型 = 小数 注释 = "取平方距离。参数 序号=整数。失败返回 NaN (值 != 值)。" 折叠 @嵌入式方法 = "">
+    参数 句柄 <类型 = 变整数 注释 = "目标AnyCAD基础_极值点曲线句柄">
+    参数 序号 <类型 = 整数 注释 = "idx">
+    {
+        @ af_extrema_point_curve_get_square_distance((void*)@<句柄>, @<序号>)
+    }
+
+    方法 初始化_拓扑形状 <公开 静态 类型 = 整数 注释 = "初始化_拓扑形状。参数 边=变整数句柄; pt=变整数句柄。1 成功, 0 失败并置错误码。" 折叠 @嵌入式方法 = "">
+    参数 句柄 <类型 = 变整数 注释 = "目标AnyCAD基础_极值点曲线句柄">
+    参数 边 <类型 = 变整数 注释 = "edge">
+    参数 pt <类型 = 变整数 注释 = "pt">
+    {
+        @ af_extrema_point_curve_initialize((void*)@<句柄>, (void*)@<边>, (void*)@<pt>)
+    }
+
+    方法 初始化_拓扑形状_2 <公开 静态 类型 = 整数 注释 = "初始化_拓扑形状_2。参数 边=变整数句柄; pt=变整数句柄。1 成功, 0 失败并置错误码。" 折叠 @嵌入式方法 = "">
+    参数 句柄 <类型 = 变整数 注释 = "目标AnyCAD基础_极值点曲线句柄">
+    参数 边 <类型 = 变整数 注释 = "edge">
+    参数 pt <类型 = 变整数 注释 = "pt">
+    {
+        @ af_extrema_point_curve_initialize_2((void*)@<句柄>, (void*)@<边>, (void*)@<pt>)
+    }
+
+    方法 初始化按点 <公开 静态 类型 = 整数 注释 = "初始化按点。参数 边=变整数句柄; pt=变整数句柄。1 成功, 0 失败并置错误码。" 折叠 @嵌入式方法 = "">
+    参数 句柄 <类型 = 变整数 注释 = "目标AnyCAD基础_极值点曲线句柄">
+    参数 边 <类型 = 变整数 注释 = "edge">
+    参数 pt <类型 = 变整数 注释 = "pt">
+    {
+        @ af_extrema_point_curve_initialize_by_point((void*)@<句柄>, (void*)@<边>, (void*)@<pt>)
+    }
+
+    方法 初始化按顶点 <公开 静态 类型 = 整数 注释 = "初始化按顶点。参数 边=变整数句柄; pt=变整数句柄。1 成功, 0 失败并置错误码。" 折叠 @嵌入式方法 = "">
+    参数 句柄 <类型 = 变整数 注释 = "目标AnyCAD基础_极值点曲线句柄">
+    参数 边 <类型 = 变整数 注释 = "edge">
+    参数 pt <类型 = 变整数 注释 = "pt">
+    {
+        @ af_extrema_point_curve_initialize_by_vertex((void*)@<句柄>, (void*)@<边>, (void*)@<pt>)
+    }
+
+    方法 是否最小 <公开 静态 类型 = 整数 注释 = "是否最小。参数 序号=整数。1 成功, 0 失败并置错误码。" 折叠 @嵌入式方法 = "">
+    参数 句柄 <类型 = 变整数 注释 = "目标AnyCAD基础_极值点曲线句柄">
+    参数 序号 <类型 = 整数 注释 = "idx">
+    {
+        @ af_extrema_point_curve_is_min((void*)@<句柄>, @<序号>)
+    }
+
+}
+
+类 AnyCAD基础_极值点曲面 <公开 基础类 = AnyCAD句柄 注释 = "对应 AnyCAD.Foundation.ExtremaPointSurface。句柄类型; 新句柄用完必须调用 释放 () 归还。"
+        @视窗.外部头文件 = "native\\anycad_full_bridge.h">
+{
+    方法 创建 <公开 静态 类型 = 变整数 注释 = "创建: 构造新对象。返回新句柄, 用完必须调用 AnyCAD基础_极值点曲面.释放 () 归还; 失败返回 0 并置错误码。" 折叠 @嵌入式方法 = "">
+    {
+        @ (intptr_t)(af_extrema_point_surface_ctor())
+    }
+
+    方法 取参数 <公开 静态 类型 = 变整数 注释 = "取参数。参数 序号=整数。返回新句柄, 用完必须调用 AnyCAD基础_极值点曲面.释放 () 归还; 失败返回 0 并置错误码。" 折叠 @嵌入式方法 = "">
+    参数 句柄 <类型 = 变整数 注释 = "目标AnyCAD基础_极值点曲面句柄">
+    参数 序号 <类型 = 整数 注释 = "idx">
+    {
+        @ (intptr_t)(af_extrema_point_surface_get_parameter((void*)@<句柄>, @<序号>))
+    }
+
+    方法 取点 <公开 静态 类型 = 变整数 注释 = "取点。参数 序号=整数。返回新句柄, 用完必须调用 AnyCAD基础_极值点曲面.释放 () 归还; 失败返回 0 并置错误码。" 折叠 @嵌入式方法 = "">
+    参数 句柄 <类型 = 变整数 注释 = "目标AnyCAD基础_极值点曲面句柄">
+    参数 序号 <类型 = 整数 注释 = "idx">
+    {
+        @ (intptr_t)(af_extrema_point_surface_get_point((void*)@<句柄>, @<序号>))
+    }
+
+    方法 取点数量 <公开 静态 类型 = 整数 注释 = "取点数量。失败返回 -1 并置错误码。" 折叠 @嵌入式方法 = "">
+    参数 句柄 <类型 = 变整数 注释 = "目标AnyCAD基础_极值点曲面句柄">
+    {
+        @ af_extrema_point_surface_get_point_count((void*)@<句柄>)
+    }
+
+    方法 取平方距离 <公开 静态 类型 = 小数 注释 = "取平方距离。参数 序号=整数。失败返回 NaN (值 != 值)。" 折叠 @嵌入式方法 = "">
+    参数 句柄 <类型 = 变整数 注释 = "目标AnyCAD基础_极值点曲面句柄">
+    参数 序号 <类型 = 整数 注释 = "idx">
+    {
+        @ af_extrema_point_surface_get_square_distance((void*)@<句柄>, @<序号>)
+    }
+
+    方法 初始化_拓扑形状 <公开 静态 类型 = 整数 注释 = "初始化_拓扑形状。参数 曲面=变整数句柄; pt=变整数句柄。1 成功, 0 失败并置错误码。" 折叠 @嵌入式方法 = "">
+    参数 句柄 <类型 = 变整数 注释 = "目标AnyCAD基础_极值点曲面句柄">
+    参数 曲面 <类型 = 变整数 注释 = "surface">
+    参数 pt <类型 = 变整数 注释 = "pt">
+    {
+        @ af_extrema_point_surface_initialize((void*)@<句柄>, (void*)@<曲面>, (void*)@<pt>)
+    }
+
+    方法 初始化_拓扑形状_2 <公开 静态 类型 = 整数 注释 = "初始化_拓扑形状_2。参数 曲面=变整数句柄; pt=变整数句柄; 类型=整数。1 成功, 0 失败并置错误码。" 折叠 @嵌入式方法 = "">
+    参数 句柄 <类型 = 变整数 注释 = "目标AnyCAD基础_极值点曲面句柄">
+    参数 曲面 <类型 = 变整数 注释 = "surface">
+    参数 pt <类型 = 变整数 注释 = "pt">
+    参数 类型 <类型 = 整数 注释 = "type">
+    {
+        @ af_extrema_point_surface_initialize_2((void*)@<句柄>, (void*)@<曲面>, (void*)@<pt>, @<类型>)
+    }
+
+    方法 初始化_拓扑形状_3 <公开 静态 类型 = 整数 注释 = "初始化_拓扑形状_3。参数 曲面=变整数句柄; pt=变整数句柄。1 成功, 0 失败并置错误码。" 折叠 @嵌入式方法 = "">
+    参数 句柄 <类型 = 变整数 注释 = "目标AnyCAD基础_极值点曲面句柄">
+    参数 曲面 <类型 = 变整数 注释 = "surface">
+    参数 pt <类型 = 变整数 注释 = "pt">
+    {
+        @ af_extrema_point_surface_initialize_3((void*)@<句柄>, (void*)@<曲面>, (void*)@<pt>)
+    }
+
+    方法 初始化_拓扑形状_4 <公开 静态 类型 = 整数 注释 = "初始化_拓扑形状_4。参数 曲面=变整数句柄; pt=变整数句柄; 类型=整数。1 成功, 0 失败并置错误码。" 折叠 @嵌入式方法 = "">
+    参数 句柄 <类型 = 变整数 注释 = "目标AnyCAD基础_极值点曲面句柄">
+    参数 曲面 <类型 = 变整数 注释 = "surface">
+    参数 pt <类型 = 变整数 注释 = "pt">
+    参数 类型 <类型 = 整数 注释 = "type">
+    {
+        @ af_extrema_point_surface_initialize_4((void*)@<句柄>, (void*)@<曲面>, (void*)@<pt>, @<类型>)
+    }
+
+    方法 初始化按点 <公开 静态 类型 = 整数 注释 = "初始化按点。参数 曲面=变整数句柄; pt=变整数句柄; 类型=整数。1 成功, 0 失败并置错误码。" 折叠 @嵌入式方法 = "">
+    参数 句柄 <类型 = 变整数 注释 = "目标AnyCAD基础_极值点曲面句柄">
+    参数 曲面 <类型 = 变整数 注释 = "surface">
+    参数 pt <类型 = 变整数 注释 = "pt">
+    参数 类型 <类型 = 整数 注释 = "type">
+    {
+        @ af_extrema_point_surface_initialize_by_point((void*)@<句柄>, (void*)@<曲面>, (void*)@<pt>, @<类型>)
+    }
+
+    方法 初始化按顶点 <公开 静态 类型 = 整数 注释 = "初始化按顶点。参数 曲面=变整数句柄; pt=变整数句柄; 类型=整数。1 成功, 0 失败并置错误码。" 折叠 @嵌入式方法 = "">
+    参数 句柄 <类型 = 变整数 注释 = "目标AnyCAD基础_极值点曲面句柄">
+    参数 曲面 <类型 = 变整数 注释 = "surface">
+    参数 pt <类型 = 变整数 注释 = "pt">
+    参数 类型 <类型 = 整数 注释 = "type">
+    {
+        @ af_extrema_point_surface_initialize_by_vertex((void*)@<句柄>, (void*)@<曲面>, (void*)@<pt>, @<类型>)
+    }
+
+}
+
+类 AnyCAD基础_枚举_拓扑形状类型 <公开 注释 = "对应 AnyCAD.Foundation.EnumTopoShapeType。枚举常量类; 成员均为整数常量。">
+{
+    常量 拓扑复合体 <公开 类型 = 整数 值 = 0 注释 = "Topo_COMPOUND">
+    常量 拓扑复合实体 <公开 类型 = 整数 值 = 1 注释 = "Topo_COMPSOLID">
+    常量 拓扑边 <公开 类型 = 整数 值 = 6 注释 = "Topo_EDGE">
+    常量 拓扑面 <公开 类型 = 整数 值 = 4 注释 = "Topo_FACE">
+    常量 拓扑形状 <公开 类型 = 整数 值 = 8 注释 = "Topo_SHAPE">
+    常量 拓扑壳 <公开 类型 = 整数 值 = 3 注释 = "Topo_SHELL">
+    常量 拓扑实体 <公开 类型 = 整数 值 = 2 注释 = "Topo_SOLID">
+    常量 拓扑顶点 <公开 类型 = 整数 值 = 7 注释 = "Topo_VERTEX">
+    常量 拓扑线框 <公开 类型 = 整数 值 = 5 注释 = "Topo_WIRE">
+}
+
+类 AnyCAD基础_枚举主题样式 <公开 注释 = "对应 AnyCAD.Foundation.EnumThemeStyle。枚举常量类; 成员均为整数常量。">
+{
+    常量 蓝色深色 <公开 类型 = 整数 值 = 2 注释 = "BlueDark">
+    常量 深色 <公开 类型 = 整数 值 = 1 注释 = "Dark">
+    常量 默认 <公开 类型 = 整数 值 = 0 注释 = "Default">
+}
+
+类 AnyCAD基础_枚举位置类型 <公开 注释 = "对应 AnyCAD.Foundation.EnumPositionType。枚举常量类; 成员均为整数常量。">
+{
+    常量 绝对 <公开 类型 = 整数 值 = 1 注释 = "Absolute">
+    常量 相对 <公开 类型 = 整数 值 = 0 注释 = "Relative">
+    常量 窗口 <公开 类型 = 整数 值 = 2 注释 = "Window">
+}
+
+类 AnyCAD基础_枚举偏移方向 <公开 注释 = "对应 AnyCAD.Foundation.EnumOffsetDirection。枚举常量类; 成员均为整数常量。">
+{
+    常量 Bidirectional <公开 类型 = 整数 值 = 2 注释 = "Bidirectional">
+    常量 默认 <公开 类型 = 整数 值 = 0 注释 = "Default">
+    常量 反转 <公开 类型 = 整数 值 = 1 注释 = "Reverse">
+}
+
+类 AnyCAD基础_枚举偏移模式 <公开 注释 = "对应 AnyCAD.Foundation.EnumOffsetMode。枚举常量类; 成员均为整数常量。">
+{
+    常量 管 <公开 类型 = 整数 值 = 1 注释 = "Pipe">
+    常量 RectoVerso <公开 类型 = 整数 值 = 2 注释 = "RectoVerso">
+    常量 Skin <公开 类型 = 整数 值 = 0 注释 = "Skin">
+}
+
+类 AnyCAD基础_枚举像素存储 <公开 注释 = "对应 AnyCAD.Foundation.EnumPixelStore。枚举常量类; 成员均为整数常量。">
+{
+    常量 打包对齐 <公开 类型 = 整数 值 = 3333 注释 = "PACK_ALIGNMENT">
+    常量 UNPACK对齐 <公开 类型 = 整数 值 = 3317 注释 = "UNPACK_ALIGNMENT">
+}
+
+类 AnyCAD基础_枚举几何填充三轴标 <公开 注释 = "对应 AnyCAD.Foundation.EnumGeomFillTrihedron。枚举常量类; 成员均为整数常量。">
+{
+    常量 常量法向 <公开 类型 = 整数 值 = 3 注释 = "ConstantNormal">
+    常量 Corrected弗莱纳 <公开 类型 = 整数 值 = 0 注释 = "CorrectedFrenet">
+    常量 Darboux <公开 类型 = 整数 值 = 4 注释 = "Darboux">
+    常量 Discrete三轴标 <公开 类型 = 整数 值 = 9 注释 = "DiscreteTrihedron">
+    常量 固定 <公开 类型 = 整数 值 = 1 注释 = "Fixed">
+    常量 弗莱纳 <公开 类型 = 整数 值 = 2 注释 = "Frenet">
+    常量 引导线AC <公开 类型 = 整数 值 = 5 注释 = "GuideAC">
+    常量 引导线AC带接触 <公开 类型 = 整数 值 = 7 注释 = "GuideACWithContact">
+    常量 引导线计划 <公开 类型 = 整数 值 = 6 注释 = "GuidePlan">
+    常量 引导线计划带接触 <公开 类型 = 整数 值 = 8 注释 = "GuidePlanWithContact">
+}
+
+类 AnyCAD基础_枚举几何连接类型 <公开 注释 = "对应 AnyCAD.Foundation.EnumGeomJoinType。枚举常量类; 成员均为整数常量。">
+{
+    常量 圆弧 <公开 类型 = 整数 值 = 0 注释 = "Arc">
+    常量 交集 <公开 类型 = 整数 值 = 2 注释 = "Intersection">
+    常量 切向 <公开 类型 = 整数 值 = 1 注释 = "Tangent">
+}
+
+类 AnyCAD基础_枚举几何连续性 <公开 注释 = "对应 AnyCAD.Foundation.EnumGeometryContinuity。枚举常量类; 成员均为整数常量。">
+{
+    常量 周长0 <公开 类型 = 整数 值 = 0 注释 = "C0">
+    常量 周长1 <公开 类型 = 整数 值 = 2 注释 = "C1">
+    常量 周长2 <公开 类型 = 整数 值 = 4 注释 = "C2">
+    常量 周长3 <公开 类型 = 整数 值 = 5 注释 = "C3">
+    常量 CN <公开 类型 = 整数 值 = 6 注释 = "CN">
+    常量 几何1 <公开 类型 = 整数 值 = 1 注释 = "G1">
+    常量 几何2 <公开 类型 = 整数 值 = 3 注释 = "G2">
+}
+
+类 AnyCAD基础_枚举分割模式 <公开 注释 = "对应 AnyCAD.Foundation.EnumSplitMode。枚举常量类; 成员均为整数常量。">
+{
+    常量 复合实体 <公开 类型 = 整数 值 = 1 注释 = "CompSolid">
+    常量 分割 <公开 类型 = 整数 值 = 2 注释 = "Split">
+    常量 标准 <公开 类型 = 整数 值 = 0 注释 = "Standard">
+}
+
+类 AnyCAD基础_枚举分析着色类型 <公开 注释 = "对应 AnyCAD.Foundation.EnumAnalysisShadingType。枚举常量类; 成员均为整数常量。">
+{
+    常量 等高线 <公开 类型 = 整数 值 = 2 注释 = "Contour">
+    常量 无 <公开 类型 = 整数 值 = 0 注释 = "None">
+    常量 光顺 <公开 类型 = 整数 值 = 1 注释 = "Smooth">
+}
+
+类 AnyCAD基础_枚举动画播放器快捷键动作 <公开 注释 = "对应 AnyCAD.Foundation.EnumAnimationPlayerShortcutAction。枚举常量类; 成员均为整数常量。">
+{
+    常量 定位向后 <公开 类型 = 整数 值 = 3 注释 = "SeekBackward">
+    常量 定位向前 <公开 类型 = 整数 值 = 4 注释 = "SeekForward">
+    常量 缓慢下 <公开 类型 = 整数 值 = 5 注释 = "SlowDown">
+    常量 转速上 <公开 类型 = 整数 值 = 6 注释 = "SpeedUp">
+    常量 停止 <公开 类型 = 整数 值 = 2 注释 = "Stop">
+    常量 Toggle环 <公开 类型 = 整数 值 = 7 注释 = "ToggleLoop">
+    常量 Toggle回放 <公开 类型 = 整数 值 = 1 注释 = "TogglePlayback">
+    常量 零 <公开 类型 = 整数 值 = 0 注释 = "Zero">
+}
+
+类 AnyCAD基础_枚举变换2直径窗体 <公开 注释 = "对应 AnyCAD.Foundation.EnumTrsf2dForm。枚举常量类; 成员均为整数常量。">
+{
+    常量 变换2直径轴1镜像 <公开 类型 = 整数 值 = 4 注释 = "Trsf2dAx1Mirror">
+    常量 变换2直径轴2镜像 <公开 类型 = 整数 值 = 5 注释 = "Trsf2dAx2Mirror">
+    常量 变换2直径复合体变换 <公开 类型 = 整数 值 = 7 注释 = "Trsf2dCompoundTrsf">
+    常量 变换2直径恒等 <公开 类型 = 整数 值 = 0 注释 = "Trsf2dIdentity">
+    常量 变换2直径其它 <公开 类型 = 整数 值 = 8 注释 = "Trsf2dOther">
+    常量 变换2直径点镜像 <公开 类型 = 整数 值 = 3 注释 = "Trsf2dPntMirror">
+    常量 变换2直径旋转 <公开 类型 = 整数 值 = 1 注释 = "Trsf2dRotation">
+    常量 变换2直径比例 <公开 类型 = 整数 值 = 6 注释 = "Trsf2dScale">
+    常量 变换2直径平移量 <公开 类型 = 整数 值 = 2 注释 = "Trsf2dTranslation">
+}
+
+类 AnyCAD基础_枚举变换中心 <公开 注释 = "对应 AnyCAD.Foundation.EnumTransformCenter。枚举常量类; 成员均为整数常量。">
+{
+    常量 按局部原点 <公开 类型 = 整数 值 = 2 注释 = "ByLocalOrigin">
+    常量 按世界中心 <公开 类型 = 整数 值 = 0 注释 = "ByWorldCenter">
+    常量 按世界原点 <公开 类型 = 整数 值 = 1 注释 = "ByWorldOrigin">
+}
+
+类 AnyCAD基础_枚举变量类型 <公开 注释 = "对应 AnyCAD.Foundation.EnumVariableType。枚举常量类; 成员均为整数常量。">
+{
+    常量 单精度矩阵2 <公开 类型 = 整数 值 = 35674 注释 = "FLOAT_MAT2">
+    常量 单精度矩阵3 <公开 类型 = 整数 值 = 35675 注释 = "FLOAT_MAT3">
+    常量 单精度矩阵4 <公开 类型 = 整数 值 = 35676 注释 = "FLOAT_MAT4">
+    常量 单精度向量2 <公开 类型 = 整数 值 = 35664 注释 = "FLOAT_VEC2">
+    常量 单精度向量3 <公开 类型 = 整数 值 = 35665 注释 = "FLOAT_VEC3">
+    常量 单精度向量4 <公开 类型 = 整数 值 = 35666 注释 = "FLOAT_VEC4">
+}
+
+类 AnyCAD基础_枚举命令类型 <公开 注释 = "对应 AnyCAD.Foundation.EnumCommandType。枚举常量类; 成员均为整数常量。">
+{
+    常量 命令终点 <公开 类型 = 整数 值 = 1 注释 = "CommandEnd">
+    常量 命令输入 <公开 类型 = 整数 值 = 2 注释 = "CommandInput">
+    常量 命令起点 <公开 类型 = 整数 值 = 0 注释 = "CommandStart">
+}
+
+类 AnyCAD基础_枚举命令行为 <公开 注释 = "对应 AnyCAD.Foundation.EnumCommandBehavior。枚举常量类; 成员均为整数常量。">
+{
+    常量 创建_值 <公开 类型 = 整数 值 = 16 注释 = "Create">
+    常量 创建更新 <公开 类型 = 整数 值 = 18 注释 = "CreateUpdate">
+    常量 默认 <公开 类型 = 整数 值 = 0 注释 = "Default">
+    常量 删除 <公开 类型 = 整数 值 = 32 注释 = "Delete">
+    常量 查询 <公开 类型 = 整数 值 = 1 注释 = "Query">
+    常量 查询创建 <公开 类型 = 整数 值 = 17 注释 = "QueryCreate">
+    常量 查询创建更新 <公开 类型 = 整数 值 = 19 注释 = "QueryCreateUpdate">
+    常量 查询更新 <公开 类型 = 整数 值 = 3 注释 = "QueryUpdate">
+    常量 更新 <公开 类型 = 整数 值 = 2 注释 = "Update">
+}
+
+类 AnyCAD基础_枚举图元类型 <公开 注释 = "对应 AnyCAD.Foundation.EnumPrimitiveType。枚举常量类; 成员均为整数常量。">
+{
+    常量 直线集 <公开 类型 = 整数 值 = 1 注释 = "LINES">
+    常量 直线环 <公开 类型 = 整数 值 = 2 注释 = "LINE_LOOP">
+    常量 直线STRIP <公开 类型 = 整数 值 = 3 注释 = "LINE_STRIP">
+    常量 点集 <公开 类型 = 整数 值 = 0 注释 = "POINTS">
+    常量 TRIANGLES <公开 类型 = 整数 值 = 4 注释 = "TRIANGLES">
+    常量 三角形FAN <公开 类型 = 整数 值 = 6 注释 = "TRIANGLE_FAN">
+    常量 三角形STRIP <公开 类型 = 整数 值 = 5 注释 = "TRIANGLE_STRIP">
+}
+
+类 AnyCAD基础_枚举图形界面窗口标志集 <公开 注释 = "对应 AnyCAD.Foundation.EnumGuiWindowFlags。枚举常量类; 成员均为整数常量。">
+{
+    常量 No背景 <公开 类型 = 整数 值 = 16 注释 = "NoBackground">
+    常量 NoCollapse <公开 类型 = 整数 值 = 8 注释 = "NoCollapse">
+    常量 No焦点在Appearing <公开 类型 = 整数 值 = 256 注释 = "NoFocusOnAppearing">
+    常量 No鼠标Inputs <公开 类型 = 整数 值 = 128 注释 = "NoMouseInputs">
+    常量 No移动 <公开 类型 = 整数 值 = 4 注释 = "NoMove">
+    常量 NoNav <公开 类型 = 整数 值 = 64 注释 = "NoNav">
+    常量 No调整大小 <公开 类型 = 整数 值 = 2 注释 = "NoResize">
+    常量 NoScrollbar <公开 类型 = 整数 值 = 32 注释 = "NoScrollbar">
+    常量 No标题条 <公开 类型 = 整数 值 = 1 注释 = "NoTitleBar">
+    常量 无 <公开 类型 = 整数 值 = 0 注释 = "None">
+}
+
+类 AnyCAD基础_枚举图形界面颜色编辑标志集 <公开 注释 = "对应 AnyCAD.Foundation.EnumGuiColorEditFlags。枚举常量类; 成员均为整数常量。">
+{
+    常量 透明度条 <公开 类型 = 整数 值 = 256 注释 = "AlphaBar">
+    常量 透明度预览 <公开 类型 = 整数 值 = 512 注释 = "AlphaPreview">
+    常量 透明度预览半 <公开 类型 = 整数 值 = 1024 注释 = "AlphaPreviewHalf">
+    常量 显示HSV <公开 类型 = 整数 值 = 8192 注释 = "DisplayHSV">
+    常量 显示六面体 <公开 类型 = 整数 值 = 16384 注释 = "DisplayHex">
+    常量 显示红绿蓝 <公开 类型 = 整数 值 = 4096 注释 = "DisplayRGB">
+    常量 单精度 <公开 类型 = 整数 值 = 65536 注释 = "Float">
+    常量 HDR <公开 类型 = 整数 值 = 2048 注释 = "HDR">
+    常量 输入HSV <公开 类型 = 整数 值 = 262144 注释 = "InputHSV">
+    常量 输入红绿蓝 <公开 类型 = 整数 值 = 131072 注释 = "InputRGB">
+    常量 No透明度 <公开 类型 = 整数 值 = 1 注释 = "NoAlpha">
+    常量 No拖动放下 <公开 类型 = 整数 值 = 128 注释 = "NoDragDrop">
+    常量 NoInputs <公开 类型 = 整数 值 = 16 注释 = "NoInputs">
+    常量 No标签 <公开 类型 = 整数 值 = 64 注释 = "NoLabel">
+    常量 No选项集 <公开 类型 = 整数 值 = 4 注释 = "NoOptions">
+    常量 No拾取器 <公开 类型 = 整数 值 = 2 注释 = "NoPicker">
+    常量 No小预览 <公开 类型 = 整数 值 = 8 注释 = "NoSmallPreview">
+    常量 No提示 <公开 类型 = 整数 值 = 32 注释 = "NoTooltip">
+    常量 无 <公开 类型 = 整数 值 = 0 注释 = "None">
+    常量 无符号整数8 <公开 类型 = 整数 值 = 32768 注释 = "Uint8">
+}
+
+类 AnyCAD基础_枚举填充Pattern样式 <公开 注释 = "对应 AnyCAD.Foundation.EnumFillPatternStyle。枚举常量类; 成员均为整数常量。">
+{
+    常量 全部 <公开 类型 = 整数 值 = 0 注释 = "All">
+    常量 叉乘直线集 <公开 类型 = 整数 值 = 6 注释 = "CrossLines">
+    常量 空 <公开 类型 = 整数 值 = 1 注释 = "Empty">
+    常量 Halftone <公开 类型 = 整数 值 = 8 注释 = "Halftone">
+    常量 水平直线集 <公开 类型 = 整数 值 = 2 注释 = "HorizontalLines">
+    常量 左对角线直线集 <公开 类型 = 整数 值 = 5 注释 = "LeftDiagonalLines">
+    常量 右对角线直线集 <公开 类型 = 整数 值 = 4 注释 = "RightDiagonalLines">
+    常量 Slope叉乘直线集 <公开 类型 = 整数 值 = 9 注释 = "SlopeCrossLines">
+    常量 Slope直线集 <公开 类型 = 整数 值 = 7 注释 = "SlopeLines">
+    常量 竖直直线集 <公开 类型 = 整数 值 = 3 注释 = "VerticalLines">
+}
+
+类 AnyCAD基础_枚举夹点类型 <公开 注释 = "对应 AnyCAD.Foundation.EnumGripType。枚举常量类; 成员均为整数常量。">
+{
+    常量 中心 <公开 类型 = 整数 值 = 3 注释 = "Center">
+    常量 叉乘 <公开 类型 = 整数 值 = 4 注释 = "Cross">
+    常量 中点 <公开 类型 = 整数 值 = 2 注释 = "Middle">
+    常量 顶点 <公开 类型 = 整数 值 = 1 注释 = "Vertex">
+    常量 横坐标直线 <公开 类型 = 整数 值 = 5 注释 = "XLine">
+    常量 纵坐标直线 <公开 类型 = 整数 值 = 6 注释 = "YLine">
+    常量 零 <公开 类型 = 整数 值 = 0 注释 = "Zero">
+}
+
+类 AnyCAD基础_枚举字体类型 <公开 注释 = "对应 AnyCAD.Foundation.EnumFontType。枚举常量类; 成员均为整数常量。">
+{
+    常量 SHX <公开 类型 = 整数 值 = 0 注释 = "SHX">
+    常量 TTF <公开 类型 = 整数 值 = 1 注释 = "TTF">
+}
+
+类 AnyCAD基础_枚举导航方案 <公开 注释 = "对应 AnyCAD.Foundation.EnumNavigationScheme。枚举常量类; 成员均为整数常量。">
+{
+    常量 Blender <公开 类型 = 整数 值 = 1 注释 = "Blender">
+    常量 默认 <公开 类型 = 整数 值 = 0 注释 = "Default">
+    常量 Maya <公开 类型 = 整数 值 = 2 注释 = "Maya">
+    常量 打开Cascade <公开 类型 = 整数 值 = 3 注释 = "OpenCascade">
+    常量 打开Inventor <公开 类型 = 整数 值 = 4 注释 = "OpenInventor">
+    常量 打开SCAD <公开 类型 = 整数 值 = 5 注释 = "OpenSCAD">
+    常量 Revit <公开 类型 = 整数 值 = 6 注释 = "Revit">
+    常量 Tinker计算机辅助设计 <公开 类型 = 整数 值 = 7 注释 = "TinkerCAD">
+    常量 用户已定义 <公开 类型 = 整数 值 = 8 注释 = "UserDefined">
+}
+
+类 AnyCAD基础_枚举尺寸文本位置 <公开 注释 = "对应 AnyCAD.Foundation.EnumDimensionTextPosition。枚举常量类; 成员均为整数常量。">
+{
+    常量 上方 <公开 类型 = 整数 值 = 1 注释 = "Above">
+    常量 下方 <公开 类型 = 整数 值 = 4 注释 = "Below">
+    常量 中心 <公开 类型 = 整数 值 = 0 注释 = "Center">
+    常量 JIS <公开 类型 = 整数 值 = 3 注释 = "JIS">
+    常量 外部 <公开 类型 = 整数 值 = 2 注释 = "Outside">
+}
+
+类 AnyCAD基础_枚举尺寸标注文本对齐 <公开 注释 = "对应 AnyCAD.Foundation.EnumDimTextAlignment。枚举常量类; 成员均为整数常量。">
+{
+    常量 尺寸标注直线 <公开 类型 = 整数 值 = 0 注释 = "DimLine">
+    常量 水平 <公开 类型 = 整数 值 = 1 注释 = "Horizontal">
+}
+
+类 AnyCAD基础_枚举尺寸标注水平位置 <公开 注释 = "对应 AnyCAD.Foundation.EnumDimHorizontalPosition。枚举常量类; 成员均为整数常量。">
+{
+    常量 上方延伸直线1 <公开 类型 = 整数 值 = 3 注释 = "AboveExtensionLine1">
+    常量 上方延伸直线2 <公开 类型 = 整数 值 = 4 注释 = "AboveExtensionLine2">
+    常量 中心 <公开 类型 = 整数 值 = 0 注释 = "Center">
+    常量 延伸直线1 <公开 类型 = 整数 值 = 1 注释 = "ExtensionLine1">
+    常量 延伸直线2 <公开 类型 = 整数 值 = 2 注释 = "ExtensionLine2">
+}
+
+类 AnyCAD基础_枚举尺寸标注直线序号 <公开 注释 = "对应 AnyCAD.Foundation.EnumDimLineIndex。枚举常量类; 成员均为整数常量。">
+{
+    常量 尺寸标注直线 <公开 类型 = 整数 值 = 0 注释 = "DimLine">
+    常量 扩展直线1 <公开 类型 = 整数 值 = 1 注释 = "ExtLine1">
+    常量 扩展直线2 <公开 类型 = 整数 值 = 2 注释 = "ExtLine2">
+}
+
+类 AnyCAD基础_枚举尺寸箭头样式 <公开 注释 = "对应 AnyCAD.Foundation.EnumDimensionArrowStyle。枚举常量类; 成员均为整数常量。">
+{
+    常量 ARCHTICK <公开 类型 = 整数 值 = 2 注释 = "ARCHTICK">
+    常量 箭头 <公开 类型 = 整数 值 = 3 注释 = "ARROW">
+    常量 箭头坯料 <公开 类型 = 整数 值 = 4 注释 = "ARROW_BLANK">
+    常量 箭头填充 <公开 类型 = 整数 值 = 5 注释 = "ARROW_FILLED">
+    常量 点乘 <公开 类型 = 整数 值 = 1 注释 = "DOT">
+    常量 点乘小 <公开 类型 = 整数 值 = 0 注释 = "DOT_SMALL">
+    常量 空 <公开 类型 = 整数 值 = 6 注释 = "EMPTY">
+}
+
+类 AnyCAD基础_枚举工作台类型 <公开 注释 = "对应 AnyCAD.Foundation.EnumWorkbenchType。枚举常量类; 成员均为整数常量。">
+{
+    常量 分析 <公开 类型 = 整数 值 = 3 注释 = "Analysis">
+    常量 任意 <公开 类型 = 整数 值 = 0 注释 = "Any">
+    常量 装配 <公开 类型 = 整数 值 = 2 注释 = "Assembly">
+    常量 已炸开视图 <公开 类型 = 整数 值 = 6 注释 = "ExplodedView">
+    常量 机加工作业 <公开 类型 = 整数 值 = 4 注释 = "MachiningJob">
+    常量 零件 <公开 类型 = 整数 值 = 1 注释 = "Part">
+    常量 管系统 <公开 类型 = 整数 值 = 8 注释 = "PipeSystem">
+    常量 程序 <公开 类型 = 整数 值 = 5 注释 = "Program">
+    常量 Structure图框 <公开 类型 = 整数 值 = 7 注释 = "StructureFrame">
+    常量 Unknown <公开 类型 = 整数 值 = 0 注释 = "Unknown">
+}
+
+类 AnyCAD基础_枚举工作空间类型 <公开 注释 = "对应 AnyCAD.Foundation.EnumWorkspaceType。枚举常量类; 成员均为整数常量。">
+{
+    常量 任意 <公开 类型 = 整数 值 = 0 注释 = "Any">
+    常量 草图 <公开 类型 = 整数 值 = 1 注释 = "Sketch">
+    常量 空间 <公开 类型 = 整数 值 = 2 注释 = "Space">
+    常量 零 <公开 类型 = 整数 值 = 0 注释 = "Zero">
+}
+
+类 AnyCAD基础_枚举布尔类型 <公开 注释 = "对应 AnyCAD.Foundation.EnumBooleanType。枚举常量类; 成员均为整数常量。">
+{
+    常量 交集 <公开 类型 = 整数 值 = 0 注释 = "Common">
+    常量 切除 <公开 类型 = 整数 值 = 2 注释 = "Cut">
+    常量 合并 <公开 类型 = 整数 值 = 1 注释 = "Fuse">
+}
+
+类 AnyCAD基础_枚举帧缓冲目标 <公开 注释 = "对应 AnyCAD.Foundation.EnumFramebufferTarget。枚举常量类; 成员均为整数常量。">
+{
+    常量 绘制帧缓冲 <公开 类型 = 整数 值 = 36009 注释 = "DRAW_FRAMEBUFFER">
+    常量 帧缓冲 <公开 类型 = 整数 值 = 36160 注释 = "FRAMEBUFFER">
+    常量 读取帧缓冲 <公开 类型 = 整数 值 = 36008 注释 = "READ_FRAMEBUFFER">
+}
+
+类 AnyCAD基础_枚举帧缓冲附件 <公开 注释 = "对应 AnyCAD.Foundation.EnumFramebufferAttachment。枚举常量类; 成员均为整数常量。">
+{
+    常量 后 <公开 类型 = 整数 值 = 1029 注释 = "BACK">
+    常量 颜色附件0 <公开 类型 = 整数 值 = 36064 注释 = "COLOR_ATTACHMENT0">
+    常量 颜色附件1 <公开 类型 = 整数 值 = 36065 注释 = "COLOR_ATTACHMENT1">
+    常量 颜色附件2 <公开 类型 = 整数 值 = 36066 注释 = "COLOR_ATTACHMENT2">
+    常量 颜色附件3 <公开 类型 = 整数 值 = 36067 注释 = "COLOR_ATTACHMENT3">
+    常量 深度附件 <公开 类型 = 整数 值 = 36096 注释 = "DEPTH_ATTACHMENT">
+    常量 深度模板缓冲附件 <公开 类型 = 整数 值 = 33306 注释 = "DEPTH_STENCIL_ATTACHMENT">
+    常量 无 <公开 类型 = 整数 值 = 0 注释 = "NONE">
+    常量 模板缓冲附件 <公开 类型 = 整数 值 = 36128 注释 = "STENCIL_ATTACHMENT">
+}
+
+类 AnyCAD基础_枚举平面侧 <公开 注释 = "对应 AnyCAD.Foundation.EnumPlaneSide。枚举常量类; 成员均为整数常量。">
+{
+    常量 两者侧 <公开 类型 = 整数 值 = 3 注释 = "BOTH_SIDE">
+    常量 负侧 <公开 类型 = 整数 值 = 2 注释 = "NEGATIVE_SIDE">
+    常量 NO侧 <公开 类型 = 整数 值 = 0 注释 = "NO_SIDE">
+    常量 正侧 <公开 类型 = 整数 值 = 1 注释 = "POSITIVE_SIDE">
+}
+
+类 AnyCAD基础_枚举应用事件类型 <公开 注释 = "对应 AnyCAD.Foundation.EnumAppEventType。枚举常量类; 成员均为整数常量。">
+{
+    常量 之前切换数据库视图 <公开 类型 = 整数 值 = 12 注释 = "BeforeSwitchDbView">
+    常量 摄像机已变更 <公开 类型 = 整数 值 = 15 注释 = "CameraChanged">
+    常量 命令已结束 <公开 类型 = 整数 值 = 21 注释 = "CommandFinished">
+    常量 命令已启动 <公开 类型 = 整数 值 = 20 注释 = "CommandStarted">
+    常量 提交输入 <公开 类型 = 整数 值 = 62 注释 = "CommitInput">
+    常量 文档闭合 <公开 类型 = 整数 值 = 8 注释 = "DocumentClosed">
+    常量 编辑模式已结束 <公开 类型 = 整数 值 = 29 注释 = "EditModeFinished">
+    常量 编辑模式已启动 <公开 类型 = 整数 值 = 28 注释 = "EditModeStarted">
+    常量 编辑器激活 <公开 类型 = 整数 值 = 25 注释 = "EditorActivate">
+    常量 编辑器已结束 <公开 类型 = 整数 值 = 24 注释 = "EditorFinished">
+    常量 编辑器Stared <公开 类型 = 整数 值 = 22 注释 = "EditorStared">
+    常量 元素已添加 <公开 类型 = 整数 值 = 33 注释 = "ElementAdded">
+    常量 元素已变更 <公开 类型 = 整数 值 = 32 注释 = "ElementChanged">
+    常量 元素已移除 <公开 类型 = 整数 值 = 31 注释 = "ElementRemoved">
+    常量 终点输入 <公开 类型 = 整数 值 = 63 注释 = "EndInput">
+    常量 模型已创建 <公开 类型 = 整数 值 = 11 注释 = "ModelCreated">
+    常量 模型已载入 <公开 类型 = 整数 值 = 10 注释 = "ModelLoaded">
+    常量 预览输入 <公开 类型 = 整数 值 = 61 注释 = "PreviewInput">
+    常量 报告错误 <公开 类型 = 整数 值 = 100 注释 = "ReportError">
+    常量 保存元素起始 <公开 类型 = 整数 值 = 30 注释 = "SaveElementBegin">
+    常量 保存元素终点 <公开 类型 = 整数 值 = 34 注释 = "SaveElementEnd">
+    常量 选择集已变更 <公开 类型 = 整数 值 = 50 注释 = "SelectionChanged">
+    常量 显示上下文菜单 <公开 类型 = 整数 值 = 65 注释 = "ShowContextMenu">
+    常量 切换数据库视图 <公开 类型 = 整数 值 = 13 注释 = "SwitchDbView">
+    常量 切换文档 <公开 类型 = 整数 值 = 9 注释 = "SwitchDocument">
+    常量 切换工作台 <公开 类型 = 整数 值 = 66 注释 = "SwitchWorkbench">
+    常量 切换工作空间 <公开 类型 = 整数 值 = 67 注释 = "SwitchWorkspace">
+    常量 提示消息 <公开 类型 = 整数 值 = 64 注释 = "TooltipMessage">
+    常量 更新编辑器参数 <公开 类型 = 整数 值 = 23 注释 = "UpdateEditorParams">
+}
+
+类 AnyCAD基础_枚举形状过滤 <公开 注释 = "对应 AnyCAD.Foundation.EnumShapeFilter。枚举常量类; 成员均为整数常量。">
+{
+    常量 边 <公开 类型 = 整数 值 = 2 注释 = "Edge">
+    常量 边面 <公开 类型 = 整数 值 = 6 注释 = "EdgeFace">
+    常量 边顶点 <公开 类型 = 整数 值 = 3 注释 = "EdgeVertex">
+    常量 面 <公开 类型 = 整数 值 = 4 注释 = "Face">
+    常量 面顶点 <公开 类型 = 整数 值 = 5 注释 = "FaceVertex">
+    常量 组 <公开 类型 = 整数 值 = 39 注释 = "Group">
+    常量 叶节点节点 <公开 类型 = 整数 值 = 16 注释 = "LeafNode">
+    常量 节点 <公开 类型 = 整数 值 = 48 注释 = "Node">
+    常量 对象_值 <公开 类型 = 整数 值 = 23 注释 = "Object">
+    常量 根节点 <公开 类型 = 整数 值 = 32 注释 = "RootNode">
+    常量 顶点 <公开 类型 = 整数 值 = 1 注释 = "Vertex">
+    常量 顶点边面 <公开 类型 = 整数 值 = 7 注释 = "VertexEdgeFace">
+    常量 零 <公开 类型 = 整数 值 = 0 注释 = "Zero">
+}
+
+类 AnyCAD基础_枚举扫掠模式 <公开 注释 = "对应 AnyCAD.Foundation.EnumSweepMode。枚举常量类; 成员均为整数常量。">
+{
+    常量 基本 <公开 类型 = 整数 值 = 0 注释 = "Basic">
+    常量 Discrete <公开 类型 = 整数 值 = 1 注释 = "Discrete">
+    常量 螺旋线脊线 <公开 类型 = 整数 值 = 2 注释 = "SpiralSpine">
+}
+
+类 AnyCAD基础_枚举扫掠过渡模式 <公开 注释 = "对应 AnyCAD.Foundation.EnumSweepTransitionMode。枚举常量类; 成员均为整数常量。">
+{
+    常量 直角过渡 <公开 类型 = 整数 值 = 1 注释 = "RightCorner">
+    常量 圆角过渡 <公开 类型 = 整数 值 = 2 注释 = "RoundCorner">
+    常量 已变换 <公开 类型 = 整数 值 = 0 注释 = "Transformed">
+}
+
+类 AnyCAD基础_枚举投影类型 <公开 注释 = "对应 AnyCAD.Foundation.EnumProjectionType。枚举常量类; 成员均为整数常量。">
+{
+    常量 Orthographic <公开 类型 = 整数 值 = 0 注释 = "Orthographic">
+    常量 透视 <公开 类型 = 整数 值 = 1 注释 = "Perspective">
+}
+
+类 AnyCAD基础_枚举拓扑方位 <公开 注释 = "对应 AnyCAD.Foundation.EnumTopoOrientation。枚举常量类; 成员均为整数常量。">
+{
+    常量 外部 <公开 类型 = 整数 值 = 3 注释 = "EXTERNAL">
+    常量 向前 <公开 类型 = 整数 值 = 0 注释 = "FORWARD">
+    常量 内部 <公开 类型 = 整数 值 = 2 注释 = "INTERNAL">
+    常量 反向 <公开 类型 = 整数 值 = 1 注释 = "REVERSED">
+}
+
+类 AnyCAD基础_枚举数据类型 <公开 注释 = "对应 AnyCAD.Foundation.EnumDataType。枚举常量类; 成员均为整数常量。">
+{
+    常量 字节_值 <公开 类型 = 整数 值 = 5120 注释 = "BYTE">
+    常量 双 <公开 类型 = 整数 值 = 5130 注释 = "DOUBLE">
+    常量 单精度 <公开 类型 = 整数 值 = 5126 注释 = "FLOAT">
+    常量 单精度32UNSIGNED整数248REV <公开 类型 = 整数 值 = 36269 注释 = "FLOAT_32_UNSIGNED_INT_24_8_REV">
+    常量 半单精度 <公开 类型 = 整数 值 = 5131 注释 = "HALF_FLOAT">
+    常量 整数_值 <公开 类型 = 整数 值 = 5124 注释 = "INT">
+    常量 短整数_值 <公开 类型 = 整数 值 = 5122 注释 = "SHORT">
+    常量 UNSIGNED字节 <公开 类型 = 整数 值 = 5121 注释 = "UNSIGNED_BYTE">
+    常量 UNSIGNED整数 <公开 类型 = 整数 值 = 5125 注释 = "UNSIGNED_INT">
+    常量 UNSIGNED整数248 <公开 类型 = 整数 值 = 34042 注释 = "UNSIGNED_INT_24_8">
+    常量 UNSIGNED短整数 <公开 类型 = 整数 值 = 5123 注释 = "UNSIGNED_SHORT">
+}
+
+类 AnyCAD基础_枚举文本对齐 <公开 注释 = "对应 AnyCAD.Foundation.EnumTextAlignment。枚举常量类; 成员均为整数常量。">
+{
+    常量 对齐 <公开 类型 = 整数 值 = 14 注释 = "Align">
+    常量 中心BASELINE <公开 类型 = 整数 值 = 10 注释 = "CENTER_BASELINE">
+    常量 中心底 <公开 类型 = 整数 值 = 5 注释 = "CENTER_BOTTOM">
+    常量 中心中心 <公开 类型 = 整数 值 = 4 注释 = "CENTER_CENTER">
+    常量 中心顶 <公开 类型 = 整数 值 = 3 注释 = "CENTER_TOP">
+    常量 拟合 <公开 类型 = 整数 值 = 13 注释 = "Fit">
+    常量 左BASELINE <公开 类型 = 整数 值 = 9 注释 = "LEFT_BASELINE">
+    常量 左底 <公开 类型 = 整数 值 = 2 注释 = "LEFT_BOTTOM">
+    常量 左中心 <公开 类型 = 整数 值 = 1 注释 = "LEFT_CENTER">
+    常量 左顶 <公开 类型 = 整数 值 = 0 注释 = "LEFT_TOP">
+    常量 中点 <公开 类型 = 整数 值 = 12 注释 = "Middle">
+    常量 右BASELINE <公开 类型 = 整数 值 = 11 注释 = "RIGHT_BASELINE">
+    常量 右底 <公开 类型 = 整数 值 = 8 注释 = "RIGHT_BOTTOM">
+    常量 右中心 <公开 类型 = 整数 值 = 7 注释 = "RIGHT_CENTER">
+    常量 右顶 <公开 类型 = 整数 值 = 6 注释 = "RIGHT_TOP">
+}
+
+类 AnyCAD基础_枚举文本编码 <公开 注释 = "对应 AnyCAD.Foundation.EnumTextEncoding。枚举常量类; 成员均为整数常量。">
+{
+    常量 UTF8编码 <公开 类型 = 整数 值 = 1 注释 = "UTF8">
+    常量 Unicode <公开 类型 = 整数 值 = 0 注释 = "Unicode">
+}
+
+类 AnyCAD基础_枚举映射关系 <公开 注释 = "对应 AnyCAD.Foundation.EnumMapping。枚举常量类; 成员均为整数常量。">
+{
+    常量 立方体反射映射关系 <公开 类型 = 整数 值 = 301 注释 = "CubeReflectionMapping">
+    常量 立方体折射映射关系 <公开 类型 = 整数 值 = 302 注释 = "CubeRefractionMapping">
+    常量 立方体参数面反射映射关系 <公开 类型 = 整数 值 = 306 注释 = "CubeUVReflectionMapping">
+    常量 立方体参数面折射映射关系 <公开 类型 = 整数 值 = 307 注释 = "CubeUVRefractionMapping">
+    常量 Equirectangular反射映射关系 <公开 类型 = 整数 值 = 303 注释 = "EquirectangularReflectionMapping">
+    常量 Equirectangular折射映射关系 <公开 类型 = 整数 值 = 304 注释 = "EquirectangularRefractionMapping">
+    常量 PMREM反射映射关系 <公开 类型 = 整数 值 = 308 注释 = "PMREMReflectionMapping">
+    常量 参数面映射关系 <公开 类型 = 整数 值 = 300 注释 = "UVMapping">
+}
+
+类 AnyCAD基础_枚举显示模式 <公开 注释 = "对应 AnyCAD.Foundation.EnumDisplayMode。枚举常量类; 成员均为整数常量。">
+{
+    常量 颜色 <公开 类型 = 整数 值 = 0 注释 = "Color">
+    常量 消隐线 <公开 类型 = 整数 值 = 2 注释 = "HLR">
+    常量 Realistic <公开 类型 = 整数 值 = 1 注释 = "Realistic">
+    常量 Wireframe <公开 类型 = 整数 值 = 3 注释 = "Wireframe">
+}
+
+类 AnyCAD基础_枚举曲率类型 <公开 注释 = "对应 AnyCAD.Foundation.EnumCurvatureType。枚举常量类; 成员均为整数常量。">
+{
+    常量 高斯曲率 <公开 类型 = 整数 值 = 3 注释 = "GaussianCurvature">
+    常量 最大曲率 <公开 类型 = 整数 值 = 0 注释 = "MaxCurvature">
+    常量 平均曲率 <公开 类型 = 整数 值 = 2 注释 = "MeanCurvature">
+    常量 最小曲率 <公开 类型 = 整数 值 = 1 注释 = "MinCurvature">
+}
+
+类 AnyCAD基础_枚举曲线类型 <公开 注释 = "对应 AnyCAD.Foundation.EnumCurveType。枚举常量类; 成员均为整数常量。">
+{
+    常量 曲线类型样条曲线 <公开 类型 = 整数 值 = 6 注释 = "CurveType_BSplineCurve">
+    常量 曲线类型贝塞尔曲线 <公开 类型 = 整数 值 = 5 注释 = "CurveType_BezierCurve">
+    常量 曲线类型圆 <公开 类型 = 整数 值 = 1 注释 = "CurveType_Circle">
+    常量 曲线类型椭圆 <公开 类型 = 整数 值 = 2 注释 = "CurveType_Ellipse">
+    常量 曲线类型双曲线 <公开 类型 = 整数 值 = 3 注释 = "CurveType_Hyperbola">
+    常量 曲线类型直线 <公开 类型 = 整数 值 = 0 注释 = "CurveType_Line">
+    常量 曲线类型偏移曲线 <公开 类型 = 整数 值 = 7 注释 = "CurveType_OffsetCurve">
+    常量 曲线类型其它曲线 <公开 类型 = 整数 值 = 8 注释 = "CurveType_OtherCurve">
+    常量 曲线类型抛物线 <公开 类型 = 整数 值 = 4 注释 = "CurveType_Parabola">
+}
+

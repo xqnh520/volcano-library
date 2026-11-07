@@ -1,0 +1,1971 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.安卓.组件.MP图表
+
+类 MP图表动画器类 <公开 @别名 = "com.github.mikephil.charting.animation.ChartAnimator" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.animation.ChartAnimator.">
+{
+
+    方法 新建图表动画器 <公开 静态 类型 = MP图表动画器类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.animation.ChartAnimator()">
+    {
+        @ new com.github.mikephil.charting.animation.ChartAnimator ()
+    }
+
+    方法 新建图表动画器_2 <公开 静态 类型 = MP图表动画器类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.animation.ChartAnimator(android.animation.ValueAnimator$AnimatorUpdateListener)">
+    参数 监听器 <类型 = MP动画更新监听类>
+    {
+        @ new com.github.mikephil.charting.animation.ChartAnimator (@<监听器>)
+    }
+
+    方法 动画横坐标 <公开 静态 注释 = "java: public void animateX(int)">
+    参数 当前对象 <类型 = MP图表动画器类>
+    参数 时长毫秒 <类型 = 整数>
+    {
+        @ @<当前对象>.animateX (@<时长毫秒>);
+    }
+
+    方法 动画横坐标_2 <公开 静态 注释 = "java: public void animateX(int, com.github.mikephil.charting.animation.Easing$EasingFunction)">
+    参数 当前对象 <类型 = MP图表动画器类>
+    参数 时长毫秒 <类型 = 整数>
+    参数 缓动 <类型 = MP缓动函数类>
+    {
+        @ @<当前对象>.animateX (@<时长毫秒>, @<缓动>);
+    }
+
+    方法 动画横纵 <公开 静态 注释 = "java: public void animateXY(int, int)">
+    参数 当前对象 <类型 = MP图表动画器类>
+    参数 时长毫秒横坐标 <类型 = 整数>
+    参数 时长毫秒纵坐标 <类型 = 整数>
+    {
+        @ @<当前对象>.animateXY (@<时长毫秒横坐标>, @<时长毫秒纵坐标>);
+    }
+
+    方法 动画横纵_2 <公开 静态 注释 = "java: public void animateXY(int, int, com.github.mikephil.charting.animation.Easing$EasingFunction)">
+    参数 当前对象 <类型 = MP图表动画器类>
+    参数 时长毫秒横坐标 <类型 = 整数>
+    参数 时长毫秒纵坐标 <类型 = 整数>
+    参数 缓动 <类型 = MP缓动函数类>
+    {
+        @ @<当前对象>.animateXY (@<时长毫秒横坐标>, @<时长毫秒纵坐标>, @<缓动>);
+    }
+
+    方法 动画横纵_3 <公开 静态 注释 = "java: public void animateXY(int, int, com.github.mikephil.charting.animation.Easing$EasingFunction, com.github.mikephil.charting.animation.Easing$EasingFunction)">
+    参数 当前对象 <类型 = MP图表动画器类>
+    参数 时长毫秒横坐标 <类型 = 整数>
+    参数 时长毫秒纵坐标 <类型 = 整数>
+    参数 缓动横坐标 <类型 = MP缓动函数类>
+    参数 缓动纵坐标 <类型 = MP缓动函数类>
+    {
+        @ @<当前对象>.animateXY (@<时长毫秒横坐标>, @<时长毫秒纵坐标>, @<缓动横坐标>, @<缓动纵坐标>);
+    }
+
+    方法 动画纵坐标 <公开 静态 注释 = "java: public void animateY(int)">
+    参数 当前对象 <类型 = MP图表动画器类>
+    参数 时长毫秒 <类型 = 整数>
+    {
+        @ @<当前对象>.animateY (@<时长毫秒>);
+    }
+
+    方法 动画纵坐标_2 <公开 静态 注释 = "java: public void animateY(int, com.github.mikephil.charting.animation.Easing$EasingFunction)">
+    参数 当前对象 <类型 = MP图表动画器类>
+    参数 时长毫秒 <类型 = 整数>
+    参数 缓动 <类型 = MP缓动函数类>
+    {
+        @ @<当前对象>.animateY (@<时长毫秒>, @<缓动>);
+    }
+
+    方法 取相位纵坐标 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getPhaseY()">
+    参数 当前对象 <类型 = MP图表动画器类>
+    {
+        @ @<当前对象>.getPhaseY ()
+    }
+
+    方法 设置相位纵坐标 <公开 静态 注释 = "java: public void setPhaseY(float)">
+    参数 当前对象 <类型 = MP图表动画器类>
+    参数 相位 <类型 = 小数>
+    {
+        @ @<当前对象>.setPhaseY ((float) @<相位>);
+    }
+
+    方法 取相位横坐标 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getPhaseX()">
+    参数 当前对象 <类型 = MP图表动画器类>
+    {
+        @ @<当前对象>.getPhaseX ()
+    }
+
+    方法 设置相位横坐标 <公开 静态 注释 = "java: public void setPhaseX(float)">
+    参数 当前对象 <类型 = MP图表动画器类>
+    参数 相位 <类型 = 小数>
+    {
+        @ @<当前对象>.setPhaseX ((float) @<相位>);
+    }
+
+}
+
+类 MP缓动函数集类 <公开 @别名 = "com.github.mikephil.charting.animation.Easing" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.animation.Easing.">
+{
+
+    方法 新建缓动函数集 <公开 静态 类型 = MP缓动函数集类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.animation.Easing()">
+    {
+        @ new com.github.mikephil.charting.animation.Easing ()
+    }
+
+    方法 取线性 <公开 静态 类型 = MP缓动函数类 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.animation.Easing$EasingFunction Linear">
+    {
+        @ com.github.mikephil.charting.animation.Easing.Linear
+    }
+
+    方法 取缓动内二次 <公开 静态 类型 = MP缓动函数类 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.animation.Easing$EasingFunction EaseInQuad">
+    {
+        @ com.github.mikephil.charting.animation.Easing.EaseInQuad
+    }
+
+    方法 取缓动外二次 <公开 静态 类型 = MP缓动函数类 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.animation.Easing$EasingFunction EaseOutQuad">
+    {
+        @ com.github.mikephil.charting.animation.Easing.EaseOutQuad
+    }
+
+    方法 取缓动内外二次 <公开 静态 类型 = MP缓动函数类 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.animation.Easing$EasingFunction EaseInOutQuad">
+    {
+        @ com.github.mikephil.charting.animation.Easing.EaseInOutQuad
+    }
+
+    方法 取缓动内三次 <公开 静态 类型 = MP缓动函数类 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.animation.Easing$EasingFunction EaseInCubic">
+    {
+        @ com.github.mikephil.charting.animation.Easing.EaseInCubic
+    }
+
+    方法 取缓动外三次 <公开 静态 类型 = MP缓动函数类 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.animation.Easing$EasingFunction EaseOutCubic">
+    {
+        @ com.github.mikephil.charting.animation.Easing.EaseOutCubic
+    }
+
+    方法 取缓动内外三次 <公开 静态 类型 = MP缓动函数类 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.animation.Easing$EasingFunction EaseInOutCubic">
+    {
+        @ com.github.mikephil.charting.animation.Easing.EaseInOutCubic
+    }
+
+    方法 取缓动内四次 <公开 静态 类型 = MP缓动函数类 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.animation.Easing$EasingFunction EaseInQuart">
+    {
+        @ com.github.mikephil.charting.animation.Easing.EaseInQuart
+    }
+
+    方法 取缓动外四次 <公开 静态 类型 = MP缓动函数类 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.animation.Easing$EasingFunction EaseOutQuart">
+    {
+        @ com.github.mikephil.charting.animation.Easing.EaseOutQuart
+    }
+
+    方法 取缓动内外四次 <公开 静态 类型 = MP缓动函数类 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.animation.Easing$EasingFunction EaseInOutQuart">
+    {
+        @ com.github.mikephil.charting.animation.Easing.EaseInOutQuart
+    }
+
+    方法 取缓动内正弦 <公开 静态 类型 = MP缓动函数类 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.animation.Easing$EasingFunction EaseInSine">
+    {
+        @ com.github.mikephil.charting.animation.Easing.EaseInSine
+    }
+
+    方法 取缓动外正弦 <公开 静态 类型 = MP缓动函数类 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.animation.Easing$EasingFunction EaseOutSine">
+    {
+        @ com.github.mikephil.charting.animation.Easing.EaseOutSine
+    }
+
+    方法 取缓动内外正弦 <公开 静态 类型 = MP缓动函数类 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.animation.Easing$EasingFunction EaseInOutSine">
+    {
+        @ com.github.mikephil.charting.animation.Easing.EaseInOutSine
+    }
+
+    方法 取缓动内指数 <公开 静态 类型 = MP缓动函数类 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.animation.Easing$EasingFunction EaseInExpo">
+    {
+        @ com.github.mikephil.charting.animation.Easing.EaseInExpo
+    }
+
+    方法 取缓动外指数 <公开 静态 类型 = MP缓动函数类 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.animation.Easing$EasingFunction EaseOutExpo">
+    {
+        @ com.github.mikephil.charting.animation.Easing.EaseOutExpo
+    }
+
+    方法 取缓动内外指数 <公开 静态 类型 = MP缓动函数类 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.animation.Easing$EasingFunction EaseInOutExpo">
+    {
+        @ com.github.mikephil.charting.animation.Easing.EaseInOutExpo
+    }
+
+    方法 取缓动内圆形 <公开 静态 类型 = MP缓动函数类 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.animation.Easing$EasingFunction EaseInCirc">
+    {
+        @ com.github.mikephil.charting.animation.Easing.EaseInCirc
+    }
+
+    方法 取缓动外圆形 <公开 静态 类型 = MP缓动函数类 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.animation.Easing$EasingFunction EaseOutCirc">
+    {
+        @ com.github.mikephil.charting.animation.Easing.EaseOutCirc
+    }
+
+    方法 取缓动内外圆形 <公开 静态 类型 = MP缓动函数类 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.animation.Easing$EasingFunction EaseInOutCirc">
+    {
+        @ com.github.mikephil.charting.animation.Easing.EaseInOutCirc
+    }
+
+    方法 取缓动内弹性 <公开 静态 类型 = MP缓动函数类 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.animation.Easing$EasingFunction EaseInElastic">
+    {
+        @ com.github.mikephil.charting.animation.Easing.EaseInElastic
+    }
+
+    方法 取缓动外弹性 <公开 静态 类型 = MP缓动函数类 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.animation.Easing$EasingFunction EaseOutElastic">
+    {
+        @ com.github.mikephil.charting.animation.Easing.EaseOutElastic
+    }
+
+    方法 取缓动内外弹性 <公开 静态 类型 = MP缓动函数类 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.animation.Easing$EasingFunction EaseInOutElastic">
+    {
+        @ com.github.mikephil.charting.animation.Easing.EaseInOutElastic
+    }
+
+    方法 取缓动内回弹 <公开 静态 类型 = MP缓动函数类 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.animation.Easing$EasingFunction EaseInBack">
+    {
+        @ com.github.mikephil.charting.animation.Easing.EaseInBack
+    }
+
+    方法 取缓动外回弹 <公开 静态 类型 = MP缓动函数类 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.animation.Easing$EasingFunction EaseOutBack">
+    {
+        @ com.github.mikephil.charting.animation.Easing.EaseOutBack
+    }
+
+    方法 取缓动内外回弹 <公开 静态 类型 = MP缓动函数类 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.animation.Easing$EasingFunction EaseInOutBack">
+    {
+        @ com.github.mikephil.charting.animation.Easing.EaseInOutBack
+    }
+
+    方法 取缓动内弹跳 <公开 静态 类型 = MP缓动函数类 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.animation.Easing$EasingFunction EaseInBounce">
+    {
+        @ com.github.mikephil.charting.animation.Easing.EaseInBounce
+    }
+
+    方法 取缓动外弹跳 <公开 静态 类型 = MP缓动函数类 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.animation.Easing$EasingFunction EaseOutBounce">
+    {
+        @ com.github.mikephil.charting.animation.Easing.EaseOutBounce
+    }
+
+    方法 取缓动内外弹跳 <公开 静态 类型 = MP缓动函数类 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.animation.Easing$EasingFunction EaseInOutBounce">
+    {
+        @ com.github.mikephil.charting.animation.Easing.EaseInOutBounce
+    }
+
+}
+
+类 MP缓动函数类 <公开 @别名 = "com.github.mikephil.charting.animation.Easing$EasingFunction" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.animation.Easing$EasingFunction.">
+{
+
+    方法 取插值 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public abstract float getInterpolation(float)">
+    参数 当前对象 <类型 = MP缓动函数类>
+    参数 输入 <类型 = 小数>
+    {
+        @ @<当前对象>.getInterpolation ((float) @<输入>)
+    }
+
+}
+
+类 MP填充类 <公开 @别名 = "com.github.mikephil.charting.utils.Fill" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.utils.Fill.">
+{
+
+    方法 新建填充 <公开 静态 类型 = MP填充类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.utils.Fill()">
+    {
+        @ new com.github.mikephil.charting.utils.Fill ()
+    }
+
+    方法 新建填充_2 <公开 静态 类型 = MP填充类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.utils.Fill(int)">
+    参数 颜色 <类型 = 整数>
+    {
+        @ new com.github.mikephil.charting.utils.Fill (@<颜色>)
+    }
+
+    方法 新建填充_3 <公开 静态 类型 = MP填充类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.utils.Fill(int, int)">
+    参数 起始颜色 <类型 = 整数>
+    参数 结束颜色 <类型 = 整数>
+    {
+        @ new com.github.mikephil.charting.utils.Fill (@<起始颜色>, @<结束颜色>)
+    }
+
+    方法 新建填充_4 <公开 静态 类型 = MP填充类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.utils.Fill(int[])">
+    参数 渐变颜色集 <类型 = "整数 []">
+    {
+        @ new com.github.mikephil.charting.utils.Fill (@<渐变颜色集>)
+    }
+
+    方法 新建填充_5 <公开 静态 类型 = MP填充类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.utils.Fill(int[], float[])">
+    参数 渐变颜色集 <类型 = "整数 []">
+    参数 渐变位置集 <类型 = "小数 []">
+    {
+        @ new com.github.mikephil.charting.utils.Fill (@<渐变颜色集>, @<渐变位置集>)
+    }
+
+    方法 新建填充_6 <公开 静态 类型 = MP填充类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.utils.Fill(android.graphics.drawable.Drawable)">
+    参数 可绘制对象 <类型 = 可绘制对象类>
+    {
+        @ new com.github.mikephil.charting.utils.Fill (@<可绘制对象>)
+    }
+
+    方法 取类型 <公开 静态 类型 = MP填充类型 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.utils.Fill$Type getType()">
+    参数 当前对象 <类型 = MP填充类>
+    {
+        @ @<当前对象>.getType ()
+    }
+
+    方法 设置类型 <公开 静态 注释 = "java: public void setType(com.github.mikephil.charting.utils.Fill$Type)">
+    参数 当前对象 <类型 = MP填充类>
+    参数 类型 <类型 = MP填充类型>
+    {
+        @ @<当前对象>.setType (@<类型>);
+    }
+
+    方法 取颜色 <公开 静态 类型 = MP整数对象类 @嵌入式方法 = "" 注释 = "java: public java.lang.Integer getColor()">
+    参数 当前对象 <类型 = MP填充类>
+    {
+        @ @<当前对象>.getColor ()
+    }
+
+    方法 设置颜色 <公开 静态 注释 = "java: public void setColor(int)">
+    参数 当前对象 <类型 = MP填充类>
+    参数 颜色 <类型 = 整数>
+    {
+        @ @<当前对象>.setColor (@<颜色>);
+    }
+
+    方法 取渐变颜色集 <公开 静态 类型 = "整数 []" @嵌入式方法 = "" 注释 = "java: public int[] getGradientColors()">
+    参数 当前对象 <类型 = MP填充类>
+    {
+        @ @<当前对象>.getGradientColors ()
+    }
+
+    方法 设置渐变颜色集 <公开 静态 注释 = "java: public void setGradientColors(int[])">
+    参数 当前对象 <类型 = MP填充类>
+    参数 颜色集 <类型 = "整数 []">
+    {
+        @ @<当前对象>.setGradientColors (@<颜色集>);
+    }
+
+    方法 取渐变位置集 <公开 静态 类型 = "小数 []" @嵌入式方法 = "" 注释 = "java: public float[] getGradientPositions()">
+    参数 当前对象 <类型 = MP填充类>
+    {
+        @ @<当前对象>.getGradientPositions ()
+    }
+
+    方法 设置渐变位置集 <公开 静态 注释 = "java: public void setGradientPositions(float[])">
+    参数 当前对象 <类型 = MP填充类>
+    参数 位置集 <类型 = "小数 []">
+    {
+        @ @<当前对象>.setGradientPositions (@<位置集>);
+    }
+
+    方法 设置渐变颜色集_2 <公开 静态 注释 = "java: public void setGradientColors(int, int)">
+    参数 当前对象 <类型 = MP填充类>
+    参数 起始颜色 <类型 = 整数>
+    参数 结束颜色 <类型 = 整数>
+    {
+        @ @<当前对象>.setGradientColors (@<起始颜色>, @<结束颜色>);
+    }
+
+    方法 取透明度 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getAlpha()">
+    参数 当前对象 <类型 = MP填充类>
+    {
+        @ @<当前对象>.getAlpha ()
+    }
+
+    方法 设置透明度 <公开 静态 注释 = "java: public void setAlpha(int)">
+    参数 当前对象 <类型 = MP填充类>
+    参数 透明度 <类型 = 整数>
+    {
+        @ @<当前对象>.setAlpha (@<透明度>);
+    }
+
+    方法 填充矩形 <公开 静态 注释 = "java: public void fillRect(android.graphics.Canvas, android.graphics.Paint, float, float, float, float, com.github.mikephil.charting.utils.Fill$Direction)">
+    参数 当前对象 <类型 = MP填充类>
+    参数 颜色 <类型 = 画板类>
+    参数 画笔 <类型 = 画笔类>
+    参数 左 <类型 = 小数>
+    参数 上 <类型 = 小数>
+    参数 右 <类型 = 小数>
+    参数 下 <类型 = 小数>
+    参数 渐变方向 <类型 = MP填充方向>
+    {
+        @ @<当前对象>.fillRect (@<颜色>, @<画笔>, (float) @<左>, (float) @<上>, (float) @<右>, (float) @<下>, @<渐变方向>);
+    }
+
+    方法 填充路径 <公开 静态 注释 = "java: public void fillPath(android.graphics.Canvas, android.graphics.Path, android.graphics.Paint, android.graphics.RectF)">
+    参数 当前对象 <类型 = MP填充类>
+    参数 颜色 <类型 = 画板类>
+    参数 路径 <类型 = 绘制路径类>
+    参数 画笔 <类型 = 画笔类>
+    参数 裁剪矩形 <类型 = 小数矩形类>
+    {
+        @ @<当前对象>.fillPath (@<颜色>, @<路径>, @<画笔>, @<裁剪矩形>);
+    }
+
+}
+
+类 MP渐变色类 <公开 基础类 = MP填充类 @别名 = "com.github.mikephil.charting.model.GradientColor" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.model.GradientColor.">
+{
+
+    方法 新建渐变色 <公开 静态 类型 = MP渐变色类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.model.GradientColor()">
+    {
+        @ new com.github.mikephil.charting.model.GradientColor ()
+    }
+
+    方法 取起始颜色 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getStartColor()">
+    参数 当前对象 <类型 = MP渐变色类>
+    {
+        @ @<当前对象>.getStartColor ()
+    }
+
+    方法 设置起始颜色 <公开 静态 注释 = "java: public void setStartColor(int)">
+    参数 当前对象 <类型 = MP渐变色类>
+    参数 起始颜色 <类型 = 整数>
+    {
+        @ @<当前对象>.setStartColor (@<起始颜色>);
+    }
+
+    方法 取结束颜色 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getEndColor()">
+    参数 当前对象 <类型 = MP渐变色类>
+    {
+        @ @<当前对象>.getEndColor ()
+    }
+
+    方法 设置结束颜色 <公开 静态 注释 = "java: public void setEndColor(int)">
+    参数 当前对象 <类型 = MP渐变色类>
+    参数 结束颜色 <类型 = 整数>
+    {
+        @ @<当前对象>.setEndColor (@<结束颜色>);
+    }
+
+}
+
+类 MP颜色模板类 <公开 @别名 = "com.github.mikephil.charting.utils.ColorTemplate" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.utils.ColorTemplate.">
+{
+
+    方法 新建颜色模板 <公开 静态 类型 = MP颜色模板类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.utils.ColorTemplate()">
+    {
+        @ new com.github.mikephil.charting.utils.ColorTemplate ()
+    }
+
+    方法 红绿蓝 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public static int rgb(java.lang.String)">
+    参数 当前对象 <类型 = MP颜色模板类>
+    参数 十六进制 <类型 = 文本型>
+    {
+        @ com.github.mikephil.charting.utils.ColorTemplate.rgb (@<十六进制>)
+    }
+
+    方法 取霍洛蓝 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public static int getHoloBlue()">
+    参数 当前对象 <类型 = MP颜色模板类>
+    {
+        @ com.github.mikephil.charting.utils.ColorTemplate.getHoloBlue ()
+    }
+
+    方法 颜色连同透明度 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public static int colorWithAlpha(int, int)">
+    参数 当前对象 <类型 = MP颜色模板类>
+    参数 颜色 <类型 = 整数>
+    参数 透明度 <类型 = 整数>
+    {
+        @ com.github.mikephil.charting.utils.ColorTemplate.colorWithAlpha (@<颜色>, @<透明度>)
+    }
+
+    方法 创建颜色集 <公开 静态 类型 = MP列表类 @嵌入式方法 = "" 注释 = "java: public static java.util.List<java.lang.Integer> createColors(android.content.res.Resources, int[])">
+    参数 当前对象 <类型 = MP颜色模板类>
+    参数 右 <类型 = 资源管理器>
+    参数 颜色集 <类型 = "整数 []">
+    {
+        @ com.github.mikephil.charting.utils.ColorTemplate.createColors (@<右>, @<颜色集>)
+    }
+
+    方法 创建颜色集_2 <公开 静态 类型 = MP列表类 @嵌入式方法 = "" 注释 = "java: public static java.util.List<java.lang.Integer> createColors(int[])">
+    参数 当前对象 <类型 = MP颜色模板类>
+    参数 颜色集 <类型 = "整数 []">
+    {
+        @ com.github.mikephil.charting.utils.ColorTemplate.createColors (@<颜色集>)
+    }
+
+    常量 颜色无 <公开 类型 = 整数 值 = 1122867 注释 = "java: public static final int COLOR_NONE = 1122867">
+
+    常量 颜色跳过 <公开 类型 = 整数 值 = 1122868 注释 = "java: public static final int COLOR_SKIP = 1122868">
+
+    方法 取自由颜色集 <公开 静态 类型 = "整数 []" @嵌入式方法 = "" 注释 = "java 常量: public static final int[] LIBERTY_COLORS">
+    {
+        @ com.github.mikephil.charting.utils.ColorTemplate.LIBERTY_COLORS
+    }
+
+    方法 取欢快颜色集 <公开 静态 类型 = "整数 []" @嵌入式方法 = "" 注释 = "java 常量: public static final int[] JOYFUL_COLORS">
+    {
+        @ com.github.mikephil.charting.utils.ColorTemplate.JOYFUL_COLORS
+    }
+
+    方法 取柔和颜色集 <公开 静态 类型 = "整数 []" @嵌入式方法 = "" 注释 = "java 常量: public static final int[] PASTEL_COLORS">
+    {
+        @ com.github.mikephil.charting.utils.ColorTemplate.PASTEL_COLORS
+    }
+
+    方法 取绚丽颜色集 <公开 静态 类型 = "整数 []" @嵌入式方法 = "" 注释 = "java 常量: public static final int[] COLORFUL_COLORS">
+    {
+        @ com.github.mikephil.charting.utils.ColorTemplate.COLORFUL_COLORS
+    }
+
+    方法 取预热颜色集 <公开 静态 类型 = "整数 []" @嵌入式方法 = "" 注释 = "java 常量: public static final int[] VORDIPLOM_COLORS">
+    {
+        @ com.github.mikephil.charting.utils.ColorTemplate.VORDIPLOM_COLORS
+    }
+
+    方法 取材质颜色集 <公开 静态 类型 = "整数 []" @嵌入式方法 = "" 注释 = "java 常量: public static final int[] MATERIAL_COLORS">
+    {
+        @ com.github.mikephil.charting.utils.ColorTemplate.MATERIAL_COLORS
+    }
+
+}
+
+类 MP数据点横标比较器类 <公开 @别名 = "com.github.mikephil.charting.utils.EntryXComparator" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.utils.EntryXComparator.">
+{
+
+    方法 新建数据点横标比较器 <公开 静态 类型 = MP数据点横标比较器类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.utils.EntryXComparator()">
+    {
+        @ new com.github.mikephil.charting.utils.EntryXComparator ()
+    }
+
+    方法 比较 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int compare(com.github.mikephil.charting.data.Entry, com.github.mikephil.charting.data.Entry)">
+    参数 当前对象 <类型 = MP数据点横标比较器类>
+    参数 数据点一 <类型 = MP数据点类>
+    参数 数据点二 <类型 = MP数据点类>
+    {
+        @ @<当前对象>.compare (@<数据点一>, @<数据点二>)
+    }
+
+    方法 比较_2 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int compare(java.lang.Object, java.lang.Object)">
+    参数 当前对象 <类型 = MP数据点横标比较器类>
+    参数 数据点一 <类型 = 对象类>
+    参数 数据点二 <类型 = 对象类>
+    {
+        @ @<当前对象>.compare (@<数据点一>, @<数据点二>)
+    }
+
+}
+
+类 MP可池化接口 <公开 @别名 = "com.github.mikephil.charting.utils.ObjectPool$Poolable" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.utils.ObjectPool$Poolable.">
+{
+
+    方法 取无属主 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java 常量: public static int NO_OWNER">
+    {
+        @ com.github.mikephil.charting.utils.ObjectPool$Poolable.NO_OWNER
+    }
+
+}
+
+类 MP小数尺寸类 <公开 基础类 = MP可池化接口 @别名 = "com.github.mikephil.charting.utils.FSize" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.utils.FSize.">
+{
+
+    方法 新建小数尺寸 <公开 静态 类型 = MP小数尺寸类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.utils.FSize()">
+    {
+        @ new com.github.mikephil.charting.utils.FSize ()
+    }
+
+    方法 新建小数尺寸_2 <公开 静态 类型 = MP小数尺寸类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.utils.FSize(float, float)">
+    参数 宽度 <类型 = 小数>
+    参数 高度 <类型 = 小数>
+    {
+        @ new com.github.mikephil.charting.utils.FSize ((float) @<宽度>, (float) @<高度>)
+    }
+
+    方法 取实例 <公开 静态 类型 = MP小数尺寸类 @嵌入式方法 = "" 注释 = "java: public static com.github.mikephil.charting.utils.FSize getInstance(float, float)">
+    参数 当前对象 <类型 = MP小数尺寸类>
+    参数 宽度 <类型 = 小数>
+    参数 高度 <类型 = 小数>
+    {
+        @ com.github.mikephil.charting.utils.FSize.getInstance ((float) @<宽度>, (float) @<高度>)
+    }
+
+    方法 回收实例 <公开 静态 注释 = "java: public static void recycleInstance(com.github.mikephil.charting.utils.FSize)">
+    参数 当前对象 <类型 = MP小数尺寸类>
+    参数 实例 <类型 = MP小数尺寸类>
+    {
+        @ @<当前对象>.recycleInstance (@<实例>);
+    }
+
+    方法 回收实例集 <公开 静态 注释 = "java: public static void recycleInstances(java.util.List<com.github.mikephil.charting.utils.FSize>)">
+    参数 当前对象 <类型 = MP小数尺寸类>
+    参数 实例集 <类型 = MP列表类>
+    {
+        @ @<当前对象>.recycleInstances (@<实例集>);
+    }
+
+    方法 等于 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean equals(java.lang.Object)">
+    参数 当前对象 <类型 = MP小数尺寸类>
+    参数 对象 <类型 = 对象类>
+    {
+        @ @<当前对象>.equals (@<对象>)
+    }
+
+    方法 转为字符串 <公开 静态 类型 = 文本型 @嵌入式方法 = "" 注释 = "java: public java.lang.String toString()">
+    参数 当前对象 <类型 = MP小数尺寸类>
+    {
+        @ @<当前对象>.toString ()
+    }
+
+    方法 哈希编码 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int hashCode()">
+    参数 当前对象 <类型 = MP小数尺寸类>
+    {
+        @ @<当前对象>.hashCode ()
+    }
+
+    方法 取宽度 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java 常量: public float width">
+    {
+        @ com.github.mikephil.charting.utils.FSize.width
+    }
+
+    方法 取高度 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java 常量: public float height">
+    {
+        @ com.github.mikephil.charting.utils.FSize.height
+    }
+
+}
+
+类 MP文件工具类 <公开 @别名 = "com.github.mikephil.charting.utils.FileUtils" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.utils.FileUtils.">
+{
+
+    方法 新建文件工具 <公开 静态 类型 = MP文件工具类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.utils.FileUtils()">
+    {
+        @ new com.github.mikephil.charting.utils.FileUtils ()
+    }
+
+    方法 载入数据点集来自文件 <公开 静态 类型 = MP列表类 @嵌入式方法 = "" 注释 = "java: public static java.util.List<com.github.mikephil.charting.data.Entry> loadEntriesFromFile(java.lang.String)">
+    参数 当前对象 <类型 = MP文件工具类>
+    参数 路径 <类型 = 文本型>
+    {
+        @ com.github.mikephil.charting.utils.FileUtils.loadEntriesFromFile (@<路径>)
+    }
+
+    方法 载入数据点集来自资源目录 <公开 静态 类型 = MP列表类 @嵌入式方法 = "" 注释 = "java: public static java.util.List<com.github.mikephil.charting.data.Entry> loadEntriesFromAssets(android.content.res.AssetManager, java.lang.String)">
+    参数 当前对象 <类型 = MP文件工具类>
+    参数 动画器 <类型 = 资产管理器>
+    参数 路径 <类型 = 文本型>
+    {
+        @ com.github.mikephil.charting.utils.FileUtils.loadEntriesFromAssets (@<动画器>, @<路径>)
+    }
+
+    方法 保存至标准差卡片 <公开 静态 注释 = "java: public static void saveToSdCard(java.util.List<com.github.mikephil.charting.data.Entry>, java.lang.String)">
+    参数 当前对象 <类型 = MP文件工具类>
+    参数 数据点集 <类型 = MP列表类>
+    参数 路径 <类型 = 文本型>
+    {
+        @ @<当前对象>.saveToSdCard (@<数据点集>, @<路径>);
+    }
+
+    方法 载入柱数据点集来自资源目录 <公开 静态 类型 = MP列表类 @嵌入式方法 = "" 注释 = "java: public static java.util.List<com.github.mikephil.charting.data.BarEntry> loadBarEntriesFromAssets(android.content.res.AssetManager, java.lang.String)">
+    参数 当前对象 <类型 = MP文件工具类>
+    参数 动画器 <类型 = 资产管理器>
+    参数 路径 <类型 = 文本型>
+    {
+        @ com.github.mikephil.charting.utils.FileUtils.loadBarEntriesFromAssets (@<动画器>, @<路径>)
+    }
+
+}
+
+类 MP填充方向 <公开 @别名 = "com.github.mikephil.charting.utils.Fill$Direction" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.utils.Fill$Direction.">
+{
+
+    方法 数值集 <公开 静态 类型 = "MP填充方向 []" @嵌入式方法 = "" 注释 = "java: public static com.github.mikephil.charting.utils.Fill$Direction[] values()">
+    参数 当前对象 <类型 = MP填充方向>
+    {
+        @ com.github.mikephil.charting.utils.Fill$Direction.values ()
+    }
+
+    方法 取枚举值 <公开 静态 类型 = MP填充方向 @嵌入式方法 = "" 注释 = "java: public static com.github.mikephil.charting.utils.Fill$Direction valueOf(java.lang.String)">
+    参数 当前对象 <类型 = MP填充方向>
+    参数 名称 <类型 = 文本型>
+    {
+        @ com.github.mikephil.charting.utils.Fill$Direction.valueOf (@<名称>)
+    }
+
+    方法 取向下 <公开 静态 类型 = MP填充方向 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.utils.Fill$Direction DOWN">
+    {
+        @ com.github.mikephil.charting.utils.Fill$Direction.DOWN
+    }
+
+    方法 取向上 <公开 静态 类型 = MP填充方向 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.utils.Fill$Direction UP">
+    {
+        @ com.github.mikephil.charting.utils.Fill$Direction.UP
+    }
+
+    方法 取右 <公开 静态 类型 = MP填充方向 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.utils.Fill$Direction RIGHT">
+    {
+        @ com.github.mikephil.charting.utils.Fill$Direction.RIGHT
+    }
+
+    方法 取左 <公开 静态 类型 = MP填充方向 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.utils.Fill$Direction LEFT">
+    {
+        @ com.github.mikephil.charting.utils.Fill$Direction.LEFT
+    }
+
+}
+
+类 MP填充类型 <公开 @别名 = "com.github.mikephil.charting.utils.Fill$Type" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.utils.Fill$Type.">
+{
+
+    方法 数值集 <公开 静态 类型 = "MP填充类型 []" @嵌入式方法 = "" 注释 = "java: public static com.github.mikephil.charting.utils.Fill$Type[] values()">
+    参数 当前对象 <类型 = MP填充类型>
+    {
+        @ com.github.mikephil.charting.utils.Fill$Type.values ()
+    }
+
+    方法 取枚举值 <公开 静态 类型 = MP填充类型 @嵌入式方法 = "" 注释 = "java: public static com.github.mikephil.charting.utils.Fill$Type valueOf(java.lang.String)">
+    参数 当前对象 <类型 = MP填充类型>
+    参数 名称 <类型 = 文本型>
+    {
+        @ com.github.mikephil.charting.utils.Fill$Type.valueOf (@<名称>)
+    }
+
+    方法 取空 <公开 静态 类型 = MP填充类型 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.utils.Fill$Type EMPTY">
+    {
+        @ com.github.mikephil.charting.utils.Fill$Type.EMPTY
+    }
+
+    方法 取颜色 <公开 静态 类型 = MP填充类型 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.utils.Fill$Type COLOR">
+    {
+        @ com.github.mikephil.charting.utils.Fill$Type.COLOR
+    }
+
+    方法 取线性渐变 <公开 静态 类型 = MP填充类型 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.utils.Fill$Type LINEAR_GRADIENT">
+    {
+        @ com.github.mikephil.charting.utils.Fill$Type.LINEAR_GRADIENT
+    }
+
+    方法 取可绘制对象 <公开 静态 类型 = MP填充类型 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.utils.Fill$Type DRAWABLE">
+    {
+        @ com.github.mikephil.charting.utils.Fill$Type.DRAWABLE
+    }
+
+}
+
+类 MP视图区域处理类 <公开 @别名 = "com.github.mikephil.charting.utils.ViewPortHandler" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.utils.ViewPortHandler.">
+{
+
+    方法 新建视图区域处理 <公开 静态 类型 = MP视图区域处理类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.utils.ViewPortHandler()">
+    {
+        @ new com.github.mikephil.charting.utils.ViewPortHandler ()
+    }
+
+    方法 设置图表尺寸集 <公开 静态 注释 = "java: public void setChartDimens(float, float)">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    参数 宽度 <类型 = 小数>
+    参数 高度 <类型 = 小数>
+    {
+        @ @<当前对象>.setChartDimens ((float) @<宽度>, (float) @<高度>);
+    }
+
+    方法 是否含图表尺寸集 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean hasChartDimens()">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    {
+        @ @<当前对象>.hasChartDimens ()
+    }
+
+    方法 约束视口 <公开 静态 注释 = "java: public void restrainViewPort(float, float, float, float)">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    参数 偏移左 <类型 = 小数>
+    参数 偏移上 <类型 = 小数>
+    参数 偏移右 <类型 = 小数>
+    参数 偏移下 <类型 = 小数>
+    {
+        @ @<当前对象>.restrainViewPort ((float) @<偏移左>, (float) @<偏移上>, (float) @<偏移右>, (float) @<偏移下>);
+    }
+
+    方法 偏移左 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float offsetLeft()">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    {
+        @ @<当前对象>.offsetLeft ()
+    }
+
+    方法 偏移右 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float offsetRight()">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    {
+        @ @<当前对象>.offsetRight ()
+    }
+
+    方法 偏移上 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float offsetTop()">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    {
+        @ @<当前对象>.offsetTop ()
+    }
+
+    方法 偏移下 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float offsetBottom()">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    {
+        @ @<当前对象>.offsetBottom ()
+    }
+
+    方法 内容上 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float contentTop()">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    {
+        @ @<当前对象>.contentTop ()
+    }
+
+    方法 内容左 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float contentLeft()">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    {
+        @ @<当前对象>.contentLeft ()
+    }
+
+    方法 内容右 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float contentRight()">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    {
+        @ @<当前对象>.contentRight ()
+    }
+
+    方法 内容下 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float contentBottom()">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    {
+        @ @<当前对象>.contentBottom ()
+    }
+
+    方法 内容宽度 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float contentWidth()">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    {
+        @ @<当前对象>.contentWidth ()
+    }
+
+    方法 内容高度 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float contentHeight()">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    {
+        @ @<当前对象>.contentHeight ()
+    }
+
+    方法 取内容矩形 <公开 静态 类型 = 小数矩形类 @嵌入式方法 = "" 注释 = "java: public android.graphics.RectF getContentRect()">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    {
+        @ @<当前对象>.getContentRect ()
+    }
+
+    方法 取内容中心 <公开 静态 类型 = MP单精度坐标类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.utils.MPPointF getContentCenter()">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    {
+        @ @<当前对象>.getContentCenter ()
+    }
+
+    方法 取图表高度 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getChartHeight()">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    {
+        @ @<当前对象>.getChartHeight ()
+    }
+
+    方法 取图表宽度 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getChartWidth()">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    {
+        @ @<当前对象>.getChartWidth ()
+    }
+
+    方法 取最小内容扩展 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getSmallestContentExtension()">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    {
+        @ @<当前对象>.getSmallestContentExtension ()
+    }
+
+    方法 放大 <公开 静态 类型 = 矩阵类 @嵌入式方法 = "" 注释 = "java: public android.graphics.Matrix zoomIn(float, float)">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    参数 横坐标 <类型 = 小数>
+    参数 纵坐标 <类型 = 小数>
+    {
+        @ @<当前对象>.zoomIn ((float) @<横坐标>, (float) @<纵坐标>)
+    }
+
+    方法 放大_2 <公开 静态 注释 = "java: public void zoomIn(float, float, android.graphics.Matrix)">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    参数 横坐标 <类型 = 小数>
+    参数 纵坐标 <类型 = 小数>
+    参数 输出矩阵 <类型 = 矩阵类>
+    {
+        @ @<当前对象>.zoomIn ((float) @<横坐标>, (float) @<纵坐标>, @<输出矩阵>);
+    }
+
+    方法 缩小 <公开 静态 类型 = 矩阵类 @嵌入式方法 = "" 注释 = "java: public android.graphics.Matrix zoomOut(float, float)">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    参数 横坐标 <类型 = 小数>
+    参数 纵坐标 <类型 = 小数>
+    {
+        @ @<当前对象>.zoomOut ((float) @<横坐标>, (float) @<纵坐标>)
+    }
+
+    方法 缩小_2 <公开 静态 注释 = "java: public void zoomOut(float, float, android.graphics.Matrix)">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    参数 横坐标 <类型 = 小数>
+    参数 纵坐标 <类型 = 小数>
+    参数 输出矩阵 <类型 = 矩阵类>
+    {
+        @ @<当前对象>.zoomOut ((float) @<横坐标>, (float) @<纵坐标>, @<输出矩阵>);
+    }
+
+    方法 重置缩放 <公开 静态 注释 = "java: public void resetZoom(android.graphics.Matrix)">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    参数 输出矩阵 <类型 = 矩阵类>
+    {
+        @ @<当前对象>.resetZoom (@<输出矩阵>);
+    }
+
+    方法 缩放 <公开 静态 类型 = 矩阵类 @嵌入式方法 = "" 注释 = "java: public android.graphics.Matrix zoom(float, float)">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    参数 比例横坐标 <类型 = 小数>
+    参数 比例纵坐标 <类型 = 小数>
+    {
+        @ @<当前对象>.zoom ((float) @<比例横坐标>, (float) @<比例纵坐标>)
+    }
+
+    方法 缩放_2 <公开 静态 注释 = "java: public void zoom(float, float, android.graphics.Matrix)">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    参数 比例横坐标 <类型 = 小数>
+    参数 比例纵坐标 <类型 = 小数>
+    参数 输出矩阵 <类型 = 矩阵类>
+    {
+        @ @<当前对象>.zoom ((float) @<比例横坐标>, (float) @<比例纵坐标>, @<输出矩阵>);
+    }
+
+    方法 缩放_3 <公开 静态 类型 = 矩阵类 @嵌入式方法 = "" 注释 = "java: public android.graphics.Matrix zoom(float, float, float, float)">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    参数 比例横坐标 <类型 = 小数>
+    参数 比例纵坐标 <类型 = 小数>
+    参数 横坐标 <类型 = 小数>
+    参数 纵坐标 <类型 = 小数>
+    {
+        @ @<当前对象>.zoom ((float) @<比例横坐标>, (float) @<比例纵坐标>, (float) @<横坐标>, (float) @<纵坐标>)
+    }
+
+    方法 缩放_4 <公开 静态 注释 = "java: public void zoom(float, float, float, float, android.graphics.Matrix)">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    参数 比例横坐标 <类型 = 小数>
+    参数 比例纵坐标 <类型 = 小数>
+    参数 横坐标 <类型 = 小数>
+    参数 纵坐标 <类型 = 小数>
+    参数 输出矩阵 <类型 = 矩阵类>
+    {
+        @ @<当前对象>.zoom ((float) @<比例横坐标>, (float) @<比例纵坐标>, (float) @<横坐标>, (float) @<纵坐标>, @<输出矩阵>);
+    }
+
+    方法 设置缩放 <公开 静态 类型 = 矩阵类 @嵌入式方法 = "" 注释 = "java: public android.graphics.Matrix setZoom(float, float)">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    参数 比例横坐标 <类型 = 小数>
+    参数 比例纵坐标 <类型 = 小数>
+    {
+        @ @<当前对象>.setZoom ((float) @<比例横坐标>, (float) @<比例纵坐标>)
+    }
+
+    方法 设置缩放_2 <公开 静态 注释 = "java: public void setZoom(float, float, android.graphics.Matrix)">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    参数 比例横坐标 <类型 = 小数>
+    参数 比例纵坐标 <类型 = 小数>
+    参数 输出矩阵 <类型 = 矩阵类>
+    {
+        @ @<当前对象>.setZoom ((float) @<比例横坐标>, (float) @<比例纵坐标>, @<输出矩阵>);
+    }
+
+    方法 设置缩放_3 <公开 静态 类型 = 矩阵类 @嵌入式方法 = "" 注释 = "java: public android.graphics.Matrix setZoom(float, float, float, float)">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    参数 比例横坐标 <类型 = 小数>
+    参数 比例纵坐标 <类型 = 小数>
+    参数 横坐标 <类型 = 小数>
+    参数 纵坐标 <类型 = 小数>
+    {
+        @ @<当前对象>.setZoom ((float) @<比例横坐标>, (float) @<比例纵坐标>, (float) @<横坐标>, (float) @<纵坐标>)
+    }
+
+    方法 适配屏幕 <公开 静态 类型 = 矩阵类 @嵌入式方法 = "" 注释 = "java: public android.graphics.Matrix fitScreen()">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    {
+        @ @<当前对象>.fitScreen ()
+    }
+
+    方法 适配屏幕_2 <公开 静态 注释 = "java: public void fitScreen(android.graphics.Matrix)">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    参数 输出矩阵 <类型 = 矩阵类>
+    {
+        @ @<当前对象>.fitScreen (@<输出矩阵>);
+    }
+
+    方法 平移 <公开 静态 类型 = 矩阵类 @嵌入式方法 = "" 注释 = "java: public android.graphics.Matrix translate(float[])">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    参数 已变换点集 <类型 = "小数 []">
+    {
+        @ @<当前对象>.translate (@<已变换点集>)
+    }
+
+    方法 平移_2 <公开 静态 注释 = "java: public void translate(float[], android.graphics.Matrix)">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    参数 已变换点集 <类型 = "小数 []">
+    参数 输出矩阵 <类型 = 矩阵类>
+    {
+        @ @<当前对象>.translate (@<已变换点集>, @<输出矩阵>);
+    }
+
+    方法 中心视口 <公开 静态 注释 = "java: public void centerViewPort(float[], android.view.View)">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    参数 已变换点集 <类型 = "小数 []">
+    参数 视图 <类型 = 安卓窗口组件>
+    {
+        @ @<当前对象>.centerViewPort (@<已变换点集>, @<视图>);
+    }
+
+    方法 刷新 <公开 静态 类型 = 矩阵类 @嵌入式方法 = "" 注释 = "java: public android.graphics.Matrix refresh(android.graphics.Matrix, android.view.View, boolean)">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    参数 新矩阵 <类型 = 矩阵类>
+    参数 图表 <类型 = 安卓窗口组件>
+    参数 作废 <类型 = 逻辑型>
+    {
+        @ @<当前对象>.refresh (@<新矩阵>, @<图表>, @<作废>)
+    }
+
+    方法 限制变换与比例 <公开 静态 注释 = "java: public void limitTransAndScale(android.graphics.Matrix, android.graphics.RectF)">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    参数 矩阵 <类型 = 矩阵类>
+    参数 内容 <类型 = 小数矩形类>
+    {
+        @ @<当前对象>.limitTransAndScale (@<矩阵>, @<内容>);
+    }
+
+    方法 设置最小值比例横坐标 <公开 静态 注释 = "java: public void setMinimumScaleX(float)">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    参数 横坐标比例 <类型 = 小数>
+    {
+        @ @<当前对象>.setMinimumScaleX ((float) @<横坐标比例>);
+    }
+
+    方法 设置最大值比例横坐标 <公开 静态 注释 = "java: public void setMaximumScaleX(float)">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    参数 横坐标比例 <类型 = 小数>
+    {
+        @ @<当前对象>.setMaximumScaleX ((float) @<横坐标比例>);
+    }
+
+    方法 设置最小最大比例横坐标 <公开 静态 注释 = "java: public void setMinMaxScaleX(float, float)">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    参数 最小比例横坐标 <类型 = 小数>
+    参数 最大比例横坐标 <类型 = 小数>
+    {
+        @ @<当前对象>.setMinMaxScaleX ((float) @<最小比例横坐标>, (float) @<最大比例横坐标>);
+    }
+
+    方法 设置最小值比例纵坐标 <公开 静态 注释 = "java: public void setMinimumScaleY(float)">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    参数 纵坐标比例 <类型 = 小数>
+    {
+        @ @<当前对象>.setMinimumScaleY ((float) @<纵坐标比例>);
+    }
+
+    方法 设置最大值比例纵坐标 <公开 静态 注释 = "java: public void setMaximumScaleY(float)">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    参数 纵坐标比例 <类型 = 小数>
+    {
+        @ @<当前对象>.setMaximumScaleY ((float) @<纵坐标比例>);
+    }
+
+    方法 设置最小最大比例纵坐标 <公开 静态 注释 = "java: public void setMinMaxScaleY(float, float)">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    参数 最小比例纵坐标 <类型 = 小数>
+    参数 最大比例纵坐标 <类型 = 小数>
+    {
+        @ @<当前对象>.setMinMaxScaleY ((float) @<最小比例纵坐标>, (float) @<最大比例纵坐标>);
+    }
+
+    方法 取矩阵触摸 <公开 静态 类型 = 矩阵类 @嵌入式方法 = "" 注释 = "java: public android.graphics.Matrix getMatrixTouch()">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    {
+        @ @<当前对象>.getMatrixTouch ()
+    }
+
+    方法 是否内边界横坐标 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isInBoundsX(float)">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    参数 横坐标 <类型 = 小数>
+    {
+        @ @<当前对象>.isInBoundsX ((float) @<横坐标>)
+    }
+
+    方法 是否内边界纵坐标 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isInBoundsY(float)">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    参数 纵坐标 <类型 = 小数>
+    {
+        @ @<当前对象>.isInBoundsY ((float) @<纵坐标>)
+    }
+
+    方法 是否内边界 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isInBounds(float, float)">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    参数 横坐标 <类型 = 小数>
+    参数 纵坐标 <类型 = 小数>
+    {
+        @ @<当前对象>.isInBounds ((float) @<横坐标>, (float) @<纵坐标>)
+    }
+
+    方法 是否内边界左 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isInBoundsLeft(float)">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    参数 横坐标 <类型 = 小数>
+    {
+        @ @<当前对象>.isInBoundsLeft ((float) @<横坐标>)
+    }
+
+    方法 是否内边界右 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isInBoundsRight(float)">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    参数 横坐标 <类型 = 小数>
+    {
+        @ @<当前对象>.isInBoundsRight ((float) @<横坐标>)
+    }
+
+    方法 是否内边界上 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isInBoundsTop(float)">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    参数 纵坐标 <类型 = 小数>
+    {
+        @ @<当前对象>.isInBoundsTop ((float) @<纵坐标>)
+    }
+
+    方法 是否内边界下 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isInBoundsBottom(float)">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    参数 纵坐标 <类型 = 小数>
+    {
+        @ @<当前对象>.isInBoundsBottom ((float) @<纵坐标>)
+    }
+
+    方法 取比例横坐标 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getScaleX()">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    {
+        @ @<当前对象>.getScaleX ()
+    }
+
+    方法 取比例纵坐标 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getScaleY()">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    {
+        @ @<当前对象>.getScaleY ()
+    }
+
+    方法 取最小比例横坐标 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getMinScaleX()">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    {
+        @ @<当前对象>.getMinScaleX ()
+    }
+
+    方法 取最大比例横坐标 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getMaxScaleX()">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    {
+        @ @<当前对象>.getMaxScaleX ()
+    }
+
+    方法 取最小比例纵坐标 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getMinScaleY()">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    {
+        @ @<当前对象>.getMinScaleY ()
+    }
+
+    方法 取最大比例纵坐标 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getMaxScaleY()">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    {
+        @ @<当前对象>.getMaxScaleY ()
+    }
+
+    方法 取变换横坐标 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getTransX()">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    {
+        @ @<当前对象>.getTransX ()
+    }
+
+    方法 取变换纵坐标 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getTransY()">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    {
+        @ @<当前对象>.getTransY ()
+    }
+
+    方法 是否完全缩小 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isFullyZoomedOut()">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    {
+        @ @<当前对象>.isFullyZoomedOut ()
+    }
+
+    方法 是否完全缩小纵坐标 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isFullyZoomedOutY()">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    {
+        @ @<当前对象>.isFullyZoomedOutY ()
+    }
+
+    方法 是否完全缩小横坐标 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isFullyZoomedOutX()">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    {
+        @ @<当前对象>.isFullyZoomedOutX ()
+    }
+
+    方法 设置拖动偏移横坐标 <公开 静态 注释 = "java: public void setDragOffsetX(float)">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    参数 偏移 <类型 = 小数>
+    {
+        @ @<当前对象>.setDragOffsetX ((float) @<偏移>);
+    }
+
+    方法 设置拖动偏移纵坐标 <公开 静态 注释 = "java: public void setDragOffsetY(float)">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    参数 偏移 <类型 = 小数>
+    {
+        @ @<当前对象>.setDragOffsetY ((float) @<偏移>);
+    }
+
+    方法 无拖动偏移 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean hasNoDragOffset()">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    {
+        @ @<当前对象>.hasNoDragOffset ()
+    }
+
+    方法 能否缩小更多横坐标 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean canZoomOutMoreX()">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    {
+        @ @<当前对象>.canZoomOutMoreX ()
+    }
+
+    方法 能否放大更多横坐标 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean canZoomInMoreX()">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    {
+        @ @<当前对象>.canZoomInMoreX ()
+    }
+
+    方法 能否缩小更多纵坐标 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean canZoomOutMoreY()">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    {
+        @ @<当前对象>.canZoomOutMoreY ()
+    }
+
+    方法 能否放大更多纵坐标 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean canZoomInMoreY()">
+    参数 当前对象 <类型 = MP视图区域处理类>
+    {
+        @ @<当前对象>.canZoomInMoreY ()
+    }
+
+}
+
+类 MP横向视图区域处理类 <公开 基础类 = MP视图区域处理类 @别名 = "com.github.mikephil.charting.utils.HorizontalViewPortHandler" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.utils.HorizontalViewPortHandler.">
+{
+
+    方法 新建横向视图区域处理 <公开 静态 类型 = MP横向视图区域处理类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.utils.HorizontalViewPortHandler()">
+    {
+        @ new com.github.mikephil.charting.utils.HorizontalViewPortHandler ()
+    }
+
+}
+
+类 MP双精度坐标类 <公开 基础类 = MP可池化接口 @别名 = "com.github.mikephil.charting.utils.MPPointD" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.utils.MPPointD.">
+{
+
+    方法 取实例 <公开 静态 类型 = MP双精度坐标类 @嵌入式方法 = "" 注释 = "java: public static com.github.mikephil.charting.utils.MPPointD getInstance(double, double)">
+    参数 当前对象 <类型 = MP双精度坐标类>
+    参数 横坐标 <类型 = 小数>
+    参数 纵坐标 <类型 = 小数>
+    {
+        @ com.github.mikephil.charting.utils.MPPointD.getInstance (@<横坐标>, @<纵坐标>)
+    }
+
+    方法 回收实例 <公开 静态 注释 = "java: public static void recycleInstance(com.github.mikephil.charting.utils.MPPointD)">
+    参数 当前对象 <类型 = MP双精度坐标类>
+    参数 实例 <类型 = MP双精度坐标类>
+    {
+        @ @<当前对象>.recycleInstance (@<实例>);
+    }
+
+    方法 回收实例集 <公开 静态 注释 = "java: public static void recycleInstances(java.util.List<com.github.mikephil.charting.utils.MPPointD>)">
+    参数 当前对象 <类型 = MP双精度坐标类>
+    参数 实例集 <类型 = MP列表类>
+    {
+        @ @<当前对象>.recycleInstances (@<实例集>);
+    }
+
+    方法 转为字符串 <公开 静态 类型 = 文本型 @嵌入式方法 = "" 注释 = "java: public java.lang.String toString()">
+    参数 当前对象 <类型 = MP双精度坐标类>
+    {
+        @ @<当前对象>.toString ()
+    }
+
+    方法 取横坐标 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java 常量: public double x">
+    {
+        @ com.github.mikephil.charting.utils.MPPointD.x
+    }
+
+    方法 取纵坐标 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java 常量: public double y">
+    {
+        @ com.github.mikephil.charting.utils.MPPointD.y
+    }
+
+}
+
+类 MP单精度坐标类 <公开 基础类 = MP可池化接口 @别名 = "com.github.mikephil.charting.utils.MPPointF" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.utils.MPPointF.">
+{
+
+    方法 新建单精度坐标 <公开 静态 类型 = MP单精度坐标类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.utils.MPPointF()">
+    {
+        @ new com.github.mikephil.charting.utils.MPPointF ()
+    }
+
+    方法 新建单精度坐标_2 <公开 静态 类型 = MP单精度坐标类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.utils.MPPointF(float, float)">
+    参数 横坐标 <类型 = 小数>
+    参数 纵坐标 <类型 = 小数>
+    {
+        @ new com.github.mikephil.charting.utils.MPPointF ((float) @<横坐标>, (float) @<纵坐标>)
+    }
+
+    方法 取实例 <公开 静态 类型 = MP单精度坐标类 @嵌入式方法 = "" 注释 = "java: public static com.github.mikephil.charting.utils.MPPointF getInstance(float, float)">
+    参数 当前对象 <类型 = MP单精度坐标类>
+    参数 横坐标 <类型 = 小数>
+    参数 纵坐标 <类型 = 小数>
+    {
+        @ com.github.mikephil.charting.utils.MPPointF.getInstance ((float) @<横坐标>, (float) @<纵坐标>)
+    }
+
+    方法 取实例_2 <公开 静态 类型 = MP单精度坐标类 @嵌入式方法 = "" 注释 = "java: public static com.github.mikephil.charting.utils.MPPointF getInstance()">
+    参数 当前对象 <类型 = MP单精度坐标类>
+    {
+        @ com.github.mikephil.charting.utils.MPPointF.getInstance ()
+    }
+
+    方法 取实例_3 <公开 静态 类型 = MP单精度坐标类 @嵌入式方法 = "" 注释 = "java: public static com.github.mikephil.charting.utils.MPPointF getInstance(com.github.mikephil.charting.utils.MPPointF)">
+    参数 当前对象 <类型 = MP单精度坐标类>
+    参数 复制 <类型 = MP单精度坐标类>
+    {
+        @ com.github.mikephil.charting.utils.MPPointF.getInstance (@<复制>)
+    }
+
+    方法 回收实例 <公开 静态 注释 = "java: public static void recycleInstance(com.github.mikephil.charting.utils.MPPointF)">
+    参数 当前对象 <类型 = MP单精度坐标类>
+    参数 实例 <类型 = MP单精度坐标类>
+    {
+        @ @<当前对象>.recycleInstance (@<实例>);
+    }
+
+    方法 回收实例集 <公开 静态 注释 = "java: public static void recycleInstances(java.util.List<com.github.mikephil.charting.utils.MPPointF>)">
+    参数 当前对象 <类型 = MP单精度坐标类>
+    参数 实例集 <类型 = MP列表类>
+    {
+        @ @<当前对象>.recycleInstances (@<实例集>);
+    }
+
+    方法 我的读取来自打包序列化 <公开 静态 注释 = "java: public void my_readFromParcel(android.os.Parcel)">
+    参数 当前对象 <类型 = MP单精度坐标类>
+    参数 内 <类型 = 序列化包装类>
+    {
+        @ @<当前对象>.my_readFromParcel (@<内>);
+    }
+
+    方法 取横坐标 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getX()">
+    参数 当前对象 <类型 = MP单精度坐标类>
+    {
+        @ @<当前对象>.getX ()
+    }
+
+    方法 取纵坐标 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getY()">
+    参数 当前对象 <类型 = MP单精度坐标类>
+    {
+        @ @<当前对象>.getY ()
+    }
+
+    方法 取横坐标_2 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java 常量: public float x">
+    {
+        @ com.github.mikephil.charting.utils.MPPointF.x
+    }
+
+    方法 取纵坐标_2 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java 常量: public float y">
+    {
+        @ com.github.mikephil.charting.utils.MPPointF.y
+    }
+
+    方法 取生成器 <公开 静态 类型 = MP序列化生成器接口 @嵌入式方法 = "" 注释 = "java 常量: public static final android.os.Parcelable$Creator<com.github.mikephil.charting.utils.MPPointF> CREATOR">
+    {
+        @ com.github.mikephil.charting.utils.MPPointF.CREATOR
+    }
+
+}
+
+类 MP对象池类 <公开 @别名 = "com.github.mikephil.charting.utils.ObjectPool" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.utils.ObjectPool.">
+{
+
+    方法 取池标识 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getPoolId()">
+    参数 当前对象 <类型 = MP对象池类>
+    {
+        @ @<当前对象>.getPoolId ()
+    }
+
+    方法 创建 <公开 静态 类型 = MP对象池类 @嵌入式方法 = "" 注释 = "java: public static synchronized com.github.mikephil.charting.utils.ObjectPool create(int, com.github.mikephil.charting.utils.ObjectPool$Poolable)">
+    参数 当前对象 <类型 = MP对象池类>
+    参数 连同容量 <类型 = 整数>
+    参数 对象 <类型 = MP可池化接口>
+    {
+        @ com.github.mikephil.charting.utils.ObjectPool.create (@<连同容量>, @<对象>)
+    }
+
+    方法 设置补充百分比 <公开 静态 注释 = "java: public void setReplenishPercentage(float)">
+    参数 当前对象 <类型 = MP对象池类>
+    参数 百分比 <类型 = 小数>
+    {
+        @ @<当前对象>.setReplenishPercentage ((float) @<百分比>);
+    }
+
+    方法 取补充百分比 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getReplenishPercentage()">
+    参数 当前对象 <类型 = MP对象池类>
+    {
+        @ @<当前对象>.getReplenishPercentage ()
+    }
+
+    方法 取 <公开 静态 类型 = MP可池化接口 @嵌入式方法 = "" 注释 = "java: public synchronized T get()">
+    参数 当前对象 <类型 = MP对象池类>
+    {
+        @ @<当前对象>.get ()
+    }
+
+    方法 回收 <公开 静态 注释 = "java: public synchronized void recycle(T)">
+    参数 当前对象 <类型 = MP对象池类>
+    参数 对象 <类型 = MP可池化接口>
+    {
+        @ @<当前对象>.recycle (@<对象>);
+    }
+
+    方法 回收_2 <公开 静态 注释 = "java: public synchronized void recycle(java.util.List<T>)">
+    参数 当前对象 <类型 = MP对象池类>
+    参数 对象集 <类型 = MP列表类>
+    {
+        @ @<当前对象>.recycle (@<对象集>);
+    }
+
+    方法 取池容量 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getPoolCapacity()">
+    参数 当前对象 <类型 = MP对象池类>
+    {
+        @ @<当前对象>.getPoolCapacity ()
+    }
+
+    方法 取池数量 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getPoolCount()">
+    参数 当前对象 <类型 = MP对象池类>
+    {
+        @ @<当前对象>.getPoolCount ()
+    }
+
+}
+
+类 MP坐标转换器类 <公开 @别名 = "com.github.mikephil.charting.utils.Transformer" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.utils.Transformer.">
+{
+
+    方法 新建坐标转换器 <公开 静态 类型 = MP坐标转换器类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.utils.Transformer(com.github.mikephil.charting.utils.ViewPortHandler)">
+    参数 视口处理器 <类型 = MP视图区域处理类>
+    {
+        @ new com.github.mikephil.charting.utils.Transformer (@<视口处理器>)
+    }
+
+    方法 准备矩阵数值像素 <公开 静态 注释 = "java: public void prepareMatrixValuePx(float, float, float, float)">
+    参数 当前对象 <类型 = MP坐标转换器类>
+    参数 横坐标图表最小 <类型 = 小数>
+    参数 增量横坐标 <类型 = 小数>
+    参数 增量纵坐标 <类型 = 小数>
+    参数 纵坐标图表最小 <类型 = 小数>
+    {
+        @ @<当前对象>.prepareMatrixValuePx ((float) @<横坐标图表最小>, (float) @<增量横坐标>, (float) @<增量纵坐标>, (float) @<纵坐标图表最小>);
+    }
+
+    方法 准备矩阵偏移 <公开 静态 注释 = "java: public void prepareMatrixOffset(boolean)">
+    参数 当前对象 <类型 = MP坐标转换器类>
+    参数 已反转 <类型 = 逻辑型>
+    {
+        @ @<当前对象>.prepareMatrixOffset (@<已反转>);
+    }
+
+    方法 生成已变换数值集散点 <公开 静态 类型 = "小数 []" @嵌入式方法 = "" 注释 = "java: public float[] generateTransformedValuesScatter(com.github.mikephil.charting.interfaces.datasets.IScatterDataSet, float, float, int, int)">
+    参数 当前对象 <类型 = MP坐标转换器类>
+    参数 数据 <类型 = MP散点数据集接口>
+    参数 相位横坐标 <类型 = 小数>
+    参数 相位纵坐标 <类型 = 小数>
+    参数 来自 <类型 = 整数>
+    参数 至 <类型 = 整数>
+    {
+        @ @<当前对象>.generateTransformedValuesScatter (@<数据>, (float) @<相位横坐标>, (float) @<相位纵坐标>, @<来自>, @<至>)
+    }
+
+    方法 生成已变换数值集气泡 <公开 静态 类型 = "小数 []" @嵌入式方法 = "" 注释 = "java: public float[] generateTransformedValuesBubble(com.github.mikephil.charting.interfaces.datasets.IBubbleDataSet, float, int, int)">
+    参数 当前对象 <类型 = MP坐标转换器类>
+    参数 数据 <类型 = MP气泡数据集接口>
+    参数 相位纵坐标 <类型 = 小数>
+    参数 来自 <类型 = 整数>
+    参数 至 <类型 = 整数>
+    {
+        @ @<当前对象>.generateTransformedValuesBubble (@<数据>, (float) @<相位纵坐标>, @<来自>, @<至>)
+    }
+
+    方法 生成已变换数值集线 <公开 静态 类型 = "小数 []" @嵌入式方法 = "" 注释 = "java: public float[] generateTransformedValuesLine(com.github.mikephil.charting.interfaces.datasets.ILineDataSet, float, float, int, int)">
+    参数 当前对象 <类型 = MP坐标转换器类>
+    参数 数据 <类型 = MP折线数据集接口>
+    参数 相位横坐标 <类型 = 小数>
+    参数 相位纵坐标 <类型 = 小数>
+    参数 最小 <类型 = 整数>
+    参数 最大 <类型 = 整数>
+    {
+        @ @<当前对象>.generateTransformedValuesLine (@<数据>, (float) @<相位横坐标>, (float) @<相位纵坐标>, @<最小>, @<最大>)
+    }
+
+    方法 生成已变换数值集蜡烛 <公开 静态 类型 = "小数 []" @嵌入式方法 = "" 注释 = "java: public float[] generateTransformedValuesCandle(com.github.mikephil.charting.interfaces.datasets.ICandleDataSet, float, float, int, int)">
+    参数 当前对象 <类型 = MP坐标转换器类>
+    参数 数据 <类型 = MP蜡烛数据集接口>
+    参数 相位横坐标 <类型 = 小数>
+    参数 相位纵坐标 <类型 = 小数>
+    参数 来自 <类型 = 整数>
+    参数 至 <类型 = 整数>
+    {
+        @ @<当前对象>.generateTransformedValuesCandle (@<数据>, (float) @<相位横坐标>, (float) @<相位纵坐标>, @<来自>, @<至>)
+    }
+
+    方法 路径数值至像素 <公开 静态 注释 = "java: public void pathValueToPixel(android.graphics.Path)">
+    参数 当前对象 <类型 = MP坐标转换器类>
+    参数 路径 <类型 = 绘制路径类>
+    {
+        @ @<当前对象>.pathValueToPixel (@<路径>);
+    }
+
+    方法 路径数值集至像素 <公开 静态 注释 = "java: public void pathValuesToPixel(java.util.List<android.graphics.Path>)">
+    参数 当前对象 <类型 = MP坐标转换器类>
+    参数 路径集 <类型 = MP列表类>
+    {
+        @ @<当前对象>.pathValuesToPixel (@<路径集>);
+    }
+
+    方法 点数值集至像素 <公开 静态 注释 = "java: public void pointValuesToPixel(float[])">
+    参数 当前对象 <类型 = MP坐标转换器类>
+    参数 点集 <类型 = "小数 []">
+    {
+        @ @<当前对象>.pointValuesToPixel (@<点集>);
+    }
+
+    方法 矩形数值至像素 <公开 静态 注释 = "java: public void rectValueToPixel(android.graphics.RectF)">
+    参数 当前对象 <类型 = MP坐标转换器类>
+    参数 右 <类型 = 小数矩形类>
+    {
+        @ @<当前对象>.rectValueToPixel (@<右>);
+    }
+
+    方法 矩形至像素相位 <公开 静态 注释 = "java: public void rectToPixelPhase(android.graphics.RectF, float)">
+    参数 当前对象 <类型 = MP坐标转换器类>
+    参数 右 <类型 = 小数矩形类>
+    参数 相位纵坐标 <类型 = 小数>
+    {
+        @ @<当前对象>.rectToPixelPhase (@<右>, (float) @<相位纵坐标>);
+    }
+
+    方法 矩形至像素相位横向 <公开 静态 注释 = "java: public void rectToPixelPhaseHorizontal(android.graphics.RectF, float)">
+    参数 当前对象 <类型 = MP坐标转换器类>
+    参数 右 <类型 = 小数矩形类>
+    参数 相位纵坐标 <类型 = 小数>
+    {
+        @ @<当前对象>.rectToPixelPhaseHorizontal (@<右>, (float) @<相位纵坐标>);
+    }
+
+    方法 矩形数值至像素横向 <公开 静态 注释 = "java: public void rectValueToPixelHorizontal(android.graphics.RectF)">
+    参数 当前对象 <类型 = MP坐标转换器类>
+    参数 右 <类型 = 小数矩形类>
+    {
+        @ @<当前对象>.rectValueToPixelHorizontal (@<右>);
+    }
+
+    方法 矩形数值至像素横向_2 <公开 静态 注释 = "java: public void rectValueToPixelHorizontal(android.graphics.RectF, float)">
+    参数 当前对象 <类型 = MP坐标转换器类>
+    参数 右 <类型 = 小数矩形类>
+    参数 相位纵坐标 <类型 = 小数>
+    {
+        @ @<当前对象>.rectValueToPixelHorizontal (@<右>, (float) @<相位纵坐标>);
+    }
+
+    方法 矩形数值集至像素 <公开 静态 注释 = "java: public void rectValuesToPixel(java.util.List<android.graphics.RectF>)">
+    参数 当前对象 <类型 = MP坐标转换器类>
+    参数 矩形集 <类型 = MP列表类>
+    {
+        @ @<当前对象>.rectValuesToPixel (@<矩形集>);
+    }
+
+    方法 像素至数值 <公开 静态 注释 = "java: public void pixelsToValue(float[])">
+    参数 当前对象 <类型 = MP坐标转换器类>
+    参数 像素 <类型 = "小数 []">
+    {
+        @ @<当前对象>.pixelsToValue (@<像素>);
+    }
+
+    方法 取数值集按触摸点 <公开 静态 类型 = MP双精度坐标类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.utils.MPPointD getValuesByTouchPoint(float, float)">
+    参数 当前对象 <类型 = MP坐标转换器类>
+    参数 横坐标 <类型 = 小数>
+    参数 纵坐标 <类型 = 小数>
+    {
+        @ @<当前对象>.getValuesByTouchPoint ((float) @<横坐标>, (float) @<纵坐标>)
+    }
+
+    方法 取数值集按触摸点_2 <公开 静态 注释 = "java: public void getValuesByTouchPoint(float, float, com.github.mikephil.charting.utils.MPPointD)">
+    参数 当前对象 <类型 = MP坐标转换器类>
+    参数 横坐标 <类型 = 小数>
+    参数 纵坐标 <类型 = 小数>
+    参数 输出点 <类型 = MP双精度坐标类>
+    {
+        @ @<当前对象>.getValuesByTouchPoint ((float) @<横坐标>, (float) @<纵坐标>, @<输出点>);
+    }
+
+    方法 取像素对应数值集 <公开 静态 类型 = MP双精度坐标类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.utils.MPPointD getPixelForValues(float, float)">
+    参数 当前对象 <类型 = MP坐标转换器类>
+    参数 横坐标 <类型 = 小数>
+    参数 纵坐标 <类型 = 小数>
+    {
+        @ @<当前对象>.getPixelForValues ((float) @<横坐标>, (float) @<纵坐标>)
+    }
+
+    方法 取数值矩阵 <公开 静态 类型 = 矩阵类 @嵌入式方法 = "" 注释 = "java: public android.graphics.Matrix getValueMatrix()">
+    参数 当前对象 <类型 = MP坐标转换器类>
+    {
+        @ @<当前对象>.getValueMatrix ()
+    }
+
+    方法 取偏移矩阵 <公开 静态 类型 = 矩阵类 @嵌入式方法 = "" 注释 = "java: public android.graphics.Matrix getOffsetMatrix()">
+    参数 当前对象 <类型 = MP坐标转换器类>
+    {
+        @ @<当前对象>.getOffsetMatrix ()
+    }
+
+    方法 取数值至像素矩阵 <公开 静态 类型 = 矩阵类 @嵌入式方法 = "" 注释 = "java: public android.graphics.Matrix getValueToPixelMatrix()">
+    参数 当前对象 <类型 = MP坐标转换器类>
+    {
+        @ @<当前对象>.getValueToPixelMatrix ()
+    }
+
+    方法 取像素至数值矩阵 <公开 静态 类型 = 矩阵类 @嵌入式方法 = "" 注释 = "java: public android.graphics.Matrix getPixelToValueMatrix()">
+    参数 当前对象 <类型 = MP坐标转换器类>
+    {
+        @ @<当前对象>.getPixelToValueMatrix ()
+    }
+
+}
+
+类 MP横向柱图转换器类 <公开 基础类 = MP坐标转换器类 @别名 = "com.github.mikephil.charting.utils.TransformerHorizontalBarChart" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.utils.TransformerHorizontalBarChart.">
+{
+
+    方法 新建横向柱图转换器 <公开 静态 类型 = MP横向柱图转换器类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.utils.TransformerHorizontalBarChart(com.github.mikephil.charting.utils.ViewPortHandler)">
+    参数 视口处理器 <类型 = MP视图区域处理类>
+    {
+        @ new com.github.mikephil.charting.utils.TransformerHorizontalBarChart (@<视口处理器>)
+    }
+
+}
+
+类 MP绘图工具类 <公开 @别名 = "com.github.mikephil.charting.utils.Utils" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.utils.Utils.">
+{
+
+    方法 初始化 <公开 静态 注释 = "java: public static void init(android.content.Context)">
+    参数 当前对象 <类型 = MP绘图工具类>
+    参数 上下文 <类型 = 安卓窗口环境>
+    {
+        @ @<当前对象>.init (@<上下文>);
+    }
+
+    方法 初始化_2 <公开 静态 注释 = "java: public static void init(android.content.res.Resources)">
+    参数 当前对象 <类型 = MP绘图工具类>
+    参数 资源 <类型 = 资源管理器>
+    {
+        @ @<当前对象>.init (@<资源>);
+    }
+
+    方法 转换设备独立像素至像素 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public static float convertDpToPixel(float)">
+    参数 当前对象 <类型 = MP绘图工具类>
+    参数 设备独立像素 <类型 = 小数>
+    {
+        @ com.github.mikephil.charting.utils.Utils.convertDpToPixel ((float) @<设备独立像素>)
+    }
+
+    方法 转换像素至设备独立像素 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public static float convertPixelsToDp(float)">
+    参数 当前对象 <类型 = MP绘图工具类>
+    参数 像素 <类型 = 小数>
+    {
+        @ com.github.mikephil.charting.utils.Utils.convertPixelsToDp ((float) @<像素>)
+    }
+
+    方法 计算文本宽度 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public static int calcTextWidth(android.graphics.Paint, java.lang.String)">
+    参数 当前对象 <类型 = MP绘图工具类>
+    参数 画笔 <类型 = 画笔类>
+    参数 演示文本 <类型 = 文本型>
+    {
+        @ com.github.mikephil.charting.utils.Utils.calcTextWidth (@<画笔>, @<演示文本>)
+    }
+
+    方法 计算文本高度 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public static int calcTextHeight(android.graphics.Paint, java.lang.String)">
+    参数 当前对象 <类型 = MP绘图工具类>
+    参数 画笔 <类型 = 画笔类>
+    参数 演示文本 <类型 = 文本型>
+    {
+        @ com.github.mikephil.charting.utils.Utils.calcTextHeight (@<画笔>, @<演示文本>)
+    }
+
+    方法 取线高度 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public static float getLineHeight(android.graphics.Paint)">
+    参数 当前对象 <类型 = MP绘图工具类>
+    参数 画笔 <类型 = 画笔类>
+    {
+        @ com.github.mikephil.charting.utils.Utils.getLineHeight (@<画笔>)
+    }
+
+    方法 取线高度_2 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public static float getLineHeight(android.graphics.Paint, android.graphics.Paint$FontMetrics)">
+    参数 当前对象 <类型 = MP绘图工具类>
+    参数 画笔 <类型 = 画笔类>
+    参数 字体度量 <类型 = MP画笔字体度量类>
+    {
+        @ com.github.mikephil.charting.utils.Utils.getLineHeight (@<画笔>, @<字体度量>)
+    }
+
+    方法 取线间距 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public static float getLineSpacing(android.graphics.Paint)">
+    参数 当前对象 <类型 = MP绘图工具类>
+    参数 画笔 <类型 = 画笔类>
+    {
+        @ com.github.mikephil.charting.utils.Utils.getLineSpacing (@<画笔>)
+    }
+
+    方法 取线间距_2 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public static float getLineSpacing(android.graphics.Paint, android.graphics.Paint$FontMetrics)">
+    参数 当前对象 <类型 = MP绘图工具类>
+    参数 画笔 <类型 = 画笔类>
+    参数 字体度量 <类型 = MP画笔字体度量类>
+    {
+        @ com.github.mikephil.charting.utils.Utils.getLineSpacing (@<画笔>, @<字体度量>)
+    }
+
+    方法 计算文本尺寸 <公开 静态 类型 = MP小数尺寸类 @嵌入式方法 = "" 注释 = "java: public static com.github.mikephil.charting.utils.FSize calcTextSize(android.graphics.Paint, java.lang.String)">
+    参数 当前对象 <类型 = MP绘图工具类>
+    参数 画笔 <类型 = 画笔类>
+    参数 演示文本 <类型 = 文本型>
+    {
+        @ com.github.mikephil.charting.utils.Utils.calcTextSize (@<画笔>, @<演示文本>)
+    }
+
+    方法 计算文本尺寸_2 <公开 静态 注释 = "java: public static void calcTextSize(android.graphics.Paint, java.lang.String, com.github.mikephil.charting.utils.FSize)">
+    参数 当前对象 <类型 = MP绘图工具类>
+    参数 画笔 <类型 = 画笔类>
+    参数 演示文本 <类型 = 文本型>
+    参数 输出数值尺寸 <类型 = MP小数尺寸类>
+    {
+        @ @<当前对象>.calcTextSize (@<画笔>, @<演示文本>, @<输出数值尺寸>);
+    }
+
+    方法 取默认数值格式器 <公开 静态 类型 = MP数值格式化接口 @嵌入式方法 = "" 注释 = "java: public static com.github.mikephil.charting.formatter.IValueFormatter getDefaultValueFormatter()">
+    参数 当前对象 <类型 = MP绘图工具类>
+    {
+        @ com.github.mikephil.charting.utils.Utils.getDefaultValueFormatter ()
+    }
+
+    方法 格式化数值 <公开 静态 类型 = 文本型 @嵌入式方法 = "" 注释 = "java: public static java.lang.String formatNumber(float, int, boolean)">
+    参数 当前对象 <类型 = MP绘图工具类>
+    参数 数值 <类型 = 小数>
+    参数 数字数量 <类型 = 整数>
+    参数 分隔千分位 <类型 = 逻辑型>
+    {
+        @ com.github.mikephil.charting.utils.Utils.formatNumber ((float) @<数值>, @<数字数量>, @<分隔千分位>)
+    }
+
+    方法 格式化数值_2 <公开 静态 类型 = 文本型 @嵌入式方法 = "" 注释 = "java: public static java.lang.String formatNumber(float, int, boolean, char)">
+    参数 当前对象 <类型 = MP绘图工具类>
+    参数 数值 <类型 = 小数>
+    参数 数字数量 <类型 = 整数>
+    参数 分隔千分位 <类型 = 逻辑型>
+    参数 分隔字符 <类型 = 整数>
+    {
+        @ com.github.mikephil.charting.utils.Utils.formatNumber ((float) @<数值>, @<数字数量>, @<分隔千分位>, (char) @<分隔字符>)
+    }
+
+    方法 圆角至下一个有效位 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public static float roundToNextSignificant(double)">
+    参数 当前对象 <类型 = MP绘图工具类>
+    参数 数值 <类型 = 小数>
+    {
+        @ com.github.mikephil.charting.utils.Utils.roundToNextSignificant (@<数值>)
+    }
+
+    方法 取小数位 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public static int getDecimals(float)">
+    参数 当前对象 <类型 = MP绘图工具类>
+    参数 数值 <类型 = 小数>
+    {
+        @ com.github.mikephil.charting.utils.Utils.getDecimals ((float) @<数值>)
+    }
+
+    方法 转换整数集 <公开 静态 类型 = "整数 []" @嵌入式方法 = "" 注释 = "java: public static int[] convertIntegers(java.util.List<java.lang.Integer>)">
+    参数 当前对象 <类型 = MP绘图工具类>
+    参数 整数集 <类型 = MP列表类>
+    {
+        @ com.github.mikephil.charting.utils.Utils.convertIntegers (@<整数集>)
+    }
+
+    方法 复制整数集 <公开 静态 注释 = "java: public static void copyIntegers(java.util.List<java.lang.Integer>, int[])">
+    参数 当前对象 <类型 = MP绘图工具类>
+    参数 来自 <类型 = MP列表类>
+    参数 至 <类型 = "整数 []">
+    {
+        @ @<当前对象>.copyIntegers (@<来自>, @<至>);
+    }
+
+    方法 转换字符串集 <公开 静态 类型 = "文本型 []" @嵌入式方法 = "" 注释 = "java: public static java.lang.String[] convertStrings(java.util.List<java.lang.String>)">
+    参数 当前对象 <类型 = MP绘图工具类>
+    参数 字符串集 <类型 = MP列表类>
+    {
+        @ com.github.mikephil.charting.utils.Utils.convertStrings (@<字符串集>)
+    }
+
+    方法 复制字符串集 <公开 静态 注释 = "java: public static void copyStrings(java.util.List<java.lang.String>, java.lang.String[])">
+    参数 当前对象 <类型 = MP绘图工具类>
+    参数 来自 <类型 = MP列表类>
+    参数 至 <类型 = "文本型 []">
+    {
+        @ @<当前对象>.copyStrings (@<来自>, @<至>);
+    }
+
+    方法 下一个向上 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public static double nextUp(double)">
+    参数 当前对象 <类型 = MP绘图工具类>
+    参数 数据集 <类型 = 小数>
+    {
+        @ com.github.mikephil.charting.utils.Utils.nextUp (@<数据集>)
+    }
+
+    方法 取位置 <公开 静态 类型 = MP单精度坐标类 @嵌入式方法 = "" 注释 = "java: public static com.github.mikephil.charting.utils.MPPointF getPosition(com.github.mikephil.charting.utils.MPPointF, float, float)">
+    参数 当前对象 <类型 = MP绘图工具类>
+    参数 中心 <类型 = MP单精度坐标类>
+    参数 距离 <类型 = 小数>
+    参数 角度 <类型 = 小数>
+    {
+        @ com.github.mikephil.charting.utils.Utils.getPosition (@<中心>, (float) @<距离>, (float) @<角度>)
+    }
+
+    方法 取位置_2 <公开 静态 注释 = "java: public static void getPosition(com.github.mikephil.charting.utils.MPPointF, float, float, com.github.mikephil.charting.utils.MPPointF)">
+    参数 当前对象 <类型 = MP绘图工具类>
+    参数 中心 <类型 = MP单精度坐标类>
+    参数 距离 <类型 = 小数>
+    参数 角度 <类型 = 小数>
+    参数 输出点 <类型 = MP单精度坐标类>
+    {
+        @ @<当前对象>.getPosition (@<中心>, (float) @<距离>, (float) @<角度>, @<输出点>);
+    }
+
+    方法 速度跟踪器指针向上清理向上若必要 <公开 静态 注释 = "java: public static void velocityTrackerPointerUpCleanUpIfNecessary(android.view.MotionEvent, android.view.VelocityTracker)">
+    参数 当前对象 <类型 = MP绘图工具类>
+    参数 事件 <类型 = 动作事件类>
+    参数 跟踪器 <类型 = MP速度跟踪器类>
+    {
+        @ @<当前对象>.velocityTrackerPointerUpCleanUpIfNecessary (@<事件>, @<跟踪器>);
+    }
+
+    方法 后作废上动画 <公开 静态 注释 = "java: public static void postInvalidateOnAnimation(android.view.View)">
+    参数 当前对象 <类型 = MP绘图工具类>
+    参数 视图 <类型 = 安卓窗口组件>
+    {
+        @ @<当前对象>.postInvalidateOnAnimation (@<视图>);
+    }
+
+    方法 取最小值甩动速度 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public static int getMinimumFlingVelocity()">
+    参数 当前对象 <类型 = MP绘图工具类>
+    {
+        @ com.github.mikephil.charting.utils.Utils.getMinimumFlingVelocity ()
+    }
+
+    方法 取最大值甩动速度 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public static int getMaximumFlingVelocity()">
+    参数 当前对象 <类型 = MP绘图工具类>
+    {
+        @ com.github.mikephil.charting.utils.Utils.getMaximumFlingVelocity ()
+    }
+
+    方法 取已归一化角度 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public static float getNormalizedAngle(float)">
+    参数 当前对象 <类型 = MP绘图工具类>
+    参数 角度 <类型 = 小数>
+    {
+        @ com.github.mikephil.charting.utils.Utils.getNormalizedAngle ((float) @<角度>)
+    }
+
+    方法 绘制图像 <公开 静态 注释 = "java: public static void drawImage(android.graphics.Canvas, android.graphics.drawable.Drawable, int, int, int, int)">
+    参数 当前对象 <类型 = MP绘图工具类>
+    参数 画布 <类型 = 画板类>
+    参数 可绘制对象 <类型 = 可绘制对象类>
+    参数 横坐标 <类型 = 整数>
+    参数 纵坐标 <类型 = 整数>
+    参数 宽度 <类型 = 整数>
+    参数 高度 <类型 = 整数>
+    {
+        @ @<当前对象>.drawImage (@<画布>, @<可绘制对象>, @<横坐标>, @<纵坐标>, @<宽度>, @<高度>);
+    }
+
+    方法 绘制横坐标轴数值 <公开 静态 注释 = "java: public static void drawXAxisValue(android.graphics.Canvas, java.lang.String, float, float, android.graphics.Paint, com.github.mikephil.charting.utils.MPPointF, float)">
+    参数 当前对象 <类型 = MP绘图工具类>
+    参数 颜色 <类型 = 画板类>
+    参数 文本 <类型 = 文本型>
+    参数 横坐标 <类型 = 小数>
+    参数 纵坐标 <类型 = 小数>
+    参数 画笔 <类型 = 画笔类>
+    参数 锚点 <类型 = MP单精度坐标类>
+    参数 角度角度 <类型 = 小数>
+    {
+        @ @<当前对象>.drawXAxisValue (@<颜色>, @<文本>, (float) @<横坐标>, (float) @<纵坐标>, @<画笔>, @<锚点>, (float) @<角度角度>);
+    }
+
+    方法 绘制多行文本 <公开 静态 注释 = "java: public static void drawMultilineText(android.graphics.Canvas, android.text.StaticLayout, float, float, android.text.TextPaint, com.github.mikephil.charting.utils.MPPointF, float)">
+    参数 当前对象 <类型 = MP绘图工具类>
+    参数 颜色 <类型 = 画板类>
+    参数 文本布局 <类型 = 文本静态布局类>
+    参数 横坐标 <类型 = 小数>
+    参数 纵坐标 <类型 = 小数>
+    参数 画笔 <类型 = 文本画笔类>
+    参数 锚点 <类型 = MP单精度坐标类>
+    参数 角度角度 <类型 = 小数>
+    {
+        @ @<当前对象>.drawMultilineText (@<颜色>, @<文本布局>, (float) @<横坐标>, (float) @<纵坐标>, @<画笔>, @<锚点>, (float) @<角度角度>);
+    }
+
+    方法 绘制多行文本_2 <公开 静态 注释 = "java: public static void drawMultilineText(android.graphics.Canvas, java.lang.String, float, float, android.text.TextPaint, com.github.mikephil.charting.utils.FSize, com.github.mikephil.charting.utils.MPPointF, float)">
+    参数 当前对象 <类型 = MP绘图工具类>
+    参数 颜色 <类型 = 画板类>
+    参数 文本 <类型 = 文本型>
+    参数 横坐标 <类型 = 小数>
+    参数 纵坐标 <类型 = 小数>
+    参数 画笔 <类型 = 文本画笔类>
+    参数 受限至尺寸 <类型 = MP小数尺寸类>
+    参数 锚点 <类型 = MP单精度坐标类>
+    参数 角度角度 <类型 = 小数>
+    {
+        @ @<当前对象>.drawMultilineText (@<颜色>, @<文本>, (float) @<横坐标>, (float) @<纵坐标>, @<画笔>, @<受限至尺寸>, @<锚点>, (float) @<角度角度>);
+    }
+
+    方法 取尺寸的已旋转矩形按角度 <公开 静态 类型 = MP小数尺寸类 @嵌入式方法 = "" 注释 = "java: public static com.github.mikephil.charting.utils.FSize getSizeOfRotatedRectangleByDegrees(com.github.mikephil.charting.utils.FSize, float)">
+    参数 当前对象 <类型 = MP绘图工具类>
+    参数 矩形尺寸 <类型 = MP小数尺寸类>
+    参数 角度 <类型 = 小数>
+    {
+        @ com.github.mikephil.charting.utils.Utils.getSizeOfRotatedRectangleByDegrees (@<矩形尺寸>, (float) @<角度>)
+    }
+
+    方法 取尺寸的已旋转矩形按弧度 <公开 静态 类型 = MP小数尺寸类 @嵌入式方法 = "" 注释 = "java: public static com.github.mikephil.charting.utils.FSize getSizeOfRotatedRectangleByRadians(com.github.mikephil.charting.utils.FSize, float)">
+    参数 当前对象 <类型 = MP绘图工具类>
+    参数 矩形尺寸 <类型 = MP小数尺寸类>
+    参数 弧度 <类型 = 小数>
+    {
+        @ com.github.mikephil.charting.utils.Utils.getSizeOfRotatedRectangleByRadians (@<矩形尺寸>, (float) @<弧度>)
+    }
+
+    方法 取尺寸的已旋转矩形按角度_2 <公开 静态 类型 = MP小数尺寸类 @嵌入式方法 = "" 注释 = "java: public static com.github.mikephil.charting.utils.FSize getSizeOfRotatedRectangleByDegrees(float, float, float)">
+    参数 当前对象 <类型 = MP绘图工具类>
+    参数 矩形宽度 <类型 = 小数>
+    参数 矩形高度 <类型 = 小数>
+    参数 角度 <类型 = 小数>
+    {
+        @ com.github.mikephil.charting.utils.Utils.getSizeOfRotatedRectangleByDegrees ((float) @<矩形宽度>, (float) @<矩形高度>, (float) @<角度>)
+    }
+
+    方法 取尺寸的已旋转矩形按弧度_2 <公开 静态 类型 = MP小数尺寸类 @嵌入式方法 = "" 注释 = "java: public static com.github.mikephil.charting.utils.FSize getSizeOfRotatedRectangleByRadians(float, float, float)">
+    参数 当前对象 <类型 = MP绘图工具类>
+    参数 矩形宽度 <类型 = 小数>
+    参数 矩形高度 <类型 = 小数>
+    参数 弧度 <类型 = 小数>
+    {
+        @ com.github.mikephil.charting.utils.Utils.getSizeOfRotatedRectangleByRadians ((float) @<矩形宽度>, (float) @<矩形高度>, (float) @<弧度>)
+    }
+
+    方法 取开发包整数 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public static int getSDKInt()">
+    参数 当前对象 <类型 = MP绘图工具类>
+    {
+        @ com.github.mikephil.charting.utils.Utils.getSDKInt ()
+    }
+
+    常量 度转弧度 <公开 类型 = 小数 值 = 0.017453292519943295 注释 = "java: public static final double DEG2RAD = 0.017453292519943295d">
+
+    常量 浮点度转弧度 <公开 类型 = 小数 值 = 0.017453292 注释 = "java: public static final float FDEG2RAD = 0.017453292f">
+
+    方法 取双精度容差 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java 常量: public static final double DOUBLE_EPSILON">
+    {
+        @ com.github.mikephil.charting.utils.Utils.DOUBLE_EPSILON
+    }
+
+    方法 取小数容差 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java 常量: public static final float FLOAT_EPSILON">
+    {
+        @ com.github.mikephil.charting.utils.Utils.FLOAT_EPSILON
+    }
+
+}
+

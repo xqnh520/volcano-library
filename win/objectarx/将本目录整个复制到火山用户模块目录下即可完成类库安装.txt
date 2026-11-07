@@ -1,0 +1,5 @@
+把本目录整个复制到 火山安装目录\plugins\vprj_win\classlib\user\ 下即可完成安装（重启 IDE 后在「模块」列表里能看到 ObjectARX几何 / ObjectARX数据库）。
+
+本目录里的两份 .wsv 不是权威源，是 E:\火山视窗\cadARX\install_arx_module.py 从 E:\火山视窗\cadARX\lib\ 复制并改写包头路径属性生成的；类库有更新请改 lib\ 与 native\，然后重跑那个脚本覆盖这里。
+
+详细说明见 README.md。

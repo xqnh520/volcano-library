@@ -1,0 +1,958 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.Box2D <注释 = "几何：形状体、投射、碰撞流形、距离、撞击时间、动态树 · Box2D 3.2.0 单精度" @视窗.头文件搜寻目录 = "include"
+        @视窗.外部头文件 = "b2vol.h" @视窗.库文件搜寻目录 = "lib/x64"
+        @视窗.外部库 = "box2d$(d).lib">
+
+类 B2圆 <公开 注释 = "圆 · b2Circle" @别名 = "b2Circle" @别名类型 = 本地结构>
+{
+    变量 中心 <公开 类型 = B2向量 注释 = "局部圆心 · b2Circle.center" @输出名 = "center">
+    变量 半径 <公开 类型 = 单精度小数 注释 = "半径 · b2Circle.radius" @输出名 = "radius">
+}
+
+类 B2胶囊 <公开 注释 = "胶囊 · b2Capsule" @别名 = "b2Capsule" @别名类型 = 本地结构>
+{
+    变量 中心甲 <公开 类型 = B2向量 注释 = "第一个半圆的局部圆心 · b2Capsule.center1" @输出名 = "center1">
+    变量 中心乙 <公开 类型 = B2向量 注释 = "第二个半圆的局部圆心 · b2Capsule.center2" @输出名 = "center2">
+    变量 半径 <公开 类型 = 单精度小数 注释 = "半圆半径 · b2Capsule.radius" @输出名 = "radius">
+}
+
+类 B2线段 <公开 注释 = "线段 · b2Segment" @别名 = "b2Segment" @别名类型 = 本地结构>
+{
+    变量 点甲 <公开 类型 = B2向量 注释 = "第一个端点 · b2Segment.point1" @输出名 = "point1">
+    变量 点乙 <公开 类型 = B2向量 注释 = "第二个端点 · b2Segment.point2" @输出名 = "point2">
+}
+
+类 B2链条段 <公开 注释 = "链条段 · b2ChainSegment" @别名 = "b2ChainSegment" @别名类型 = 本地结构>
+{
+    变量 虚拟点甲 <公开 类型 = B2向量 注释 = "尾端幽灵顶点 · b2ChainSegment.ghost1" @输出名 = "ghost1">
+    变量 线段 <公开 类型 = B2线段 注释 = "线段本身 · b2ChainSegment.segment" @输出名 = "segment">
+    变量 虚拟点乙 <公开 类型 = B2向量 注释 = "首端幽灵顶点 · b2ChainSegment.ghost2" @输出名 = "ghost2">
+    变量 链条标识 <公开 类型 = 整数 注释 = "所属链条形状的索引，仅内部使用 · b2ChainSegment.chainId" @输出名 = "chainId">
+}
+
+类 B2多边形 <公开 注释 = "多边形 · b2Polygon" @别名 = "b2Polygon" @别名类型 = 本地结构>
+{
+    变量 质心 <公开 类型 = B2向量 注释 = "多边形的质心 · b2Polygon.centroid" @输出名 = "centroid">
+    变量 半径 <公开 类型 = 单精度小数 注释 = "圆角多边形的外圆角半径 · b2Polygon.radius" @输出名 = "radius">
+    变量 数量 <公开 类型 = 整数 注释 = "多边形顶点数量 · b2Polygon.count" @输出名 = "count">
+
+    方法 取顶点 <公开 静态 类型 = B2向量 注释 = "读取顶点数组字段的一个元素 · b2vol_polygon_getVertex" @嵌入式方法 = "">
+    参数 定义 <类型 = B2多边形>
+    参数 序号 <类型 = 整数>
+    {
+        @ b2vol_polygon_getVertex(&@<定义>, @<序号>)
+    }
+
+    方法 置顶点 <公开 静态 注释 = "写入顶点数组字段的一个元素 · b2vol_polygon_setVertex" @嵌入式方法 = "">
+    参数 定义 <类型 = B2多边形>
+    参数 序号 <类型 = 整数>
+    参数 新值 <类型 = B2向量>
+    {
+        @ b2vol_polygon_setVertex(&@<定义>, @<序号>, @<新值>)
+    }
+
+    方法 取法线 <公开 静态 类型 = B2向量 注释 = "读取法线数组字段的一个元素 · b2vol_polygon_getNormal" @嵌入式方法 = "">
+    参数 定义 <类型 = B2多边形>
+    参数 序号 <类型 = 整数>
+    {
+        @ b2vol_polygon_getNormal(&@<定义>, @<序号>)
+    }
+
+    方法 置法线 <公开 静态 注释 = "写入法线数组字段的一个元素 · b2vol_polygon_setNormal" @嵌入式方法 = "">
+    参数 定义 <类型 = B2多边形>
+    参数 序号 <类型 = 整数>
+    参数 新值 <类型 = B2向量>
+    {
+        @ b2vol_polygon_setNormal(&@<定义>, @<序号>, @<新值>)
+    }
+
+}
+
+类 B2凸包 <公开 注释 = "凸包 · b2Hull" @别名 = "b2Hull" @别名类型 = 本地结构>
+{
+    变量 数量 <公开 类型 = 整数 注释 = "点数量 · b2Hull.count" @输出名 = "count">
+
+    方法 取点 <公开 静态 类型 = B2向量 注释 = "读取点数组字段的一个元素 · b2vol_hull_getPoint" @嵌入式方法 = "">
+    参数 定义 <类型 = B2凸包>
+    参数 序号 <类型 = 整数>
+    {
+        @ b2vol_hull_getPoint(&@<定义>, @<序号>)
+    }
+
+    方法 置点 <公开 静态 注释 = "写入点数组字段的一个元素 · b2vol_hull_setPoint" @嵌入式方法 = "">
+    参数 定义 <类型 = B2凸包>
+    参数 序号 <类型 = 整数>
+    参数 新值 <类型 = B2向量>
+    {
+        @ b2vol_hull_setPoint(&@<定义>, @<序号>, @<新值>)
+    }
+
+}
+
+类 B2形状代理 <公开 注释 = "形状代理 · b2ShapeProxy" @别名 = "b2ShapeProxy" @别名类型 = 本地结构>
+{
+    变量 数量 <公开 类型 = 整数 注释 = "点数量 · b2ShapeProxy.count" @输出名 = "count">
+    变量 半径 <公开 类型 = 单精度小数 注释 = "点云的外半径 · b2ShapeProxy.radius" @输出名 = "radius">
+
+    方法 取点 <公开 静态 类型 = B2向量 注释 = "读取点数组字段的一个元素 · b2vol_shapeProxy_getPoint" @嵌入式方法 = "">
+    参数 定义 <类型 = B2形状代理>
+    参数 序号 <类型 = 整数>
+    {
+        @ b2vol_shapeProxy_getPoint(&@<定义>, @<序号>)
+    }
+
+    方法 置点 <公开 静态 注释 = "写入点数组字段的一个元素 · b2vol_shapeProxy_setPoint" @嵌入式方法 = "">
+    参数 定义 <类型 = B2形状代理>
+    参数 序号 <类型 = 整数>
+    参数 新值 <类型 = B2向量>
+    {
+        @ b2vol_shapeProxy_setPoint(&@<定义>, @<序号>, @<新值>)
+    }
+
+}
+
+类 B2射线投射输入 <公开 注释 = "射线投射输入 · b2RayCastInput" @别名 = "b2RayCastInput" @别名类型 = 本地结构>
+{
+    变量 原点 <公开 类型 = B2向量 注释 = "射线的起点 · b2RayCastInput.origin" @输出名 = "origin">
+    变量 平移 <公开 类型 = B2向量 注释 = "射线的平移量 · b2RayCastInput.translation" @输出名 = "translation">
+    变量 最大比例 <公开 类型 = 单精度小数 注释 = "允许考虑的最大平移比例，通常取 1 · b2RayCastInput.maxFraction" @输出名 = "maxFraction">
+}
+
+类 B2形状投射输入 <公开 注释 = "形状投射输入 · b2ShapeCastInput" @别名 = "b2ShapeCastInput" @别名类型 = 本地结构>
+{
+    变量 形状代理 <公开 类型 = B2形状代理 注释 = "参与投射的通用形状 · b2ShapeCastInput.proxy" @输出名 = "proxy">
+    变量 平移 <公开 类型 = B2向量 注释 = "形状投射的平移量 · b2ShapeCastInput.translation" @输出名 = "translation">
+    变量 最大比例 <公开 类型 = 单精度小数 注释 = "允许考虑的最大平移比例，通常取 1 · b2ShapeCastInput.maxFraction" @输出名 = "maxFraction">
+    变量 允许侵入 <公开 类型 = 逻辑型 注释 = "允许形状投射在初始就接触时继续侵入 · b2ShapeCastInput.canEncroach" @输出名 = "canEncroach">
+}
+
+类 B2投射输出 <公开 注释 = "投射输出 · b2CastOutput" @别名 = "b2CastOutput" @别名类型 = 本地结构>
+{
+    变量 法线 <公开 类型 = B2向量 注释 = "命中点处的表面法线 · b2CastOutput.normal" @输出名 = "normal">
+    变量 点 <公开 类型 = B2向量 注释 = "表面命中点 · b2CastOutput.point" @输出名 = "point">
+    变量 比例 <公开 类型 = 单精度小数 注释 = "发生碰撞处的输入平移比例 · b2CastOutput.fraction" @输出名 = "fraction">
+    变量 迭代数 <公开 类型 = 整数 注释 = "所用迭代次数 · b2CastOutput.iterations" @输出名 = "iterations">
+    变量 是否撞击 <公开 类型 = 逻辑型 注释 = "投射是否命中 · b2CastOutput.hit" @输出名 = "hit">
+}
+
+类 B2盒投射输入 <公开 注释 = "盒投射输入 · b2BoxCastInput" @别名 = "b2BoxCastInput" @别名类型 = 本地结构>
+{
+    变量 盒子 <公开 类型 = B2包围盒 注释 = "要投射的包围盒，使用树内坐标系 · b2BoxCastInput.box" @输出名 = "box">
+    变量 平移 <公开 类型 = B2向量 注释 = "扫掠平移量 · b2BoxCastInput.translation" @输出名 = "translation">
+    变量 最大比例 <公开 类型 = 单精度小数 注释 = "允许考虑的最大平移比例，通常取 1 · b2BoxCastInput.maxFraction" @输出名 = "maxFraction">
+}
+
+类 B2线段距离结果 <公开 注释 = "线段距离结果 · b2SegmentDistanceResult" @别名 = "b2SegmentDistanceResult" @别名类型 = 本地结构>
+{
+    变量 最近点甲 <公开 类型 = B2向量 注释 = "第一条线段上的最近点 · b2SegmentDistanceResult.closest1" @输出名 = "closest1">
+    变量 最近点乙 <公开 类型 = B2向量 注释 = "第二条线段上的最近点 · b2SegmentDistanceResult.closest2" @输出名 = "closest2">
+    变量 比例甲 <公开 类型 = 单精度小数 注释 = "第一条线段上的重心坐标 · b2SegmentDistanceResult.fraction1" @输出名 = "fraction1">
+    变量 比例乙 <公开 类型 = 单精度小数 注释 = "第二条线段上的重心坐标 · b2SegmentDistanceResult.fraction2" @输出名 = "fraction2">
+    变量 距离平方 <公开 类型 = 单精度小数 注释 = "两最近点之间距离的平方 · b2SegmentDistanceResult.distanceSquared" @输出名 = "distanceSquared">
+}
+
+类 B2单纯形顶点 <公开 注释 = "单纯形顶点 · b2SimplexVertex" @别名 = "b2SimplexVertex" @别名类型 = 本地结构>
+{
+    变量 世界点甲 <公开 类型 = B2向量 注释 = "世界点甲 · b2SimplexVertex.wA" @输出名 = "wA">
+    变量 世界点乙 <公开 类型 = B2向量 注释 = "世界点乙 · b2SimplexVertex.wB" @输出名 = "wB">
+    变量 世界点 <公开 类型 = B2向量 注释 = "世界点 · b2SimplexVertex.w" @输出名 = "w">
+    变量 重心权重 <公开 类型 = 单精度小数 注释 = "重心权重 · b2SimplexVertex.a" @输出名 = "a">
+    变量 索引甲 <公开 类型 = 整数 注释 = "索引甲 · b2SimplexVertex.indexA" @输出名 = "indexA">
+    变量 索引乙 <公开 类型 = 整数 注释 = "索引乙 · b2SimplexVertex.indexB" @输出名 = "indexB">
+}
+
+类 B2单纯形 <公开 注释 = "单纯形 · b2Simplex" @别名 = "b2Simplex" @别名类型 = 本地结构>
+{
+    变量 顶点甲 <公开 类型 = B2单纯形顶点 注释 = "顶点甲 · b2Simplex.v1" @输出名 = "v1">
+    变量 顶点乙 <公开 类型 = B2单纯形顶点 注释 = "顶点乙 · b2Simplex.v2" @输出名 = "v2">
+    变量 顶点丙 <公开 类型 = B2单纯形顶点 注释 = "顶点丙 · b2Simplex.v3" @输出名 = "v3">
+    变量 数量 <公开 类型 = 整数 注释 = "数量 · b2Simplex.count" @输出名 = "count">
+}
+
+类 B2单纯形缓存 <公开 注释 = "单纯形缓存 · b2SimplexCache" @别名 = "b2SimplexCache" @别名类型 = 本地结构>
+{
+    变量 数量 <公开 类型 = 短整数 注释 = "缓存的单纯形点数量 · b2SimplexCache.count" @输出名 = "count">
+
+    方法 取索引甲 <公开 静态 类型 = 整数 注释 = "读取索引甲数组字段的一个元素 · b2vol_simplexCache_getIndexA" @嵌入式方法 = "">
+    参数 定义 <类型 = B2单纯形缓存>
+    参数 序号 <类型 = 整数>
+    {
+        @ b2vol_simplexCache_getIndexA(&@<定义>, @<序号>)
+    }
+
+    方法 置索引甲 <公开 静态 注释 = "写入索引甲数组字段的一个元素 · b2vol_simplexCache_setIndexA" @嵌入式方法 = "">
+    参数 定义 <类型 = B2单纯形缓存>
+    参数 序号 <类型 = 整数>
+    参数 新值 <类型 = 整数>
+    {
+        @ b2vol_simplexCache_setIndexA(&@<定义>, @<序号>, @<新值>)
+    }
+
+    方法 取索引乙 <公开 静态 类型 = 整数 注释 = "读取索引乙数组字段的一个元素 · b2vol_simplexCache_getIndexB" @嵌入式方法 = "">
+    参数 定义 <类型 = B2单纯形缓存>
+    参数 序号 <类型 = 整数>
+    {
+        @ b2vol_simplexCache_getIndexB(&@<定义>, @<序号>)
+    }
+
+    方法 置索引乙 <公开 静态 注释 = "写入索引乙数组字段的一个元素 · b2vol_simplexCache_setIndexB" @嵌入式方法 = "">
+    参数 定义 <类型 = B2单纯形缓存>
+    参数 序号 <类型 = 整数>
+    参数 新值 <类型 = 整数>
+    {
+        @ b2vol_simplexCache_setIndexB(&@<定义>, @<序号>, @<新值>)
+    }
+
+}
+
+类 B2距离输入 <公开 注释 = "距离输入 · b2DistanceInput" @别名 = "b2DistanceInput" @别名类型 = 本地结构>
+{
+    变量 代理甲 <公开 类型 = B2形状代理 注释 = "形状甲的代理 · b2DistanceInput.proxyA" @输出名 = "proxyA">
+    变量 代理乙 <公开 类型 = B2形状代理 注释 = "形状乙的代理 · b2DistanceInput.proxyB" @输出名 = "proxyB">
+    变量 变换 <公开 类型 = B2变换 注释 = "形状乙在形状甲坐标系中的变换 · b2DistanceInput.transform" @输出名 = "transform">
+    变量 使用半径 <公开 类型 = 逻辑型 注释 = "是否考虑代理半径 · b2DistanceInput.useRadii" @输出名 = "useRadii">
+}
+
+类 B2距离输出 <公开 注释 = "距离输出 · b2DistanceOutput" @别名 = "b2DistanceOutput" @别名类型 = 本地结构>
+{
+    变量 点甲 <公开 类型 = B2向量 注释 = "点甲 · b2DistanceOutput.pointA" @输出名 = "pointA">
+    变量 点乙 <公开 类型 = B2向量 注释 = "点乙 · b2DistanceOutput.pointB" @输出名 = "pointB">
+    变量 法线 <公开 类型 = B2向量 注释 = "法线 · b2DistanceOutput.normal" @输出名 = "normal">
+    变量 距离 <公开 类型 = 单精度小数 注释 = "距离 · b2DistanceOutput.distance" @输出名 = "distance">
+    变量 迭代数 <公开 类型 = 整数 注释 = "迭代数 · b2DistanceOutput.iterations" @输出名 = "iterations">
+    变量 单纯形顶点数量 <公开 类型 = 整数 注释 = "单纯形顶点数量 · b2DistanceOutput.simplexCount" @输出名 = "simplexCount">
+}
+
+类 B2形状投射对输入 <公开 注释 = "形状投射对输入 · b2ShapeCastPairInput" @别名 = "b2ShapeCastPairInput" @别名类型 = 本地结构>
+{
+    变量 代理甲 <公开 类型 = B2形状代理 注释 = "代理甲 · b2ShapeCastPairInput.proxyA" @输出名 = "proxyA">
+    变量 代理乙 <公开 类型 = B2形状代理 注释 = "代理乙 · b2ShapeCastPairInput.proxyB" @输出名 = "proxyB">
+    变量 变换 <公开 类型 = B2变换 注释 = "变换 · b2ShapeCastPairInput.transform" @输出名 = "transform">
+    变量 平移乙 <公开 类型 = B2向量 注释 = "平移乙 · b2ShapeCastPairInput.translationB" @输出名 = "translationB">
+    变量 最大比例 <公开 类型 = 单精度小数 注释 = "最大比例 · b2ShapeCastPairInput.maxFraction" @输出名 = "maxFraction">
+    变量 允许侵入 <公开 类型 = 逻辑型 注释 = "允许侵入 · b2ShapeCastPairInput.canEncroach" @输出名 = "canEncroach">
+}
+
+类 B2扫掠 <公开 注释 = "扫掠 · b2Sweep" @别名 = "b2Sweep" @别名类型 = 本地结构>
+{
+    变量 局部中心 <公开 类型 = B2向量 注释 = "局部中心 · b2Sweep.localCenter" @输出名 = "localCenter">
+    变量 中心甲 <公开 类型 = B2向量 注释 = "中心甲 · b2Sweep.c1" @输出名 = "c1">
+    变量 中心乙 <公开 类型 = B2向量 注释 = "中心乙 · b2Sweep.c2" @输出名 = "c2">
+    变量 旋转甲 <公开 类型 = B2旋转 注释 = "旋转甲 · b2Sweep.q1" @输出名 = "q1">
+    变量 旋转乙 <公开 类型 = B2旋转 注释 = "旋转乙 · b2Sweep.q2" @输出名 = "q2">
+}
+
+类 B2碰撞时间输入 <公开 注释 = "碰撞时间输入 · b2TOIInput" @别名 = "b2TOIInput" @别名类型 = 本地结构>
+{
+    变量 代理甲 <公开 类型 = B2形状代理 注释 = "代理甲 · b2TOIInput.proxyA" @输出名 = "proxyA">
+    变量 代理乙 <公开 类型 = B2形状代理 注释 = "代理乙 · b2TOIInput.proxyB" @输出名 = "proxyB">
+    变量 扫掠甲 <公开 类型 = B2扫掠 注释 = "扫掠甲 · b2TOIInput.sweepA" @输出名 = "sweepA">
+    变量 扫掠乙 <公开 类型 = B2扫掠 注释 = "扫掠乙 · b2TOIInput.sweepB" @输出名 = "sweepB">
+    变量 最大比例 <公开 类型 = 单精度小数 注释 = "最大比例 · b2TOIInput.maxFraction" @输出名 = "maxFraction">
+}
+
+类 B2碰撞时间输出 <公开 注释 = "碰撞时间输出 · b2TOIOutput" @别名 = "b2TOIOutput" @别名类型 = 本地结构>
+{
+    变量 点 <公开 类型 = B2向量 注释 = "碰撞点 · b2TOIOutput.point" @输出名 = "point">
+    变量 法线 <公开 类型 = B2向量 注释 = "碰撞法线 · b2TOIOutput.normal" @输出名 = "normal">
+    变量 比例 <公开 类型 = 单精度小数 注释 = "碰撞发生的扫掠时刻 · b2TOIOutput.fraction" @输出名 = "fraction">
+
+    方法 取状态 <公开 静态 类型 = 整数 注释 = "读取状态字段 · b2vol_toiOutput_getState" @嵌入式方法 = "">
+    参数 定义 <类型 = B2碰撞时间输出>
+    {
+        @ b2vol_toiOutput_getState(&@<定义>)
+    }
+
+    方法 置状态 <公开 静态 注释 = "写入状态字段 · b2vol_toiOutput_setState" @嵌入式方法 = "">
+    参数 定义 <类型 = B2碰撞时间输出>
+    参数 新值 <类型 = 整数>
+    {
+        @ b2vol_toiOutput_setState(&@<定义>, @<新值>)
+    }
+
+}
+
+类 B2流形点 <公开 注释 = "流形点 · b2ManifoldPoint" @别名 = "b2ManifoldPoint" @别名类型 = 本地结构>
+{
+    变量 锚点甲 <公开 类型 = B2向量 注释 = "接触点相对刚体甲质心的世界坐标 · b2ManifoldPoint.anchorA" @输出名 = "anchorA">
+    变量 锚点乙 <公开 类型 = B2向量 注释 = "接触点相对刚体乙质心的世界坐标 · b2ManifoldPoint.anchorB" @输出名 = "anchorB">
+    变量 分离量 <公开 类型 = 单精度小数 注释 = "接触点的分离量，穿透时为负 · b2ManifoldPoint.separation" @输出名 = "separation">
+    变量 法向冲量 <公开 类型 = 单精度小数 注释 = "沿流形法线方向的冲量 · b2ManifoldPoint.normalImpulse" @输出名 = "normalImpulse">
+    变量 切向冲量 <公开 类型 = 单精度小数 注释 = "摩擦冲量 · b2ManifoldPoint.tangentImpulse" @输出名 = "tangentImpulse">
+    变量 总法向冲量 <公开 类型 = 单精度小数 注释 = "跨子步与恢复系数累计的法向冲量 · b2ManifoldPoint.totalNormalImpulse" @输出名 = "totalNormalImpulse">
+    变量 法向速度 <公开 类型 = 单精度小数 注释 = "求解前的相对法向速度 · b2ManifoldPoint.normalVelocity" @输出名 = "normalVelocity">
+    变量 基础分离量 <公开 类型 = 单精度小数 注释 = "接触回收所用的缓存分离量 · b2ManifoldPoint.baseSeparation" @输出名 = "baseSeparation">
+    变量 标识值 <公开 类型 = 短整数 注释 = "唯一标识两形状之间的某个接触点 · b2ManifoldPoint.id" @输出名 = "id">
+    变量 是否持续 <公开 类型 = 逻辑型 注释 = "该接触点在上一时间步是否已存在 · b2ManifoldPoint.persisted" @输出名 = "persisted">
+}
+
+类 B2流形 <公开 注释 = "流形 · b2Manifold" @别名 = "b2Manifold" @别名类型 = 本地结构>
+{
+    变量 法线 <公开 类型 = B2向量 注释 = "世界坐标系中的单位法线，由形状甲指向形状乙 · b2Manifold.normal" @输出名 = "normal">
+    变量 滚动冲量 <公开 类型 = 单精度小数 注释 = "用于滚动阻力的角冲量 · b2Manifold.rollingImpulse" @输出名 = "rollingImpulse">
+    变量 点数量 <公开 类型 = 整数 注释 = "接触点数量，取 0、1 或 2 · b2Manifold.pointCount" @输出名 = "pointCount">
+
+    方法 取流形点 <公开 静态 类型 = B2流形点 注释 = "读取流形点数组字段的一个元素 · b2vol_manifold_getPoint" @嵌入式方法 = "">
+    参数 定义 <类型 = B2流形>
+    参数 序号 <类型 = 整数>
+    {
+        @ b2vol_manifold_getPoint(&@<定义>, @<序号>)
+    }
+
+    方法 置流形点 <公开 静态 注释 = "写入流形点数组字段的一个元素 · b2vol_manifold_setPoint" @嵌入式方法 = "">
+    参数 定义 <类型 = B2流形>
+    参数 序号 <类型 = 整数>
+    参数 新值 <类型 = B2流形点>
+    {
+        @ b2vol_manifold_setPoint(&@<定义>, @<序号>, @<新值>)
+    }
+
+}
+
+类 B2局部流形点 <公开 注释 = "局部流形点 · b2LocalManifoldPoint" @别名 = "b2LocalManifoldPoint" @别名类型 = 本地结构>
+{
+    变量 点 <公开 类型 = B2向量 注释 = "甲坐标系中的接触点 · b2LocalManifoldPoint.point" @输出名 = "point">
+    变量 分离量 <公开 类型 = 单精度小数 注释 = "接触点的分离量，穿透时为负 · b2LocalManifoldPoint.separation" @输出名 = "separation">
+    变量 标识值 <公开 类型 = 短整数 注释 = "唯一标识两形状之间的某个接触点 · b2LocalManifoldPoint.id" @输出名 = "id">
+}
+
+类 B2局部流形 <公开 注释 = "局部流形 · b2LocalManifold" @别名 = "b2LocalManifold" @别名类型 = 本地结构>
+{
+    变量 法线 <公开 类型 = B2向量 注释 = "甲坐标系中的单位法线，由形状甲指向形状乙 · b2LocalManifold.normal" @输出名 = "normal">
+    变量 点数量 <公开 类型 = 整数 注释 = "接触点数量，取 0、1 或 2 · b2LocalManifold.pointCount" @输出名 = "pointCount">
+
+    方法 取点 <公开 静态 类型 = B2局部流形点 注释 = "读取点数组字段的一个元素 · b2vol_localManifold_getPoint" @嵌入式方法 = "">
+    参数 定义 <类型 = B2局部流形>
+    参数 序号 <类型 = 整数>
+    {
+        @ b2vol_localManifold_getPoint(&@<定义>, @<序号>)
+    }
+
+    方法 置点 <公开 静态 注释 = "写入点数组字段的一个元素 · b2vol_localManifold_setPoint" @嵌入式方法 = "">
+    参数 定义 <类型 = B2局部流形>
+    参数 序号 <类型 = 整数>
+    参数 新值 <类型 = B2局部流形点>
+    {
+        @ b2vol_localManifold_setPoint(&@<定义>, @<序号>, @<新值>)
+    }
+
+}
+
+类 B2平面结果 <公开 注释 = "平面结果 · b2PlaneResult" @别名 = "b2PlaneResult" @别名类型 = 本地结构>
+{
+    变量 平面 <公开 类型 = B2平面 注释 = "移动体与凸形状之间的碰撞平面 · b2PlaneResult.plane" @输出名 = "plane">
+    变量 点 <公开 类型 = B2向量 注释 = "形状上的碰撞点 · b2PlaneResult.point" @输出名 = "point">
+    变量 是否撞击 <公开 类型 = 逻辑型 注释 = "碰撞是否登记为命中 · b2PlaneResult.hit" @输出名 = "hit">
+}
+
+类 B2碰撞平面 <公开 注释 = "碰撞平面 · b2CollisionPlane" @别名 = "b2CollisionPlane" @别名类型 = 本地结构>
+{
+    变量 平面 <公开 类型 = B2平面 注释 = "移动体与某个形状之间的碰撞平面 · b2CollisionPlane.plane" @输出名 = "plane">
+    变量 推入限制 <公开 类型 = 单精度小数 注释 = "置为最大浮点数可使该平面尽可能刚性 · b2CollisionPlane.pushLimit" @输出名 = "pushLimit">
+    变量 推入量 <公开 类型 = 单精度小数 注释 = "平面求解得到的移动体推移量 · b2CollisionPlane.push" @输出名 = "push">
+    变量 裁剪速度 <公开 类型 = 逻辑型 注释 = "是否让速度裁剪考虑该平面 · b2CollisionPlane.clipVelocity" @输出名 = "clipVelocity">
+}
+
+类 B2平面求解结果 <公开 注释 = "平面求解结果 · b2PlaneSolverResult" @别名 = "b2PlaneSolverResult" @别名类型 = 本地结构>
+{
+    变量 增量 <公开 类型 = B2向量 注释 = "最终的相对平移量 · b2PlaneSolverResult.delta" @输出名 = "delta">
+    变量 迭代数量 <公开 类型 = 整数 注释 = "平面求解器所用迭代次数 · b2PlaneSolverResult.iterationCount" @输出名 = "iterationCount">
+}
+
+类 B2树查询回调 <公开 注释 = "树查询回调 · b2TreeQueryCallbackFcn" @别名 = "b2TreeQueryCallbackFcn*" @别名类型 = 本地整数基本类型 @有效值范围 = "">
+{
+    常量 空指针 <公开 类型 = B2树查询回调 注释 = "空指针 · @nullptr" 值 = @nullptr>
+
+    方法 回调模板 <公开 静态 类型 = 逻辑型 注释 = "动态树查询函数 · b2TreeQueryCallbackFcn">
+    参数 代理标识 <类型 = 整数>
+    参数 用户数据 <类型 = 长整数>
+    参数 上下文 <类型 = 变整数>
+    {
+        返回 (真)
+    }
+
+    方法 创建 <公开 静态 类型 = B2树查询回调 注释 = "创建回调值 · b2TreeQueryCallbackFcn*" @嵌入式方法 = "">
+    参数 回调函数 <@匹配方法 = "回调模板">
+    {
+        @ (b2TreeQueryCallbackFcn*)&@<回调函数>
+    }
+
+}
+
+类 B2树射线投射回调 <公开 注释 = "树射线投射回调 · b2TreeRayCastCallbackFcn" @别名 = "b2TreeRayCastCallbackFcn*" @别名类型 = 本地整数基本类型 @有效值范围 = "">
+{
+    常量 空指针 <公开 类型 = B2树射线投射回调 注释 = "空指针 · @nullptr" 值 = @nullptr>
+
+    方法 回调模板 <公开 静态 类型 = 单精度小数 注释 = "动态树射线投射函数 · b2TreeRayCastCallbackFcn">
+    参数 输入 <类型 = 变整数>
+    参数 代理标识 <类型 = 整数>
+    参数 用户数据 <类型 = 长整数>
+    参数 上下文 <类型 = 变整数>
+    {
+        返回 (0.0)
+    }
+
+    方法 创建 <公开 静态 类型 = B2树射线投射回调 注释 = "创建回调值 · b2TreeRayCastCallbackFcn*" @嵌入式方法 = "">
+    参数 回调函数 <@匹配方法 = "回调模板">
+    {
+        @ (b2TreeRayCastCallbackFcn*)&@<回调函数>
+    }
+
+}
+
+类 B2树盒投射回调 <公开 注释 = "树盒投射回调 · b2TreeBoxCastCallbackFcn" @别名 = "b2TreeBoxCastCallbackFcn*" @别名类型 = 本地整数基本类型 @有效值范围 = "">
+{
+    常量 空指针 <公开 类型 = B2树盒投射回调 注释 = "空指针 · @nullptr" 值 = @nullptr>
+
+    方法 回调模板 <公开 静态 类型 = 单精度小数 注释 = "动态树盒投射函数 · b2TreeBoxCastCallbackFcn">
+    参数 输入 <类型 = 变整数>
+    参数 代理标识 <类型 = 整数>
+    参数 用户数据 <类型 = 长整数>
+    参数 上下文 <类型 = 变整数>
+    {
+        返回 (0.0)
+    }
+
+    方法 创建 <公开 静态 类型 = B2树盒投射回调 注释 = "创建回调值 · b2TreeBoxCastCallbackFcn*" @嵌入式方法 = "">
+    参数 回调函数 <@匹配方法 = "回调模板">
+    {
+        @ (b2TreeBoxCastCallbackFcn*)&@<回调函数>
+    }
+
+}
+
+类 B2几何 <公开 注释 = "几何 · 接口包装类">
+{
+    方法 是否有效射线 <公开 静态 类型 = 逻辑型 注释 = "校验射线投射输入数据是否有效（如非数值等） · b2IsValidRay" @嵌入式方法 = "">
+    参数 输入 <类型 = B2射线投射输入>
+    {
+        @ (b2IsValidRay(&@<输入>) != 0)
+    }
+
+    方法 生成多边形 <公开 静态 类型 = B2多边形 注释 = "由凸包生成凸多边形 · b2MakePolygon" @嵌入式方法 = "">
+    参数 凸包 <类型 = B2凸包>
+    参数 半径 <类型 = 单精度小数>
+    {
+        @ b2MakePolygon(&@<凸包>, (float)@<半径>)
+    }
+
+    方法 生成偏移多边形 <公开 静态 类型 = B2多边形 注释 = "由凸包生成带偏移的凸多边形 · b2MakeOffsetPolygon" @嵌入式方法 = "">
+    参数 凸包 <类型 = B2凸包>
+    参数 位置 <类型 = B2向量>
+    参数 旋转 <类型 = B2旋转>
+    {
+        @ b2MakeOffsetPolygon(&@<凸包>, @<位置>, @<旋转>)
+    }
+
+    方法 生成偏移圆角多边形 <公开 静态 类型 = B2多边形 注释 = "由凸包生成带半径的偏移凸多边形 · b2MakeOffsetRoundedPolygon" @嵌入式方法 = "">
+    参数 凸包 <类型 = B2凸包>
+    参数 位置 <类型 = B2向量>
+    参数 旋转 <类型 = B2旋转>
+    参数 半径 <类型 = 单精度小数>
+    {
+        @ b2MakeOffsetRoundedPolygon(&@<凸包>, @<位置>, @<旋转>, (float)@<半径>)
+    }
+
+    方法 生成正方形 <公开 静态 类型 = B2多边形 注释 = "直接生成正方形多边形，省去求凸包 · b2MakeSquare" @嵌入式方法 = "">
+    参数 半宽 <类型 = 单精度小数>
+    {
+        @ b2MakeSquare((float)@<半宽>)
+    }
+
+    方法 生成盒子 <公开 静态 类型 = B2多边形 注释 = "直接生成盒形（矩形）多边形，省去求凸包 · b2MakeBox" @嵌入式方法 = "">
+    参数 半宽 <类型 = 单精度小数>
+    参数 半高 <类型 = 单精度小数>
+    {
+        @ b2MakeBox((float)@<半宽>, (float)@<半高>)
+    }
+
+    方法 生成圆角盒子 <公开 静态 类型 = B2多边形 注释 = "直接生成圆角盒形多边形，省去求凸包 · b2MakeRoundedBox" @嵌入式方法 = "">
+    参数 半宽 <类型 = 单精度小数>
+    参数 半高 <类型 = 单精度小数>
+    参数 半径 <类型 = 单精度小数>
+    {
+        @ b2MakeRoundedBox((float)@<半宽>, (float)@<半高>, (float)@<半径>)
+    }
+
+    方法 生成偏移盒子 <公开 静态 类型 = B2多边形 注释 = "直接生成带偏移的盒形多边形，省去求凸包 · b2MakeOffsetBox" @嵌入式方法 = "">
+    参数 半宽 <类型 = 单精度小数>
+    参数 半高 <类型 = 单精度小数>
+    参数 中心点 <类型 = B2向量>
+    参数 旋转 <类型 = B2旋转>
+    {
+        @ b2MakeOffsetBox((float)@<半宽>, (float)@<半高>, @<中心点>, @<旋转>)
+    }
+
+    方法 生成偏移圆角盒子 <公开 静态 类型 = B2多边形 注释 = "直接生成带偏移的圆角盒形多边形，省去求凸包 · b2MakeOffsetRoundedBox" @嵌入式方法 = "">
+    参数 半宽 <类型 = 单精度小数>
+    参数 半高 <类型 = 单精度小数>
+    参数 中心点 <类型 = B2向量>
+    参数 旋转 <类型 = B2旋转>
+    参数 半径 <类型 = 单精度小数>
+    {
+        @ b2MakeOffsetRoundedBox((float)@<半宽>, (float)@<半高>, @<中心点>, @<旋转>, (float)@<半径>)
+    }
+
+    方法 变换多边形 <公开 静态 类型 = B2多边形 注释 = "对多边形做变换 · b2TransformPolygon" @嵌入式方法 = "">
+    参数 变换 <类型 = B2变换>
+    参数 多边形 <类型 = B2多边形>
+    {
+        @ b2TransformPolygon(@<变换>, &@<多边形>)
+    }
+
+    方法 计算圆质量 <公开 静态 类型 = B2质量数据 注释 = "计算圆形的质量属性 · b2ComputeCircleMass" @嵌入式方法 = "">
+    参数 值甲 <类型 = B2圆>
+    参数 密度 <类型 = 单精度小数>
+    {
+        @ b2ComputeCircleMass(&@<值甲>, (float)@<密度>)
+    }
+
+    方法 计算胶囊质量 <公开 静态 类型 = B2质量数据 注释 = "计算胶囊的质量属性 · b2ComputeCapsuleMass" @嵌入式方法 = "">
+    参数 值甲 <类型 = B2胶囊>
+    参数 密度 <类型 = 单精度小数>
+    {
+        @ b2ComputeCapsuleMass(&@<值甲>, (float)@<密度>)
+    }
+
+    方法 计算多边形质量 <公开 静态 类型 = B2质量数据 注释 = "计算多边形的质量属性 · b2ComputePolygonMass" @嵌入式方法 = "">
+    参数 值甲 <类型 = B2多边形>
+    参数 密度 <类型 = 单精度小数>
+    {
+        @ b2ComputePolygonMass(&@<值甲>, (float)@<密度>)
+    }
+
+    方法 计算圆包围盒 <公开 静态 类型 = B2包围盒 注释 = "计算变换后圆形的包围盒 · b2ComputeCircleBounds" @嵌入式方法 = "">
+    参数 值甲 <类型 = B2圆>
+    参数 变换 <类型 = B2变换>
+    {
+        @ b2ComputeCircleBounds(&@<值甲>, @<变换>)
+    }
+
+    方法 计算胶囊包围盒 <公开 静态 类型 = B2包围盒 注释 = "计算变换后胶囊的包围盒 · b2ComputeCapsuleBounds" @嵌入式方法 = "">
+    参数 值甲 <类型 = B2胶囊>
+    参数 变换 <类型 = B2变换>
+    {
+        @ b2ComputeCapsuleBounds(&@<值甲>, @<变换>)
+    }
+
+    方法 计算多边形包围盒 <公开 静态 类型 = B2包围盒 注释 = "计算变换后多边形的包围盒 · b2ComputePolygonBounds" @嵌入式方法 = "">
+    参数 值甲 <类型 = B2多边形>
+    参数 变换 <类型 = B2变换>
+    {
+        @ b2ComputePolygonBounds(&@<值甲>, @<变换>)
+    }
+
+    方法 计算片段包围盒 <公开 静态 类型 = B2包围盒 注释 = "计算变换后线段的包围盒 · b2ComputeSegmentBounds" @嵌入式方法 = "">
+    参数 值甲 <类型 = B2线段>
+    参数 变换 <类型 = B2变换>
+    {
+        @ b2ComputeSegmentBounds(&@<值甲>, @<变换>)
+    }
+
+    方法 点在圆 <公开 静态 类型 = 逻辑型 注释 = "在局部坐标系中检测点与圆形是否重叠 · b2PointInCircle" @嵌入式方法 = "">
+    参数 值甲 <类型 = B2圆>
+    参数 点 <类型 = B2向量>
+    {
+        @ (b2PointInCircle(&@<值甲>, @<点>) != 0)
+    }
+
+    方法 点在胶囊 <公开 静态 类型 = 逻辑型 注释 = "在局部坐标系中检测点与胶囊是否重叠 · b2PointInCapsule" @嵌入式方法 = "">
+    参数 值甲 <类型 = B2胶囊>
+    参数 点 <类型 = B2向量>
+    {
+        @ (b2PointInCapsule(&@<值甲>, @<点>) != 0)
+    }
+
+    方法 点在多边形 <公开 静态 类型 = 逻辑型 注释 = "在局部坐标系中检测点与凸多边形是否重叠 · b2PointInPolygon" @嵌入式方法 = "">
+    参数 值甲 <类型 = B2多边形>
+    参数 点 <类型 = B2向量>
+    {
+        @ (b2PointInPolygon(&@<值甲>, @<点>) != 0)
+    }
+
+    方法 投射射线圆 <公开 静态 类型 = B2投射输出 注释 = "在局部坐标系中对圆形做射线投射 · b2CastRayCircle" @嵌入式方法 = "">
+    参数 值甲 <类型 = B2圆>
+    参数 输入 <类型 = B2射线投射输入>
+    {
+        @ b2CastRayCircle(&@<值甲>, &@<输入>)
+    }
+
+    方法 投射射线胶囊 <公开 静态 类型 = B2投射输出 注释 = "在局部坐标系中对胶囊做射线投射 · b2CastRayCapsule" @嵌入式方法 = "">
+    参数 值甲 <类型 = B2胶囊>
+    参数 输入 <类型 = B2射线投射输入>
+    {
+        @ b2CastRayCapsule(&@<值甲>, &@<输入>)
+    }
+
+    方法 投射射线片段 <公开 静态 类型 = B2投射输出 注释 = "在局部坐标系中对线段做射线投射 · b2CastRaySegment" @嵌入式方法 = "">
+    参数 值甲 <类型 = B2线段>
+    参数 输入 <类型 = B2射线投射输入>
+    参数 单面 <类型 = 逻辑型>
+    {
+        @ b2CastRaySegment(&@<值甲>, &@<输入>, (@<单面> != 0))
+    }
+
+    方法 投射射线多边形 <公开 静态 类型 = B2投射输出 注释 = "在局部坐标系中对多边形做射线投射 · b2CastRayPolygon" @嵌入式方法 = "">
+    参数 值甲 <类型 = B2多边形>
+    参数 输入 <类型 = B2射线投射输入>
+    {
+        @ b2CastRayPolygon(&@<值甲>, &@<输入>)
+    }
+
+    方法 投射形状圆 <公开 静态 类型 = B2投射输出 注释 = "对圆形做形状投射 · b2CastShapeCircle" @嵌入式方法 = "">
+    参数 值甲 <类型 = B2圆>
+    参数 输入 <类型 = B2形状投射输入>
+    {
+        @ b2CastShapeCircle(&@<值甲>, &@<输入>)
+    }
+
+    方法 投射形状胶囊 <公开 静态 类型 = B2投射输出 注释 = "对胶囊做形状投射 · b2CastShapeCapsule" @嵌入式方法 = "">
+    参数 值甲 <类型 = B2胶囊>
+    参数 输入 <类型 = B2形状投射输入>
+    {
+        @ b2CastShapeCapsule(&@<值甲>, &@<输入>)
+    }
+
+    方法 投射形状片段 <公开 静态 类型 = B2投射输出 注释 = "对线段做形状投射 · b2CastShapeSegment" @嵌入式方法 = "">
+    参数 值甲 <类型 = B2线段>
+    参数 输入 <类型 = B2形状投射输入>
+    {
+        @ b2CastShapeSegment(&@<值甲>, &@<输入>)
+    }
+
+    方法 投射形状多边形 <公开 静态 类型 = B2投射输出 注释 = "对凸多边形做形状投射 · b2CastShapePolygon" @嵌入式方法 = "">
+    参数 值甲 <类型 = B2多边形>
+    参数 输入 <类型 = B2形状投射输入>
+    {
+        @ b2CastShapePolygon(&@<值甲>, &@<输入>)
+    }
+
+    方法 计算凸包 <公开 静态 类型 = B2凸包 注释 = "计算一组点的凸包 · b2ComputeHull" @嵌入式方法 = "">
+    参数 值甲 <类型 = 变整数>
+    参数 数量 <类型 = 整数>
+    {
+        @ b2ComputeHull((const b2Vec2*)@<值甲>, @<数量>)
+    }
+
+    方法 校验凸包 <公开 静态 类型 = 逻辑型 注释 = "判断凸包是否有效 · b2ValidateHull" @嵌入式方法 = "">
+    参数 凸包 <类型 = B2凸包>
+    {
+        @ (b2ValidateHull(&@<凸包>) != 0)
+    }
+
+    方法 计算片段距离 <公开 静态 类型 = B2线段距离结果 注释 = "计算两条线段之间的距离，必要时按端点截断 · b2ComputeSegmentDistance" @嵌入式方法 = "">
+    参数 点甲 <类型 = B2向量>
+    参数 旋转甲 <类型 = B2向量>
+    参数 点乙 <类型 = B2向量>
+    参数 旋转乙 <类型 = B2向量>
+    {
+        @ b2ComputeSegmentDistance(@<点甲>, @<旋转甲>, @<点乙>, @<旋转乙>)
+    }
+
+    方法 计算形状距离 <公开 静态 类型 = B2距离输出 注释 = "计算以点云表示的两个形状之间的最近点 · b2ComputeShapeDistance" @嵌入式方法 = "">
+    参数 输入 <类型 = B2距离输入>
+    参数 值乙 <类型 = B2单纯形缓存>
+    参数 值丙 <类型 = 变整数>
+    参数 单纯形容量 <类型 = 整数>
+    {
+        @ b2ComputeShapeDistance(&@<输入>, &@<值乙>, (b2Simplex*)@<值丙>, @<单纯形容量>)
+    }
+
+    方法 投射形状 <公开 静态 类型 = B2投射输出 注释 = "形状乙移动、形状甲固定，做一次线性形状投射 · b2CastShape" @嵌入式方法 = "">
+    参数 输入 <类型 = B2形状投射对输入>
+    {
+        @ b2CastShape(&@<输入>)
+    }
+
+    方法 生成代理 <公开 静态 类型 = B2形状代理 注释 = "生成代理，供重叠查询、形状投射等函数使用 · b2MakeProxy" @嵌入式方法 = "">
+    参数 值甲 <类型 = 变整数>
+    参数 数量 <类型 = 整数>
+    参数 半径 <类型 = 单精度小数>
+    {
+        @ b2MakeProxy((const b2Vec2*)@<值甲>, @<数量>, (float)@<半径>)
+    }
+
+    方法 生成偏移代理 <公开 静态 类型 = B2形状代理 注释 = "生成带变换的代理 · b2MakeOffsetProxy" @嵌入式方法 = "">
+    参数 值甲 <类型 = 变整数>
+    参数 数量 <类型 = 整数>
+    参数 半径 <类型 = 单精度小数>
+    参数 位置 <类型 = B2向量>
+    参数 旋转 <类型 = B2旋转>
+    {
+        @ b2MakeOffsetProxy((const b2Vec2*)@<值甲>, @<数量>, (float)@<半径>, @<位置>, @<旋转>)
+    }
+
+    方法 取扫掠变换 <公开 静态 类型 = B2变换 注释 = "在特定时刻求扫掠变换的值 · b2GetSweepTransform" @嵌入式方法 = "">
+    参数 扫掠 <类型 = B2扫掠>
+    参数 时间 <类型 = 单精度小数>
+    {
+        @ b2GetSweepTransform(&@<扫掠>, (float)@<时间>)
+    }
+
+    方法 计算时间撞 <公开 静态 类型 = B2碰撞时间输出 注释 = "计算两形状穿透前的时间上界 · b2ComputeTimeOfImpact" @嵌入式方法 = "">
+    参数 输入 <类型 = B2碰撞时间输入>
+    {
+        @ b2ComputeTimeOfImpact(&@<输入>)
+    }
+
+    方法 求碰撞圆 <公开 静态 类型 = B2局部流形 注释 = "计算两个圆形之间的接触流形 · b2CollideCircles" @嵌入式方法 = "">
+    参数 值甲 <类型 = B2圆>
+    参数 值乙 <类型 = B2圆>
+    参数 相对变换 <类型 = B2变换>
+    {
+        @ b2CollideCircles(&@<值甲>, &@<值乙>, @<相对变换>)
+    }
+
+    方法 求碰撞胶囊与圆 <公开 静态 类型 = B2局部流形 注释 = "计算胶囊与圆形之间的接触流形 · b2CollideCapsuleAndCircle" @嵌入式方法 = "">
+    参数 值甲 <类型 = B2胶囊>
+    参数 值乙 <类型 = B2圆>
+    参数 相对变换 <类型 = B2变换>
+    {
+        @ b2CollideCapsuleAndCircle(&@<值甲>, &@<值乙>, @<相对变换>)
+    }
+
+    方法 求碰撞片段与圆 <公开 静态 类型 = B2局部流形 注释 = "计算线段与圆形之间的接触流形 · b2CollideSegmentAndCircle" @嵌入式方法 = "">
+    参数 值甲 <类型 = B2线段>
+    参数 值乙 <类型 = B2圆>
+    参数 相对变换 <类型 = B2变换>
+    {
+        @ b2CollideSegmentAndCircle(&@<值甲>, &@<值乙>, @<相对变换>)
+    }
+
+    方法 求碰撞多边形与圆 <公开 静态 类型 = B2局部流形 注释 = "计算多边形与圆形之间的接触流形 · b2CollidePolygonAndCircle" @嵌入式方法 = "">
+    参数 值甲 <类型 = B2多边形>
+    参数 值乙 <类型 = B2圆>
+    参数 相对变换 <类型 = B2变换>
+    {
+        @ b2CollidePolygonAndCircle(&@<值甲>, &@<值乙>, @<相对变换>)
+    }
+
+    方法 求碰撞胶囊 <公开 静态 类型 = B2局部流形 注释 = "计算两个胶囊之间的接触流形 · b2CollideCapsules" @嵌入式方法 = "">
+    参数 值甲 <类型 = B2胶囊>
+    参数 值乙 <类型 = B2胶囊>
+    参数 相对变换 <类型 = B2变换>
+    {
+        @ b2CollideCapsules(&@<值甲>, &@<值乙>, @<相对变换>)
+    }
+
+    方法 求碰撞片段与胶囊 <公开 静态 类型 = B2局部流形 注释 = "计算线段与胶囊之间的接触流形 · b2CollideSegmentAndCapsule" @嵌入式方法 = "">
+    参数 值甲 <类型 = B2线段>
+    参数 值乙 <类型 = B2胶囊>
+    参数 相对变换 <类型 = B2变换>
+    {
+        @ b2CollideSegmentAndCapsule(&@<值甲>, &@<值乙>, @<相对变换>)
+    }
+
+    方法 求碰撞多边形与胶囊 <公开 静态 类型 = B2局部流形 注释 = "计算多边形与胶囊之间的接触流形 · b2CollidePolygonAndCapsule" @嵌入式方法 = "">
+    参数 值甲 <类型 = B2多边形>
+    参数 值乙 <类型 = B2胶囊>
+    参数 相对变换 <类型 = B2变换>
+    {
+        @ b2CollidePolygonAndCapsule(&@<值甲>, &@<值乙>, @<相对变换>)
+    }
+
+    方法 求碰撞多边形 <公开 静态 类型 = B2局部流形 注释 = "计算两个多边形之间的接触流形 · b2CollidePolygons" @嵌入式方法 = "">
+    参数 值甲 <类型 = B2多边形>
+    参数 值乙 <类型 = B2多边形>
+    参数 相对变换 <类型 = B2变换>
+    {
+        @ b2CollidePolygons(&@<值甲>, &@<值乙>, @<相对变换>)
+    }
+
+    方法 求碰撞片段与多边形 <公开 静态 类型 = B2局部流形 注释 = "计算线段与多边形之间的接触流形 · b2CollideSegmentAndPolygon" @嵌入式方法 = "">
+    参数 值甲 <类型 = B2线段>
+    参数 值乙 <类型 = B2多边形>
+    参数 相对变换 <类型 = B2变换>
+    {
+        @ b2CollideSegmentAndPolygon(&@<值甲>, &@<值乙>, @<相对变换>)
+    }
+
+    方法 求碰撞链条片段与圆 <公开 静态 类型 = B2局部流形 注释 = "计算链条线段与圆形之间的接触流形 · b2CollideChainSegmentAndCircle" @嵌入式方法 = "">
+    参数 值甲 <类型 = B2链条段>
+    参数 值乙 <类型 = B2圆>
+    参数 相对变换 <类型 = B2变换>
+    {
+        @ b2CollideChainSegmentAndCircle(&@<值甲>, &@<值乙>, @<相对变换>)
+    }
+
+    方法 求碰撞链条片段与胶囊 <公开 静态 类型 = B2局部流形 注释 = "计算链条线段与胶囊之间的接触流形 · b2CollideChainSegmentAndCapsule" @嵌入式方法 = "">
+    参数 值甲 <类型 = B2链条段>
+    参数 值乙 <类型 = B2胶囊>
+    参数 相对变换 <类型 = B2变换>
+    参数 值丁 <类型 = B2单纯形缓存>
+    {
+        @ b2CollideChainSegmentAndCapsule(&@<值甲>, &@<值乙>, @<相对变换>, &@<值丁>)
+    }
+
+    方法 求碰撞链条片段与多边形 <公开 静态 类型 = B2局部流形 注释 = "计算链条线段与圆角多边形之间的接触流形 · b2CollideChainSegmentAndPolygon" @嵌入式方法 = "">
+    参数 值甲 <类型 = B2链条段>
+    参数 值乙 <类型 = B2多边形>
+    参数 相对变换 <类型 = B2变换>
+    参数 值丁 <类型 = B2单纯形缓存>
+    {
+        @ b2CollideChainSegmentAndPolygon(&@<值甲>, &@<值乙>, @<相对变换>, &@<值丁>)
+    }
+
+    方法 求解平面 <公开 静态 类型 = B2平面求解结果 注释 = "求解满足给定碰撞平面的移动体位置 · b2SolvePlanes" @嵌入式方法 = "">
+    参数 目标位移 <类型 = B2向量>
+    参数 值乙 <类型 = 变整数>
+    参数 数量 <类型 = 整数>
+    {
+        @ b2SolvePlanes(@<目标位移>, (b2CollisionPlane*)@<值乙>, @<数量>)
+    }
+
+    方法 裁剪向量 <公开 静态 类型 = B2向量 注释 = "用给定的一组碰撞平面裁剪速度 · b2ClipVector" @嵌入式方法 = "">
+    参数 向量值 <类型 = B2向量>
+    参数 值乙 <类型 = 变整数>
+    参数 数量 <类型 = 整数>
+    {
+        @ b2ClipVector(@<向量值>, (const b2CollisionPlane*)@<值乙>, @<数量>)
+    }
+
+}
+
+类 B2动态树 <公开 注释 = "动态树 · 接口包装类">
+{
+    方法 创建动态树 <公开 静态 类型 = 变整数 注释 = "构造动态树并初始化节点池 · b2CreateDynamicTree" @嵌入式方法 = "">
+    参数 代理容量 <类型 = 整数>
+    {
+        @ (intptr_t)b2CreateDynamicTree(@<代理容量>)
+    }
+
+    方法 销毁动态树 <公开 静态 注释 = "销毁动态树并释放节点池 · b2DestroyDynamicTree" @嵌入式方法 = "">
+    参数 树 <类型 = 变整数>
+    {
+        @ b2DestroyDynamicTree((b2DynamicTree*)@<树>)
+    }
+
+    方法 创建树代理 <公开 静态 类型 = 整数 注释 = "创建代理 · b2CreateTreeProxy" @嵌入式方法 = "">
+    参数 树 <类型 = 变整数>
+    参数 包围盒 <类型 = B2包围盒>
+    参数 类别位 <类型 = 长整数>
+    参数 用户数据 <类型 = 长整数>
+    {
+        @ b2CreateTreeProxy((b2DynamicTree*)@<树>, @<包围盒>, @<类别位>, @<用户数据>)
+    }
+
+    方法 销毁树代理 <公开 静态 注释 = "销毁代理 · b2DestroyTreeProxy" @嵌入式方法 = "">
+    参数 树 <类型 = 变整数>
+    参数 代理标识 <类型 = 整数>
+    {
+        @ b2DestroyTreeProxy((b2DynamicTree*)@<树>, @<代理标识>)
+    }
+
+    方法 移动代理 <公开 静态 注释 = "先移除再重新插入，把代理移动到新的包围盒 · b2DynamicTree_MoveProxy" @嵌入式方法 = "">
+    参数 树 <类型 = 变整数>
+    参数 代理标识 <类型 = 整数>
+    参数 包围盒 <类型 = B2包围盒>
+    {
+        @ b2DynamicTree_MoveProxy((b2DynamicTree*)@<树>, @<代理标识>, @<包围盒>)
+    }
+
+    方法 置类别位 <公开 静态 注释 = "修改某个代理的类别位 · b2DynamicTree_SetCategoryBits" @嵌入式方法 = "">
+    参数 树 <类型 = 变整数>
+    参数 代理标识 <类型 = 整数>
+    参数 类别位 <类型 = 长整数>
+    {
+        @ b2DynamicTree_SetCategoryBits((b2DynamicTree*)@<树>, @<代理标识>, @<类别位>)
+    }
+
+    方法 取类别位 <公开 静态 类型 = 长整数 注释 = "取某个代理的类别位 · b2DynamicTree_GetCategoryBits" @嵌入式方法 = "">
+    参数 树 <类型 = 变整数>
+    参数 代理标识 <类型 = 整数>
+    {
+        @ (int64_t)b2DynamicTree_GetCategoryBits((b2DynamicTree*)@<树>, @<代理标识>)
+    }
+
+    方法 重叠包围盒 <公开 静态 类型 = B2树统计 注释 = "查询与某个包围盒重叠的代理 · b2DynamicTree_OverlapAABB" @嵌入式方法 = "">
+    参数 树 <类型 = 变整数>
+    参数 包围盒 <类型 = B2包围盒>
+    参数 掩码位 <类型 = 长整数>
+    参数 值丁 <类型 = B2树查询回调>
+    参数 上下文 <类型 = 变整数>
+    {
+        @ b2DynamicTree_OverlapAABB((const b2DynamicTree*)@<树>, @<包围盒>, @<掩码位>, @<值丁>, (void*)@<上下文>)
+    }
+
+    方法 重叠包围盒全部 <公开 静态 类型 = B2树统计 注释 = "查询与某个包围盒重叠的全部代理 · b2DynamicTree_OverlapAABBAll" @嵌入式方法 = "">
+    参数 树 <类型 = 变整数>
+    参数 包围盒 <类型 = B2包围盒>
+    参数 值丙 <类型 = B2树查询回调>
+    参数 上下文 <类型 = 变整数>
+    {
+        @ b2DynamicTree_OverlapAABBAll((const b2DynamicTree*)@<树>, @<包围盒>, @<值丙>, (void*)@<上下文>)
+    }
+
+    方法 投射射线 <公开 静态 类型 = B2树统计 注释 = "对树中的代理做射线投射 · b2DynamicTree_CastRay" @嵌入式方法 = "">
+    参数 树 <类型 = 变整数>
+    参数 输入 <类型 = B2射线投射输入>
+    参数 掩码位 <类型 = 长整数>
+    参数 值丁 <类型 = B2树射线投射回调>
+    参数 上下文 <类型 = 变整数>
+    {
+        @ b2DynamicTree_CastRay((const b2DynamicTree*)@<树>, &@<输入>, @<掩码位>, @<值丁>, (void*)@<上下文>)
+    }
+
+    方法 投射盒子 <公开 静态 类型 = B2树统计 注释 = "让一个扫掠包围盒穿过树做投射 · b2DynamicTree_CastBox" @嵌入式方法 = "">
+    参数 树 <类型 = 变整数>
+    参数 输入 <类型 = B2盒投射输入>
+    参数 掩码位 <类型 = 长整数>
+    参数 值丁 <类型 = B2树盒投射回调>
+    参数 上下文 <类型 = 变整数>
+    {
+        @ b2DynamicTree_CastBox((const b2DynamicTree*)@<树>, &@<输入>, @<掩码位>, @<值丁>, (void*)@<上下文>)
+    }
+
+    方法 取高度 <公开 静态 类型 = 整数 注释 = "取二叉树的高度 · b2DynamicTree_GetHeight" @嵌入式方法 = "">
+    参数 树 <类型 = 变整数>
+    {
+        @ b2DynamicTree_GetHeight((const b2DynamicTree*)@<树>)
+    }
+
+    方法 取面积比 <公开 静态 类型 = 小数 注释 = "取内部节点面积之和与根节点面积之比 · b2DynamicTree_GetAreaRatio" @嵌入式方法 = "">
+    参数 树 <类型 = 变整数>
+    {
+        @ b2DynamicTree_GetAreaRatio((const b2DynamicTree*)@<树>)
+    }
+
+    方法 取根包围盒 <公开 静态 类型 = B2包围盒 注释 = "取包含整棵树的包围盒 · b2DynamicTree_GetRootBounds" @嵌入式方法 = "">
+    参数 树 <类型 = 变整数>
+    {
+        @ b2DynamicTree_GetRootBounds((const b2DynamicTree*)@<树>)
+    }
+
+    方法 取代理数量 <公开 静态 类型 = 整数 注释 = "取已创建的代理数量 · b2DynamicTree_GetProxyCount" @嵌入式方法 = "">
+    参数 树 <类型 = 变整数>
+    {
+        @ b2DynamicTree_GetProxyCount((const b2DynamicTree*)@<树>)
+    }
+
+    方法 取字节数量 <公开 静态 类型 = 长整数 注释 = "取该树占用的字节数 · b2DynamicTree_GetByteCount" @嵌入式方法 = "">
+    参数 树 <类型 = 变整数>
+    {
+        @ (int64_t)b2DynamicTree_GetByteCount((const b2DynamicTree*)@<树>)
+    }
+
+    方法 取用户数据 <公开 静态 类型 = 长整数 注释 = "取代理的用户数据 · b2DynamicTree_GetUserData" @嵌入式方法 = "">
+    参数 树 <类型 = 变整数>
+    参数 代理标识 <类型 = 整数>
+    {
+        @ (int64_t)b2DynamicTree_GetUserData((const b2DynamicTree*)@<树>, @<代理标识>)
+    }
+
+    方法 取代理包围盒 <公开 静态 类型 = B2包围盒 注释 = "取某个代理的包围盒 · b2DynamicTree_GetProxyBounds" @嵌入式方法 = "">
+    参数 树 <类型 = 变整数>
+    参数 代理标识 <类型 = 整数>
+    {
+        @ b2DynamicTree_GetProxyBounds((const b2DynamicTree*)@<树>, @<代理标识>)
+    }
+
+    方法 校验 <公开 静态 注释 = "校验该树的结构 · b2DynamicTree_Validate" @嵌入式方法 = "">
+    参数 树 <类型 = 变整数>
+    {
+        @ b2DynamicTree_Validate((const b2DynamicTree*)@<树>)
+    }
+
+}
+

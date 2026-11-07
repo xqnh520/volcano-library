@@ -1,0 +1,1711 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.安卓.XUI <注释 = "XUI 安卓 UI 工具库封装" @文档 = "category = \"XUI\"">
+
+
+类 XUI图标图片框 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.imageview.IconImageView)."
+        @文档 = "category = \"XUI.图片\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.imageview.IconImageView\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.iiv_icon_res\n        shown_name = \"图标的资源\"\n        data_type = string\n        detail_type = drawable_res_file\n    }\n    attr\n    {\n        name = app.iiv_icon_scale\n        shown_name = \"图标缩放的比例\"\n        data_type = double\n    }\n    attr\n    {\n        name = app.iiv_is_show\n        shown_name = \"图标是否显示\"\n        data_type = boolean\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI图标图片框, IconImageView, com.xuexiang.xui.widget.imageview.IconImageView)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetIconImageView ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI图标图片框的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI图标图片框.getAlpha()">
+    {
+        @ (double)@sn<this>.GetIconImageView ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI图标图片框的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI图标图片框.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetIconImageView ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI图标图片框的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI图标图片框.isEnabled()">
+    {
+        @ @sn<this>.GetIconImageView ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI图标图片框的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI图标图片框.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetIconImageView ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI图标图片框的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI图标图片框.isClickable()">
+    {
+        @ @sn<this>.GetIconImageView ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI图标图片框的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI图标图片框.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetIconImageView ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI图标图片框的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI图标图片框.getElevation()">
+    {
+        @ (double)@sn<this>.GetIconImageView ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI图标图片框的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI图标图片框.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetIconImageView ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI图标图片框的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI图标图片框.getMinimumHeight()">
+    {
+        @ @sn<this>.GetIconImageView ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI图标图片框的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI图标图片框.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetIconImageView ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI图标图片框的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI图标图片框.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetIconImageView ().setBackgroundColor (@<新值>))
+    }
+
+    方法 XUI图片 <公开 属性写 注释 = "用法：设置XUI图标图片框的XUI图片, 传入新值后立刻生效。 参数：新值=可绘制对象类。 返回：无。 原方法：XUI图标图片框.setImageDrawable()">
+    参数 新值 <类型 = 可绘制对象类>
+    {
+        @ @m<RUN_UI_ACTION> (GetIconImageView ().setImageDrawable (@<新值>))
+    }
+
+    方法 XUI图片资源 <公开 属性写 注释 = "用法：设置XUI图标图片框的XUI图片资源, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI图标图片框.setImageResource()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetIconImageView ().setImageResource (@<新值>))
+    }
+
+    方法 XUI图片位图 <公开 属性写 注释 = "用法：设置XUI图标图片框的XUI图片位图, 传入新值后立刻生效。 参数：新值=位图类。 返回：无。 原方法：XUI图标图片框.setImageBitmap()">
+    参数 新值 <类型 = 位图类>
+    {
+        @ @m<RUN_UI_ACTION> (GetIconImageView ().setImageBitmap (@<新值>))
+    }
+
+    方法 取XUI图片 <公开 类型 = 可绘制对象类 @嵌入式方法 = "" 注释 = "java: public Drawable getDrawable()">
+    {
+        @ @sn<this>.GetIconImageView ().getDrawable ()
+    }
+
+    方法 设置是否显示图标 <公开 注释 = "用法：把XUI图标图片框的是否显示图标设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI图标图片框.setIsShowIcon()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetIconImageView ().setIsShowIcon (@<值1>))
+    }
+
+    方法 设置图标位图 <公开 注释 = "用法：把XUI图标图片框的图标位图设为给定值。 参数：值1=位图类。 返回：无。 原方法：XUI图标图片框.setIconBitmap()">
+    参数 值1 <类型 = 位图类>
+    {
+        @ @m<RUN_UI_ACTION> (GetIconImageView ().setIconBitmap (@<值1>))
+    }
+
+    方法 设置图标图形 <公开 注释 = "用法：把XUI图标图片框的图标图形设为给定值。 参数：值1=可绘制对象类。 返回：无。 原方法：XUI图标图片框.setIconDrawable()">
+    参数 值1 <类型 = 可绘制对象类>
+    {
+        @ @m<RUN_UI_ACTION> (GetIconImageView ().setIconDrawable (@<值1>))
+    }
+
+    方法 设置图标缩放 <公开 注释 = "用法：把XUI图标图片框的图标缩放设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI图标图片框.setIconScale()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetIconImageView ().setIconScale ((float) @<值1>))
+    }
+
+    方法 回收 <公开 注释 = "用法：回收XUI图标图片框占用的资源。 参数：无。 返回：无。 原方法：XUI图标图片框.recycle()">
+    {
+        @ @m<RUN_UI_ACTION> (GetIconImageView ().recycle ())
+    }
+
+}
+
+类 XUI圆角图片框 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.imageview.RadiusImageView)."
+        @文档 = "category = \"XUI.图片\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.imageview.RadiusImageView\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.riv_border_width\n        shown_name = \"边框宽度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.riv_border_color\n        shown_name = \"边框的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.riv_selected_mask_color\n        shown_name = \"选中时\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.riv_selected_border_color\n        shown_name = \"边框选中时的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.riv_selected_border_width\n        shown_name = \"边框选中时的宽度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.riv_corner_radius\n        shown_name = \"圆角的大小\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.riv_is_oval\n        shown_name = \"是否是椭圆形\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.riv_is_circle\n        shown_name = \"图片是否是圆形的\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.riv_is_touch_select_mode_enabled\n        shown_name = \"图片是否可触摸选中\"\n        data_type = boolean\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI圆角图片框, RadiusImageView, com.xuexiang.xui.widget.imageview.RadiusImageView)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetRadiusImageView ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI圆角图片框的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI圆角图片框.getAlpha()">
+    {
+        @ (double)@sn<this>.GetRadiusImageView ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI圆角图片框的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI圆角图片框.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRadiusImageView ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI圆角图片框的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI圆角图片框.isEnabled()">
+    {
+        @ @sn<this>.GetRadiusImageView ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI圆角图片框的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI圆角图片框.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetRadiusImageView ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI圆角图片框的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI圆角图片框.isClickable()">
+    {
+        @ @sn<this>.GetRadiusImageView ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI圆角图片框的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI圆角图片框.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetRadiusImageView ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI圆角图片框的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI圆角图片框.getElevation()">
+    {
+        @ (double)@sn<this>.GetRadiusImageView ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI圆角图片框的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI圆角图片框.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRadiusImageView ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI圆角图片框的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI圆角图片框.getMinimumHeight()">
+    {
+        @ @sn<this>.GetRadiusImageView ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI圆角图片框的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI圆角图片框.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRadiusImageView ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI圆角图片框的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI圆角图片框.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRadiusImageView ().setBackgroundColor (@<新值>))
+    }
+
+    方法 XUI图片 <公开 属性写 注释 = "用法：设置XUI圆角图片框的XUI图片, 传入新值后立刻生效。 参数：新值=可绘制对象类。 返回：无。 原方法：XUI圆角图片框.setImageDrawable()">
+    参数 新值 <类型 = 可绘制对象类>
+    {
+        @ @m<RUN_UI_ACTION> (GetRadiusImageView ().setImageDrawable (@<新值>))
+    }
+
+    方法 XUI图片资源 <公开 属性写 注释 = "用法：设置XUI圆角图片框的XUI图片资源, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI圆角图片框.setImageResource()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRadiusImageView ().setImageResource (@<新值>))
+    }
+
+    方法 XUI图片位图 <公开 属性写 注释 = "用法：设置XUI圆角图片框的XUI图片位图, 传入新值后立刻生效。 参数：新值=位图类。 返回：无。 原方法：XUI圆角图片框.setImageBitmap()">
+    参数 新值 <类型 = 位图类>
+    {
+        @ @m<RUN_UI_ACTION> (GetRadiusImageView ().setImageBitmap (@<新值>))
+    }
+
+    方法 取XUI图片 <公开 类型 = 可绘制对象类 @嵌入式方法 = "" 注释 = "java: public Drawable getDrawable()">
+    {
+        @ @sn<this>.GetRadiusImageView ().getDrawable ()
+    }
+
+    方法 设置调整视图边界 <公开 注释 = "用法：把XUI圆角图片框的调整视图边界设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI圆角图片框.setAdjustViewBounds()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetRadiusImageView ().setAdjustViewBounds (@<值1>))
+    }
+
+    方法 设置边框宽度 <公开 注释 = "用法：把XUI圆角图片框的边框宽度设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI圆角图片框.setBorderWidth()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRadiusImageView ().setBorderWidth (@<值1>))
+    }
+
+    方法 设置边框颜色 <公开 注释 = "用法：把XUI圆角图片框的边框颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI圆角图片框.setBorderColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRadiusImageView ().setBorderColor (@<值1>))
+    }
+
+    方法 设置角圆角 <公开 注释 = "用法：把XUI圆角图片框的角圆角设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI圆角图片框.setCornerRadius()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRadiusImageView ().setCornerRadius (@<值1>))
+    }
+
+    方法 设置选中边框颜色 <公开 注释 = "用法：把XUI圆角图片框的选中边框颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI圆角图片框.setSelectedBorderColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRadiusImageView ().setSelectedBorderColor (@<值1>))
+    }
+
+    方法 设置选中边框宽度 <公开 注释 = "用法：把XUI圆角图片框的选中边框宽度设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI圆角图片框.setSelectedBorderWidth()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRadiusImageView ().setSelectedBorderWidth (@<值1>))
+    }
+
+    方法 设置选中遮罩颜色 <公开 注释 = "用法：把XUI圆角图片框的选中遮罩颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI圆角图片框.setSelectedMaskColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRadiusImageView ().setSelectedMaskColor (@<值1>))
+    }
+
+    方法 设置圆形 <公开 注释 = "用法：把XUI圆角图片框的圆形设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI圆角图片框.setCircle()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetRadiusImageView ().setCircle (@<值1>))
+    }
+
+    方法 设置椭圆 <公开 注释 = "用法：把XUI圆角图片框的椭圆设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI圆角图片框.setOval()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetRadiusImageView ().setOval (@<值1>))
+    }
+
+    方法 取边框颜色 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI圆角图片框的边框颜色。 参数：无。 返回：整数。 原方法：XUI圆角图片框.getBorderColor()">
+    {
+        @ @sn<this>.GetRadiusImageView ().getBorderColor ()
+    }
+
+    方法 取边框宽度 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI圆角图片框的边框宽度。 参数：无。 返回：整数。 原方法：XUI圆角图片框.getBorderWidth()">
+    {
+        @ @sn<this>.GetRadiusImageView ().getBorderWidth ()
+    }
+
+    方法 取角圆角 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI圆角图片框的角圆角。 参数：无。 返回：整数。 原方法：XUI圆角图片框.getCornerRadius()">
+    {
+        @ @sn<this>.GetRadiusImageView ().getCornerRadius ()
+    }
+
+    方法 取选中边框颜色 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI圆角图片框的选中边框颜色。 参数：无。 返回：整数。 原方法：XUI圆角图片框.getSelectedBorderColor()">
+    {
+        @ @sn<this>.GetRadiusImageView ().getSelectedBorderColor ()
+    }
+
+    方法 取选中边框宽度 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI圆角图片框的选中边框宽度。 参数：无。 返回：整数。 原方法：XUI圆角图片框.getSelectedBorderWidth()">
+    {
+        @ @sn<this>.GetRadiusImageView ().getSelectedBorderWidth ()
+    }
+
+    方法 取选中遮罩颜色 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI圆角图片框的选中遮罩颜色。 参数：无。 返回：整数。 原方法：XUI圆角图片框.getSelectedMaskColor()">
+    {
+        @ @sn<this>.GetRadiusImageView ().getSelectedMaskColor ()
+    }
+
+    方法 是否圆形 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断XUI圆角图片框是否圆形。 参数：无。 返回：逻辑型。 原方法：XUI圆角图片框.isCircle()">
+    {
+        @ @sn<this>.GetRadiusImageView ().isCircle ()
+    }
+
+    方法 是否椭圆 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断XUI圆角图片框是否椭圆。 参数：无。 返回：逻辑型。 原方法：XUI圆角图片框.isOval()">
+    {
+        @ @sn<this>.GetRadiusImageView ().isOval ()
+    }
+
+    方法 是否选中 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断XUI圆角图片框是否选中。 参数：无。 返回：逻辑型。 原方法：XUI圆角图片框.isSelected()">
+    {
+        @ @sn<this>.GetRadiusImageView ().isSelected ()
+    }
+
+    方法 设置选中 <公开 注释 = "用法：把XUI圆角图片框的选中设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI圆角图片框.setSelected()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetRadiusImageView ().setSelected (@<值1>))
+    }
+
+    方法 设置触摸选择模式可用 <公开 注释 = "用法：把XUI圆角图片框的触摸选择模式可用设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI圆角图片框.setTouchSelectModeEnabled()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetRadiusImageView ().setTouchSelectModeEnabled (@<值1>))
+    }
+
+    方法 是否触摸选择模式可用 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断XUI圆角图片框是否触摸选择模式可用。 参数：无。 返回：逻辑型。 原方法：XUI圆角图片框.isTouchSelectModeEnabled()">
+    {
+        @ @sn<this>.GetRadiusImageView ().isTouchSelectModeEnabled ()
+    }
+
+    方法 设置图片图形 <公开 注释 = "用法：把XUI圆角图片框的图片图形设为给定值。 参数：值1=可绘制对象类。 返回：无。 原方法：XUI圆角图片框.setImageDrawable()">
+    参数 值1 <类型 = 可绘制对象类>
+    {
+        @ @m<RUN_UI_ACTION> (GetRadiusImageView ().setImageDrawable (@<值1>))
+    }
+
+    方法 设定位图 <公开 注释 = "用法：设定XUI圆角图片框的位图。 参数：无。 返回：无。 原方法：XUI圆角图片框.setupBitmap()">
+    {
+        @ @m<RUN_UI_ACTION> (GetRadiusImageView ().setupBitmap ())
+    }
+
+}
+
+类 XUI签名板 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.imageview.SignatureView)."
+        @文档 = "category = \"XUI.图片\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.imageview.SignatureView\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.stv_penSize\n        shown_name = \"画笔的粗细\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.stv_penColor\n        shown_name = \"画笔的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.stv_backColor\n        shown_name = \"签名板背景颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.stv_hasBorder\n        shown_name = \"是否拥有边框\"\n        data_type = boolean\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI签名板, SignatureView, com.xuexiang.xui.widget.imageview.SignatureView)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetSignatureView ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI签名板的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI签名板.getAlpha()">
+    {
+        @ (double)@sn<this>.GetSignatureView ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI签名板的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI签名板.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSignatureView ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI签名板的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI签名板.isEnabled()">
+    {
+        @ @sn<this>.GetSignatureView ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI签名板的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI签名板.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetSignatureView ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI签名板的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI签名板.isClickable()">
+    {
+        @ @sn<this>.GetSignatureView ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI签名板的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI签名板.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetSignatureView ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI签名板的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI签名板.getElevation()">
+    {
+        @ (double)@sn<this>.GetSignatureView ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI签名板的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI签名板.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSignatureView ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI签名板的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI签名板.getMinimumHeight()">
+    {
+        @ @sn<this>.GetSignatureView ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI签名板的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI签名板.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSignatureView ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI签名板的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI签名板.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSignatureView ().setBackgroundColor (@<新值>))
+    }
+
+    方法 清空 <公开 注释 = "用法：清空XUI签名板的相关内容。 参数：无。 返回：无。 原方法：XUI签名板.clear()">
+    {
+        @ @m<RUN_UI_ACTION> (GetSignatureView ().clear ())
+    }
+
+    方法 取快照 <公开 类型 = 位图类 @嵌入式方法 = "" 注释 = "用法：读出XUI签名板的快照。 参数：无。 返回：位图类。 原方法：XUI签名板.getSnapshot()">
+    {
+        @ @sn<this>.GetSignatureView ().getSnapshot ()
+    }
+
+    方法 设置画笔大小 <公开 注释 = "用法：把XUI签名板的画笔大小设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI签名板.setPenSize()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSignatureView ().setPenSize ((float) @<值1>))
+    }
+
+    方法 设置后退颜色 <公开 注释 = "用法：把XUI签名板的后退颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI签名板.setBackColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSignatureView ().setBackColor (@<值1>))
+    }
+
+    方法 设置画笔颜色 <公开 注释 = "用法：把XUI签名板的画笔颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI签名板.setPenColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSignatureView ().setPenColor (@<值1>))
+    }
+
+    方法 取已触摸 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读出XUI签名板的已触摸。 参数：无。 返回：逻辑型。 原方法：XUI签名板.getTouched()">
+    {
+        @ @sn<this>.GetSignatureView ().getTouched ()
+    }
+
+    方法 回收 <公开 注释 = "用法：回收XUI签名板占用的资源。 参数：无。 返回：无。 原方法：XUI签名板.recycle()">
+    {
+        @ @m<RUN_UI_ACTION> (GetSignatureView ().recycle ())
+    }
+
+    方法 设置视图大小 <公开 注释 = "用法：把XUI签名板的视图大小设为给定值。 参数：值1=整数、值2=整数。 返回：无。 原方法：XUI签名板.setViewSize()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSignatureView ().setViewSize (@<值1>, @<值2>))
+    }
+
+}
+
+类 XUI裁剪图片框 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.imageview.crop.CropImageView)."
+        @文档 = "category = \"XUI.图片\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.imageview.crop.CropImageView\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.civ_guidelines\n        shown_name = \"网格线\"\n        data_type = string\n        detail_type = enum\n        item\n        {\n            name = on\n            shown_name = \"on\"\n        }\n        item\n        {\n            name = onTouch\n            shown_name = \"onTouch\"\n        }\n        item\n        {\n            name = off\n            shown_name = \"off\"\n        }\n    }\n    attr\n    {\n        name = app.civ_fixAspectRatio\n        shown_name = \"是否是固定比例裁剪\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.civ_aspectRatioX\n        shown_name = \"宽度比例\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.civ_aspectRatioY\n        shown_name = \"高度比例\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.civ_imageResource\n        shown_name = \"裁剪图片的资源\"\n        data_type = string\n        detail_type = drawable_res_file\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI裁剪图片框, CropImageView, com.xuexiang.xui.widget.imageview.crop.CropImageView)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetCropImageView ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI裁剪图片框的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI裁剪图片框.getAlpha()">
+    {
+        @ (double)@sn<this>.GetCropImageView ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI裁剪图片框的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI裁剪图片框.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCropImageView ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI裁剪图片框的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI裁剪图片框.isEnabled()">
+    {
+        @ @sn<this>.GetCropImageView ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI裁剪图片框的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI裁剪图片框.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetCropImageView ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI裁剪图片框的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI裁剪图片框.isClickable()">
+    {
+        @ @sn<this>.GetCropImageView ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI裁剪图片框的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI裁剪图片框.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetCropImageView ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI裁剪图片框的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI裁剪图片框.getElevation()">
+    {
+        @ (double)@sn<this>.GetCropImageView ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI裁剪图片框的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI裁剪图片框.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCropImageView ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI裁剪图片框的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI裁剪图片框.getMinimumHeight()">
+    {
+        @ @sn<this>.GetCropImageView ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI裁剪图片框的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI裁剪图片框.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCropImageView ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI裁剪图片框的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI裁剪图片框.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCropImageView ().setBackgroundColor (@<新值>))
+    }
+
+    方法 取图片资源 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI裁剪图片框的图片资源。 参数：无。 返回：整数。 原方法：XUI裁剪图片框.getImageResource()">
+    {
+        @ @sn<this>.GetCropImageView ().getImageResource ()
+    }
+
+    方法 设置图片路径 <公开 注释 = "用法：把XUI裁剪图片框的图片路径设为给定值。 参数：值1=文本。 返回：无。 原方法：XUI裁剪图片框.setImagePath()">
+    参数 值1 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetCropImageView ().setImagePath (@<值1>))
+    }
+
+    方法 设置图片位图 <公开 注释 = "用法：把XUI裁剪图片框的图片位图设为给定值。 参数：值1=位图类。 返回：无。 原方法：XUI裁剪图片框.setImageBitmap()">
+    参数 值1 <类型 = 位图类>
+    {
+        @ @m<RUN_UI_ACTION> (GetCropImageView ().setImageBitmap (@<值1>))
+    }
+
+    方法 设置裁切覆盖层视图可见性 <公开 注释 = "用法：把XUI裁剪图片框的裁切覆盖层视图可见性设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI裁剪图片框.setCropOverlayViewVisibility()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCropImageView ().setCropOverlayViewVisibility (@<值1>))
+    }
+
+    方法 设置图片资源 <公开 注释 = "用法：把XUI裁剪图片框的图片资源设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI裁剪图片框.setImageResource()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCropImageView ().setImageResource (@<值1>))
+    }
+
+    方法 裁切图片 <公开 类型 = 位图类 @嵌入式方法 = "" 注释 = "用法：XUI裁剪图片框 的 裁切图片, 行为与 XUI 底层同名方法一致。 参数：无。 返回：位图类。 原方法：XUI裁剪图片框.cropImage()">
+    {
+        @ @sn<this>.GetCropImageView ().cropImage ()
+    }
+
+    方法 裁切图片_2 <公开 类型 = 位图类 @嵌入式方法 = "" 注释 = "用法：XUI裁剪图片框 的 裁切图片_2, 行为与 XUI 底层同名方法一致。 参数：值1=真/假。 返回：位图类。 原方法：XUI裁剪图片框.cropImage()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @sn<this>.GetCropImageView ().cropImage (@<值1>)
+    }
+
+    方法 取已裁切图片 <公开 类型 = 位图类 @嵌入式方法 = "" 注释 = "用法：读出XUI裁剪图片框的已裁切图片。 参数：无。 返回：位图类。 原方法：XUI裁剪图片框.getCroppedImage()">
+    {
+        @ @sn<this>.GetCropImageView ().getCroppedImage ()
+    }
+
+    方法 设置固定宽高比比例 <公开 注释 = "用法：把XUI裁剪图片框的固定宽高比比例设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI裁剪图片框.setFixedAspectRatio()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetCropImageView ().setFixedAspectRatio (@<值1>))
+    }
+
+    方法 设置参考线组 <公开 注释 = "用法：把XUI裁剪图片框的参考线组设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI裁剪图片框.setGuidelines()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCropImageView ().setGuidelines (@<值1>))
+    }
+
+    方法 设置宽高比比例 <公开 注释 = "用法：把XUI裁剪图片框的宽高比比例设为给定值。 参数：值1=整数、值2=整数。 返回：无。 原方法：XUI裁剪图片框.setAspectRatio()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCropImageView ().setAspectRatio (@<值1>, @<值2>))
+    }
+
+    方法 旋转图片 <公开 注释 = "用法：调用XUI裁剪图片框的旋转图片。 参数：值1=整数。 返回：无。 原方法：XUI裁剪图片框.rotateImage()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCropImageView ().rotateImage (@<值1>))
+    }
+
+    方法 设置裁切覆盖层角位图 <公开 注释 = "用法：把XUI裁剪图片框的裁切覆盖层角位图设为给定值。 参数：值1=位图类。 返回：无。 原方法：XUI裁剪图片框.setCropOverlayCornerBitmap()">
+    参数 值1 <类型 = 位图类>
+    {
+        @ @m<RUN_UI_ACTION> (GetCropImageView ().setCropOverlayCornerBitmap (@<值1>))
+    }
+
+}
+
+类 XUI裁剪覆盖层 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.imageview.crop.CropOverlayView)."
+        @文档 = "category = \"XUI.图片\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.imageview.crop.CropOverlayView\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI裁剪覆盖层, CropOverlayView, com.xuexiang.xui.widget.imageview.crop.CropOverlayView)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetCropOverlayView ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI裁剪覆盖层的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI裁剪覆盖层.getAlpha()">
+    {
+        @ (double)@sn<this>.GetCropOverlayView ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI裁剪覆盖层的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI裁剪覆盖层.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCropOverlayView ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI裁剪覆盖层的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI裁剪覆盖层.isEnabled()">
+    {
+        @ @sn<this>.GetCropOverlayView ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI裁剪覆盖层的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI裁剪覆盖层.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetCropOverlayView ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI裁剪覆盖层的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI裁剪覆盖层.isClickable()">
+    {
+        @ @sn<this>.GetCropOverlayView ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI裁剪覆盖层的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI裁剪覆盖层.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetCropOverlayView ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI裁剪覆盖层的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI裁剪覆盖层.getElevation()">
+    {
+        @ (double)@sn<this>.GetCropOverlayView ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI裁剪覆盖层的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI裁剪覆盖层.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCropOverlayView ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI裁剪覆盖层的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI裁剪覆盖层.getMinimumHeight()">
+    {
+        @ @sn<this>.GetCropOverlayView ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI裁剪覆盖层的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI裁剪覆盖层.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCropOverlayView ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI裁剪覆盖层的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI裁剪覆盖层.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCropOverlayView ().setBackgroundColor (@<新值>))
+    }
+
+    方法 设置位图大小 <公开 注释 = "用法：把XUI裁剪覆盖层的位图大小设为给定值。 参数：值1=整数、值2=整数。 返回：无。 原方法：XUI裁剪覆盖层.setBitmapSize()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCropOverlayView ().setBitmapSize (@<值1>, @<值2>))
+    }
+
+    方法 设置裁切覆盖层角位图 <公开 注释 = "用法：把XUI裁剪覆盖层的裁切覆盖层角位图设为给定值。 参数：值1=位图类。 返回：无。 原方法：XUI裁剪覆盖层.setCropOverlayCornerBitmap()">
+    参数 值1 <类型 = 位图类>
+    {
+        @ @m<RUN_UI_ACTION> (GetCropOverlayView ().setCropOverlayCornerBitmap (@<值1>))
+    }
+
+    方法 重置裁切覆盖层视图 <公开 注释 = "用法：把XUI裁剪覆盖层恢复到默认状态。 参数：无。 返回：无。 原方法：XUI裁剪覆盖层.resetCropOverlayView()">
+    {
+        @ @m<RUN_UI_ACTION> (GetCropOverlayView ().resetCropOverlayView ())
+    }
+
+    方法 设置参考线组 <公开 注释 = "用法：把XUI裁剪覆盖层的参考线组设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI裁剪覆盖层.setGuidelines()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCropOverlayView ().setGuidelines (@<值1>))
+    }
+
+    方法 设置边框颜色 <公开 注释 = "用法：把XUI裁剪覆盖层的边框颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI裁剪覆盖层.setBorderColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCropOverlayView ().setBorderColor (@<值1>))
+    }
+
+    方法 设置边框宽度 <公开 注释 = "用法：把XUI裁剪覆盖层的边框宽度设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI裁剪覆盖层.setBorderWidth()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCropOverlayView ().setBorderWidth ((float) @<值1>))
+    }
+
+    方法 设置边框样式 <公开 注释 = "用法：把XUI裁剪覆盖层的边框样式设为给定值。 参数：值1=整数、值2=小数。 返回：无。 原方法：XUI裁剪覆盖层.setBorderStyle()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCropOverlayView ().setBorderStyle (@<值1>, (float) @<值2>))
+    }
+
+    方法 设置参考线颜色 <公开 注释 = "用法：把XUI裁剪覆盖层的参考线颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI裁剪覆盖层.setGuidelineColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCropOverlayView ().setGuidelineColor (@<值1>))
+    }
+
+    方法 设置参考线宽度 <公开 注释 = "用法：把XUI裁剪覆盖层的参考线宽度设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI裁剪覆盖层.setGuidelineWidth()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCropOverlayView ().setGuidelineWidth ((float) @<值1>))
+    }
+
+    方法 设置参考线样式 <公开 注释 = "用法：把XUI裁剪覆盖层的参考线样式设为给定值。 参数：值1=整数、值2=小数。 返回：无。 原方法：XUI裁剪覆盖层.setGuidelineStyle()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCropOverlayView ().setGuidelineStyle (@<值1>, (float) @<值2>))
+    }
+
+    方法 设置角颜色 <公开 注释 = "用法：把XUI裁剪覆盖层的角颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI裁剪覆盖层.setCornerColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCropOverlayView ().setCornerColor (@<值1>))
+    }
+
+    方法 设置角宽度 <公开 注释 = "用法：把XUI裁剪覆盖层的角宽度设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI裁剪覆盖层.setCornerWidth()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCropOverlayView ().setCornerWidth ((float) @<值1>))
+    }
+
+    方法 设置角样式 <公开 注释 = "用法：把XUI裁剪覆盖层的角样式设为给定值。 参数：值1=整数、值2=小数。 返回：无。 原方法：XUI裁剪覆盖层.setCornerStyle()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCropOverlayView ().setCornerStyle (@<值1>, (float) @<值2>))
+    }
+
+    方法 设置边框与参考线颜色 <公开 注释 = "用法：把XUI裁剪覆盖层的边框与参考线颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI裁剪覆盖层.setBorderAndGuidelineColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCropOverlayView ().setBorderAndGuidelineColor (@<值1>))
+    }
+
+    方法 设置边框与参考线样式 <公开 注释 = "用法：把XUI裁剪覆盖层的边框与参考线样式设为给定值。 参数：值1=整数、值2=小数。 返回：无。 原方法：XUI裁剪覆盖层.setBorderAndGuidelineStyle()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCropOverlayView ().setBorderAndGuidelineStyle (@<值1>, (float) @<值2>))
+    }
+
+    方法 设置固定宽高比比例 <公开 注释 = "用法：把XUI裁剪覆盖层的固定宽高比比例设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI裁剪覆盖层.setFixedAspectRatio()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetCropOverlayView ().setFixedAspectRatio (@<值1>))
+    }
+
+    方法 设置宽高比比例X <公开 注释 = "用法：把XUI裁剪覆盖层的宽高比比例X设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI裁剪覆盖层.setAspectRatioX()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCropOverlayView ().setAspectRatioX (@<值1>))
+    }
+
+    方法 设置宽高比比例Y <公开 注释 = "用法：把XUI裁剪覆盖层的宽高比比例Y设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI裁剪覆盖层.setAspectRatioY()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCropOverlayView ().setAspectRatioY (@<值1>))
+    }
+
+    方法 设置初始属性值组 <公开 注释 = "用法：把XUI裁剪覆盖层的初始属性值组设为给定值。 参数：值1=整数、值2=真/假、值3=整数、值4=整数。 返回：无。 原方法：XUI裁剪覆盖层.setInitialAttributeValues()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 逻辑型>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCropOverlayView ().setInitialAttributeValues (@<值1>, @<值2>, @<值3>, @<值4>))
+    }
+
+    方法 显示参考线组 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：让XUI裁剪覆盖层显示出来。 参数：无。 返回：逻辑型。 原方法：XUI裁剪覆盖层.showGuidelines()">
+    {
+        @ @sn<this>.GetCropOverlayView ().showGuidelines ()
+    }
+
+}
+
+类 XUI画笔视图 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.imageview.edit.BrushDrawingView)."
+        @文档 = "category = \"XUI.图片\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.imageview.edit.BrushDrawingView\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI画笔视图, BrushDrawingView, com.xuexiang.xui.widget.imageview.edit.BrushDrawingView)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetBrushDrawingView ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI画笔视图的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI画笔视图.getAlpha()">
+    {
+        @ (double)@sn<this>.GetBrushDrawingView ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI画笔视图的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI画笔视图.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetBrushDrawingView ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI画笔视图的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI画笔视图.isEnabled()">
+    {
+        @ @sn<this>.GetBrushDrawingView ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI画笔视图的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI画笔视图.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetBrushDrawingView ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI画笔视图的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI画笔视图.isClickable()">
+    {
+        @ @sn<this>.GetBrushDrawingView ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI画笔视图的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI画笔视图.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetBrushDrawingView ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI画笔视图的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI画笔视图.getElevation()">
+    {
+        @ (double)@sn<this>.GetBrushDrawingView ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI画笔视图的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI画笔视图.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetBrushDrawingView ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI画笔视图的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI画笔视图.getMinimumHeight()">
+    {
+        @ @sn<this>.GetBrushDrawingView ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI画笔视图的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI画笔视图.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetBrushDrawingView ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI画笔视图的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI画笔视图.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetBrushDrawingView ().setBackgroundColor (@<新值>))
+    }
+
+}
+
+类 XUI照片编辑视图 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.imageview.edit.PhotoEditorView)."
+        @文档 = "category = \"XUI.图片\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.imageview.edit.PhotoEditorView\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.photo_src\n        shown_name = \"photo_src\"\n        data_type = int\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI照片编辑视图, PhotoEditorView, com.xuexiang.xui.widget.imageview.edit.PhotoEditorView)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetPhotoEditorView ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI照片编辑视图的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI照片编辑视图.getAlpha()">
+    {
+        @ (double)@sn<this>.GetPhotoEditorView ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI照片编辑视图的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI照片编辑视图.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetPhotoEditorView ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI照片编辑视图的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI照片编辑视图.isEnabled()">
+    {
+        @ @sn<this>.GetPhotoEditorView ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI照片编辑视图的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI照片编辑视图.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetPhotoEditorView ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI照片编辑视图的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI照片编辑视图.isClickable()">
+    {
+        @ @sn<this>.GetPhotoEditorView ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI照片编辑视图的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI照片编辑视图.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetPhotoEditorView ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI照片编辑视图的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI照片编辑视图.getElevation()">
+    {
+        @ (double)@sn<this>.GetPhotoEditorView ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI照片编辑视图的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI照片编辑视图.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetPhotoEditorView ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI照片编辑视图的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI照片编辑视图.getMinimumHeight()">
+    {
+        @ @sn<this>.GetPhotoEditorView ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI照片编辑视图的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI照片编辑视图.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetPhotoEditorView ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI照片编辑视图的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI照片编辑视图.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetPhotoEditorView ().setBackgroundColor (@<新值>))
+    }
+
+}
+
+类 XUI九宫格图片项 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.imageview.nine.GridImageView)."
+        @文档 = "category = \"XUI.图片\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.imageview.nine.GridImageView\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI九宫格图片项, GridImageView, com.xuexiang.xui.widget.imageview.nine.GridImageView)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetGridImageView ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI九宫格图片项的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI九宫格图片项.getAlpha()">
+    {
+        @ (double)@sn<this>.GetGridImageView ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI九宫格图片项的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI九宫格图片项.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetGridImageView ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI九宫格图片项的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI九宫格图片项.isEnabled()">
+    {
+        @ @sn<this>.GetGridImageView ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI九宫格图片项的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI九宫格图片项.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetGridImageView ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI九宫格图片项的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI九宫格图片项.isClickable()">
+    {
+        @ @sn<this>.GetGridImageView ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI九宫格图片项的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI九宫格图片项.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetGridImageView ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI九宫格图片项的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI九宫格图片项.getElevation()">
+    {
+        @ (double)@sn<this>.GetGridImageView ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI九宫格图片项的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI九宫格图片项.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetGridImageView ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI九宫格图片项的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI九宫格图片项.getMinimumHeight()">
+    {
+        @ @sn<this>.GetGridImageView ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI九宫格图片项的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI九宫格图片项.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetGridImageView ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI九宫格图片项的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI九宫格图片项.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetGridImageView ().setBackgroundColor (@<新值>))
+    }
+
+    方法 XUI图片 <公开 属性写 注释 = "用法：设置XUI九宫格图片项的XUI图片, 传入新值后立刻生效。 参数：新值=可绘制对象类。 返回：无。 原方法：XUI九宫格图片项.setImageDrawable()">
+    参数 新值 <类型 = 可绘制对象类>
+    {
+        @ @m<RUN_UI_ACTION> (GetGridImageView ().setImageDrawable (@<新值>))
+    }
+
+    方法 XUI图片资源 <公开 属性写 注释 = "用法：设置XUI九宫格图片项的XUI图片资源, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI九宫格图片项.setImageResource()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetGridImageView ().setImageResource (@<新值>))
+    }
+
+    方法 XUI图片位图 <公开 属性写 注释 = "用法：设置XUI九宫格图片项的XUI图片位图, 传入新值后立刻生效。 参数：新值=位图类。 返回：无。 原方法：XUI九宫格图片项.setImageBitmap()">
+    参数 新值 <类型 = 位图类>
+    {
+        @ @m<RUN_UI_ACTION> (GetGridImageView ().setImageBitmap (@<新值>))
+    }
+
+    方法 取XUI图片 <公开 类型 = 可绘制对象类 @嵌入式方法 = "" 注释 = "java: public Drawable getDrawable()">
+    {
+        @ @sn<this>.GetGridImageView ().getDrawable ()
+    }
+
+}
+
+类 XUI九宫格视图 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.imageview.nine.NineGridImageView)."
+        @文档 = "category = \"XUI.图片\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.imageview.nine.NineGridImageView\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.ngiv_singleImgSize\n        shown_name = \"单张图片的尺寸\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.ngiv_imgGap\n        shown_name = \"图片的间隙\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.ngiv_maxSize\n        shown_name = \"最大的图片数\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.ngiv_showStyle\n        shown_name = \"展示样式\"\n        data_type = string\n        detail_type = enum\n        item\n        {\n            name = grid\n            shown_name = \"grid\"\n        }\n        item\n        {\n            name = fill\n            shown_name = \"fill\"\n        }\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI九宫格视图, NineGridImageView, com.xuexiang.xui.widget.imageview.nine.NineGridImageView)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetNineGridImageView ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI九宫格视图的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI九宫格视图.getAlpha()">
+    {
+        @ (double)@sn<this>.GetNineGridImageView ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI九宫格视图的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI九宫格视图.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetNineGridImageView ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI九宫格视图的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI九宫格视图.isEnabled()">
+    {
+        @ @sn<this>.GetNineGridImageView ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI九宫格视图的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI九宫格视图.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetNineGridImageView ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI九宫格视图的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI九宫格视图.isClickable()">
+    {
+        @ @sn<this>.GetNineGridImageView ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI九宫格视图的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI九宫格视图.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetNineGridImageView ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI九宫格视图的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI九宫格视图.getElevation()">
+    {
+        @ (double)@sn<this>.GetNineGridImageView ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI九宫格视图的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI九宫格视图.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetNineGridImageView ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI九宫格视图的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI九宫格视图.getMinimumHeight()">
+    {
+        @ @sn<this>.GetNineGridImageView ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI九宫格视图的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI九宫格视图.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetNineGridImageView ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI九宫格视图的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI九宫格视图.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetNineGridImageView ().setBackgroundColor (@<新值>))
+    }
+
+    方法 设置间隙 <公开 注释 = "用法：把XUI九宫格视图的间隙设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI九宫格视图.setGap()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetNineGridImageView ().setGap (@<值1>))
+    }
+
+    方法 设置显示样式 <公开 注释 = "用法：把XUI九宫格视图的显示样式设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI九宫格视图.setShowStyle()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetNineGridImageView ().setShowStyle (@<值1>))
+    }
+
+    方法 设置单个图片大小 <公开 注释 = "用法：把XUI九宫格视图的单个图片大小设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI九宫格视图.setSingleImgSize()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetNineGridImageView ().setSingleImgSize (@<值1>))
+    }
+
+    方法 设置最大大小 <公开 注释 = "用法：把XUI九宫格视图的最大大小设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI九宫格视图.setMaxSize()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetNineGridImageView ().setMaxSize (@<值1>))
+    }
+
+}
+
+类 XUI照片视图 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.imageview.photoview.PhotoView)."
+        @文档 = "category = \"XUI.图片\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.imageview.photoview.PhotoView\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI照片视图, PhotoView, com.xuexiang.xui.widget.imageview.photoview.PhotoView)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetPhotoView ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI照片视图的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI照片视图.getAlpha()">
+    {
+        @ (double)@sn<this>.GetPhotoView ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI照片视图的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI照片视图.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetPhotoView ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI照片视图的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI照片视图.isEnabled()">
+    {
+        @ @sn<this>.GetPhotoView ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI照片视图的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI照片视图.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetPhotoView ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI照片视图的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI照片视图.isClickable()">
+    {
+        @ @sn<this>.GetPhotoView ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI照片视图的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI照片视图.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetPhotoView ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI照片视图的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI照片视图.getElevation()">
+    {
+        @ (double)@sn<this>.GetPhotoView ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI照片视图的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI照片视图.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetPhotoView ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI照片视图的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI照片视图.getMinimumHeight()">
+    {
+        @ @sn<this>.GetPhotoView ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI照片视图的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI照片视图.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetPhotoView ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI照片视图的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI照片视图.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetPhotoView ().setBackgroundColor (@<新值>))
+    }
+
+    方法 XUI图片 <公开 属性写 注释 = "用法：设置XUI照片视图的XUI图片, 传入新值后立刻生效。 参数：新值=可绘制对象类。 返回：无。 原方法：XUI照片视图.setImageDrawable()">
+    参数 新值 <类型 = 可绘制对象类>
+    {
+        @ @m<RUN_UI_ACTION> (GetPhotoView ().setImageDrawable (@<新值>))
+    }
+
+    方法 XUI图片资源 <公开 属性写 注释 = "用法：设置XUI照片视图的XUI图片资源, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI照片视图.setImageResource()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetPhotoView ().setImageResource (@<新值>))
+    }
+
+    方法 XUI图片位图 <公开 属性写 注释 = "用法：设置XUI照片视图的XUI图片位图, 传入新值后立刻生效。 参数：新值=位图类。 返回：无。 原方法：XUI照片视图.setImageBitmap()">
+    参数 新值 <类型 = 位图类>
+    {
+        @ @m<RUN_UI_ACTION> (GetPhotoView ().setImageBitmap (@<新值>))
+    }
+
+    方法 取XUI图片 <公开 类型 = 可绘制对象类 @嵌入式方法 = "" 注释 = "java: public Drawable getDrawable()">
+    {
+        @ @sn<this>.GetPhotoView ().getDrawable ()
+    }
+
+    方法 设置旋转角到 <公开 注释 = "用法：把XUI照片视图的旋转角到设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI照片视图.setRotationTo()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetPhotoView ().setRotationTo ((float) @<值1>))
+    }
+
+    方法 设置旋转角按 <公开 注释 = "用法：把XUI照片视图的旋转角按设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI照片视图.setRotationBy()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetPhotoView ().setRotationBy ((float) @<值1>))
+    }
+
+    方法 可缩放 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：XUI照片视图 的 可缩放, 行为与 XUI 底层同名方法一致。 参数：无。 返回：逻辑型。 原方法：XUI照片视图.canZoom()">
+    {
+        @ @sn<this>.GetPhotoView ().canZoom ()
+    }
+
+    方法 取最小值缩放 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读出XUI照片视图的最小值缩放。 参数：无。 返回：小数。 原方法：XUI照片视图.getMinimumScale()">
+    {
+        @ (double)@sn<this>.GetPhotoView ().getMinimumScale ()
+    }
+
+    方法 取中缩放 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读出XUI照片视图的中缩放。 参数：无。 返回：小数。 原方法：XUI照片视图.getMediumScale()">
+    {
+        @ (double)@sn<this>.GetPhotoView ().getMediumScale ()
+    }
+
+    方法 取最大值缩放 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读出XUI照片视图的最大值缩放。 参数：无。 返回：小数。 原方法：XUI照片视图.getMaximumScale()">
+    {
+        @ (double)@sn<this>.GetPhotoView ().getMaximumScale ()
+    }
+
+    方法 取缩放 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读出XUI照片视图的缩放。 参数：无。 返回：小数。 原方法：XUI照片视图.getScale()">
+    {
+        @ (double)@sn<this>.GetPhotoView ().getScale ()
+    }
+
+    方法 设置允许父项拦截响应边缘 <公开 注释 = "用法：把XUI照片视图的允许父项拦截响应边缘设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI照片视图.setAllowParentInterceptOnEdge()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetPhotoView ().setAllowParentInterceptOnEdge (@<值1>))
+    }
+
+    方法 设置最小值缩放 <公开 注释 = "用法：把XUI照片视图的最小值缩放设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI照片视图.setMinimumScale()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetPhotoView ().setMinimumScale ((float) @<值1>))
+    }
+
+    方法 设置中缩放 <公开 注释 = "用法：把XUI照片视图的中缩放设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI照片视图.setMediumScale()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetPhotoView ().setMediumScale ((float) @<值1>))
+    }
+
+    方法 设置最大值缩放 <公开 注释 = "用法：把XUI照片视图的最大值缩放设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI照片视图.setMaximumScale()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetPhotoView ().setMaximumScale ((float) @<值1>))
+    }
+
+    方法 设置缩放等级集 <公开 注释 = "用法：把XUI照片视图的缩放等级集设为给定值。 参数：值1=小数、值2=小数、值3=小数。 返回：无。 原方法：XUI照片视图.setScaleLevels()">
+    参数 值1 <类型 = 小数>
+    参数 值2 <类型 = 小数>
+    参数 值3 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetPhotoView ().setScaleLevels ((float) @<值1>, (float) @<值2>, (float) @<值3>))
+    }
+
+    方法 设置图片图形 <公开 注释 = "用法：把XUI照片视图的图片图形设为给定值。 参数：值1=可绘制对象类。 返回：无。 原方法：XUI照片视图.setImageDrawable()">
+    参数 值1 <类型 = 可绘制对象类>
+    {
+        @ @m<RUN_UI_ACTION> (GetPhotoView ().setImageDrawable (@<值1>))
+    }
+
+    方法 设置图片资源 <公开 注释 = "用法：把XUI照片视图的图片资源设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI照片视图.setImageResource()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetPhotoView ().setImageResource (@<值1>))
+    }
+
+    方法 设置缩放 <公开 注释 = "用法：把XUI照片视图的缩放设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI照片视图.setScale()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetPhotoView ().setScale ((float) @<值1>))
+    }
+
+    方法 设置缩放_2 <公开 注释 = "用法：把XUI照片视图的缩放_2设为给定值。 参数：值1=小数、值2=真/假。 返回：无。 原方法：XUI照片视图.setScale()">
+    参数 值1 <类型 = 小数>
+    参数 值2 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetPhotoView ().setScale ((float) @<值1>, @<值2>))
+    }
+
+    方法 设置缩放_3 <公开 注释 = "用法：把XUI照片视图的缩放_3设为给定值。 参数：值1=小数、值2=小数、值3=小数、值4=真/假。 返回：无。 原方法：XUI照片视图.setScale()">
+    参数 值1 <类型 = 小数>
+    参数 值2 <类型 = 小数>
+    参数 值3 <类型 = 小数>
+    参数 值4 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetPhotoView ().setScale ((float) @<值1>, (float) @<值2>, (float) @<值3>, @<值4>))
+    }
+
+    方法 设置可缩放 <公开 注释 = "用法：把XUI照片视图的可缩放设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI照片视图.setZoomable()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetPhotoView ().setZoomable (@<值1>))
+    }
+
+    方法 取可见矩形位图 <公开 类型 = 位图类 @嵌入式方法 = "" 注释 = "用法：读出XUI照片视图的可见矩形位图。 参数：无。 返回：位图类。 原方法：XUI照片视图.getVisibleRectangleBitmap()">
+    {
+        @ @sn<this>.GetPhotoView ().getVisibleRectangleBitmap ()
+    }
+
+    方法 设置缩放过渡时长 <公开 注释 = "用法：把XUI照片视图的缩放过渡时长设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI照片视图.setZoomTransitionDuration()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetPhotoView ().setZoomTransitionDuration (@<值1>))
+    }
+
+    方法 重置矩阵 <公开 注释 = "用法：把XUI照片视图恢复到默认状态。 参数：无。 返回：无。 原方法：XUI照片视图.resetMatrix()">
+    {
+        @ @m<RUN_UI_ACTION> (GetPhotoView ().resetMatrix ())
+    }
+
+}
+
+类 XUI贝塞尔横幅视图 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.imageview.preview.view.BezierBannerView)."
+        @文档 = "category = \"XUI.图片\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.imageview.preview.view.BezierBannerView\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.bbv_selectedColor\n        shown_name = \"bbv_selectedColor\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.bbv_unSelectedColor\n        shown_name = \"bbv_unSelectedColo\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.bbv_selectedRadius\n        shown_name = \"bbv_selectedRadius\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.bbv_unSelectedRadius\n        shown_name = \"bbv_unSelectedRadi\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.bbv_spacing\n        shown_name = \"bbv_spacing\"\n        data_type = double\n        detail_type = dim\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI贝塞尔横幅视图, BezierBannerView, com.xuexiang.xui.widget.imageview.preview.view.BezierBannerView)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetBezierBannerView ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI贝塞尔横幅视图的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI贝塞尔横幅视图.getAlpha()">
+    {
+        @ (double)@sn<this>.GetBezierBannerView ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI贝塞尔横幅视图的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI贝塞尔横幅视图.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetBezierBannerView ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI贝塞尔横幅视图的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI贝塞尔横幅视图.isEnabled()">
+    {
+        @ @sn<this>.GetBezierBannerView ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI贝塞尔横幅视图的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI贝塞尔横幅视图.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetBezierBannerView ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI贝塞尔横幅视图的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI贝塞尔横幅视图.isClickable()">
+    {
+        @ @sn<this>.GetBezierBannerView ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI贝塞尔横幅视图的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI贝塞尔横幅视图.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetBezierBannerView ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI贝塞尔横幅视图的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI贝塞尔横幅视图.getElevation()">
+    {
+        @ (double)@sn<this>.GetBezierBannerView ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI贝塞尔横幅视图的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI贝塞尔横幅视图.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetBezierBannerView ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI贝塞尔横幅视图的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI贝塞尔横幅视图.getMinimumHeight()">
+    {
+        @ @sn<this>.GetBezierBannerView ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI贝塞尔横幅视图的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI贝塞尔横幅视图.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetBezierBannerView ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI贝塞尔横幅视图的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI贝塞尔横幅视图.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetBezierBannerView ().setBackgroundColor (@<新值>))
+    }
+
+    方法 设置进度 <公开 注释 = "用法：把XUI贝塞尔横幅视图的进度设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI贝塞尔横幅视图.setProgress()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetBezierBannerView ().setProgress ((float) @<值1>))
+    }
+
+    方法 取值 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读出XUI贝塞尔横幅视图的值。 参数：值1=小数、值2=小数、值3=整数。 返回：小数。 原方法：XUI贝塞尔横幅视图.getValue()">
+    参数 值1 <类型 = 小数>
+    参数 值2 <类型 = 小数>
+    参数 值3 <类型 = 整数>
+    {
+        @ (double)@sn<this>.GetBezierBannerView ().getValue ((float) @<值1>, (float) @<值2>, @<值3>)
+    }
+
+    方法 取值对全部 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读出XUI贝塞尔横幅视图的值对全部。 参数：值1=小数、值2=小数。 返回：小数。 原方法：XUI贝塞尔横幅视图.getValueForAll()">
+    参数 值1 <类型 = 小数>
+    参数 值2 <类型 = 小数>
+    {
+        @ (double)@sn<this>.GetBezierBannerView ().getValueForAll ((float) @<值1>, (float) @<值2>)
+    }
+
+    方法 取值_2 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读出XUI贝塞尔横幅视图的值_2。 参数：值1=小数、值2=小数、值3=小数。 返回：小数。 原方法：XUI贝塞尔横幅视图.getValue()">
+    参数 值1 <类型 = 小数>
+    参数 值2 <类型 = 小数>
+    参数 值3 <类型 = 小数>
+    {
+        @ (double)@sn<this>.GetBezierBannerView ().getValue ((float) @<值1>, (float) @<值2>, (float) @<值3>)
+    }
+
+    方法 设置朝向 <公开 注释 = "用法：把XUI贝塞尔横幅视图的朝向设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI贝塞尔横幅视图.setDirection()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetBezierBannerView ().setDirection (@<值1>))
+    }
+
+    方法 重置进度 <公开 注释 = "用法：把XUI贝塞尔横幅视图恢复到默认状态。 参数：无。 返回：无。 原方法：XUI贝塞尔横幅视图.resetProgress()">
+    {
+        @ @m<RUN_UI_ACTION> (GetBezierBannerView ().resetProgress ())
+    }
+
+    方法 响应页已滚动 <公开 注释 = "用法：XUI贝塞尔横幅视图在页已滚动时被 XUI 回调, 通常配合 挂接事件 使用。 参数：值1=整数、值2=小数、值3=整数。 返回：无。 原方法：XUI贝塞尔横幅视图.onPageScrolled()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 小数>
+    参数 值3 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetBezierBannerView ().onPageScrolled (@<值1>, (float) @<值2>, @<值3>))
+    }
+
+    方法 响应页选中 <公开 注释 = "用法：XUI贝塞尔横幅视图在页选中时被 XUI 回调, 通常配合 挂接事件 使用。 参数：值1=整数。 返回：无。 原方法：XUI贝塞尔横幅视图.onPageSelected()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetBezierBannerView ().onPageSelected (@<值1>))
+    }
+
+    方法 响应页滚动状态已改变 <公开 注释 = "用法：XUI贝塞尔横幅视图在页滚动状态已改变时被 XUI 回调, 通常配合 挂接事件 使用。 参数：值1=整数。 返回：无。 原方法：XUI贝塞尔横幅视图.onPageScrollStateChanged()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetBezierBannerView ().onPageScrollStateChanged (@<值1>))
+    }
+
+}
+
+类 XUI照片翻页视图 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.imageview.preview.view.PhotoViewPager)."
+        @文档 = "category = \"XUI.图片\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.imageview.preview.view.PhotoViewPager\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI照片翻页视图, PhotoViewPager, com.xuexiang.xui.widget.imageview.preview.view.PhotoViewPager)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetPhotoViewPager ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI照片翻页视图的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI照片翻页视图.getAlpha()">
+    {
+        @ (double)@sn<this>.GetPhotoViewPager ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI照片翻页视图的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI照片翻页视图.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetPhotoViewPager ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI照片翻页视图的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI照片翻页视图.isEnabled()">
+    {
+        @ @sn<this>.GetPhotoViewPager ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI照片翻页视图的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI照片翻页视图.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetPhotoViewPager ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI照片翻页视图的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI照片翻页视图.isClickable()">
+    {
+        @ @sn<this>.GetPhotoViewPager ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI照片翻页视图的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI照片翻页视图.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetPhotoViewPager ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI照片翻页视图的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI照片翻页视图.getElevation()">
+    {
+        @ (double)@sn<this>.GetPhotoViewPager ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI照片翻页视图的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI照片翻页视图.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetPhotoViewPager ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI照片翻页视图的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI照片翻页视图.getMinimumHeight()">
+    {
+        @ @sn<this>.GetPhotoViewPager ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI照片翻页视图的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI照片翻页视图.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetPhotoViewPager ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI照片翻页视图的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI照片翻页视图.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetPhotoViewPager ().setBackgroundColor (@<新值>))
+    }
+
+}
+
+类 XUI平滑图片框 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.imageview.preview.view.SmoothImageView)."
+        @文档 = "category = \"XUI.图片\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.imageview.preview.view.SmoothImageView\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI平滑图片框, SmoothImageView, com.xuexiang.xui.widget.imageview.preview.view.SmoothImageView)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetSmoothImageView ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI平滑图片框的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI平滑图片框.getAlpha()">
+    {
+        @ (double)@sn<this>.GetSmoothImageView ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI平滑图片框的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI平滑图片框.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSmoothImageView ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI平滑图片框的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI平滑图片框.isEnabled()">
+    {
+        @ @sn<this>.GetSmoothImageView ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI平滑图片框的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI平滑图片框.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetSmoothImageView ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI平滑图片框的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI平滑图片框.isClickable()">
+    {
+        @ @sn<this>.GetSmoothImageView ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI平滑图片框的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI平滑图片框.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetSmoothImageView ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI平滑图片框的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI平滑图片框.getElevation()">
+    {
+        @ (double)@sn<this>.GetSmoothImageView ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI平滑图片框的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI平滑图片框.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSmoothImageView ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI平滑图片框的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI平滑图片框.getMinimumHeight()">
+    {
+        @ @sn<this>.GetSmoothImageView ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI平滑图片框的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI平滑图片框.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSmoothImageView ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI平滑图片框的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI平滑图片框.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSmoothImageView ().setBackgroundColor (@<新值>))
+    }
+
+    方法 XUI图片 <公开 属性写 注释 = "用法：设置XUI平滑图片框的XUI图片, 传入新值后立刻生效。 参数：新值=可绘制对象类。 返回：无。 原方法：XUI平滑图片框.setImageDrawable()">
+    参数 新值 <类型 = 可绘制对象类>
+    {
+        @ @m<RUN_UI_ACTION> (GetSmoothImageView ().setImageDrawable (@<新值>))
+    }
+
+    方法 XUI图片资源 <公开 属性写 注释 = "用法：设置XUI平滑图片框的XUI图片资源, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI平滑图片框.setImageResource()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSmoothImageView ().setImageResource (@<新值>))
+    }
+
+    方法 XUI图片位图 <公开 属性写 注释 = "用法：设置XUI平滑图片框的XUI图片位图, 传入新值后立刻生效。 参数：新值=位图类。 返回：无。 原方法：XUI平滑图片框.setImageBitmap()">
+    参数 新值 <类型 = 位图类>
+    {
+        @ @m<RUN_UI_ACTION> (GetSmoothImageView ().setImageBitmap (@<新值>))
+    }
+
+    方法 取XUI图片 <公开 类型 = 可绘制对象类 @嵌入式方法 = "" 注释 = "java: public Drawable getDrawable()">
+    {
+        @ @sn<this>.GetSmoothImageView ().getDrawable ()
+    }
+
+    方法 检查最小缩放 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：XUI平滑图片框 的 检查最小缩放, 行为与 XUI 底层同名方法一致。 参数：无。 返回：逻辑型。 原方法：XUI平滑图片框.checkMinScale()">
+    {
+        @ @sn<this>.GetSmoothImageView ().checkMinScale ()
+    }
+
+    方法 设置拖动 <公开 注释 = "用法：把XUI平滑图片框的拖动设为给定值。 参数：值1=真/假、值2=小数。 返回：无。 原方法：XUI平滑图片框.setDrag()">
+    参数 值1 <类型 = 逻辑型>
+    参数 值2 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSmoothImageView ().setDrag (@<值1>, (float) @<值2>))
+    }
+
+    方法 设置时长 <公开 注释 = "用法：把XUI平滑图片框的时长设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI平滑图片框.setDuration()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSmoothImageView ().setDuration (@<值1>))
+    }
+
+}

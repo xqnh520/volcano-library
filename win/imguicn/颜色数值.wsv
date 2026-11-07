@@ -1,0 +1,99 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.即时界面 <注释 = "Dear ImGui v1.91.9b-docking 的火山视窗中文封装，全中文类名/方法名/参数名/注释。" @视窗.头文件搜寻目录 = "imgui"
+        @视窗.外部头文件 = "imcn_helper.h, imcn_host.h"
+        @视窗.外部源文件 = "imgui\\imgui.cpp, imgui\\imgui_draw.cpp, imgui\\imgui_tables.cpp, imgui\\imgui_widgets.cpp, imgui\\imgui_demo.cpp, imgui\\misc\\cpp\\imgui_stdlib.cpp, imgui\\backends\\imgui_impl_win32.cpp, imgui\\backends\\imgui_impl_dx11.cpp">
+
+类 四维数值 <公开 注释 = "对应 ImGui 的 ImVec4，常用于表示带透明度的颜色 (红, 绿, 蓝, 透明)。" 折叠
+        折叠2 @文档 = "category = \"基础类型\"" @别名 = "ImVec4" @别名类型 = 本地值类型>
+{
+    变量 红色 <公开 类型 = 单精度小数 @输出名 = "x" @属性变量 = 真 注释 = "红色分量，范围 0.0-1.0">
+    变量 绿色 <公开 类型 = 单精度小数 @输出名 = "y" @属性变量 = 真 注释 = "绿色分量，范围 0.0-1.0">
+    变量 蓝色 <公开 类型 = 单精度小数 @输出名 = "z" @属性变量 = 真 注释 = "蓝色分量，范围 0.0-1.0">
+    变量 透明度 <公开 类型 = 单精度小数 @输出名 = "w" @属性变量 = 真 注释 = "透明度分量，范围 0.0-1.0">
+
+    方法 创建 <公开 静态 类型 = 四维数值 注释 = "按给定的四个分量创建数值。" 折叠 @嵌入式方法 = "">
+    参数 红色值 <注释 = "红色分量" @默认值 = 0 @匹配类型 = 通用数值型>
+    参数 绿色值 <注释 = "绿色分量" @默认值 = 0 @匹配类型 = 通用数值型>
+    参数 蓝色值 <注释 = "蓝色分量" @默认值 = 0 @匹配类型 = 通用数值型>
+    参数 透明度值 <注释 = "透明度分量" @默认值 = 1 @匹配类型 = 通用数值型>
+    {
+        @ ImVec4((float)@<红色值>, (float)@<绿色值>, (float)@<蓝色值>, (float)@<透明度值>)
+    }
+
+    方法 创建自整数色 <公开 静态 类型 = 四维数值 注释 = "把一个 32 位打包颜色值（AABBGGRR）拆分为四个分量。" 折叠 @嵌入式方法 = "">
+    参数 打包颜色 <类型 = 整数 注释 = "32 位打包颜色值">
+    {
+        @ ImGui::ColorConvertU32ToFloat4((ImU32)@<打包颜色>)
+    }
+
+    方法 转为整数色 <公开 静态 类型 = 整数 注释 = "把四个分量打包为 32 位颜色值（AABBGGRR）。" 折叠 @嵌入式方法 = "">
+    参数 欲转换的颜色 <类型 = 四维数值 @视窗.后缀文本 = "&" 注释 = "被转换的颜色值">
+    {
+        @ ImGui::ColorConvertFloat4ToU32(@<欲转换的颜色>)
+    }
+}
+类 颜色标识 <公开 注释 = "样式颜色标识" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 文本 <公开 类型 = 整数 值 = @ImGuiCol_Text>
+    常量 禁用文本 <公开 类型 = 整数 值 = @ImGuiCol_TextDisabled>
+    常量 窗口背景 <公开 类型 = 整数 值 = @ImGuiCol_WindowBg>
+    常量 子窗口背景 <公开 类型 = 整数 值 = @ImGuiCol_ChildBg>
+    常量 弹出窗口背景 <公开 类型 = 整数 值 = @ImGuiCol_PopupBg>
+    常量 边框 <公开 类型 = 整数 值 = @ImGuiCol_Border>
+    常量 边框阴影 <公开 类型 = 整数 值 = @ImGuiCol_BorderShadow>
+    常量 控件背景 <公开 类型 = 整数 值 = @ImGuiCol_FrameBg>
+    常量 控件背景悬停 <公开 类型 = 整数 值 = @ImGuiCol_FrameBgHovered>
+    常量 控件背景激活 <公开 类型 = 整数 值 = @ImGuiCol_FrameBgActive>
+    常量 标题栏背景 <公开 类型 = 整数 值 = @ImGuiCol_TitleBg>
+    常量 标题栏背景激活 <公开 类型 = 整数 值 = @ImGuiCol_TitleBgActive>
+    常量 标题栏折叠背景 <公开 类型 = 整数 值 = @ImGuiCol_TitleBgCollapsed>
+    常量 菜单栏背景 <公开 类型 = 整数 值 = @ImGuiCol_MenuBarBg>
+    常量 滚动条背景 <公开 类型 = 整数 值 = @ImGuiCol_ScrollbarBg>
+    常量 滚动条滑块 <公开 类型 = 整数 值 = @ImGuiCol_ScrollbarGrab>
+    常量 滚动条滑块悬停 <公开 类型 = 整数 值 = @ImGuiCol_ScrollbarGrabHovered>
+    常量 滚动条滑块激活 <公开 类型 = 整数 值 = @ImGuiCol_ScrollbarGrabActive>
+    常量 复选标记 <公开 类型 = 整数 值 = @ImGuiCol_CheckMark>
+    常量 滑块把手 <公开 类型 = 整数 值 = @ImGuiCol_SliderGrab>
+    常量 滑块把手激活 <公开 类型 = 整数 值 = @ImGuiCol_SliderGrabActive>
+    常量 按钮 <公开 类型 = 整数 值 = @ImGuiCol_Button>
+    常量 按钮悬停 <公开 类型 = 整数 值 = @ImGuiCol_ButtonHovered>
+    常量 按钮按下 <公开 类型 = 整数 值 = @ImGuiCol_ButtonActive>
+    常量 标题头 <公开 类型 = 整数 值 = @ImGuiCol_Header>
+    常量 标题头悬停 <公开 类型 = 整数 值 = @ImGuiCol_HeaderHovered>
+    常量 标题头激活 <公开 类型 = 整数 值 = @ImGuiCol_HeaderActive>
+    常量 分隔线 <公开 类型 = 整数 值 = @ImGuiCol_Separator>
+    常量 分隔线悬停 <公开 类型 = 整数 值 = @ImGuiCol_SeparatorHovered>
+    常量 分隔线激活 <公开 类型 = 整数 值 = @ImGuiCol_SeparatorActive>
+    常量 调整手柄 <公开 类型 = 整数 值 = @ImGuiCol_ResizeGrip>
+    常量 调整手柄悬停 <公开 类型 = 整数 值 = @ImGuiCol_ResizeGripHovered>
+    常量 调整手柄激活 <公开 类型 = 整数 值 = @ImGuiCol_ResizeGripActive>
+    常量 选项卡悬停 <公开 类型 = 整数 值 = @ImGuiCol_TabHovered>
+    常量 选项卡 <公开 类型 = 整数 值 = @ImGuiCol_Tab>
+    常量 选项卡选中 <公开 类型 = 整数 值 = @ImGuiCol_TabSelected>
+    常量 选项卡选中顶线 <公开 类型 = 整数 值 = @ImGuiCol_TabSelectedOverline>
+    常量 选项卡暗淡 <公开 类型 = 整数 值 = @ImGuiCol_TabDimmed>
+    常量 暗淡选项卡选中 <公开 类型 = 整数 值 = @ImGuiCol_TabDimmedSelected>
+    常量 暗淡选项卡选中顶线 <公开 类型 = 整数 值 = @ImGuiCol_TabDimmedSelectedOverline>
+    常量 停靠预览 <公开 类型 = 整数 值 = @ImGuiCol_DockingPreview>
+    常量 停靠空白背景 <公开 类型 = 整数 值 = @ImGuiCol_DockingEmptyBg>
+    常量 曲线图线条 <公开 类型 = 整数 值 = @ImGuiCol_PlotLines>
+    常量 曲线图线条悬停 <公开 类型 = 整数 值 = @ImGuiCol_PlotLinesHovered>
+    常量 柱状图 <公开 类型 = 整数 值 = @ImGuiCol_PlotHistogram>
+    常量 柱状图悬停 <公开 类型 = 整数 值 = @ImGuiCol_PlotHistogramHovered>
+    常量 表头背景 <公开 类型 = 整数 值 = @ImGuiCol_TableHeaderBg>
+    常量 表格强边框 <公开 类型 = 整数 值 = @ImGuiCol_TableBorderStrong>
+    常量 表格弱边框 <公开 类型 = 整数 值 = @ImGuiCol_TableBorderLight>
+    常量 表格行背景 <公开 类型 = 整数 值 = @ImGuiCol_TableRowBg>
+    常量 表格交替行背景 <公开 类型 = 整数 值 = @ImGuiCol_TableRowBgAlt>
+    常量 文本链接 <公开 类型 = 整数 值 = @ImGuiCol_TextLink>
+    常量 文本选中背景 <公开 类型 = 整数 值 = @ImGuiCol_TextSelectedBg>
+    常量 拖放目标 <公开 类型 = 整数 值 = @ImGuiCol_DragDropTarget>
+    常量 导航光标 <公开 类型 = 整数 值 = @ImGuiCol_NavCursor>
+    常量 窗口导航高亮 <公开 类型 = 整数 值 = @ImGuiCol_NavWindowingHighlight>
+    常量 窗口导航暗背景 <公开 类型 = 整数 值 = @ImGuiCol_NavWindowingDimBg>
+    常量 模态窗口暗背景 <公开 类型 = 整数 值 = @ImGuiCol_ModalWindowDimBg>
+    常量 选项卡激活 <公开 类型 = 整数 值 = @ImGuiCol_TabActive>
+    常量 选项卡未聚焦 <公开 类型 = 整数 值 = @ImGuiCol_TabUnfocused>
+    常量 未聚焦选项卡激活 <公开 类型 = 整数 值 = @ImGuiCol_TabUnfocusedActive>
+}

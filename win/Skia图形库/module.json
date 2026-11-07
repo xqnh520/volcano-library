@@ -1,0 +1,7 @@
+{
+    "name":  "Skia图形库",
+    "version":  "1.0.0",
+    "desc":  "Skia图形库 类库",
+    "author":  "xqnh520",
+    "entry":  "skia.vgrp"
+}

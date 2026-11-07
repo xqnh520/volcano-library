@@ -1,0 +1,235 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.安卓.XUI <注释 = "XUI 安卓 UI 工具库封装" @文档 = "category = \"XUI\"">
+
+
+类 XUIMaterial搜索视图 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.searchview.MaterialSearchView)."
+        @文档 = "category = \"XUI.搜索\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.searchview.MaterialSearchView\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.msv_searchBackground\n        shown_name = \"搜索框背景资源的id\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.msv_searchVoiceIcon\n        shown_name = \"语音按钮图标的资源id\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.msv_searchClearIcon\n        shown_name = \"清空按钮图标的资源id\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.msv_searchBackIcon\n        shown_name = \"返回按钮图标的资源id\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.msv_searchSuggestionIcon\n        shown_name = \"搜索提示图标的资源id\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.msv_searchSuggestionBackground\n        shown_name = \"搜索提示的背景资源的id\"\n        data_type = int\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUIMaterial搜索视图, MaterialSearchView, com.xuexiang.xui.widget.searchview.MaterialSearchView)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetMaterialSearchView ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUIMaterial搜索视图的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUIMaterial搜索视图.getAlpha()">
+    {
+        @ (double)@sn<this>.GetMaterialSearchView ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUIMaterial搜索视图的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUIMaterial搜索视图.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialSearchView ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUIMaterial搜索视图的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUIMaterial搜索视图.isEnabled()">
+    {
+        @ @sn<this>.GetMaterialSearchView ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUIMaterial搜索视图的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUIMaterial搜索视图.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialSearchView ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUIMaterial搜索视图的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUIMaterial搜索视图.isClickable()">
+    {
+        @ @sn<this>.GetMaterialSearchView ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUIMaterial搜索视图的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUIMaterial搜索视图.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialSearchView ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUIMaterial搜索视图的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUIMaterial搜索视图.getElevation()">
+    {
+        @ (double)@sn<this>.GetMaterialSearchView ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUIMaterial搜索视图的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUIMaterial搜索视图.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialSearchView ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUIMaterial搜索视图的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUIMaterial搜索视图.getMinimumHeight()">
+    {
+        @ @sn<this>.GetMaterialSearchView ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUIMaterial搜索视图的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUIMaterial搜索视图.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialSearchView ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUIMaterial搜索视图的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUIMaterial搜索视图.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialSearchView ().setBackgroundColor (@<新值>))
+    }
+
+    方法 设置背景 <公开 注释 = "用法：把XUIMaterial搜索视图的背景设为给定值。 参数：值1=可绘制对象类。 返回：无。 原方法：XUIMaterial搜索视图.setBackground()">
+    参数 值1 <类型 = 可绘制对象类>
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialSearchView ().setBackground (@<值1>))
+    }
+
+    方法 设置背景颜色 <公开 注释 = "用法：把XUIMaterial搜索视图的背景颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUIMaterial搜索视图.setBackgroundColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialSearchView ().setBackgroundColor (@<值1>))
+    }
+
+    方法 设置文本颜色 <公开 注释 = "用法：把XUIMaterial搜索视图的文本颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUIMaterial搜索视图.setTextColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialSearchView ().setTextColor (@<值1>))
+    }
+
+    方法 设置提示文本颜色 <公开 注释 = "用法：把XUIMaterial搜索视图的提示文本颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUIMaterial搜索视图.setHintTextColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialSearchView ().setHintTextColor (@<值1>))
+    }
+
+    方法 设置提示 <公开 注释 = "用法：把XUIMaterial搜索视图的提示设为给定值。 参数：值1=文本。 返回：无。 原方法：XUIMaterial搜索视图.setHint()">
+    参数 值1 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialSearchView ().setHint (@<值1>))
+    }
+
+    方法 设置语音图标 <公开 注释 = "用法：把XUIMaterial搜索视图的语音图标设为给定值。 参数：值1=可绘制对象类。 返回：无。 原方法：XUIMaterial搜索视图.setVoiceIcon()">
+    参数 值1 <类型 = 可绘制对象类>
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialSearchView ().setVoiceIcon (@<值1>))
+    }
+
+    方法 设置关闭图标 <公开 注释 = "用法：把XUIMaterial搜索视图的关闭图标设为给定值。 参数：值1=可绘制对象类。 返回：无。 原方法：XUIMaterial搜索视图.setCloseIcon()">
+    参数 值1 <类型 = 可绘制对象类>
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialSearchView ().setCloseIcon (@<值1>))
+    }
+
+    方法 设置后退图标 <公开 注释 = "用法：把XUIMaterial搜索视图的后退图标设为给定值。 参数：值1=可绘制对象类。 返回：无。 原方法：XUIMaterial搜索视图.setBackIcon()">
+    参数 值1 <类型 = 可绘制对象类>
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialSearchView ().setBackIcon (@<值1>))
+    }
+
+    方法 设置建议图标 <公开 注释 = "用法：把XUIMaterial搜索视图的建议图标设为给定值。 参数：值1=可绘制对象类。 返回：无。 原方法：XUIMaterial搜索视图.setSuggestionIcon()">
+    参数 值1 <类型 = 可绘制对象类>
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialSearchView ().setSuggestionIcon (@<值1>))
+    }
+
+    方法 设置输入类型 <公开 注释 = "用法：把XUIMaterial搜索视图的输入类型设为给定值。 参数：值1=整数。 返回：无。 原方法：XUIMaterial搜索视图.setInputType()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialSearchView ().setInputType (@<值1>))
+    }
+
+    方法 设置建议背景 <公开 注释 = "用法：把XUIMaterial搜索视图的建议背景设为给定值。 参数：值1=可绘制对象类。 返回：无。 原方法：XUIMaterial搜索视图.setSuggestionBackground()">
+    参数 值1 <类型 = 可绘制对象类>
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialSearchView ().setSuggestionBackground (@<值1>))
+    }
+
+    方法 设置光标图形 <公开 注释 = "用法：把XUIMaterial搜索视图的光标图形设为给定值。 参数：值1=整数。 返回：无。 原方法：XUIMaterial搜索视图.setCursorDrawable()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialSearchView ().setCursorDrawable (@<值1>))
+    }
+
+    方法 设置语音搜索 <公开 注释 = "用法：把XUIMaterial搜索视图的语音搜索设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUIMaterial搜索视图.setVoiceSearch()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialSearchView ().setVoiceSearch (@<值1>))
+    }
+
+    方法 显示建议集 <公开 注释 = "用法：让XUIMaterial搜索视图显示出来。 参数：无。 返回：无。 原方法：XUIMaterial搜索视图.showSuggestions()">
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialSearchView ().showSuggestions ())
+    }
+
+    方法 设置提交响应点击 <公开 注释 = "用法：把XUIMaterial搜索视图的提交响应点击设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUIMaterial搜索视图.setSubmitOnClick()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialSearchView ().setSubmitOnClick (@<值1>))
+    }
+
+    方法 设置建议集 <公开 注释 = "用法：把XUIMaterial搜索视图的建议集设为给定值。 参数：值1=文本型。 返回：无。 原方法：XUIMaterial搜索视图.setSuggestions()">
+    参数 值1 <类型 = "文本型 []">
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialSearchView ().setSuggestions (@<值1>))
+    }
+
+    方法 关闭建议集 <公开 注释 = "用法：关闭XUIMaterial搜索视图。 参数：无。 返回：无。 原方法：XUIMaterial搜索视图.dismissSuggestions()">
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialSearchView ().dismissSuggestions ())
+    }
+
+    方法 设置查询 <公开 注释 = "用法：把XUIMaterial搜索视图的查询设为给定值。 参数：值1=文本、值2=真/假。 返回：无。 原方法：XUIMaterial搜索视图.setQuery()">
+    参数 值1 <类型 = 文本型>
+    参数 值2 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialSearchView ().setQuery (@<值1>, @<值2>))
+    }
+
+    方法 显示语音 <公开 注释 = "用法：让XUIMaterial搜索视图显示出来。 参数：值1=真/假。 返回：无。 原方法：XUIMaterial搜索视图.showVoice()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialSearchView ().showVoice (@<值1>))
+    }
+
+    方法 是否搜索打开 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断XUIMaterial搜索视图是否搜索打开。 参数：无。 返回：逻辑型。 原方法：XUIMaterial搜索视图.isSearchOpen()">
+    {
+        @ @sn<this>.GetMaterialSearchView ().isSearchOpen ()
+    }
+
+    方法 设置动画时长 <公开 注释 = "用法：把XUIMaterial搜索视图的动画时长设为给定值。 参数：值1=整数。 返回：无。 原方法：XUIMaterial搜索视图.setAnimationDuration()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialSearchView ().setAnimationDuration (@<值1>))
+    }
+
+    方法 显示搜索 <公开 注释 = "用法：让XUIMaterial搜索视图显示出来。 参数：无。 返回：无。 原方法：XUIMaterial搜索视图.showSearch()">
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialSearchView ().showSearch ())
+    }
+
+    方法 显示搜索_2 <公开 注释 = "用法：让XUIMaterial搜索视图显示出来。 参数：值1=真/假。 返回：无。 原方法：XUIMaterial搜索视图.showSearch()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialSearchView ().showSearch (@<值1>))
+    }
+
+    方法 关闭搜索 <公开 注释 = "用法：关闭XUIMaterial搜索视图。 参数：无。 返回：无。 原方法：XUIMaterial搜索视图.closeSearch()">
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialSearchView ().closeSearch ())
+    }
+
+    方法 设置省略 <公开 注释 = "用法：把XUIMaterial搜索视图的省略设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUIMaterial搜索视图.setEllipsize()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialSearchView ().setEllipsize (@<值1>))
+    }
+
+    方法 响应滤镜完成 <公开 注释 = "用法：XUIMaterial搜索视图在滤镜完成时被 XUI 回调, 通常配合 挂接事件 使用。 参数：值1=整数。 返回：无。 原方法：XUIMaterial搜索视图.onFilterComplete()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialSearchView ().onFilterComplete (@<值1>))
+    }
+
+    方法 清空焦点 <公开 注释 = "用法：清空XUIMaterial搜索视图的焦点。 参数：无。 返回：无。 原方法：XUIMaterial搜索视图.clearFocus()">
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialSearchView ().clearFocus ())
+    }
+
+}

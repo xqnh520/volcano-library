@@ -1,0 +1,4255 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.安卓.OCCT几何 <注释 = "OpenCASCADE 7.8.0 全库封装 (自动生成, 请勿手改). 名称已汉化为中文显示名, 注释内附英文原名. TK 库 libTKG2d: 30 个类 / 584 个方法.">
+
+类 二维曲线适配器 <公开 注释 = "二维曲线适配器: 原类 Adaptor2d_Curve2d (libTKG2d, 头文件 Adaptor2d/Adaptor2d_Curve2d.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 几何算法所用二维曲线的根类. 适配曲线是曲线提供的服务与使用该曲线的算法所要求的服务之间的接口. 提供一个具体派生类: 面向 Geom2d 包曲线的 Geom2dAdaptor_Curve." @禁止创建对象 = 真>
+{
+
+    方法 浅拷贝 <公开 静态 类型 = 长整数 注释 = "浅拷贝. 原方法: ShallowCopy. 官方简介: 适配器的浅拷贝" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_Curve2d.ShallowCopy (@<对象>)
+    }
+
+    方法 首个参数 <公开 静态 类型 = 小数 注释 = "首个参数. 原方法: FirstParameter." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_Curve2d.FirstParameter (@<对象>)
+    }
+
+    方法 末个参数 <公开 静态 类型 = 小数 注释 = "末个参数. 原方法: LastParameter." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_Curve2d.LastParameter (@<对象>)
+    }
+
+    方法 连续性 <公开 静态 类型 = 整数 注释 = "连续性. 原方法: Continuity." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_Curve2d.Continuity (@<对象>)
+    }
+
+    方法 区间数 <公开 静态 类型 = 整数 注释 = "区间数. 原方法: NbIntervals. 官方简介: 必要时把曲线分解为连续性 <S> 的区间. 并返回区间数." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_Curve2d.NbIntervals (@<对象>, @<S>)
+    }
+
+    方法 裁剪 <公开 静态 类型 = 长整数 注释 = "裁剪. 原方法: Trim. 官方简介: 返回与 <me> 等效的曲线在参数 <First> 与 <Last> 之间的部分. <Tol> 用于检测三维点是否重合. 若 <First> >= <Last>" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 首个 <类型 = 小数>
+    参数 末个 <类型 = 小数>
+    参数 容差 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_Curve2d.Trim (@<对象>, @<首个>, @<末个>, @<容差>)
+    }
+
+    方法 是否闭合 <公开 静态 类型 = 逻辑型 注释 = "是否闭合. 原方法: IsClosed." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_Curve2d.IsClosed (@<对象>)
+    }
+
+    方法 是否周期 <公开 静态 类型 = 逻辑型 注释 = "是否周期. 原方法: IsPeriodic." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_Curve2d.IsPeriodic (@<对象>)
+    }
+
+    方法 周期 <公开 静态 类型 = 小数 注释 = "周期. 原方法: Period." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_Curve2d.Period (@<对象>)
+    }
+
+    方法 取值 <公开 静态 类型 = 长整数 注释 = "取值. 原方法: Value. 官方简介: 计算曲线上参数为 U 的点." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_Curve2d.Value (@<对象>, @<U>)
+    }
+
+    方法 取点 <公开 静态 注释 = "取点. 原方法: D0. 官方简介: 计算曲线上参数为 U 的点." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_Curve2d.D0 (@<对象>, @<U>, @<输出P>)
+    }
+
+    方法 取一阶导 <公开 静态 注释 = "取一阶导. 原方法: D1. 官方简介: 计算曲线上参数为 U 的点及其一阶导数. 若当前区间的连续性不是 C1 则抛出异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    参数 输出V <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_Curve2d.D1 (@<对象>, @<U>, @<输出P>, @<输出V>)
+    }
+
+    方法 取二阶导 <公开 静态 注释 = "取二阶导. 原方法: D2. 官方简介: 返回参数 U 的点 P, 以及一阶导数 V1 和二阶导数 V2. 若当前区间的连续性不是 C2 则抛出异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    参数 输出V1 <类型 = 长整数>
+    参数 输出V2 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_Curve2d.D2 (@<对象>, @<U>, @<输出P>, @<输出V1>, @<输出V2>)
+    }
+
+    方法 取三阶导 <公开 静态 注释 = "取三阶导. 原方法: D3. 官方简介: 返回参数 U 的点 P, 以及一阶, 二阶和三阶导数. 若当前区间的连续性不是 C3 则抛出异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    参数 输出V1 <类型 = 长整数>
+    参数 输出V2 <类型 = 长整数>
+    参数 输出V3 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_Curve2d.D3 (@<对象>, @<U>, @<输出P>, @<输出V1>, @<输出V2>, @<输出V3>)
+    }
+
+    方法 取N阶导 <公开 静态 类型 = 长整数 注释 = "取N阶导. 原方法: DN. 官方简介: 返回的向量给出 N 阶导数的值. 若当前区间的连续性不是 CN 则抛出异常. 若 N < 1 则抛出异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 N <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_Curve2d.DN (@<对象>, @<U>, @<N>)
+    }
+
+    方法 分辨率 <公开 静态 类型 = 小数 注释 = "分辨率. 原方法: Resolution. 官方简介: 返回与真实空间分辨率 <R3d> 对应的参数分辨率." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 R3d <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_Curve2d.Resolution (@<对象>, @<R3d>)
+    }
+
+    方法 取类型 <公开 静态 类型 = 整数 注释 = "取类型. 原方法: GetType. 官方简介: 返回当前区间中曲线的类型: Line, Circle, Ellipse, Hyperbola, Parabola, BezierCurve, BSplineCurve, OtherCurve." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_Curve2d.GetType (@<对象>)
+    }
+
+    方法 直线 <公开 静态 类型 = 长整数 注释 = "直线. 原方法: Line." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_Curve2d.Line (@<对象>)
+    }
+
+    方法 圆 <公开 静态 类型 = 长整数 注释 = "圆. 原方法: Circle." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_Curve2d.Circle (@<对象>)
+    }
+
+    方法 椭圆 <公开 静态 类型 = 长整数 注释 = "椭圆. 原方法: Ellipse." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_Curve2d.Ellipse (@<对象>)
+    }
+
+    方法 双曲线 <公开 静态 类型 = 长整数 注释 = "双曲线. 原方法: Hyperbola." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_Curve2d.Hyperbola (@<对象>)
+    }
+
+    方法 抛物线 <公开 静态 类型 = 长整数 注释 = "抛物线. 原方法: Parabola." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_Curve2d.Parabola (@<对象>)
+    }
+
+    方法 阶次 <公开 静态 类型 = 整数 注释 = "阶次. 原方法: Degree." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_Curve2d.Degree (@<对象>)
+    }
+
+    方法 是否有理 <公开 静态 类型 = 逻辑型 注释 = "是否有理. 原方法: IsRational." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_Curve2d.IsRational (@<对象>)
+    }
+
+    方法 极点数 <公开 静态 类型 = 整数 注释 = "极点数. 原方法: NbPoles." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_Curve2d.NbPoles (@<对象>)
+    }
+
+    方法 节点数 <公开 静态 类型 = 整数 注释 = "节点数. 原方法: NbKnots." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_Curve2d.NbKnots (@<对象>)
+    }
+
+    方法 采样数 <公开 静态 类型 = 整数 注释 = "采样数. 原方法: NbSamples." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_Curve2d.NbSamples (@<对象>)
+    }
+
+    方法 贝塞尔 <公开 静态 类型 = 长整数 注释 = "贝塞尔. 原方法: Bezier." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_Curve2d.Bezier (@<对象>)
+    }
+
+    方法 B样条 <公开 静态 类型 = 长整数 注释 = "B样条. 原方法: BSpline." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_Curve2d.BSpline (@<对象>)
+    }
+
+}
+
+类 二维直线适配器 <公开 注释 = "二维直线适配器: 原类 Adaptor2d_Line2d (libTKG2d, 头文件 Adaptor2d/Adaptor2d_Line2d.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 供 TopolTool 用于裁剪曲面." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: Adaptor2d_Line2d." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_Line2d.构造 ()
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: Adaptor2d_Line2d." @嵌入式方法 = "">
+    参数 P <类型 = 长整数>
+    参数 D <类型 = 长整数>
+    参数 U起点 <类型 = 小数>
+    参数 U终点 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_Line2d.构造_2 (@<P>, @<D>, @<U起点>, @<U终点>)
+    }
+
+    方法 浅拷贝 <公开 静态 类型 = 长整数 注释 = "浅拷贝. 原方法: ShallowCopy. 官方简介: 适配器的浅拷贝" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_Line2d.ShallowCopy (@<对象>)
+    }
+
+    方法 加载 <公开 静态 注释 = "加载. 原方法: Load." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 L <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_Line2d.Load (@<对象>, @<L>)
+    }
+
+    方法 加载_2 <公开 静态 注释 = "加载_2. 原方法: Load." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 L <类型 = 长整数>
+    参数 U起点 <类型 = 小数>
+    参数 U终点 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_Line2d.Load_2 (@<对象>, @<L>, @<U起点>, @<U终点>)
+    }
+
+    方法 首个参数 <公开 静态 类型 = 小数 注释 = "首个参数. 原方法: FirstParameter." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_Line2d.FirstParameter (@<对象>)
+    }
+
+    方法 末个参数 <公开 静态 类型 = 小数 注释 = "末个参数. 原方法: LastParameter." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_Line2d.LastParameter (@<对象>)
+    }
+
+    方法 连续性 <公开 静态 类型 = 整数 注释 = "连续性. 原方法: Continuity." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_Line2d.Continuity (@<对象>)
+    }
+
+    方法 区间数 <公开 静态 类型 = 整数 注释 = "区间数. 原方法: NbIntervals. 官方简介: 必要时把曲线分解为连续性 <S> 的区间. 并返回区间数." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_Line2d.NbIntervals (@<对象>, @<S>)
+    }
+
+    方法 裁剪 <公开 静态 类型 = 长整数 注释 = "裁剪. 原方法: Trim. 官方简介: 返回与 <me> 等效的曲线在参数 <First> 与 <Last> 之间的部分. <Tol> 用于检测三维点是否重合. 若 <First> >= <Last>" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 首个 <类型 = 小数>
+    参数 末个 <类型 = 小数>
+    参数 容差 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_Line2d.Trim (@<对象>, @<首个>, @<末个>, @<容差>)
+    }
+
+    方法 是否闭合 <公开 静态 类型 = 逻辑型 注释 = "是否闭合. 原方法: IsClosed." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_Line2d.IsClosed (@<对象>)
+    }
+
+    方法 是否周期 <公开 静态 类型 = 逻辑型 注释 = "是否周期. 原方法: IsPeriodic." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_Line2d.IsPeriodic (@<对象>)
+    }
+
+    方法 周期 <公开 静态 类型 = 小数 注释 = "周期. 原方法: Period." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_Line2d.Period (@<对象>)
+    }
+
+    方法 取值 <公开 静态 类型 = 长整数 注释 = "取值. 原方法: Value." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 X <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_Line2d.Value (@<对象>, @<X>)
+    }
+
+    方法 取点 <公开 静态 注释 = "取点. 原方法: D0." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 X <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_Line2d.D0 (@<对象>, @<X>, @<输出P>)
+    }
+
+    方法 取一阶导 <公开 静态 注释 = "取一阶导. 原方法: D1." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 X <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    参数 输出V <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_Line2d.D1 (@<对象>, @<X>, @<输出P>, @<输出V>)
+    }
+
+    方法 取二阶导 <公开 静态 注释 = "取二阶导. 原方法: D2." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 X <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    参数 输出V1 <类型 = 长整数>
+    参数 输出V2 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_Line2d.D2 (@<对象>, @<X>, @<输出P>, @<输出V1>, @<输出V2>)
+    }
+
+    方法 取三阶导 <公开 静态 注释 = "取三阶导. 原方法: D3." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 X <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    参数 输出V1 <类型 = 长整数>
+    参数 输出V2 <类型 = 长整数>
+    参数 输出V3 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_Line2d.D3 (@<对象>, @<X>, @<输出P>, @<输出V1>, @<输出V2>, @<输出V3>)
+    }
+
+    方法 取N阶导 <公开 静态 类型 = 长整数 注释 = "取N阶导. 原方法: DN." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 N <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_Line2d.DN (@<对象>, @<U>, @<N>)
+    }
+
+    方法 分辨率 <公开 静态 类型 = 小数 注释 = "分辨率. 原方法: Resolution." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 R3d <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_Line2d.Resolution (@<对象>, @<R3d>)
+    }
+
+    方法 取类型 <公开 静态 类型 = 整数 注释 = "取类型. 原方法: GetType." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_Line2d.GetType (@<对象>)
+    }
+
+    方法 直线 <公开 静态 类型 = 长整数 注释 = "直线. 原方法: Line." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_Line2d.Line (@<对象>)
+    }
+
+    方法 圆 <公开 静态 类型 = 长整数 注释 = "圆. 原方法: Circle." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_Line2d.Circle (@<对象>)
+    }
+
+    方法 椭圆 <公开 静态 类型 = 长整数 注释 = "椭圆. 原方法: Ellipse." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_Line2d.Ellipse (@<对象>)
+    }
+
+    方法 双曲线 <公开 静态 类型 = 长整数 注释 = "双曲线. 原方法: Hyperbola." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_Line2d.Hyperbola (@<对象>)
+    }
+
+    方法 抛物线 <公开 静态 类型 = 长整数 注释 = "抛物线. 原方法: Parabola." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_Line2d.Parabola (@<对象>)
+    }
+
+    方法 阶次 <公开 静态 类型 = 整数 注释 = "阶次. 原方法: Degree." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_Line2d.Degree (@<对象>)
+    }
+
+    方法 是否有理 <公开 静态 类型 = 逻辑型 注释 = "是否有理. 原方法: IsRational." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_Line2d.IsRational (@<对象>)
+    }
+
+    方法 极点数 <公开 静态 类型 = 整数 注释 = "极点数. 原方法: NbPoles." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_Line2d.NbPoles (@<对象>)
+    }
+
+    方法 节点数 <公开 静态 类型 = 整数 注释 = "节点数. 原方法: NbKnots." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_Line2d.NbKnots (@<对象>)
+    }
+
+    方法 贝塞尔 <公开 静态 类型 = 长整数 注释 = "贝塞尔. 原方法: Bezier." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_Line2d.Bezier (@<对象>)
+    }
+
+    方法 B样条 <公开 静态 类型 = 长整数 注释 = "B样条. 原方法: BSpline." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_Line2d.BSpline (@<对象>)
+    }
+
+}
+
+类 二维偏移曲线适配器 <公开 注释 = "二维偏移曲线适配器: 原类 Adaptor2d_OffsetCurve (libTKG2d, 头文件 Adaptor2d/Adaptor2d_OffsetCurve.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 定义偏置曲线(算法二维曲线)." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: Adaptor2d_OffsetCurve. 官方简介: 偏移量设为 0." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_OffsetCurve.构造 ()
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: Adaptor2d_OffsetCurve. 官方简介: 曲线已加载. 偏移量设为 0." @嵌入式方法 = "">
+    参数 C <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_OffsetCurve.构造_2 (@<C>)
+    }
+
+    方法 创建_3 <公开 静态 类型 = 长整数 注释 = "创建_3. 原构造器: Adaptor2d_OffsetCurve. 官方简介: 创建一条 OffsetCurve 曲线. 偏移量设为 Offset." @嵌入式方法 = "">
+    参数 C <类型 = 长整数>
+    参数 偏移 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_OffsetCurve.构造_3 (@<C>, @<偏移>)
+    }
+
+    方法 创建_4 <公开 静态 类型 = 长整数 注释 = "创建_4. 原构造器: Adaptor2d_OffsetCurve. 官方简介: 创建偏移曲线. WFirst,WLast 定义偏移曲线的边界." @嵌入式方法 = "">
+    参数 C <类型 = 长整数>
+    参数 偏移 <类型 = 小数>
+    参数 W起点 <类型 = 小数>
+    参数 W终点 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_OffsetCurve.构造_4 (@<C>, @<偏移>, @<W起点>, @<W终点>)
+    }
+
+    方法 浅拷贝 <公开 静态 类型 = 长整数 注释 = "浅拷贝. 原方法: ShallowCopy. 官方简介: 适配器的浅拷贝" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_OffsetCurve.ShallowCopy (@<对象>)
+    }
+
+    方法 加载 <公开 静态 注释 = "加载. 原方法: Load. 官方简介: 修改曲线. 偏移量重置为 0." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_OffsetCurve.Load (@<对象>, @<S>)
+    }
+
+    方法 加载_2 <公开 静态 注释 = "加载_2. 原方法: Load. 官方简介: 修改当前曲线的偏移量." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 偏移 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_OffsetCurve.Load_2 (@<对象>, @<偏移>)
+    }
+
+    方法 加载_3 <公开 静态 注释 = "加载_3. 原方法: Load. 官方简介: 修改当前曲线上的偏移曲线." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 偏移 <类型 = 小数>
+    参数 W起点 <类型 = 小数>
+    参数 W终点 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_OffsetCurve.Load_3 (@<对象>, @<偏移>, @<W起点>, @<W终点>)
+    }
+
+    方法 曲线 <公开 静态 类型 = 长整数 注释 = "曲线. 原方法: Curve." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_OffsetCurve.Curve (@<对象>)
+    }
+
+    方法 偏移 <公开 静态 类型 = 小数 注释 = "偏移. 原方法: Offset." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_OffsetCurve.Offset (@<对象>)
+    }
+
+    方法 首个参数 <公开 静态 类型 = 小数 注释 = "首个参数. 原方法: FirstParameter." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_OffsetCurve.FirstParameter (@<对象>)
+    }
+
+    方法 末个参数 <公开 静态 类型 = 小数 注释 = "末个参数. 原方法: LastParameter." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_OffsetCurve.LastParameter (@<对象>)
+    }
+
+    方法 连续性 <公开 静态 类型 = 整数 注释 = "连续性. 原方法: Continuity." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_OffsetCurve.Continuity (@<对象>)
+    }
+
+    方法 区间数 <公开 静态 类型 = 整数 注释 = "区间数. 原方法: NbIntervals. 官方简介: 必要时把曲线分解为连续性 <S> 的区间. 并返回区间数." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_OffsetCurve.NbIntervals (@<对象>, @<S>)
+    }
+
+    方法 裁剪 <公开 静态 类型 = 长整数 注释 = "裁剪. 原方法: Trim. 官方简介: 返回与 <me> 等效的曲线在参数 <First> 与 <Last> 之间的部分. <Tol> 用于检测三维点是否重合. 若 <First> >= <Last>" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 首个 <类型 = 小数>
+    参数 末个 <类型 = 小数>
+    参数 容差 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_OffsetCurve.Trim (@<对象>, @<首个>, @<末个>, @<容差>)
+    }
+
+    方法 是否闭合 <公开 静态 类型 = 逻辑型 注释 = "是否闭合. 原方法: IsClosed." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_OffsetCurve.IsClosed (@<对象>)
+    }
+
+    方法 是否周期 <公开 静态 类型 = 逻辑型 注释 = "是否周期. 原方法: IsPeriodic." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_OffsetCurve.IsPeriodic (@<对象>)
+    }
+
+    方法 周期 <公开 静态 类型 = 小数 注释 = "周期. 原方法: Period." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_OffsetCurve.Period (@<对象>)
+    }
+
+    方法 取值 <公开 静态 类型 = 长整数 注释 = "取值. 原方法: Value. 官方简介: 计算曲线上参数为 U 的点." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_OffsetCurve.Value (@<对象>, @<U>)
+    }
+
+    方法 取点 <公开 静态 注释 = "取点. 原方法: D0. 官方简介: 计算曲线上参数为 U 的点." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_OffsetCurve.D0 (@<对象>, @<U>, @<输出P>)
+    }
+
+    方法 取一阶导 <公开 静态 注释 = "取一阶导. 原方法: D1. 官方简介: 计算曲线上参数为 U 的点及其一阶导数. 若当前区间的连续性不是 C1 则抛出异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    参数 输出V <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_OffsetCurve.D1 (@<对象>, @<U>, @<输出P>, @<输出V>)
+    }
+
+    方法 取二阶导 <公开 静态 注释 = "取二阶导. 原方法: D2. 官方简介: 返回参数 U 的点 P, 以及一阶导数 V1 和二阶导数 V2. 若当前区间的连续性不是 C2 则抛出异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    参数 输出V1 <类型 = 长整数>
+    参数 输出V2 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_OffsetCurve.D2 (@<对象>, @<U>, @<输出P>, @<输出V1>, @<输出V2>)
+    }
+
+    方法 取三阶导 <公开 静态 注释 = "取三阶导. 原方法: D3. 官方简介: 返回参数 U 的点 P, 以及一阶, 二阶和三阶导数. 若当前区间的连续性不是 C3 则抛出异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    参数 输出V1 <类型 = 长整数>
+    参数 输出V2 <类型 = 长整数>
+    参数 输出V3 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_OffsetCurve.D3 (@<对象>, @<U>, @<输出P>, @<输出V1>, @<输出V2>, @<输出V3>)
+    }
+
+    方法 取N阶导 <公开 静态 类型 = 长整数 注释 = "取N阶导. 原方法: DN. 官方简介: 返回的向量给出 N 阶导数的值. 若当前区间的连续性不是 CN 则抛出异常. 若 N < 1 则抛出异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 N <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_OffsetCurve.DN (@<对象>, @<U>, @<N>)
+    }
+
+    方法 分辨率 <公开 静态 类型 = 小数 注释 = "分辨率. 原方法: Resolution. 官方简介: 返回与真实空间分辨率 <R3d> 对应的参数分辨率." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 R3d <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_OffsetCurve.Resolution (@<对象>, @<R3d>)
+    }
+
+    方法 取类型 <公开 静态 类型 = 整数 注释 = "取类型. 原方法: GetType. 官方简介: 返回当前区间中曲线的类型: Line, Circle, Ellipse, Hyperbola, Parabola, BezierCurve, BSplineCurve, OtherCurve." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_OffsetCurve.GetType (@<对象>)
+    }
+
+    方法 直线 <公开 静态 类型 = 长整数 注释 = "直线. 原方法: Line." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_OffsetCurve.Line (@<对象>)
+    }
+
+    方法 圆 <公开 静态 类型 = 长整数 注释 = "圆. 原方法: Circle." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_OffsetCurve.Circle (@<对象>)
+    }
+
+    方法 椭圆 <公开 静态 类型 = 长整数 注释 = "椭圆. 原方法: Ellipse." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_OffsetCurve.Ellipse (@<对象>)
+    }
+
+    方法 双曲线 <公开 静态 类型 = 长整数 注释 = "双曲线. 原方法: Hyperbola." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_OffsetCurve.Hyperbola (@<对象>)
+    }
+
+    方法 抛物线 <公开 静态 类型 = 长整数 注释 = "抛物线. 原方法: Parabola." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_OffsetCurve.Parabola (@<对象>)
+    }
+
+    方法 阶次 <公开 静态 类型 = 整数 注释 = "阶次. 原方法: Degree." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_OffsetCurve.Degree (@<对象>)
+    }
+
+    方法 是否有理 <公开 静态 类型 = 逻辑型 注释 = "是否有理. 原方法: IsRational." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_OffsetCurve.IsRational (@<对象>)
+    }
+
+    方法 极点数 <公开 静态 类型 = 整数 注释 = "极点数. 原方法: NbPoles." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_OffsetCurve.NbPoles (@<对象>)
+    }
+
+    方法 节点数 <公开 静态 类型 = 整数 注释 = "节点数. 原方法: NbKnots." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_OffsetCurve.NbKnots (@<对象>)
+    }
+
+    方法 贝塞尔 <公开 静态 类型 = 长整数 注释 = "贝塞尔. 原方法: Bezier." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_OffsetCurve.Bezier (@<对象>)
+    }
+
+    方法 B样条 <公开 静态 类型 = 长整数 注释 = "B样条. 原方法: BSpline." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_OffsetCurve.BSpline (@<对象>)
+    }
+
+    方法 采样数 <公开 静态 类型 = 整数 注释 = "采样数. 原方法: NbSamples." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Adaptor2d_OffsetCurve.NbSamples (@<对象>)
+    }
+
+}
+
+类 平面几何曲线适配器 <公开 注释 = "平面几何曲线适配器: 原类 Geom2dAdaptor_Curve (libTKG2d, 头文件 Geom2dAdaptor/Geom2dAdaptor_Curve.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: Geom2d 包中任意曲线提供的服务与使用该曲线的算法所要求的服务之间的接口." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: Geom2dAdaptor_Curve." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dAdaptor_Curve.构造 ()
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: Geom2dAdaptor_Curve." @嵌入式方法 = "">
+    参数 C <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dAdaptor_Curve.构造_2 (@<C>)
+    }
+
+    方法 创建_3 <公开 静态 类型 = 长整数 注释 = "创建_3. 原构造器: Geom2dAdaptor_Curve. 官方简介: 若 Ufirst>Ulast 则抛出 Standard_ConstructionError" @嵌入式方法 = "">
+    参数 C <类型 = 长整数>
+    参数 U起点 <类型 = 小数>
+    参数 U终点 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dAdaptor_Curve.构造_3 (@<C>, @<U起点>, @<U终点>)
+    }
+
+    方法 浅拷贝 <公开 静态 类型 = 长整数 注释 = "浅拷贝. 原方法: ShallowCopy. 官方简介: 适配器的浅拷贝" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dAdaptor_Curve.ShallowCopy (@<对象>)
+    }
+
+    方法 重置 <公开 静态 注释 = "重置. 原方法: Reset. 官方简介: 重置当前加载的曲线(撤销 Load())." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dAdaptor_Curve.Reset (@<对象>)
+    }
+
+    方法 加载 <公开 静态 注释 = "加载. 原方法: Load." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 曲线 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dAdaptor_Curve.Load (@<对象>, @<曲线>)
+    }
+
+    方法 加载_2 <公开 静态 注释 = "加载_2. 原方法: Load. 官方简介: 若 theUFirst>theULast 则抛出 Standard_ConstructionError" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 曲线 <类型 = 长整数>
+    参数 U起点 <类型 = 小数>
+    参数 U终点 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dAdaptor_Curve.Load_2 (@<对象>, @<曲线>, @<U起点>, @<U终点>)
+    }
+
+    方法 曲线 <公开 静态 类型 = 长整数 注释 = "曲线. 原方法: Curve." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dAdaptor_Curve.Curve (@<对象>)
+    }
+
+    方法 首个参数 <公开 静态 类型 = 小数 注释 = "首个参数. 原方法: FirstParameter." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dAdaptor_Curve.FirstParameter (@<对象>)
+    }
+
+    方法 末个参数 <公开 静态 类型 = 小数 注释 = "末个参数. 原方法: LastParameter." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dAdaptor_Curve.LastParameter (@<对象>)
+    }
+
+    方法 连续性 <公开 静态 类型 = 整数 注释 = "连续性. 原方法: Continuity." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dAdaptor_Curve.Continuity (@<对象>)
+    }
+
+    方法 区间数 <公开 静态 类型 = 整数 注释 = "区间数. 原方法: NbIntervals. 官方简介: 必要时把曲线分解为连续性 <S> 的区间. 并返回区间数." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dAdaptor_Curve.NbIntervals (@<对象>, @<S>)
+    }
+
+    方法 裁剪 <公开 静态 类型 = 长整数 注释 = "裁剪. 原方法: Trim. 官方简介: 返回与 <me> 等效的曲线在参数 <First> 与 <Last> 之间的部分. <Tol> 用于检测三维点是否重合. 若 <First> >= <Last>" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 首个 <类型 = 小数>
+    参数 末个 <类型 = 小数>
+    参数 容差 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dAdaptor_Curve.Trim (@<对象>, @<首个>, @<末个>, @<容差>)
+    }
+
+    方法 是否闭合 <公开 静态 类型 = 逻辑型 注释 = "是否闭合. 原方法: IsClosed." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dAdaptor_Curve.IsClosed (@<对象>)
+    }
+
+    方法 是否周期 <公开 静态 类型 = 逻辑型 注释 = "是否周期. 原方法: IsPeriodic." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dAdaptor_Curve.IsPeriodic (@<对象>)
+    }
+
+    方法 周期 <公开 静态 类型 = 小数 注释 = "周期. 原方法: Period." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dAdaptor_Curve.Period (@<对象>)
+    }
+
+    方法 取值 <公开 静态 类型 = 长整数 注释 = "取值. 原方法: Value. 官方简介: 计算曲线上参数为 U 的点" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dAdaptor_Curve.Value (@<对象>, @<U>)
+    }
+
+    方法 取点 <公开 静态 注释 = "取点. 原方法: D0. 官方简介: 计算参数 U 的点." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dAdaptor_Curve.D0 (@<对象>, @<U>, @<输出P>)
+    }
+
+    方法 取一阶导 <公开 静态 注释 = "取一阶导. 原方法: D1. 官方简介: 计算曲线上参数为 U 的点及其一阶导数. 若当前区间的连续性不是 C1 则抛出异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    参数 输出V <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dAdaptor_Curve.D1 (@<对象>, @<U>, @<输出P>, @<输出V>)
+    }
+
+    方法 取二阶导 <公开 静态 注释 = "取二阶导. 原方法: D2. 官方简介: 返回参数 U 的点 P, 以及一阶导数 V1 和二阶导数 V2. 若当前区间的连续性不是 C2 则抛出异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    参数 输出V1 <类型 = 长整数>
+    参数 输出V2 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dAdaptor_Curve.D2 (@<对象>, @<U>, @<输出P>, @<输出V1>, @<输出V2>)
+    }
+
+    方法 取三阶导 <公开 静态 注释 = "取三阶导. 原方法: D3. 官方简介: 返回参数 U 的点 P, 以及一阶, 二阶和三阶导数. 若当前区间的连续性不是 C3 则抛出异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    参数 输出V1 <类型 = 长整数>
+    参数 输出V2 <类型 = 长整数>
+    参数 输出V3 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dAdaptor_Curve.D3 (@<对象>, @<U>, @<输出P>, @<输出V1>, @<输出V2>, @<输出V3>)
+    }
+
+    方法 取N阶导 <公开 静态 类型 = 长整数 注释 = "取N阶导. 原方法: DN. 官方简介: 返回的向量给出 N 阶导数的值. 若当前区间的连续性不是 CN 则抛出异常. 若 N < 1 则抛出异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 N <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dAdaptor_Curve.DN (@<对象>, @<U>, @<N>)
+    }
+
+    方法 分辨率 <公开 静态 类型 = 小数 注释 = "分辨率. 原方法: Resolution. 官方简介: 返回参数分辨率" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 曲线参数 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dAdaptor_Curve.Resolution (@<对象>, @<曲线参数>)
+    }
+
+    方法 取类型 <公开 静态 类型 = 整数 注释 = "取类型. 原方法: GetType." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dAdaptor_Curve.GetType (@<对象>)
+    }
+
+    方法 直线 <公开 静态 类型 = 长整数 注释 = "直线. 原方法: Line." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dAdaptor_Curve.Line (@<对象>)
+    }
+
+    方法 圆 <公开 静态 类型 = 长整数 注释 = "圆. 原方法: Circle." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dAdaptor_Curve.Circle (@<对象>)
+    }
+
+    方法 椭圆 <公开 静态 类型 = 长整数 注释 = "椭圆. 原方法: Ellipse." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dAdaptor_Curve.Ellipse (@<对象>)
+    }
+
+    方法 双曲线 <公开 静态 类型 = 长整数 注释 = "双曲线. 原方法: Hyperbola." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dAdaptor_Curve.Hyperbola (@<对象>)
+    }
+
+    方法 抛物线 <公开 静态 类型 = 长整数 注释 = "抛物线. 原方法: Parabola." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dAdaptor_Curve.Parabola (@<对象>)
+    }
+
+    方法 阶次 <公开 静态 类型 = 整数 注释 = "阶次. 原方法: Degree." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dAdaptor_Curve.Degree (@<对象>)
+    }
+
+    方法 是否有理 <公开 静态 类型 = 逻辑型 注释 = "是否有理. 原方法: IsRational." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dAdaptor_Curve.IsRational (@<对象>)
+    }
+
+    方法 极点数 <公开 静态 类型 = 整数 注释 = "极点数. 原方法: NbPoles." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dAdaptor_Curve.NbPoles (@<对象>)
+    }
+
+    方法 节点数 <公开 静态 类型 = 整数 注释 = "节点数. 原方法: NbKnots." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dAdaptor_Curve.NbKnots (@<对象>)
+    }
+
+    方法 采样数 <公开 静态 类型 = 整数 注释 = "采样数. 原方法: NbSamples." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dAdaptor_Curve.NbSamples (@<对象>)
+    }
+
+    方法 贝塞尔 <公开 静态 类型 = 长整数 注释 = "贝塞尔. 原方法: Bezier." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dAdaptor_Curve.Bezier (@<对象>)
+    }
+
+    方法 B样条 <公开 静态 类型 = 长整数 注释 = "B样条. 原方法: BSpline." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dAdaptor_Curve.BSpline (@<对象>)
+    }
+
+}
+
+类 平面曲线局部属性 <公开 注释 = "平面曲线局部属性: 原类 Geom2dLProp_CLProps2d (libTKG2d, 头文件 Geom2dLProp/Geom2dLProp_CLProps2d.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: Geom2dLProp_CLProps2d. 官方简介: 初始化曲线 <C> 的局部属性. 当前点与导数同时计算, 从而可以优化计算时间. <N> 指示要进行的最大求导次数(0, 1, 2 或 3). 例如, 若只需计算切线, N 应等于 1. <Resolution> 是线性容差(用于检测向量是否为空)." @嵌入式方法 = "">
+    参数 C <类型 = 长整数>
+    参数 N <类型 = 整数>
+    参数 分辨率 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dLProp_CLProps2d.构造 (@<C>, @<N>, @<分辨率>)
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: Geom2dLProp_CLProps2d. 官方简介: 与前一构造函数相同, 但此处参数设置为值 <U>. 所做的全部计算将与 <C> 和 <U> 相关." @嵌入式方法 = "">
+    参数 C <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 N <类型 = 整数>
+    参数 分辨率 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dLProp_CLProps2d.构造_2 (@<C>, @<U>, @<N>, @<分辨率>)
+    }
+
+    方法 创建_3 <公开 静态 类型 = 长整数 注释 = "创建_3. 原构造器: Geom2dLProp_CLProps2d. 官方简介: 与前一构造函数相同, 但此处参数设置为值 <U>, 且曲线通过 SetCurve 设置. 曲线可以有空构造函数. 执行 \"set\" 函数时, 所做的全部计算将与 <C> 和 <U> 相关." @嵌入式方法 = "">
+    参数 N <类型 = 整数>
+    参数 分辨率 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dLProp_CLProps2d.构造_3 (@<N>, @<分辨率>)
+    }
+
+    方法 设置参数 <公开 静态 注释 = "设置参数. 原方法: SetParameter. 官方简介: 为参数值 <U> 初始化曲线的局部属性." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dLProp_CLProps2d.SetParameter (@<对象>, @<U>)
+    }
+
+    方法 设置曲线 <公开 静态 注释 = "设置曲线. 原方法: SetCurve. 官方简介: 为新曲线初始化曲线的局部属性." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 C <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dLProp_CLProps2d.SetCurve (@<对象>, @<C>)
+    }
+
+    方法 取值 <公开 静态 类型 = 长整数 注释 = "取值. 原方法: Value. 官方简介: 返回点." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dLProp_CLProps2d.Value (@<对象>)
+    }
+
+    方法 取一阶导 <公开 静态 类型 = 长整数 注释 = "取一阶导. 原方法: D1. 官方简介: 返回一阶导数. 若尚未计算导数则计算之." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dLProp_CLProps2d.D1 (@<对象>)
+    }
+
+    方法 取二阶导 <公开 静态 类型 = 长整数 注释 = "取二阶导. 原方法: D2. 官方简介: 返回二阶导数. 若尚未计算导数则计算之." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dLProp_CLProps2d.D2 (@<对象>)
+    }
+
+    方法 取三阶导 <公开 静态 类型 = 长整数 注释 = "取三阶导. 原方法: D3. 官方简介: 返回三阶导数. 若尚未计算导数则计算之." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dLProp_CLProps2d.D3 (@<对象>)
+    }
+
+    方法 是否切线已定义 <公开 静态 类型 = 逻辑型 注释 = "是否切线已定义. 原方法: IsTangentDefined. 官方简介: 若切线有定义则返回 True. 例如, 若前三阶导数都为零则切线无定义." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dLProp_CLProps2d.IsTangentDefined (@<对象>)
+    }
+
+    方法 切线 <公开 静态 注释 = "切线. 原方法: Tangent. 官方简介: 输出切线方向 <D>" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 输出D <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dLProp_CLProps2d.Tangent (@<对象>, @<输出D>)
+    }
+
+    方法 曲率 <公开 静态 类型 = 小数 注释 = "曲率. 原方法: Curvature. 官方简介: 返回曲率." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dLProp_CLProps2d.Curvature (@<对象>)
+    }
+
+    方法 法向 <公开 静态 注释 = "法向. 原方法: Normal. 官方简介: 返回法向方向 <N>." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 输出N <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dLProp_CLProps2d.Normal (@<对象>, @<输出N>)
+    }
+
+    方法 曲率中心 <公开 静态 注释 = "曲率中心. 原方法: CentreOfCurvature. 官方简介: 返回曲率中心 <P>." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 输出P <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dLProp_CLProps2d.CentreOfCurvature (@<对象>, @<输出P>)
+    }
+
+}
+
+类 平面曲率拐点 <公开 注释 = "平面曲率拐点: 原类 Geom2dLProp_CurAndInf2d (libTKG2d, 头文件 Geom2dLProp/Geom2dLProp_CurAndInf2d.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 计算曲线局部属性的算法. 这些属性包括: - 最大与最小曲率 - 拐点. CurAndInf2d 对象提供以下框架: - 定义待分析的曲线 - 实现计算算法 - 查询结果." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: Geom2dLProp_CurAndInf2d. 官方简介: 初始化该框架. 注: 计算局部属性的曲线使用以下函数之一来定义: Perform, PerformCurExt 或 PerformInf." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dLProp_CurAndInf2d.构造 ()
+    }
+
+    方法 执行 <公开 静态 注释 = "执行. 原方法: Perform. 官方简介: 对于曲线 C, 同时计算拐点以及最大与最小曲率." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 C <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dLProp_CurAndInf2d.Perform (@<对象>, @<C>)
+    }
+
+    方法 执行当前极值 <公开 静态 注释 = "执行当前极值. 原方法: PerformCurExt. 官方简介: 对曲线 C, 计算曲率的局部极值." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 C <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dLProp_CurAndInf2d.PerformCurExt (@<对象>, @<C>)
+    }
+
+    方法 执行无穷 <公开 静态 注释 = "执行无穷. 原方法: PerformInf. 官方简介: 对于曲线 C, 计算拐点. 计算后可使用以下函数: - IsDone 检查计算是否成功 - NbPoints 获取计算的特定点数量 - Parameter 获取曲线上每个特定点的参数 - Type 检查该点是曲线 C 的拐点还是曲率极值点. 警告 这些函数可用于分析一系列曲线, 但必须在每次计算之间清空结果表." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 C <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dLProp_CurAndInf2d.PerformInf (@<对象>, @<C>)
+    }
+
+    方法 是否完成 <公开 静态 类型 = 逻辑型 注释 = "是否完成. 原方法: IsDone. 官方简介: 若找到解则为 True." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dLProp_CurAndInf2d.IsDone (@<对象>)
+    }
+
+}
+
+类 平面曲线局部属性工具 <公开 注释 = "平面曲线局部属性工具: 原类 Geom2dLProp_Curve2dTool (libTKG2d, 头文件 Geom2dLProp/Geom2dLProp_Curve2dTool.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." @禁止创建对象 = 真>
+{
+
+    方法 取值 <公开 静态 注释 = "取值. 原方法: Value. 官方简介: 计算曲线 <C> 上参数为 <U> 的点 <P>." @嵌入式方法 = "">
+    参数 C <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dLProp_Curve2dTool.Value (@<C>, @<U>, @<输出P>)
+    }
+
+    方法 取一阶导 <公开 静态 注释 = "取一阶导. 原方法: D1. 官方简介: 计算曲线 <C> 上参数为 <U> 的点 <P> 及一阶导数 <V1>." @嵌入式方法 = "">
+    参数 C <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    参数 输出V1 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dLProp_Curve2dTool.D1 (@<C>, @<U>, @<输出P>, @<输出V1>)
+    }
+
+    方法 取二阶导 <公开 静态 注释 = "取二阶导. 原方法: D2. 官方简介: 计算曲线 <C> 上参数为 <U> 的点 <P>, 一阶导数 <V1> 和二阶导数 <V2>." @嵌入式方法 = "">
+    参数 C <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    参数 输出V1 <类型 = 长整数>
+    参数 输出V2 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dLProp_Curve2dTool.D2 (@<C>, @<U>, @<输出P>, @<输出V1>, @<输出V2>)
+    }
+
+    方法 取三阶导 <公开 静态 注释 = "取三阶导. 原方法: D3. 官方简介: 计算曲线 <C> 上参数为 <U> 的点 <P>, 一阶导数 <V1>, 二阶导数 <V2> 和三阶导数 <V3>." @嵌入式方法 = "">
+    参数 C <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    参数 输出V1 <类型 = 长整数>
+    参数 输出V2 <类型 = 长整数>
+    参数 输出V3 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dLProp_Curve2dTool.D3 (@<C>, @<U>, @<输出P>, @<输出V1>, @<输出V2>, @<输出V3>)
+    }
+
+    方法 连续性 <公开 静态 类型 = 整数 注释 = "连续性. 原方法: Continuity. 官方简介: 返回曲线 <C> 的连续阶. 返回 1 : 仅一阶导数可计算 返回 2 : 仅一阶和二阶导数可计算. 返回 3 : 一阶, 二阶和三阶均可计算." @嵌入式方法 = "">
+    参数 C <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dLProp_Curve2dTool.Continuity (@<C>)
+    }
+
+    方法 首个参数 <公开 静态 类型 = 小数 注释 = "首个参数. 原方法: FirstParameter. 官方简介: 返回曲线的第一参数边界." @嵌入式方法 = "">
+    参数 C <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dLProp_Curve2dTool.FirstParameter (@<C>)
+    }
+
+    方法 末个参数 <公开 静态 类型 = 小数 注释 = "末个参数. 原方法: LastParameter. 官方简介: 返回曲线的最后参数边界. FirstParameter 必须小于 LastParameter." @嵌入式方法 = "">
+    参数 C <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dLProp_Curve2dTool.LastParameter (@<C>)
+    }
+
+}
+
+类 平面曲率极值函数 <公开 注释 = "平面曲率极值函数: 原类 Geom2dLProp_FuncCurExt (libTKG2d, 头文件 Geom2dLProp/Geom2dLProp_FuncCurExt.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 用于求二维曲率极值的函数." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: Geom2dLProp_FuncCurExt." @嵌入式方法 = "">
+    参数 C <类型 = 长整数>
+    参数 容差 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dLProp_FuncCurExt.构造 (@<C>, @<容差>)
+    }
+
+    方法 取值 <公开 静态 类型 = 逻辑型 注释 = "取值. 原方法: Value. 官方简介: 返回变量 <X> 的值." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 X <类型 = 小数>
+    参数 输出F <类型 = "小数 []">
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dLProp_FuncCurExt.Value (@<对象>, @<X>, @<输出F>)
+    }
+
+    方法 导数 <公开 静态 类型 = 逻辑型 注释 = "导数. 原方法: Derivative. 官方简介: 返回变量 <X> 的导数." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 X <类型 = 小数>
+    参数 输出D <类型 = "小数 []">
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dLProp_FuncCurExt.Derivative (@<对象>, @<X>, @<输出D>)
+    }
+
+    方法 求值 <公开 静态 类型 = 逻辑型 注释 = "求值. 原方法: Values. 官方简介: 返回函数的值以及变量 <X> 的导数." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 X <类型 = 小数>
+    参数 输出F <类型 = "小数 []">
+    参数 输出D <类型 = "小数 []">
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dLProp_FuncCurExt.Values (@<对象>, @<X>, @<输出F>, @<输出D>)
+    }
+
+    方法 是否最小KC <公开 静态 类型 = 逻辑型 注释 = "是否最小KC. 原方法: IsMinKC. 官方简介: 若 Param 对应曲率半径的负值则为 True." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 参数 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dLProp_FuncCurExt.IsMinKC (@<对象>, @<参数>)
+    }
+
+}
+
+类 平面曲率零点函数 <公开 注释 = "平面曲率零点函数: 原类 Geom2dLProp_FuncCurNul (libTKG2d, 头文件 Geom2dLProp/Geom2dLProp_FuncCurNul.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 用于求二维拐点的函数." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: Geom2dLProp_FuncCurNul." @嵌入式方法 = "">
+    参数 C <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dLProp_FuncCurNul.构造 (@<C>)
+    }
+
+    方法 取值 <公开 静态 类型 = 逻辑型 注释 = "取值. 原方法: Value. 官方简介: 返回变量 <X> 的值." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 X <类型 = 小数>
+    参数 输出F <类型 = "小数 []">
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dLProp_FuncCurNul.Value (@<对象>, @<X>, @<输出F>)
+    }
+
+    方法 导数 <公开 静态 类型 = 逻辑型 注释 = "导数. 原方法: Derivative. 官方简介: 返回变量 <X> 的导数" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 X <类型 = 小数>
+    参数 输出D <类型 = "小数 []">
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dLProp_FuncCurNul.Derivative (@<对象>, @<X>, @<输出D>)
+    }
+
+    方法 求值 <公开 静态 类型 = 逻辑型 注释 = "求值. 原方法: Values. 官方简介: 返回函数的值以及变量 <X> 的导数." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 X <类型 = 小数>
+    参数 输出F <类型 = "小数 []">
+    参数 输出D <类型 = "小数 []">
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dLProp_FuncCurNul.Values (@<对象>, @<X>, @<输出F>, @<输出D>)
+    }
+
+}
+
+类 平面曲率拐点计算器 <公开 注释 = "平面曲率拐点计算器: 原类 Geom2dLProp_NumericCurInf2d (libTKG2d, 头文件 Geom2dLProp/Geom2dLProp_NumericCurInf2d.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 计算二维有界曲线的局部曲率极值与拐点." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: Geom2dLProp_NumericCurInf2d." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dLProp_NumericCurInf2d.构造 ()
+    }
+
+    方法 是否完成 <公开 静态 类型 = 逻辑型 注释 = "是否完成. 原方法: IsDone. 官方简介: 若找到解则为 True." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2dLProp_NumericCurInf2d.IsDone (@<对象>)
+    }
+
+}
+
+类 平面轴定位 <公开 注释 = "平面轴定位: 原类 Geom2d_AxisPlacement (libTKG2d, 头文件 Geom2d/Geom2d_AxisPlacement.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 描述平面空间中的轴. 轴由以下定义: - 其原点, 也称轴的 \"位置点\", - 其单位向量, 称为轴的 \"方向\". 注意: Geom2d_AxisPlacement 轴提供与 gp_Ax2d 轴相同类型的 \"几何\" 服务, 但数据结构更复杂. Geom2d 包提供的几何对象用 gp_Ax2d 对象在数据结构中包含轴, 或定义对称轴或旋转轴. Geom2d_AxisPlacement 轴用于可被公共数据结构内多个对象共享的场合." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: Geom2d_AxisPlacement. 官方简介: 通过转换 gp_Ax2d 轴 A 构造轴." @嵌入式方法 = "">
+    参数 A <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_AxisPlacement.构造 (@<A>)
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: Geom2d_AxisPlacement. 官方简介: 由给定原点 P 与单位向量 V 构造轴." @嵌入式方法 = "">
+    参数 P <类型 = 长整数>
+    参数 V <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_AxisPlacement.构造_2 (@<P>, @<V>)
+    }
+
+    方法 反转 <公开 静态 注释 = "反转. 原方法: Reverse." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_AxisPlacement.Reverse (@<对象>)
+    }
+
+    方法 反转副本 <公开 静态 类型 = 长整数 注释 = "反转副本. 原方法: Reversed. 官方简介: 反转该轴的单位向量. 注意: - Reverse 把结果赋给该轴, 而 - Reversed 创建一个新对象." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_AxisPlacement.Reversed (@<对象>)
+    }
+
+    方法 设置轴 <公开 静态 注释 = "设置轴. 原方法: SetAxis. 官方简介: 修改轴定位的完整定义." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 A <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_AxisPlacement.SetAxis (@<对象>, @<A>)
+    }
+
+    方法 设置方向 <公开 静态 注释 = "设置方向. 原方法: SetDirection. 官方简介: 修改定位的 \"Direction\"." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 V <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_AxisPlacement.SetDirection (@<对象>, @<V>)
+    }
+
+    方法 设置位置 <公开 静态 注释 = "设置位置. 原方法: SetLocation. 官方简介: 修改轴定位的 \"Location\" 点(原点)." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 P <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_AxisPlacement.SetLocation (@<对象>, @<P>)
+    }
+
+    方法 角度 <公开 静态 类型 = 小数 注释 = "角度. 原方法: Angle. 官方简介: 计算两个轴定位的 \"Direction\" 之间以弧度表示的角度. 结果介于 -Pi 与 Pi 之间." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_AxisPlacement.Angle (@<对象>, @<另一个>)
+    }
+
+    方法 二维轴 <公开 静态 类型 = 长整数 注释 = "二维轴. 原方法: Ax2d. 官方简介: 把该轴转换为 gp_Ax2d 轴." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_AxisPlacement.Ax2d (@<对象>)
+    }
+
+    方法 方向 <公开 静态 类型 = 长整数 注释 = "方向. 原方法: Direction. 官方简介: 返回 <me> 的 \"Direction\". -C++: return const&" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_AxisPlacement.Direction (@<对象>)
+    }
+
+    方法 位置 <公开 静态 类型 = 长整数 注释 = "位置. 原方法: Location. 官方简介: 返回轴定位的 \"Location\" 点(原点). -C++: return const&" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_AxisPlacement.Location (@<对象>)
+    }
+
+    方法 变换 <公开 静态 注释 = "变换. 原方法: Transform. 官方简介: 对该轴施加变换 T." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 T <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_AxisPlacement.Transform (@<对象>, @<T>)
+    }
+
+    方法 复制 <公开 静态 类型 = 长整数 注释 = "复制. 原方法: Copy. 官方简介: 创建一个新对象, 它是该轴的副本." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_AxisPlacement.Copy (@<对象>)
+    }
+
+}
+
+类 平面B样条曲线 <公开 注释 = "平面B样条曲线: 原类 Geom2d_BSplineCurve (libTKG2d, 头文件 Geom2d/Geom2d_BSplineCurve.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 描述 BSpline 曲线. BSpline 曲线可以是: - 均匀或非均匀的, - 有理或非有理的, - 周期或非周期的. BSpline 曲线由以下定义: - 其次数; Geom2d_BSplineCurve 的次数限制为一个值(25), 该值由系统定义和控制. 该值由函数 MaxDegree 返回; - 其周期或非周期性质; - 极点表(也称为控制点), 若 BSpline 曲线是有理的, 还带其关联权重. 曲线的极点是用于使曲线变形的 \"控制点\". 如果曲线是非周期的, 第一个极点是曲线的起点, 最后一个极点是曲线的终点. 连接第一个极点与第二个极点的线段是曲线在起点处的切线, 连接最后一个极点与倒数第二个极点的线段是曲线在终点处的切线. 如果曲线是周期的, 这些几何性质不成立. 赋予权重几何意义较为困难, 但它们对于精确表示圆或椭圆弧很有用. 此外, 如果所有极点的权重都相等, 曲线具有多项式方程; 因此它是非有理曲线. - 节点表及其重数. 对于 Geom2d_BSplineCurve, 节点表是无重复的递增实数序列; 重数定义节点的重复次数. BSpline 曲线是分段多项式或有理曲线. 节点是两个片段之间连接点的参数. BSpline 曲线节点 Knot(i) 的重数 Mult(i) 与曲线在节点 Knot(i) 处的连续次数有关, 它等于 Degree - Mult(i), 其中 Degree 是 BSpline 曲线的次数. 如果节点规则分布(即两个连续节点之差为常数), 可以识别出三种特定且常用的节点分布情形: - \"均匀\", 如果所有重数都等于 1, - \"准均匀\", 如果除第一个和最后一个节点的重数为 Degree + 1 外, 所有重数都等于 1, 其中 Degree 是 BSpline 曲线的次数, - \"分段 Bezier\", 如果除第一个和最后一个节点的重数为 Degree + 1 外, 所有重数都等于 Degree, 其中 Degree 是 BSpline 曲线的次数. 此类曲线是 Bezier 曲线弧的拼接. 如果 BSpline 曲线不是周期的: - Poles 和 Weights 表的边界为 1 和 NbPoles, 其中 NbPoles 是 BSpline 曲线的极点数, - Knots 和 Multiplicities 表的边界为 1 和 NbKnots, 其中 NbKnots 是 BSpline 曲线的节点数. 如果 BSpline 曲线是周期的, 且有 k 个周期节点和 p 个周期极点, 则周期为: period = Knot(k + 1) - Knot(1) 且极点和节点表可视为无限表, 使得: - Knot(i+k) = Knot(i) + period - Pole(i+p) = Pole(i) 注意: 周期 BSpline 曲线的数据结构比非周期的更复杂. 警告: 在此类中, 我们认为若 Weight <= gp 包的 Resolution 则权重值为零. 对于两个参数值(或两个节点值) U1, U2, 我们认为若 Abs (U2 - U1) <= Epsilon (U1) 则 U1 = U2. 对于两个权重值 W1, W2, 我们认为若 Abs (W2 - W1) <= Epsilon (W1) 则 W1 = W2. 方法 Epsilon 定义在 Standard 包的类 Real 中." @禁止创建对象 = 真>
+{
+
+    方法 升阶 <公开 静态 注释 = "升阶. 原方法: IncreaseDegree. 官方简介: 把该 BSpline 曲线的次数增加到 Degree. 结果: 极点、权重与重数表被修改; 节点表不变. 若 Degree 小于或等于当前次数则不执行任何操作. 异常: 若 Degree 大于 Geom2d_BSplineCurve::MaxDegree() 则抛出 Standard_ConstructionError." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 阶次 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BSplineCurve.IncreaseDegree (@<对象>, @<阶次>)
+    }
+
+    方法 增加重数 <公开 静态 注释 = "增加重数. 原方法: IncreaseMultiplicity. 官方简介: 把节点 <Index> 的重数增加到 <M>." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    参数 M <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BSplineCurve.IncreaseMultiplicity (@<对象>, @<索引>, @<M>)
+    }
+
+    方法 增加重数_2 <公开 静态 注释 = "增加重数_2. 原方法: IncreaseMultiplicity. 官方简介: 把 [I1,I2] 内节点的重数增加到 <M>." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 I1 <类型 = 整数>
+    参数 I2 <类型 = 整数>
+    参数 M <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BSplineCurve.IncreaseMultiplicity_2 (@<对象>, @<I1>, @<I2>, @<M>)
+    }
+
+    方法 增量重数 <公开 静态 注释 = "增量重数. 原方法: IncrementMultiplicity. 官方简介: 把该 BSpline 曲线的节点表中索引 I1 至 I2 的节点的重数增加 M. 对于每个节点, 结果重数被限制为该曲线的次数. 若 M 为负, 则不做任何事. 因此, 该 BSpline 曲线的极点表与权重表被修改. 警告 禁止修改非周期曲线的第一或最后节点的重数. 小心, 因为 Geom2d 不对此提供保护. 异常: 若 I1 或 I2 在节点表边界之外则抛出 Standard_OutOfRange." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 I1 <类型 = 整数>
+    参数 I2 <类型 = 整数>
+    参数 M <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BSplineCurve.IncrementMultiplicity (@<对象>, @<I1>, @<I2>, @<M>)
+    }
+
+    方法 插入节点 <公开 静态 注释 = "插入节点. 原方法: InsertKnot. 官方简介: 在节点序列中插入一个节点值. 若 <U> 是已有节点则重数增加 <M>." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 M <类型 = 整数>
+    参数 参数化容差 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BSplineCurve.InsertKnot (@<对象>, @<U>, @<M>, @<参数化容差>)
+    }
+
+    方法 移除节点 <公开 静态 类型 = 逻辑型 注释 = "移除节点. 原方法: RemoveKnot. 官方简介: 把索引 Index 的节点的重数减小到 M. 若 M 等于 0, 则移除该节点. 在这种类型的修改中, 极点数组也被修改. 系统地使用两种不同的算法来计算曲线的新极点. 若对每个极点, 使用第一种算法计算的极点与使用第二种算法计算的同一极点之间的距离小于 Tolerance, 这确保曲线不被修改超过 Tolerance. 在这些条件下, 返回 true; 否则返回 false. 使用低公差防止曲线的修改. 使用高公差\"光顺\"曲线. 异常: 若 Index 在节点表边界之外则抛出 Standard_OutOfRange." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    参数 M <类型 = 整数>
+    参数 容差 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BSplineCurve.RemoveKnot (@<对象>, @<索引>, @<M>, @<容差>)
+    }
+
+    方法 插入极点之后 <公开 静态 注释 = "插入极点之后. 原方法: InsertPoleAfter. 官方简介: 在索引 Index 的极点之后插入新极点. 若曲线原为非有理曲线, 则可能变为有理曲线." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    参数 P <类型 = 长整数>
+    参数 权重 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BSplineCurve.InsertPoleAfter (@<对象>, @<索引>, @<P>, @<权重>)
+    }
+
+    方法 插入极点之前 <公开 静态 注释 = "插入极点之前. 原方法: InsertPoleBefore. 官方简介: 在索引 Index 的极点之前插入新极点. 若曲线原为非有理曲线, 则可能变为有理曲线." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    参数 P <类型 = 长整数>
+    参数 权重 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BSplineCurve.InsertPoleBefore (@<对象>, @<索引>, @<P>, @<权重>)
+    }
+
+    方法 移除极点 <公开 静态 注释 = "移除极点. 原方法: RemovePole. 官方简介: 删除索引 Index 的极点. 若曲线原为有理曲线, 则可能变为非有理曲线." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BSplineCurve.RemovePole (@<对象>, @<索引>)
+    }
+
+    方法 反转 <公开 静态 注释 = "反转. 原方法: Reverse. 官方简介: 反转该 BSpline 曲线的朝向. 结果 - 节点表与极点表被修改; - 初始曲线的起点变为反转曲线的终点; - 初始曲线的终点变为反转曲线的起点." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BSplineCurve.Reverse (@<对象>)
+    }
+
+    方法 反转参数 <公开 静态 类型 = 小数 注释 = "反转参数. 原方法: ReversedParameter. 官方简介: 对于该 BSpline 曲线上参数为 U 的点, 计算反转曲线上对应的参数. 返回值为: UFirst + ULast - U, 其中 UFirst 与 ULast 是该 BSpline 曲线首末参数的值." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BSplineCurve.ReversedParameter (@<对象>, @<U>)
+    }
+
+    方法 段 <公开 静态 注释 = "段. 原方法: Segment. 官方简介: 通过在 U1 与 U2 之间分段来修改该 BSpline 曲线. 这两个值都可以超出曲线范围, 但 U2 必须大于 U1. 该 BSpline 曲线的所有数据结构表被修改, 但位于 U1 与 U2 之间的节点被保留. 曲线的次数不被修改." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U1 <类型 = 小数>
+    参数 U2 <类型 = 小数>
+    参数 容差 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BSplineCurve.Segment (@<对象>, @<U1>, @<U2>, @<容差>)
+    }
+
+    方法 设置节点 <公开 静态 注释 = "设置节点. 原方法: SetKnot. 官方简介: 修改该 BSpline 曲线, 把值 K 赋给节点表中索引 Index 的节点. 这是一个相对局部的修改, 因为 K 必须满足: Knots(Index - 1) < K < Knots(Index + 1) 异常: 若以下情形则抛出 Standard_ConstructionError: - K 不满足: Knots(Index - 1) < K < Knots(Index + 1) - M 大于该 BSpline 曲线的次数, 或小于节点表中索引 Index 的节点的先前重数. 若 Index 在节点表边界之外则抛出 Standard_OutOfRange." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    参数 K <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BSplineCurve.SetKnot (@<对象>, @<索引>, @<K>)
+    }
+
+    方法 设置节点_2 <公开 静态 注释 = "设置节点_2. 原方法: SetKnot. 官方简介: 修改该 BSpline 曲线, 把值 K 赋给节点表中索引 Index 的节点. 这是一个相对局部的修改, 因为 K 必须满足: Knots(Index - 1) < K < Knots(Index + 1) 第二种语法还允许把节点的重数增加到 M(但不能用该函数减小节点的重数). 异常: 若以下情形则抛出 Standard_ConstructionError: - K 不满足: Knots(Index - 1) < K < Knots(Index + 1) - M 大于该 BSpline 曲线的次数, 或小于节点表中索引 Index 的节点的先前重数. 若 Index 在节点表边界之外则抛出 Standard_OutOfRange." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    参数 K <类型 = 小数>
+    参数 M <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BSplineCurve.SetKnot_2 (@<对象>, @<索引>, @<K>, @<M>)
+    }
+
+    方法 周期归一化 <公开 静态 注释 = "周期归一化. 原方法: PeriodicNormalization. 官方简介: 若该 BSpline 曲线是周期的, 则计算其归一化到 \"第一个\" 周期内的参数: 返回值位于范围 Param1 到 Param1 + Period 内, 其中: - Param1 是 \"first parameter\", 且 - Period 是该 BSpline 曲线的周期. 注意: 若该曲线不是周期的, 则不修改 U." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 输出U <类型 = "小数 []">
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BSplineCurve.PeriodicNormalization (@<对象>, @<输出U>)
+    }
+
+    方法 设置周期 <公开 静态 注释 = "设置周期. 原方法: SetPeriodic. 官方简介: 把该 BSpline 曲线变为周期曲线. 要成为周期的, 曲线必须首先是闭合的. 其次, 节点序列必须是周期的. 为此, 使用 FirstUKnotIndex 与 LastUKnotIndex 计算 I1 与 I2, 即该 BSpline 曲线的第一与最后参数对应的节点在节点数组中的索引. 因此周期为 Knot(I2) - Knot(I1). 于是, 节点表与极点表被修改. 异常: 若该 BSpline 曲线不闭合则抛出 Standard_ConstructionError." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BSplineCurve.SetPeriodic (@<对象>)
+    }
+
+    方法 设置原点 <公开 静态 注释 = "设置原点. 原方法: SetOrigin. 官方简介: 把节点表中索引 Index 的节点赋为该周期 BSpline 曲线的原点. 因此, 节点表与极点表被修改. 若该曲线不是周期的则抛出 Standard_NoSuchObject. 若 Index 超出节点表范围则抛出 Standard_DomainError." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BSplineCurve.SetOrigin (@<对象>, @<索引>)
+    }
+
+    方法 设置非周期 <公开 静态 注释 = "设置非周期. 原方法: SetNotPeriodic. 官方简介: 把该 BSpline 曲线变为非周期曲线. 若该曲线已是非周期的, 则不修改. 注意极点表与节点表被修改. 警告 若该曲线是周期的, 由于第一与最后节点的重数不被修改, 且不等于 Degree + 1, 其中 Degree 是该 BSpline 曲线的次数, 则曲线的起点与终点不是其第一与最后极点." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BSplineCurve.SetNotPeriodic (@<对象>)
+    }
+
+    方法 设置极点 <公开 静态 注释 = "设置极点. 原方法: SetPole. 官方简介: 通过把 P 赋给极点表中索引 Index 处的极点来修改该 BSpline 曲线. 若 Index 超出极点表范围则抛出 Standard_OutOfRange. 若 Weight 为负或零则抛出 Standard_ConstructionError." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    参数 P <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BSplineCurve.SetPole (@<对象>, @<索引>, @<P>)
+    }
+
+    方法 设置极点_2 <公开 静态 注释 = "设置极点_2. 原方法: SetPole. 官方简介: 修改该 BSpline 曲线, 把 P 赋给极点表中索引 Index 的极点. 第二种语法还允许修改被修改极点的权重, 使其成为 Weight. 在这种情况下, 若该 BSpline 曲线是非有理的, 则它可以变为有理的, 反之亦然. 异常: 若 Index 在极点表边界之外则抛出 Standard_OutOfRange. 若 Weight 为负或空则抛出 Standard_ConstructionError." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    参数 P <类型 = 长整数>
+    参数 权重 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BSplineCurve.SetPole_2 (@<对象>, @<索引>, @<P>, @<权重>)
+    }
+
+    方法 设置权重 <公开 静态 注释 = "设置权重. 原方法: SetWeight. 官方简介: 把权重 Weight 赋给极点表索引 Index 的极点. 若曲线原本非有理, 它可以变为有理. 若曲线原本有理, 它可以变为非有理. 异常: 若 Index 超出极点表的边界则抛出 Standard_OutOfRange. 若 Weight 为负或为零则抛出 Standard_ConstructionError." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    参数 权重 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BSplineCurve.SetWeight (@<对象>, @<索引>, @<权重>)
+    }
+
+    方法 移动点 <公开 静态 注释 = "移动点. 原方法: MovePoint. 官方简介: 把该 BSpline 曲线参数 U 的点移动到 P. Index1 与 Index2 是该 BSpline 曲线极点表中指定要移动的第一与最后极点的索引. FirstModifiedPole 与 LastModifiedPole 是实际被修改的第一与最后极点的索引. 在 Index1, Index2 与值 U 之间不兼容的情形: - 对该 BSpline 曲线不做任何修改, 且 - FirstModifiedPole 与 LastModifiedPole 返回为空. 异常: 若以下情形则抛出 Standard_OutOfRange: - Index1 大于或等于 Index2, 或 - Index1 或 Index2 小于 1 或大于该 BSpline 曲线的极点数." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 P <类型 = 长整数>
+    参数 索引1 <类型 = 整数>
+    参数 索引2 <类型 = 整数>
+    参数 输出首个已修改极点 <类型 = "整数 []">
+    参数 输出末个已修改极点 <类型 = "整数 []">
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BSplineCurve.MovePoint (@<对象>, @<U>, @<P>, @<索引1>, @<索引2>, @<输出首个已修改极点>, @<输出末个已修改极点>)
+    }
+
+    方法 移动点与切线 <公开 静态 注释 = "移动点与切线. 原方法: MovePointAndTangent. 官方简介: 把参数 U 的点移动到 P, 并使其在 U 处的切线变为 Tangent. StartingCondition = -1 表示第一个点可以移动 EndingCondition = -1 表示最后一个点可以移动 StartingCondition = 0 表示第一个点不能移动 EndingCondition = 0 表示最后一个点不能移动 StartingCondition = 1 表示第一个点与切线不能移动 EndingCondition = 1 表示最后一个点与切线不能移动 以此类推 ErrorStatus != 0 表示在该约束下没有足够的自由度来相应变形曲线" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 P <类型 = 长整数>
+    参数 切线 <类型 = 长整数>
+    参数 容差 <类型 = 小数>
+    参数 起始条件 <类型 = 整数>
+    参数 端点条件 <类型 = 整数>
+    参数 输出错误状态 <类型 = "整数 []">
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BSplineCurve.MovePointAndTangent (@<对象>, @<U>, @<P>, @<切线>, @<容差>, @<起始条件>, @<端点条件>, @<输出错误状态>)
+    }
+
+    方法 是否CN <公开 静态 类型 = 逻辑型 注释 = "是否CN. 原方法: IsCN. 官方简介: 若该 BSpline 曲线的连续性阶数至少为 N 则返回 true. BSpline 曲线至少为 GeomAbs_C0. 若 N 为负则抛出 Standard_RangeError 异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 N <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BSplineCurve.IsCN (@<对象>, @<N>)
+    }
+
+    方法 是否G1 <公开 静态 类型 = 逻辑型 注释 = "是否G1. 原方法: IsG1. 官方简介: 检查曲线在区间 [theTf, theTl] 内是否至少具有 G1 连续性. 若 IsCN(1) 或 C0 连续节点处 \"left\" 与 \"right\" 一阶导数之间的夹角小于 theAngTol 则返回 true. 仅检查区间 [theTf, theTl] 内的节点" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 起始参数 <类型 = 小数>
+    参数 终止参数 <类型 = 小数>
+    参数 角度容差 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BSplineCurve.IsG1 (@<对象>, @<起始参数>, @<终止参数>, @<角度容差>)
+    }
+
+    方法 是否闭合 <公开 静态 类型 = 逻辑型 注释 = "是否闭合. 原方法: IsClosed. 官方简介: 若曲线的第一个点与最后一个点之间的距离小于或等于 gp 包的 Resolution 则返回 true. 警告 : 第一个点和最后一个点可能不同于曲线的第一个极点和最后一个极点." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BSplineCurve.IsClosed (@<对象>)
+    }
+
+    方法 是否周期 <公开 静态 类型 = 逻辑型 注释 = "是否周期. 原方法: IsPeriodic. 官方简介: 若曲线是周期的则返回 True." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BSplineCurve.IsPeriodic (@<对象>)
+    }
+
+    方法 是否有理 <公开 静态 类型 = 逻辑型 注释 = "是否有理. 原方法: IsRational. 官方简介: 若权值不完全相同则返回 True. 公差判据为 Real 类的 Epsilon." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BSplineCurve.IsRational (@<对象>)
+    }
+
+    方法 连续性 <公开 静态 类型 = 整数 注释 = "连续性. 原方法: Continuity. 官方简介: 返回曲线的全局连续性: C0 : 仅几何连续, C1 : 沿曲线一阶导数连续, C2 : 沿曲线二阶导数连续, C3 : 沿曲线三阶导数连续, CN : 连续阶为无穷. 对于次数为 d 的 B 样条曲线, 若节点 Ui 的重数为 p, 则 B 样条曲线在 Ui 处仅 Cd-p 连续. 因此曲线的全局连续性不可能高于 Cd-p, 其中 p 是内部节点的最大重数. 在节点区间的内部, 曲线无穷次连续可微." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BSplineCurve.Continuity (@<对象>)
+    }
+
+    方法 阶次 <公开 静态 类型 = 整数 注释 = "阶次. 原方法: Degree. 官方简介: 返回该 BSpline 曲线的次数. 在该类中, 基归一化 B 样条函数的次数不能大于 \"MaxDegree\" 计算值和导数" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BSplineCurve.Degree (@<对象>)
+    }
+
+    方法 取点 <公开 静态 注释 = "取点. 原方法: D0." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BSplineCurve.D0 (@<对象>, @<U>, @<输出P>)
+    }
+
+    方法 取一阶导 <公开 静态 注释 = "取一阶导. 原方法: D1. 官方简介: 若曲线的连续性不是 C1 则抛出异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    参数 输出V1 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BSplineCurve.D1 (@<对象>, @<U>, @<输出P>, @<输出V1>)
+    }
+
+    方法 取二阶导 <公开 静态 注释 = "取二阶导. 原方法: D2. 官方简介: 若曲线的连续性不是 C2 则抛出异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    参数 输出V1 <类型 = 长整数>
+    参数 输出V2 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BSplineCurve.D2 (@<对象>, @<U>, @<输出P>, @<输出V1>, @<输出V2>)
+    }
+
+    方法 取三阶导 <公开 静态 注释 = "取三阶导. 原方法: D3. 官方简介: 对于该 BSpline 曲线, 计算 - 参数 U 的点 P, 或 - 点 P 以及以下一个或多个值: - V1, 一阶导数向量, - V2, 二阶导数向量, - V3, 三阶导数向量. 警告 在曲线连续性不满足要求的点上, 这些函数影响由参数值大于 U 定义的部分, 即曲线中位于奇异性 \"右侧\" 的部分. 若曲线的连续性不是 C3 则抛出 UndefinedDerivative." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    参数 输出V1 <类型 = 长整数>
+    参数 输出V2 <类型 = 长整数>
+    参数 输出V3 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BSplineCurve.D3 (@<对象>, @<U>, @<输出P>, @<输出V1>, @<输出V2>, @<输出V3>)
+    }
+
+    方法 取N阶导 <公开 静态 类型 = 长整数 注释 = "取N阶导. 原方法: DN. 官方简介: 对于该 BSpline 曲线的参数 U 的点, 计算对应于第 N 阶导数的向量. 警告 在曲线连续性不满足要求的点上, 该函数影响由大于 U 的参数值定义的部分, 即曲线中位于奇异性 \"右侧\" 的部分. 若曲线的连续性不是 CN 则抛出 UndefinedDerivative. 若 N < 1 则抛出 RangeError. 以下函数计算在节点 FromK1 与节点 ToK2 之间定义的 B-spline 曲线弧上参数 U 的点与该点处的导数. U 可以在边界 [Knot (FromK1), Knot (ToK2)] 之外, 但计算时我们仅使用这两个节点之间的曲线定义. 若整条曲线的连续阶不够高, 该方法对于计算局部导数很有用. 在参数域 Knot (FromK1), Knot (ToK2) 内, 求值与考虑整条曲线的定义时相同. 当然在此参数域之外求值是不同的." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 N <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BSplineCurve.DN (@<对象>, @<U>, @<N>)
+    }
+
+    方法 局部值 <公开 静态 类型 = 长整数 注释 = "局部值. 原方法: LocalValue. 官方简介: 若 FromK1 = ToK2 则抛出异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 起始K1 <类型 = 整数>
+    参数 终止K2 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BSplineCurve.LocalValue (@<对象>, @<U>, @<起始K1>, @<终止K2>)
+    }
+
+    方法 局部D0 <公开 静态 注释 = "局部D0. 原方法: LocalD0. 官方简介: 若 FromK1 = ToK2 则抛出异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 起始K1 <类型 = 整数>
+    参数 终止K2 <类型 = 整数>
+    参数 输出P <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BSplineCurve.LocalD0 (@<对象>, @<U>, @<起始K1>, @<终止K2>, @<输出P>)
+    }
+
+    方法 局部D1 <公开 静态 注释 = "局部D1. 原方法: LocalD1. 官方简介: 若曲线在节点 K1 与 K2 之间的局部连续性不是 C1 则抛出异常. 若 FromK1 = ToK2 则抛出异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 起始K1 <类型 = 整数>
+    参数 终止K2 <类型 = 整数>
+    参数 输出P <类型 = 长整数>
+    参数 输出V1 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BSplineCurve.LocalD1 (@<对象>, @<U>, @<起始K1>, @<终止K2>, @<输出P>, @<输出V1>)
+    }
+
+    方法 局部D2 <公开 静态 注释 = "局部D2. 原方法: LocalD2. 官方简介: 若曲线在节点 K1 与 K2 之间的局部连续性不是 C2 则抛出异常. 若 FromK1 = ToK2 则抛出异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 起始K1 <类型 = 整数>
+    参数 终止K2 <类型 = 整数>
+    参数 输出P <类型 = 长整数>
+    参数 输出V1 <类型 = 长整数>
+    参数 输出V2 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BSplineCurve.LocalD2 (@<对象>, @<U>, @<起始K1>, @<终止K2>, @<输出P>, @<输出V1>, @<输出V2>)
+    }
+
+    方法 局部D3 <公开 静态 注释 = "局部D3. 原方法: LocalD3. 官方简介: 若曲线在节点 K1 与 K2 之间的局部连续性不是 C3 则抛出异常. 若 FromK1 = ToK2 则抛出异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 起始K1 <类型 = 整数>
+    参数 终止K2 <类型 = 整数>
+    参数 输出P <类型 = 长整数>
+    参数 输出V1 <类型 = 长整数>
+    参数 输出V2 <类型 = 长整数>
+    参数 输出V3 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BSplineCurve.LocalD3 (@<对象>, @<U>, @<起始K1>, @<终止K2>, @<输出P>, @<输出V1>, @<输出V2>, @<输出V3>)
+    }
+
+    方法 局部DN <公开 静态 类型 = 长整数 注释 = "局部DN. 原方法: LocalDN. 官方简介: 若曲线在节点 K1 与 K2 之间的局部连续性不是 CN 则抛出异常. 若 FromK1 = ToK2 则抛出异常. 若 N < 1 则抛出异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 起始K1 <类型 = 整数>
+    参数 终止K2 <类型 = 整数>
+    参数 N <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BSplineCurve.LocalDN (@<对象>, @<U>, @<起始K1>, @<终止K2>, @<N>)
+    }
+
+    方法 端点 <公开 静态 类型 = 长整数 注释 = "端点. 原方法: EndPoint. 官方简介: 返回曲线的最后点. 警告 : 若最后一个节点的重数低于 Degree, 曲线的最后点不同于最后一个极点." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BSplineCurve.EndPoint (@<对象>)
+    }
+
+    方法 首个U节点索引 <公开 静态 类型 = 整数 注释 = "首个U节点索引. 原方法: FirstUKnotIndex. 官方简介: 对于 BSpline 曲线, 第一个参数(给出曲线起点)是一个节点值, 但若第一个节点索引的重数低于 Degree + 1, 则它不是曲线的第一个节点. 该方法计算与第一个参数对应的节点的索引." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BSplineCurve.FirstUKnotIndex (@<对象>)
+    }
+
+    方法 首个参数 <公开 静态 类型 = 小数 注释 = "首个参数. 原方法: FirstParameter. 官方简介: 计算曲线起点的参数值. 它是一个节点值." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BSplineCurve.FirstParameter (@<对象>)
+    }
+
+    方法 节点 <公开 静态 类型 = 小数 注释 = "节点. 原方法: Knot. 官方简介: 返回序号 Index 的节点. 当存在重数大于 1 的节点时, 节点不重复. 可使用方法 Multiplicity 获取该节点的重数. 若 Index < 1 或 Index > NbKnots 则抛出异常" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BSplineCurve.Knot (@<对象>, @<索引>)
+    }
+
+    方法 节点分布 <公开 静态 类型 = 整数 注释 = "节点分布. 原方法: KnotDistribution. 官方简介: 返回 NonUniform 或 Uniform 或 QuasiUniform 或 PiecewiseBezier. 若所有节点与前一个节点之差都是正常数, 则 BSpline 曲线可以是: - Uniform, 若所有节点的重数均为 1, - QuasiUniform, 若除第一个和最后一个节点的重数为 Degree + 1 外, 其余节点的重数均为 1, - PiecewiseBezier, 若第一个和最后一个节点的重数为 Degree + 1, 且内部节点的重数为 Degree. 只有两个节点的分段 Bezier 就是 BezierCurve. 否则曲线是非均匀的. 公差判据是 Real 类的 Epsilon." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BSplineCurve.KnotDistribution (@<对象>)
+    }
+
+    方法 末个U节点索引 <公开 静态 类型 = 整数 注释 = "末个U节点索引. 原方法: LastUKnotIndex. 官方简介: 对于 BSpline 曲线, 最后参数(给出曲线的终点)是一个节点值, 但若最后一个节点索引的重数低于 Degree + 1, 则它不是曲线的最后一个节点. 该方法计算对应于最后参数的节点索引." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BSplineCurve.LastUKnotIndex (@<对象>)
+    }
+
+    方法 末个参数 <公开 静态 类型 = 小数 注释 = "末个参数. 原方法: LastParameter. 官方简介: 计算曲线端点的参数值. 它是一个节点值." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BSplineCurve.LastParameter (@<对象>)
+    }
+
+    方法 定位U <公开 静态 注释 = "定位U. 原方法: LocateU. 官方简介: 在节点序列中定位参数值 U. 若 \"WithKnotRepetition\" 为 True, 则考虑带重节点值重复的节点表示, 否则考虑不带重节点值重复的节点表示. Knots (I1) <= U <= Knots (I2) . 若 I1 = I2, U 是一个节点值(使用公差判据 ParametricTolerance). . 若 I1 < 1 => U < Knots (1) - Abs(ParametricTolerance) . 若 I2 > NbKnots => U > Knots (NbKnots) + Abs(ParametricTolerance)" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 参数化容差 <类型 = 小数>
+    参数 输出I1 <类型 = "整数 []">
+    参数 输出I2 <类型 = "整数 []">
+    参数 带节点重复 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BSplineCurve.LocateU (@<对象>, @<U>, @<参数化容差>, @<输出I1>, @<输出I2>, @<带节点重复>)
+    }
+
+    方法 重数 <公开 静态 类型 = 整数 注释 = "重数. 原方法: Multiplicity. 官方简介: 返回序号 Index 的节点的重数. 若 Index < 1 或 Index > NbKnots 则抛出异常" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BSplineCurve.Multiplicity (@<对象>, @<索引>)
+    }
+
+    方法 节点数 <公开 静态 类型 = 整数 注释 = "节点数. 原方法: NbKnots. 官方简介: 返回节点数量. 该方法返回的节点数不重复计算重节点." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BSplineCurve.NbKnots (@<对象>)
+    }
+
+    方法 极点数 <公开 静态 类型 = 整数 注释 = "极点数. 原方法: NbPoles. 官方简介: 返回极点数" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BSplineCurve.NbPoles (@<对象>)
+    }
+
+    方法 极点 <公开 静态 类型 = 长整数 注释 = "极点. 原方法: Pole. 官方简介: 返回序号 Index 的极点. 若 Index < 1 或 Index > NbPoles 则抛出异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BSplineCurve.Pole (@<对象>, @<索引>)
+    }
+
+    方法 起点 <公开 静态 类型 = 长整数 注释 = "起点. 原方法: StartPoint. 官方简介: 返回曲线的起点. 警告 : 若第一个节点的重数低于 Degree, 该点不同于曲线的第一个极点." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BSplineCurve.StartPoint (@<对象>)
+    }
+
+    方法 权重 <公开 静态 类型 = 小数 注释 = "权重. 原方法: Weight. 官方简介: 返回序号 Index 的极点的权值. 若 Index < 1 或 Index > NbPoles 则抛出异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BSplineCurve.Weight (@<对象>, @<索引>)
+    }
+
+    方法 变换 <公开 静态 注释 = "变换. 原方法: Transform. 官方简介: 对该 BSpline 曲线施加变换 T." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 T <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BSplineCurve.Transform (@<对象>, @<T>)
+    }
+
+    方法 最大阶次 <公开 静态 类型 = 整数 注释 = "最大阶次. 原方法: MaxDegree. 官方简介: 返回该包中归一化 B 样条基函数的最大次数." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BSplineCurve.MaxDegree ()
+    }
+
+    方法 分辨率 <公开 静态 注释 = "分辨率. 原方法: Resolution. 官方简介: 对于该 BSpline 曲线, 计算给定 3D 公差 Tolerance3D (相对于平面内尺寸)下的参数公差 UTolerance. 若 f(t) 是该 BSpline 曲线的方程, 则 UTolerance 确保: | t1 - t0| < Utolerance ===> |f(t1) - f(t0)| < ToleranceUV" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 UV容差 <类型 = 小数>
+    参数 输出U容差 <类型 = "小数 []">
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BSplineCurve.Resolution (@<对象>, @<UV容差>, @<输出U容差>)
+    }
+
+    方法 复制 <公开 静态 类型 = 长整数 注释 = "复制. 原方法: Copy. 官方简介: 创建一个新对象, 它是该 BSpline 曲线的副本." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BSplineCurve.Copy (@<对象>)
+    }
+
+    方法 转储JSON <公开 静态 类型 = 文本型 注释 = "转储JSON. 原方法: DumpJson. 官方简介: 把自身内容转储到流中" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 深度 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BSplineCurve.DumpJson (@<对象>, @<深度>)
+    }
+
+}
+
+类 平面贝塞尔曲线 <公开 注释 = "平面贝塞尔曲线: 原类 Geom2d_BezierCurve (libTKG2d, 头文件 Geom2d/Geom2d_BezierCurve.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 描述有理或非有理 Bezier 曲线 - 非有理 Bezier 曲线由极点表(也称为控制点)定义, - 有理 Bezier 曲线由带可变权重的极点表定义. 这些数据由两个平行数组操作: - 极点表, 即 gp_Pnt2d 点数组, 以及 - 权重表, 即实数数组. 这些数组的边界为 1 和曲线的 \"极点数\". 曲线的极点是用于使曲线变形的 \"控制点\". 第一个极点是曲线的起点, 最后一个极点是曲线的终点. 连接第一个极点与第二个极点的线段是曲线在起点处的切线, 连接最后一个极点与倒数第二个极点的线段是曲线在终点处的切线. 赋予权重几何意义较为困难, 但它们对于精确表示圆或椭圆弧很有用. 此外, 如果所有极点的权重都相等, 曲线是多项式的; 因此它是非有理曲线. 非有理曲线是一种特殊且常用的情形. 权重仅在有理曲线情形下定义和使用. Bezier 曲线的次数等于极点数减 1. 它必须大于或等于 1. 然而, Geom2d_BezierCurve 曲线的次数限制为一个值(25), 该值由系统定义和控制. 该值由函数 MaxDegree 返回. Bezier 曲线的参数范围为 [ 0, 1 ]. 如果 Bezier 曲线的第一个和最后一个控制点相同, 则曲线是封闭的. 例如, 要创建带四个控制点的封闭 Bezier 曲线, 你必须给出控制点集 P1, P2, P3 和 P1. Bezier 曲线的连续性为无穷. 不可能构造带负权重的 Bezier 曲线. 我们认为若权重值小于或等于 gp::Resolution() 则它为零. 我们还认为若 |W2 - W1| <= gp::Resolution(), 则两个权重值 W1 和 W2 相等. 警告: - 考虑封闭 Bezier 曲线在连接点处的连续性时, 请记住此类曲线永远不是周期的. 这意味着即使曲线封闭, 参数 u = 0 的导数也没有理由与参数 u = 1 的导数相同. - Bezier 曲线的长度可以为空." @禁止创建对象 = 真>
+{
+
+    方法 增加 <公开 静态 注释 = "增加. 原方法: Increase. 官方简介: 提高 Bezier 曲线的次数. Degree 是 <me> 的新次数. 若 Degree 大于 MaxDegree, 或小于 2, 或小于 <me> 的初始次数, 则抛出 ConstructionError." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 阶次 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BezierCurve.Increase (@<对象>, @<阶次>)
+    }
+
+    方法 插入极点之后 <公开 静态 注释 = "插入极点之后. 原方法: InsertPoleAfter. 官方简介: 在极点集中序号为 Index 的极点之后插入带权值的极点. 若曲线原本是非有理的, 且所有权值并非完全相同, 则它可能变为有理的. 若 Index 不在范围 [0, NbPoles] 内则引发异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    参数 P <类型 = 长整数>
+    参数 权重 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BezierCurve.InsertPoleAfter (@<对象>, @<索引>, @<P>, @<权重>)
+    }
+
+    方法 插入极点之前 <公开 静态 注释 = "插入极点之前. 原方法: InsertPoleBefore. 官方简介: 在极点集中序号为 Index 的极点之后插入带权值的极点. 若曲线原本是非有理的, 且所有权值并非完全相同, 则它可能变为有理的. 若 Index 不在范围 [1, NbPoles+1] 内则引发异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    参数 P <类型 = 长整数>
+    参数 权重 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BezierCurve.InsertPoleBefore (@<对象>, @<索引>, @<P>, @<权重>)
+    }
+
+    方法 移除极点 <公开 静态 注释 = "移除极点. 原方法: RemovePole. 官方简介: 删除索引 Index 的极点. 若曲线原为有理曲线, 则可能变为非有理曲线. 若 Index 不在范围 [1, NbPoles] 内则抛出异常" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BezierCurve.RemovePole (@<对象>, @<索引>)
+    }
+
+    方法 反转 <公开 静态 注释 = "反转. 原方法: Reverse. 官方简介: 反转 <me> 的参数化方向 Value (NewU) = Value (1 - OldU)" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BezierCurve.Reverse (@<对象>)
+    }
+
+    方法 反转参数 <公开 静态 类型 = 小数 注释 = "反转参数. 原方法: ReversedParameter. 官方简介: 返回 <me> 上参数为 U 的点在反向曲线上的参数." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BezierCurve.ReversedParameter (@<对象>, @<U>)
+    }
+
+    方法 段 <公开 静态 注释 = "段. 原方法: Segment. 官方简介: 在 U1 与 U2 之间分段曲线, U1 与 U2 可以超出曲线范围. 曲线从 U1 朝 U2 定向. 控制点被修改, 第一个点与最后一个点不相同, 但参数化范围是 [0, 1], 否则它就不是 Bezier 曲线. 警告 : 即使 <me> 未闭合, 分段后它也可能变为闭合, 例如 U1 或 U2 超出曲线 <me> 的范围, 或曲线成环. 分段后曲线的长度可能为零." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U1 <类型 = 小数>
+    参数 U2 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BezierCurve.Segment (@<对象>, @<U1>, @<U2>)
+    }
+
+    方法 设置极点 <公开 静态 注释 = "设置极点. 原方法: SetPole. 官方简介: 用 P 替换序号 index 处的极点. 若曲线 <me> 是有理的, 则序号 Index 处的权值不被修改. 若 Index 不在范围 [1, NbPoles] 内则抛出异常" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    参数 P <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BezierCurve.SetPole (@<对象>, @<索引>, @<P>)
+    }
+
+    方法 设置极点_2 <公开 静态 注释 = "设置极点_2. 原方法: SetPole. 官方简介: 替换序号 Index 处的极点与权值. 若曲线 <me> 原本是非有理的, 且所有权值不完全相同, 则它可能变为有理的. 若曲线原本是有理的, 且所有权值完全相同, 则它可能变为非有理的. 若 Index 不在范围 [1, NbPoles] 内则抛出异常 若 Weight <= gp 包的 Resolution 则抛出异常" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    参数 P <类型 = 长整数>
+    参数 权重 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BezierCurve.SetPole_2 (@<对象>, @<索引>, @<P>, @<权重>)
+    }
+
+    方法 设置权重 <公开 静态 注释 = "设置权重. 原方法: SetWeight. 官方简介: 修改序号 Index 处极点的权值. 若曲线 <me> 原本是非有理的, 且所有权值不完全相同, 则它可能变为有理的. 若曲线原本是有理的, 且所有权值完全相同, 则它可能变为非有理的. 若 Index 不在范围 [1, NbPoles] 内则抛出异常 若 Weight <= gp 包的 Resolution 则抛出异常" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    参数 权重 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BezierCurve.SetWeight (@<对象>, @<索引>, @<权重>)
+    }
+
+    方法 是否闭合 <公开 静态 类型 = 逻辑型 注释 = "是否闭合. 原方法: IsClosed. 官方简介: 若曲线的第一个点与最后一个点之间的距离小于或等于 gp 包的 Resolution 则返回 True." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BezierCurve.IsClosed (@<对象>)
+    }
+
+    方法 是否CN <公开 静态 类型 = 逻辑型 注释 = "是否CN. 原方法: IsCN. 官方简介: 曲线的连续性, 返回 True." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 N <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BezierCurve.IsCN (@<对象>, @<N>)
+    }
+
+    方法 是否周期 <公开 静态 类型 = 逻辑型 注释 = "是否周期. 原方法: IsPeriodic. 官方简介: 返回 False. 在此包中 BezierCurve 不能为周期曲线" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BezierCurve.IsPeriodic (@<对象>)
+    }
+
+    方法 是否有理 <公开 静态 类型 = 逻辑型 注释 = "是否有理. 原方法: IsRational. 官方简介: 若所有权值完全相同则返回 false. 公差判据为 gp 包的 Resolution." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BezierCurve.IsRational (@<对象>)
+    }
+
+    方法 连续性 <公开 静态 类型 = 整数 注释 = "连续性. 原方法: Continuity. 官方简介: 返回 GeomAbs_CN, 即任何 Bezier 曲线的连续性." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BezierCurve.Continuity (@<对象>)
+    }
+
+    方法 阶次 <公开 静态 类型 = 整数 注释 = "阶次. 原方法: Degree. 官方简介: 返回该曲线的多项式次数. 它是极点数减一. 在本包中, Bezier 曲线的次数不能大于 \"MaxDegree\"." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BezierCurve.Degree (@<对象>)
+    }
+
+    方法 取点 <公开 静态 注释 = "取点. 原方法: D0." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BezierCurve.D0 (@<对象>, @<U>, @<输出P>)
+    }
+
+    方法 取一阶导 <公开 静态 注释 = "取一阶导. 原方法: D1." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    参数 输出V1 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BezierCurve.D1 (@<对象>, @<U>, @<输出P>, @<输出V1>)
+    }
+
+    方法 取二阶导 <公开 静态 注释 = "取二阶导. 原方法: D2." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    参数 输出V1 <类型 = 长整数>
+    参数 输出V2 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BezierCurve.D2 (@<对象>, @<U>, @<输出P>, @<输出V1>, @<输出V2>)
+    }
+
+    方法 取三阶导 <公开 静态 注释 = "取三阶导. 原方法: D3." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    参数 输出V1 <类型 = 长整数>
+    参数 输出V2 <类型 = 长整数>
+    参数 输出V3 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BezierCurve.D3 (@<对象>, @<U>, @<输出P>, @<输出V1>, @<输出V2>, @<输出V3>)
+    }
+
+    方法 取N阶导 <公开 静态 类型 = 长整数 注释 = "取N阶导. 原方法: DN. 官方简介: 对于该 Bezier 曲线, 计算 - 参数 U 的点 P, 或 - 点 P 以及以下一个或多个值: - V1, 一阶导数向量, - V2, 二阶导数向量, - V3, 三阶导数向量. 注意: 参数 U 可以位于曲线边界之外. 若 N < 1 则抛出 RangeError." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 N <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BezierCurve.DN (@<对象>, @<U>, @<N>)
+    }
+
+    方法 端点 <公开 静态 类型 = 长整数 注释 = "端点. 原方法: EndPoint. 官方简介: 返回该 Bezier 曲线的终点或起点." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BezierCurve.EndPoint (@<对象>)
+    }
+
+    方法 首个参数 <公开 静态 类型 = 小数 注释 = "首个参数. 原方法: FirstParameter. 官方简介: 返回该 Bezier 曲线的第一参数的值. 该值为 0.0, 它给出该 Bezier 曲线的起点." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BezierCurve.FirstParameter (@<对象>)
+    }
+
+    方法 末个参数 <公开 静态 类型 = 小数 注释 = "末个参数. 原方法: LastParameter. 官方简介: 返回该 Bezier 曲线的最后参数值. 该值为 1.0, 给出该 Bezier 曲线的终点." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BezierCurve.LastParameter (@<对象>)
+    }
+
+    方法 极点数 <公开 静态 类型 = 整数 注释 = "极点数. 原方法: NbPoles. 官方简介: 返回该 Bezier 曲线的极点数量." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BezierCurve.NbPoles (@<对象>)
+    }
+
+    方法 极点 <公开 静态 类型 = 长整数 注释 = "极点. 原方法: Pole. 官方简介: 返回序号 Index 的极点. 若 Index 不在范围 [1, NbPoles] 内则抛出异常" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BezierCurve.Pole (@<对象>, @<索引>)
+    }
+
+    方法 起点 <公开 静态 类型 = 长整数 注释 = "起点. 原方法: StartPoint. 官方简介: 返回 Value (U=1), 它是曲线的第一个控制点." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BezierCurve.StartPoint (@<对象>)
+    }
+
+    方法 权重 <公开 静态 类型 = 小数 注释 = "权重. 原方法: Weight. 官方简介: 返回序号 Index 的权值. 若 Index 不在范围 [1, NbPoles] 内则抛出异常" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BezierCurve.Weight (@<对象>, @<索引>)
+    }
+
+    方法 变换 <公开 静态 注释 = "变换. 原方法: Transform. 官方简介: 对该 Bezier 曲线施加变换 T." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 T <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BezierCurve.Transform (@<对象>, @<T>)
+    }
+
+    方法 最大阶次 <公开 静态 类型 = 整数 注释 = "最大阶次. 原方法: MaxDegree. 官方简介: 返回 BezierCurve 的多项式次数最大值. 该值为 25." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BezierCurve.MaxDegree ()
+    }
+
+    方法 分辨率 <公开 静态 注释 = "分辨率. 原方法: Resolution. 官方简介: 对于该 Bezier 曲线, 计算给定 3D 公差 Tolerance3D (相对于平面内尺寸)下的参数公差 UTolerance. 若 f(t) 是该 Bezier 曲线的方程, 则 UTolerance 确保 | t1 - t0| < Utolerance ===> |f(t1) - f(t0)| < ToleranceUV" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 UV容差 <类型 = 小数>
+    参数 输出U容差 <类型 = "小数 []">
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BezierCurve.Resolution (@<对象>, @<UV容差>, @<输出U容差>)
+    }
+
+    方法 复制 <公开 静态 类型 = 长整数 注释 = "复制. 原方法: Copy. 官方简介: 创建一个新对象, 它是该 Bezier 曲线的副本." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BezierCurve.Copy (@<对象>)
+    }
+
+    方法 转储JSON <公开 静态 类型 = 文本型 注释 = "转储JSON. 原方法: DumpJson. 官方简介: 把自身内容转储到流中" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 深度 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BezierCurve.DumpJson (@<对象>, @<深度>)
+    }
+
+}
+
+类 平面有界曲线基类 <公开 注释 = "平面有界曲线基类: 原类 Geom2d_BoundedCurve (libTKG2d, 头文件 Geom2d/Geom2d_BoundedCurve.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 抽象类 BoundedCurve 描述平面空间中有界曲线的公共行为. 有界曲线由两个有限参数值限定, 分别称为 \"首参数\" 与 \"末参数\". \"首参数\" 给出有界曲线的 \"起点\", \"末参数\" 给出有界曲线的 \"终点\". 有界曲线的长度有限. Geom2d 包提供三个具体的有界曲线类: - 复杂曲线的两种常用数学表述: - Geom2d_BezierCurve, - Geom2d_BSplineCurve, 以及 - Geom2d_TrimmedCurve 用于裁剪曲线, 即只取基础曲线在两个参数值间限定的部分." @禁止创建对象 = 真>
+{
+
+    方法 转储JSON <公开 静态 类型 = 文本型 注释 = "转储JSON. 原方法: DumpJson. 官方简介: 把自身内容转储到流中" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 深度 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_BoundedCurve.DumpJson (@<对象>, @<深度>)
+    }
+
+}
+
+类 平面笛卡尔点 <公开 注释 = "平面笛卡尔点: 原类 Geom2d_CartesianPoint (libTKG2d, 头文件 Geom2d/Geom2d_CartesianPoint.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 描述平面空间中的点. Geom2d_CartesianPoint 由 gp_Pnt2d 点定义, 具有 X 和 Y 两个笛卡尔坐标." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: Geom2d_CartesianPoint. 官方简介: 返回 P 的持久副本." @嵌入式方法 = "">
+    参数 P <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_CartesianPoint.构造 (@<P>)
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: Geom2d_CartesianPoint." @嵌入式方法 = "">
+    参数 X <类型 = 小数>
+    参数 Y <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_CartesianPoint.构造_2 (@<X>, @<Y>)
+    }
+
+    方法 设置坐标 <公开 静态 注释 = "设置坐标. 原方法: SetCoord. 官方简介: 把 <me> 设置为 X, Y 坐标." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 X <类型 = 小数>
+    参数 Y <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_CartesianPoint.SetCoord (@<对象>, @<X>, @<Y>)
+    }
+
+    方法 二维设置点 <公开 静态 注释 = "二维设置点. 原方法: SetPnt2d. 官方简介: 把 <me> 设置为 P.X(), P.Y() 坐标." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 P <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_CartesianPoint.SetPnt2d (@<对象>, @<P>)
+    }
+
+    方法 设置X <公开 静态 注释 = "设置X. 原方法: SetX. 官方简介: 修改自身的 X 坐标." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 X <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_CartesianPoint.SetX (@<对象>, @<X>)
+    }
+
+    方法 设置Y <公开 静态 注释 = "设置Y. 原方法: SetY. 官方简介: 修改自身的 Y 坐标." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 Y <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_CartesianPoint.SetY (@<对象>, @<Y>)
+    }
+
+    方法 坐标 <公开 静态 注释 = "坐标. 原方法: Coord. 官方简介: 返回 <me> 的坐标." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 输出X <类型 = "小数 []">
+    参数 输出Y <类型 = "小数 []">
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_CartesianPoint.Coord (@<对象>, @<输出X>, @<输出Y>)
+    }
+
+    方法 二维点 <公开 静态 类型 = 长整数 注释 = "二维点. 原方法: Pnt2d. 官方简介: 返回与 <me> 具有相同坐标的 gp 非持久笛卡尔点. -C++: return const&" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_CartesianPoint.Pnt2d (@<对象>)
+    }
+
+    方法 X <公开 静态 类型 = 小数 注释 = "X. 原方法: X. 官方简介: 返回 <me> 的 X 坐标." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_CartesianPoint.X (@<对象>)
+    }
+
+    方法 Y <公开 静态 类型 = 小数 注释 = "Y. 原方法: Y. 官方简介: 返回 <me> 的 Y 坐标." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_CartesianPoint.Y (@<对象>)
+    }
+
+    方法 变换 <公开 静态 注释 = "变换. 原方法: Transform." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 T <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_CartesianPoint.Transform (@<对象>, @<T>)
+    }
+
+    方法 复制 <公开 静态 类型 = 长整数 注释 = "复制. 原方法: Copy." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_CartesianPoint.Copy (@<对象>)
+    }
+
+    方法 转储JSON <公开 静态 类型 = 文本型 注释 = "转储JSON. 原方法: DumpJson. 官方简介: 把自身内容转储到流中" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 深度 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_CartesianPoint.DumpJson (@<对象>, @<深度>)
+    }
+
+}
+
+类 平面圆 <公开 注释 = "平面圆: 原类 Geom2d_Circle (libTKG2d, 头文件 Geom2d/Geom2d_Circle.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 描述平面(二维空间)中的圆. 圆由其半径定义, 并且如同任何二次曲线一样, 借助坐标系(gp_Ax22d 对象)定位在平面中, 其中原点是圆心. 该坐标系是圆的局部坐标系. 局部坐标系的朝向(正向或反向)赋予圆显式朝向, 决定参数沿圆增大的方向. Geom2d_Circle 圆按角度参数化: P(U) = O + R*Cos(U)*XDir + R*Sin(U)*YDir 其中: - P 是参数 U 的点, - O, XDir 和 YDir 分别是其局部坐标系的原点, \"X 方向\" 和 \"Y 方向\", - R 是圆的半径. 因此局部坐标系的 \"X 轴\" 定义圆参数的原点. 参数是与该 \"X 方向\" 的夹角. 圆是封闭且周期的曲线. 周期为 2.*Pi, 参数范围为 [ 0,2.*Pi [. 另见 GCE2d_MakeCircle, 它提供更复杂的圆构造函数; gp_Ax22d 和 gp_Circ2d, 它们是等效的非参数化数据结构." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: Geom2d_Circle. 官方简介: 通过转换 gp_Circ2d 圆 C 构造圆." @嵌入式方法 = "">
+    参数 C <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Circle.构造 (@<C>)
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: Geom2d_Circle. 官方简介: 构造半径为 Radius 的圆, 其中心为轴 A 的原点; A 是该圆局部坐标系的 \"X Axis\"; 若 Sense 为 true(默认值)则该坐标系为正向, 若 Sense 为 false 则为反向. 注意: 可以创建 Radius 等于 0.0 的圆. 异常: 若 Radius 为负则抛出 Standard_ConstructionError." @嵌入式方法 = "">
+    参数 A <类型 = 长整数>
+    参数 半径 <类型 = 小数>
+    参数 方向 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Circle.构造_2 (@<A>, @<半径>, @<方向>)
+    }
+
+    方法 创建_3 <公开 静态 类型 = 长整数 注释 = "创建_3. 原构造器: Geom2d_Circle. 官方简介: 构造半径为 Radius 的圆, 其中坐标系 A 定位该圆并在平面中定义其朝向, 使得: - 圆的中心是 A 的原点, - A 的朝向(正向或反向)给出圆的朝向." @嵌入式方法 = "">
+    参数 A <类型 = 长整数>
+    参数 半径 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Circle.构造_3 (@<A>, @<半径>)
+    }
+
+    方法 二维设置圆 <公开 静态 注释 = "二维设置圆. 原方法: SetCirc2d. 官方简介: 把 gp_Circ2d 圆 C 转换为该圆." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 C <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Circle.SetCirc2d (@<对象>, @<C>)
+    }
+
+    方法 设置半径 <公开 静态 注释 = "设置半径. 原方法: SetRadius." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 R <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Circle.SetRadius (@<对象>, @<R>)
+    }
+
+    方法 二维圆 <公开 静态 类型 = 长整数 注释 = "二维圆. 原方法: Circ2d. 官方简介: 返回与 <me> 具有相同几何属性的 gp 非持久圆." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Circle.Circ2d (@<对象>)
+    }
+
+    方法 半径 <公开 静态 类型 = 小数 注释 = "半径. 原方法: Radius. 官方简介: 返回此圆的半径." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Circle.Radius (@<对象>)
+    }
+
+    方法 反转参数 <公开 静态 类型 = 小数 注释 = "反转参数. 原方法: ReversedParameter. 官方简介: 计算该圆上参数 U 的点在反向圆上的参数. 对于圆, 返回值为: 2.*Pi - U." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Circle.ReversedParameter (@<对象>, @<U>)
+    }
+
+    方法 离心率 <公开 静态 类型 = 小数 注释 = "离心率. 原方法: Eccentricity. 官方简介: 返回 0., 即任何圆的离心率." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Circle.Eccentricity (@<对象>)
+    }
+
+    方法 首个参数 <公开 静态 类型 = 小数 注释 = "首个参数. 原方法: FirstParameter. 官方简介: 返回 0.0" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Circle.FirstParameter (@<对象>)
+    }
+
+    方法 末个参数 <公开 静态 类型 = 小数 注释 = "末个参数. 原方法: LastParameter. 官方简介: 返回 2*PI." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Circle.LastParameter (@<对象>)
+    }
+
+    方法 是否闭合 <公开 静态 类型 = 逻辑型 注释 = "是否闭合. 原方法: IsClosed. 官方简介: 返回 True." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Circle.IsClosed (@<对象>)
+    }
+
+    方法 是否周期 <公开 静态 类型 = 逻辑型 注释 = "是否周期. 原方法: IsPeriodic. 官方简介: 返回 True. 圆的周期是 2.*Pi." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Circle.IsPeriodic (@<对象>)
+    }
+
+    方法 取点 <公开 静态 注释 = "取点. 原方法: D0. 官方简介: 在 P 中返回参数 U 的点. P = C + R * Cos (U) * XDir + R * Sin (U) * YDir, 其中 C 是圆的圆心, XDir 与 YDir 是圆局部坐标系的 XDirection 与 YDirection." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Circle.D0 (@<对象>, @<U>, @<输出P>)
+    }
+
+    方法 取一阶导 <公开 静态 注释 = "取一阶导. 原方法: D1. 官方简介: 返回参数 U 的点 P 和一阶导数 V1." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    参数 输出V1 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Circle.D1 (@<对象>, @<U>, @<输出P>, @<输出V1>)
+    }
+
+    方法 取二阶导 <公开 静态 注释 = "取二阶导. 原方法: D2. 官方简介: 返回参数 U 的点 P, 以及一阶导数 V1 和二阶导数 V2." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    参数 输出V1 <类型 = 长整数>
+    参数 输出V2 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Circle.D2 (@<对象>, @<U>, @<输出P>, @<输出V1>, @<输出V2>)
+    }
+
+    方法 取三阶导 <公开 静态 注释 = "取三阶导. 原方法: D3. 官方简介: 返回参数 u 的点 P 以及一阶、二阶和三阶导数 V1 V2 与 V3." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    参数 输出V1 <类型 = 长整数>
+    参数 输出V2 <类型 = 长整数>
+    参数 输出V3 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Circle.D3 (@<对象>, @<U>, @<输出P>, @<输出V1>, @<输出V2>, @<输出V3>)
+    }
+
+    方法 取N阶导 <公开 静态 类型 = 长整数 注释 = "取N阶导. 原方法: DN. 官方简介: 对于该圆上参数为 U 的点, 计算对应第 N 阶导数的向量. 异常: 若 N 小于 1 则抛出 Standard_RangeError." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 N <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Circle.DN (@<对象>, @<U>, @<N>)
+    }
+
+    方法 变换 <公开 静态 注释 = "变换. 原方法: Transform. 官方简介: 对该圆施加变换 T." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 T <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Circle.Transform (@<对象>, @<T>)
+    }
+
+    方法 复制 <公开 静态 类型 = 长整数 注释 = "复制. 原方法: Copy. 官方简介: 创建一个新对象, 它是该圆的副本." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Circle.Copy (@<对象>)
+    }
+
+    方法 转储JSON <公开 静态 类型 = 文本型 注释 = "转储JSON. 原方法: DumpJson. 官方简介: 把自身内容转储到流中" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 深度 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Circle.DumpJson (@<对象>, @<深度>)
+    }
+
+}
+
+类 平面圆锥曲线基类 <公开 注释 = "平面圆锥曲线基类: 原类 Geom2d_Conic (libTKG2d, 头文件 Geom2d/Geom2d_Conic.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 抽象类 Conic 描述平面空间中圆锥曲线的公共行为, 特别是其一般特征. Geom2d 包提供四个具体的圆锥曲线类: Geom2d_Circle, Geom2d_Ellipse, Geom2d_Hyperbola 与 Geom2d_Parabola. 圆锥曲线用坐标系(gp_Ax22d 对象)在平面中定位, 其原点为圆锥曲线的中心(抛物线则为顶点). 该坐标系是圆锥曲线的局部坐标系. 它赋予圆锥曲线显式朝向, 决定参数沿曲线增加的方向. 局部坐标系的 \"X 轴\" 还定义圆锥曲线参数的原点." @禁止创建对象 = 真>
+{
+
+    方法 设置轴 <公开 静态 注释 = "设置轴. 原方法: SetAxis. 官方简介: 修改该圆锥曲线, 通过把 theA 赋为其轴来部分重定义其局部坐标系" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 A <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Conic.SetAxis (@<对象>, @<A>)
+    }
+
+    方法 设置X轴 <公开 静态 注释 = "设置X轴. 原方法: SetXAxis. 官方简介: 把轴 theA 的原点与单位向量赋给该圆锥曲线局部坐标系的原点与 X Direction. 该圆锥曲线局部坐标系的另一个单位向量被重新计算为垂直于 theA, 且不改变局部坐标系的朝向(右手系或左手系)." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 AX <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Conic.SetXAxis (@<对象>, @<AX>)
+    }
+
+    方法 设置Y轴 <公开 静态 注释 = "设置Y轴. 原方法: SetYAxis. 官方简介: 把轴 theA 的原点与单位向量赋给该圆锥曲线局部坐标系的原点与 Y Direction. 该圆锥曲线局部坐标系的另一个单位向量被重新计算为垂直于 theA, 且不改变局部坐标系的朝向(右手系或左手系)." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 AY <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Conic.SetYAxis (@<对象>, @<AY>)
+    }
+
+    方法 设置位置 <公开 静态 注释 = "设置位置. 原方法: SetLocation. 官方简介: 修改该圆锥曲线, 通过把 theP 赋为其原点来部分重定义其局部坐标系." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 P <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Conic.SetLocation (@<对象>, @<P>)
+    }
+
+    方法 X轴 <公开 静态 类型 = 长整数 注释 = "X轴. 原方法: XAxis. 官方简介: 返回二次曲线的 \"XAxis\". 该轴定义二次曲线参数化的原点. 该轴与 \"Yaxis\" 定义二次曲线的局部坐标系. -C++: return const&" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Conic.XAxis (@<对象>)
+    }
+
+    方法 Y轴 <公开 静态 类型 = 长整数 注释 = "Y轴. 原方法: YAxis. 官方简介: 返回圆锥曲线的 \"YAxis\". \"YAxis\" 垂直于 \"Xaxis\"." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Conic.YAxis (@<对象>)
+    }
+
+    方法 位置 <公开 静态 类型 = 长整数 注释 = "位置. 原方法: Location. 官方简介: 返回二次曲线的位置点. 对于圆, 椭圆和双曲线, 它是二次曲线的中心. 对于抛物线, 它是抛物线的顶点." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Conic.Location (@<对象>)
+    }
+
+    方法 位置_2 <公开 静态 类型 = 长整数 注释 = "位置_2. 原方法: Position. 官方简介: 返回圆锥曲线的局部坐标系." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Conic.Position (@<对象>)
+    }
+
+    方法 反转 <公开 静态 注释 = "反转. 原方法: Reverse. 官方简介: 反转 <me> 的参数化方向. 圆锥曲线的局部坐标系会被修改." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Conic.Reverse (@<对象>)
+    }
+
+    方法 连续性 <公开 静态 类型 = 整数 注释 = "连续性. 原方法: Continuity. 官方简介: 返回 GeomAbs_CN, 即任何圆锥曲线的全局连续性." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Conic.Continuity (@<对象>)
+    }
+
+    方法 是否CN <公开 静态 类型 = 逻辑型 注释 = "是否CN. 原方法: IsCN. 官方简介: 返回 True, 圆锥曲线的连续性阶为无穷." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 N <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Conic.IsCN (@<对象>, @<N>)
+    }
+
+    方法 转储JSON <公开 静态 类型 = 文本型 注释 = "转储JSON. 原方法: DumpJson. 官方简介: 把自身内容转储到流中" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 深度 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Conic.DumpJson (@<对象>, @<深度>)
+    }
+
+}
+
+类 平面曲线基类 <公开 注释 = "平面曲线基类: 原类 Geom2d_Curve (libTKG2d, 头文件 Geom2d/Geom2d_Curve.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 抽象类 Curve 描述二维空间中曲线的公共行为. Geom2d 包提供众多具体派生曲线类, 包括直线, 圆, 二次曲线, Bezier 或 BSpline 曲线等. 这些曲线的主要特征在于它们是参数化的. Geom2d_Curve 类展示: - 如何使用曲线的参数方程计算参数为 u 的点, 以及该点处的切向量和 2, 3,..., N 阶导数向量; - 如何获取曲线的一般信息(例如连续阶, 封闭特性, 周期性, 参数域边界); - 当对曲线施加几何变换或反转曲线朝向时参数如何变化. 所有曲线必须具有几何连续性: 曲线至少为 \"C0\". 通常, 这一属性在构造时或编辑曲线时检查. 若非如此, 文档会明确说明. 警告: Geom2d 包不阻止构造长度为零或自相交的曲线." @禁止创建对象 = 真>
+{
+
+    方法 变换参数 <公开 静态 类型 = 小数 注释 = "变换参数. 原方法: TransformedParameter. 官方简介: 计算该曲线上参数 U 处的点在经 T 变换后的曲线上的参数. 注: 该函数通常返回 U, 但可被重定义(例如对于直线)." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 T <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Curve.TransformedParameter (@<对象>, @<U>, @<T>)
+    }
+
+    方法 参数化变换 <公开 静态 类型 = 小数 注释 = "参数化变换. 原方法: ParametricTransformation. 官方简介: 返回施加变换 T 时计算该曲线参数变换所需的系数. 该系数是曲线上某点的参数与经 T 变换后的新曲线上变换点的参数之比. 注意: 该函数一般返回 1., 但它可以被重定义(例如在直线上)." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 T <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Curve.ParametricTransformation (@<对象>, @<T>)
+    }
+
+    方法 反转副本 <公开 静态 类型 = 长整数 注释 = "反转副本. 原方法: Reversed. 官方简介: 创建反转副本. 改变该曲线的朝向. 第一与最后参数不改变, 但曲线的参数方向被反转. 若曲线有界: - 初始曲线的起点变为反转曲线的终点, 且 - 初始曲线的终点变为反转曲线的起点. - Reversed 创建新曲线." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Curve.Reversed (@<对象>)
+    }
+
+    方法 周期 <公开 静态 类型 = 小数 注释 = "周期. 原方法: Period. 官方简介: 返回该曲线的周期. 若曲线非周期则抛出异常" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Curve.Period (@<对象>)
+    }
+
+    方法 取值 <公开 静态 类型 = 长整数 注释 = "取值. 原方法: Value. 官方简介: 计算 <me> 上参数 U 处的点. 若曲线是周期的, 则返回的点是 P(U), 其中 U = Ustart + (U - Uend), Ustart 与 Uend 是该曲线的参数边界." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Curve.Value (@<对象>, @<U>)
+    }
+
+    方法 转储JSON <公开 静态 类型 = 文本型 注释 = "转储JSON. 原方法: DumpJson. 官方简介: 把自身内容转储到流中" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 深度 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Curve.DumpJson (@<对象>, @<深度>)
+    }
+
+}
+
+类 平面方向基类 <公开 注释 = "平面方向基类: 原类 Geom2d_Direction (libTKG2d, 头文件 Geom2d/Geom2d_Direction.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: Direction 类描述一个永不为空的向量, 即单位向量." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: Geom2d_Direction. 官方简介: 用两个笛卡尔坐标创建单位向量." @嵌入式方法 = "">
+    参数 X <类型 = 小数>
+    参数 Y <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Direction.构造 (@<X>, @<Y>)
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: Geom2d_Direction. 官方简介: 创建 <me> 的持久副本." @嵌入式方法 = "">
+    参数 V <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Direction.构造_2 (@<V>)
+    }
+
+    方法 设置坐标 <公开 静态 注释 = "设置坐标. 原方法: SetCoord. 官方简介: 把坐标 X 和 Y 赋给该单位向量, 然后归一化它. 若 Sqrt(X*X + Y*Y) 小于或等于 gp::Resolution() 则抛出 Standard_ConstructionError 异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 X <类型 = 小数>
+    参数 Y <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Direction.SetCoord (@<对象>, @<X>, @<Y>)
+    }
+
+    方法 二维设置方向 <公开 静态 注释 = "二维设置方向. 原方法: SetDir2d. 官方简介: 把 gp_Dir2d 单位向量 V 转换为该单位向量." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 V <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Direction.SetDir2d (@<对象>, @<V>)
+    }
+
+    方法 设置X <公开 静态 注释 = "设置X. 原方法: SetX. 官方简介: 为单位向量的 X 坐标赋值, 然后对其归一化. 异常: 若所赋的值使向量的模变得小于或等于 gp::Resolution() 则抛出 Standard_ConstructionError." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 X <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Direction.SetX (@<对象>, @<X>)
+    }
+
+    方法 设置Y <公开 静态 注释 = "设置Y. 原方法: SetY. 官方简介: 为单位向量的 Y 坐标赋值, 然后对其归一化. 异常: 若所赋的值使向量的模变得小于或等于 gp::Resolution() 则抛出 Standard_ConstructionError." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 Y <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Direction.SetY (@<对象>, @<Y>)
+    }
+
+    方法 二维方向 <公开 静态 类型 = 长整数 注释 = "二维方向. 原方法: Dir2d. 官方简介: 把该单位向量转换为 gp_Dir2d 单位向量." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Direction.Dir2d (@<对象>)
+    }
+
+    方法 模长 <公开 静态 类型 = 小数 注释 = "模长. 原方法: Magnitude. 官方简介: 返回 1.0" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Direction.Magnitude (@<对象>)
+    }
+
+    方法 平方模长 <公开 静态 类型 = 小数 注释 = "平方模长. 原方法: SquareMagnitude. 官方简介: 返回 1.0" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Direction.SquareMagnitude (@<对象>)
+    }
+
+    方法 叉积副本 <公开 静态 类型 = 小数 注释 = "叉积副本. 原方法: Crossed. 官方简介: 计算 <me> 与 <Other> 之间的叉积." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Direction.Crossed (@<对象>, @<另一个>)
+    }
+
+    方法 变换 <公开 静态 注释 = "变换. 原方法: Transform. 官方简介: 对该单位向量施加变换 T, 然后归一化." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 T <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Direction.Transform (@<对象>, @<T>)
+    }
+
+    方法 复制 <公开 静态 类型 = 长整数 注释 = "复制. 原方法: Copy. 官方简介: 创建一个新对象, 它是该单位向量的副本." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Direction.Copy (@<对象>)
+    }
+
+}
+
+类 平面椭圆 <公开 注释 = "平面椭圆: 原类 Geom2d_Ellipse (libTKG2d, 头文件 Geom2d/Geom2d_Ellipse.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 描述平面(二维空间)中的椭圆. 椭圆由其长半轴和短半轴定义, 并且如同任何二次曲线一样, 借助坐标系(gp_Ax22d 对象)定位在平面中, 其中: - 原点是椭圆中心, - \"X 方向\" 定义长轴, 且 - \"Y 方向\" 定义短轴. 该坐标系是椭圆的局部坐标系. 局部坐标系的朝向(正向或反向)赋予椭圆显式朝向, 决定参数沿椭圆增大的方向. Geom2d_Ellipse 椭圆按角度参数化: P(U) = O + MajorRad*Cos(U)*XDir + MinorRad*Sin(U)*YDir 其中: - P 是参数 U 的点, - O, XDir 和 YDir 分别是其局部坐标系的原点, \"X 方向\" 和 \"Y 方向\", - MajorRad 和 MinorRad 是椭圆的长半轴和短半轴. 因此局部坐标系的 \"X 轴\" 定义椭圆参数的原点. 椭圆是封闭且周期的曲线. 周期为 2.*Pi, 参数范围为 [ 0,2.*Pi [. 另见 GCE2d_MakeEllipse, 它提供更复杂的椭圆构造函数; gp_Ax22d; gp_Elips2d, 它们是等效的非参数化数据结构." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: Geom2d_Ellipse. 官方简介: 通过转换 gp_Elips2d 椭圆 E 创建椭圆." @嵌入式方法 = "">
+    参数 E <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Ellipse.构造 (@<E>)
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: Geom2d_Ellipse. 官方简介: 创建由其长半径与短半径 MajorRadius 与 MinorRadius 定义的椭圆, 并在平面中由其长轴 MajorAxis 定位; 椭圆的中心是 MajorAxis 的原点, MajorAxis 的单位向量是椭圆局部坐标系的 \"X 方向\"; 若 Sense 为 true(默认值)则该坐标系是正向的, 若 Sense 为 false 则是反向的. 警告: 不禁止创建 MajorRadius = MinorRadius 的椭圆. 异常: 若以下情形则抛出 Standard_ConstructionError: - MajorRadius 小于 MinorRadius, 或 - MinorRadius 小于 0." @嵌入式方法 = "">
+    参数 长轴 <类型 = 长整数>
+    参数 长半径 <类型 = 小数>
+    参数 短半径 <类型 = 小数>
+    参数 方向 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Ellipse.构造_2 (@<长轴>, @<长半径>, @<短半径>, @<方向>)
+    }
+
+    方法 创建_3 <公开 静态 类型 = 长整数 注释 = "创建_3. 原构造器: Geom2d_Ellipse. 官方简介: 创建由其长半径与短半径 MajorRadius 与 MinorRadius 定义的椭圆, 其中坐标系统 Axis 定位该椭圆并定义其在平面中的朝向, 使得: - 椭圆的中心是 Axis 的原点, - Axis 的 \"X Direction\" 定义椭圆的长轴, - Axis 的 \"Y Direction\" 定义椭圆的短轴, - Axis 的朝向(正向或反向)给出椭圆的朝向. 警告: 不禁止创建 MajorRadius = MinorRadius 的椭圆. 异常: 若以下情形则抛出 Standard_ConstructionError: - MajorRadius 小于 MinorRadius, 或 - MinorRadius 小于 0." @嵌入式方法 = "">
+    参数 轴 <类型 = 长整数>
+    参数 长半径 <类型 = 小数>
+    参数 短半径 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Ellipse.构造_3 (@<轴>, @<长半径>, @<短半径>)
+    }
+
+    方法 二维设置椭圆 <公开 静态 注释 = "二维设置椭圆. 原方法: SetElips2d. 官方简介: 把 gp_Elips2d 椭圆 E 转换为该椭圆." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 E <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Ellipse.SetElips2d (@<对象>, @<E>)
+    }
+
+    方法 设置长半径 <公开 静态 注释 = "设置长半径. 原方法: SetMajorRadius. 官方简介: 为椭圆的长半轴赋值. 在以下情况抛出 Standard_ConstructionError: - 该椭圆的长半轴变得小于短半轴, 或 - MinorRadius 小于 0." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 长半径 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Ellipse.SetMajorRadius (@<对象>, @<长半径>)
+    }
+
+    方法 设置短半径 <公开 静态 注释 = "设置短半径. 原方法: SetMinorRadius. 官方简介: 为椭圆的短半轴赋值. 在以下情况抛出 Standard_ConstructionError: - 该椭圆的长半轴变得小于短半轴, 或 - MinorRadius 小于 0." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 短半径 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Ellipse.SetMinorRadius (@<对象>, @<短半径>)
+    }
+
+    方法 二维椭圆 <公开 静态 类型 = 长整数 注释 = "二维椭圆. 原方法: Elips2d. 官方简介: 把该椭圆转换为 gp_Elips2d 椭圆." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Ellipse.Elips2d (@<对象>)
+    }
+
+    方法 反转参数 <公开 静态 类型 = 小数 注释 = "反转参数. 原方法: ReversedParameter. 官方简介: 计算该椭圆上参数 U 的点在反向椭圆上的参数. 对于椭圆, 返回值为: 2.*Pi - U." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Ellipse.ReversedParameter (@<对象>, @<U>)
+    }
+
+    方法 准线1 <公开 静态 类型 = 长整数 注释 = "准线1. 原方法: Directrix1. 官方简介: 计算该椭圆的准线. 该准线是在局部平面(Z = 0)内垂直于椭圆 XAxis 的直线, 与椭圆中心的距离为 d = MajorRadius / e, 其中 e 是椭圆的离心率. 该直线平行于 \"YAxis\". directrix1 与 \"XAxis\" 的交点是 directrix1 的 \"位置点\". 该点位于 \"XAxis\" 的正侧. 若 Eccentricity = 0.0 则抛出 ConstructionError. (椭圆退化为圆)" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Ellipse.Directrix1 (@<对象>)
+    }
+
+    方法 准线2 <公开 静态 类型 = 长整数 注释 = "准线2. 原方法: Directrix2. 官方简介: 该直线由 \"Directrix1\" 关于椭圆的 \"YAxis\" 的对称变换得到. 若 Eccentricity = 0.0 则抛出 ConstructionError. (椭圆退化为圆)." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Ellipse.Directrix2 (@<对象>)
+    }
+
+    方法 离心率 <公开 静态 类型 = 小数 注释 = "离心率. 原方法: Eccentricity. 官方简介: 返回椭圆在 0.0 与 1.0 之间的离心率. 若 f 是椭圆中心与 Focus1 之间的距离, 则离心率 e = f / MajorRadius. 若 MajorRadius = 0 则返回 0" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Ellipse.Eccentricity (@<对象>)
+    }
+
+    方法 焦距 <公开 静态 类型 = 小数 注释 = "焦距. 原方法: Focal. 官方简介: 计算焦距. 焦距是椭圆的中心与一个焦点之间的距离." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Ellipse.Focal (@<对象>)
+    }
+
+    方法 焦点1 <公开 静态 类型 = 长整数 注释 = "焦点1. 原方法: Focus1. 官方简介: 返回椭圆的第一焦点. 该焦点位于椭圆 \"X 轴\" 的正侧." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Ellipse.Focus1 (@<对象>)
+    }
+
+    方法 焦点2 <公开 静态 类型 = 长整数 注释 = "焦点2. 原方法: Focus2. 官方简介: 返回椭圆的第二焦点. 该焦点位于椭圆 \"X 轴\" 的负侧." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Ellipse.Focus2 (@<对象>)
+    }
+
+    方法 长半径 <公开 静态 类型 = 小数 注释 = "长半径. 原方法: MajorRadius. 官方简介: 返回该椭圆的长半轴." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Ellipse.MajorRadius (@<对象>)
+    }
+
+    方法 短半径 <公开 静态 类型 = 小数 注释 = "短半径. 原方法: MinorRadius. 官方简介: 返回该椭圆的短半轴." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Ellipse.MinorRadius (@<对象>)
+    }
+
+    方法 参数 <公开 静态 类型 = 小数 注释 = "参数. 原方法: Parameter. 官方简介: 计算该椭圆的参数. 该值由公式 p = (1 - e * e) * MajorRadius 给出, 其中 e 是椭圆的离心率. 若 MajorRadius = 0 则返回 0" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Ellipse.Parameter (@<对象>)
+    }
+
+    方法 首个参数 <公开 静态 类型 = 小数 注释 = "首个参数. 原方法: FirstParameter. 官方简介: 返回该椭圆第一个参数的值. 该值为 0.0, 给出该椭圆的起点. 椭圆的起点与终点重合." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Ellipse.FirstParameter (@<对象>)
+    }
+
+    方法 末个参数 <公开 静态 类型 = 小数 注释 = "末个参数. 原方法: LastParameter. 官方简介: 返回该椭圆最后一个参数的值. 该值为 2.*Pi, 给出该椭圆的终点. 椭圆的起点与终点重合." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Ellipse.LastParameter (@<对象>)
+    }
+
+    方法 是否闭合 <公开 静态 类型 = 逻辑型 注释 = "是否闭合. 原方法: IsClosed. 官方简介: 返回 True." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Ellipse.IsClosed (@<对象>)
+    }
+
+    方法 是否周期 <公开 静态 类型 = 逻辑型 注释 = "是否周期. 原方法: IsPeriodic. 官方简介: 返回 True." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Ellipse.IsPeriodic (@<对象>)
+    }
+
+    方法 取点 <公开 静态 注释 = "取点. 原方法: D0. 官方简介: 在 P 中返回参数 U 的点. P = C + MajorRadius * Cos (U) * XDir + MinorRadius * Sin (U) * YDir, 其中 C 是椭圆的中心, XDir 是 \"XAxis\" 的方向, \"YDir\" 是椭圆的 \"YAxis\"." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Ellipse.D0 (@<对象>, @<U>, @<输出P>)
+    }
+
+    方法 取一阶导 <公开 静态 注释 = "取一阶导. 原方法: D1." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    参数 输出V1 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Ellipse.D1 (@<对象>, @<U>, @<输出P>, @<输出V1>)
+    }
+
+    方法 取二阶导 <公开 静态 注释 = "取二阶导. 原方法: D2. 官方简介: 返回参数 U 的点 P. 向量 V1 与 V2 是该点处的一阶与二阶导数." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    参数 输出V1 <类型 = 长整数>
+    参数 输出V2 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Ellipse.D2 (@<对象>, @<U>, @<输出P>, @<输出V1>, @<输出V2>)
+    }
+
+    方法 取三阶导 <公开 静态 注释 = "取三阶导. 原方法: D3. 官方简介: 返回参数 U 的点 P, 以及一阶, 二阶和三阶导数 V1, V2 和 V3." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    参数 输出V1 <类型 = 长整数>
+    参数 输出V2 <类型 = 长整数>
+    参数 输出V3 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Ellipse.D3 (@<对象>, @<U>, @<输出P>, @<输出V1>, @<输出V2>, @<输出V3>)
+    }
+
+    方法 取N阶导 <公开 静态 类型 = 长整数 注释 = "取N阶导. 原方法: DN. 官方简介: 对于该椭圆的参数 U 点, 计算 N 阶导数对应的向量. 若 N 小于 1 则抛出 Standard_RangeError." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 N <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Ellipse.DN (@<对象>, @<U>, @<N>)
+    }
+
+    方法 变换 <公开 静态 注释 = "变换. 原方法: Transform. 官方简介: 对该椭圆施加变换 T." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 T <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Ellipse.Transform (@<对象>, @<T>)
+    }
+
+    方法 复制 <公开 静态 类型 = 长整数 注释 = "复制. 原方法: Copy. 官方简介: 创建一个新对象, 它是该椭圆的副本." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Ellipse.Copy (@<对象>)
+    }
+
+    方法 转储JSON <公开 静态 类型 = 文本型 注释 = "转储JSON. 原方法: DumpJson. 官方简介: 把自身内容转储到流中" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 深度 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Ellipse.DumpJson (@<对象>, @<深度>)
+    }
+
+}
+
+类 平面几何基类 <公开 注释 = "平面几何基类: 原类 Geom2d_Geometry (libTKG2d, 头文件 Geom2d/Geom2d_Geometry.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 二维空间中的通用抽象类 Geometry 描述所有几何实体的公共行为." @禁止创建对象 = 真>
+{
+
+    方法 镜像 <公开 静态 注释 = "镜像. 原方法: Mirror. 官方简介: 对几何对象执行关于点 P 的对称变换, P 是对称中心." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 P <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Geometry.Mirror (@<对象>, @<P>)
+    }
+
+    方法 镜像_2 <公开 静态 注释 = "镜像_2. 原方法: Mirror. 官方简介: 对几何体执行关于定位轴的对称变换, 该定位轴是对称轴." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 A <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Geometry.Mirror_2 (@<对象>, @<A>)
+    }
+
+    方法 旋转 <公开 静态 注释 = "旋转. 原方法: Rotate. 官方简介: 旋转几何. P 是旋转中心. Ang 是以弧度表示的旋转角度值." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 P <类型 = 长整数>
+    参数 角度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Geometry.Rotate (@<对象>, @<P>, @<角度>)
+    }
+
+    方法 缩放 <公开 静态 注释 = "缩放. 原方法: Scale. 官方简介: 缩放几何体. S 是缩放值." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 P <类型 = 长整数>
+    参数 S <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Geometry.Scale (@<对象>, @<P>, @<S>)
+    }
+
+    方法 平移 <公开 静态 注释 = "平移. 原方法: Translate. 官方简介: 平移几何体. V 是平移向量." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 V <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Geometry.Translate (@<对象>, @<V>)
+    }
+
+    方法 平移_2 <公开 静态 注释 = "平移_2. 原方法: Translate. 官方简介: 把几何体从点 P1 平移到点 P2." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 P1 <类型 = 长整数>
+    参数 P2 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Geometry.Translate_2 (@<对象>, @<P1>, @<P2>)
+    }
+
+    方法 镜像副本 <公开 静态 类型 = 长整数 注释 = "镜像副本. 原方法: Mirrored." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 P <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Geometry.Mirrored (@<对象>, @<P>)
+    }
+
+    方法 镜像副本_2 <公开 静态 类型 = 长整数 注释 = "镜像副本_2. 原方法: Mirrored." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 A <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Geometry.Mirrored_2 (@<对象>, @<A>)
+    }
+
+    方法 旋转副本 <公开 静态 类型 = 长整数 注释 = "旋转副本. 原方法: Rotated." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 P <类型 = 长整数>
+    参数 角度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Geometry.Rotated (@<对象>, @<P>, @<角度>)
+    }
+
+    方法 缩放副本 <公开 静态 类型 = 长整数 注释 = "缩放副本. 原方法: Scaled." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 P <类型 = 长整数>
+    参数 S <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Geometry.Scaled (@<对象>, @<P>, @<S>)
+    }
+
+    方法 变换副本 <公开 静态 类型 = 长整数 注释 = "变换副本. 原方法: Transformed." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 T <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Geometry.Transformed (@<对象>, @<T>)
+    }
+
+    方法 平移副本 <公开 静态 类型 = 长整数 注释 = "平移副本. 原方法: Translated." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 V <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Geometry.Translated (@<对象>, @<V>)
+    }
+
+    方法 平移副本_2 <公开 静态 类型 = 长整数 注释 = "平移副本_2. 原方法: Translated." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 P1 <类型 = 长整数>
+    参数 P2 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Geometry.Translated_2 (@<对象>, @<P1>, @<P2>)
+    }
+
+    方法 转储JSON <公开 静态 类型 = 文本型 注释 = "转储JSON. 原方法: DumpJson. 官方简介: 把自身内容转储到流中" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 深度 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Geometry.DumpJson (@<对象>, @<深度>)
+    }
+
+}
+
+类 平面双曲线 <公开 注释 = "平面双曲线: 原类 Geom2d_Hyperbola (libTKG2d, 头文件 Geom2d/Geom2d_Hyperbola.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 描述平面(二维空间)中的双曲线分支. 双曲线由其长半轴和短半轴定义, 并且如同任何二次曲线一样, 借助坐标系(gp_Ax22d 对象)定位在平面中, 其中: - 原点是双曲线中心, - \"X 方向\" 定义长轴, 且 - \"Y 方向\" 定义短轴. 该坐标系是双曲线的局部坐标系. 所描述的双曲线分支位于长轴的正侧. 局部坐标系的朝向(正向或反向)赋予双曲线显式朝向, 决定参数沿双曲线增大的方向. Geom2d_Hyperbola 双曲线参数化如下: P(U) = O + MajRad*Cosh(U)*XDir + MinRad*Sinh(U)*YDir 其中: - P 是参数 U 的点, - O, XDir 和 YDir 分别是其局部坐标系的原点, \"X 方向\" 和 \"Y 方向\", - MajRad 和 MinRad 是双曲线的长半轴和短半轴. 因此局部坐标系的 \"X 轴\" 定义双曲线参数的原点. 参数范围为 ] -无穷,+无穷 [. 下图说明在双曲线平面中, 用函数 OtherBranch, ConjugateBranch1 和 ConjugateBranch2 构造的三条双曲线分支各自的相对位置: ^YAxis | FirstConjugateBranch | Other | Main --------------------- C --------------------->XAxis Branch | Branch | SecondConjugateBranch | 警告: 长半轴(在长轴上的)的值可以小于短半轴(在短轴上的)的值. 另见 GCE2d_MakeHyperbola, 它提供更复杂的双曲线构造函数; gp_Ax22d; gp_Hypr2d, 它们是等效的非参数化数据结构." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: Geom2d_Hyperbola. 官方简介: 由 gp 包的非持久双曲线创建双曲线" @嵌入式方法 = "">
+    参数 H <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Hyperbola.构造 (@<H>)
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: Geom2d_Hyperbola. 官方简介: MajorAxis 是该双曲线的 \"XAxis\". 若 \"Sense\" 为 True 则 YAxis 为正向. 该双曲线的长半径位于此 \"XAxis\" 上, 而短半径位于该双曲线的 \"YAxis\" 上. 若 MajorRadius < 0.0 或 MinorRadius < 0.0 则抛出异常." @嵌入式方法 = "">
+    参数 长轴 <类型 = 长整数>
+    参数 长半径 <类型 = 小数>
+    参数 短半径 <类型 = 小数>
+    参数 方向 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Hyperbola.构造_2 (@<长轴>, @<长半径>, @<短半径>, @<方向>)
+    }
+
+    方法 创建_3 <公开 静态 类型 = 长整数 注释 = "创建_3. 原构造器: Geom2d_Hyperbola. 官方简介: \"Axis\" 的 XDirection 是该双曲线的 \"XAxis\", \"Axis\" 的 YDirection 是 \"YAxis\". 该双曲线的长半径位于此 \"XAxis\" 上, 而短半径位于该双曲线的 \"YAxis\" 上. 若 MajorRadius < 0.0 或 MinorRadius < 0.0 则抛出异常." @嵌入式方法 = "">
+    参数 轴 <类型 = 长整数>
+    参数 长半径 <类型 = 小数>
+    参数 短半径 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Hyperbola.构造_3 (@<轴>, @<长半径>, @<短半径>)
+    }
+
+    方法 二维设置双曲线 <公开 静态 注释 = "二维设置双曲线. 原方法: SetHypr2d. 官方简介: 把 gp_Hypr2d 双曲线 H 转换为该双曲线." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 H <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Hyperbola.SetHypr2d (@<对象>, @<H>)
+    }
+
+    方法 设置长半径 <公开 静态 注释 = "设置长半径. 原方法: SetMajorRadius. 官方简介: 为双曲线的长半轴或短半轴赋值. 在以下情况抛出 Standard_ConstructionError: - MajorRadius 小于 0.0, - MinorRadius 小于 0.0." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 长半径 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Hyperbola.SetMajorRadius (@<对象>, @<长半径>)
+    }
+
+    方法 设置短半径 <公开 静态 注释 = "设置短半径. 原方法: SetMinorRadius. 官方简介: 为双曲线的长半轴或短半轴赋值. 在以下情况抛出 Standard_ConstructionError: - MajorRadius 小于 0.0, - MinorRadius 小于 0.0." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 短半径 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Hyperbola.SetMinorRadius (@<对象>, @<短半径>)
+    }
+
+    方法 二维双曲线 <公开 静态 类型 = 长整数 注释 = "二维双曲线. 原方法: Hypr2d. 官方简介: 把该双曲线转换为 gp_Hypr2d 双曲线." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Hyperbola.Hypr2d (@<对象>)
+    }
+
+    方法 反转参数 <公开 静态 类型 = 小数 注释 = "反转参数. 原方法: ReversedParameter. 官方简介: 计算该双曲线上参数 U 的点在反向双曲线上的参数. 对于双曲线, 返回值为 -U." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Hyperbola.ReversedParameter (@<对象>, @<U>)
+    }
+
+    方法 首个参数 <公开 静态 类型 = 小数 注释 = "首个参数. 原方法: FirstParameter. 官方简介: 返回 Standard 的 RealFirst." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Hyperbola.FirstParameter (@<对象>)
+    }
+
+    方法 末个参数 <公开 静态 类型 = 小数 注释 = "末个参数. 原方法: LastParameter. 官方简介: 返回 Standard 中的 RealLast." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Hyperbola.LastParameter (@<对象>)
+    }
+
+    方法 是否闭合 <公开 静态 类型 = 逻辑型 注释 = "是否闭合. 原方法: IsClosed. 官方简介: 返回 False." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Hyperbola.IsClosed (@<对象>)
+    }
+
+    方法 是否周期 <公开 静态 类型 = 逻辑型 注释 = "是否周期. 原方法: IsPeriodic. 官方简介: 对双曲线返回 False." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Hyperbola.IsPeriodic (@<对象>)
+    }
+
+    方法 渐近线1 <公开 静态 类型 = 长整数 注释 = "渐近线1. 原方法: Asymptote1. 官方简介: 在双曲线的局部坐标系中, 双曲线的方程为 (X*X)/(A*A) - (Y*Y)/(B*B) = 1.0, 第一条渐近线的方程为 Y = (B/A)*X, 其中 A 是该双曲线的长半径, B 是该双曲线的短半径. 若 MajorRadius = 0.0 则抛出异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Hyperbola.Asymptote1 (@<对象>)
+    }
+
+    方法 渐近线2 <公开 静态 类型 = 长整数 注释 = "渐近线2. 原方法: Asymptote2. 官方简介: 在双曲线的局部坐标系中, 双曲线的方程为 (X*X)/(A*A) - (Y*Y)/(B*B) = 1.0, 第一条渐近线的方程为 Y = -(B/A)*X. 其中 A 是该双曲线的长半径, B 是该双曲线的短半径. 若 MajorRadius = 0.0 则抛出异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Hyperbola.Asymptote2 (@<对象>)
+    }
+
+    方法 共轭分支1 <公开 静态 类型 = 长整数 注释 = "共轭分支1. 原方法: ConjugateBranch1. 官方简介: 计算相对于该双曲线的第一条共轭分支. 注意: 类用途下给出的图示说明了这两条双曲线分支相对于该双曲线分支的位置." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Hyperbola.ConjugateBranch1 (@<对象>)
+    }
+
+    方法 共轭分支2 <公开 静态 类型 = 长整数 注释 = "共轭分支2. 原方法: ConjugateBranch2. 官方简介: 计算相对于该双曲线的第二条共轭分支. 注意: 类用途下给出的图示说明了这两条双曲线分支相对于该双曲线分支的位置." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Hyperbola.ConjugateBranch2 (@<对象>)
+    }
+
+    方法 准线1 <公开 静态 类型 = 长整数 注释 = "准线1. 原方法: Directrix1. 官方简介: 该准线是在局部平面(Z = 0)内垂直于双曲线 XAxis 的直线, 与双曲线中心的距离为 d = MajorRadius / e, 其中 e 是双曲线的离心率. 该直线平行于 \"YAxis\". directrix1 与 \"XAxis\" 的交点是 directrix1 的位置点. 该点位于 \"XAxis\" 的正侧." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Hyperbola.Directrix1 (@<对象>)
+    }
+
+    方法 准线2 <公开 静态 类型 = 长整数 注释 = "准线2. 原方法: Directrix2. 官方简介: 该直线由 \"Directrix1\" 关于双曲线 \"Y 轴\" 作对称变换得到." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Hyperbola.Directrix2 (@<对象>)
+    }
+
+    方法 离心率 <公开 静态 类型 = 小数 注释 = "离心率. 原方法: Eccentricity. 官方简介: 返回双曲线的离心率 (e > 1). 若 f 是双曲线定位点与 Focus1 之间的距离, 则离心率 e = f / MajorRadius. 若 MajorRadius = 0.0 则抛出异常" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Hyperbola.Eccentricity (@<对象>)
+    }
+
+    方法 焦距 <公开 静态 类型 = 小数 注释 = "焦距. 原方法: Focal. 官方简介: 计算焦距. 它是双曲线两个焦点之间的距离." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Hyperbola.Focal (@<对象>)
+    }
+
+    方法 焦点1 <公开 静态 类型 = 长整数 注释 = "焦点1. 原方法: Focus1. 官方简介: 返回双曲线的第一焦点. 该焦点位于双曲线 \"X 轴\" 的正侧." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Hyperbola.Focus1 (@<对象>)
+    }
+
+    方法 焦点2 <公开 静态 类型 = 长整数 注释 = "焦点2. 原方法: Focus2. 官方简介: 返回双曲线的第二焦点. 该焦点位于双曲线 \"X 轴\" 的负侧." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Hyperbola.Focus2 (@<对象>)
+    }
+
+    方法 长半径 <公开 静态 类型 = 小数 注释 = "长半径. 原方法: MajorRadius. 官方简介: 返回该双曲线的长半轴或短半轴. 长半轴也是双曲线中心与主支顶点(位于双曲线的 \"X Axis\" 上)之间的距离." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Hyperbola.MajorRadius (@<对象>)
+    }
+
+    方法 短半径 <公开 静态 类型 = 小数 注释 = "短半径. 原方法: MinorRadius. 官方简介: 返回该双曲线的长半轴或短半轴. 短半轴也是双曲线中心与共轭支顶点(位于双曲线的 \"Y Axis\" 上)之间的距离." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Hyperbola.MinorRadius (@<对象>)
+    }
+
+    方法 另一个分支 <公开 静态 类型 = 长整数 注释 = "另一个分支. 原方法: OtherBranch. 官方简介: 计算该双曲线的 \"另一\" 分支. 它是关于该双曲线中心对称的分支. 注意: 类简介下给出的图示指明了 \"另一\" 分支相对于该双曲线分支的位置. ^ YAxis | FirstConjugateBranch | Other | Main ---------------------------- C ------------------------------------------&gtXAxis Branch | Branch | | SecondConjugateBranch | 警告 长半径可以小于短半径." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Hyperbola.OtherBranch (@<对象>)
+    }
+
+    方法 参数 <公开 静态 类型 = 小数 注释 = "参数. 原方法: Parameter. 官方简介: 计算该双曲线的参数. 该参数为: p = (e*e - 1) * MajorRadius, 其中 e 是该双曲线的离心率, MajorRadius 是其长半径. 异常: 若该双曲线的长半径为零则抛出 Standard_DomainError." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Hyperbola.Parameter (@<对象>)
+    }
+
+    方法 取点 <公开 静态 注释 = "取点. 原方法: D0. 官方简介: 在 P 中返回参数 U 的点. P = C + MajorRadius * Cosh (U) * XDir + MinorRadius * Sinh (U) * YDir, 其中 C 是双曲线的中心, XDir 与 YDir 是双曲线局部坐标系的 XDirection 与 YDirection." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Hyperbola.D0 (@<对象>, @<U>, @<输出P>)
+    }
+
+    方法 取一阶导 <公开 静态 注释 = "取一阶导. 原方法: D1. 官方简介: 返回参数 U 的点 P 和一阶导数 V1." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    参数 输出V1 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Hyperbola.D1 (@<对象>, @<U>, @<输出P>, @<输出V1>)
+    }
+
+    方法 取二阶导 <公开 静态 注释 = "取二阶导. 原方法: D2. 官方简介: 返回参数 U 的点 P, 以及一阶导数 V1 和二阶导数 V2." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    参数 输出V1 <类型 = 长整数>
+    参数 输出V2 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Hyperbola.D2 (@<对象>, @<U>, @<输出P>, @<输出V1>, @<输出V2>)
+    }
+
+    方法 取三阶导 <公开 静态 注释 = "取三阶导. 原方法: D3. 官方简介: 返回参数 U 的点 P, 以及一阶, 二阶和三阶导数 V1, V2 和 V3." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    参数 输出V1 <类型 = 长整数>
+    参数 输出V2 <类型 = 长整数>
+    参数 输出V3 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Hyperbola.D3 (@<对象>, @<U>, @<输出P>, @<输出V1>, @<输出V2>, @<输出V3>)
+    }
+
+    方法 取N阶导 <公开 静态 类型 = 长整数 注释 = "取N阶导. 原方法: DN. 官方简介: 对于该双曲线参数为 U 的点, 计算第 N 阶导数对应的向量. 若 N 小于 1 则抛出 Standard_RangeError 异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 N <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Hyperbola.DN (@<对象>, @<U>, @<N>)
+    }
+
+    方法 变换 <公开 静态 注释 = "变换. 原方法: Transform. 官方简介: 对该双曲线施加变换 T." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 T <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Hyperbola.Transform (@<对象>, @<T>)
+    }
+
+    方法 复制 <公开 静态 类型 = 长整数 注释 = "复制. 原方法: Copy. 官方简介: 创建一个新对象, 它是该双曲线的副本." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Hyperbola.Copy (@<对象>)
+    }
+
+    方法 转储JSON <公开 静态 类型 = 文本型 注释 = "转储JSON. 原方法: DumpJson. 官方简介: 把自身内容转储到流中" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 深度 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Hyperbola.DumpJson (@<对象>, @<深度>)
+    }
+
+}
+
+类 平面直线 <公开 注释 = "平面直线: 原类 Geom2d_Line (libTKG2d, 头文件 Geom2d/Geom2d_Line.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 描述平面(二维空间)中的无限直线. 直线在平面中由轴(gp_Ax2d 对象)定义并定位, 轴给出其原点与单位向量. Geom2d_Line 的参数化为: P (U) = O + U*Dir, 其中: - P 是参数为 U 的点, - O 是原点, Dir 是其定位轴的单位向量. 参数范围为 ]-无穷, +无穷[. 直线的方向由其定位轴的单位向量给出. 另见 GCE2d_MakeLine(提供更复杂的直线构建功能), gp_Ax2d, gp_Lin2d(等价的非参数化数据结构)." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: Geom2d_Line. 官方简介: 用轴定位 A 创建位于二维空间中的直线. A 的 \"Location\" 点是该直线的原点." @嵌入式方法 = "">
+    参数 A <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Line.构造 (@<A>)
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: Geom2d_Line. 官方简介: 通过转换 gp_Lin2d 直线 L 创建直线." @嵌入式方法 = "">
+    参数 L <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Line.构造_2 (@<L>)
+    }
+
+    方法 创建_3 <公开 静态 类型 = 长整数 注释 = "创建_3. 原构造器: Geom2d_Line. 官方简介: 构造过点 P 且平行于向量 V 的直线(P 与 V 分别是该直线定位轴的原点与单位向量)." @嵌入式方法 = "">
+    参数 P <类型 = 长整数>
+    参数 V <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Line.构造_3 (@<P>, @<V>)
+    }
+
+    方法 二维设置直线 <公开 静态 注释 = "二维设置直线. 原方法: SetLin2d. 官方简介: 设置 <me>, 使其与 L 具有相同的几何特性." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 L <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Line.SetLin2d (@<对象>, @<L>)
+    }
+
+    方法 设置方向 <公开 静态 注释 = "设置方向. 原方法: SetDirection. 官方简介: 修改直线的方向." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 V <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Line.SetDirection (@<对象>, @<V>)
+    }
+
+    方法 方向 <公开 静态 类型 = 长整数 注释 = "方向. 原方法: Direction. 官方简介: 修改直线的方向." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Line.Direction (@<对象>)
+    }
+
+    方法 设置位置 <公开 静态 注释 = "设置位置. 原方法: SetLocation. 官方简介: 修改直线的 \"Location\" 点(原点)." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 P <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Line.SetLocation (@<对象>, @<P>)
+    }
+
+    方法 位置 <公开 静态 类型 = 长整数 注释 = "位置. 原方法: Location. 官方简介: 修改直线的 \"Location\" 点(原点)." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Line.Location (@<对象>)
+    }
+
+    方法 设置位置_2 <公开 静态 注释 = "设置位置_2. 原方法: SetPosition. 官方简介: 修改 <me> 的 \"Location\" 与 \"Direction\"." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 A <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Line.SetPosition (@<对象>, @<A>)
+    }
+
+    方法 位置_2 <公开 静态 类型 = 长整数 注释 = "位置_2. 原方法: Position." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Line.Position (@<对象>)
+    }
+
+    方法 二维直线 <公开 静态 类型 = 长整数 注释 = "二维直线. 原方法: Lin2d. 官方简介: 返回与 <me> 具有相同几何属性的 gp 非持久直线" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Line.Lin2d (@<对象>)
+    }
+
+    方法 反转 <公开 静态 注释 = "反转. 原方法: Reverse. 官方简介: 修改该直线的方向. 结果是该直线定位轴的单位向量被反转." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Line.Reverse (@<对象>)
+    }
+
+    方法 反转参数 <公开 静态 类型 = 小数 注释 = "反转参数. 原方法: ReversedParameter. 官方简介: 计算该直线上参数 U 的点在反向直线上的参数. 对于直线, 返回值为 -U." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Line.ReversedParameter (@<对象>, @<U>)
+    }
+
+    方法 首个参数 <公开 静态 类型 = 小数 注释 = "首个参数. 原方法: FirstParameter. 官方简介: 返回 Standard 的 RealFirst." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Line.FirstParameter (@<对象>)
+    }
+
+    方法 末个参数 <公开 静态 类型 = 小数 注释 = "末个参数. 原方法: LastParameter. 官方简介: 返回 Standard 中的 RealLast" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Line.LastParameter (@<对象>)
+    }
+
+    方法 是否闭合 <公开 静态 类型 = 逻辑型 注释 = "是否闭合. 原方法: IsClosed. 官方简介: 返回 False" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Line.IsClosed (@<对象>)
+    }
+
+    方法 是否周期 <公开 静态 类型 = 逻辑型 注释 = "是否周期. 原方法: IsPeriodic. 官方简介: 返回 False" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Line.IsPeriodic (@<对象>)
+    }
+
+    方法 连续性 <公开 静态 类型 = 整数 注释 = "连续性. 原方法: Continuity. 官方简介: 返回 GeomAbs_CN, 即任何直线的全局连续性." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Line.Continuity (@<对象>)
+    }
+
+    方法 距离 <公开 静态 类型 = 小数 注释 = "距离. 原方法: Distance. 官方简介: 计算 <me> 与点 P 之间的距离." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 P <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Line.Distance (@<对象>, @<P>)
+    }
+
+    方法 是否CN <公开 静态 类型 = 逻辑型 注释 = "是否CN. 原方法: IsCN. 官方简介: 返回 True." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 N <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Line.IsCN (@<对象>, @<N>)
+    }
+
+    方法 取点 <公开 静态 注释 = "取点. 原方法: D0. 官方简介: 在 P 中返回参数 U 的点. P (U) = O + U * Dir, 其中 O 是直线的 \"Location\" 点, Dir 是直线的方向." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Line.D0 (@<对象>, @<U>, @<输出P>)
+    }
+
+    方法 取一阶导 <公开 静态 注释 = "取一阶导. 原方法: D1. 官方简介: 返回参数 u 的点 P 及一阶导数 V1." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    参数 输出V1 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Line.D1 (@<对象>, @<U>, @<输出P>, @<输出V1>)
+    }
+
+    方法 取二阶导 <公开 静态 注释 = "取二阶导. 原方法: D2. 官方简介: 返回参数 U 的点 P、一阶与二阶导数 V1 与 V2. 对于直线, V2 是模为零的向量." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    参数 输出V1 <类型 = 长整数>
+    参数 输出V2 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Line.D2 (@<对象>, @<U>, @<输出P>, @<输出V1>, @<输出V2>)
+    }
+
+    方法 取三阶导 <公开 静态 注释 = "取三阶导. 原方法: D3. 官方简介: 对于直线, V2 与 V3 是模为零的向量." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    参数 输出V1 <类型 = 长整数>
+    参数 输出V2 <类型 = 长整数>
+    参数 输出V3 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Line.D3 (@<对象>, @<U>, @<输出P>, @<输出V1>, @<输出V2>, @<输出V3>)
+    }
+
+    方法 取N阶导 <公开 静态 类型 = 长整数 注释 = "取N阶导. 原方法: DN. 官方简介: 对于该直线上参数为 U 的点, 计算第 N 阶导数对应的向量. 注意: 若 N 大于或等于 2, 则结果是模为零的向量. 异常: 若 N 小于 1 则抛出 Standard_RangeError." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 N <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Line.DN (@<对象>, @<U>, @<N>)
+    }
+
+    方法 变换 <公开 静态 注释 = "变换. 原方法: Transform. 官方简介: 对该直线施加变换 T." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 T <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Line.Transform (@<对象>, @<T>)
+    }
+
+    方法 变换参数 <公开 静态 类型 = 小数 注释 = "变换参数. 原方法: TransformedParameter. 官方简介: 计算该直线上参数 U 处的点在经 T 变换后的直线上的参数. 对于直线, 返回值等于 U 乘以变换 T 的比例因子." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 T <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Line.TransformedParameter (@<对象>, @<U>, @<T>)
+    }
+
+    方法 参数化变换 <公开 静态 类型 = 小数 注释 = "参数化变换. 原方法: ParametricTransformation. 官方简介: 返回施加变换 T 时计算该直线参数变换所需的系数. 该系数是直线上某点的参数与经 T 变换后的新直线上变换点的参数之比. 对于直线, 返回值是变换 T 的缩放系数." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 T <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Line.ParametricTransformation (@<对象>, @<T>)
+    }
+
+    方法 复制 <公开 静态 类型 = 长整数 注释 = "复制. 原方法: Copy. 官方简介: 创建一个新对象, 它是该直线的副本." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Line.Copy (@<对象>)
+    }
+
+    方法 转储JSON <公开 静态 类型 = 文本型 注释 = "转储JSON. 原方法: DumpJson. 官方简介: 把自身内容转储到流中" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 深度 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Line.DumpJson (@<对象>, @<深度>)
+    }
+
+}
+
+类 平面偏移曲线 <公开 注释 = "平面偏移曲线: 原类 Geom2d_OffsetCurve (libTKG2d, 头文件 Geom2d/Geom2d_OffsetCurve.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 此类实现平面偏置曲线的创建, 编辑, 修改与求值的基础服务. 偏置曲线通过沿二维空间中定义的基曲线的法线方向偏置一定距离得到. 本包中的偏置曲线可以是自相交曲线, 即使基曲线不自相交. 自相交部分在构造时不会被删除. 偏置曲线是与基曲线保持恒定距离(Offset)的曲线, 其参数化取自基曲线. 偏置曲线位于基曲线法线 N 的方向上. 距离偏置可以为正或为负, 以指示曲线的偏好侧: . 距离偏置 >0 => 曲线在 N 的方向上 . 距离偏置 >0 => 曲线在 - N 的方向上 在偏置曲线上: Value(u) = BasisCurve.Value(U) + (Offset * (T ^ Z)) / ||T ^ Z|| 其中 T 是基曲线的切向量, Z 是曲线平面法向量的方向, N = T ^ Z 定义偏置方向, 其长度不应为空." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: Geom2d_OffsetCurve. 官方简介: 构造从基础曲线 C 偏置的曲线, 其中 Offset 是偏置曲线与基础曲线在任意点处的距离. 偏置曲线上的点通过沿 C 上某点处的法向量测量偏置值来构建. 该法向量由与 C 相切的向量按反三角方向旋转 90 度得到. Offset 为正时, 测量偏置值的一侧由该法向量指示; 若 Offset 为负则为相反的一侧. 若 isNotCheckC0 = TRUE 则不进行检查基础曲线是否具有 C0 连续性. 警告: 在本包中实体不共享. OffsetCurve 用曲线 C 的副本构建. 因此当 C 被修改时 OffsetCurve 不被修改 警告! 若 isNotCheckC0 = false, 基础曲线 C 未达到 C1 时抛出 ConstructionError. 不进行检查来了解是否在任意点处 ||V^Z|| != 0.0." @嵌入式方法 = "">
+    参数 C <类型 = 长整数>
+    参数 偏移 <类型 = 小数>
+    参数 跳过C0检查 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_OffsetCurve.构造 (@<C>, @<偏移>, @<跳过C0检查>)
+    }
+
+    方法 反转 <公开 静态 注释 = "反转. 原方法: Reverse. 官方简介: 改变 <me> 的参数化方向. 结果: - 基础曲线被反转, - 初始曲线的起点变为反转曲线的终点, - 初始曲线的终点变为反转曲线的起点, 且 - 第一个与最后一个参数被重新计算." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_OffsetCurve.Reverse (@<对象>)
+    }
+
+    方法 反转参数 <公开 静态 类型 = 小数 注释 = "反转参数. 原方法: ReversedParameter. 官方简介: 计算该偏移曲线上参数 U 的点在反向曲线上的参数." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_OffsetCurve.ReversedParameter (@<对象>, @<U>)
+    }
+
+    方法 设置基曲线 <公开 静态 注释 = "设置基曲线. 原方法: SetBasisCurve. 官方简介: 修改该偏置曲线, 把 C 赋为构建它的基础曲线. 若 isNotCheckC0 = TRUE 则不进行基础曲线是否具有 C0 连续性的检查. 异常: 若 isNotCheckC0 = false, 则当曲线 C 不是至少 \"C1\" 连续时抛出 Standard_ConstructionError." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 C <类型 = 长整数>
+    参数 跳过C0检查 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_OffsetCurve.SetBasisCurve (@<对象>, @<C>, @<跳过C0检查>)
+    }
+
+    方法 设置偏移值 <公开 静态 注释 = "设置偏移值. 原方法: SetOffsetValue. 官方简介: 通过把 D 赋为偏移值来修改该偏移曲线." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 D <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_OffsetCurve.SetOffsetValue (@<对象>, @<D>)
+    }
+
+    方法 基曲线 <公开 静态 类型 = 长整数 注释 = "基曲线. 原方法: BasisCurve. 官方简介: 返回该偏移曲线的基础曲线. 基础曲线可以是偏移曲线." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_OffsetCurve.BasisCurve (@<对象>)
+    }
+
+    方法 连续性 <公开 静态 类型 = 整数 注释 = "连续性. 原方法: Continuity. 官方简介: 偏置曲线的连续性 : C0 : 仅几何连续性, C1 : 沿曲线的一阶导数连续性, C2 : 沿曲线的二阶导数连续性, C3 : 沿曲线的三阶导数连续性, G1 : 沿曲线的相切连续性, G2 : 沿曲线的曲率连续性, CN : 连续阶数为无穷. 警告: 返回基础曲线的连续性减 1. 偏置曲线必须在其任意点上具有唯一法线方向. Value and derivatives" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_OffsetCurve.Continuity (@<对象>)
+    }
+
+    方法 取点 <公开 静态 注释 = "取点. 原方法: D0. 官方简介: 警告! 若基础曲线不至少是 C1, 则不应调用该方法. 不过若用于曲线为 C1 的部分, 是可以的" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_OffsetCurve.D0 (@<对象>, @<U>, @<输出P>)
+    }
+
+    方法 取一阶导 <公开 静态 注释 = "取一阶导. 原方法: D1. 官方简介: 警告! 若基础曲线的连续性不是 C2, 则不应调用该方法. 不过用于曲线为 C2 的部分是可以的" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    参数 输出V1 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_OffsetCurve.D1 (@<对象>, @<U>, @<输出P>, @<输出V1>)
+    }
+
+    方法 取二阶导 <公开 静态 注释 = "取二阶导. 原方法: D2. 官方简介: 警告! 若基础曲线的连续性不是 C3, 则不应调用此方法. 不过, 在曲线为 C3 的部分上使用它是可以的" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    参数 输出V1 <类型 = 长整数>
+    参数 输出V2 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_OffsetCurve.D2 (@<对象>, @<U>, @<输出P>, @<输出V1>, @<输出V2>)
+    }
+
+    方法 取三阶导 <公开 静态 注释 = "取三阶导. 原方法: D3. 官方简介: 警告! 若基础曲线的连续性不是 C4, 则不应调用此方法. 不过, 在曲线为 C4 的部分上使用它是可以的" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    参数 输出V1 <类型 = 长整数>
+    参数 输出V2 <类型 = 长整数>
+    参数 输出V3 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_OffsetCurve.D3 (@<对象>, @<U>, @<输出P>, @<输出V1>, @<输出V2>, @<输出V3>)
+    }
+
+    方法 取N阶导 <公开 静态 类型 = 长整数 注释 = "取N阶导. 原方法: DN. 官方简介: 返回的向量给出阶为 N 的导数的值. 警告! 不应调用该函数, 若基础曲线的连续性不是 CN+1 则抛出 UndefunedDerivative. 然而, 在曲线为 CN+1 的部分上使用它是可以的. 若 N < 1 则抛出 RangeError. 若 N > 3 则抛出 NotImplemented. 以下函数计算偏置曲线上的值与导数, 并也返回基础曲线上的导数. 基础曲线上值与导数的计算用于求值偏置曲线 警告: 若无法计算唯一的偏置方向, 则抛出 UndefinedValue 或 UndefinedDerivative 异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 N <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_OffsetCurve.DN (@<对象>, @<U>, @<N>)
+    }
+
+    方法 首个参数 <公开 静态 类型 = 小数 注释 = "首个参数. 原方法: FirstParameter. 官方简介: 返回该偏移曲线的第一个参数值. 第一个参数对应于曲线的起点. 注意: 该偏移曲线的第一与最后参数也是其基础曲线的参数." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_OffsetCurve.FirstParameter (@<对象>)
+    }
+
+    方法 末个参数 <公开 静态 类型 = 小数 注释 = "末个参数. 原方法: LastParameter. 官方简介: 返回该偏移曲线的最后参数值. 最后参数对应于终点. 注意: 该偏移曲线的第一与最后参数也是其基础曲线的参数." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_OffsetCurve.LastParameter (@<对象>)
+    }
+
+    方法 偏移 <公开 静态 类型 = 小数 注释 = "偏移. 原方法: Offset. 官方简介: 返回该偏移曲线的偏移值." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_OffsetCurve.Offset (@<对象>)
+    }
+
+    方法 是否闭合 <公开 静态 类型 = 逻辑型 注释 = "是否闭合. 原方法: IsClosed. 官方简介: 若曲线起点与终点之间的距离小于或等于 gp 包的 Resolution 则返回 True." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_OffsetCurve.IsClosed (@<对象>)
+    }
+
+    方法 是否CN <公开 静态 类型 = 逻辑型 注释 = "是否CN. 原方法: IsCN. 官方简介: 曲线的连续性阶数是否为 N? 警告: 若基础曲线的连续性为 N + 1, 该方法回答 True. 本类中我们假定基础曲线(用于计算偏置曲线)上任意点处都定义了法方向. 若 N < 0 则抛出异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 N <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_OffsetCurve.IsCN (@<对象>, @<N>)
+    }
+
+    方法 是否周期 <公开 静态 类型 = 逻辑型 注释 = "是否周期. 原方法: IsPeriodic. 官方简介: 曲线的参数化是周期的吗? 若基础曲线是圆或椭圆, 则对应的偏置曲线是周期的. 若基础曲线不能是周期的(例如 BezierCurve), 则偏置曲线不能是周期的." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_OffsetCurve.IsPeriodic (@<对象>)
+    }
+
+    方法 周期 <公开 静态 类型 = 小数 注释 = "周期. 原方法: Period. 官方简介: 返回该偏移曲线的周期, 即该偏移曲线基础曲线的周期. 若基础曲线不是周期的则抛出 Standard_NoSuchObject." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_OffsetCurve.Period (@<对象>)
+    }
+
+    方法 变换 <公开 静态 注释 = "变换. 原方法: Transform. 官方简介: 对该偏移曲线施加变换 T. 注意: 基础曲线也会被修改." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 T <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_OffsetCurve.Transform (@<对象>, @<T>)
+    }
+
+    方法 变换参数 <公开 静态 类型 = 小数 注释 = "变换参数. 原方法: TransformedParameter. 官方简介: 返回 <me> 上参数为 U 的点经变换后在变换后曲线上的参数." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 T <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_OffsetCurve.TransformedParameter (@<对象>, @<U>, @<T>)
+    }
+
+    方法 参数化变换 <公开 静态 类型 = 小数 注释 = "参数化变换. 原方法: ParametricTransformation. 官方简介: 返回一个系数, 用于计算 <me> 上点经变换后在变换后曲线上的参数." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 T <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_OffsetCurve.ParametricTransformation (@<对象>, @<T>)
+    }
+
+    方法 复制 <公开 静态 类型 = 长整数 注释 = "复制. 原方法: Copy. 官方简介: 创建一个新对象, 它是该偏移曲线的副本." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_OffsetCurve.Copy (@<对象>)
+    }
+
+    方法 取基曲线连续性 <公开 静态 类型 = 整数 注释 = "取基曲线连续性. 原方法: GetBasisCurveContinuity. 官方简介: 返回基础曲线的连续性." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_OffsetCurve.GetBasisCurveContinuity (@<对象>)
+    }
+
+    方法 转储JSON <公开 静态 类型 = 文本型 注释 = "转储JSON. 原方法: DumpJson. 官方简介: 把自身内容转储到流中" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 深度 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_OffsetCurve.DumpJson (@<对象>, @<深度>)
+    }
+
+}
+
+类 平面抛物线 <公开 注释 = "平面抛物线: 原类 Geom2d_Parabola (libTKG2d, 头文件 Geom2d/Geom2d_Parabola.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 描述平面(二维空间)中的抛物线. 抛物线由其焦距(即焦点与其顶点之间的距离)定义, 并借助坐标系(gp_Ax22d 对象)定位在平面中, 其中: - 原点是抛物线的顶点, 且 - \"X 轴\" 定义对称轴; 抛物线位于该轴的正侧. 该坐标系是抛物线的局部坐标系. 局部坐标系的朝向(正向或反向)赋予抛物线显式朝向, 决定参数沿抛物线增大的方向. Geom_Parabola 抛物线参数化如下: P(U) = O + U*U/(4.*F)*XDir + U*YDir, 其中: - P 是参数 U 的点, - O, XDir 和 YDir 分别是其局部坐标系的原点, \"X 方向\" 和 \"Y 方向\", - F 是抛物线的焦距. 因此抛物线的参数是其在局部坐标系中的 Y 坐标, 局部坐标系的 \"X 轴\" 定义参数的原点. 参数范围为 ] -无穷,+无穷 [." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: Geom2d_Parabola. 官方简介: 由非持久抛物线创建抛物线." @嵌入式方法 = "">
+    参数 抛物线 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Parabola.构造 (@<抛物线>)
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: Geom2d_Parabola. 官方简介: 用其 \"MirrorAxis\" 与焦距 \"Focal\" 创建抛物线. MirrorAxis 是曲线的对称轴, 即 \"XAxis\". \"YAxis\" 平行于该抛物线的准线, 且若 Sense 为 True 则为正向. \"MirrorAxis\" 的 \"Location\" 点是该抛物线的顶点. 若 Focal < 0.0 则抛出异常." @嵌入式方法 = "">
+    参数 镜像轴 <类型 = 长整数>
+    参数 焦距 <类型 = 小数>
+    参数 方向 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Parabola.构造_2 (@<镜像轴>, @<焦距>, @<方向>)
+    }
+
+    方法 创建_3 <公开 静态 类型 = 长整数 注释 = "创建_3. 原构造器: Geom2d_Parabola. 官方简介: 用轴 Axis 与其焦距 \"Focal\" 创建抛物线. Axis 的 XDirection 是曲线的对称轴, 即 \"XAxis\". \"YAxis\" 平行于该抛物线的准线. \"Axis\" 的 \"Location\" 点是该抛物线的顶点. 若 Focal < 0.0 则抛出异常." @嵌入式方法 = "">
+    参数 轴 <类型 = 长整数>
+    参数 焦距 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Parabola.构造_3 (@<轴>, @<焦距>)
+    }
+
+    方法 创建_4 <公开 静态 类型 = 长整数 注释 = "创建_4. 原构造器: Geom2d_Parabola. 官方简介: D 是该抛物线的准线, F 是焦点. 该抛物线的对称轴 \"XAxis\" 垂直于准线并经过焦点 F, 但其 \"Location\" 点是该抛物线的顶点. 该抛物线的 \"YAxis\" 平行于 D, 其 \"Location\" 点是该抛物线的顶点." @嵌入式方法 = "">
+    参数 D <类型 = 长整数>
+    参数 F <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Parabola.构造_4 (@<D>, @<F>)
+    }
+
+    方法 设置焦距 <公开 静态 注释 = "设置焦距. 原方法: SetFocal. 官方简介: 把值 Focal 赋给该抛物线的焦距. 若 Focal 为负则抛出 Standard_ConstructionError 异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 焦距 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Parabola.SetFocal (@<对象>, @<焦距>)
+    }
+
+    方法 二维设置抛物线 <公开 静态 注释 = "二维设置抛物线. 原方法: SetParab2d. 官方简介: 把 gp_Parab2d 抛物线 Prb 转换为该抛物线." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 抛物线 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Parabola.SetParab2d (@<对象>, @<抛物线>)
+    }
+
+    方法 二维抛物线 <公开 静态 类型 = 长整数 注释 = "二维抛物线. 原方法: Parab2d. 官方简介: 返回与 <me> 具有相同几何属性的 gp 非持久抛物线." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Parabola.Parab2d (@<对象>)
+    }
+
+    方法 反转参数 <公开 静态 类型 = 小数 注释 = "反转参数. 原方法: ReversedParameter. 官方简介: 计算该抛物线上参数 U 的点在反向抛物线上的参数. 对于抛物线, 返回值为 -U." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Parabola.ReversedParameter (@<对象>, @<U>)
+    }
+
+    方法 首个参数 <公开 静态 类型 = 小数 注释 = "首个参数. 原方法: FirstParameter. 官方简介: 返回 Standard 的 RealFirst." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Parabola.FirstParameter (@<对象>)
+    }
+
+    方法 末个参数 <公开 静态 类型 = 小数 注释 = "末个参数. 原方法: LastParameter. 官方简介: 返回 Standard 中的 RealLast." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Parabola.LastParameter (@<对象>)
+    }
+
+    方法 是否闭合 <公开 静态 类型 = 逻辑型 注释 = "是否闭合. 原方法: IsClosed. 官方简介: 返回 False" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Parabola.IsClosed (@<对象>)
+    }
+
+    方法 是否周期 <公开 静态 类型 = 逻辑型 注释 = "是否周期. 原方法: IsPeriodic. 官方简介: 返回 False" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Parabola.IsPeriodic (@<对象>)
+    }
+
+    方法 准线 <公开 静态 类型 = 长整数 注释 = "准线. 原方法: Directrix. 官方简介: 准线平行于抛物线的 \"YAxis\". 准线的 \"Location\" 点是准线与抛物线对称轴(\"XAxis\")的交点." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Parabola.Directrix (@<对象>)
+    }
+
+    方法 离心率 <公开 静态 类型 = 小数 注释 = "离心率. 原方法: Eccentricity. 官方简介: 返回离心率 e = 1.0" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Parabola.Eccentricity (@<对象>)
+    }
+
+    方法 焦点 <公开 静态 类型 = 长整数 注释 = "焦点. 原方法: Focus. 官方简介: 计算该抛物线的焦点. 焦点位于抛物线局部坐标系的 \"X 轴\" 的正侧." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Parabola.Focus (@<对象>)
+    }
+
+    方法 焦距 <公开 静态 类型 = 小数 注释 = "焦距. 原方法: Focal. 官方简介: 计算该抛物线的焦距. 焦距是抛物线的顶点与焦点之间的距离." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Parabola.Focal (@<对象>)
+    }
+
+    方法 参数 <公开 静态 类型 = 小数 注释 = "参数. 原方法: Parameter. 官方简介: 计算抛物线的参数, 它是抛物线的焦点与准线之间的距离. 该距离是焦距的两倍. 若 P 是抛物线的参数, 则该抛物线在其局部坐标系中的方程为: Y**2 = 2.*P*X." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Parabola.Parameter (@<对象>)
+    }
+
+    方法 取点 <公开 静态 注释 = "取点. 原方法: D0. 官方简介: 在 P 中返回参数 U 的点. 若 U = 0, 返回的点是抛物线 XAxis 与 YAxis 的原点, 即抛物线的顶点. P = S + F * (U * U * XDir + * U * YDir), 其中 S 是抛物线的顶点, XDir 与 YDir 是抛物线局部坐标系的 XDirection 与 YDirection." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Parabola.D0 (@<对象>, @<U>, @<输出P>)
+    }
+
+    方法 取一阶导 <公开 静态 注释 = "取一阶导. 原方法: D1. 官方简介: 返回参数 U 的点 P 和一阶导数 V1." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    参数 输出V1 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Parabola.D1 (@<对象>, @<U>, @<输出P>, @<输出V1>)
+    }
+
+    方法 取二阶导 <公开 静态 注释 = "取二阶导. 原方法: D2. 官方简介: 返回参数 U 的点 P, 以及一阶导数 V1 和二阶导数 V2." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    参数 输出V1 <类型 = 长整数>
+    参数 输出V2 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Parabola.D2 (@<对象>, @<U>, @<输出P>, @<输出V1>, @<输出V2>)
+    }
+
+    方法 取三阶导 <公开 静态 注释 = "取三阶导. 原方法: D3. 官方简介: 返回参数 U 的点 P, 以及一阶, 二阶和三阶导数 V1, V2 和 V3." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    参数 输出V1 <类型 = 长整数>
+    参数 输出V2 <类型 = 长整数>
+    参数 输出V3 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Parabola.D3 (@<对象>, @<U>, @<输出P>, @<输出V1>, @<输出V2>, @<输出V3>)
+    }
+
+    方法 取N阶导 <公开 静态 类型 = 长整数 注释 = "取N阶导. 原方法: DN. 官方简介: 对于该抛物线的参数 U 点, 计算 N 阶导数对应的向量. 若 N 小于 1 则抛出 Standard_RangeError." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 N <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Parabola.DN (@<对象>, @<U>, @<N>)
+    }
+
+    方法 变换 <公开 静态 注释 = "变换. 原方法: Transform. 官方简介: 对该抛物线施加变换 T." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 T <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Parabola.Transform (@<对象>, @<T>)
+    }
+
+    方法 变换参数 <公开 静态 类型 = 小数 注释 = "变换参数. 原方法: TransformedParameter. 官方简介: 计算变换后抛物线上该曲线上参数为 U 的点的参数. 对于抛物线, 返回的值等于 U 乘以变换 T 的缩放因子." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 T <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Parabola.TransformedParameter (@<对象>, @<U>, @<T>)
+    }
+
+    方法 参数化变换 <公开 静态 类型 = 小数 注释 = "参数化变换. 原方法: ParametricTransformation. 官方简介: 返回一个系数, 用于计算 <me> 上点经变换后在变换后曲线上的参数." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 T <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Parabola.ParametricTransformation (@<对象>, @<T>)
+    }
+
+    方法 复制 <公开 静态 类型 = 长整数 注释 = "复制. 原方法: Copy. 官方简介: 创建一个新对象, 它是该抛物线的副本." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Parabola.Copy (@<对象>)
+    }
+
+    方法 转储JSON <公开 静态 类型 = 文本型 注释 = "转储JSON. 原方法: DumpJson. 官方简介: 把自身内容转储到流中" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 深度 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Parabola.DumpJson (@<对象>, @<深度>)
+    }
+
+}
+
+类 平面点基类 <公开 注释 = "平面点基类: 原类 Geom2d_Point (libTKG2d, 头文件 Geom2d/Geom2d_Point.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 抽象类 Point 描述平面空间中几何点的公共行为. Geom2d 包还提供具体类 Geom2d_CartesianPoint." @禁止创建对象 = 真>
+{
+
+    方法 距离 <公开 静态 类型 = 小数 注释 = "距离. 原方法: Distance. 官方简介: 计算 <me> 与 <Other> 之间的距离." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Point.Distance (@<对象>, @<另一个>)
+    }
+
+    方法 平方距离 <公开 静态 类型 = 小数 注释 = "平方距离. 原方法: SquareDistance. 官方简介: 计算 <me> 与 <Other> 之间距离的平方." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Point.SquareDistance (@<对象>, @<另一个>)
+    }
+
+    方法 转储JSON <公开 静态 类型 = 文本型 注释 = "转储JSON. 原方法: DumpJson. 官方简介: 把自身内容转储到流中" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 深度 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Point.DumpJson (@<对象>, @<深度>)
+    }
+
+}
+
+类 平面几何变换 <公开 注释 = "平面几何变换: 原类 Geom2d_Transformation (libTKG2d, 头文件 Geom2d/Geom2d_Transformation.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: Transformation 类允许创建平移, 旋转, 对称, 缩放以及由前面基本变换组合得到的复合变换. Transformation 类也可通过组合这些基本变换构造复合变换. 然而, 这些变换绝不能改变对象的类型. 例如, 投影变换可以把圆变成椭圆, 从而改变对象的实际类型. 此类变换在本环境中被禁止, 不能是 Geom2d_Transformation. 变换可表示如下:" @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: Geom2d_Transformation. 官方简介: 创建单位变换." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Transformation.构造 ()
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: Geom2d_Transformation. 官方简介: 创建 T 的持久副本." @嵌入式方法 = "">
+    参数 T <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Transformation.构造_2 (@<T>)
+    }
+
+    方法 设置镜像 <公开 静态 注释 = "设置镜像. 原方法: SetMirror. 官方简介: 把该变换设为关于点 P 的对称变换. P 是对称中心." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 P <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Transformation.SetMirror (@<对象>, @<P>)
+    }
+
+    方法 设置镜像_2 <公开 静态 注释 = "设置镜像_2. 原方法: SetMirror. 官方简介: 把该变换变为关于轴 A 的对称变换. A 是轴对称的中心." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 A <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Transformation.SetMirror_2 (@<对象>, @<A>)
+    }
+
+    方法 设置旋转 <公开 静态 注释 = "设置旋转. 原方法: SetRotation. 官方简介: 使该变换具有绕点 P 旋转 Ang 角(以弧度计)的几何属性." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 P <类型 = 长整数>
+    参数 角度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Transformation.SetRotation (@<对象>, @<P>, @<角度>)
+    }
+
+    方法 设置缩放 <公开 静态 注释 = "设置缩放. 原方法: SetScale. 官方简介: 把该变换设为缩放. P 是缩放中心, S 是缩放值." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 P <类型 = 长整数>
+    参数 S <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Transformation.SetScale (@<对象>, @<P>, @<S>)
+    }
+
+    方法 设置变换 <公开 静态 注释 = "设置变换. 原方法: SetTransformation. 官方简介: 构造一个变换, 允许从坐标系 \"FromSystem1\" 过渡到坐标系 \"ToSystem2\"." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 源坐标系 <类型 = 长整数>
+    参数 目标坐标系 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Transformation.SetTransformation (@<对象>, @<源坐标系>, @<目标坐标系>)
+    }
+
+    方法 设置变换_2 <公开 静态 注释 = "设置变换_2. 原方法: SetTransformation. 官方简介: 建立从基本坐标系 {P(0.,0.,0.), VX (1.,0.,0.), VY (0.,1.,0.)} 到由 Ax2d ToSystem 定义的局部坐标系的变换." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 目标坐标系 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Transformation.SetTransformation_2 (@<对象>, @<目标坐标系>)
+    }
+
+    方法 设置平移 <公开 静态 注释 = "设置平移. 原方法: SetTranslation. 官方简介: 把该变换设为平移. V 是平移向量." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 V <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Transformation.SetTranslation (@<对象>, @<V>)
+    }
+
+    方法 设置平移_2 <公开 静态 注释 = "设置平移_2. 原方法: SetTranslation. 官方简介: 把该变换设为从点 P1 到点 P2 的平移." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 P1 <类型 = 长整数>
+    参数 P2 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Transformation.SetTranslation_2 (@<对象>, @<P1>, @<P2>)
+    }
+
+    方法 二维设置变换 <公开 静态 注释 = "二维设置变换. 原方法: SetTrsf2d. 官方简介: 把该变换转换为 gp 包中的变换 T." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 T <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Transformation.SetTrsf2d (@<对象>, @<T>)
+    }
+
+    方法 是否负 <公开 静态 类型 = 逻辑型 注释 = "是否负. 原方法: IsNegative. 官方简介: 检查该变换是否为间接变换: 若变换向量部分矩阵的行列式小于 0 则返回 true." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Transformation.IsNegative (@<对象>)
+    }
+
+    方法 成形 <公开 静态 类型 = 整数 注释 = "成形. 原方法: Form. 官方简介: 返回该变换的性质, 值为 gp_TrsfForm 枚举的一个值. 返回变换的性质. 它可以是 Identity, Rotation, Translation, PntMirror, Ax1Mirror, Scale, CompoundTrsf" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Transformation.Form (@<对象>)
+    }
+
+    方法 缩放因子 <公开 静态 类型 = 小数 注释 = "缩放因子. 原方法: ScaleFactor. 官方简介: 返回变换的缩放值." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Transformation.ScaleFactor (@<对象>)
+    }
+
+    方法 二维变换 <公开 静态 类型 = 长整数 注释 = "二维变换. 原方法: Trsf2d. 官方简介: 把该变换转换为 gp_Trsf2d 变换. 返回 <me> 的非持久副本. -C++: return const&" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Transformation.Trsf2d (@<对象>)
+    }
+
+    方法 取值 <公开 静态 类型 = 小数 注释 = "取值. 原方法: Value. 官方简介: 返回变换的全局矩阵系数. 它是一个 2 行 X 3 列的矩阵." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 行 <类型 = 整数>
+    参数 列 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Transformation.Value (@<对象>, @<行>, @<列>)
+    }
+
+    方法 反转 <公开 静态 注释 = "反转. 原方法: Invert. 官方简介: 计算该变换的逆, 并把结果赋给该变换" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Transformation.Invert (@<对象>)
+    }
+
+    方法 反向 <公开 静态 类型 = 长整数 注释 = "反向. 原方法: Inverted. 官方简介: 计算该变换的逆并创建新变换. 若变换奇异则抛出 ConstructionError. 这意味着 ScaleFactor 小于或等于 gp 包的 Resolution." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Transformation.Inverted (@<对象>)
+    }
+
+    方法 相乘副本 <公开 静态 类型 = 长整数 注释 = "相乘副本. 原方法: Multiplied. 官方简介: 计算 Other 与 <me> 复合的变换. <me> * Other. 返回新变换" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Transformation.Multiplied (@<对象>, @<另一个>)
+    }
+
+    方法 相乘 <公开 静态 注释 = "相乘. 原方法: Multiply. 官方简介: 计算 Other 与 <me> 复合的变换. <me> = <me> * Other." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Transformation.Multiply (@<对象>, @<另一个>)
+    }
+
+    方法 幂 <公开 静态 注释 = "幂. 原方法: Power. 官方简介: 若 N < 0 且变换不可逆则抛出异常" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 N <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Transformation.Power (@<对象>, @<N>)
+    }
+
+    方法 幂副本 <公开 静态 类型 = 长整数 注释 = "幂副本. 原方法: Powered. 官方简介: 若 N < 0 且变换不可逆则抛出异常" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 N <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Transformation.Powered (@<对象>, @<N>)
+    }
+
+    方法 预相乘 <公开 静态 注释 = "预相乘. 原方法: PreMultiply. 官方简介: 计算 <me> 与 Other 复合的变换矩阵. <me> = Other * <me>" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Transformation.PreMultiply (@<对象>, @<另一个>)
+    }
+
+    方法 变换 <公开 静态 注释 = "变换. 原方法: Transforms. 官方简介: 对三元组 {X, Y} 应用变换 <me>." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 输出X <类型 = "小数 []">
+    参数 输出Y <类型 = "小数 []">
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Transformation.Transforms (@<对象>, @<输出X>, @<输出Y>)
+    }
+
+    方法 复制 <公开 静态 类型 = 长整数 注释 = "复制. 原方法: Copy. 官方简介: 创建一个新对象, 它是该变换的副本." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Transformation.Copy (@<对象>)
+    }
+
+}
+
+类 平面裁剪曲线 <公开 注释 = "平面裁剪曲线: 原类 Geom2d_TrimmedCurve (libTKG2d, 头文件 Geom2d/Geom2d_TrimmedCurve.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 定义由曲线参数域内两个参数值限定的曲线片段. 裁剪曲线由以下定义: - 基础曲线 - 限定它的两个参数值. 裁剪曲线与基础曲线的朝向可以相同或相反." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: Geom2d_TrimmedCurve. 官方简介: 由限于 U1 与 U2 之间的基础曲线 C 创建裁剪曲线." @嵌入式方法 = "">
+    参数 C <类型 = 长整数>
+    参数 U1 <类型 = 小数>
+    参数 U2 <类型 = 小数>
+    参数 方向 <类型 = 逻辑型>
+    参数 调整周期 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_TrimmedCurve.构造 (@<C>, @<U1>, @<U2>, @<方向>, @<调整周期>)
+    }
+
+    方法 反转 <公开 静态 注释 = "反转. 原方法: Reverse. 官方简介: 改变 <me> 的参数化方向. 第一与最后参数值被修改. 初始曲线的 \"StartPoint\" 变为反转曲线的 \"EndPoint\", 初始曲线的 \"EndPoint\" 变为反转曲线的 \"StartPoint\". 示例 - 若裁剪曲线由以下定义: - 参数范围为 [ 0.,1. ] 的基础曲线, 以及 - 两个裁剪值 U1(第一参数)与 U2(最后参数), 则反转裁剪曲线由以下定义: - 参数范围仍为 [ 0.,1. ] 的反转基础曲线, 以及 - 两个裁剪值 1. - U2(第一参数)与 1. - U1(最后参数)." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_TrimmedCurve.Reverse (@<对象>)
+    }
+
+    方法 反转参数 <公开 静态 类型 = 小数 注释 = "反转参数. 原方法: ReversedParameter. 官方简介: 返回 <me> 上参数为 U 的点在反向曲线上的参数." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_TrimmedCurve.ReversedParameter (@<对象>, @<U>)
+    }
+
+    方法 设置裁剪 <公开 静态 注释 = "设置裁剪. 原方法: SetTrim. 官方简介: 修改该裁剪曲线, 重新定义限制其基础曲线的参数值 U1 与 U2. 注意: 若基础曲线是周期的, 且 Sense 为 true(默认值)则裁剪曲线与基础曲线朝向相同, 若 Sense 为 false 则朝向相反. 警告 若基础曲线是周期的且 theAdjustPeriodic 为 True, 若基础曲线的参数原点位于裁剪曲线的弧内, 则裁剪曲线的边界可能不同于 U1 与 U2. 在此情形, 修改后的参数将等于 U1 或 U2 加或减周期. 若 theAdjustPeriodic 为 False, 参数 U1 与 U2 将保持不变. 异常: 若以下情形则抛出 Standard_ConstructionError: - 基础曲线不是周期的, 且 U1 或 U2 在基础曲线边界之外, 或 - U1 等于 U2." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U1 <类型 = 小数>
+    参数 U2 <类型 = 小数>
+    参数 方向 <类型 = 逻辑型>
+    参数 调整周期 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_TrimmedCurve.SetTrim (@<对象>, @<U1>, @<U2>, @<方向>, @<调整周期>)
+    }
+
+    方法 基曲线 <公开 静态 类型 = 长整数 注释 = "基曲线. 原方法: BasisCurve. 官方简介: 返回基础曲线. 警告 该函数不返回常量引用. 因此, 对返回值的任何修改都会直接修改修剪曲线." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_TrimmedCurve.BasisCurve (@<对象>)
+    }
+
+    方法 连续性 <公开 静态 类型 = 整数 注释 = "连续性. 原方法: Continuity. 官方简介: 返回该裁剪曲线基础曲线的全局连续性. C0 : 仅几何连续, C1 : 沿曲线一阶导数连续, C2 : 沿曲线二阶导数连续, C3 : 沿曲线三阶导数连续, CN : 连续性阶数为无穷." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_TrimmedCurve.Continuity (@<对象>)
+    }
+
+    方法 是否CN <公开 静态 类型 = 逻辑型 注释 = "是否CN. 原方法: IsCN. 官方简介: --- Purpose 若裁剪曲线的连续性阶数为 N 则返回 True. 裁剪曲线至少 \"C0\" 连续. 警告: 由于只考虑基础曲线的一部分, 裁剪曲线的连续性可能大于基础曲线的连续性. 若 N < 0 则抛出异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 N <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_TrimmedCurve.IsCN (@<对象>, @<N>)
+    }
+
+    方法 端点 <公开 静态 类型 = 长整数 注释 = "端点. 原方法: EndPoint. 官方简介: 返回 <me> 的终点. 该点是曲线在 \"LastParameter\" 处的求值." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_TrimmedCurve.EndPoint (@<对象>)
+    }
+
+    方法 首个参数 <公开 静态 类型 = 小数 注释 = "首个参数. 原方法: FirstParameter. 官方简介: 返回 <me> 的第一个参数值. 第一个参数是修剪曲线 \"StartPoint\" 的参数." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_TrimmedCurve.FirstParameter (@<对象>)
+    }
+
+    方法 是否闭合 <公开 静态 类型 = 逻辑型 注释 = "是否闭合. 原方法: IsClosed. 官方简介: 若 StartPoint 与 EndPoint 之间的距离小于或等于 gp 包的 Resolution 则返回 True." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_TrimmedCurve.IsClosed (@<对象>)
+    }
+
+    方法 是否周期 <公开 静态 类型 = 逻辑型 注释 = "是否周期. 原方法: IsPeriodic. 官方简介: 始终返回 FALSE(与基础曲线类型无关)." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_TrimmedCurve.IsPeriodic (@<对象>)
+    }
+
+    方法 周期 <公开 静态 类型 = 小数 注释 = "周期. 原方法: Period. 官方简介: 返回该修剪曲线基础曲线的周期. 若基础曲线不是周期的则抛出 Standard_NoSuchObject." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_TrimmedCurve.Period (@<对象>)
+    }
+
+    方法 末个参数 <公开 静态 类型 = 小数 注释 = "末个参数. 原方法: LastParameter. 官方简介: 返回 <me> 的最后参数值. 最后参数是修剪曲线 \"EndPoint\" 的参数." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_TrimmedCurve.LastParameter (@<对象>)
+    }
+
+    方法 起点 <公开 静态 类型 = 长整数 注释 = "起点. 原方法: StartPoint. 官方简介: 返回 <me> 的起点. 该点是由 \"FirstParameter\" 对曲线求值得到的. value and derivatives 警告: 返回的导数与基础曲线的导数朝向相同." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_TrimmedCurve.StartPoint (@<对象>)
+    }
+
+    方法 取点 <公开 静态 注释 = "取点. 原方法: D0. 官方简介: 若基础曲线是 OffsetCurve, 有时无法在参数 U 处对曲线求值(参见 OffsetCurve 类)." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_TrimmedCurve.D0 (@<对象>, @<U>, @<输出P>)
+    }
+
+    方法 取一阶导 <公开 静态 注释 = "取一阶导. 原方法: D1. 官方简介: 若曲线的连续性不是 C1 则抛出异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    参数 输出V1 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_TrimmedCurve.D1 (@<对象>, @<U>, @<输出P>, @<输出V1>)
+    }
+
+    方法 取二阶导 <公开 静态 注释 = "取二阶导. 原方法: D2. 官方简介: 若曲线的连续性不是 C2 则抛出异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    参数 输出V1 <类型 = 长整数>
+    参数 输出V2 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_TrimmedCurve.D2 (@<对象>, @<U>, @<输出P>, @<输出V1>, @<输出V2>)
+    }
+
+    方法 取三阶导 <公开 静态 注释 = "取三阶导. 原方法: D3. 官方简介: 若曲线的连续性不是 C3 则抛出异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    参数 输出V1 <类型 = 长整数>
+    参数 输出V2 <类型 = 长整数>
+    参数 输出V3 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_TrimmedCurve.D3 (@<对象>, @<U>, @<输出P>, @<输出V1>, @<输出V2>, @<输出V3>)
+    }
+
+    方法 取N阶导 <公开 静态 类型 = 长整数 注释 = "取N阶导. 原方法: DN. 官方简介: 对于该裁剪曲线的参数 U 的点, 计算对应于第 N 阶导数的向量. 警告 返回的导数向量与基础曲线的导数向量朝向相同, 即使裁剪曲线与基础曲线的朝向不同. 异常: 若 N 小于 1 则抛出 Standard_RangeError. geometric transformations" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 N <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_TrimmedCurve.DN (@<对象>, @<U>, @<N>)
+    }
+
+    方法 变换 <公开 静态 注释 = "变换. 原方法: Transform. 官方简介: 对该修剪曲线施加变换 T. 警告 基础曲线也会被修改." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 T <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_TrimmedCurve.Transform (@<对象>, @<T>)
+    }
+
+    方法 变换参数 <公开 静态 类型 = 小数 注释 = "变换参数. 原方法: TransformedParameter. 官方简介: 返回 <me> 上参数为 U 的点经变换后在变换后曲线上的参数." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 T <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_TrimmedCurve.TransformedParameter (@<对象>, @<U>, @<T>)
+    }
+
+    方法 参数化变换 <公开 静态 类型 = 小数 注释 = "参数化变换. 原方法: ParametricTransformation. 官方简介: 返回一个系数, 用于计算 <me> 上点经变换后在变换后曲线上的参数." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 T <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_TrimmedCurve.ParametricTransformation (@<对象>, @<T>)
+    }
+
+    方法 复制 <公开 静态 类型 = 长整数 注释 = "复制. 原方法: Copy. 官方简介: 创建一个新对象, 它是该裁剪曲线的副本." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_TrimmedCurve.Copy (@<对象>)
+    }
+
+    方法 转储JSON <公开 静态 类型 = 文本型 注释 = "转储JSON. 原方法: DumpJson. 官方简介: 把自身内容转储到流中" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 深度 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_TrimmedCurve.DumpJson (@<对象>, @<深度>)
+    }
+
+}
+
+类 平面向量基类 <公开 注释 = "平面向量基类: 原类 Geom2d_Vector (libTKG2d, 头文件 Geom2d/Geom2d_Vector.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 抽象类 Vector 描述平面空间中向量的公共行为. Geom2d 包提供两个具体向量类: Geom2d_Direction(单位向量)与 Geom2d_VectorWithMagnitude." @禁止创建对象 = 真>
+{
+
+    方法 反转 <公开 静态 注释 = "反转. 原方法: Reverse. 官方简介: 反转向量 <me>." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Vector.Reverse (@<对象>)
+    }
+
+    方法 反转副本 <公开 静态 类型 = 长整数 注释 = "反转副本. 原方法: Reversed. 官方简介: 返回 <me> 的反向副本." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Vector.Reversed (@<对象>)
+    }
+
+    方法 角度 <公开 静态 类型 = 小数 注释 = "角度. 原方法: Angle. 官方简介: 计算该向量与向量 Other 之间的角度值, 单位为弧度. 结果介于 -Pi 与 Pi 之间. 朝向为从该向量到向量 Other. 若两个向量之一是大小为零的向量则抛出 VectorWithNullMagnitude, 因为角度值是不确定的." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Vector.Angle (@<对象>, @<另一个>)
+    }
+
+    方法 坐标 <公开 静态 注释 = "坐标. 原方法: Coord. 官方简介: 返回 <me> 的坐标." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 输出X <类型 = "小数 []">
+    参数 输出Y <类型 = "小数 []">
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Vector.Coord (@<对象>, @<输出X>, @<输出Y>)
+    }
+
+    方法 X <公开 静态 类型 = 小数 注释 = "X. 原方法: X. 官方简介: 返回 <me> 的 X 坐标." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Vector.X (@<对象>)
+    }
+
+    方法 Y <公开 静态 类型 = 小数 注释 = "Y. 原方法: Y. 官方简介: 返回 <me> 的 Y 坐标." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Vector.Y (@<对象>)
+    }
+
+    方法 点积 <公开 静态 类型 = 小数 注释 = "点积. 原方法: Dot. 官方简介: 返回两个向量的标量积." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Vector.Dot (@<对象>, @<另一个>)
+    }
+
+    方法 二维向量 <公开 静态 类型 = 长整数 注释 = "二维向量. 原方法: Vec2d. 官方简介: 返回 <me> 的非持久副本." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_Vector.Vec2d (@<对象>)
+    }
+
+}
+
+类 平面有模向量 <公开 注释 = "平面有模向量: 原类 Geom2d_VectorWithMagnitude (libTKG2d, 头文件 Geom2d/Geom2d_VectorWithMagnitude.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 定义带模长的向量. 带模长的向量可以长度为零." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: Geom2d_VectorWithMagnitude. 官方简介: 创建 V 的持久副本." @嵌入式方法 = "">
+    参数 V <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_VectorWithMagnitude.构造 (@<V>)
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: Geom2d_VectorWithMagnitude. 官方简介: 用两个笛卡尔坐标创建向量." @嵌入式方法 = "">
+    参数 X <类型 = 小数>
+    参数 Y <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_VectorWithMagnitude.构造_2 (@<X>, @<Y>)
+    }
+
+    方法 创建_3 <公开 静态 类型 = 长整数 注释 = "创建_3. 原构造器: Geom2d_VectorWithMagnitude. 官方简介: 创建从点 P1 到点 P2 的向量. 向量的模是 P1 与 P2 之间的距离" @嵌入式方法 = "">
+    参数 P1 <类型 = 长整数>
+    参数 P2 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_VectorWithMagnitude.构造_3 (@<P1>, @<P2>)
+    }
+
+    方法 设置坐标 <公开 静态 注释 = "设置坐标. 原方法: SetCoord. 官方简介: 把 <me> 设置为 X, Y 坐标." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 X <类型 = 小数>
+    参数 Y <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_VectorWithMagnitude.SetCoord (@<对象>, @<X>, @<Y>)
+    }
+
+    方法 二维设置向量 <公开 静态 注释 = "二维设置向量. 原方法: SetVec2d." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 V <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_VectorWithMagnitude.SetVec2d (@<对象>, @<V>)
+    }
+
+    方法 设置X <公开 静态 注释 = "设置X. 原方法: SetX. 官方简介: 修改 <me> 的 X 坐标." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 X <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_VectorWithMagnitude.SetX (@<对象>, @<X>)
+    }
+
+    方法 设置Y <公开 静态 注释 = "设置Y. 原方法: SetY. 官方简介: 修改 <me> 的 Y 坐标" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 Y <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_VectorWithMagnitude.SetY (@<对象>, @<Y>)
+    }
+
+    方法 模长 <公开 静态 类型 = 小数 注释 = "模长. 原方法: Magnitude. 官方简介: 返回 <me> 的模." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_VectorWithMagnitude.Magnitude (@<对象>)
+    }
+
+    方法 平方模长 <公开 静态 类型 = 小数 注释 = "平方模长. 原方法: SquareMagnitude. 官方简介: 返回 <me> 的模的平方." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_VectorWithMagnitude.SquareMagnitude (@<对象>)
+    }
+
+    方法 添加 <公开 静态 注释 = "添加. 原方法: Add. 官方简介: 把向量 Other 加到 <me>." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_VectorWithMagnitude.Add (@<对象>, @<另一个>)
+    }
+
+    方法 已添加 <公开 静态 类型 = 长整数 注释 = "已添加. 原方法: Added. 官方简介: 把向量 Other 加到 <me>." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_VectorWithMagnitude.Added (@<对象>, @<另一个>)
+    }
+
+    方法 叉积副本 <公开 静态 类型 = 小数 注释 = "叉积副本. 原方法: Crossed. 官方简介: 计算 <me> 与 Other 之间的叉积 <me> ^ Other. 返回一个新向量." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_VectorWithMagnitude.Crossed (@<对象>, @<另一个>)
+    }
+
+    方法 除以 <公开 静态 注释 = "除以. 原方法: Divide. 官方简介: <me> 除以标量." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 标量 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_VectorWithMagnitude.Divide (@<对象>, @<标量>)
+    }
+
+    方法 相除副本 <公开 静态 类型 = 长整数 注释 = "相除副本. 原方法: Divided. 官方简介: 把 <me> 除以一个标量. 返回一个新向量." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 标量 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_VectorWithMagnitude.Divided (@<对象>, @<标量>)
+    }
+
+    方法 相乘副本 <公开 静态 类型 = 长整数 注释 = "相乘副本. 原方法: Multiplied. 官方简介: 计算向量 <me> 与一个标量的乘积. 返回一个新向量." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 标量 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_VectorWithMagnitude.Multiplied (@<对象>, @<标量>)
+    }
+
+    方法 相乘 <公开 静态 注释 = "相乘. 原方法: Multiply. 官方简介: 计算向量 <me> 与一个标量的乘积." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 标量 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_VectorWithMagnitude.Multiply (@<对象>, @<标量>)
+    }
+
+    方法 归一化 <公开 静态 注释 = "归一化. 原方法: Normalize. 官方简介: 归一化 <me>." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_VectorWithMagnitude.Normalize (@<对象>)
+    }
+
+    方法 归一化副本 <公开 静态 类型 = 长整数 注释 = "归一化副本. 原方法: Normalized. 官方简介: 返回 <me> 归一化后的副本." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_VectorWithMagnitude.Normalized (@<对象>)
+    }
+
+    方法 减去 <公开 静态 注释 = "减去. 原方法: Subtract. 官方简介: 从 <me> 中减去向量 Other." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_VectorWithMagnitude.Subtract (@<对象>, @<另一个>)
+    }
+
+    方法 相减副本 <公开 静态 类型 = 长整数 注释 = "相减副本. 原方法: Subtracted. 官方简介: 从 <me> 中减去向量 Other. 返回一个新向量." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_VectorWithMagnitude.Subtracted (@<对象>, @<另一个>)
+    }
+
+    方法 变换 <公开 静态 注释 = "变换. 原方法: Transform. 官方简介: 对该向量施加变换 T." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 T <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_VectorWithMagnitude.Transform (@<对象>, @<T>)
+    }
+
+    方法 复制 <公开 静态 类型 = 长整数 注释 = "复制. 原方法: Copy. 官方简介: 创建一个新对象, 它是该向量的副本." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKG2d.Geom2d_VectorWithMagnitude.Copy (@<对象>)
+    }
+
+}

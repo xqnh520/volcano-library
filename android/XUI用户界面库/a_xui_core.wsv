@@ -1,0 +1,69 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.安卓.XUI <注释 = "XUI 安卓 UI 工具库封装" @文档 = "category = \"XUI\"" @安卓.外部库 = "libs\\XUI-1.2.2.aar\nlibs\\androidx.activity-activity-1.2.4.aar\nlibs\\androidx.annotation-annotation-1.2.0.jar\nlibs\\androidx.annotation-annotation-experimental-1.0.0.aar\nlibs\\androidx.appcompat-appcompat-1.3.1.aar\nlibs\\androidx.appcompat-appcompat-resources-1.3.1.aar\nlibs\\androidx.arch.core-core-common-2.1.0.jar\nlibs\\androidx.arch.core-core-runtime-2.1.0.aar\nlibs\\androidx.cardview-cardview-1.0.0.aar\nlibs\\androidx.collection-collection-1.1.0.jar\nlibs\\androidx.constraintlayout-constraintlayout-2.0.1.aar\nlibs\\androidx.constraintlayout-constraintlayout-solver-2.0.1.jar\nlibs\\androidx.coordinatorlayout-coordinatorlayout-1.1.0.aar\nlibs\\androidx.core-core-1.5.0.aar\nlibs\\androidx.cursoradapter-cursoradapter-1.0.0.aar\nlibs\\androidx.customview-customview-1.0.0.aar\nlibs\\androidx.documentfile-documentfile-1.0.0.aar\nlibs\\androidx.drawerlayout-drawerlayout-1.0.0.aar\nlibs\\androidx.dynamicanimation-dynamicanimation-1.0.0.aar\nlibs\\androidx.exifinterface-exifinterface-1.0.0.aar\nlibs\\androidx.fragment-fragment-1.3.6.aar\nlibs\\androidx.interpolator-interpolator-1.0.0.aar\nlibs\\androidx.legacy-legacy-support-core-utils-1.0.0.aar\nlibs\\androidx.lifecycle-lifecycle-common-2.3.1.jar\nlibs\\androidx.lifecycle-lifecycle-livedata-2.0.0.aar\nlibs\\androidx.lifecycle-lifecycle-livedata-core-2.3.1.aar\nlibs\\androidx.lifecycle-lifecycle-runtime-2.3.1.aar\nlibs\\androidx.lifecycle-lifecycle-viewmodel-2.3.1.aar\nlibs\\androidx.lifecycle-lifecycle-viewmodel-savedstate-2.3.1.aar\nlibs\\androidx.loader-loader-1.0.0.aar\nlibs\\androidx.localbroadcastmanager-localbroadcastmanager-1.0.0.aar\nlibs\\androidx.print-print-1.0.0.aar\nlibs\\androidx.recyclerview-recyclerview-1.2.1.aar\nlibs\\androidx.savedstate-savedstate-1.1.0.aar\nlibs\\androidx.tracing-tracing-1.0.0.aar\nlibs\\androidx.transition-transition-1.2.0.aar\nlibs\\androidx.vectordrawable-vectordrawable-1.1.0.aar\nlibs\\androidx.vectordrawable-vectordrawable-animated-1.1.0.aar\nlibs\\androidx.versionedparcelable-versionedparcelable-1.1.1.aar\nlibs\\androidx.viewpager-viewpager-1.0.0.aar\nlibs\\androidx.viewpager2-viewpager2-1.0.0.aar\nlibs\\com.github.bumptech.glide-annotations-4.11.0.jar\nlibs\\com.github.bumptech.glide-disklrucache-4.11.0.jar\nlibs\\com.github.bumptech.glide-gifdecoder-4.11.0.aar\nlibs\\com.github.bumptech.glide-glide-4.11.0.aar\nlibs\\com.google.android.material-material-1.4.0.aar\nlibs\\io.github.inflationx-calligraphy3-3.1.1.aar\nlibs\\io.github.inflationx-viewpump-2.0.3.aar\nlibs\\org.jetbrains-annotations-13.0.jar\nlibs\\org.jetbrains.kotlin-kotlin-stdlib-1.3.21.jar\nlibs\\org.jetbrains.kotlin-kotlin-stdlib-common-1.3.21.jar"
+        @安卓.编译时系统需求 = 35>
+
+类 XUI全局 <公开 注释 = "★ 本类封装自 XUI 1.2.2 (https://github.com/xuexiangjys/XUI)." 注释 = "XUI 全局初始化与配置。正常情况下 XUIInitProvider 会在程序启动时自动完成初始化，无需手工调用。"
+        @文档 = "category = \"XUI.核心\"" @别名 = "com.xuexiang.xui.XUI">
+{
+    方法 初始化 <公开 静态 注释 = "初始化 XUI 全局上下文。" 注释 = "XUIInitProvider 已自动调用本方法，仅在自定义 Application 且禁用自动初始化时需要手工调用。">
+    参数 应用程序对象 <类型 = 安卓应用程序>
+    {
+        @ com.xuexiang.xui.XUI.init(@<应用程序对象>);
+    }
+
+    方法 取上下文 <公开 静态 类型 = 安卓环境 注释 = "返回 XUI 持有的全局上下文。" @禁止流程检查 = 真>
+    {
+        @ return (android.content.Context) com.xuexiang.xui.XUI.getContext();
+    }
+
+    方法 初始化字体 <公开 静态 注释 = "设置全局默认字体（assets 内的字体文件路径）。">
+    参数 字体资源路径 <类型 = 文本型 注释 = "例如 \"fonts/xxx.ttf\"，空文本表示不启用。">
+    {
+        @ com.xuexiang.xui.XUI.initFontStyle(@<字体资源路径>);
+    }
+
+    方法 设置调试模式 <公开 静态 注释 = "设置是否输出 XUI 调试日志。">
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ com.xuexiang.xui.XUI.debug(@<启用>);
+    }
+
+    方法 设置调试标志 <公开 静态 注释 = "用法：设置调试模式。 参数：tag=文本。 返回：无。 原方法：XUI.debug()">
+    参数 标志 <类型 = 文本型>
+    {
+        @ com.xuexiang.xui.XUI.debug(@<标志>);
+    }
+
+    方法 取默认字体路径 <公开 静态 类型 = 文本型 注释 = "返回全局默认字体资源路径。" @禁止流程检查 = 真>
+    {
+        @ return com.xuexiang.xui.XUI.getDefaultFontAssetPath();
+    }
+
+    方法 取默认字体 <公开 静态 类型 = 字体类 注释 = "返回全局默认字体对象。" @禁止流程检查 = 真>
+    {
+        @ return com.xuexiang.xui.XUI.getDefaultTypeface();
+    }
+
+    方法 取屏幕类型 <公开 静态 类型 = 整数 注释 = "返回设备屏幕类型（手机 / 平板）。" @禁止流程检查 = 真>
+    {
+        @ return com.xuexiang.xui.XUI.getScreenType();
+    }
+
+    方法 是否平板 <公开 静态 类型 = 逻辑型 注释 = "返回当前设备是否为平板。" @禁止流程检查 = 真>
+    {
+        @ return com.xuexiang.xui.XUI.isTablet();
+    }
+
+    方法 初始化主题 <公开 静态 注释 = "为指定窗口应用 XUI 主题初始化。">
+    参数 窗口对象 <类型 = 安卓窗口>
+    {
+        @ com.xuexiang.xui.XUI.initTheme(@<窗口对象>);
+    }
+
+    方法 取主主题色 <公开 静态 类型 = 整数 注释 = "返回当前主题的主色调。" @禁止流程检查 = 真>
+    参数 上下文对象 <类型 = 安卓环境>
+    {
+        @ return com.xuexiang.xui.XUI.getMainThemeColor(@<上下文对象>);
+    }
+}

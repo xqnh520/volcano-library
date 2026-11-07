@@ -1,0 +1,1092 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.安卓.OCCT几何 <注释 = "OpenCASCADE 7.8.0 全库封装 (自动生成, 请勿手改). 名称已汉化为中文显示名, 注释内附英文原名. TK 库 libTKOffset: 13 个类 / 143 个方法.">
+
+类 拔模角构造器 <公开 注释 = "拔模角构造器: 原类 BRepOffsetAPI_DraftAngle (libTKOffset, 头文件 BRepOffsetAPI/BRepOffsetAPI_DraftAngle.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 为形状添加拔模斜度的变换. 结果形状通过定义要逐个拔模的面, 以及其拔模变换的几何属性来构造. 每个拔模变换沿一系列彼此相切且包含待拔模面的面传播. 该算法在模具或铸模的构造中很有用. 它便于取出所生产的制品. DraftAngle 对象提供以下框架: - 用给定形状初始化构造算法 - 获取刻画待拔模面的数据 - 实现构造算法 - 查询结果. 警告: - 该算法处理平面, 圆柱和圆锥面. - 不要使用向某个面添加拔模角后会改变拓扑的形状. 例如, 这将涉及创建新顶点, 边或面, 或消除现有顶点, 边或面. - 与待拔模面相切连续的任何面也将被拔模. 这些相连的面也必须满足上述条件." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: BRepOffsetAPI_DraftAngle. 官方简介: 构造用于在形状的面上执行添加拔模变换的空算法. 使用 Init 函数定义要拔模的形状." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_DraftAngle.构造 ()
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: BRepOffsetAPI_DraftAngle. 官方简介: 初始化算法以在形状 S 的面上执行添加拔模变换. S 将被称为该算法的初始形状." @嵌入式方法 = "">
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_DraftAngle.构造_2 (@<S>)
+    }
+
+    方法 清除 <公开 静态 注释 = "清除. 原方法: Clear. 官方简介: 取消该算法对初始形状执行的所有锥度添加变换的结果. 这些结果由对函数 Add 的连续调用定义." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_DraftAngle.Clear (@<对象>)
+    }
+
+    方法 初始化 <公开 静态 注释 = "初始化. 原方法: Init. 官方简介: 用形状 S 初始化或重新初始化该添加拔模算法. S 将被称为该算法的初始形状." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_DraftAngle.Init (@<对象>, @<S>)
+    }
+
+    方法 添加 <公开 静态 注释 = "添加. 原方法: Add. 官方简介: 把面 F、方向 Direction、角度 Angle、平面 NeutralPlane 与标志 Flag 添加到构造时创建的框架, 并用这些数据定义拔模添加变换. F 是面, 它属于该算法的初始形状或由函数 Init 加载的形状. 只有平面、圆柱或圆锥面可以被拔模: - 若面 F 是平面的, 则通过使它绕平面 NeutralPlane 与 F 的交线倾斜角度 Angle 来拔模. Direction 指示 NeutralPlane 的哪一侧: 若 Angle 为正则去除材料, 若 Angle 为负则添加材料. - 若 F 是圆柱或圆锥面, 则在单个面上以相同方式变换, 若 F 是圆柱面则产生圆锥面, 若它已是圆锥面则产生圆锥或圆柱面. 拔模添加变换从面 F 沿包含 F 的相切面系列传播, 这些面是相互相切的平面、圆柱或圆锥面. 使用函数 AddDone 检查该拔模添加变换是否成功. 警告 若以下情形则不做任何事: - 面 F 不属于该算法的初始形状, 或 - 面 F 不是平面、圆柱或圆锥面. 异常: - 若初始形状未被定义, 即若该算法未用非空构造函数或 Init 函数初始化, 则抛出 Standard_NullObject. - 若上一次调用 Add 失败则抛出 Standard_ConstructionError. 应当使用函数 AddDone 检查这一点, 并使用函数 Remove 取消不成功的拔模添加变换的结果并取回先前的形状." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 F <类型 = 长整数>
+    参数 方向 <类型 = 长整数>
+    参数 角度 <类型 = 小数>
+    参数 中性面 <类型 = 长整数>
+    参数 标志 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_DraftAngle.Add (@<对象>, @<F>, @<方向>, @<角度>, @<中性面>, @<标志>)
+    }
+
+    方法 是否添加成功 <公开 静态 类型 = 逻辑型 注释 = "是否添加成功. 原方法: AddDone. 官方简介: 若该算法在最后一次调用 Add 中执行的先前拔模添加变换成功则返回 true. 若 AddDone 返回 false: - 函数 ProblematicShape 返回发生错误的面, - 必须使用函数 Remove 取消不成功的拔模添加变换的结果并取回先前的形状. 异常: 若初始形状未被定义, 即若该算法未用非空构造函数或 .Init 函数初始化, 则抛出 Standard_NullObject." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_DraftAngle.AddDone (@<对象>)
+    }
+
+    方法 移除 <公开 静态 注释 = "移除. 原方法: Remove. 官方简介: 取消该算法先前对面 F 及包含 F 的相切面系列执行的拔模添加变换, 并取回最后一次拔模添加变换之前的形状. 警告 若上一次调用 Add 失败, 你将必须使用该函数. 使用函数 AddDone 检查它. 异常: - 若初始形状未被定义, 即若该算法未用非空构造函数或 Init 函数初始化, 则抛出 Standard_NullObject. - 若 F 未被添加或已被移除则抛出 Standard_NoSuchObject." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 F <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_DraftAngle.Remove (@<对象>, @<F>)
+    }
+
+    方法 有问题形状 <公开 静态 类型 = 长整数 注释 = "有问题形状. 原方法: ProblematicShape. 官方简介: 返回在 Add 调用失败后或 IsDone 返回 false 时发生错误的形状. 异常: 若初始形状未定义, 即该算法未使用非空构造函数或 Init 函数初始化, 则抛出 Standard_NullObject." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_DraftAngle.ProblematicShape (@<对象>)
+    }
+
+    方法 状态 <公开 静态 类型 = 整数 注释 = "状态. 原方法: Status. 官方简介: 当发生错误(面、边或顶点的重算问题)时返回错误状态. 否则返回 Draft_NoError. 若 AddDone 返回 Standard_False, 或当 IsDone 返回 Standard_False 时可调用该方法." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_DraftAngle.Status (@<对象>)
+    }
+
+    方法 构建 <公开 静态 注释 = "构建. 原方法: Build. 官方简介: 构造结果形状(重定义自 MakeShape)." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_DraftAngle.Build (@<对象>)
+    }
+
+    方法 纠正线框 <公开 静态 注释 = "纠正线框. 原方法: CorrectWires." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_DraftAngle.CorrectWires (@<对象>)
+    }
+
+    方法 已修改形状 <公开 静态 类型 = 长整数 注释 = "已修改形状. 原方法: ModifiedShape. 官方简介: 返回与 <S> 对应的修改后形状. S 可以对应整个初始形状或其子形状. 异常: 若 S 不是初始形状或不是已对其应用变换的初始形状的子形状, 则抛出 Standard_NoSuchObject." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_DraftAngle.ModifiedShape (@<对象>, @<S>)
+    }
+
+}
+
+类 相邻边查找器 <公开 注释 = "相邻边查找器: 原类 BRepOffsetAPI_FindContigousEdges (libTKOffset, 头文件 BRepOffsetAPI/BRepOffsetAPI_FindContigousEdges.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 提供识别连续边界以实现连续性控制(C0, C1, ...)的方法." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: BRepOffsetAPI_FindContigousEdges. 官方简介: 初始化在形状上识别连通边的算法, tolerance 作为连通性公差(默认为 1.0e-6). 该公差值用于确定两条边或边段是否重合. 使用函数 Add 定义要检查的形状. 把选项设为 false. 该参数(默认为 true)将在后续软件版本中用于执行退化形状的分析." @嵌入式方法 = "">
+    参数 容差 <类型 = 小数>
+    参数 选项 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_FindContigousEdges.构造 (@<容差>, @<选项>)
+    }
+
+    方法 初始化 <公开 静态 注释 = "初始化. 原方法: Init. 官方简介: 使用连通性公差 tolerance 初始化该算法以识别形状上的连续边. 该公差值用于确定两条边或边的两段是否重合. 使用函数 Add 定义要检查的形状. 把 <option> 设为 false." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 容差 <类型 = 小数>
+    参数 选项 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_FindContigousEdges.Init (@<对象>, @<容差>, @<选项>)
+    }
+
+    方法 添加 <公开 静态 注释 = "添加. 原方法: Add. 官方简介: 把形状 shape 添加到由该算法检查的形状列表. 一旦所有要检查的形状都已添加, 使用函数 Perform 查找相邻边, 并使用函数 ContigousEdge 返回这些边." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 形状 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_FindContigousEdges.Add (@<对象>, @<形状>)
+    }
+
+    方法 执行 <公开 静态 注释 = "执行. 原方法: Perform. 官方简介: 查找添加至该算法的两个或更多形状的边中重合的部分, 并在初始形状的副本上把这些边分解为相连接与不相连接的部分. 函数 ContigousEdge 返回相连接边. 函数 Modified 可用于返回初始形状的修改副本, 其中一条或多条边被分解为相连接与不相连接的部分. 警告 必须在所有要检查的形状都已添加之后使用该函数. 之后不能再添加更多形状然后重复调用 Perform." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_FindContigousEdges.Perform (@<对象>)
+    }
+
+    方法 边数 <公开 静态 类型 = 整数 注释 = "桩(本地不可用): 生成期剔除(编译失败). 边数. 原方法: NbEdges. 官方简介: 给出边数量(自由边 + 连续边 + 多重边)" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_FindContigousEdges.NbEdges (@<对象>)
+    }
+
+    方法 相邻边数 <公开 静态 类型 = 整数 注释 = "相邻边数. 原方法: NbContigousEdges. 官方简介: 返回函数 Perform 在添加到此算法的形状上找到的连续边数量." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_FindContigousEdges.NbContigousEdges (@<对象>)
+    }
+
+    方法 相邻边 <公开 静态 类型 = 长整数 注释 = "相邻边. 原方法: ContigousEdge. 官方简介: 返回函数 Perform 在添加到该算法的形状上找到的索引 index 的连续边. 异常: 在以下情况下抛出 Standard_OutOfRange: - index 小于 1, 或 - index 大于函数 Perform 在添加到该算法的形状上找到的连续边数量." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_FindContigousEdges.ContigousEdge (@<对象>, @<索引>)
+    }
+
+    方法 取截面源边界 <公开 静态 类型 = 长整数 注释 = "取截面源边界. 原方法: SectionToBoundary. 官方简介: 返回初始形状上的边, 其修改副本包含该边段 section. section 与函数 Perform 找到的相连接边重合. 使用函数 ContigousEdgeCouple 获得有效的 section. 该信息对验证目的有用, 因为它提供了确定相连接边所属曲面的手段. 异常: 若 section 不与相连接边重合则抛出 Standard_NoSuchObject. 使用函数 ContigousEdgeCouple 获得有效的 section." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 截面 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_FindContigousEdges.SectionToBoundary (@<对象>, @<截面>)
+    }
+
+    方法 退化形状数 <公开 静态 类型 = 整数 注释 = "退化形状数. 原方法: NbDegeneratedShapes. 官方简介: 给出退化形状的数量" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_FindContigousEdges.NbDegeneratedShapes (@<对象>)
+    }
+
+    方法 退化形状 <公开 静态 类型 = 长整数 注释 = "退化形状. 原方法: DegeneratedShape. 官方简介: 给出退化形状" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_FindContigousEdges.DegeneratedShape (@<对象>, @<索引>)
+    }
+
+    方法 是否退化 <公开 静态 类型 = 逻辑型 注释 = "是否退化. 原方法: IsDegenerated. 官方简介: 指示输入形状是否退化" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 形状 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_FindContigousEdges.IsDegenerated (@<对象>, @<形状>)
+    }
+
+    方法 是否已修改 <公开 静态 类型 = 逻辑型 注释 = "是否已修改. 原方法: IsModified. 官方简介: 若初始形状 shape 的副本被函数 Perform 修改, 则返回 true(即若其一条或多条边被拆分为连续与非连续段). 警告: 若 shape 不是添加到该算法的初始形状之一, 则返回 false." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 形状 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_FindContigousEdges.IsModified (@<对象>, @<形状>)
+    }
+
+    方法 已修改 <公开 静态 类型 = 长整数 注释 = "已修改. 原方法: Modified. 官方简介: 返回修改后的形状. 若形状未被修改则抛出 NoSuchObject" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 形状 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_FindContigousEdges.Modified (@<对象>, @<形状>)
+    }
+
+    方法 转储 <公开 静态 注释 = "转储. 原方法: Dump. 官方简介: 转储结果形状的属性." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_FindContigousEdges.Dump (@<对象>)
+    }
+
+}
+
+类 拔模构造器 <公开 注释 = "拔模构造器: 原类 BRepOffsetAPI_MakeDraft (libTKOffset, 头文件 BRepOffsetAPI/BRepOffsetAPI_MakeDraft.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 沿一条线框构建拔模曲面." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: BRepOffsetAPI_MakeDraft. 官方简介: 构造由形状 Shape、方向 Dir 与角度 Angle 定义的拔模曲面对象. Shape 必须是有自由边界的 TopoDS_Wire、TopoDS_Face 或 TopoDS_Shell. 异常: 若 Shape 不是有自由边界的 TopoDS_Wire、TopoDS_Face 或 TopoDS_Shell, 则抛出 Standard_NotDone." @嵌入式方法 = "">
+    参数 形状 <类型 = 长整数>
+    参数 方向 <类型 = 长整数>
+    参数 角度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakeDraft.构造 (@<形状>, @<方向>, @<角度>)
+    }
+
+    方法 设置选项 <公开 静态 注释 = "设置选项. 原方法: SetOptions. 官方简介: 设置该拔模工具的参数. 若必须执行过渡, 则它可由模式 Style 定义为 RightCorner 或 RoundCorner, RightCorner 是由尖角定义的角, RoundCorner 是圆角. AngleMin 是用于检测是否必须执行过渡的角度公差. AngleMax 设置可执行 RightCorner 过渡的最大值. AngleMin 与 AngleMax 以弧度表示." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 样式 <类型 = 整数>
+    参数 角度最小 <类型 = 小数>
+    参数 角度最大 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakeDraft.SetOptions (@<对象>, @<样式>, @<角度最小>, @<角度最大>)
+    }
+
+    方法 设置拔模 <公开 静态 注释 = "设置拔模. 原方法: SetDraft. 官方简介: 设置该对象的拔模方向. 若 IsInternal 为 true, 则拔模在构造函数所用参数 Shape 的内部." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 是否内部 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakeDraft.SetDraft (@<对象>, @<是否内部>)
+    }
+
+    方法 执行 <公开 静态 注释 = "执行. 原方法: Perform. 官方简介: 使用长度 LengthMax 作为两个拔模面之间角边的最大长度执行拔模." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 长度最大 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakeDraft.Perform (@<对象>, @<长度最大>)
+    }
+
+    方法 执行_2 <公开 静态 注释 = "执行_2. 原方法: Perform. 官方简介: 执行拔模直到曲面 Surface. 若 KeepInsideSurface 为 true, 则 Surface 中位于拔模内部的部分保留在结果中." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 曲面 <类型 = 长整数>
+    参数 保留面内 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakeDraft.Perform_2 (@<对象>, @<曲面>, @<保留面内>)
+    }
+
+    方法 执行_3 <公开 静态 注释 = "执行_3. 原方法: Perform. 官方简介: 执行拔模直到形状 StopShape. 若 KeepOutSide 为 true, 则 StopShape 中位于拔模之外的部分保留在结果中." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 截止形状 <类型 = 长整数>
+    参数 保留外侧 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakeDraft.Perform_3 (@<对象>, @<截止形状>, @<保留外侧>)
+    }
+
+    方法 壳 <公开 静态 类型 = 长整数 注释 = "壳. 原方法: Shell. 官方简介: 返回沿线框执行拔模所得到的壳." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakeDraft.Shell (@<对象>)
+    }
+
+}
+
+类 扫掠构造器 <公开 注释 = "扫掠构造器: 原类 BRepOffsetAPI_MakeEvolved (libTKOffset, 头文件 BRepOffsetAPI/BRepOffsetAPI_MakeEvolved.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 描述构建演化形状的功能. 演化形状由平面脊线(面或线框)与轮廓(线框)构建. 演化形状是轮廓沿脊线的无自交扫掠(管道). 自交点被移除. MakeEvolved 对象提供以下框架: - 定义演化形状的构造 - 实现构造算法 - 查询结果. 演化形状的计算方式: 1 - 轮廓沿脊线扫掠. 2 - 移除自交." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: BRepOffsetAPI_MakeEvolved." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakeEvolved.构造 ()
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: BRepOffsetAPI_MakeEvolved. 官方简介: 构造通过沿脊柱(theSpine)扫掠轮廓(theProfile)得到的演化形状. theSpine 只能是线框或面类型的形状. 详细信息参见该类的描述." @嵌入式方法 = "">
+    参数 脊线 <类型 = 长整数>
+    参数 轮廓 <类型 = 长整数>
+    参数 连接类型 <类型 = 整数>
+    参数 轮廓为轴 <类型 = 逻辑型>
+    参数 是否实体 <类型 = 逻辑型>
+    参数 轮廓在脊线上 <类型 = 逻辑型>
+    参数 容差 <类型 = 小数>
+    参数 是否体积 <类型 = 逻辑型>
+    参数 并行运行 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakeEvolved.构造_2 (@<脊线>, @<轮廓>, @<连接类型>, @<轮廓为轴>, @<是否实体>, @<轮廓在脊线上>, @<容差>, @<是否体积>, @<并行运行>)
+    }
+
+    方法 构建 <公开 静态 注释 = "构建. 原方法: Build. 官方简介: 构造结果形状(重定义自 MakeShape)." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakeEvolved.Build (@<对象>)
+    }
+
+    方法 顶 <公开 静态 类型 = 长整数 注释 = "顶. 原方法: Top. 官方简介: 若构造器中 <Solid> 为 True 则返回顶面." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakeEvolved.Top (@<对象>)
+    }
+
+    方法 底 <公开 静态 类型 = 长整数 注释 = "底. 原方法: Bottom. 官方简介: 若构造器中 <Solid> 为 True 则返回底面." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakeEvolved.Bottom (@<对象>)
+    }
+
+}
+
+类 填充构造器 <公开 注释 = "填充构造器: 原类 BRepOffsetAPI_MakeFilling (libTKOffset, 头文件 BRepOffsetAPI/BRepOffsetAPI_MakeFilling.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: N 边填充. 该算法避免从以下要素构建面: * 一组定义面边界以及面的曲面须满足的某些约束的边 * 一组定义支撑曲面须满足的某些约束的边与点 * 一张为满足约束而变形的初始曲面 * 一组控制约束的参数." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: BRepOffsetAPI_MakeFilling. 官方简介: 构造由以下定义的线框填充对象 - 能量最小化判据 Degree - 曲线上的点数 NbPntsOnCur - 迭代次数 NbIter - 布尔值 Anisotropie - 2D 公差 Tol2d - 3D 公差 Tol3d - 角度公差 TolAng - 曲率公差 TolCur - 最高多项式次数 MaxDeg - 最大分段数 MaxSeg. 若布尔值 Anistropie 为 true, 则在长度 U 与长度 V 之比表明两者差异巨大时算法性能更好. 换言之, 当曲面例如极其长时." @嵌入式方法 = "">
+    参数 阶次 <类型 = 整数>
+    参数 曲线采样点数 <类型 = 整数>
+    参数 迭代次数 <类型 = 整数>
+    参数 各向异性 <类型 = 逻辑型>
+    参数 二维容差 <类型 = 小数>
+    参数 三维容差 <类型 = 小数>
+    参数 角度容差 <类型 = 小数>
+    参数 曲率容差 <类型 = 小数>
+    参数 最大阶次 <类型 = 整数>
+    参数 最多段数 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakeFilling.构造 (@<阶次>, @<曲线采样点数>, @<迭代次数>, @<各向异性>, @<二维容差>, @<三维容差>, @<角度容差>, @<曲率容差>, @<最大阶次>, @<最多段数>)
+    }
+
+    方法 设置构造参数 <公开 静态 注释 = "设置构造参数. 原方法: SetConstrParam. 官方简介: 设置用于控制约束的公差值. Tol2d: Tol3d: 是支撑曲面与约束之间允许的最大距离 TolAng: 是曲面法线与约束之间允许的最大角度 TolCurv: 是曲面与约束之间允许的最大曲率差" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 二维容差 <类型 = 小数>
+    参数 三维容差 <类型 = 小数>
+    参数 角度容差 <类型 = 小数>
+    参数 曲率容差 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakeFilling.SetConstrParam (@<对象>, @<二维容差>, @<三维容差>, @<角度容差>, @<曲率容差>)
+    }
+
+    方法 设置分辨率参数 <公开 静态 注释 = "设置分辨率参数. 原方法: SetResolParam. 官方简介: 设置用于求解的参数. 这些参数的默认值是为良好的质量/性能比而选择的. Degree: 用于计算曲面变形时最小化的能量判据的阶. 默认值为 3 推荐值为 i+2, 其中 i 是约束的最大阶. NbPtsOnCur: 边的离散化的平均点数. NbIter: 过程的最大迭代次数. 每次迭代增加离散化点的数量. Anisotropie:" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 阶次 <类型 = 整数>
+    参数 曲线采样点数 <类型 = 整数>
+    参数 迭代次数 <类型 = 整数>
+    参数 各向异性 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakeFilling.SetResolParam (@<对象>, @<阶次>, @<曲线采样点数>, @<迭代次数>, @<各向异性>)
+    }
+
+    方法 设置近似参数 <公开 静态 注释 = "设置近似参数. 原方法: SetApproxParam. 官方简介: 设置用于逼近填充曲面的参数. 包括: - MaxDeg - 定义填充曲面的多项式可具有的最高次数 - MaxSegments - 填充曲面可具有的最大分段数." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 最大阶次 <类型 = 整数>
+    参数 最多段数 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakeFilling.SetApproxParam (@<对象>, @<最大阶次>, @<最多段数>)
+    }
+
+    方法 加载初始化曲面 <公开 静态 注释 = "加载初始化曲面. 原方法: LoadInitSurface. 官方简介: 加载初始曲面 Surf 以开始曲面的构造. 若算法构造产生的曲面可能很复杂, 该可选函数很有用. 构建中的面的支撑曲面由 Surf 的变形计算, 该变形满足给定约束. 边界边集定义面的线框. 若未给出初始曲面, 算法自动计算它. 若边集不连通(Free 约束), 自动计算缺失的边. 重要: 初始曲面必须具有正交局部坐标, 即偏导数 dS/du 与 dS/dv 必须在曲面每一点处正交. 若该条件被破坏, 结果曲面可能发生变形." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 曲面 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakeFilling.LoadInitSurface (@<对象>, @<曲面>)
+    }
+
+    方法 添加 <公开 静态 类型 = 整数 注释 = "添加. 原方法: Add. 官方简介: 添加一条新约束, 它同时定义面的线框的一条边. Order: 约束的阶: GeomAbs_C0 : 曲面必须经过边的 3D 表示 GeomAbs_G1 : 曲面必须经过边的 3D 表示, 并与该边的第一个面相切 GeomAbs_G2 : 曲面必须经过边的 3D 表示, 并与该边的第一个面保持相切与曲率连续. 若该边在面上没有表示且 Order 为 GeomAbs_G1 或 GeomAbs_G2 则抛出 ConstructionError." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 构造 <类型 = 长整数>
+    参数 顺序 <类型 = 整数>
+    参数 是否绑定 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakeFilling.Add (@<对象>, @<构造>, @<顺序>, @<是否绑定>)
+    }
+
+    方法 添加_2 <公开 静态 类型 = 整数 注释 = "添加_2. 原方法: Add. 官方简介: 添加一条新约束, 它同时定义面的线框的一条边. Order: 约束的阶: GeomAbs_C0 : 曲面必须经过边的 3D 表示 GeomAbs_G1 : 曲面必须经过边的 3D 表示, 并与给定面相切 GeomAbs_G2 : 曲面必须经过边的 3D 表示, 并与给定面保持相切与曲率连续. 若该边在给定面上没有 2d 表示则抛出 ConstructionError" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 构造 <类型 = 长整数>
+    参数 支撑 <类型 = 长整数>
+    参数 顺序 <类型 = 整数>
+    参数 是否绑定 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakeFilling.Add_2 (@<对象>, @<构造>, @<支撑>, @<顺序>, @<是否绑定>)
+    }
+
+    方法 添加_3 <公开 静态 类型 = 整数 注释 = "添加_3. 原方法: Add. 官方简介: 在面上添加自由约束. 对应的边必须被自动重新计算. 它始终是约束边界." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 支撑 <类型 = 长整数>
+    参数 顺序 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakeFilling.Add_3 (@<对象>, @<支撑>, @<顺序>)
+    }
+
+    方法 添加_4 <公开 静态 类型 = 整数 注释 = "添加_4. 原方法: Add. 官方简介: 添加点约束." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 点 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakeFilling.Add_4 (@<对象>, @<点>)
+    }
+
+    方法 添加_5 <公开 静态 类型 = 整数 注释 = "添加_5. 原方法: Add. 官方简介: 添加点约束." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 V <类型 = 小数>
+    参数 支撑 <类型 = 长整数>
+    参数 顺序 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakeFilling.Add_5 (@<对象>, @<U>, @<V>, @<支撑>, @<顺序>)
+    }
+
+    方法 构建 <公开 静态 注释 = "构建. 原方法: Build. 官方简介: 构建结果面" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakeFilling.Build (@<对象>)
+    }
+
+    方法 是否完成 <公开 静态 类型 = 逻辑型 注释 = "是否完成. 原方法: IsDone. 官方简介: 测试填充板的计算是否已完成." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakeFilling.IsDone (@<对象>)
+    }
+
+    方法 G0错误 <公开 静态 类型 = 小数 注释 = "G0错误. 原方法: G0Error. 官方简介: 返回结果与约束之间的最大距离. 该值在构造时设定." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakeFilling.G0Error (@<对象>)
+    }
+
+    方法 G1错误 <公开 静态 类型 = 小数 注释 = "G1错误. 原方法: G1Error. 官方简介: 返回结果与约束之间的最大角度. 它在构造时设置." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakeFilling.G1Error (@<对象>)
+    }
+
+    方法 G2错误 <公开 静态 类型 = 小数 注释 = "G2错误. 原方法: G2Error. 官方简介: 返回结果与约束之间的最大角度. 它在构造时设置." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakeFilling.G2Error (@<对象>)
+    }
+
+    方法 G0错误_2 <公开 静态 类型 = 小数 注释 = "G0错误_2. 原方法: G0Error. 官方简介: 返回结果与约束 Index 之间达到的最大距离. 它在构造时设置." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakeFilling.G0Error_2 (@<对象>, @<索引>)
+    }
+
+    方法 G1错误_2 <公开 静态 类型 = 小数 注释 = "G1错误_2. 原方法: G1Error. 官方简介: 返回结果与约束之间的最大角度. 它在构造时设置." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakeFilling.G1Error_2 (@<对象>, @<索引>)
+    }
+
+    方法 G2错误_2 <公开 静态 类型 = 小数 注释 = "G2错误_2. 原方法: G2Error. 官方简介: 返回结果与约束 Index 之间发现的最大曲率差." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakeFilling.G2Error_2 (@<对象>, @<索引>)
+    }
+
+}
+
+类 偏移构造器 <公开 注释 = "偏移构造器: 原类 BRepOffsetAPI_MakeOffset (libTKOffset, 头文件 BRepOffsetAPI/BRepOffsetAPI_MakeOffset.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 描述对平面面中包含的一组线框做偏置的算法. MakeOffset 对象提供以下框架: - 定义偏置的构造 - 实现构造算法 - 查询结果." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: BRepOffsetAPI_MakeOffset. 官方简介: 构造用于创建空偏移的算法" @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakeOffset.构造 ()
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: BRepOffsetAPI_MakeOffset. 官方简介: 构造一个算法, 用于创建构造线框 Spine 平行线的算法." @嵌入式方法 = "">
+    参数 脊线 <类型 = 长整数>
+    参数 连接 <类型 = 整数>
+    参数 结果是否开放 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakeOffset.构造_2 (@<脊线>, @<连接>, @<结果是否开放>)
+    }
+
+    方法 初始化 <公开 静态 注释 = "初始化. 原方法: Init. 官方简介: 初始化算法以构建脊线 Spine 的平行线. Join 定义由脊线凸顶点生成的平行线类型. 默认类型是 GeomAbs_Arc, 其中顶点生成圆弧段. 若 join 类型是 GeomAbs_Intersection, 则在凸顶点处相交的边生成延长直至相交的边." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 脊线 <类型 = 长整数>
+    参数 连接 <类型 = 整数>
+    参数 结果是否开放 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakeOffset.Init (@<对象>, @<脊线>, @<连接>, @<结果是否开放>)
+    }
+
+    方法 创建_3 <公开 静态 类型 = 长整数 注释 = "创建_3. 原构造器: BRepOffsetAPI_MakeOffset." @嵌入式方法 = "">
+    参数 脊线 <类型 = 长整数>
+    参数 连接 <类型 = 整数>
+    参数 结果是否开放 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakeOffset.构造_3 (@<脊线>, @<连接>, @<结果是否开放>)
+    }
+
+    方法 初始化_2 <公开 静态 注释 = "初始化_2. 原方法: Init. 官方简介: 初始化偏移求值." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 连接 <类型 = 整数>
+    参数 结果是否开放 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakeOffset.Init_2 (@<对象>, @<连接>, @<结果是否开放>)
+    }
+
+    方法 设置近似 <公开 静态 注释 = "设置近似. 原方法: SetApprox. 官方简介: 设置近似标志, 用于把输入轮廓转换为仅由 2D 圆弧与 2D 线性线段构成的轮廓." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 是否近似 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakeOffset.SetApprox (@<对象>, @<是否近似>)
+    }
+
+    方法 添加线框 <公开 静态 注释 = "添加线框. 原方法: AddWire. 官方简介: 初始化算法以构造线框 Spine 的平行线." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 脊线 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakeOffset.AddWire (@<对象>, @<脊线>)
+    }
+
+    方法 执行 <公开 静态 注释 = "执行. 原方法: Perform. 官方简介: 计算与脊柱平行的线, 距脊柱距离为 Offset, 且在相对脊柱平面的法线意义上高度为 Alt. 异常: 若未构建出偏置则抛出 StdFail_NotDone." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 偏移 <类型 = 小数>
+    参数 高度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakeOffset.Perform (@<对象>, @<偏移>, @<高度>)
+    }
+
+    方法 构建 <公开 静态 注释 = "构建. 原方法: Build. 官方简介: 构造结果形状(重定义自 MakeShape)." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakeOffset.Build (@<对象>)
+    }
+
+    方法 转换面 <公开 静态 类型 = 长整数 注释 = "转换面. 原方法: ConvertFace. 官方简介: 把面的每条线框转换为仅由圆弧与线段构成的轮廓. 同时构建新的 3D 曲线." @嵌入式方法 = "">
+    参数 面 <类型 = 长整数>
+    参数 角度容差 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakeOffset.ConvertFace (@<面>, @<角度容差>)
+    }
+
+}
+
+类 偏移形状构造器 <公开 注释 = "偏移形状构造器: 原类 BRepOffsetAPI_MakeOffsetShape (libTKOffset, 头文件 BRepOffsetAPI/BRepOffsetAPI_MakeOffsetShape.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 描述从形状构建壳的功能. 结果是与源形状平行的无自交环形状. MakeOffsetShape 对象提供以下框架: - 定义壳的构造 - 实现构造算法 - 查询结果." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: BRepOffsetAPI_MakeOffsetShape. 官方简介: 构造函数不做任何事." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakeOffsetShape.构造 ()
+    }
+
+    方法 按简单执行 <公开 静态 注释 = "按简单执行. 原方法: PerformBySimple. 官方简介: 使用不进行相交计算的简单算法为给定形状构造偏移形状." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    参数 偏移值 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakeOffsetShape.PerformBySimple (@<对象>, @<S>, @<偏移值>)
+    }
+
+    方法 按连接执行 <公开 静态 注释 = "按连接执行. 原方法: PerformByJoin. 官方简介: 构造与形状 S 平行的形状, 其中 - S 可以是面、壳、实体或这些形状种类的复合体; - Offset 是偏置值. 偏置形状被构造为: - 在 S 外部, 若 Offset 为正, - 在 S 内部, 若 Offset 为负; - Tol 定义生成形状的重合公差判据; - Mode 定义施加到形状 S 自由边的平行线的构建类型; 目前仅实现了一种构建类型, 即自由边不生成平行线的类型; 这对应于默认值 BRepOffset_Skin; - Intersection 指定算法必须如何工作以把平行线限制到两个相邻形状: - 若 Intersection 为 false(默认值), 则用两个相邻形状的平行线计算交, - 若 Intersection 为 true, 则考虑所有生成的平行线计算交; 该计算方法更通用, 因为它避免由形状 S 上小尺寸特征在偏置形状中生成的某些自交, 然而该方法未被完全实现, 因此不推荐使用; - SelfInter 告知算法是否必须对结果形状应用消除自交的计算; 然而, 由于该功能尚未实现, 建议使用默认值(false); - Join 定义如何填充两个相邻面的平行线之间可能出现的孔. 它可以取值 GeomAbs_Arc 或 GeomAbs_Intersection: - 若 Join 等于 GeomAbs_Arc, 则在两个相邻平行线的两条自由边之间生成管道, 并在顶点的 \"像\" 上生成球体; 这是默认值, - 若 Join 等于 GeomAbs_Intersection, 则两个相邻面的平行线被扩大并相交, 使得面的平行线上没有自由边. RemoveIntEdges 标志定义是否从结果中移除 INTERNAL 边. 警告 1. 形状 S 的所有面应基于至少 C1 连续的曲面. 2. 偏置值应足够小以避免结果形状中的自交. 否则若初始曲面不是平面、球面或圆柱面, 这些自交可能出现在偏置面内部, 且某些非相邻偏置面可能彼此相交. 此外, 某些偏置曲面可能 \"翻面\". 3. 若形状 S 包含超过 3 条边汇聚的顶点则算法可能失败. 4. 由于 3d 偏置算法涉及曲面的交, 它受曲面求交算法的限制. 5. 若 S 的基础几何是连续性为 C0 的 BSpline 则无法生成结果. 异常: 若 S 的基础几何是连续性为 C0 的 BSpline 则抛出 Geom_UndefinedDerivative." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    参数 偏移 <类型 = 小数>
+    参数 容差 <类型 = 小数>
+    参数 模式 <类型 = 整数>
+    参数 相交 <类型 = 逻辑型>
+    参数 自身相交 <类型 = 逻辑型>
+    参数 连接 <类型 = 整数>
+    参数 移除整数边 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakeOffsetShape.PerformByJoin (@<对象>, @<S>, @<偏移>, @<容差>, @<模式>, @<相交>, @<自身相交>, @<连接>, @<移除整数边>)
+    }
+
+    方法 构建 <公开 静态 注释 = "构建. 原方法: Build. 官方简介: 不做任何事." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakeOffsetShape.Build (@<对象>)
+    }
+
+    方法 是否已删除 <公开 静态 类型 = 逻辑型 注释 = "是否已删除. 原方法: IsDeleted. 官方简介: 若形状已从结果中移除则返回 true." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakeOffsetShape.IsDeleted (@<对象>, @<S>)
+    }
+
+    方法 取连接类型 <公开 静态 类型 = 整数 注释 = "取连接类型. 原方法: GetJoinType. 官方简介: 返回偏移连接类型." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakeOffsetShape.GetJoinType (@<对象>)
+    }
+
+}
+
+类 管道构造器 <公开 注释 = "管道构造器: 原类 BRepOffsetAPI_MakePipe (libTKOffset, 头文件 BRepOffsetAPI/BRepOffsetAPI_MakePipe.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 描述构建管道的功能. 管道由基础形状(称为轮廓)沿线框(称为脊线)扫掠而成. 轮廓不得包含实体. MakePipe 对象提供以下框架: - 定义管道的构造 - 实现构造算法 - 查询结果. 警告: MakePipe 类仅实现脊线 G1 连续的管道构造." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: BRepOffsetAPI_MakePipe. 官方简介: 通过沿线框 Spine 扫掠形状 Profile 构造管道. 脊线与轮廓所成的角沿管道长度保持不变. 警告 Spine 必须是 G1 连续的; 即在线框两条边的连接顶点上, 左侧与右侧的切线向量必须方向相同, 尽管量值不必相同. 异常: 若轮廓是实体或复合实体则抛出 Standard_DomainError." @嵌入式方法 = "">
+    参数 脊线 <类型 = 长整数>
+    参数 轮廓 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakePipe.构造 (@<脊线>, @<轮廓>)
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: BRepOffsetAPI_MakePipe. 官方简介: 与前面相同, 但设置了扫掠模式以及一个标志, 该标志指示在扫掠曲面被证明为 C0 时是否尝试逼近 C1 连续曲面." @嵌入式方法 = "">
+    参数 脊线 <类型 = 长整数>
+    参数 轮廓 <类型 = 长整数>
+    参数 模式 <类型 = 整数>
+    参数 强制近似C1 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakePipe.构造_2 (@<脊线>, @<轮廓>, @<模式>, @<强制近似C1>)
+    }
+
+    方法 构建 <公开 静态 注释 = "构建. 原方法: Build. 官方简介: 构造结果形状(重定义自 MakeShape)." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakePipe.Build (@<对象>)
+    }
+
+    方法 首个形状 <公开 静态 类型 = 长整数 注释 = "首个形状. 原方法: FirstShape. 官方简介: 返回棱柱底部的 TopoDS 形状." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakePipe.FirstShape (@<对象>)
+    }
+
+    方法 末个形状 <公开 静态 类型 = 长整数 注释 = "末个形状. 原方法: LastShape. 官方简介: 返回棱柱顶部的 TopoDS 形状." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakePipe.LastShape (@<对象>)
+    }
+
+    方法 已生成 <公开 静态 类型 = 长整数 注释 = "已生成. 原方法: Generated." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S脊线 <类型 = 长整数>
+    参数 S轮廓 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakePipe.Generated (@<对象>, @<S脊线>, @<S轮廓>)
+    }
+
+    方法 曲面上的误差 <公开 静态 类型 = 小数 注释 = "曲面上的误差. 原方法: ErrorOnSurface." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakePipe.ErrorOnSurface (@<对象>)
+    }
+
+}
+
+类 管壳构造器 <公开 注释 = "管壳构造器: 原类 BRepOffsetAPI_MakePipeShell (libTKOffset, 头文件 BRepOffsetAPI/BRepOffsetAPI_MakePipeShell.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 此类提供沿由线框构成的脊线构造壳或实体的框架. 要产生实体, 初始线框必须闭合. 使用两种方式: - 由截面定义 - 由截面与缩放律 - 通过添加连续中间截面 - 由扫掠模式定义: - 伪 Frenet - 常量 - 常量副法线 - 由支撑曲面定义法向 - 由引导轮廓定义法向. 两种全局方式也可组合. 之后还可封闭曲面以形成实体. 警告: 存在一些限制 -- 带辅助脊线的模式与位似律不兼容 -- 带辅助脊线并保持接触的模式只产生 C0 曲面." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: BRepOffsetAPI_MakePipeShell. 官方简介: 构造由线框 Spine 定义的壳体生成框架. 设置扫掠模式 若未设置模式, 则使用 MakePipe 中使用的模式" @嵌入式方法 = "">
+    参数 脊线 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakePipeShell.构造 (@<脊线>)
+    }
+
+    方法 设置模式 <公开 静态 注释 = "设置模式. 原方法: SetMode. 官方简介: 设置 Frenet 或 CorrectedFrenet 三面体以执行扫掠. 若 IsFrenet 为 false, 则使用修正的 Frenet 三面体." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 是否Frenet <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakePipeShell.SetMode (@<对象>, @<是否Frenet>)
+    }
+
+    方法 设置离散模式 <公开 静态 注释 = "设置离散模式. 原方法: SetDiscreteMode. 官方简介: 设置离散三面形以执行扫掠" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakePipeShell.SetDiscreteMode (@<对象>)
+    }
+
+    方法 设置模式_2 <公开 静态 注释 = "设置模式_2. 原方法: SetMode. 官方简介: 设置固定三面形以执行扫掠, 所有截面将保持平行." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 轴 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakePipeShell.SetMode_2 (@<对象>, @<轴>)
+    }
+
+    方法 设置模式_3 <公开 静态 注释 = "设置模式_3. 原方法: SetMode. 官方简介: 设置固定的 BiNormal 方向以执行 -- 扫掠. 截面与 <BiNormal> 之间的角度关系将是恒定的" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 副法向 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakePipeShell.SetMode_3 (@<对象>, @<副法向>)
+    }
+
+    方法 设置模式_4 <公开 静态 类型 = 逻辑型 注释 = "设置模式_4. 原方法: SetMode. 官方简介: 为脊柱设置支撑面, 用于定义三面体的副法线, 类似曲面的法线. 警告: 为使其有效, <spine> 的每条边必须在 <SpineSupport> 的某个面上有表示" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 脊线支撑 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakePipeShell.SetMode_4 (@<对象>, @<脊线支撑>)
+    }
+
+    方法 设置模式_5 <公开 静态 注释 = "设置模式_5. 原方法: SetMode. 官方简介: 设置辅助脊线以定义法线 对于脊线 P 的每个点, 在 <AuxiliarySpine> 上求值点 Q. 若 <CurvilinearEquivalence> 成立, 则 Q 以与 P 分割 <Spline> 相同的长度比分割 <AuxiliarySpine>. 否则, 由 P 与 <Spine> 的切线定义的平面与 <AuxiliarySpine> 相交于 Q. 若 <KeepContact> 等于 BRepFill_NoContact: 法线由向量 PQ 定义. 若 <KeepContact> 等于 BRepFill_Contact: 法线定义为使扫掠的截面与 auxiliarySpine 接触. 截面宽度沿路径恒定. 换言之, 辅助脊线位于扫掠曲面上, 但不一定是该曲面的边界. 然而, 辅助脊线必须足够靠近主脊线, 以沿路径与任何截面相交. 若 <KeepContact> 等于 BRepFill_ContactOnBorder: 辅助脊线成为扫掠曲面的边界, 且截面宽度沿路径变化. 给出要扫掠的截面. 可能性为: - 给出一个或多个截面 - 给出一个轮廓与一个位似律. - 自动计算脊线与扫掠形状上截面之间的对应关系 - 由脊线的一个顶点定义的脊线与扫掠形状上截面之间的对应关系" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 辅助脊线 <类型 = 长整数>
+    参数 曲线等价 <类型 = 逻辑型>
+    参数 保留接触 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakePipeShell.SetMode_5 (@<对象>, @<辅助脊线>, @<曲线等价>, @<保留接触>)
+    }
+
+    方法 添加 <公开 静态 注释 = "添加. 原方法: Add. 官方简介: 把截面 Profile 添加到该框架. 第一与最后截面可以是点状的, 因此形状 Profile 既可以是线框也可以是顶点. 脊线上的对应点自动计算. 若 WithContact 为 true, 则截面被平移以与脊线接触. 若 WithCorrection 为 true, 则截面被旋转以与对应点处脊线的切线正交. 若截面是点状的(Profile 类型为 TopoDS_Vertex), 则该选项无意义." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 轮廓 <类型 = 长整数>
+    参数 带接触 <类型 = 逻辑型>
+    参数 带修正 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakePipeShell.Add (@<对象>, @<轮廓>, @<带接触>, @<带修正>)
+    }
+
+    方法 添加_2 <公开 静态 注释 = "添加_2. 原方法: Add. 官方简介: 向该框架添加截面 Profile. 脊柱上对应的点由 Location 给出. 警告: 为使其生效, 不建议组合使用 Add 与 SetLaw 方法." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 轮廓 <类型 = 长整数>
+    参数 位置 <类型 = 长整数>
+    参数 带接触 <类型 = 逻辑型>
+    参数 带修正 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakePipeShell.Add_2 (@<对象>, @<轮廓>, @<位置>, @<带接触>, @<带修正>)
+    }
+
+    方法 删除 <公开 静态 注释 = "删除. 原方法: Delete. 官方简介: 从该框架中移除截面 Profile." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 轮廓 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakePipeShell.Delete (@<对象>, @<轮廓>)
+    }
+
+    方法 是否就绪 <公开 静态 类型 = 逻辑型 注释 = "是否就绪. 原方法: IsReady. 官方简介: 若该工具对象已准备好构建形状(即为线框截面 Profile 已有定义)则返回 true." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakePipeShell.IsReady (@<对象>)
+    }
+
+    方法 取状态 <公开 静态 类型 = 整数 注释 = "取状态. 原方法: GetStatus. 官方简介: 当 Simulate 或 Build 失败时获取状态. 它可以是 BRepBuilderAPI_PipeDone, BRepBuilderAPI_PipeNotDone, BRepBuilderAPI_PlaneNotIntersectGuide, BRepBuilderAPI_ImpossibleContact." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakePipeShell.GetStatus (@<对象>)
+    }
+
+    方法 设置容差 <公开 静态 注释 = "设置容差. 原方法: SetTolerance. 官方简介: 设置以下容差值 - 3D 容差 Tol3d - 边界容差 BoundTol - 角度容差 TolAngular." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 三维容差 <类型 = 小数>
+    参数 边界容差 <类型 = 小数>
+    参数 角度容差 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakePipeShell.SetTolerance (@<对象>, @<三维容差>, @<边界容差>, @<角度容差>)
+    }
+
+    方法 设置最大阶次 <公开 静态 注释 = "设置最大阶次. 原方法: SetMaxDegree. 官方简介: 定义结果曲面的最大 V 次数" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 新最大阶次 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakePipeShell.SetMaxDegree (@<对象>, @<新最大阶次>)
+    }
+
+    方法 设置最大段 <公开 静态 注释 = "设置最大段. 原方法: SetMaxSegments. 官方简介: 定义结果曲面上 V 方向的最大段数" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 新最大段 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakePipeShell.SetMaxSegments (@<对象>, @<新最大段>)
+    }
+
+    方法 设置强制近似C1 <公开 静态 注释 = "设置强制近似C1. 原方法: SetForceApproxC1. 官方简介: 设置标志, 指示当扫掠曲面被证实为 C0 时是否尝试逼近 C1 连续曲面." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 强制近似C1 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakePipeShell.SetForceApproxC1 (@<对象>, @<强制近似C1>)
+    }
+
+    方法 设置过渡模式 <公开 静态 注释 = "设置过渡模式. 原方法: SetTransitionMode. 官方简介: 设置过渡模式, 以管理脊线上的断裂在扫掠形状上引起的不连续. 过渡模式可以是 BRepBuilderAPI_Transformed(默认值), BRepBuilderAPI_RightCorner, BRepBuilderAPI_RoundCorner: - RepBuilderAPI_Transformed: 不连续通过修改扫掠模式来处理. 管道在脊线的断裂处被 \"变换\". 该模式假设构建自交的壳. - BRepBuilderAPI_RightCorner: 不连续被当作直角处理. 对应脊线两个相邻段的两段管道被延长并在脊线的断裂处相交. - BRepBuilderAPI_RoundCorner: 不连续被当作圆角处理. 圆角被当作轮廓绕经过脊线断裂点的轴的旋转来处理. 该轴基于在相邻脊线段公共点处与它们相切的向量方向的叉积. 警告 BRepBuilderAPI_RightCorner 模式在以下情形提供有效结果: 对应脊线两个相邻段的两段管道在脊线断裂附近区域内的交是连通且平面的. 若脊线在断裂的某邻域内是非线性的, 或若轮廓设置了缩放律, 则该条件可能被违反. 最后一个模式 BRepBuilderAPI_RoundCorner 仅在轮廓设置了 WithCorrection = True 选项时才能保证提供好的结果, 即它严格垂直于脊线." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 模式 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakePipeShell.SetTransitionMode (@<对象>, @<模式>)
+    }
+
+    方法 构建 <公开 静态 注释 = "构建. 原方法: Build. 官方简介: 构造结果形状(重定义自 MakeShape)." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakePipeShell.Build (@<对象>)
+    }
+
+    方法 生成实体 <公开 静态 类型 = 逻辑型 注释 = "生成实体. 原方法: MakeSolid. 官方简介: 把扫掠壳转换为实体. 若轮廓未闭合则返回 False" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakePipeShell.MakeSolid (@<对象>)
+    }
+
+    方法 首个形状 <公开 静态 类型 = 长整数 注释 = "首个形状. 原方法: FirstShape. 官方简介: 返回扫掠体底部的 TopoDS 形状." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakePipeShell.FirstShape (@<对象>)
+    }
+
+    方法 末个形状 <公开 静态 类型 = 长整数 注释 = "末个形状. 原方法: LastShape. 官方简介: 返回扫掠体顶部的 TopoDS 形状." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakePipeShell.LastShape (@<对象>)
+    }
+
+    方法 曲面上的误差 <公开 静态 类型 = 小数 注释 = "曲面上的误差. 原方法: ErrorOnSurface." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakePipeShell.ErrorOnSurface (@<对象>)
+    }
+
+    方法 脊线 <公开 静态 类型 = 长整数 注释 = "脊线. 原方法: Spine. 官方简介: 返回脊线" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakePipeShell.Spine (@<对象>)
+    }
+
+}
+
+类 加厚构造器 <公开 注释 = "加厚构造器: 原类 BRepOffsetAPI_MakeThickSolid (libTKOffset, 头文件 BRepOffsetAPI/BRepOffsetAPI_MakeThickSolid.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 描述构建抽壳实体的功能. 抽壳实体由初始实体与该实体上待移除的一组面构建. 实体其余的面成为抽壳实体的壁, 其厚度在构造时定义. 实体由初始实体 <S> 与 <S> 上的一组面 {Fi} 构建, 得到由以 {Fi} 封闭的两个壳组成的实体. 第一个壳 <SS> 由 <S> 除 {Fi} 外的所有面组成. 第二个壳是 <SS> 的偏置壳. MakeThickSolid 对象提供以下框架: - 定义抽壳实体的截面 - 实现构造算法 - 查询结果." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: BRepOffsetAPI_MakeThickSolid. 官方简介: 构造函数不做任何事." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakeThickSolid.构造 ()
+    }
+
+    方法 按简单生成厚实体 <公开 静态 注释 = "按简单生成厚实体. 原方法: MakeThickSolidBySimple. 官方简介: 使用简单算法构造实体. 根据其性质, 无法设置封闭面列表. 该算法不支持移除面. 这是由于在偏置创建期间不计算相交. 输入应为非闭合的壳或面." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    参数 偏移值 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakeThickSolid.MakeThickSolidBySimple (@<对象>, @<S>, @<偏移值>)
+    }
+
+    方法 按连接生成厚实体 <公开 静态 注释 = "桩(本地不可用): 参数类型 const TopTools_ListOfShape& 未支持. 按连接生成厚实体. 原方法: MakeThickSolidByJoin. 官方简介: 通过从实体 S 中移除去面集 ClosingFaces 来构造 S 的空心实体, 其中: Offset 定义壁的厚度. 其符号指示空心形状构建在实体表面的哪一侧; - Tol 定义生成形状中重合的公差判据; - Mode 定义施加到形状 S 自由边的平行线的构建类型. 目前仅实现了一种构建类型, 即自由边不生成平行线的类型; 这对应于默认值 BRepOffset_Skin; Intersection 指定算法必须如何工作以把平行线限制到两个相邻形状: - 若 Intersection 为 false(默认值), 则用两个相邻形状的平行线计算交, - 若 Intersection 为 true, 则考虑所有生成的平行线计算交; 该计算方法更通用, 因为它避免由形状 S 上小尺寸特征在偏置形状中生成的自交, 然而该方法未被完全实现, 因此不推荐使用; - SelfInter 告知算法是否需要对结果形状应用消除自交的计算. 然而, 由于该功能尚未实现, 你应使用默认值(false); - Join 定义如何填充两个相邻面的平行线之间可能出现的孔. 它可以取值 GeomAbs_Arc 或 GeomAbs_Intersection: - 若 Join 等于 GeomAbs_Arc, 则在两个相邻平行线的两条自由边之间生成管道, 并在顶点的 \"像\" 上生成球体; 这是默认值, - 若 Join 等于 GeomAbs_Intersection, 则两个相邻面的平行线被扩大并相交, 使得面的平行线上没有自由边. RemoveIntEdges 标志定义是否从结果中移除 INTERNAL 边. 警告 由于 MakeThickSolid 算法基于 MakeOffsetShape 算法, 警告与 MakeOffsetShape 的相同." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    参数 封闭面 <类型 = 长整数>
+    参数 偏移 <类型 = 小数>
+    参数 容差 <类型 = 小数>
+    参数 模式 <类型 = 整数>
+    参数 相交 <类型 = 逻辑型>
+    参数 自身相交 <类型 = 逻辑型>
+    参数 连接 <类型 = 整数>
+    参数 移除整数边 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakeThickSolid.MakeThickSolidByJoin (@<对象>, @<S>, @<封闭面>, @<偏移>, @<容差>, @<模式>, @<相交>, @<自身相交>, @<连接>, @<移除整数边>)
+    }
+
+    方法 构建 <公开 静态 注释 = "构建. 原方法: Build." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MakeThickSolid.Build (@<对象>)
+    }
+
+}
+
+类 中轴路径 <公开 注释 = "中轴路径: 原类 BRepOffsetAPI_MiddlePath (libTKOffset, 头文件 BRepOffsetAPI/BRepOffsetAPI_MiddlePath.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 描述构建管道状形状中轴路径的功能." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: BRepOffsetAPI_MiddlePath. 官方简介: 通用构造器. StartShape 与 EndShape 可以是线框或面" @嵌入式方法 = "">
+    参数 形状 <类型 = 长整数>
+    参数 起始形状 <类型 = 长整数>
+    参数 终止形状 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MiddlePath.构造 (@<形状>, @<起始形状>, @<终止形状>)
+    }
+
+    方法 构建 <公开 静态 注释 = "构建. 原方法: Build." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_MiddlePath.Build (@<对象>)
+    }
+
+}
+
+类 法向投影构造器 <公开 注释 = "法向投影构造器: 原类 BRepOffsetAPI_NormalProjection (libTKOffset, 头文件 BRepOffsetAPI/BRepOffsetAPI_NormalProjection.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 按每个待投影点的法向定义到形状上的投影的框架. 目标形状为面, 源形状为边或线框." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: BRepOffsetAPI_NormalProjection. 官方简介: 构造空框架, 用于按照从每个待投影点到形状的法线定义在形状上的投影." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_NormalProjection.构造 ()
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: BRepOffsetAPI_NormalProjection. 官方简介: 构造框架, 用于把通过 Add 添加到该框架的形状中待投影的每个点沿法线投影到基础形状 S 上. 算法的默认参数: Tol3D = 1.e-04, Tol2D =sqr(tol3d) , InternalContinuity = GeomAbs_C2, MaxDegree = 14, MaxSeg = 16." @嵌入式方法 = "">
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_NormalProjection.构造_2 (@<S>)
+    }
+
+    方法 初始化 <公开 静态 注释 = "初始化. 原方法: Init. 官方简介: 用形状 S 初始化空构造器框架." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_NormalProjection.Init (@<对象>, @<S>)
+    }
+
+    方法 添加 <公开 静态 注释 = "添加. 原方法: Add. 官方简介: 把形状 ToProj 添加到用于由 Compute3d 计算投影的框架. ToProj 是边或线框, 将被投影到基础形状上. 异常: 若 ToProj 未被添加则抛出 Standard_ConstructionError." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 待投影形状 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_NormalProjection.Add (@<对象>, @<待投影形状>)
+    }
+
+    方法 设置参数 <公开 静态 注释 = "设置参数. 原方法: SetParams. 官方简介: 设置用于计算的参数. Tol3 是 3d 投影曲线与其 2d 表示之间所需的公差. InternalContinuity 是用于逼近的约束阶数. MaxDeg 与 MaxSeg 是逼近所得 BSpline 的最大次数与最大段数." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 三维容差 <类型 = 小数>
+    参数 二维容差 <类型 = 小数>
+    参数 内部连续性 <类型 = 整数>
+    参数 最大阶次 <类型 = 整数>
+    参数 最多段数 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_NormalProjection.SetParams (@<对象>, @<三维容差>, @<二维容差>, @<内部连续性>, @<最大阶次>, @<最多段数>)
+    }
+
+    方法 设置最大距离 <公开 静态 注释 = "设置最大距离. 原方法: SetMaxDistance. 官方简介: 设置目标形状与要投影形状之间的最大距离. 若不满足该条件则丢弃解中对应部分. 若 MaxDist < 0 则该方法不影响算法" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 最大距离 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_NormalProjection.SetMaxDistance (@<对象>, @<最大距离>)
+    }
+
+    方法 设置限制 <公开 静态 注释 = "设置限制. 原方法: SetLimit. 官方简介: 管理投影边的限制." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 面边界 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_NormalProjection.SetLimit (@<对象>, @<面边界>)
+    }
+
+    方法 三维计算 <公开 静态 注释 = "三维计算. 原方法: Compute3d. 官方简介: 若计算了 3D 曲线则返回 true. 否则返回 false, 并保留初始 3D 曲线以构建结果边." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 三维带 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_NormalProjection.Compute3d (@<对象>, @<三维带>)
+    }
+
+    方法 构建 <公开 静态 注释 = "构建. 原方法: Build. 官方简介: 把投影结果构建为线框的复合形状. 尝试构建有向线框." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_NormalProjection.Build (@<对象>)
+    }
+
+    方法 是否完成 <公开 静态 类型 = 逻辑型 注释 = "是否完成. 原方法: IsDone. 官方简介: 若对象由形状构造算法正确构建则返回 true. 若在形状构造时算法无法完成, 或原始数据损坏, 则 IsDone 返回 false, 因此保护访问构造结果的函数(通常是 Shape 函数)的使用." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_NormalProjection.IsDone (@<对象>)
+    }
+
+    方法 投影 <公开 静态 类型 = 长整数 注释 = "投影. 原方法: Projection. 官方简介: 执行投影. 结果的构建由 Build 执行. 若未执行投影则抛出 StdFail_NotDone 异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_NormalProjection.Projection (@<对象>)
+    }
+
+    方法 取配对 <公开 静态 类型 = 长整数 注释 = "取配对. 原方法: Couple. 官方简介: 返回与投影边 E 对应的初始面. 异常: 若未找到面则抛出 StdFail_NotDone. 若已找到过与 E 对应的面则抛出 Standard_NoSuchObject." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 E <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_NormalProjection.Couple (@<对象>, @<E>)
+    }
+
+    方法 祖先 <公开 静态 类型 = 长整数 注释 = "祖先. 原方法: Ancestor. 官方简介: 返回与投影计算所得边 E 对应的初始边. 异常: 若未找到边则抛出 StdFail_NotDone. 若已找到与 E 对应的边则抛出 Standard_NoSuchObject." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 E <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_NormalProjection.Ancestor (@<对象>, @<E>)
+    }
+
+}
+
+类 放样构造器 <公开 注释 = "放样构造器: 原类 BRepOffsetAPI_ThruSections (libTKOffset, 头文件 BRepOffsetAPI/BRepOffsetAPI_ThruSections.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 描述构建放样的功能. 放样是按给定顺序经过一组截面的壳或实体. 截面通常为线框, 但首尾截面可以是顶点(点状截面)." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: BRepOffsetAPI_ThruSections. 官方简介: 初始化用于构建经过一组截面的壳或实体的算法, 其中: - 若要求构造算法构建实体则 isSolid 设为 true, 若要求构建壳(默认值)则设为 false, - 若两条相继线框的边之间生成的面是直纹面则 ruled 设为 true, 若它们通过逼近被光顺则设为 false(默认值), - pres3d 定义逼近算法使用的精度判据; 默认值为 1.0e-6. 使用 AddWire 与 AddVertex 定义要构建的壳或实体的相继截面." @嵌入式方法 = "">
+    参数 是否实体 <类型 = 逻辑型>
+    参数 直纹 <类型 = 逻辑型>
+    参数 三维精度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_ThruSections.构造 (@<是否实体>, @<直纹>, @<三维精度>)
+    }
+
+    方法 初始化 <公开 静态 注释 = "初始化. 原方法: Init. 官方简介: 初始化该算法以构建经过一组截面的壳或实体, 其中: - 若要求该构造算法构建实体则 isSolid 设为 true, 若要求构建壳则设为 false. false 是默认值; - 若两条相继线框的边之间生成的面是直纹面则 ruled 设为 true, 若它们通过逼近被光顺则设为 false(默认值), - pres3d 定义逼近算法使用的精度判据; 默认值为 1.0e-6. 使用 AddWire 与 AddVertex 定义要构建的壳或实体的相继截面." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 是否实体 <类型 = 逻辑型>
+    参数 直纹 <类型 = 逻辑型>
+    参数 三维精度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_ThruSections.Init (@<对象>, @<是否实体>, @<直纹>, @<三维精度>)
+    }
+
+    方法 添加线框 <公开 静态 注释 = "添加线框. 原方法: AddWire. 官方简介: 把线框 wire 添加到用于构建壳或实体的截面集合中. 使用函数 Build 构造该形状." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 线框 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_ThruSections.AddWire (@<对象>, @<线框>)
+    }
+
+    方法 添加顶点 <公开 静态 注释 = "添加顶点. 原方法: AddVertex. 官方简介: 把顶点 Vertex(点截面)添加到构建壳或实体所经过的截面集合中. 顶点只能作为第一个或最后一个截面添加到截面集合中. 必须通过方法 AddWire 把至少一条线框添加到截面集合中. 使用函数 Build 构造形状." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 顶点 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_ThruSections.AddVertex (@<对象>, @<顶点>)
+    }
+
+    方法 检查兼容 <公开 静态 注释 = "检查兼容. 原方法: CheckCompatibility. 官方简介: 设置/取消该选项: 在线框上计算原点与朝向以避免扭曲结果, 并更新线框使其具有相同数量的边." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 检查 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_ThruSections.CheckCompatibility (@<对象>, @<检查>)
+    }
+
+    方法 设置光顺 <公开 静态 注释 = "设置光顺. 原方法: SetSmoothing. 官方简介: 定义逼近算法" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 使用光顺 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_ThruSections.SetSmoothing (@<对象>, @<使用光顺>)
+    }
+
+    方法 设置参数类型 <公开 静态 注释 = "设置参数类型. 原方法: SetParType. 官方简介: 定义近似中使用的参数化类型" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 参数化类型 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_ThruSections.SetParType (@<对象>, @<参数化类型>)
+    }
+
+    方法 设置连续性 <公开 静态 注释 = "设置连续性. 原方法: SetContinuity. 官方简介: 定义逼近中使用的连续性" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 C <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_ThruSections.SetContinuity (@<对象>, @<C>)
+    }
+
+    方法 设置判据权重 <公开 静态 注释 = "设置判据权重. 原方法: SetCriteriumWeight. 官方简介: 定义与优化中所用准则关联的权重." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 W1 <类型 = 小数>
+    参数 W2 <类型 = 小数>
+    参数 W3 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_ThruSections.SetCriteriumWeight (@<对象>, @<W1>, @<W2>, @<W3>)
+    }
+
+    方法 设置最大阶次 <公开 静态 注释 = "设置最大阶次. 原方法: SetMaxDegree. 官方简介: 定义结果曲面的最大 U 次数" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 最大阶次 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_ThruSections.SetMaxDegree (@<对象>, @<最大阶次>)
+    }
+
+    方法 参数类型 <公开 静态 类型 = 整数 注释 = "参数类型. 原方法: ParType. 官方简介: 返回近似中使用的参数化类型" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_ThruSections.ParType (@<对象>)
+    }
+
+    方法 连续性 <公开 静态 类型 = 整数 注释 = "连续性. 原方法: Continuity. 官方简介: 返回近似中使用的连续性" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_ThruSections.Continuity (@<对象>)
+    }
+
+    方法 最大阶次 <公开 静态 类型 = 整数 注释 = "最大阶次. 原方法: MaxDegree. 官方简介: 返回结果曲面的最大 U 次数" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_ThruSections.MaxDegree (@<对象>)
+    }
+
+    方法 使用光顺 <公开 静态 类型 = 逻辑型 注释 = "使用光顺. 原方法: UseSmoothing. 官方简介: 定义逼近算法" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_ThruSections.UseSmoothing (@<对象>)
+    }
+
+    方法 判据权重 <公开 静态 注释 = "判据权重. 原方法: CriteriumWeight. 官方简介: 返回与优化中所用准则关联的权重." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 输出W1 <类型 = "小数 []">
+    参数 输出W2 <类型 = "小数 []">
+    参数 输出W3 <类型 = "小数 []">
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_ThruSections.CriteriumWeight (@<对象>, @<输出W1>, @<输出W2>, @<输出W3>)
+    }
+
+    方法 构建 <公开 静态 注释 = "构建. 原方法: Build." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_ThruSections.Build (@<对象>)
+    }
+
+    方法 首个形状 <公开 静态 类型 = 长整数 注释 = "首个形状. 原方法: FirstShape. 官方简介: 若为实体, 返回放样体底部的 TopoDS 形状" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_ThruSections.FirstShape (@<对象>)
+    }
+
+    方法 末个形状 <公开 静态 类型 = 长整数 注释 = "末个形状. 原方法: LastShape. 官方简介: 若为实体, 返回放样体顶部的 TopoDS 形状" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_ThruSections.LastShape (@<对象>)
+    }
+
+    方法 已生成面 <公开 静态 类型 = 长整数 注释 = "已生成面. 原方法: GeneratedFace. 官方简介: 若为 Ruled, 返回除最后一个线框外每条边生成的面 若为 smoothed, 返回第一个线框每条边生成的面" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 边 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_ThruSections.GeneratedFace (@<对象>, @<边>)
+    }
+
+    方法 设置可变输入 <公开 静态 注释 = "设置可变输入. 原方法: SetMutableInput. 官方简介: 设置可变输入状态. 若为 true, 则在贯穿截面操作内部可以修改输入轮廓. 默认值为 true." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 是否可变输入 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_ThruSections.SetMutableInput (@<对象>, @<是否可变输入>)
+    }
+
+    方法 是否可变输入 <公开 静态 类型 = 逻辑型 注释 = "是否可变输入. 原方法: IsMutableInput. 官方简介: 返回当前可变的输入状态" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_ThruSections.IsMutableInput (@<对象>)
+    }
+
+    方法 取状态 <公开 静态 类型 = 整数 注释 = "取状态. 原方法: GetStatus. 官方简介: 返回贯穿截面操作的状态" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKOffset.BRepOffsetAPI_ThruSections.GetStatus (@<对象>)
+    }
+
+}

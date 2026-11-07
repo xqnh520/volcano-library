@@ -1,0 +1,195 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.安卓.OCCT几何 <注释 = "OpenCASCADE 7.8.0 全库封装 (自动生成, 请勿手改). 名称已汉化为中文显示名, 注释内附英文原名. TK 库 libTKMesh: 6 个类 / 25 个方法.">
+
+类 离散化工厂 <公开 注释 = "离散化工厂: 原类 BRepMesh_DiscretFactory (libTKMesh, 头文件 BRepMesh/BRepMesh_DiscretFactory.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 此类用于设置/获取默认三角剖分算法. 使用静态方法 BRepMesh_DiscretFactory::Get() 获取全局工厂实例. 使用方法 BRepMesh_DiscretFactory::Discret() 获取网格化工具." @禁止创建对象 = 真>
+{
+
+    方法 取 <公开 静态 类型 = 长整数 注释 = "取. 原方法: Get. 官方简介: 返回全局工厂实例." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKMesh.BRepMesh_DiscretFactory.Get ()
+    }
+
+    方法 设置默认名称 <公开 静态 类型 = 逻辑型 注释 = "设置默认名称. 原方法: SetDefaultName. 官方简介: 按名称设置网格化算法. 若请求的工具可用则返回 TRUE. 失败时工厂将继续使用先前的算法." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 名称 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKMesh.BRepMesh_DiscretFactory.SetDefaultName (@<对象>, @<名称>)
+    }
+
+    方法 默认名称 <公开 静态 类型 = 文本型 注释 = "默认名称. 原方法: DefaultName. 官方简介: 返回当前网格划分算法的名称." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKMesh.BRepMesh_DiscretFactory.DefaultName (@<对象>)
+    }
+
+    方法 设置函数名称 <公开 静态 类型 = 逻辑型 注释 = "设置函数名称. 原方法: SetFunctionName. 官方简介: 高级函数. 更改要从插件检索的函数名. 若请求的工具可用则返回 TRUE. 失败时工厂将继续使用先前的算法." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 函数名称 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKMesh.BRepMesh_DiscretFactory.SetFunctionName (@<对象>, @<函数名称>)
+    }
+
+    方法 函数名称 <公开 静态 类型 = 文本型 注释 = "函数名称. 原方法: FunctionName. 官方简介: 返回插件应导出的函数名." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKMesh.BRepMesh_DiscretFactory.FunctionName (@<对象>)
+    }
+
+    方法 错误状态 <公开 静态 类型 = 整数 注释 = "错误状态. 原方法: ErrorStatus. 官方简介: 返回最后一次网格化算法切换的错误状态." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKMesh.BRepMesh_DiscretFactory.ErrorStatus (@<对象>)
+    }
+
+    方法 设置默认 <公开 静态 类型 = 逻辑型 注释 = "设置默认. 原方法: SetDefault. 官方简介: 设置应由该工厂创建的网格化算法. 若请求的工具可用则返回 TRUE. 失败时工厂将继续使用先前的算法. 调用 ::ErrorStatus() 方法以检索故障原因." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 名称 <类型 = 文本型>
+    参数 函数名称 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKMesh.BRepMesh_DiscretFactory.SetDefault (@<对象>, @<名称>, @<函数名称>)
+    }
+
+    方法 离散 <公开 静态 类型 = 长整数 注释 = "离散. 原方法: Discret. 官方简介: 返回三角剖分算法实例. @param theShape 要网格化的形状. @param theLinDeflection 用于网格化的线性偏差. @param theAngDeflection 用于网格化的角度偏差." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 形状 <类型 = 长整数>
+    参数 直线挠度 <类型 = 小数>
+    参数 角度挠度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKMesh.BRepMesh_DiscretFactory.Discret (@<对象>, @<形状>, @<直线挠度>, @<角度挠度>)
+    }
+
+}
+
+类 离散化基类 <公开 注释 = "离散化基类: 原类 BRepMesh_DiscretRoot (libTKMesh, 头文件 BRepMesh/BRepMesh_DiscretRoot.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 这是由网格工厂实例化, 由插件实现的网格化算法的通用接口." @禁止创建对象 = 真>
+{
+
+    方法 设置形状 <公开 静态 注释 = "设置形状. 原方法: SetShape. 官方简介: 设置要三角剖分的形状." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 形状 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKMesh.BRepMesh_DiscretRoot.SetShape (@<对象>, @<形状>)
+    }
+
+    方法 形状 <公开 静态 类型 = 长整数 注释 = "形状. 原方法: Shape." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKMesh.BRepMesh_DiscretRoot.Shape (@<对象>)
+    }
+
+    方法 是否完成 <公开 静态 类型 = 逻辑型 注释 = "是否完成. 原方法: IsDone. 官方简介: 若已执行三角剖分且成功则返回 true." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKMesh.BRepMesh_DiscretRoot.IsDone (@<对象>)
+    }
+
+}
+
+类 增量网格器 <公开 注释 = "增量网格器: 原类 BRepMesh_IncrementalMesh (libTKMesh, 头文件 BRepMesh/BRepMesh_IncrementalMesh.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 在正确三角化部件的基础上构建形状网格." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: BRepMesh_IncrementalMesh. 官方简介: 默认构造函数" @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKMesh.BRepMesh_IncrementalMesh.构造 ()
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: BRepMesh_IncrementalMesh. 官方简介: 构造函数. 自动调用方法 Perform. @param theShape 要网格化的形状. @param theLinDeflection 线性偏差. @param isRelative 若为 TRUE, 用于每条边离散化的偏差将是 <theLinDeflection> * <边的尺寸>. 用于面的偏差将是其各边的最大偏差. @param theAngDeflection 角度偏差. @param isInParallel 若为 TRUE, 形状将并行网格化." @嵌入式方法 = "">
+    参数 形状 <类型 = 长整数>
+    参数 直线挠度 <类型 = 小数>
+    参数 是否相对 <类型 = 逻辑型>
+    参数 角度挠度 <类型 = 小数>
+    参数 是否并行 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKMesh.BRepMesh_IncrementalMesh.构造_2 (@<形状>, @<直线挠度>, @<是否相对>, @<角度挠度>, @<是否并行>)
+    }
+
+    方法 创建_3 <公开 静态 类型 = 长整数 注释 = "创建_3. 原构造器: BRepMesh_IncrementalMesh. 官方简介: 构造函数. 自动调用方法 Perform. @param theShape 要网格化的形状. @param theParameters - 网格化参数" @嵌入式方法 = "">
+    参数 形状 <类型 = 长整数>
+    参数 参数 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKMesh.BRepMesh_IncrementalMesh.构造_3 (@<形状>, @<参数>)
+    }
+
+    方法 执行 <公开 静态 注释 = "执行. 原方法: Perform. 官方简介: 对形状执行网格化." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKMesh.BRepMesh_IncrementalMesh.Perform (@<对象>)
+    }
+
+    方法 执行_2 <公开 静态 注释 = "桩(本地不可用): 参数类型 const Handle_IMeshTools_Context& 未支持. 执行_2. 原方法: Perform. 官方简介: 对形状执行网格化." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 上下文 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKMesh.BRepMesh_IncrementalMesh.Perform_2 (@<对象>, @<上下文>)
+    }
+
+    方法 参数 <公开 静态 类型 = 长整数 注释 = "参数. 原方法: Parameters. 官方简介: 返回网格划分参数" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKMesh.BRepMesh_IncrementalMesh.Parameters (@<对象>)
+    }
+
+    方法 修改参数 <公开 静态 类型 = 长整数 注释 = "修改参数. 原方法: ChangeParameters. 官方简介: 返回可修改的网格划分参数" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKMesh.BRepMesh_IncrementalMesh.ChangeParameters (@<对象>)
+    }
+
+    方法 是否已修改 <公开 静态 类型 = 逻辑型 注释 = "是否已修改. 原方法: IsModified. 官方简介: 返回修改标志." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKMesh.BRepMesh_IncrementalMesh.IsModified (@<对象>)
+    }
+
+    方法 取状态标志 <公开 静态 类型 = 整数 注释 = "取状态标志. 原方法: GetStatusFlags. 官方简介: 返回网格化期间累积的状态标志." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKMesh.BRepMesh_IncrementalMesh.GetStatusFlags (@<对象>)
+    }
+
+    方法 离散 <公开 静态 类型 = 整数 注释 = "桩(本地不可用): 参数类型 BRepMesh_DiscretRoot* & 未支持. 离散. 原方法: Discret. 官方简介: 网格工厂的插件接口. 用给定参数初始化网格化算法. @param theShape 要网格化的形状. @param theLinDeflection 线性偏差. @param theAngDeflection 角度偏差. @param[out] theAlgo 指向已初始化算法的指针." @嵌入式方法 = "">
+    参数 形状 <类型 = 长整数>
+    参数 直线挠度 <类型 = 小数>
+    参数 角度挠度 <类型 = 小数>
+    参数 输出算法 <类型 = "长整数 []">
+    {
+        @ com.volcano.occt.Gen_TKMesh.BRepMesh_IncrementalMesh.Discret (@<形状>, @<直线挠度>, @<角度挠度>, @<输出算法>)
+    }
+
+    方法 是否平行默认 <公开 静态 类型 = 逻辑型 注释 = "是否平行默认. 原方法: IsParallelDefault. 官方简介: 返回多线程使用标志, 默认在 Discret() 静态方法中设置(因此仅应用于网格工厂)." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKMesh.BRepMesh_IncrementalMesh.IsParallelDefault ()
+    }
+
+    方法 设置平行默认 <公开 静态 注释 = "设置平行默认. 原方法: SetParallelDefault. 官方简介: 设置多线程使用标志, 默认在 Discret() 静态方法中设置(因此仅应用于网格工厂)." @嵌入式方法 = "">
+    参数 是否并行 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKMesh.BRepMesh_IncrementalMesh.SetParallelDefault (@<是否并行>)
+    }
+
+}
+
+类 网格模型算法基类 <公开 注释 = "网格模型算法基类: 原类 IMeshTools_ModelAlgo (libTKMesh, 头文件 IMeshTools/IMeshTools_ModelAlgo.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 为更新或修改离散化模型的算法提供 API 的接口类." @禁止创建对象 = 真>
+{
+
+}
+
+类 网格模型构建器 <公开 注释 = "网格模型构建器: 原类 IMeshTools_ModelBuilder (libTKMesh, 头文件 IMeshTools/IMeshTools_ModelBuilder.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 接口类, 表示构建离散化模型工具的 API." @禁止创建对象 = 真>
+{
+
+}
+
+类 网格化参数 <公开 注释 = "网格化参数: 原类 IMeshTools_Parameters (libTKMesh, 头文件 IMeshTools/IMeshTools_Parameters.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 存储网格化参数的结构." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: IMeshTools_Parameters. 官方简介: 默认构造函数" @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKMesh.IMeshTools_Parameters.构造 ()
+    }
+
+    方法 相对最小尺寸 <公开 静态 类型 = 小数 注释 = "相对最小尺寸. 原方法: RelMinSize. 官方简介: 返回用于从偏差计算 MinSize(最小网格边长)默认值的系数" @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKMesh.IMeshTools_Parameters.RelMinSize ()
+    }
+
+}

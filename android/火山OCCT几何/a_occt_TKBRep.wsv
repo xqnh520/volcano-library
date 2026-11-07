@@ -1,0 +1,3688 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.安卓.OCCT几何 <注释 = "OpenCASCADE 7.8.0 全库封装 (自动生成, 请勿手改). 名称已汉化为中文显示名, 注释内附英文原名. TK 库 libTKBRep: 31 个类 / 492 个方法.">
+
+类 复合曲线适配器 <公开 注释 = "复合曲线适配器: 原类 BRepAdaptor_CompCurve (libTKBRep, 头文件 BRepAdaptor/BRepAdaptor_CompCurve.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: BRepAdaptor 的 Curve 允许把边界表示的线框当作三维曲线使用. 警告: 使用此类曲线时不假定 C0 与 C1 连续性, 因此要小心某些算法! 注意 BRepAdaptor_CompCurve 完全不能是周期曲线(即使它包含单条周期边)." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: BRepAdaptor_CompCurve. 官方简介: 创建未加载线框的未定义曲线." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_CompCurve.构造 ()
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: BRepAdaptor_CompCurve." @嵌入式方法 = "">
+    参数 W <类型 = 长整数>
+    参数 按弧长节点 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_CompCurve.构造_2 (@<W>, @<按弧长节点>)
+    }
+
+    方法 创建_3 <公开 静态 类型 = 长整数 注释 = "创建_3. 原构造器: BRepAdaptor_CompCurve. 官方简介: 创建曲线以访问边 <W> 的几何." @嵌入式方法 = "">
+    参数 W <类型 = 长整数>
+    参数 按弧长节点 <类型 = 逻辑型>
+    参数 首个 <类型 = 小数>
+    参数 末个 <类型 = 小数>
+    参数 容差 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_CompCurve.构造_3 (@<W>, @<按弧长节点>, @<首个>, @<末个>, @<容差>)
+    }
+
+    方法 浅拷贝 <公开 静态 类型 = 长整数 注释 = "浅拷贝. 原方法: ShallowCopy. 官方简介: 适配器的浅拷贝" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_CompCurve.ShallowCopy (@<对象>)
+    }
+
+    方法 初始化 <公开 静态 注释 = "初始化. 原方法: Initialize. 官方简介: 设置线框 <W>." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 W <类型 = 长整数>
+    参数 按弧长节点 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_CompCurve.Initialize (@<对象>, @<W>, @<按弧长节点>)
+    }
+
+    方法 初始化_2 <公开 静态 注释 = "初始化_2. 原方法: Initialize. 官方简介: 设置线框 <W> 与修剪参数." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 W <类型 = 长整数>
+    参数 按弧长节点 <类型 = 逻辑型>
+    参数 首个 <类型 = 小数>
+    参数 末个 <类型 = 小数>
+    参数 容差 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_CompCurve.Initialize_2 (@<对象>, @<W>, @<按弧长节点>, @<首个>, @<末个>, @<容差>)
+    }
+
+    方法 线框 <公开 静态 类型 = 长整数 注释 = "线框. 原方法: Wire. 官方简介: 返回线框." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_CompCurve.Wire (@<对象>)
+    }
+
+    方法 边 <公开 静态 注释 = "边. 原方法: Edge. 官方简介: 返回一条边及其上对应于参数 U 的一个参数." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出E <类型 = 长整数>
+    参数 输出边上U参数 <类型 = "小数 []">
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_CompCurve.Edge (@<对象>, @<U>, @<输出E>, @<输出边上U参数>)
+    }
+
+    方法 首个参数 <公开 静态 类型 = 小数 注释 = "首个参数. 原方法: FirstParameter." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_CompCurve.FirstParameter (@<对象>)
+    }
+
+    方法 末个参数 <公开 静态 类型 = 小数 注释 = "末个参数. 原方法: LastParameter." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_CompCurve.LastParameter (@<对象>)
+    }
+
+    方法 连续性 <公开 静态 类型 = 整数 注释 = "连续性. 原方法: Continuity." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_CompCurve.Continuity (@<对象>)
+    }
+
+    方法 区间数 <公开 静态 类型 = 整数 注释 = "区间数. 原方法: NbIntervals. 官方简介: 返回连续性 <S> 的区间数. 若 Continuity(me) >= <S> 可能为 1" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_CompCurve.NbIntervals (@<对象>, @<S>)
+    }
+
+    方法 裁剪 <公开 静态 类型 = 长整数 注释 = "裁剪. 原方法: Trim. 官方简介: 返回与 <me> 等效的曲线在参数 <First> 与 <Last> 之间的部分. <Tol> 用于检测三维点是否重合. 若 <First> >= <Last>" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 首个 <类型 = 小数>
+    参数 末个 <类型 = 小数>
+    参数 容差 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_CompCurve.Trim (@<对象>, @<首个>, @<末个>, @<容差>)
+    }
+
+    方法 是否闭合 <公开 静态 类型 = 逻辑型 注释 = "是否闭合. 原方法: IsClosed." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_CompCurve.IsClosed (@<对象>)
+    }
+
+    方法 是否周期 <公开 静态 类型 = 逻辑型 注释 = "是否周期. 原方法: IsPeriodic." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_CompCurve.IsPeriodic (@<对象>)
+    }
+
+    方法 周期 <公开 静态 类型 = 小数 注释 = "周期. 原方法: Period." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_CompCurve.Period (@<对象>)
+    }
+
+    方法 取值 <公开 静态 类型 = 长整数 注释 = "取值. 原方法: Value. 官方简介: 计算曲线上参数为 U 的点" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_CompCurve.Value (@<对象>, @<U>)
+    }
+
+    方法 取点 <公开 静态 注释 = "取点. 原方法: D0. 官方简介: 计算参数 U 的点." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_CompCurve.D0 (@<对象>, @<U>, @<输出P>)
+    }
+
+    方法 取一阶导 <公开 静态 注释 = "取一阶导. 原方法: D1. 官方简介: 计算曲线上参数为 U 的点及其一阶导数. 若当前区间的连续性不是 C1 则抛出异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    参数 输出V <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_CompCurve.D1 (@<对象>, @<U>, @<输出P>, @<输出V>)
+    }
+
+    方法 取二阶导 <公开 静态 注释 = "取二阶导. 原方法: D2. 官方简介: 返回参数 U 的点 P, 以及一阶导数 V1 和二阶导数 V2. 若当前区间的连续性不是 C2 则抛出异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    参数 输出V1 <类型 = 长整数>
+    参数 输出V2 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_CompCurve.D2 (@<对象>, @<U>, @<输出P>, @<输出V1>, @<输出V2>)
+    }
+
+    方法 取三阶导 <公开 静态 注释 = "取三阶导. 原方法: D3. 官方简介: 返回参数 U 的点 P, 以及一阶, 二阶和三阶导数. 若当前区间的连续性不是 C3 则抛出异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    参数 输出V1 <类型 = 长整数>
+    参数 输出V2 <类型 = 长整数>
+    参数 输出V3 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_CompCurve.D3 (@<对象>, @<U>, @<输出P>, @<输出V1>, @<输出V2>, @<输出V3>)
+    }
+
+    方法 取N阶导 <公开 静态 类型 = 长整数 注释 = "取N阶导. 原方法: DN. 官方简介: 返回的向量给出 N 阶导数的值. 若当前区间的连续性不是 CN 则抛出异常. 若 N < 1 则抛出异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 N <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_CompCurve.DN (@<对象>, @<U>, @<N>)
+    }
+
+    方法 分辨率 <公开 静态 类型 = 小数 注释 = "分辨率. 原方法: Resolution. 官方简介: 返回参数分辨率" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 R3d <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_CompCurve.Resolution (@<对象>, @<R3d>)
+    }
+
+    方法 取类型 <公开 静态 类型 = 整数 注释 = "取类型. 原方法: GetType." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_CompCurve.GetType (@<对象>)
+    }
+
+    方法 直线 <公开 静态 类型 = 长整数 注释 = "直线. 原方法: Line." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_CompCurve.Line (@<对象>)
+    }
+
+    方法 圆 <公开 静态 类型 = 长整数 注释 = "圆. 原方法: Circle." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_CompCurve.Circle (@<对象>)
+    }
+
+    方法 椭圆 <公开 静态 类型 = 长整数 注释 = "椭圆. 原方法: Ellipse." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_CompCurve.Ellipse (@<对象>)
+    }
+
+    方法 双曲线 <公开 静态 类型 = 长整数 注释 = "双曲线. 原方法: Hyperbola." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_CompCurve.Hyperbola (@<对象>)
+    }
+
+    方法 抛物线 <公开 静态 类型 = 长整数 注释 = "抛物线. 原方法: Parabola." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_CompCurve.Parabola (@<对象>)
+    }
+
+    方法 阶次 <公开 静态 类型 = 整数 注释 = "阶次. 原方法: Degree." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_CompCurve.Degree (@<对象>)
+    }
+
+    方法 是否有理 <公开 静态 类型 = 逻辑型 注释 = "是否有理. 原方法: IsRational." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_CompCurve.IsRational (@<对象>)
+    }
+
+    方法 极点数 <公开 静态 类型 = 整数 注释 = "极点数. 原方法: NbPoles." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_CompCurve.NbPoles (@<对象>)
+    }
+
+    方法 节点数 <公开 静态 类型 = 整数 注释 = "节点数. 原方法: NbKnots." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_CompCurve.NbKnots (@<对象>)
+    }
+
+    方法 贝塞尔 <公开 静态 类型 = 长整数 注释 = "贝塞尔. 原方法: Bezier." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_CompCurve.Bezier (@<对象>)
+    }
+
+    方法 B样条 <公开 静态 类型 = 长整数 注释 = "B样条. 原方法: BSpline." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_CompCurve.BSpline (@<对象>)
+    }
+
+}
+
+类 曲线适配器 <公开 注释 = "曲线适配器: 原类 BRepAdaptor_Curve (libTKBRep, 头文件 BRepAdaptor/BRepAdaptor_Curve.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: BRepAdaptor 的 Curve 允许把边界表示的边当作三维曲线使用." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: BRepAdaptor_Curve. 官方简介: 创建未加载边的未定义曲线." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Curve.构造 ()
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: BRepAdaptor_Curve. 官方简介: 创建曲线以访问边 <E> 的几何." @嵌入式方法 = "">
+    参数 E <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Curve.构造_2 (@<E>)
+    }
+
+    方法 创建_3 <公开 静态 类型 = 长整数 注释 = "创建_3. 原构造器: BRepAdaptor_Curve. 官方简介: 创建曲线以访问边 <E> 的几何. 该几何将使用 <E> 在面 <F> 上的参数曲线来计算. 若该边在该面上没有 pcurve 则抛出错误." @嵌入式方法 = "">
+    参数 E <类型 = 长整数>
+    参数 F <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Curve.构造_3 (@<E>, @<F>)
+    }
+
+    方法 浅拷贝 <公开 静态 类型 = 长整数 注释 = "浅拷贝. 原方法: ShallowCopy. 官方简介: 适配器的浅拷贝" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Curve.ShallowCopy (@<对象>)
+    }
+
+    方法 重置 <公开 静态 注释 = "重置. 原方法: Reset. 官方简介: 重置当前加载的曲线(撤销 Load())." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Curve.Reset (@<对象>)
+    }
+
+    方法 初始化 <公开 静态 注释 = "初始化. 原方法: Initialize. 官方简介: 设置曲线 <me> 以访问边 <E> 的几何." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 E <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Curve.Initialize (@<对象>, @<E>)
+    }
+
+    方法 初始化_2 <公开 静态 注释 = "初始化_2. 原方法: Initialize. 官方简介: 把曲线 <me> 设为访问边 <E> 的几何. 该几何将使用 <E> 在面 <F> 上的参数曲线来计算. 若该边在该面上没有 pcurve 则抛出错误." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 E <类型 = 长整数>
+    参数 F <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Curve.Initialize_2 (@<对象>, @<E>, @<F>)
+    }
+
+    方法 变换 <公开 静态 类型 = 长整数 注释 = "变换. 原方法: Trsf. 官方简介: 返回曲线的坐标系." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Curve.Trsf (@<对象>)
+    }
+
+    方法 是否3D曲线 <公开 静态 类型 = 逻辑型 注释 = "是否3D曲线. 原方法: Is3DCurve. 官方简介: 若边的几何由三维曲线计算得到则返回 True." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Curve.Is3DCurve (@<对象>)
+    }
+
+    方法 曲线是否在曲面上 <公开 静态 类型 = 逻辑型 注释 = "曲线是否在曲面上. 原方法: IsCurveOnSurface. 官方简介: 若边的几何由曲面上的 pcurve 计算得到则返回 True." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Curve.IsCurveOnSurface (@<对象>)
+    }
+
+    方法 曲线 <公开 静态 类型 = 长整数 注释 = "曲线. 原方法: Curve. 官方简介: 返回边的曲线." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Curve.Curve (@<对象>)
+    }
+
+    方法 曲面上的曲线 <公开 静态 类型 = 长整数 注释 = "曲面上的曲线. 原方法: CurveOnSurface. 官方简介: 返回边的 CurveOnSurface." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Curve.CurveOnSurface (@<对象>)
+    }
+
+    方法 边 <公开 静态 类型 = 长整数 注释 = "边. 原方法: Edge. 官方简介: 返回边." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Curve.Edge (@<对象>)
+    }
+
+    方法 容差 <公开 静态 类型 = 小数 注释 = "容差. 原方法: Tolerance. 官方简介: 返回边公差." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Curve.Tolerance (@<对象>)
+    }
+
+    方法 首个参数 <公开 静态 类型 = 小数 注释 = "首个参数. 原方法: FirstParameter." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Curve.FirstParameter (@<对象>)
+    }
+
+    方法 末个参数 <公开 静态 类型 = 小数 注释 = "末个参数. 原方法: LastParameter." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Curve.LastParameter (@<对象>)
+    }
+
+    方法 连续性 <公开 静态 类型 = 整数 注释 = "连续性. 原方法: Continuity." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Curve.Continuity (@<对象>)
+    }
+
+    方法 区间数 <公开 静态 类型 = 整数 注释 = "区间数. 原方法: NbIntervals. 官方简介: 返回连续性 <S> 的区间数. 若 Continuity(me) >= <S> 可能为 1" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Curve.NbIntervals (@<对象>, @<S>)
+    }
+
+    方法 裁剪 <公开 静态 类型 = 长整数 注释 = "裁剪. 原方法: Trim. 官方简介: 返回与 <me> 等效的曲线在参数 <First> 与 <Last> 之间的部分. <Tol> 用于检测三维点是否重合. 若 <First> >= <Last>" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 首个 <类型 = 小数>
+    参数 末个 <类型 = 小数>
+    参数 容差 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Curve.Trim (@<对象>, @<首个>, @<末个>, @<容差>)
+    }
+
+    方法 是否闭合 <公开 静态 类型 = 逻辑型 注释 = "是否闭合. 原方法: IsClosed." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Curve.IsClosed (@<对象>)
+    }
+
+    方法 是否周期 <公开 静态 类型 = 逻辑型 注释 = "是否周期. 原方法: IsPeriodic." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Curve.IsPeriodic (@<对象>)
+    }
+
+    方法 周期 <公开 静态 类型 = 小数 注释 = "周期. 原方法: Period." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Curve.Period (@<对象>)
+    }
+
+    方法 取值 <公开 静态 类型 = 长整数 注释 = "取值. 原方法: Value. 官方简介: 计算曲线上参数为 U 的点" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Curve.Value (@<对象>, @<U>)
+    }
+
+    方法 取点 <公开 静态 注释 = "取点. 原方法: D0. 官方简介: 计算参数 U 的点." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Curve.D0 (@<对象>, @<U>, @<输出P>)
+    }
+
+    方法 取一阶导 <公开 静态 注释 = "取一阶导. 原方法: D1. 官方简介: 计算曲线上参数为 U 的点及其一阶导数. 若当前区间的连续性不是 C1 则抛出异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    参数 输出V <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Curve.D1 (@<对象>, @<U>, @<输出P>, @<输出V>)
+    }
+
+    方法 取二阶导 <公开 静态 注释 = "取二阶导. 原方法: D2. 官方简介: 返回参数 U 的点 P, 以及一阶导数 V1 和二阶导数 V2. 若当前区间的连续性不是 C2 则抛出异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    参数 输出V1 <类型 = 长整数>
+    参数 输出V2 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Curve.D2 (@<对象>, @<U>, @<输出P>, @<输出V1>, @<输出V2>)
+    }
+
+    方法 取三阶导 <公开 静态 注释 = "取三阶导. 原方法: D3. 官方简介: 返回参数 U 的点 P, 以及一阶, 二阶和三阶导数. 若当前区间的连续性不是 C3 则抛出异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    参数 输出V1 <类型 = 长整数>
+    参数 输出V2 <类型 = 长整数>
+    参数 输出V3 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Curve.D3 (@<对象>, @<U>, @<输出P>, @<输出V1>, @<输出V2>, @<输出V3>)
+    }
+
+    方法 取N阶导 <公开 静态 类型 = 长整数 注释 = "取N阶导. 原方法: DN. 官方简介: 返回的向量给出 N 阶导数的值. 若当前区间的连续性不是 CN 则抛出异常. 若 N < 1 则抛出异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 N <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Curve.DN (@<对象>, @<U>, @<N>)
+    }
+
+    方法 分辨率 <公开 静态 类型 = 小数 注释 = "分辨率. 原方法: Resolution. 官方简介: 返回参数分辨率" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 R3d <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Curve.Resolution (@<对象>, @<R3d>)
+    }
+
+    方法 取类型 <公开 静态 类型 = 整数 注释 = "取类型. 原方法: GetType." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Curve.GetType (@<对象>)
+    }
+
+    方法 直线 <公开 静态 类型 = 长整数 注释 = "直线. 原方法: Line." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Curve.Line (@<对象>)
+    }
+
+    方法 圆 <公开 静态 类型 = 长整数 注释 = "圆. 原方法: Circle." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Curve.Circle (@<对象>)
+    }
+
+    方法 椭圆 <公开 静态 类型 = 长整数 注释 = "椭圆. 原方法: Ellipse." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Curve.Ellipse (@<对象>)
+    }
+
+    方法 双曲线 <公开 静态 类型 = 长整数 注释 = "双曲线. 原方法: Hyperbola." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Curve.Hyperbola (@<对象>)
+    }
+
+    方法 抛物线 <公开 静态 类型 = 长整数 注释 = "抛物线. 原方法: Parabola." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Curve.Parabola (@<对象>)
+    }
+
+    方法 阶次 <公开 静态 类型 = 整数 注释 = "阶次. 原方法: Degree." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Curve.Degree (@<对象>)
+    }
+
+    方法 是否有理 <公开 静态 类型 = 逻辑型 注释 = "是否有理. 原方法: IsRational." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Curve.IsRational (@<对象>)
+    }
+
+    方法 极点数 <公开 静态 类型 = 整数 注释 = "极点数. 原方法: NbPoles." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Curve.NbPoles (@<对象>)
+    }
+
+    方法 节点数 <公开 静态 类型 = 整数 注释 = "节点数. 原方法: NbKnots." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Curve.NbKnots (@<对象>)
+    }
+
+    方法 贝塞尔 <公开 静态 类型 = 长整数 注释 = "贝塞尔. 原方法: Bezier. 官方简介: 警告: 由于会把 myTsrf 应用到该 Bezier 曲线上, 这将复制该 Bezier 曲线. 使用此方法时请小心." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Curve.Bezier (@<对象>)
+    }
+
+    方法 B样条 <公开 静态 类型 = 长整数 注释 = "B样条. 原方法: BSpline. 官方简介: 警告: 由于会把 myTsrf 应用到该 BSpline 曲线上, 这将复制该 BSpline 曲线. 使用此方法时请小心." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Curve.BSpline (@<对象>)
+    }
+
+    方法 偏移曲线 <公开 静态 类型 = 长整数 注释 = "偏移曲线. 原方法: OffsetCurve." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Curve.OffsetCurve (@<对象>)
+    }
+
+}
+
+类 参数域曲线适配器 <公开 注释 = "参数域曲线适配器: 原类 BRepAdaptor_Curve2d (libTKBRep, 头文件 BRepAdaptor/BRepAdaptor_Curve2d.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: BRepAdaptor 的 Curve2d 允许把面上的边当作二维曲线(参数域曲线)使用." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: BRepAdaptor_Curve2d. 官方简介: 创建未初始化的二维曲线." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Curve2d.构造 ()
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: BRepAdaptor_Curve2d. 官方简介: 用 <E> 在 <F> 上的 pcurve 创建." @嵌入式方法 = "">
+    参数 E <类型 = 长整数>
+    参数 F <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Curve2d.构造_2 (@<E>, @<F>)
+    }
+
+    方法 浅拷贝 <公开 静态 类型 = 长整数 注释 = "浅拷贝. 原方法: ShallowCopy. 官方简介: 适配器的浅拷贝" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Curve2d.ShallowCopy (@<对象>)
+    }
+
+    方法 初始化 <公开 静态 注释 = "初始化. 原方法: Initialize. 官方简介: 用 <E> 在 <F> 上的 pcurve 初始化." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 E <类型 = 长整数>
+    参数 F <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Curve2d.Initialize (@<对象>, @<E>, @<F>)
+    }
+
+    方法 边 <公开 静态 类型 = 长整数 注释 = "边. 原方法: Edge. 官方简介: 返回边." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Curve2d.Edge (@<对象>)
+    }
+
+    方法 面 <公开 静态 类型 = 长整数 注释 = "面. 原方法: Face. 官方简介: 返回面." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Curve2d.Face (@<对象>)
+    }
+
+}
+
+类 曲面适配器 <公开 注释 = "曲面适配器: 原类 BRepAdaptor_Surface (libTKBRep, 头文件 BRepAdaptor/BRepAdaptor_Surface.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: BRepAdaptor 的 Surface 允许把边界表示的面当作三维曲面使用." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: BRepAdaptor_Surface. 官方简介: 创建一个未定义曲面, 未载入任何面." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Surface.构造 ()
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: BRepAdaptor_Surface. 官方简介: 创建用于访问 <F> 几何的曲面. 若 <Restriction> 为 true, 则参数范围是该限制在 UV 空间中的参数范围." @嵌入式方法 = "">
+    参数 F <类型 = 长整数>
+    参数 R <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Surface.构造_2 (@<F>, @<R>)
+    }
+
+    方法 浅拷贝 <公开 静态 类型 = 长整数 注释 = "浅拷贝. 原方法: ShallowCopy. 官方简介: 适配器的浅拷贝" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Surface.ShallowCopy (@<对象>)
+    }
+
+    方法 初始化 <公开 静态 注释 = "初始化. 原方法: Initialize. 官方简介: 把曲面设为 <F> 的几何." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 F <类型 = 长整数>
+    参数 限制 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Surface.Initialize (@<对象>, @<F>, @<限制>)
+    }
+
+    方法 曲面 <公开 静态 类型 = 长整数 注释 = "曲面. 原方法: Surface. 官方简介: 返回曲面." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Surface.Surface (@<对象>)
+    }
+
+    方法 修改曲面 <公开 静态 类型 = 长整数 注释 = "修改曲面. 原方法: ChangeSurface. 官方简介: 返回曲面." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Surface.ChangeSurface (@<对象>)
+    }
+
+    方法 变换 <公开 静态 类型 = 长整数 注释 = "变换. 原方法: Trsf. 官方简介: 返回曲面坐标系." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Surface.Trsf (@<对象>)
+    }
+
+    方法 面 <公开 静态 类型 = 长整数 注释 = "面. 原方法: Face. 官方简介: 返回面." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Surface.Face (@<对象>)
+    }
+
+    方法 容差 <公开 静态 类型 = 小数 注释 = "容差. 原方法: Tolerance. 官方简介: 返回面公差." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Surface.Tolerance (@<对象>)
+    }
+
+    方法 首个U参数 <公开 静态 类型 = 小数 注释 = "首个U参数. 原方法: FirstUParameter." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Surface.FirstUParameter (@<对象>)
+    }
+
+    方法 末个U参数 <公开 静态 类型 = 小数 注释 = "末个U参数. 原方法: LastUParameter." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Surface.LastUParameter (@<对象>)
+    }
+
+    方法 首个V参数 <公开 静态 类型 = 小数 注释 = "首个V参数. 原方法: FirstVParameter." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Surface.FirstVParameter (@<对象>)
+    }
+
+    方法 末个V参数 <公开 静态 类型 = 小数 注释 = "末个V参数. 原方法: LastVParameter." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Surface.LastVParameter (@<对象>)
+    }
+
+    方法 U连续性 <公开 静态 类型 = 整数 注释 = "U连续性. 原方法: UContinuity." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Surface.UContinuity (@<对象>)
+    }
+
+    方法 V连续性 <公开 静态 类型 = 整数 注释 = "V连续性. 原方法: VContinuity." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Surface.VContinuity (@<对象>)
+    }
+
+    方法 U区间数 <公开 静态 类型 = 整数 注释 = "U区间数. 原方法: NbUIntervals. 官方简介: 必要时把曲面按连续性 <S> 分割为 U 方向区间. 并返回区间数量." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 形状 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Surface.NbUIntervals (@<对象>, @<形状>)
+    }
+
+    方法 V区间数 <公开 静态 类型 = 整数 注释 = "V区间数. 原方法: NbVIntervals. 官方简介: 必要时把曲面按连续性 <S> 分割为 V 方向区间. 并返回区间数量." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 形状 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Surface.NbVIntervals (@<对象>, @<形状>)
+    }
+
+    方法 U裁剪 <公开 静态 类型 = 长整数 注释 = "U裁剪. 原方法: UTrim. 官方简介: 返回与 <me> 等效的曲面在 U 方向上裁剪到参数 <First> 与 <Last> 之间的部分. <Tol> 用于检测三维点是否重合. 若 <First> >= <Last>" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 首个 <类型 = 小数>
+    参数 末个 <类型 = 小数>
+    参数 容差 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Surface.UTrim (@<对象>, @<首个>, @<末个>, @<容差>)
+    }
+
+    方法 V裁剪 <公开 静态 类型 = 长整数 注释 = "V裁剪. 原方法: VTrim. 官方简介: 返回在 V 方向上裁剪到参数 <First> 与 <Last> 之间的曲面. <Tol> 用于检测三维点是否重合. 若 <First> >= <Last>" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 首个 <类型 = 小数>
+    参数 末个 <类型 = 小数>
+    参数 容差 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Surface.VTrim (@<对象>, @<首个>, @<末个>, @<容差>)
+    }
+
+    方法 是否U闭合 <公开 静态 类型 = 逻辑型 注释 = "是否U闭合. 原方法: IsUClosed." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Surface.IsUClosed (@<对象>)
+    }
+
+    方法 是否V闭合 <公开 静态 类型 = 逻辑型 注释 = "是否V闭合. 原方法: IsVClosed." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Surface.IsVClosed (@<对象>)
+    }
+
+    方法 是否U周期 <公开 静态 类型 = 逻辑型 注释 = "是否U周期. 原方法: IsUPeriodic." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Surface.IsUPeriodic (@<对象>)
+    }
+
+    方法 U周期 <公开 静态 类型 = 小数 注释 = "U周期. 原方法: UPeriod." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Surface.UPeriod (@<对象>)
+    }
+
+    方法 是否V周期 <公开 静态 类型 = 逻辑型 注释 = "是否V周期. 原方法: IsVPeriodic." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Surface.IsVPeriodic (@<对象>)
+    }
+
+    方法 V周期 <公开 静态 类型 = 小数 注释 = "V周期. 原方法: VPeriod." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Surface.VPeriod (@<对象>)
+    }
+
+    方法 取值 <公开 静态 类型 = 长整数 注释 = "取值. 原方法: Value. 官方简介: 计算曲面上参数 U,V 的点. 提示: 使用 GeomLib::NormEstim() 计算指定 (U, V) 点处的曲面法线." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 V <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Surface.Value (@<对象>, @<U>, @<V>)
+    }
+
+    方法 取点 <公开 静态 注释 = "取点. 原方法: D0. 官方简介: 计算曲面上参数为 U,V 的点." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 V <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Surface.D0 (@<对象>, @<U>, @<V>, @<输出P>)
+    }
+
+    方法 取一阶导 <公开 静态 注释 = "取一阶导. 原方法: D1. 官方简介: 计算曲面上的点与一阶导数. 若当前区间的连续性不是 C1 则抛出异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 V <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    参数 输出D1U <类型 = 长整数>
+    参数 输出D1V <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Surface.D1 (@<对象>, @<U>, @<V>, @<输出P>, @<输出D1U>, @<输出D1V>)
+    }
+
+    方法 取二阶导 <公开 静态 注释 = "取二阶导. 原方法: D2. 官方简介: 计算曲面上的点、一阶与二阶导数. 若当前区间的连续性不是 C2 则抛出异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 V <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    参数 输出D1U <类型 = 长整数>
+    参数 输出D1V <类型 = 长整数>
+    参数 输出D2U <类型 = 长整数>
+    参数 输出D2V <类型 = 长整数>
+    参数 输出D2UV <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Surface.D2 (@<对象>, @<U>, @<V>, @<输出P>, @<输出D1U>, @<输出D1V>, @<输出D2U>, @<输出D2V>, @<输出D2UV>)
+    }
+
+    方法 取三阶导 <公开 静态 注释 = "取三阶导. 原方法: D3. 官方简介: 计算曲面上的点、一阶、二阶与三阶导数. 若当前区间的连续性不是 C3 则抛出异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 V <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    参数 输出D1U <类型 = 长整数>
+    参数 输出D1V <类型 = 长整数>
+    参数 输出D2U <类型 = 长整数>
+    参数 输出D2V <类型 = 长整数>
+    参数 输出D2UV <类型 = 长整数>
+    参数 输出D3U <类型 = 长整数>
+    参数 输出D3V <类型 = 长整数>
+    参数 输出D3UUV <类型 = 长整数>
+    参数 输出D3UVV <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Surface.D3 (@<对象>, @<U>, @<V>, @<输出P>, @<输出D1U>, @<输出D1V>, @<输出D2U>, @<输出D2V>, @<输出D2UV>, @<输出D3U>, @<输出D3V>, @<输出D3UUV>, @<输出D3UVV>)
+    }
+
+    方法 取N阶导 <公开 静态 类型 = 长整数 注释 = "取N阶导. 原方法: DN. 官方简介: 计算点 P(U, V) 处 U 方向 Nu 阶、V 方向 Nv 阶的导数. 若当前 U 区间不是 CNu 且当前 V 区间不是 CNv 则抛出异常. 若 Nu + Nv < 1 或 Nu < 0 或 Nv < 0 则抛出异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 V <类型 = 小数>
+    参数 Nu <类型 = 整数>
+    参数 Nv <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Surface.DN (@<对象>, @<U>, @<V>, @<Nu>, @<Nv>)
+    }
+
+    方法 U分辨率 <公开 静态 类型 = 小数 注释 = "U分辨率. 原方法: UResolution. 官方简介: 返回与真实空间分辨率 <R3d> 对应的 U 参数分辨率." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 R3d <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Surface.UResolution (@<对象>, @<R3d>)
+    }
+
+    方法 V分辨率 <公开 静态 类型 = 小数 注释 = "V分辨率. 原方法: VResolution. 官方简介: 返回与真实空间分辨率 <R3d> 对应的 V 参数分辨率." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 R3d <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Surface.VResolution (@<对象>, @<R3d>)
+    }
+
+    方法 取类型 <公开 静态 类型 = 整数 注释 = "取类型. 原方法: GetType. 官方简介: 返回曲面的类型: Plane, Cylinder, Cone, Sphere, Torus, BezierSurface, BSplineSurface, SurfaceOfRevolution, SurfaceOfExtrusion, OtherSurface" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Surface.GetType (@<对象>)
+    }
+
+    方法 平面 <公开 静态 类型 = 长整数 注释 = "平面. 原方法: Plane." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Surface.Plane (@<对象>)
+    }
+
+    方法 圆柱 <公开 静态 类型 = 长整数 注释 = "圆柱. 原方法: Cylinder." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Surface.Cylinder (@<对象>)
+    }
+
+    方法 圆锥 <公开 静态 类型 = 长整数 注释 = "圆锥. 原方法: Cone." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Surface.Cone (@<对象>)
+    }
+
+    方法 球面 <公开 静态 类型 = 长整数 注释 = "球面. 原方法: Sphere." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Surface.Sphere (@<对象>)
+    }
+
+    方法 圆环 <公开 静态 类型 = 长整数 注释 = "圆环. 原方法: Torus." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Surface.Torus (@<对象>)
+    }
+
+    方法 U阶次 <公开 静态 类型 = 整数 注释 = "U阶次. 原方法: UDegree." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Surface.UDegree (@<对象>)
+    }
+
+    方法 U极点数 <公开 静态 类型 = 整数 注释 = "U极点数. 原方法: NbUPoles." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Surface.NbUPoles (@<对象>)
+    }
+
+    方法 V阶次 <公开 静态 类型 = 整数 注释 = "V阶次. 原方法: VDegree." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Surface.VDegree (@<对象>)
+    }
+
+    方法 V极点数 <公开 静态 类型 = 整数 注释 = "V极点数. 原方法: NbVPoles." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Surface.NbVPoles (@<对象>)
+    }
+
+    方法 U节点数 <公开 静态 类型 = 整数 注释 = "U节点数. 原方法: NbUKnots." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Surface.NbUKnots (@<对象>)
+    }
+
+    方法 V节点数 <公开 静态 类型 = 整数 注释 = "V节点数. 原方法: NbVKnots." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Surface.NbVKnots (@<对象>)
+    }
+
+    方法 是否U有理 <公开 静态 类型 = 逻辑型 注释 = "是否U有理. 原方法: IsURational." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Surface.IsURational (@<对象>)
+    }
+
+    方法 是否V有理 <公开 静态 类型 = 逻辑型 注释 = "是否V有理. 原方法: IsVRational." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Surface.IsVRational (@<对象>)
+    }
+
+    方法 贝塞尔 <公开 静态 类型 = 长整数 注释 = "贝塞尔. 原方法: Bezier." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Surface.Bezier (@<对象>)
+    }
+
+    方法 B样条 <公开 静态 类型 = 长整数 注释 = "B样条. 原方法: BSpline. 官方简介: 警告: 由于会把 myTsrf 变换应用到该 BSpline 曲面上, 这将复制该 BSpline 曲面. 使用此方法时请小心" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Surface.BSpline (@<对象>)
+    }
+
+    方法 旋转轴 <公开 静态 类型 = 长整数 注释 = "旋转轴. 原方法: AxeOfRevolution." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Surface.AxeOfRevolution (@<对象>)
+    }
+
+    方法 方向 <公开 静态 类型 = 长整数 注释 = "方向. 原方法: Direction." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Surface.Direction (@<对象>)
+    }
+
+    方法 基曲线 <公开 静态 类型 = 长整数 注释 = "基曲线. 原方法: BasisCurve. 官方简介: 仅用于 SurfaceOfExtrusion 和 SurfaceOfRevolution. 警告: 这会复制底层曲线, 因为它对曲线施加变换 myTrsf. 使用该方法时请小心." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Surface.BasisCurve (@<对象>)
+    }
+
+    方法 基曲面 <公开 静态 类型 = 长整数 注释 = "基曲面. 原方法: BasisSurface." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Surface.BasisSurface (@<对象>)
+    }
+
+    方法 偏移值 <公开 静态 类型 = 小数 注释 = "偏移值. 原方法: OffsetValue." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepAdaptor_Surface.OffsetValue (@<对象>)
+    }
+
+}
+
+类 曲线局部属性 <公开 注释 = "曲线局部属性: 原类 BRepLProp_CLProps (libTKBRep, 头文件 BRepLProp/BRepLProp_CLProps.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: BRepLProp_CLProps. 官方简介: 初始化曲线 <C> 的局部属性. 当前点与导数同时计算, 从而可以优化计算时间. <N> 指示要进行的最大求导次数(0, 1, 2 或 3). 例如, 若只需计算切线, N 应等于 1. <Resolution> 是线性容差(用于检测向量是否为空)." @嵌入式方法 = "">
+    参数 C <类型 = 长整数>
+    参数 N <类型 = 整数>
+    参数 分辨率 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepLProp_CLProps.构造 (@<C>, @<N>, @<分辨率>)
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: BRepLProp_CLProps. 官方简介: 与前一构造函数相同, 但此处参数设置为值 <U>. 所做的全部计算将与 <C> 和 <U> 相关." @嵌入式方法 = "">
+    参数 C <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 N <类型 = 整数>
+    参数 分辨率 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepLProp_CLProps.构造_2 (@<C>, @<U>, @<N>, @<分辨率>)
+    }
+
+    方法 创建_3 <公开 静态 类型 = 长整数 注释 = "创建_3. 原构造器: BRepLProp_CLProps. 官方简介: 与前一构造函数相同, 但此处参数设置为值 <U>, 且曲线通过 SetCurve 设置. 曲线可以有空构造函数. 执行 \"set\" 函数时, 所做的全部计算将与 <C> 和 <U> 相关." @嵌入式方法 = "">
+    参数 N <类型 = 整数>
+    参数 分辨率 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepLProp_CLProps.构造_3 (@<N>, @<分辨率>)
+    }
+
+    方法 设置参数 <公开 静态 注释 = "设置参数. 原方法: SetParameter. 官方简介: 为参数值 <U> 初始化曲线的局部属性." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepLProp_CLProps.SetParameter (@<对象>, @<U>)
+    }
+
+    方法 设置曲线 <公开 静态 注释 = "设置曲线. 原方法: SetCurve. 官方简介: 为新曲线初始化曲线的局部属性." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 C <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepLProp_CLProps.SetCurve (@<对象>, @<C>)
+    }
+
+    方法 取值 <公开 静态 类型 = 长整数 注释 = "取值. 原方法: Value. 官方简介: 返回点." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepLProp_CLProps.Value (@<对象>)
+    }
+
+    方法 取一阶导 <公开 静态 类型 = 长整数 注释 = "取一阶导. 原方法: D1. 官方简介: 返回一阶导数. 若尚未计算导数则计算之." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepLProp_CLProps.D1 (@<对象>)
+    }
+
+    方法 取二阶导 <公开 静态 类型 = 长整数 注释 = "取二阶导. 原方法: D2. 官方简介: 返回二阶导数. 若尚未计算导数则计算之." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepLProp_CLProps.D2 (@<对象>)
+    }
+
+    方法 取三阶导 <公开 静态 类型 = 长整数 注释 = "取三阶导. 原方法: D3. 官方简介: 返回三阶导数. 若尚未计算导数则计算之." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepLProp_CLProps.D3 (@<对象>)
+    }
+
+    方法 是否切线已定义 <公开 静态 类型 = 逻辑型 注释 = "是否切线已定义. 原方法: IsTangentDefined. 官方简介: 若切线有定义则返回 True. 例如, 若前三阶导数都为零则切线无定义." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepLProp_CLProps.IsTangentDefined (@<对象>)
+    }
+
+    方法 切线 <公开 静态 注释 = "切线. 原方法: Tangent. 官方简介: 输出切线方向 <D>" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 输出D <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepLProp_CLProps.Tangent (@<对象>, @<输出D>)
+    }
+
+    方法 曲率 <公开 静态 类型 = 小数 注释 = "曲率. 原方法: Curvature. 官方简介: 返回曲率." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepLProp_CLProps.Curvature (@<对象>)
+    }
+
+    方法 法向 <公开 静态 注释 = "法向. 原方法: Normal. 官方简介: 返回法向方向 <N>." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 输出N <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepLProp_CLProps.Normal (@<对象>, @<输出N>)
+    }
+
+    方法 曲率中心 <公开 静态 注释 = "曲率中心. 原方法: CentreOfCurvature. 官方简介: 返回曲率中心 <P>." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 输出P <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepLProp_CLProps.CentreOfCurvature (@<对象>, @<输出P>)
+    }
+
+}
+
+类 曲线局部属性工具 <公开 注释 = "曲线局部属性工具: 原类 BRepLProp_CurveTool (libTKBRep, 头文件 BRepLProp/BRepLProp_CurveTool.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." @禁止创建对象 = 真>
+{
+
+    方法 取值 <公开 静态 注释 = "取值. 原方法: Value. 官方简介: 计算曲线 <C> 上参数为 <U> 的点 <P>." @嵌入式方法 = "">
+    参数 C <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepLProp_CurveTool.Value (@<C>, @<U>, @<输出P>)
+    }
+
+    方法 取一阶导 <公开 静态 注释 = "取一阶导. 原方法: D1. 官方简介: 计算曲线 <C> 上参数为 <U> 的点 <P> 及一阶导数 <V1>." @嵌入式方法 = "">
+    参数 C <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    参数 输出V1 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepLProp_CurveTool.D1 (@<C>, @<U>, @<输出P>, @<输出V1>)
+    }
+
+    方法 取二阶导 <公开 静态 注释 = "取二阶导. 原方法: D2. 官方简介: 计算曲线 <C> 上参数为 <U> 的点 <P>, 一阶导数 <V1> 和二阶导数 <V2>." @嵌入式方法 = "">
+    参数 C <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    参数 输出V1 <类型 = 长整数>
+    参数 输出V2 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepLProp_CurveTool.D2 (@<C>, @<U>, @<输出P>, @<输出V1>, @<输出V2>)
+    }
+
+    方法 取三阶导 <公开 静态 注释 = "取三阶导. 原方法: D3. 官方简介: 计算曲线 <C> 上参数为 <U> 的点 <P>, 一阶导数 <V1>, 二阶导数 <V2> 和三阶导数 <V3>." @嵌入式方法 = "">
+    参数 C <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    参数 输出V1 <类型 = 长整数>
+    参数 输出V2 <类型 = 长整数>
+    参数 输出V3 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepLProp_CurveTool.D3 (@<C>, @<U>, @<输出P>, @<输出V1>, @<输出V2>, @<输出V3>)
+    }
+
+    方法 连续性 <公开 静态 类型 = 整数 注释 = "连续性. 原方法: Continuity. 官方简介: 返回曲线 <C> 的连续阶. 返回 1 : 仅一阶导数可计算 返回 2 : 仅一阶和二阶导数可计算. 返回 3 : 一阶, 二阶和三阶均可计算." @嵌入式方法 = "">
+    参数 C <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepLProp_CurveTool.Continuity (@<C>)
+    }
+
+    方法 首个参数 <公开 静态 类型 = 小数 注释 = "首个参数. 原方法: FirstParameter. 官方简介: 返回曲线的第一参数边界." @嵌入式方法 = "">
+    参数 C <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepLProp_CurveTool.FirstParameter (@<C>)
+    }
+
+    方法 末个参数 <公开 静态 类型 = 小数 注释 = "末个参数. 原方法: LastParameter. 官方简介: 返回曲线的最后参数界. FirstParameter 必须小于 LastParamenter." @嵌入式方法 = "">
+    参数 C <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepLProp_CurveTool.LastParameter (@<C>)
+    }
+
+}
+
+类 曲面局部属性 <公开 注释 = "曲面局部属性: 原类 BRepLProp_SLProps (libTKBRep, 头文件 BRepLProp/BRepLProp_SLProps.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: BRepLProp_SLProps. 官方简介: 为参数值 (<U>, <V>) 初始化曲面 <S> 的局部属性. 当前点与导数同时计算, 这样可以优化计算时间. <N> 表示要进行的最大求导阶数(0、1 或 2). 例如, 若要只计算切线, N 应等于 1. <Resolution> 是线性公差(用于测试向量是否为零)." @嵌入式方法 = "">
+    参数 S <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 V <类型 = 小数>
+    参数 N <类型 = 整数>
+    参数 分辨率 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepLProp_SLProps.构造 (@<S>, @<U>, @<V>, @<N>, @<分辨率>)
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: BRepLProp_SLProps. 官方简介: 与上一构造函数相同, 但不设置参数 <U> 与 <V> 的值." @嵌入式方法 = "">
+    参数 S <类型 = 长整数>
+    参数 N <类型 = 整数>
+    参数 分辨率 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepLProp_SLProps.构造_2 (@<S>, @<N>, @<分辨率>)
+    }
+
+    方法 创建_3 <公开 静态 类型 = 长整数 注释 = "创建_3. 原构造器: BRepLProp_SLProps. 官方简介: 与上一构造函数相同, 但不设置参数 <U> 与 <V> 的值及曲面. 曲面可以使用空构造函数." @嵌入式方法 = "">
+    参数 N <类型 = 整数>
+    参数 分辨率 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepLProp_SLProps.构造_3 (@<N>, @<分辨率>)
+    }
+
+    方法 设置曲面 <公开 静态 注释 = "设置曲面. 原方法: SetSurface. 官方简介: 为新曲面初始化曲面 S 的局部属性." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepLProp_SLProps.SetSurface (@<对象>, @<S>)
+    }
+
+    方法 设置参数 <公开 静态 注释 = "设置参数. 原方法: SetParameters. 官方简介: 为新参数值 (<U>, <V>) 初始化曲面 S 的局部属性." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 V <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepLProp_SLProps.SetParameters (@<对象>, @<U>, @<V>)
+    }
+
+    方法 取值 <公开 静态 类型 = 长整数 注释 = "取值. 原方法: Value. 官方简介: 返回点." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepLProp_SLProps.Value (@<对象>)
+    }
+
+    方法 D1U <公开 静态 类型 = 长整数 注释 = "D1U. 原方法: D1U. 官方简介: 返回一阶 U 导数. 若尚未计算导数则进行计算." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepLProp_SLProps.D1U (@<对象>)
+    }
+
+    方法 D1V <公开 静态 类型 = 长整数 注释 = "D1V. 原方法: D1V. 官方简介: 返回一阶 V 导数. 若尚未计算导数则进行计算." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepLProp_SLProps.D1V (@<对象>)
+    }
+
+    方法 D2U <公开 静态 类型 = 长整数 注释 = "D2U. 原方法: D2U. 官方简介: 返回二阶 U 导数. 若尚未计算导数则进行计算." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepLProp_SLProps.D2U (@<对象>)
+    }
+
+    方法 D2V <公开 静态 类型 = 长整数 注释 = "D2V. 原方法: D2V. 官方简介: 返回二阶 V 导数. 若尚未计算导数则进行计算." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepLProp_SLProps.D2V (@<对象>)
+    }
+
+    方法 DUV <公开 静态 类型 = 长整数 注释 = "DUV. 原方法: DUV. 官方简介: 返回二阶 UV 混合导数. 若尚未计算导数则进行计算." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepLProp_SLProps.DUV (@<对象>)
+    }
+
+    方法 是否切线U已定义 <公开 静态 类型 = 逻辑型 注释 = "是否切线U已定义. 原方法: IsTangentUDefined. 官方简介: 若 U 切线已定义则返回 True. 例如, 若前两个 U 导数均为零则切线未定义." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepLProp_SLProps.IsTangentUDefined (@<对象>)
+    }
+
+    方法 切线U <公开 静态 注释 = "切线U. 原方法: TangentU. 官方简介: 返回等 V 线上的切线方向 <D>." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 输出D <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepLProp_SLProps.TangentU (@<对象>, @<输出D>)
+    }
+
+    方法 是否切线V已定义 <公开 静态 类型 = 逻辑型 注释 = "是否切线V已定义. 原方法: IsTangentVDefined. 官方简介: 返回 V 切线是否已定义. 例如, 若前两个 V 导数均为零则切线未定义." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepLProp_SLProps.IsTangentVDefined (@<对象>)
+    }
+
+    方法 切线V <公开 静态 注释 = "切线V. 原方法: TangentV. 官方简介: 返回等 V 线上的切线方向 <D>." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 输出D <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepLProp_SLProps.TangentV (@<对象>, @<输出D>)
+    }
+
+    方法 是否法向已定义 <公开 静态 类型 = 逻辑型 注释 = "是否法向已定义. 原方法: IsNormalDefined. 官方简介: 判断法线是否已定义." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepLProp_SLProps.IsNormalDefined (@<对象>)
+    }
+
+    方法 法向 <公开 静态 类型 = 长整数 注释 = "法向. 原方法: Normal. 官方简介: 返回法向方向." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepLProp_SLProps.Normal (@<对象>)
+    }
+
+    方法 是否曲率已定义 <公开 静态 类型 = 逻辑型 注释 = "是否曲率已定义. 原方法: IsCurvatureDefined. 官方简介: 若曲率已定义则返回 True." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepLProp_SLProps.IsCurvatureDefined (@<对象>)
+    }
+
+    方法 是否脐点 <公开 静态 类型 = 逻辑型 注释 = "是否脐点. 原方法: IsUmbilic. 官方简介: 若该点是脐点(即曲率恒定)则返回 True." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepLProp_SLProps.IsUmbilic (@<对象>)
+    }
+
+    方法 最大曲率 <公开 静态 类型 = 小数 注释 = "最大曲率. 原方法: MaxCurvature. 官方简介: 返回最大曲率" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepLProp_SLProps.MaxCurvature (@<对象>)
+    }
+
+    方法 最小曲率 <公开 静态 类型 = 小数 注释 = "最小曲率. 原方法: MinCurvature. 官方简介: 返回最小曲率" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepLProp_SLProps.MinCurvature (@<对象>)
+    }
+
+    方法 曲率方向 <公开 静态 注释 = "曲率方向. 原方法: CurvatureDirections. 官方简介: 返回最大与最小曲率方向 <MaxD> 与 <MinD>" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 输出最大D <类型 = 长整数>
+    参数 输出最小D <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepLProp_SLProps.CurvatureDirections (@<对象>, @<输出最大D>, @<输出最小D>)
+    }
+
+    方法 平均曲率 <公开 静态 类型 = 小数 注释 = "平均曲率. 原方法: MeanCurvature. 官方简介: 返回平均曲率." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepLProp_SLProps.MeanCurvature (@<对象>)
+    }
+
+    方法 高斯曲率 <公开 静态 类型 = 小数 注释 = "高斯曲率. 原方法: GaussianCurvature. 官方简介: 返回高斯曲率" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepLProp_SLProps.GaussianCurvature (@<对象>)
+    }
+
+}
+
+类 曲面局部属性工具 <公开 注释 = "曲面局部属性工具: 原类 BRepLProp_SurfaceTool (libTKBRep, 头文件 BRepLProp/BRepLProp_SurfaceTool.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." @禁止创建对象 = 真>
+{
+
+    方法 取值 <公开 静态 注释 = "取值. 原方法: Value. 官方简介: 计算曲面 <S> 上参数 <U> 与 <V> 的点 <P>." @嵌入式方法 = "">
+    参数 S <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 V <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepLProp_SurfaceTool.Value (@<S>, @<U>, @<V>, @<输出P>)
+    }
+
+    方法 取一阶导 <公开 静态 注释 = "取一阶导. 原方法: D1. 官方简介: 计算曲面 <S> 上参数 <U> 与 <V> 的点 <P> 和一阶导数 <D1*>." @嵌入式方法 = "">
+    参数 S <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 V <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    参数 输出D1U <类型 = 长整数>
+    参数 输出D1V <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepLProp_SurfaceTool.D1 (@<S>, @<U>, @<V>, @<输出P>, @<输出D1U>, @<输出D1V>)
+    }
+
+    方法 取二阶导 <公开 静态 注释 = "取二阶导. 原方法: D2. 官方简介: 计算曲面 <S> 上参数 <U> 与 <V> 的点 <P>、一阶导数 <D1*> 和二阶导数 <D2*>." @嵌入式方法 = "">
+    参数 S <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 V <类型 = 小数>
+    参数 输出P <类型 = 长整数>
+    参数 输出D1U <类型 = 长整数>
+    参数 输出D1V <类型 = 长整数>
+    参数 输出D2U <类型 = 长整数>
+    参数 输出D2V <类型 = 长整数>
+    参数 输出DUV <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepLProp_SurfaceTool.D2 (@<S>, @<U>, @<V>, @<输出P>, @<输出D1U>, @<输出D1V>, @<输出D2U>, @<输出D2V>, @<输出DUV>)
+    }
+
+    方法 取N阶导 <公开 静态 类型 = 长整数 注释 = "取N阶导. 原方法: DN." @嵌入式方法 = "">
+    参数 S <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 V <类型 = 小数>
+    参数 IU <类型 = 整数>
+    参数 IV <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepLProp_SurfaceTool.DN (@<S>, @<U>, @<V>, @<IU>, @<IV>)
+    }
+
+    方法 连续性 <公开 静态 类型 = 整数 注释 = "连续性. 原方法: Continuity. 官方简介: 返回曲面 <S> 的连续阶. 返回 1 : 仅一阶导数可计算 返回 2 : 仅一阶与二阶导数可计算." @嵌入式方法 = "">
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepLProp_SurfaceTool.Continuity (@<S>)
+    }
+
+    方法 取边界 <公开 静态 注释 = "取边界. 原方法: Bounds. 官方简介: 返回曲面的边界." @嵌入式方法 = "">
+    参数 S <类型 = 长整数>
+    参数 输出U1 <类型 = "小数 []">
+    参数 输出V1 <类型 = "小数 []">
+    参数 输出U2 <类型 = "小数 []">
+    参数 输出V2 <类型 = "小数 []">
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepLProp_SurfaceTool.Bounds (@<S>, @<输出U1>, @<输出V1>, @<输出U2>, @<输出V2>)
+    }
+
+}
+
+类 边界表示工具 <公开 注释 = "边界表示工具: 原类 BRepTools (libTKBRep, 头文件 BRepTools/BRepTools.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: BRepTools 包提供边界表示数据结构的实用工具." @禁止创建对象 = 真>
+{
+
+    方法 UV边界 <公开 静态 注释 = "UV边界. 原方法: UVBounds. 官方简介: 在 UMin, UMax, VMin, VMax 中返回 F 的参数空间中的边界值." @嵌入式方法 = "">
+    参数 F <类型 = 长整数>
+    参数 输出UMin <类型 = "小数 []">
+    参数 输出UMax <类型 = "小数 []">
+    参数 输出VMin <类型 = "小数 []">
+    参数 输出VMax <类型 = "小数 []">
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools.UVBounds (@<F>, @<输出UMin>, @<输出UMax>, @<输出VMin>, @<输出VMax>)
+    }
+
+    方法 UV边界_2 <公开 静态 注释 = "UV边界_2. 原方法: UVBounds. 官方简介: 在 UMin, UMax, VMin, VMax 中返回该线框在 F 的参数空间中的边界值." @嵌入式方法 = "">
+    参数 F <类型 = 长整数>
+    参数 W <类型 = 长整数>
+    参数 输出UMin <类型 = "小数 []">
+    参数 输出UMax <类型 = "小数 []">
+    参数 输出VMin <类型 = "小数 []">
+    参数 输出VMax <类型 = "小数 []">
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools.UVBounds_2 (@<F>, @<W>, @<输出UMin>, @<输出UMax>, @<输出VMin>, @<输出VMax>)
+    }
+
+    方法 UV边界_3 <公开 静态 注释 = "UV边界_3. 原方法: UVBounds. 官方简介: 在 UMin, UMax, VMin, VMax 中返回该边在 F 的参数空间中的边界值." @嵌入式方法 = "">
+    参数 F <类型 = 长整数>
+    参数 E <类型 = 长整数>
+    参数 输出UMin <类型 = "小数 []">
+    参数 输出UMax <类型 = "小数 []">
+    参数 输出VMin <类型 = "小数 []">
+    参数 输出VMax <类型 = "小数 []">
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools.UVBounds_3 (@<F>, @<E>, @<输出UMin>, @<输出UMax>, @<输出VMin>, @<输出VMax>)
+    }
+
+    方法 添加UV边界 <公开 静态 注释 = "添加UV边界. 原方法: AddUVBounds. 官方简介: 把 F 的参数空间中的边界值添加到包围盒 <B>." @嵌入式方法 = "">
+    参数 F <类型 = 长整数>
+    参数 输出B <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools.AddUVBounds (@<F>, @<输出B>)
+    }
+
+    方法 添加UV边界_2 <公开 静态 注释 = "添加UV边界_2. 原方法: AddUVBounds. 官方简介: 把 F 的参数空间中该线框的边界值添加到包围盒 <B>." @嵌入式方法 = "">
+    参数 F <类型 = 长整数>
+    参数 W <类型 = 长整数>
+    参数 输出B <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools.AddUVBounds_2 (@<F>, @<W>, @<输出B>)
+    }
+
+    方法 添加UV边界_3 <公开 静态 注释 = "添加UV边界_3. 原方法: AddUVBounds. 官方简介: 把 F 的参数空间中该边的边界值添加到包围盒 <B>." @嵌入式方法 = "">
+    参数 F <类型 = 长整数>
+    参数 E <类型 = 长整数>
+    参数 输出B <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools.AddUVBounds_3 (@<F>, @<E>, @<输出B>)
+    }
+
+    方法 更新 <公开 静态 注释 = "更新. 原方法: Update. 官方简介: 更新顶点(不做任何事)" @嵌入式方法 = "">
+    参数 V <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools.Update (@<V>)
+    }
+
+    方法 更新_2 <公开 静态 注释 = "更新_2. 原方法: Update. 官方简介: 更新边, 计算二维包围盒." @嵌入式方法 = "">
+    参数 E <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools.Update_2 (@<E>)
+    }
+
+    方法 更新_3 <公开 静态 注释 = "更新_3. 原方法: Update. 官方简介: 更新线框(不做任何事)" @嵌入式方法 = "">
+    参数 W <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools.Update_3 (@<W>)
+    }
+
+    方法 更新_4 <公开 静态 注释 = "更新_4. 原方法: Update. 官方简介: 更新面, 更新 UV 点." @嵌入式方法 = "">
+    参数 F <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools.Update_4 (@<F>)
+    }
+
+    方法 更新_5 <公开 静态 注释 = "更新_5. 原方法: Update. 官方简介: 更新壳(不做任何事)" @嵌入式方法 = "">
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools.Update_5 (@<S>)
+    }
+
+    方法 更新_6 <公开 静态 注释 = "更新_6. 原方法: Update. 官方简介: 更新实体(不做任何事)" @嵌入式方法 = "">
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools.Update_6 (@<S>)
+    }
+
+    方法 更新_7 <公开 静态 注释 = "更新_7. 原方法: Update. 官方简介: 更新复合实体(不做任何事)" @嵌入式方法 = "">
+    参数 C <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools.Update_7 (@<C>)
+    }
+
+    方法 更新_8 <公开 静态 注释 = "更新_8. 原方法: Update. 官方简介: 更新复合体(不做任何事)" @嵌入式方法 = "">
+    参数 C <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools.Update_8 (@<C>)
+    }
+
+    方法 更新_9 <公开 静态 注释 = "更新_9. 原方法: Update. 官方简介: 更新形状, 调用正确的更新." @嵌入式方法 = "">
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools.Update_9 (@<S>)
+    }
+
+    方法 更新面UV点 <公开 静态 注释 = "更新面UV点. 原方法: UpdateFaceUVPoints. 官方简介: 对于面 <F> 的每条边, 把 UV 点重置为该边在面上的参数曲线的边界点." @嵌入式方法 = "">
+    参数 F <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools.UpdateFaceUVPoints (@<F>)
+    }
+
+    方法 清理 <公开 静态 注释 = "清理. 原方法: Clean. 官方简介: 移除形状的所有缓存多边形表示, 即 <S> 的面的三角剖分以及边在三角剖分上的多边形与边 3d 多边形. 若多边形表示是形状唯一可用的表示(形状没有几何), 则不移除. @param theShape [in] 要清理的形状 @param theForce [in] 允许从形状移除所有多边形表示, 包括对给定形状的面无关的三角剖分上的多边形." @嵌入式方法 = "">
+    参数 形状 <类型 = 长整数>
+    参数 强制 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools.Clean (@<形状>, @<强制>)
+    }
+
+    方法 清理几何 <公开 静态 注释 = "清理几何. 原方法: CleanGeometry. 官方简介: 从形状的所有边与面中删除几何(曲线与曲面)" @嵌入式方法 = "">
+    参数 形状 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools.CleanGeometry (@<形状>)
+    }
+
+    方法 移除未使用P曲线 <公开 静态 注释 = "移除未使用P曲线. 原方法: RemoveUnusedPCurves. 官方简介: 移除 <S> 的边中引用了不属于 <S> 任何面的曲面的所有 pcurve." @嵌入式方法 = "">
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools.RemoveUnusedPCurves (@<S>)
+    }
+
+    方法 三角剖分 <公开 静态 类型 = 逻辑型 注释 = "三角剖分. 原方法: Triangulation. 官方简介: 验证形状中的每个面是否具有偏差小于或等于指定值的三角剖分, 以及边是否具有该三角剖分上的离散化. @param theShape [in] 要验证的形状 @param theLinDefl [in] 允许的最大线性偏差 @param theToCheckFreeEdges [in] 若为 TRUE, 则要求自由边具有 3D 多边形 @return 若输入形状包含没有三角剖分的面、或三角剖分的偏差比指定值更差(更大)、或形状中的边在三角剖分上缺少多边形、或形状中的自由边缺少 3D 多边形, 则返回 FALSE" @嵌入式方法 = "">
+    参数 形状 <类型 = 长整数>
+    参数 直线挠度 <类型 = 小数>
+    参数 检查自由边 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools.Triangulation (@<形状>, @<直线挠度>, @<检查自由边>)
+    }
+
+    方法 加载三角剖分 <公开 静态 类型 = 逻辑型 注释 = "加载三角剖分. 原方法: LoadTriangulation. 官方简介: 使用指定的共享输入文件系统从某个延迟存储中加载形状每个面的三角剖分数据 @param theShape [in] 要加载三角剖分的形状 @param theTriangulationIdx [in] 定义应加载哪个三角剖分的索引. 从 0 开始. -1 用于特殊情况, 加载当前已活动的三角剖分. 若某个面不包含该索引的三角剖分, 则对它不加载任何内容. 索引为无效负数时将抛出异常 @param theToSetAsActive [in] 加载后激活三角剖分的标志 @param theFileSystem [in] 共享文件系统 @return 若至少加载了一个三角剖分则返回 TRUE." @嵌入式方法 = "">
+    参数 形状 <类型 = 长整数>
+    参数 三角剖分索引 <类型 = 整数>
+    参数 设为活动 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools.LoadTriangulation (@<形状>, @<三角剖分索引>, @<设为活动>)
+    }
+
+    方法 卸载三角剖分 <公开 静态 类型 = 逻辑型 注释 = "卸载三角剖分. 原方法: UnloadTriangulation. 官方简介: 若存在延迟存储以便稍后加载, 则释放形状每个面的三角剖分数据 @param theShape [in] 要卸载三角剖分的形状 @param theTriangulationIdx [in] 定义应卸载哪个三角剖分的索引. 从 0 开始. -1 用于特殊情况, 卸载当前已活动的三角剖分. 若某个面不包含该索引的三角剖分, 则对它不卸载任何内容. 索引为无效负数时将抛出异常 @return 若至少卸载了一个三角剖分则返回 TRUE." @嵌入式方法 = "">
+    参数 形状 <类型 = 长整数>
+    参数 三角剖分索引 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools.UnloadTriangulation (@<形状>, @<三角剖分索引>)
+    }
+
+    方法 激活三角剖分 <公开 静态 类型 = 逻辑型 注释 = "激活三角剖分. 原方法: ActivateTriangulation. 官方简介: 使用指定的共享输入文件系统从某个延迟存储中激活形状每个面的三角剖分数据 @param theShape [in] 要激活三角剖分的形状 @param theTriangulationIdx [in] 定义应激活哪个三角剖分的索引. 从 0 开始. 索引为无效负数时将抛出异常 @param theToActivateStrictly [in] 严格激活具有定义 theTriangulationIdx 索引的三角剖分的标志. 在 TRUE 情形下, 若某个面不包含该索引的三角剖分, 则其活动三角剖分不被修改. 否则将激活最后一个可用三角剖分. @return 若至少修改了一个活动三角剖分则返回 TRUE." @嵌入式方法 = "">
+    参数 形状 <类型 = 长整数>
+    参数 三角剖分索引 <类型 = 整数>
+    参数 严格激活 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools.ActivateTriangulation (@<形状>, @<三角剖分索引>, @<严格激活>)
+    }
+
+    方法 加载全部三角剖分 <公开 静态 类型 = 逻辑型 注释 = "加载全部三角剖分. 原方法: LoadAllTriangulations. 官方简介: 使用指定的共享输入文件系统从某个延迟存储把形状每个面的所有可用三角剖分加载到自身. @param theShape [in] 要加载三角剖分的形状 @param theFileSystem [in] 共享文件系统 @return 若至少加载了一个三角剖分则返回 TRUE." @嵌入式方法 = "">
+    参数 形状 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools.LoadAllTriangulations (@<形状>)
+    }
+
+    方法 卸载全部三角剖分 <公开 静态 类型 = 逻辑型 注释 = "卸载全部三角剖分. 原方法: UnloadAllTriangulations. 官方简介: 若存在延迟存储以便稍后加载, 则释放形状每个面的所有可用三角剖分. @param theShape [in] 要卸载三角剖分的形状 @return 若至少卸载了一个三角剖分则返回 TRUE." @嵌入式方法 = "">
+    参数 形状 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools.UnloadAllTriangulations (@<形状>)
+    }
+
+    方法 比较 <公开 静态 类型 = 逻辑型 注释 = "比较. 原方法: Compare. 官方简介: 若两个顶点之间的距离小于其公差则返回 True." @嵌入式方法 = "">
+    参数 V1 <类型 = 长整数>
+    参数 V2 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools.Compare (@<V1>, @<V2>)
+    }
+
+    方法 比较_2 <公开 静态 类型 = 逻辑型 注释 = "比较_2. 原方法: Compare. 官方简介: 若两条边之间的距离小于其公差则返回 True." @嵌入式方法 = "">
+    参数 E1 <类型 = 长整数>
+    参数 E2 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools.Compare_2 (@<E1>, @<E2>)
+    }
+
+    方法 外线框 <公开 静态 类型 = 长整数 注释 = "外线框. 原方法: OuterWire. 官方简介: 返回 <F> 的最外线框. 若 <F> 没有线框则返回 Null 线框." @嵌入式方法 = "">
+    参数 F <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools.OuterWire (@<F>)
+    }
+
+    方法 是否确实闭合 <公开 静态 类型 = 逻辑型 注释 = "是否确实闭合. 原方法: IsReallyClosed. 官方简介: 在调用 BRep_Tool::IsClosed 之前验证面 <F> 上边 <E> 被找到两次." @嵌入式方法 = "">
+    参数 E <类型 = 长整数>
+    参数 F <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools.IsReallyClosed (@<E>, @<F>)
+    }
+
+    方法 检测闭合性 <公开 静态 注释 = "检测闭合性. 原方法: DetectClosedness. 官方简介: 检测面在 U 与 V 方向上的闭合性" @嵌入式方法 = "">
+    参数 面 <类型 = 长整数>
+    参数 输出U向闭合 <类型 = "逻辑型 []">
+    参数 输出V向闭合 <类型 = "逻辑型 []">
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools.DetectClosedness (@<面>, @<输出U向闭合>, @<输出V向闭合>)
+    }
+
+    方法 转储 <公开 静态 类型 = 文本型 注释 = "转储. 原方法: Dump. 官方简介: 把 <Sh> 的拓扑结构与几何转储到流 <S>." @嵌入式方法 = "">
+    参数 形状 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools.Dump (@<形状>)
+    }
+
+    方法 写入 <公开 静态 注释 = "桩(本地不可用): 参数类型 Standard_OStream& 未支持. 写入. 原方法: Write. 官方简介: 以 ASCII 格式 TopTools_FormatVersion_VERSION_1 把形状写入流. 此别名写入带三角剖分数据的形状. @param theShape [in] 要写入的形状 @param theStream [in][out] 输出形状的流 @param theRange 要填充的进度指示器范围" @嵌入式方法 = "">
+    参数 形状 <类型 = 长整数>
+    参数 流 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools.Write (@<形状>, @<流>)
+    }
+
+    方法 写入_2 <公开 静态 注释 = "桩(本地不可用): 参数类型 Standard_OStream& 未支持. 写入_2. 原方法: Write. 官方简介: 按指定版本的 ASCII 格式把形状写入流. @param theShape [in] 要写入的形状 @param theStream [in][out] 要输出形状到的流 @param theWithTriangles [in] 指定保存形状时是否带三角剖分(TRUE)或不带(FALSE)的标志; 对仅含三角剖分的几何无影响 @param theWithNormals [in] 指定保存三角剖分时是否带法线(TRUE)或不带(FALSE)的标志; 对仅含三角剖分的几何无影响 @param theVersion [in] TopTools 格式版本 @param theProgress 要填充的进度指示器的范围" @嵌入式方法 = "">
+    参数 形状 <类型 = 长整数>
+    参数 流 <类型 = 文本型>
+    参数 带三角形 <类型 = 逻辑型>
+    参数 带法向 <类型 = 逻辑型>
+    参数 版本 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools.Write_2 (@<形状>, @<流>, @<带三角形>, @<带法向>, @<版本>)
+    }
+
+    方法 读取 <公开 静态 注释 = "桩(本地不可用): 参数类型 Standard_IStream& 未支持. 读取. 原方法: Read. 官方简介: 从 <S> 读入形状并在 <Sh> 中返回. <B> 用于构建该形状." @嵌入式方法 = "">
+    参数 输出形状 <类型 = 长整数>
+    参数 S <类型 = 文本型>
+    参数 B <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools.Read (@<输出形状>, @<S>, @<B>)
+    }
+
+    方法 写入_3 <公开 静态 类型 = 逻辑型 注释 = "写入_3. 原方法: Write. 官方简介: 以 ASCII 格式 TopTools_FormatVersion_VERSION_1 把形状写入文件. 此别名写入带三角剖分数据的形状. @param theShape [in] 要写入的形状 @param theFile [in] 输出形状的文件路径 @param theProgress 要填充的进度指示器范围" @嵌入式方法 = "">
+    参数 形状 <类型 = 长整数>
+    参数 文件 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools.Write_3 (@<形状>, @<文件>)
+    }
+
+    方法 写入_4 <公开 静态 类型 = 逻辑型 注释 = "写入_4. 原方法: Write. 官方简介: 按指定版本的 ASCII 格式把形状写入文件. @param theShape [in] 要写入的形状 @param theFile [in] 要输出形状到的文件路径 @param theWithTriangles [in] 指定保存形状时是否带三角剖分(TRUE)或不带(FALSE)的标志; 对仅含三角剖分的几何无影响 @param theWithNormals [in] 指定保存三角剖分时是否带法线(TRUE)或不带(FALSE)的标志; 对仅含三角剖分的几何无影响 @param theVersion [in] TopTools 格式版本 @param theProgress 要填充的进度指示器的范围" @嵌入式方法 = "">
+    参数 形状 <类型 = 长整数>
+    参数 文件 <类型 = 文本型>
+    参数 带三角形 <类型 = 逻辑型>
+    参数 带法向 <类型 = 逻辑型>
+    参数 版本 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools.Write_4 (@<形状>, @<文件>, @<带三角形>, @<带法向>, @<版本>)
+    }
+
+    方法 读取_2 <公开 静态 类型 = 逻辑型 注释 = "读取_2. 原方法: Read. 官方简介: 从 <File> 读入形状, 并在 <Sh> 中返回. <B> 用于构建该形状." @嵌入式方法 = "">
+    参数 输出形状 <类型 = 长整数>
+    参数 文件 <类型 = 文本型>
+    参数 B <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools.Read_2 (@<输出形状>, @<文件>, @<B>)
+    }
+
+    方法 求值与更新容差 <公开 静态 类型 = 小数 注释 = "求值与更新容差. 原方法: EvalAndUpdateTol. 官方简介: 评估边 <theE> 的实际公差. <theC3d>, <theC2d>, <theS>, <theF>, <theL> 分别对应边的 3d 曲线、曲面 <theS> 上的 2d 曲线和边的范围. 若计算出的公差大于当前边公差, 则更新边. 该方法返回边的实际公差." @嵌入式方法 = "">
+    参数 E <类型 = 长整数>
+    参数 C3d <类型 = 长整数>
+    参数 C2d <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    参数 F <类型 = 小数>
+    参数 L <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools.EvalAndUpdateTol (@<E>, @<C3d>, @<C2d>, @<S>, @<F>, @<L>)
+    }
+
+    方法 边在面内朝向 <公开 静态 类型 = 整数 注释 = "边在面内朝向. 原方法: OriEdgeInFace. 官方简介: 返回 <Edge> 的方位与所在线框在 <Face> 中方位的累计值" @嵌入式方法 = "">
+    参数 边 <类型 = 长整数>
+    参数 面 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools.OriEdgeInFace (@<边>, @<面>)
+    }
+
+    方法 移除内部 <公开 静态 注释 = "移除内部. 原方法: RemoveInternals. 官方简介: 从形状中移除内部子形状. 内部状态检查基于子形状的朝向, 不执行分类. 在移除内部子形状之前, 算法检查此类移除是否会破坏子形状之间的拓扑连通性. 若标志 <theForce> 设为 true, 则禁用连通性检查, 并从给定形状中清除所有具有内部朝向的子形状." @嵌入式方法 = "">
+    参数 输出S <类型 = 长整数>
+    参数 强制 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools.RemoveInternals (@<输出S>, @<强制>)
+    }
+
+}
+
+类 形状历史 <公开 注释 = "形状历史: 原类 BRepTools_History (libTKBRep, 头文件 BRepTools/BRepTools_History.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 历史记录保持输入形状 (S1, ..., Sm) 与输出形状 (T1, ..., Tn) 之间的以下关系: 1) 输出形状 Tj 由输入形状 Si 生成: Tj <= G(Si); 2) 输出形状 Tj 由输入形状 Si 修改而来: Tj <= M(Si); 3) 输入形状 (Si) 被移除: R(Si) == 1." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: BRepTools_History. 官方简介: 空构造函数" @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_History.构造 ()
+    }
+
+    方法 是否被支持类型 <公开 静态 类型 = 逻辑型 注释 = "是否被支持类型. 原方法: IsSupportedType. 官方简介: 若历史支持该形状类型则返回 'true'." @嵌入式方法 = "">
+    参数 形状 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_History.IsSupportedType (@<形状>)
+    }
+
+    方法 添加已生成 <公开 静态 注释 = "添加已生成. 原方法: AddGenerated. 官方简介: 把第二个形状设为第一个形状的生成结果." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 初始 <类型 = 长整数>
+    参数 已生成 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_History.AddGenerated (@<对象>, @<初始>, @<已生成>)
+    }
+
+    方法 添加已修改 <公开 静态 注释 = "添加已修改. 原方法: AddModified. 官方简介: 把第二个形状设为第一个形状的修改结果." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 初始 <类型 = 长整数>
+    参数 已修改 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_History.AddModified (@<对象>, @<初始>, @<已修改>)
+    }
+
+    方法 移除 <公开 静态 注释 = "移除. 原方法: Remove. 官方简介: 把形状设为已移除." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 已移除 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_History.Remove (@<对象>, @<已移除>)
+    }
+
+    方法 替换已生成 <公开 静态 注释 = "替换已生成. 原方法: ReplaceGenerated. 官方简介: 把第二个形状设为第一个形状的唯一生成结果." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 初始 <类型 = 长整数>
+    参数 已生成 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_History.ReplaceGenerated (@<对象>, @<初始>, @<已生成>)
+    }
+
+    方法 替换已修改 <公开 静态 注释 = "替换已修改. 原方法: ReplaceModified. 官方简介: 把第二个形状设为第一个形状的唯一修改结果." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 初始 <类型 = 长整数>
+    参数 已修改 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_History.ReplaceModified (@<对象>, @<初始>, @<已修改>)
+    }
+
+    方法 清除 <公开 静态 注释 = "清除. 原方法: Clear. 官方简介: 清空历史." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_History.Clear (@<对象>)
+    }
+
+    方法 是否已移除 <公开 静态 类型 = 逻辑型 注释 = "是否已移除. 原方法: IsRemoved. 官方简介: 若形状已移除则返回 'true'." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 初始 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_History.IsRemoved (@<对象>, @<初始>)
+    }
+
+    方法 是否有已生成 <公开 静态 类型 = 逻辑型 注释 = "是否有已生成. 原方法: HasGenerated. 官方简介: 若存在带 Generated 元素的形状则返回 'true'" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_History.HasGenerated (@<对象>)
+    }
+
+    方法 是否有已修改 <公开 静态 类型 = 逻辑型 注释 = "是否有已修改. 原方法: HasModified. 官方简介: 若存在被修改的形状则返回 'true'" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_History.HasModified (@<对象>)
+    }
+
+    方法 是否有已移除 <公开 静态 类型 = 逻辑型 注释 = "是否有已移除. 原方法: HasRemoved. 官方简介: 若存在被移除的形状则返回 'true'" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_History.HasRemoved (@<对象>)
+    }
+
+    方法 合并 <公开 静态 注释 = "合并. 原方法: Merge. 官方简介: 把下一条历史合并到该历史." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 历史23 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_History.Merge (@<对象>, @<历史23>)
+    }
+
+    方法 合并_2 <公开 静态 注释 = "合并_2. 原方法: Merge. 官方简介: 把下一条历史合并到该历史." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 历史23 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_History.Merge_2 (@<对象>, @<历史23>)
+    }
+
+    方法 转储 <公开 静态 类型 = 文本型 注释 = "转储. 原方法: Dump. 官方简介: 把历史的简要描述打印到流" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_History.Dump (@<对象>)
+    }
+
+}
+
+类 形状修改器 <公开 注释 = "形状修改器: 原类 BRepTools_Modifier (libTKBRep, 头文件 BRepTools/BRepTools_Modifier.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 对形状执行几何修改." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: BRepTools_Modifier. 官方简介: 创建空修改器." @嵌入式方法 = "">
+    参数 可变输入 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_Modifier.构造 (@<可变输入>)
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: BRepTools_Modifier. 官方简介: 在形状 <S> 上创建修改器." @嵌入式方法 = "">
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_Modifier.构造_2 (@<S>)
+    }
+
+    方法 初始化 <公开 静态 注释 = "初始化. 原方法: Init. 官方简介: 用形状 <S> 初始化修改器." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_Modifier.Init (@<对象>, @<S>)
+    }
+
+    方法 执行 <公开 静态 注释 = "桩(本地不可用): 参数类型 const Handle_BRepTools_Modification& 未支持. 执行. 原方法: Perform. 官方简介: 执行 <M> 描述的修改." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 M <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_Modifier.Perform (@<对象>, @<M>)
+    }
+
+    方法 是否完成 <公开 静态 类型 = 逻辑型 注释 = "是否完成. 原方法: IsDone. 官方简介: 若修改已成功计算则返回 Standard_True." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_Modifier.IsDone (@<对象>)
+    }
+
+    方法 是否可变输入 <公开 静态 类型 = 逻辑型 注释 = "是否可变输入. 原方法: IsMutableInput. 官方简介: 返回当前可变的输入状态" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_Modifier.IsMutableInput (@<对象>)
+    }
+
+    方法 设置可变输入 <公开 静态 注释 = "设置可变输入. 原方法: SetMutableInput. 官方简介: 设置可变输入状态. 若为 true, 则修改过程中可以修改输入(原始)形状" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 可变输入 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_Modifier.SetMutableInput (@<对象>, @<可变输入>)
+    }
+
+    方法 已修改形状 <公开 静态 类型 = 长整数 注释 = "已修改形状. 原方法: ModifiedShape. 官方简介: 返回与 <S> 对应的修改后形状." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_Modifier.ModifiedShape (@<对象>, @<S>)
+    }
+
+}
+
+类 形状替换器 <公开 注释 = "形状替换器: 原类 BRepTools_ReShape (libTKBRep, 头文件 BRepTools/BRepTools_ReShape.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 通过对形状的某些部件执行预定义替换来重建形状." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: BRepTools_ReShape. 官方简介: 返回空 Reshape" @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_ReShape.构造 ()
+    }
+
+    方法 清除 <公开 静态 注释 = "清除. 原方法: Clear. 官方简介: 清除所有替换请求" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_ReShape.Clear (@<对象>)
+    }
+
+    方法 移除 <公开 静态 注释 = "移除. 原方法: Remove. 官方简介: 设置移除形状的请求, 不论其方位" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 形状 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_ReShape.Remove (@<对象>, @<形状>)
+    }
+
+    方法 替换 <公开 静态 注释 = "替换. 原方法: Replace. 官方简介: 设置用一个新形状替换某形状的请求." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 形状 <类型 = 长整数>
+    参数 新形状 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_ReShape.Replace (@<对象>, @<形状>, @<新形状>)
+    }
+
+    方法 是否已记录 <公开 静态 类型 = 逻辑型 注释 = "是否已记录. 原方法: IsRecorded. 官方简介: 判断是否为 Replace/Remove 记录了形状" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 形状 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_ReShape.IsRecorded (@<对象>, @<形状>)
+    }
+
+    方法 取值 <公开 静态 类型 = 长整数 注释 = "取值. 原方法: Value. 官方简介: 返回单个形状的新值. 若未记录, 返回原始形状本身. 若要移除, 返回空形状. 否则返回替换项." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 形状 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_ReShape.Value (@<对象>, @<形状>)
+    }
+
+    方法 状态 <公开 静态 类型 = 整数 注释 = "状态. 原方法: Status. 官方简介: 返回形状的完整替换状态 0 : 未记录, <newsh> = 原始 <shape> < 0: 待移除, <newsh> 为 NULL > 0: 待替换, <newsh> 是新项 若 <last> 为 False, 则直接返回该形状在映射中记录的状态与新形状; 若为 True 且状态 > 0, 则递归搜索最后的状态与新形状." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 形状 <类型 = 长整数>
+    参数 输出新形状 <类型 = 长整数>
+    参数 末个 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_ReShape.Status (@<对象>, @<形状>, @<输出新形状>, @<末个>)
+    }
+
+    方法 应用 <公开 静态 类型 = 长整数 注释 = "应用. 原方法: Apply. 官方简介: 对形状施加替换请求." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 形状 <类型 = 长整数>
+    参数 直到 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_ReShape.Apply (@<对象>, @<形状>, @<直到>)
+    }
+
+    方法 模式考虑位置 <公开 静态 类型 = 逻辑型 注释 = "模式考虑位置. 原方法: ModeConsiderLocation. 官方简介: 返回(可修改的)标志, 定义替换形状时是否考虑形状的 Location." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_ReShape.ModeConsiderLocation (@<对象>)
+    }
+
+    方法 复制顶点 <公开 静态 类型 = 长整数 注释 = "复制顶点. 原方法: CopyVertex." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 V <类型 = 长整数>
+    参数 容差 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_ReShape.CopyVertex (@<对象>, @<V>, @<容差>)
+    }
+
+    方法 复制顶点_2 <公开 静态 类型 = 长整数 注释 = "复制顶点_2. 原方法: CopyVertex." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 V <类型 = 长整数>
+    参数 新位置 <类型 = 长整数>
+    参数 容差 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_ReShape.CopyVertex_2 (@<对象>, @<V>, @<新位置>, @<容差>)
+    }
+
+    方法 是否新形状 <公开 静态 类型 = 逻辑型 注释 = "是否新形状. 原方法: IsNewShape." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 形状 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_ReShape.IsNewShape (@<对象>, @<形状>)
+    }
+
+    方法 历史 <公开 静态 类型 = 长整数 注释 = "历史. 原方法: History. 官方简介: 返回被替换形状的历史." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_ReShape.History (@<对象>)
+    }
+
+}
+
+类 形状序列化集 <公开 注释 = "形状序列化集: 原类 BRepTools_ShapeSet (libTKBRep, 头文件 BRepTools/BRepTools_ShapeSet.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 包含一个形状及其全部子形状, 位置和几何." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: BRepTools_ShapeSet. 官方简介: 构建一个空的 ShapeSet. @param theWithTriangles 写入三角剖分数据的标志" @嵌入式方法 = "">
+    参数 带三角形 <类型 = 逻辑型>
+    参数 带法向 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_ShapeSet.构造 (@<带三角形>, @<带法向>)
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: BRepTools_ShapeSet. 官方简介: 构建一个空的 ShapeSet. @param theWithTriangles 写入三角剖分数据的标志" @嵌入式方法 = "">
+    参数 构建器 <类型 = 长整数>
+    参数 带三角形 <类型 = 逻辑型>
+    参数 带法向 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_ShapeSet.构造_2 (@<构建器>, @<带三角形>, @<带法向>)
+    }
+
+    方法 是否带三角形 <公开 静态 类型 = 逻辑型 注释 = "是否带三角形. 原方法: IsWithTriangles. 官方简介: 若形状应连同三角形一起存储则返回 true" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_ShapeSet.IsWithTriangles (@<对象>)
+    }
+
+    方法 是否带法向 <公开 静态 类型 = 逻辑型 注释 = "是否带法向. 原方法: IsWithNormals. 官方简介: 若形状应连同法向一起存储三角剖分则返回 true." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_ShapeSet.IsWithNormals (@<对象>)
+    }
+
+    方法 设置带三角形 <公开 静态 注释 = "设置带三角形. 原方法: SetWithTriangles. 官方简介: 定义形状是否与三角形一起存储. 若面仅定义三角剖分(无曲面)则忽略(总是写入)." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 带三角形 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_ShapeSet.SetWithTriangles (@<对象>, @<带三角形>)
+    }
+
+    方法 设置带法向 <公开 静态 注释 = "设置带法向. 原方法: SetWithNormals. 官方简介: 定义形状是否与带法线的三角剖分一起存储. 若面仅定义三角剖分(无曲面)则忽略(总是写入)." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 带法向 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_ShapeSet.SetWithNormals (@<对象>, @<带法向>)
+    }
+
+    方法 清除 <公开 静态 注释 = "清除. 原方法: Clear. 官方简介: 清除集合的内容." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_ShapeSet.Clear (@<对象>)
+    }
+
+    方法 添加几何 <公开 静态 注释 = "添加几何. 原方法: AddGeometry. 官方简介: 存储 <S> 的几何." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_ShapeSet.AddGeometry (@<对象>, @<S>)
+    }
+
+    方法 转储几何 <公开 静态 类型 = 文本型 注释 = "转储几何. 原方法: DumpGeometry. 官方简介: 把自身的几何转储到流 <OS>." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_ShapeSet.DumpGeometry (@<对象>)
+    }
+
+    方法 写入几何 <公开 静态 注释 = "桩(本地不可用): 参数类型 Standard_OStream& 未支持. 写入几何. 原方法: WriteGeometry. 官方简介: 以可被 Read 读回的格式把 me 的几何写到流 <OS> 上." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 OS <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_ShapeSet.WriteGeometry (@<对象>, @<OS>)
+    }
+
+    方法 读取几何 <公开 静态 注释 = "桩(本地不可用): 参数类型 Standard_IStream& 未支持. 读取几何. 原方法: ReadGeometry. 官方简介: 从流 <IS> 读入自身的几何." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 IS <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_ShapeSet.ReadGeometry (@<对象>, @<IS>)
+    }
+
+    方法 转储几何_2 <公开 静态 类型 = 文本型 注释 = "转储几何_2. 原方法: DumpGeometry. 官方简介: 把 <S> 的几何转储到流 <OS>." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_ShapeSet.DumpGeometry_2 (@<对象>, @<S>)
+    }
+
+    方法 写入几何_2 <公开 静态 类型 = 文本型 注释 = "写入几何_2. 原方法: WriteGeometry. 官方简介: 以可被 Read 读回的格式把 <S> 的几何写到流 <OS> 上." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_ShapeSet.WriteGeometry_2 (@<对象>, @<S>)
+    }
+
+    方法 添加形状 <公开 静态 注释 = "添加形状. 原方法: AddShapes. 官方简介: 把形状 <S2> 插入形状 <S1>. 必须重定义该方法以使用正确的构建器." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 输出S1 <类型 = 长整数>
+    参数 S2 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_ShapeSet.AddShapes (@<对象>, @<输出S1>, @<S2>)
+    }
+
+    方法 检查 <公开 静态 注释 = "检查. 原方法: Check." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 T <类型 = 整数>
+    参数 输出S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_ShapeSet.Check (@<对象>, @<T>, @<输出S>)
+    }
+
+    方法 读取三维折线 <公开 静态 注释 = "桩(本地不可用): 参数类型 Standard_IStream& 未支持. 读取三维折线. 原方法: ReadPolygon3D. 官方简介: 从流 <IS> 读入自身的三维多边形." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 IS <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_ShapeSet.ReadPolygon3D (@<对象>, @<IS>)
+    }
+
+    方法 写入三维折线 <公开 静态 注释 = "桩(本地不可用): 参数类型 Standard_OStream& 未支持. 写入三维折线. 原方法: WritePolygon3D. 官方简介: 以可被 Read 读回的格式把三维多边形写到流 <OS> 上." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 OS <类型 = 文本型>
+    参数 紧凑 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_ShapeSet.WritePolygon3D (@<对象>, @<OS>, @<紧凑>)
+    }
+
+    方法 转储三维折线 <公开 静态 类型 = 文本型 注释 = "转储三维折线. 原方法: DumpPolygon3D. 官方简介: 把三维多边形转储到流 <OS>." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_ShapeSet.DumpPolygon3D (@<对象>)
+    }
+
+    方法 读取三角剖分 <公开 静态 注释 = "桩(本地不可用): 参数类型 Standard_IStream& 未支持. 读取三角剖分. 原方法: ReadTriangulation. 官方简介: 从流 <IS> 读入自身的三角剖分." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 IS <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_ShapeSet.ReadTriangulation (@<对象>, @<IS>)
+    }
+
+    方法 写入三角剖分 <公开 静态 注释 = "桩(本地不可用): 参数类型 Standard_OStream& 未支持. 写入三角剖分. 原方法: WriteTriangulation. 官方简介: 以可被 Read 读回的格式把三角剖分数据写到流 <OS> 上." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 OS <类型 = 文本型>
+    参数 紧凑 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_ShapeSet.WriteTriangulation (@<对象>, @<OS>, @<紧凑>)
+    }
+
+    方法 转储三角剖分 <公开 静态 类型 = 文本型 注释 = "转储三角剖分. 原方法: DumpTriangulation. 官方简介: 把三角剖分转储到流 <OS>." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_ShapeSet.DumpTriangulation (@<对象>)
+    }
+
+    方法 读取三角网折线 <公开 静态 注释 = "桩(本地不可用): 参数类型 Standard_IStream& 未支持. 读取三角网折线. 原方法: ReadPolygonOnTriangulation. 官方简介: 从流 <IS> 读入自身三角剖分上的多边形." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 IS <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_ShapeSet.ReadPolygonOnTriangulation (@<对象>, @<IS>)
+    }
+
+    方法 写入三角网折线 <公开 静态 注释 = "桩(本地不可用): 参数类型 Standard_OStream& 未支持. 写入三角网折线. 原方法: WritePolygonOnTriangulation. 官方简介: 以可被 Read 读回的格式把三角剖分上的多边形写到流 <OS> 上." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 OS <类型 = 文本型>
+    参数 紧凑 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_ShapeSet.WritePolygonOnTriangulation (@<对象>, @<OS>, @<紧凑>)
+    }
+
+    方法 转储三角网折线 <公开 静态 类型 = 文本型 注释 = "转储三角网折线. 原方法: DumpPolygonOnTriangulation. 官方简介: 把三角剖分上的多边形转储到流 <OS>." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_ShapeSet.DumpPolygonOnTriangulation (@<对象>)
+    }
+
+}
+
+类 线框遍历器 <公开 注释 = "线框遍历器: 原类 BRepTools_WireExplorer (libTKBRep, 头文件 BRepTools/BRepTools_WireExplorer.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: WireExplorer 是按连接顺序探测线框中边的工具." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: BRepTools_WireExplorer. 官方简介: 构造空探索器(可用 Init 初始化)" @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_WireExplorer.构造 ()
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: BRepTools_WireExplorer. 官方简介: 初始化线框 <W> 的探索." @嵌入式方法 = "">
+    参数 W <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_WireExplorer.构造_2 (@<W>)
+    }
+
+    方法 创建_3 <公开 静态 类型 = 长整数 注释 = "创建_3. 原构造器: BRepTools_WireExplorer. 官方简介: 初始化线框 <W> 的探索. F 用于在 <F> 的参数表示中选择与上一个相连的边." @嵌入式方法 = "">
+    参数 W <类型 = 长整数>
+    参数 F <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_WireExplorer.构造_3 (@<W>, @<F>)
+    }
+
+    方法 初始化 <公开 静态 注释 = "初始化. 原方法: Init. 官方简介: 初始化线框 <W> 的探索." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 W <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_WireExplorer.Init (@<对象>, @<W>)
+    }
+
+    方法 初始化_2 <公开 静态 注释 = "初始化_2. 原方法: Init. 官方简介: 初始化线框 <W> 的探索. F 用于在 <F> 的参数表示中选择与上一个相连的边." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 W <类型 = 长整数>
+    参数 F <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_WireExplorer.Init_2 (@<对象>, @<W>, @<F>)
+    }
+
+    方法 初始化_3 <公开 静态 注释 = "初始化_3. 原方法: Init. 官方简介: 初始化对线框 <W> 的探查. F 用于在 <F> 的参数表示中选择与上一个相连的边. <UMIn>, <UMax>, <VMin>, <VMax> - 面 <F> 的 UV 边界." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 W <类型 = 长整数>
+    参数 F <类型 = 长整数>
+    参数 UMin <类型 = 小数>
+    参数 UMax <类型 = 小数>
+    参数 VMin <类型 = 小数>
+    参数 VMax <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_WireExplorer.Init_3 (@<对象>, @<W>, @<F>, @<UMin>, @<UMax>, @<VMin>, @<VMax>)
+    }
+
+    方法 是否还有 <公开 静态 类型 = 逻辑型 注释 = "是否还有. 原方法: More. 官方简介: 若存在当前边则返回 True." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_WireExplorer.More (@<对象>)
+    }
+
+    方法 下一个 <公开 静态 注释 = "下一个. 原方法: Next. 官方简介: 前进到下一条边." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_WireExplorer.Next (@<对象>)
+    }
+
+    方法 当前 <公开 静态 类型 = 长整数 注释 = "当前. 原方法: Current. 官方简介: 返回当前边." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_WireExplorer.Current (@<对象>)
+    }
+
+    方法 朝向 <公开 静态 类型 = 整数 注释 = "朝向. 原方法: Orientation. 官方简介: 返回当前边的朝向." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_WireExplorer.Orientation (@<对象>)
+    }
+
+    方法 当前顶点 <公开 静态 类型 = 长整数 注释 = "当前顶点. 原方法: CurrentVertex. 官方简介: 返回把当前边连接到前一条边的顶点." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_WireExplorer.CurrentVertex (@<对象>)
+    }
+
+    方法 清除 <公开 静态 注释 = "清除. 原方法: Clear. 官方简介: 清空探索器的内容." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRepTools_WireExplorer.Clear (@<对象>)
+    }
+
+}
+
+类 边界构建器 <公开 注释 = "边界构建器: 原类 BRep_Builder (libTKBRep, 头文件 BRep/BRep_Builder.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 提供高级容差控制的框架. 用于构建形状. 若需要容差控制, 建议: 1. 用 BRepAPI 包提供的类为拓扑构建默认精度 2. 更新结果形状的容差. 注意只有顶点, 边与面具有有意义的容差控制. 容差值必须始终满足: 面容差比边容差更严格, 边容差比顶点容差更严格. 换言之: Tol(Vertex) >= Tol(Edge) >= Tol(Face). 设置容差的其他规则包括: - 可以放宽容差, 但绝不应收紧 - 一条边不能包含在两个顶点容差球的融合内." @禁止创建对象 = 真>
+{
+
+    方法 生成面 <公开 静态 注释 = "生成面. 原方法: MakeFace. 官方简介: 构造一个未定义的面." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 输出F <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Builder.MakeFace (@<对象>, @<输出F>)
+    }
+
+    方法 生成面_2 <公开 静态 注释 = "生成面_2. 原方法: MakeFace. 官方简介: 用曲面构造面." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 输出F <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    参数 容差 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Builder.MakeFace_2 (@<对象>, @<输出F>, @<S>, @<容差>)
+    }
+
+    方法 生成面_3 <公开 静态 注释 = "生成面_3. 原方法: MakeFace. 官方简介: 用曲面与定位点构造面." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 输出F <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    参数 L <类型 = 长整数>
+    参数 容差 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Builder.MakeFace_3 (@<对象>, @<输出F>, @<S>, @<L>, @<容差>)
+    }
+
+    方法 生成面_4 <公开 静态 注释 = "生成面_4. 原方法: MakeFace. 官方简介: 用单个三角剖分构造 theFace. 该三角剖分与 TFace 处于同一参考系统." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 输出面 <类型 = 长整数>
+    参数 三角剖分 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Builder.MakeFace_4 (@<对象>, @<输出面>, @<三角剖分>)
+    }
+
+    方法 更新面 <公开 静态 注释 = "更新面. 原方法: UpdateFace. 官方简介: 用公差值 Tol, 曲面 S 和定位 Location 更新面 F." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 F <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    参数 L <类型 = 长整数>
+    参数 容差 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Builder.UpdateFace (@<对象>, @<F>, @<S>, @<L>, @<容差>)
+    }
+
+    方法 更新面_2 <公开 静态 注释 = "更新面_2. 原方法: UpdateFace. 官方简介: 改变面的三角剖分. 为 NULL 的 theTriangulation 移除面三角剖分. 若 theToReset 为 TRUE, 面三角剖分将被重置为只含一个输入三角剖分的新列表, 该三角剖分将被激活. 否则若 theTriangulation 包含在内部三角剖分列表中, 则它将被激活, 否则活动三角剖分将被替换为 theTriangulation." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 面 <类型 = 长整数>
+    参数 三角剖分 <类型 = 长整数>
+    参数 重置三角剖分 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Builder.UpdateFace_2 (@<对象>, @<面>, @<三角剖分>, @<重置三角剖分>)
+    }
+
+    方法 更新面_3 <公开 静态 注释 = "更新面_3. 原方法: UpdateFace. 官方简介: 更新面公差." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 F <类型 = 长整数>
+    参数 容差 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Builder.UpdateFace_3 (@<对象>, @<F>, @<容差>)
+    }
+
+    方法 自然限制 <公开 静态 注释 = "自然限制. 原方法: NaturalRestriction. 官方简介: 设置面的 NaturalRestriction 标志." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 F <类型 = 长整数>
+    参数 N <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Builder.NaturalRestriction (@<对象>, @<F>, @<N>)
+    }
+
+    方法 生成边 <公开 静态 注释 = "生成边. 原方法: MakeEdge. 官方简介: 构造未定义的边(无几何)." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 输出E <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Builder.MakeEdge (@<对象>, @<输出E>)
+    }
+
+    方法 生成边_2 <公开 静态 注释 = "生成边_2. 原方法: MakeEdge. 官方简介: 用曲线构造边." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 输出E <类型 = 长整数>
+    参数 C <类型 = 长整数>
+    参数 容差 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Builder.MakeEdge_2 (@<对象>, @<输出E>, @<C>, @<容差>)
+    }
+
+    方法 生成边_3 <公开 静态 注释 = "生成边_3. 原方法: MakeEdge. 官方简介: 用曲线与定位点构造边." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 输出E <类型 = 长整数>
+    参数 C <类型 = 长整数>
+    参数 L <类型 = 长整数>
+    参数 容差 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Builder.MakeEdge_3 (@<对象>, @<输出E>, @<C>, @<L>, @<容差>)
+    }
+
+    方法 生成边_4 <公开 静态 注释 = "生成边_4. 原方法: MakeEdge. 官方简介: 用三维多边形构造边." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 输出E <类型 = 长整数>
+    参数 P <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Builder.MakeEdge_4 (@<对象>, @<输出E>, @<P>)
+    }
+
+    方法 生成边_5 <公开 静态 注释 = "生成边_5. 原方法: MakeEdge. 官方简介: 在三角剖分上生成边多边形." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 输出E <类型 = 长整数>
+    参数 N <类型 = 长整数>
+    参数 T <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Builder.MakeEdge_5 (@<对象>, @<输出E>, @<N>, @<T>)
+    }
+
+    方法 生成边_6 <公开 静态 注释 = "生成边_6. 原方法: MakeEdge. 官方简介: 在三角剖分上生成边多边形." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 输出E <类型 = 长整数>
+    参数 N <类型 = 长整数>
+    参数 T <类型 = 长整数>
+    参数 L <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Builder.MakeEdge_6 (@<对象>, @<输出E>, @<N>, @<T>, @<L>)
+    }
+
+    方法 更新边 <公开 静态 注释 = "更新边. 原方法: UpdateEdge. 官方简介: 为边设置三维曲线. 若 <C> 是空句柄, 则移除已有的三维曲线." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 E <类型 = 长整数>
+    参数 C <类型 = 长整数>
+    参数 容差 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Builder.UpdateEdge (@<对象>, @<E>, @<C>, @<容差>)
+    }
+
+    方法 更新边_2 <公开 静态 注释 = "更新边_2. 原方法: UpdateEdge. 官方简介: 为边设置三维曲线. 若 <C> 是空句柄, 则移除已有的三维曲线." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 E <类型 = 长整数>
+    参数 C <类型 = 长整数>
+    参数 L <类型 = 长整数>
+    参数 容差 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Builder.UpdateEdge_2 (@<对象>, @<E>, @<C>, @<L>, @<容差>)
+    }
+
+    方法 更新边_3 <公开 静态 注释 = "更新边_3. 原方法: UpdateEdge. 官方简介: 为面上的边设置 pcurve. 若 <C> 是空句柄, 则移除已有的 pcurve." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 E <类型 = 长整数>
+    参数 C <类型 = 长整数>
+    参数 F <类型 = 长整数>
+    参数 容差 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Builder.UpdateEdge_3 (@<对象>, @<E>, @<C>, @<F>, @<容差>)
+    }
+
+    方法 更新边_4 <公开 静态 注释 = "更新边_4. 原方法: UpdateEdge. 官方简介: 为闭合面上的边设置 pcurves. 若 <C1> 或 <C2> 为空句柄, 则移除任何现有的 pcurve." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 E <类型 = 长整数>
+    参数 C1 <类型 = 长整数>
+    参数 C2 <类型 = 长整数>
+    参数 F <类型 = 长整数>
+    参数 容差 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Builder.UpdateEdge_4 (@<对象>, @<E>, @<C1>, @<C2>, @<F>, @<容差>)
+    }
+
+    方法 更新边_5 <公开 静态 注释 = "更新边_5. 原方法: UpdateEdge. 官方简介: 为面上的边设置 pcurve. 若 <C> 是空句柄, 则移除已有的 pcurve." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 E <类型 = 长整数>
+    参数 C <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    参数 L <类型 = 长整数>
+    参数 容差 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Builder.UpdateEdge_5 (@<对象>, @<E>, @<C>, @<S>, @<L>, @<容差>)
+    }
+
+    方法 更新边_6 <公开 静态 注释 = "更新边_6. 原方法: UpdateEdge. 官方简介: 为面上的边设置一条 pcurve. 若 <C> 为空句柄, 则移除任何现有的 pcurve. 设置曲线表示的 UV 边界" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 E <类型 = 长整数>
+    参数 C <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    参数 L <类型 = 长整数>
+    参数 容差 <类型 = 小数>
+    参数 起始点 <类型 = 长整数>
+    参数 终止点 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Builder.UpdateEdge_6 (@<对象>, @<E>, @<C>, @<S>, @<L>, @<容差>, @<起始点>, @<终止点>)
+    }
+
+    方法 更新边_7 <公开 静态 注释 = "更新边_7. 原方法: UpdateEdge. 官方简介: 为闭合曲面上的边设置 pcurves. 若 <C1> 或 <C2> 为空句柄, 则移除任何现有的 pcurve." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 E <类型 = 长整数>
+    参数 C1 <类型 = 长整数>
+    参数 C2 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    参数 L <类型 = 长整数>
+    参数 容差 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Builder.UpdateEdge_7 (@<对象>, @<E>, @<C1>, @<C2>, @<S>, @<L>, @<容差>)
+    }
+
+    方法 更新边_8 <公开 静态 注释 = "更新边_8. 原方法: UpdateEdge. 官方简介: 为闭合曲面上的边设置 pcurves. 若 <C1> 或 <C2> 为空句柄, 则移除任何现有的 pcurve. 设置曲线表示的 UV 边界" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 E <类型 = 长整数>
+    参数 C1 <类型 = 长整数>
+    参数 C2 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    参数 L <类型 = 长整数>
+    参数 容差 <类型 = 小数>
+    参数 起始点 <类型 = 长整数>
+    参数 终止点 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Builder.UpdateEdge_8 (@<对象>, @<E>, @<C1>, @<C2>, @<S>, @<L>, @<容差>, @<起始点>, @<终止点>)
+    }
+
+    方法 更新边_9 <公开 静态 注释 = "更新边_9. 原方法: UpdateEdge. 官方简介: 修改边的三维多边形. 空多边形会移除三维多边形." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 E <类型 = 长整数>
+    参数 P <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Builder.UpdateEdge_9 (@<对象>, @<E>, @<P>)
+    }
+
+    方法 更新边_10 <公开 静态 注释 = "更新边_10. 原方法: UpdateEdge. 官方简介: 修改边的三维多边形. 空多边形会移除三维多边形." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 E <类型 = 长整数>
+    参数 P <类型 = 长整数>
+    参数 L <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Builder.UpdateEdge_10 (@<对象>, @<E>, @<P>, @<L>)
+    }
+
+    方法 更新边_11 <公开 静态 注释 = "更新边_11. 原方法: UpdateEdge. 官方简介: 修改三角剖分上的边多边形." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 E <类型 = 长整数>
+    参数 N <类型 = 长整数>
+    参数 T <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Builder.UpdateEdge_11 (@<对象>, @<E>, @<N>, @<T>)
+    }
+
+    方法 更新边_12 <公开 静态 注释 = "更新边_12. 原方法: UpdateEdge. 官方简介: 修改三角剖分上的边多边形." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 E <类型 = 长整数>
+    参数 N <类型 = 长整数>
+    参数 T <类型 = 长整数>
+    参数 L <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Builder.UpdateEdge_12 (@<对象>, @<E>, @<N>, @<T>, @<L>)
+    }
+
+    方法 更新边_13 <公开 静态 注释 = "更新边_13. 原方法: UpdateEdge. 官方简介: 修改三角剖分上的边多边形." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 E <类型 = 长整数>
+    参数 N1 <类型 = 长整数>
+    参数 N2 <类型 = 长整数>
+    参数 T <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Builder.UpdateEdge_13 (@<对象>, @<E>, @<N1>, @<N2>, @<T>)
+    }
+
+    方法 更新边_14 <公开 静态 注释 = "更新边_14. 原方法: UpdateEdge. 官方简介: 修改三角剖分上的边多边形." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 E <类型 = 长整数>
+    参数 N1 <类型 = 长整数>
+    参数 N2 <类型 = 长整数>
+    参数 T <类型 = 长整数>
+    参数 L <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Builder.UpdateEdge_14 (@<对象>, @<E>, @<N1>, @<N2>, @<T>, @<L>)
+    }
+
+    方法 更新边_15 <公开 静态 注释 = "更新边_15. 原方法: UpdateEdge. 官方简介: 更新边公差." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 E <类型 = 长整数>
+    参数 容差 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Builder.UpdateEdge_15 (@<对象>, @<E>, @<容差>)
+    }
+
+    方法 连续性 <公开 静态 注释 = "连续性. 原方法: Continuity. 官方简介: 设置边上的几何连续性." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 E <类型 = 长整数>
+    参数 F1 <类型 = 长整数>
+    参数 F2 <类型 = 长整数>
+    参数 C <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Builder.Continuity (@<对象>, @<E>, @<F1>, @<F2>, @<C>)
+    }
+
+    方法 连续性_2 <公开 静态 注释 = "连续性_2. 原方法: Continuity. 官方简介: 设置边上的几何连续性." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 E <类型 = 长整数>
+    参数 S1 <类型 = 长整数>
+    参数 S2 <类型 = 长整数>
+    参数 L1 <类型 = 长整数>
+    参数 L2 <类型 = 长整数>
+    参数 C <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Builder.Continuity_2 (@<对象>, @<E>, @<S1>, @<S2>, @<L1>, @<L2>, @<C>)
+    }
+
+    方法 相同参数 <公开 静态 注释 = "相同参数. 原方法: SameParameter. 官方简介: 设置边 <E> 的相同参数标志." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 E <类型 = 长整数>
+    参数 S <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Builder.SameParameter (@<对象>, @<E>, @<S>)
+    }
+
+    方法 相同范围 <公开 静态 注释 = "相同范围. 原方法: SameRange. 官方简介: 设置边 <E> 的相同范围标志." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 E <类型 = 长整数>
+    参数 S <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Builder.SameRange (@<对象>, @<E>, @<S>)
+    }
+
+    方法 退化 <公开 静态 注释 = "退化. 原方法: Degenerated. 官方简介: 设置边 <E> 的退化标志." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 E <类型 = 长整数>
+    参数 D <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Builder.Degenerated (@<对象>, @<E>, @<D>)
+    }
+
+    方法 范围 <公开 静态 注释 = "范围. 原方法: Range. 官方简介: 若 Only3d=TRUE 则设置三维曲线的范围, 否则把范围设为所有表示" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 E <类型 = 长整数>
+    参数 首个 <类型 = 小数>
+    参数 末个 <类型 = 小数>
+    参数 三维仅 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Builder.Range (@<对象>, @<E>, @<首个>, @<末个>, @<三维仅>)
+    }
+
+    方法 范围_2 <公开 静态 注释 = "范围_2. 原方法: Range. 官方简介: 设置边在曲面的 pcurve 上的范围." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 E <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    参数 L <类型 = 长整数>
+    参数 首个 <类型 = 小数>
+    参数 末个 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Builder.Range_2 (@<对象>, @<E>, @<S>, @<L>, @<首个>, @<末个>)
+    }
+
+    方法 范围_3 <公开 静态 注释 = "范围_3. 原方法: Range. 官方简介: 设置边在面的 pcurve 上的范围." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 E <类型 = 长整数>
+    参数 F <类型 = 长整数>
+    参数 首个 <类型 = 小数>
+    参数 末个 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Builder.Range_3 (@<对象>, @<E>, @<F>, @<首个>, @<末个>)
+    }
+
+    方法 转移 <公开 静态 注释 = "转移. 原方法: Transfert. 官方简介: 把 <Ein> 的几何表示添加到 <Eout>." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 源边 <类型 = 长整数>
+    参数 目标边 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Builder.Transfert (@<对象>, @<源边>, @<目标边>)
+    }
+
+    方法 生成顶点 <公开 静态 注释 = "生成顶点. 原方法: MakeVertex. 官方简介: 构造无几何的未定义顶点." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 输出V <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Builder.MakeVertex (@<对象>, @<输出V>)
+    }
+
+    方法 生成顶点_2 <公开 静态 注释 = "生成顶点_2. 原方法: MakeVertex. 官方简介: 由三维点构造顶点." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 输出V <类型 = 长整数>
+    参数 P <类型 = 长整数>
+    参数 容差 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Builder.MakeVertex_2 (@<对象>, @<输出V>, @<P>, @<容差>)
+    }
+
+    方法 更新顶点 <公开 静态 注释 = "更新顶点. 原方法: UpdateVertex. 官方简介: 在顶点上设置三维点." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 V <类型 = 长整数>
+    参数 P <类型 = 长整数>
+    参数 容差 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Builder.UpdateVertex (@<对象>, @<V>, @<P>, @<容差>)
+    }
+
+    方法 更新顶点_2 <公开 静态 注释 = "更新顶点_2. 原方法: UpdateVertex. 官方简介: 设置顶点在边曲线上的参数." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 V <类型 = 长整数>
+    参数 P <类型 = 小数>
+    参数 E <类型 = 长整数>
+    参数 容差 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Builder.UpdateVertex_2 (@<对象>, @<V>, @<P>, @<E>, @<容差>)
+    }
+
+    方法 更新顶点_3 <公开 静态 注释 = "更新顶点_3. 原方法: UpdateVertex. 官方简介: 设置顶点在面的边 pcurve 上的参数." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 V <类型 = 长整数>
+    参数 P <类型 = 小数>
+    参数 E <类型 = 长整数>
+    参数 F <类型 = 长整数>
+    参数 容差 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Builder.UpdateVertex_3 (@<对象>, @<V>, @<P>, @<E>, @<F>, @<容差>)
+    }
+
+    方法 更新顶点_4 <公开 静态 注释 = "更新顶点_4. 原方法: UpdateVertex. 官方简介: 设置顶点在曲面的边 pcurve 上的参数." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 V <类型 = 长整数>
+    参数 P <类型 = 小数>
+    参数 E <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    参数 L <类型 = 长整数>
+    参数 容差 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Builder.UpdateVertex_4 (@<对象>, @<V>, @<P>, @<E>, @<S>, @<L>, @<容差>)
+    }
+
+    方法 更新顶点_5 <公开 静态 注释 = "更新顶点_5. 原方法: UpdateVertex. 官方简介: 设置面上顶点的参数." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 顶点 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    参数 V <类型 = 小数>
+    参数 F <类型 = 长整数>
+    参数 容差 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Builder.UpdateVertex_5 (@<对象>, @<顶点>, @<U>, @<V>, @<F>, @<容差>)
+    }
+
+    方法 更新顶点_6 <公开 静态 注释 = "更新顶点_6. 原方法: UpdateVertex. 官方简介: 更新顶点公差." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 V <类型 = 长整数>
+    参数 容差 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Builder.UpdateVertex_6 (@<对象>, @<V>, @<容差>)
+    }
+
+    方法 转移_2 <公开 静态 注释 = "转移_2. 原方法: Transfert. 官方简介: 把 Vin 在 Ein 上的参数传递为 Vout 在 Eout 上的参数." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 源边 <类型 = 长整数>
+    参数 目标边 <类型 = 长整数>
+    参数 源顶点 <类型 = 长整数>
+    参数 目标顶点 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Builder.Transfert_2 (@<对象>, @<源边>, @<目标边>, @<源顶点>, @<目标顶点>)
+    }
+
+}
+
+类 边界访问工具 <公开 注释 = "边界访问工具: 原类 BRep_Tool (libTKBRep, 头文件 BRep/BRep_Tool.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 提供访问边界表示形状几何的类方法." @禁止创建对象 = 真>
+{
+
+    方法 是否闭合 <公开 静态 类型 = 逻辑型 注释 = "是否闭合. 原方法: IsClosed. 官方简介: 若 S 是 Shell, 则当其没有自由边界(边)时返回 True. 若 S 是 Wire, 则当其没有自由端(顶点)时返回 True. (这些检查中忽略 Internal 与 External 子形状) 若 S 是 Edge, 则当其两个顶点相同时返回 True. 对其他形状类型返回 S.Closed()." @嵌入式方法 = "">
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Tool.IsClosed (@<S>)
+    }
+
+    方法 曲面 <公开 静态 类型 = 长整数 注释 = "曲面. 原方法: Surface. 官方简介: 返回面的几何曲面. 在 <L> 中返回该曲面的定位." @嵌入式方法 = "">
+    参数 F <类型 = 长整数>
+    参数 输出L <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Tool.Surface (@<F>, @<输出L>)
+    }
+
+    方法 曲面_2 <公开 静态 类型 = 长整数 注释 = "曲面_2. 原方法: Surface. 官方简介: 返回面的几何曲面. 若存在定位则它可能是副本." @嵌入式方法 = "">
+    参数 F <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Tool.Surface_2 (@<F>)
+    }
+
+    方法 三角剖分 <公开 静态 类型 = 长整数 注释 = "三角剖分. 原方法: Triangulation. 官方简介: 返回按照网格用途的面的三角剖分. @param theFace [in] 要查找三角剖分的输入面. @param theLocation [out] 面的位置. @param theMeshPurpose [in] 用于查找合适三角剖分的网格用途(默认为 NONE). @return 在 NONE 用途的情形返回活动三角剖分, 否则返回第一个适合输入用途的三角剖分; 若没有符合其他标准的三角剖分且输入用途为 AnyFallback, 则仅返回第一个三角剖分; 若没有任何合适的三角剖分则返回空句柄." @嵌入式方法 = "">
+    参数 面 <类型 = 长整数>
+    参数 输出位置 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Tool.Triangulation (@<面>, @<输出位置>)
+    }
+
+    方法 容差 <公开 静态 类型 = 小数 注释 = "容差. 原方法: Tolerance. 官方简介: 返回面的公差." @嵌入式方法 = "">
+    参数 F <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Tool.Tolerance (@<F>)
+    }
+
+    方法 自然限制 <公开 静态 类型 = 逻辑型 注释 = "自然限制. 原方法: NaturalRestriction. 官方简介: 返回面的 NaturalRestriction 标志." @嵌入式方法 = "">
+    参数 F <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Tool.NaturalRestriction (@<F>)
+    }
+
+    方法 是否几何 <公开 静态 类型 = 逻辑型 注释 = "是否几何. 原方法: IsGeometric. 官方简介: 若 <F> 有曲面则返回 True, 否则返回 false." @嵌入式方法 = "">
+    参数 F <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Tool.IsGeometric (@<F>)
+    }
+
+    方法 是否几何_2 <公开 静态 类型 = 逻辑型 注释 = "是否几何_2. 原方法: IsGeometric. 官方简介: 若 <E> 是三维曲线或曲面上的曲线则返回 True." @嵌入式方法 = "">
+    参数 E <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Tool.IsGeometric_2 (@<E>)
+    }
+
+    方法 曲线 <公开 静态 类型 = 长整数 注释 = "曲线. 原方法: Curve. 官方简介: 返回边的 3D 曲线. 可能为空句柄. 在 <L> 中返回曲线的位置. <First> 与 <Last> 中为参数范围." @嵌入式方法 = "">
+    参数 E <类型 = 长整数>
+    参数 输出L <类型 = 长整数>
+    参数 输出首个 <类型 = "小数 []">
+    参数 输出末个 <类型 = "小数 []">
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Tool.Curve (@<E>, @<输出L>, @<输出首个>, @<输出末个>)
+    }
+
+    方法 曲线_2 <公开 静态 类型 = 长整数 注释 = "曲线_2. 原方法: Curve. 官方简介: 返回边的 3D 曲线. 可能为空句柄. <First> 与 <Last> 中为参数范围. 若存在 Location 则它可能是一个副本." @嵌入式方法 = "">
+    参数 E <类型 = 长整数>
+    参数 输出首个 <类型 = "小数 []">
+    参数 输出末个 <类型 = "小数 []">
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Tool.Curve_2 (@<E>, @<输出首个>, @<输出末个>)
+    }
+
+    方法 三维折线 <公开 静态 类型 = 长整数 注释 = "三维折线. 原方法: Polygon3D. 官方简介: 返回该边的三维多边形. 可能为 Null 句柄. 在 <L> 中返回该多边形的定位." @嵌入式方法 = "">
+    参数 E <类型 = 长整数>
+    参数 输出L <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Tool.Polygon3D (@<E>, @<输出L>)
+    }
+
+    方法 平面上的曲线 <公开 静态 类型 = 长整数 注释 = "平面上的曲线. 原方法: CurveOnPlane. 官方简介: 对于平面曲面, 通过把边投影到平面上来构造该边的二维曲线. 若曲面不是平面或投影失败, 则返回空句柄." @嵌入式方法 = "">
+    参数 E <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    参数 L <类型 = 长整数>
+    参数 输出首个 <类型 = "小数 []">
+    参数 输出末个 <类型 = "小数 []">
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Tool.CurveOnPlane (@<E>, @<S>, @<L>, @<输出首个>, @<输出末个>)
+    }
+
+    方法 曲面上的曲线 <公开 静态 注释 = "曲面上的曲线. 原方法: CurveOnSurface. 官方简介: 返回边 <E> 的二维曲线、曲面及位置, 分别存入 <C>, <S>, <L>. 若该边没有曲面上的曲线, 则 <C> 与 <S> 为空. 在 <First> 和 <Last> 中返回参数范围." @嵌入式方法 = "">
+    参数 E <类型 = 长整数>
+    参数 输出C <类型 = "长整数 []">
+    参数 输出S <类型 = "长整数 []">
+    参数 输出L <类型 = 长整数>
+    参数 输出首个 <类型 = "小数 []">
+    参数 输出末个 <类型 = "小数 []">
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Tool.CurveOnSurface (@<E>, @<输出C>, @<输出S>, @<输出L>, @<输出首个>, @<输出末个>)
+    }
+
+    方法 曲面上的曲线_2 <公开 静态 注释 = "曲面上的曲线_2. 原方法: CurveOnSurface. 官方简介: 在 <C>, <S>, <L> 中返回序号为 <Index> 的边 <E> 的 2d 曲线、曲面和定位. 若索引超出范围, 则 <C> 与 <S> 为空. 在 <First> 和 <Last> 中返回参数范围." @嵌入式方法 = "">
+    参数 E <类型 = 长整数>
+    参数 输出C <类型 = "长整数 []">
+    参数 输出S <类型 = "长整数 []">
+    参数 输出L <类型 = 长整数>
+    参数 输出首个 <类型 = "小数 []">
+    参数 输出末个 <类型 = "小数 []">
+    参数 索引 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Tool.CurveOnSurface_2 (@<E>, @<输出C>, @<输出S>, @<输出L>, @<输出首个>, @<输出末个>, @<索引>)
+    }
+
+    方法 三角网折线 <公开 静态 类型 = 长整数 注释 = "三角网折线. 原方法: PolygonOnTriangulation. 官方简介: 返回面参数空间中与该边关联的多边形. 若该多边形不存在则返回 NULL 句柄." @嵌入式方法 = "">
+    参数 E <类型 = 长整数>
+    参数 T <类型 = 长整数>
+    参数 L <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Tool.PolygonOnTriangulation (@<E>, @<T>, @<L>)
+    }
+
+    方法 三角网折线_2 <公开 静态 注释 = "三角网折线_2. 原方法: PolygonOnTriangulation. 官方简介: 返回边 <E> 的三角剖分上的多边形、三角剖分以及位置, 分别存入 <P>, <T>, <L>. 若该边没有三角剖分多边形, 则 <P> 与 <T> 为空." @嵌入式方法 = "">
+    参数 E <类型 = 长整数>
+    参数 输出P <类型 = "长整数 []">
+    参数 输出T <类型 = "长整数 []">
+    参数 输出L <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Tool.PolygonOnTriangulation_2 (@<E>, @<输出P>, @<输出T>, @<输出L>)
+    }
+
+    方法 三角网折线_3 <公开 静态 注释 = "三角网折线_3. 原方法: PolygonOnTriangulation. 官方简介: 返回边 <E> 在索引范围内的三角剖分上的多边形、三角剖分及位置, 分别存入 <P>, <T>, <L>. 若该边没有三角剖分多边形, 则 <C> 与 <S> 为空." @嵌入式方法 = "">
+    参数 E <类型 = 长整数>
+    参数 输出P <类型 = "长整数 []">
+    参数 输出T <类型 = "长整数 []">
+    参数 输出L <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Tool.PolygonOnTriangulation_3 (@<E>, @<输出P>, @<输出T>, @<输出L>, @<索引>)
+    }
+
+    方法 是否闭合_2 <公开 静态 类型 = 逻辑型 注释 = "是否闭合_2. 原方法: IsClosed. 官方简介: 若 <E> 在 <F> 的参数空间中有两条 PCurves 则返回 True. 即 <F> 位于闭合曲面上且 <E> 位于闭合曲线上." @嵌入式方法 = "">
+    参数 E <类型 = 长整数>
+    参数 F <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Tool.IsClosed_2 (@<E>, @<F>)
+    }
+
+    方法 是否闭合_3 <公开 静态 类型 = 逻辑型 注释 = "是否闭合_3. 原方法: IsClosed. 官方简介: 若 <E> 在 <S> 的参数空间中有两条 PCurves 则返回 True. 即 <S> 是闭合曲面且 <E> 位于闭合曲线上." @嵌入式方法 = "">
+    参数 E <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    参数 L <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Tool.IsClosed_3 (@<E>, @<S>, @<L>)
+    }
+
+    方法 是否闭合_4 <公开 静态 类型 = 逻辑型 注释 = "是否闭合_4. 原方法: IsClosed. 官方简介: 若 <E> 在三角剖分 <T> 中具有两个索引数组则返回 True." @嵌入式方法 = "">
+    参数 E <类型 = 长整数>
+    参数 T <类型 = 长整数>
+    参数 L <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Tool.IsClosed_4 (@<E>, @<T>, @<L>)
+    }
+
+    方法 容差_2 <公开 静态 类型 = 小数 注释 = "容差_2. 原方法: Tolerance. 官方简介: 返回 <E> 的公差." @嵌入式方法 = "">
+    参数 E <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Tool.Tolerance_2 (@<E>)
+    }
+
+    方法 相同参数 <公开 静态 类型 = 逻辑型 注释 = "相同参数. 原方法: SameParameter. 官方简介: 返回边的 SameParameter 标志." @嵌入式方法 = "">
+    参数 E <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Tool.SameParameter (@<E>)
+    }
+
+    方法 相同范围 <公开 静态 类型 = 逻辑型 注释 = "相同范围. 原方法: SameRange. 官方简介: 返回边的 SameRange 标志." @嵌入式方法 = "">
+    参数 E <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Tool.SameRange (@<E>)
+    }
+
+    方法 退化 <公开 静态 类型 = 逻辑型 注释 = "退化. 原方法: Degenerated. 官方简介: 若边退化则返回 True." @嵌入式方法 = "">
+    参数 E <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Tool.Degenerated (@<E>)
+    }
+
+    方法 范围 <公开 静态 注释 = "范围. 原方法: Range. 官方简介: 获取三维曲线的范围." @嵌入式方法 = "">
+    参数 E <类型 = 长整数>
+    参数 输出首个 <类型 = "小数 []">
+    参数 输出末个 <类型 = "小数 []">
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Tool.Range (@<E>, @<输出首个>, @<输出末个>)
+    }
+
+    方法 范围_2 <公开 静态 注释 = "范围_2. 原方法: Range. 官方简介: 获取边在曲面的 pcurve 上的范围." @嵌入式方法 = "">
+    参数 E <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    参数 L <类型 = 长整数>
+    参数 输出首个 <类型 = "小数 []">
+    参数 输出末个 <类型 = "小数 []">
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Tool.Range_2 (@<E>, @<S>, @<L>, @<输出首个>, @<输出末个>)
+    }
+
+    方法 范围_3 <公开 静态 注释 = "范围_3. 原方法: Range. 官方简介: 获取边在面的 pcurve 上的范围." @嵌入式方法 = "">
+    参数 E <类型 = 长整数>
+    参数 F <类型 = 长整数>
+    参数 输出首个 <类型 = "小数 []">
+    参数 输出末个 <类型 = "小数 []">
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Tool.Range_3 (@<E>, @<F>, @<输出首个>, @<输出末个>)
+    }
+
+    方法 UV点 <公开 静态 注释 = "UV点. 原方法: UVPoints. 官方简介: 获取边端点的 UV 位置." @嵌入式方法 = "">
+    参数 E <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    参数 L <类型 = 长整数>
+    参数 输出P起点 <类型 = 长整数>
+    参数 输出P终点 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Tool.UVPoints (@<E>, @<S>, @<L>, @<输出P起点>, @<输出P终点>)
+    }
+
+    方法 UV点_2 <公开 静态 注释 = "UV点_2. 原方法: UVPoints. 官方简介: 获取边端点的 UV 位置." @嵌入式方法 = "">
+    参数 E <类型 = 长整数>
+    参数 F <类型 = 长整数>
+    参数 输出P起点 <类型 = 长整数>
+    参数 输出P终点 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Tool.UVPoints_2 (@<E>, @<F>, @<输出P起点>, @<输出P终点>)
+    }
+
+    方法 设置UV点 <公开 静态 注释 = "设置UV点. 原方法: SetUVPoints. 官方简介: 设置边端点的 UV 位置." @嵌入式方法 = "">
+    参数 E <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    参数 L <类型 = 长整数>
+    参数 P起点 <类型 = 长整数>
+    参数 P终点 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Tool.SetUVPoints (@<E>, @<S>, @<L>, @<P起点>, @<P终点>)
+    }
+
+    方法 设置UV点_2 <公开 静态 注释 = "设置UV点_2. 原方法: SetUVPoints. 官方简介: 设置边端点的 UV 位置." @嵌入式方法 = "">
+    参数 E <类型 = 长整数>
+    参数 F <类型 = 长整数>
+    参数 P起点 <类型 = 长整数>
+    参数 P终点 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Tool.SetUVPoints_2 (@<E>, @<F>, @<P起点>, @<P终点>)
+    }
+
+    方法 是否有连续性 <公开 静态 类型 = 逻辑型 注释 = "是否有连续性. 原方法: HasContinuity. 官方简介: 若该边位于两个面的曲面上则返回 True." @嵌入式方法 = "">
+    参数 E <类型 = 长整数>
+    参数 F1 <类型 = 长整数>
+    参数 F2 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Tool.HasContinuity (@<E>, @<F1>, @<F2>)
+    }
+
+    方法 连续性 <公开 静态 类型 = 整数 注释 = "连续性. 原方法: Continuity. 官方简介: 返回连续性." @嵌入式方法 = "">
+    参数 E <类型 = 长整数>
+    参数 F1 <类型 = 长整数>
+    参数 F2 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Tool.Continuity (@<E>, @<F1>, @<F2>)
+    }
+
+    方法 是否有连续性_2 <公开 静态 类型 = 逻辑型 注释 = "是否有连续性_2. 原方法: HasContinuity. 官方简介: 若边在曲面上则返回 True." @嵌入式方法 = "">
+    参数 E <类型 = 长整数>
+    参数 S1 <类型 = 长整数>
+    参数 S2 <类型 = 长整数>
+    参数 L1 <类型 = 长整数>
+    参数 L2 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Tool.HasContinuity_2 (@<E>, @<S1>, @<S2>, @<L1>, @<L2>)
+    }
+
+    方法 连续性_2 <公开 静态 类型 = 整数 注释 = "连续性_2. 原方法: Continuity. 官方简介: 返回连续性." @嵌入式方法 = "">
+    参数 E <类型 = 长整数>
+    参数 S1 <类型 = 长整数>
+    参数 S2 <类型 = 长整数>
+    参数 L1 <类型 = 长整数>
+    参数 L2 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Tool.Continuity_2 (@<E>, @<S1>, @<S2>, @<L1>, @<L2>)
+    }
+
+    方法 是否有连续性_3 <公开 静态 类型 = 逻辑型 注释 = "是否有连续性_3. 原方法: HasContinuity. 官方简介: 若该边在某两个曲面上具有正则性则返回 True" @嵌入式方法 = "">
+    参数 E <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Tool.HasContinuity_3 (@<E>)
+    }
+
+    方法 最大连续性 <公开 静态 类型 = 整数 注释 = "最大连续性. 原方法: MaxContinuity. 官方简介: 返回某些曲面之间边的最大连续性, 若无此类曲面则为 GeomAbs_C0." @嵌入式方法 = "">
+    参数 边 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Tool.MaxContinuity (@<边>)
+    }
+
+    方法 点 <公开 静态 类型 = 长整数 注释 = "点. 原方法: Pnt. 官方简介: 返回三维点." @嵌入式方法 = "">
+    参数 V <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Tool.Pnt (@<V>)
+    }
+
+    方法 容差_3 <公开 静态 类型 = 小数 注释 = "容差_3. 原方法: Tolerance. 官方简介: 返回公差." @嵌入式方法 = "">
+    参数 V <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Tool.Tolerance_3 (@<V>)
+    }
+
+    方法 参数 <公开 静态 类型 = 逻辑型 注释 = "参数. 原方法: Parameter. 官方简介: 在 <theE> 上查找 <theV> 的参数. @param theV [in] 输入顶点 @param theE [in] 输入边 @param theParam [out] 计算得到的曲线上的参数 @return 若成功则返回 TRUE" @嵌入式方法 = "">
+    参数 V <类型 = 长整数>
+    参数 E <类型 = 长整数>
+    参数 输出参数 <类型 = "小数 []">
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Tool.Parameter (@<V>, @<E>, @<输出参数>)
+    }
+
+    方法 参数_2 <公开 静态 类型 = 小数 注释 = "参数_2. 原方法: Parameter. 官方简介: 返回 <V> 在 <E> 上的参数. 若边上没有参数则抛出 Standard_NoSuchObject" @嵌入式方法 = "">
+    参数 V <类型 = 长整数>
+    参数 E <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Tool.Parameter_2 (@<V>, @<E>)
+    }
+
+    方法 参数_3 <公开 静态 类型 = 小数 注释 = "参数_3. 原方法: Parameter. 官方简介: 返回顶点在面的边 pcurve 上的参数." @嵌入式方法 = "">
+    参数 V <类型 = 长整数>
+    参数 E <类型 = 长整数>
+    参数 F <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Tool.Parameter_3 (@<V>, @<E>, @<F>)
+    }
+
+    方法 参数_4 <公开 静态 类型 = 小数 注释 = "参数_4. 原方法: Parameter. 官方简介: 返回顶点在曲面的边 pcurve 上的参数." @嵌入式方法 = "">
+    参数 V <类型 = 长整数>
+    参数 E <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    参数 L <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Tool.Parameter_4 (@<V>, @<E>, @<S>, @<L>)
+    }
+
+    方法 参数_5 <公开 静态 类型 = 长整数 注释 = "参数_5. 原方法: Parameters. 官方简介: 返回顶点在面上的参数." @嵌入式方法 = "">
+    参数 V <类型 = 长整数>
+    参数 F <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Tool.Parameters (@<V>, @<F>)
+    }
+
+    方法 最大容差 <公开 静态 类型 = 小数 注释 = "最大容差. 原方法: MaxTolerance." @嵌入式方法 = "">
+    参数 形状 <类型 = 长整数>
+    参数 子项形状 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.BRep_Tool.MaxTolerance (@<形状>, @<子项形状>)
+    }
+
+}
+
+类 拓扑探索 <公开 注释 = "拓扑探索: 原类 TopExp (libTKBRep, 头文件 TopExp/TopExp.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 此包提供探测拓扑数据结构的基础工具." @禁止创建对象 = 真>
+{
+
+    方法 首个顶点 <公开 静态 类型 = 长整数 注释 = "首个顶点. 原方法: FirstVertex. 官方简介: 返回 E 中朝向为 FORWARD 的顶点. 若没有则返回空形状. CumOri = True: 考虑边的朝向" @嵌入式方法 = "">
+    参数 E <类型 = 长整数>
+    参数 累积朝向 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopExp.FirstVertex (@<E>, @<累积朝向>)
+    }
+
+    方法 末个顶点 <公开 静态 类型 = 长整数 注释 = "末个顶点. 原方法: LastVertex. 官方简介: 返回 E 中朝向为 REVERSED 的顶点. 若没有则返回空形状. CumOri = True: 考虑边的朝向" @嵌入式方法 = "">
+    参数 E <类型 = 长整数>
+    参数 累积朝向 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopExp.LastVertex (@<E>, @<累积朝向>)
+    }
+
+    方法 顶点 <公开 静态 注释 = "顶点. 原方法: Vertices. 官方简介: 在 Vfirst, Vlast 中返回边 <E> 的 FORWARD 与 REVERSED 顶点. 可能为空形状. CumOri = True: 考虑边的朝向" @嵌入式方法 = "">
+    参数 E <类型 = 长整数>
+    参数 输出起始顶点 <类型 = 长整数>
+    参数 输出终止顶点 <类型 = 长整数>
+    参数 累积朝向 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopExp.Vertices (@<E>, @<输出起始顶点>, @<输出终止顶点>, @<累积朝向>)
+    }
+
+    方法 顶点_2 <公开 静态 注释 = "顶点_2. 原方法: Vertices. 官方简介: 在 Vfirst, Vlast 中返回开放线框 <W> 的第一个和最后一个顶点. 可能为空形状. 若 <W> 闭合, 则 Vfirst 与 Vlast 是 <W> 上的同一个顶点. 若 <W> 是非流形的. VFirst 与 VLast 为空形状." @嵌入式方法 = "">
+    参数 W <类型 = 长整数>
+    参数 输出起始顶点 <类型 = 长整数>
+    参数 输出终止顶点 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopExp.Vertices_2 (@<W>, @<输出起始顶点>, @<输出终止顶点>)
+    }
+
+    方法 公共顶点 <公开 静态 类型 = 逻辑型 注释 = "公共顶点. 原方法: CommonVertex. 官方简介: 查找两条边 <E1,E2> 共有的顶点 <V>, 若该顶点存在则返回 True." @嵌入式方法 = "">
+    参数 E1 <类型 = 长整数>
+    参数 E2 <类型 = 长整数>
+    参数 输出V <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopExp.CommonVertex (@<E1>, @<E2>, @<输出V>)
+    }
+
+}
+
+类 拓扑遍历器 <公开 注释 = "拓扑遍历器: 原类 TopExp_Explorer (libTKBRep, 头文件 TopExp/TopExp_Explorer.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: Explorer 是遍历 TopoDS 包拓扑数据结构的工具." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: TopExp_Explorer. 官方简介: 创建空探索器, 在 Init 之后才有用." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopExp_Explorer.构造 ()
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: TopExp_Explorer. 官方简介: 在形状 <S> 上创建探索器." @嵌入式方法 = "">
+    参数 S <类型 = 长整数>
+    参数 待查找 <类型 = 整数>
+    参数 待避开 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopExp_Explorer.构造_2 (@<S>, @<待查找>, @<待避开>)
+    }
+
+    方法 初始化 <公开 静态 注释 = "初始化. 原方法: Init. 官方简介: 在形状 S 上重置该探索器. 它被初始化为在形状 S 中搜索类型为 ToFind 的形状, 且这些形状不是形状 ToAvoid 的一部分. 若形状 ToAvoid 等于 TopAbs_SHAPE, 或与形状 ToFind 相同或比其简单, 则对搜索没有影响." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    参数 待查找 <类型 = 整数>
+    参数 待避开 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopExp_Explorer.Init (@<对象>, @<S>, @<待查找>, @<待避开>)
+    }
+
+    方法 是否还有 <公开 静态 类型 = 逻辑型 注释 = "是否还有. 原方法: More. 官方简介: 若探索中还有更多形状则返回 True." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopExp_Explorer.More (@<对象>)
+    }
+
+    方法 下一个 <公开 静态 注释 = "下一个. 原方法: Next. 官方简介: 移动到探索中的下一个形状. 若没有更多形状可探索则抛出 Standard_NoMoreObject 异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopExp_Explorer.Next (@<对象>)
+    }
+
+    方法 取值 <公开 静态 类型 = 长整数 注释 = "取值. 原方法: Value. 官方简介: 返回探索中的当前形状. 若该探索器已没有可探索的形状则抛出 Standard_NoSuchObject." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopExp_Explorer.Value (@<对象>)
+    }
+
+    方法 当前 <公开 静态 类型 = 长整数 注释 = "当前. 原方法: Current. 官方简介: 返回探索中的当前形状. 若该探索器已没有可探索的形状则抛出 Standard_NoSuchObject." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopExp_Explorer.Current (@<对象>)
+    }
+
+    方法 重新初始化 <公开 静态 注释 = "重新初始化. 原方法: ReInit. 官方简介: 用原始参数重新初始化探索." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopExp_Explorer.ReInit (@<对象>)
+    }
+
+    方法 已遍历形状 <公开 静态 类型 = 长整数 注释 = "已遍历形状. 原方法: ExploredShape. 官方简介: 返回已探索的形状." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopExp_Explorer.ExploredShape (@<对象>)
+    }
+
+    方法 深度 <公开 静态 类型 = 整数 注释 = "深度. 原方法: Depth. 官方简介: 返回探索的当前深度. 0 表示待探索的形状本身." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopExp_Explorer.Depth (@<对象>)
+    }
+
+    方法 清除 <公开 静态 注释 = "清除. 原方法: Clear. 官方简介: 清空探索器的内容. 在调用 More() 时将返回 False." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopExp_Explorer.Clear (@<对象>)
+    }
+
+}
+
+类 拓扑数据 <公开 注释 = "拓扑数据: 原类 TopoDS (libTKBRep, 头文件 TopoDS/TopoDS.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 提供把 TopoDS_Shape 类的对象转换为更专用子类对象的方法. 类型经过校验, 因此在下例中前两个代码块正确, 第三个被编译器拒绝." @禁止创建对象 = 真>
+{
+
+    方法 顶点 <公开 静态 类型 = 长整数 注释 = "顶点. 原方法: Vertex. 官方简介: 访问数据结构的基工具. 把形状 S 转换为更专用的返回类型 Vertex. 若 S 不能转换为该返回类型则抛出 Standard_TypeMismatch 异常." @嵌入式方法 = "">
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS.Vertex (@<S>)
+    }
+
+    方法 顶点_2 <公开 静态 类型 = 长整数 注释 = "顶点_2. 原方法: Vertex." @嵌入式方法 = "">
+    参数 输出a0 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS.Vertex_2 (@<输出a0>)
+    }
+
+    方法 边 <公开 静态 类型 = 长整数 注释 = "边. 原方法: Edge. 官方简介: 把形状 S 转换为更专用的返回类型 Edge. 若 S 不能转换为该返回类型则抛出 Standard_TypeMismatch 异常." @嵌入式方法 = "">
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS.Edge (@<S>)
+    }
+
+    方法 边_2 <公开 静态 类型 = 长整数 注释 = "边_2. 原方法: Edge." @嵌入式方法 = "">
+    参数 输出a0 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS.Edge_2 (@<输出a0>)
+    }
+
+    方法 线框 <公开 静态 类型 = 长整数 注释 = "线框. 原方法: Wire. 官方简介: 把形状 S 转换为更专用的返回类型 Wire. 若 S 不能转换为该返回类型则抛出 Standard_TypeMismatch 异常." @嵌入式方法 = "">
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS.Wire (@<S>)
+    }
+
+    方法 线框_2 <公开 静态 类型 = 长整数 注释 = "线框_2. 原方法: Wire." @嵌入式方法 = "">
+    参数 输出a0 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS.Wire_2 (@<输出a0>)
+    }
+
+    方法 面 <公开 静态 类型 = 长整数 注释 = "面. 原方法: Face. 官方简介: 把形状 S 转换为更专用的返回类型 Face. 若 S 不能转换为该返回类型则抛出 Standard_TypeMismatch 异常." @嵌入式方法 = "">
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS.Face (@<S>)
+    }
+
+    方法 面_2 <公开 静态 类型 = 长整数 注释 = "面_2. 原方法: Face." @嵌入式方法 = "">
+    参数 输出a0 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS.Face_2 (@<输出a0>)
+    }
+
+    方法 壳 <公开 静态 类型 = 长整数 注释 = "壳. 原方法: Shell. 官方简介: 把形状 S 转换为更专用的返回类型 Shell. 若 S 不能转换为该返回类型则抛出 Standard_TypeMismatch 异常." @嵌入式方法 = "">
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS.Shell (@<S>)
+    }
+
+    方法 壳_2 <公开 静态 类型 = 长整数 注释 = "壳_2. 原方法: Shell." @嵌入式方法 = "">
+    参数 输出a0 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS.Shell_2 (@<输出a0>)
+    }
+
+    方法 实体 <公开 静态 类型 = 长整数 注释 = "实体. 原方法: Solid. 官方简介: 把形状 S 转换为更专用的返回类型 Solid. 若 S 不能转换为该返回类型则抛出 Standard_TypeMismatch 异常." @嵌入式方法 = "">
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS.Solid (@<S>)
+    }
+
+    方法 实体_2 <公开 静态 类型 = 长整数 注释 = "实体_2. 原方法: Solid." @嵌入式方法 = "">
+    参数 输出a0 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS.Solid_2 (@<输出a0>)
+    }
+
+    方法 复合实体 <公开 静态 类型 = 长整数 注释 = "复合实体. 原方法: CompSolid. 官方简介: 把形状 S 转换为更专用的返回类型 CompSolid. 若 S 不能转换为该返回类型则抛出 Standard_TypeMismatch 异常." @嵌入式方法 = "">
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS.CompSolid (@<S>)
+    }
+
+    方法 复合实体_2 <公开 静态 类型 = 长整数 注释 = "复合实体_2. 原方法: CompSolid." @嵌入式方法 = "">
+    参数 输出a0 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS.CompSolid_2 (@<输出a0>)
+    }
+
+    方法 复合体 <公开 静态 类型 = 长整数 注释 = "复合体. 原方法: Compound. 官方简介: 把形状 S 转换为更专用的返回类型 Compound. 若 S 不能转换为该返回类型则抛出 Standard_TypeMismatch 异常." @嵌入式方法 = "">
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS.Compound (@<S>)
+    }
+
+    方法 复合体_2 <公开 静态 类型 = 长整数 注释 = "复合体_2. 原方法: Compound." @嵌入式方法 = "">
+    参数 输出a0 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS.Compound_2 (@<输出a0>)
+    }
+
+}
+
+类 拓扑构建器 <公开 注释 = "拓扑构建器: 原类 TopoDS_Builder (libTKBRep, 头文件 TopoDS/TopoDS_Builder.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: Builder 用于创建拓扑数据结构, 是 Builder 类层次的根." @禁止创建对象 = 真>
+{
+
+    方法 生成线框 <公开 静态 注释 = "生成线框. 原方法: MakeWire. 官方简介: 构造一个空线框." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 输出W <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_Builder.MakeWire (@<对象>, @<输出W>)
+    }
+
+    方法 生成壳 <公开 静态 注释 = "生成壳. 原方法: MakeShell. 官方简介: 构造一个空壳." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 输出S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_Builder.MakeShell (@<对象>, @<输出S>)
+    }
+
+    方法 生成实体 <公开 静态 注释 = "生成实体. 原方法: MakeSolid. 官方简介: 构造覆盖整个三维空间的实体." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 输出S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_Builder.MakeSolid (@<对象>, @<输出S>)
+    }
+
+    方法 生成复合实体 <公开 静态 注释 = "生成复合实体. 原方法: MakeCompSolid. 官方简介: 构造空复合实体." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 输出C <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_Builder.MakeCompSolid (@<对象>, @<输出C>)
+    }
+
+    方法 生成复合体 <公开 静态 注释 = "生成复合体. 原方法: MakeCompound. 官方简介: 构造一个空复合体." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 输出C <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_Builder.MakeCompound (@<对象>, @<输出C>)
+    }
+
+    方法 添加 <公开 静态 注释 = "添加. 原方法: Add. 官方简介: 把形状 C 添加到形状 S 中. 异常 - 若 S 不是自由的且不能被修改, 则抛出 TopoDS_FrozenShape. - 若 S 与 C 不兼容, 则抛出 TopoDS__UnCompatibleShapes." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 输出S <类型 = 长整数>
+    参数 C <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_Builder.Add (@<对象>, @<输出S>, @<C>)
+    }
+
+    方法 移除 <公开 静态 注释 = "移除. 原方法: Remove. 官方简介: 从形状 S 中移除形状 C. 若 S 被冻结且无法修改则抛出 TopoDS_FrozenShape." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 输出S <类型 = 长整数>
+    参数 C <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_Builder.Remove (@<对象>, @<输出S>, @<C>)
+    }
+
+}
+
+类 拓扑复合实体 <公开 注释 = "拓扑复合实体: 原类 TopoDS_CompSolid (libTKBRep, 头文件 TopoDS/TopoDS_CompSolid.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 描述一个复合实体: - 引用底层复合实体, 后者可被赋予位置与朝向 - 持有底层复合实体的位置, 给出其在局部坐标系中的放置 - 持有底层复合实体的朝向, 以几何本身为准(而非相对其他形状的朝向). 把形状 S 转换为更专用的返回类型 CompSolid." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: TopoDS_CompSolid. 官方简介: 构造未定义的复合实体." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_CompSolid.构造 ()
+    }
+
+}
+
+类 拓扑复合体 <公开 注释 = "拓扑复合体: 原类 TopoDS_Compound (libTKBRep, 头文件 TopoDS/TopoDS_Compound.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 描述一个复合体: - 引用底层复合体, 后者可被赋予位置与朝向 - 持有底层复合体的位置, 给出其在局部坐标系中的放置 - 持有底层复合体的朝向, 以几何本身为准(而非相对其他形状的朝向). 把形状 S 转换为更专用的返回类型 Compound." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: TopoDS_Compound. 官方简介: 构造未定义的复合体." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_Compound.构造 ()
+    }
+
+}
+
+类 拓扑边 <公开 注释 = "拓扑边: 原类 TopoDS_Edge (libTKBRep, 头文件 TopoDS/TopoDS_Edge.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 描述一条边: - 引用底层拓扑边, 后者可被赋予位置与朝向 - 持有底层拓扑边的位置, 给出其在局部坐标系中的放置 - 持有底层拓扑边的朝向, 以几何本身为准(而非相对其他形状的朝向)." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: TopoDS_Edge. 官方简介: 未定义的边." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_Edge.构造 ()
+    }
+
+}
+
+类 拓扑面 <公开 注释 = "拓扑面: 原类 TopoDS_Face (libTKBRep, 头文件 TopoDS/TopoDS_Face.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 描述一个面: - 引用底层拓扑面, 后者可被赋予位置与朝向 - 持有底层拓扑面的位置, 给出其在局部坐标系中的放置 - 持有底层拓扑面的朝向, 以几何本身为准(而非相对其他形状的朝向)." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: TopoDS_Face. 官方简介: 未定义的面." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_Face.构造 ()
+    }
+
+}
+
+类 拓扑形状句柄 <公开 注释 = "拓扑形状句柄: 原类 TopoDS_HShape (libTKBRep, 头文件 TopoDS/TopoDS_HShape.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 用于通过句柄操作形状的类." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: TopoDS_HShape. 官方简介: 构造空形状对象" @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_HShape.构造 ()
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: TopoDS_HShape. 官方简介: 构造由形状 aShape 定义的形状对象." @嵌入式方法 = "">
+    参数 形状 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_HShape.构造_2 (@<形状>)
+    }
+
+    方法 形状 <公开 静态 注释 = "形状. 原方法: Shape. 官方简介: 用形状 aShape 加载该形状" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 形状 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_HShape.Shape (@<对象>, @<形状>)
+    }
+
+    方法 形状_2 <公开 静态 类型 = 长整数 注释 = "形状_2. 原方法: Shape. 官方简介: 返回基于该形状的常量 TopoDS_Shape 的引用." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_HShape.Shape_2 (@<对象>)
+    }
+
+    方法 修改形状 <公开 静态 类型 = 长整数 注释 = "修改形状. 原方法: ChangeShape. 官方简介: 把定义该形状的 TopoDS_Shape 对象替换为另一个引用相同底层形状的对象. 访问 TopoDS_Shape 对象所引用的底层形状中的形状列表. 返回基于该形状的 TopoDS_Shape 的引用. 该 TopoDS_Shape 可以被修改." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_HShape.ChangeShape (@<对象>)
+    }
+
+}
+
+类 拓扑迭代器 <公开 注释 = "拓扑迭代器: 原类 TopoDS_Iterator (libTKBRep, 头文件 TopoDS/TopoDS_Iterator.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 遍历给定 TopoDS_Shape 对象下的底层形状, 提供对其组成子形状的访问. 每个组成形状以 TopoDS_Shape 返回, 带有朝向, 以及原始值与相对值的复合." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: TopoDS_Iterator. 官方简介: 创建空迭代器." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_Iterator.构造 ()
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: TopoDS_Iterator. 官方简介: 创建 <S> 子形状的迭代器. 注意: - 若 cumOri 为 true, 该函数把所有子形状与 S 的朝向复合. - 若 cumLoc 为 true, 该函数把所有子形状乘以 S 的位置, 即对每个子形状施加与 S 关联的变换." @嵌入式方法 = "">
+    参数 S <类型 = 长整数>
+    参数 累积朝向 <类型 = 逻辑型>
+    参数 累积位置 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_Iterator.构造_2 (@<S>, @<累积朝向>, @<累积位置>)
+    }
+
+    方法 初始化 <公开 静态 注释 = "初始化. 原方法: Initialize. 官方简介: 用形状 S 初始化该迭代器. 注意: - 若 cumOri 为 true, 该函数把所有子形状与 S 的朝向复合. - 若 cumLoc 为 true, 该函数把所有子形状乘以 S 的位置, 即对每个子形状施加与 S 关联的变换." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    参数 累积朝向 <类型 = 逻辑型>
+    参数 累积位置 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_Iterator.Initialize (@<对象>, @<S>, @<累积朝向>, @<累积位置>)
+    }
+
+    方法 是否还有 <公开 静态 类型 = 逻辑型 注释 = "是否还有. 原方法: More. 官方简介: 若该迭代器正在扫描的形状中还有另一个子形状则返回 true." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_Iterator.More (@<对象>)
+    }
+
+    方法 下一个 <公开 静态 注释 = "下一个. 原方法: Next. 官方简介: 前进到该迭代器正在扫描的形状中的下一个子形状. 若形状中没有更多子形状则抛出 Standard_NoMoreObject 异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_Iterator.Next (@<对象>)
+    }
+
+    方法 取值 <公开 静态 类型 = 长整数 注释 = "取值. 原方法: Value. 官方简介: 返回该迭代器正在扫描的形状中的当前子形状. 若没有当前子形状则抛出 Standard_NoSuchObject 异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_Iterator.Value (@<对象>)
+    }
+
+}
+
+类 拓扑形状 <公开 注释 = "拓扑形状: 原类 TopoDS_Shape (libTKBRep, 头文件 TopoDS/TopoDS_Shape.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 描述一个形状: - 引用底层形状, 后者可被赋予位置与朝向 - 持有底层形状的位置, 给出其在局部坐标系中的放置 - 持有底层形状的朝向, 以几何本身为准(而非相对其他形状的朝向). 注意: 若引用的底层形状具有空的形状列表, 则该形状为空." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: TopoDS_Shape. 官方简介: 创建不指向任何东西的 NULL 形状." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_Shape.构造 ()
+    }
+
+    方法 是否为空 <公开 静态 类型 = 逻辑型 注释 = "是否为空. 原方法: IsNull. 官方简介: 若该形状为空则返回 true. 换句话说, 它不引用任何可被赋予位置与朝向的底层形状." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_Shape.IsNull (@<对象>)
+    }
+
+    方法 置空 <公开 静态 注释 = "置空. 原方法: Nullify. 官方简介: 销毁存储在该形状中的底层形状的引用. 结果该形状变为空." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_Shape.Nullify (@<对象>)
+    }
+
+    方法 位置 <公开 静态 类型 = 长整数 注释 = "位置. 原方法: Location. 官方简介: 返回形状局部坐标系." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_Shape.Location (@<对象>)
+    }
+
+    方法 位置_2 <公开 静态 注释 = "位置_2. 原方法: Location. 官方简介: 设置形状局部坐标系." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 位置 <类型 = 长整数>
+    参数 抛出异常 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_Shape.Location_2 (@<对象>, @<位置>, @<抛出异常>)
+    }
+
+    方法 已定位 <公开 静态 类型 = 长整数 注释 = "已定位. 原方法: Located. 官方简介: 返回与 <me> 相似, 且局部坐标系设为 <Loc> 的形状." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 位置 <类型 = 长整数>
+    参数 抛出异常 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_Shape.Located (@<对象>, @<位置>, @<抛出异常>)
+    }
+
+    方法 朝向 <公开 静态 类型 = 整数 注释 = "朝向. 原方法: Orientation. 官方简介: 返回形状朝向." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_Shape.Orientation (@<对象>)
+    }
+
+    方法 朝向_2 <公开 静态 注释 = "朝向_2. 原方法: Orientation. 官方简介: 设置形状朝向." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 朝向 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_Shape.Orientation_2 (@<对象>, @<朝向>)
+    }
+
+    方法 有向 <公开 静态 类型 = 长整数 注释 = "有向. 原方法: Oriented. 官方简介: 返回与 <me> 相似, 且方位设为 <Or> 的形状." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 朝向 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_Shape.Oriented (@<对象>, @<朝向>)
+    }
+
+    方法 形状类型 <公开 静态 类型 = 整数 注释 = "形状类型. 原方法: ShapeType. 官方简介: 返回与该形状对应的 TopAbs_ShapeEnum 枚举值, 例如 VERTEX, EDGE 等. 若该形状为空则抛出 Standard_NullObject 异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_Shape.ShapeType (@<对象>)
+    }
+
+    方法 自由 <公开 静态 类型 = 逻辑型 注释 = "自由. 原方法: Free. 官方简介: 返回自由标志." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_Shape.Free (@<对象>)
+    }
+
+    方法 自由_2 <公开 静态 注释 = "自由_2. 原方法: Free. 官方简介: 设置自由标志." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 是否自由 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_Shape.Free_2 (@<对象>, @<是否自由>)
+    }
+
+    方法 已锁定 <公开 静态 类型 = 逻辑型 注释 = "已锁定. 原方法: Locked. 官方简介: 返回锁定标志." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_Shape.Locked (@<对象>)
+    }
+
+    方法 已锁定_2 <公开 静态 注释 = "已锁定_2. 原方法: Locked. 官方简介: 设置锁定标志." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 是否已锁定 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_Shape.Locked_2 (@<对象>, @<是否已锁定>)
+    }
+
+    方法 已修改 <公开 静态 类型 = 逻辑型 注释 = "已修改. 原方法: Modified. 官方简介: 返回修改标志." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_Shape.Modified (@<对象>)
+    }
+
+    方法 已修改_2 <公开 静态 注释 = "已修改_2. 原方法: Modified. 官方简介: 设置修改标志." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 是否已修改 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_Shape.Modified_2 (@<对象>, @<是否已修改>)
+    }
+
+    方法 已检查 <公开 静态 类型 = 逻辑型 注释 = "已检查. 原方法: Checked. 官方简介: 返回已检查标志." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_Shape.Checked (@<对象>)
+    }
+
+    方法 已检查_2 <公开 静态 注释 = "已检查_2. 原方法: Checked. 官方简介: 设置已检查标志." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 是否已检查 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_Shape.Checked_2 (@<对象>, @<是否已检查>)
+    }
+
+    方法 可定向 <公开 静态 类型 = 逻辑型 注释 = "可定向. 原方法: Orientable. 官方简介: 返回可定向性标志." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_Shape.Orientable (@<对象>)
+    }
+
+    方法 可定向_2 <公开 静态 注释 = "可定向_2. 原方法: Orientable. 官方简介: 设置可定向性标志." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 是否可定向 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_Shape.Orientable_2 (@<对象>, @<是否可定向>)
+    }
+
+    方法 闭合 <公开 静态 类型 = 逻辑型 注释 = "闭合. 原方法: Closed. 官方简介: 返回闭合性标志." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_Shape.Closed (@<对象>)
+    }
+
+    方法 闭合_2 <公开 静态 注释 = "闭合_2. 原方法: Closed. 官方简介: 设置闭合性标志." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 是否闭合 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_Shape.Closed_2 (@<对象>, @<是否闭合>)
+    }
+
+    方法 无穷 <公开 静态 类型 = 逻辑型 注释 = "无穷. 原方法: Infinite. 官方简介: 返回无穷标志." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_Shape.Infinite (@<对象>)
+    }
+
+    方法 无穷_2 <公开 静态 注释 = "无穷_2. 原方法: Infinite. 官方简介: 设置无穷标志." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 是否无穷 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_Shape.Infinite_2 (@<对象>, @<是否无穷>)
+    }
+
+    方法 凸 <公开 静态 类型 = 逻辑型 注释 = "凸. 原方法: Convex. 官方简介: 返回凸性标志." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_Shape.Convex (@<对象>)
+    }
+
+    方法 凸_2 <公开 静态 注释 = "凸_2. 原方法: Convex. 官方简介: 设置凸性标志." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 是否凸 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_Shape.Convex_2 (@<对象>, @<是否凸>)
+    }
+
+    方法 移动 <公开 静态 注释 = "移动. 原方法: Move. 官方简介: 把形状定位乘以 thePosition." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 位置 <类型 = 长整数>
+    参数 抛出异常 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_Shape.Move (@<对象>, @<位置>, @<抛出异常>)
+    }
+
+    方法 已移动 <公开 静态 类型 = 长整数 注释 = "已移动. 原方法: Moved. 官方简介: 返回与 <me> 相似, 且定位乘以 thePosition 的形状." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 位置 <类型 = 长整数>
+    参数 抛出异常 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_Shape.Moved (@<对象>, @<位置>, @<抛出异常>)
+    }
+
+    方法 反转 <公开 静态 注释 = "反转. 原方法: Reverse. 官方简介: 反转方位, 使用 TopAbs 包中的 Reverse 方法." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_Shape.Reverse (@<对象>)
+    }
+
+    方法 反转副本 <公开 静态 类型 = 长整数 注释 = "反转副本. 原方法: Reversed. 官方简介: 返回与 <me> 相似、朝向反转的形状, 使用 TopAbs 包中的 Reverse 方法." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_Shape.Reversed (@<对象>)
+    }
+
+    方法 补集 <公开 静态 注释 = "补集. 原方法: Complement. 官方简介: 对方位取补, 使用 TopAbs 包中的 Complement 方法." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_Shape.Complement (@<对象>)
+    }
+
+    方法 已求补 <公开 静态 类型 = 长整数 注释 = "已求补. 原方法: Complemented. 官方简介: 返回与 <me> 相似、朝向取补的形状, 使用 TopAbs 包中的 Complement 方法." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_Shape.Complemented (@<对象>)
+    }
+
+    方法 组合 <公开 静态 注释 = "组合. 原方法: Compose. 官方简介: 使用 TopAbs 包中的 Compose 方法, 通过与 theOrient 复合来更新形状朝向." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 朝向 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_Shape.Compose (@<对象>, @<朝向>)
+    }
+
+    方法 已组合 <公开 静态 类型 = 长整数 注释 = "已组合. 原方法: Composed. 官方简介: 返回与 <me> 相似、朝向与 theOrient 复合的形状, 使用 TopAbs 包中的 Compose 方法." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 朝向 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_Shape.Composed (@<对象>, @<朝向>)
+    }
+
+    方法 子级数 <公开 静态 类型 = 整数 注释 = "子级数. 原方法: NbChildren. 官方简介: 返回直接子形状(children)的数量. @sa TopoDS_Iterator 用于访问子形状" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_Shape.NbChildren (@<对象>)
+    }
+
+    方法 是否配对 <公开 静态 类型 = 逻辑型 注释 = "是否配对. 原方法: IsPartner. 官方简介: 若两个形状是伙伴(即共享同一 TShape) 则返回 True. 位置与朝向可以不同." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_Shape.IsPartner (@<对象>, @<另一个>)
+    }
+
+    方法 是否相同 <公开 静态 类型 = 逻辑型 注释 = "是否相同. 原方法: IsSame. 官方简介: 若两个形状相同(即共享同一 TShape 与相同 Locations) 则返回 True. 朝向可以不同." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_Shape.IsSame (@<对象>, @<另一个>)
+    }
+
+    方法 是否相等 <公开 静态 类型 = 逻辑型 注释 = "是否相等. 原方法: IsEqual. 官方简介: 若两个形状相等(即共享同一 TShape 与相同 Locations 与 Orientations) 则返回 True." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_Shape.IsEqual (@<对象>, @<另一个>)
+    }
+
+    方法 是否非相等 <公开 静态 类型 = 逻辑型 注释 = "是否非相等. 原方法: IsNotEqual. 官方简介: IsEqual 方法的取反." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_Shape.IsNotEqual (@<对象>, @<另一个>)
+    }
+
+    方法 空复制 <公开 静态 注释 = "空复制. 原方法: EmptyCopy. 官方简介: 用新形状替换 <me>, 它具有相同的朝向与位置, 以及具有相同几何且无子形状的新 TShape." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_Shape.EmptyCopy (@<对象>)
+    }
+
+    方法 空已复制 <公开 静态 类型 = 长整数 注释 = "空已复制. 原方法: EmptyCopied. 官方简介: 返回一个新形状, 它具有相同的朝向与位置, 以及具有相同几何且无子形状的新 TShape." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_Shape.EmptyCopied (@<对象>)
+    }
+
+    方法 转储JSON <公开 静态 类型 = 文本型 注释 = "转储JSON. 原方法: DumpJson. 官方简介: 把自身内容转储到流中" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 深度 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_Shape.DumpJson (@<对象>, @<深度>)
+    }
+
+}
+
+类 拓扑壳 <公开 注释 = "拓扑壳: 原类 TopoDS_Shell (libTKBRep, 头文件 TopoDS/TopoDS_Shell.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 描述一个壳: - 引用底层拓扑壳, 后者可被赋予位置与朝向 - 持有底层拓扑壳的位置, 给出其在局部坐标系中的放置 - 持有底层拓扑壳的朝向, 以几何本身为准(而非相对其他形状的朝向)." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: TopoDS_Shell. 官方简介: 构造未定义的壳." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_Shell.构造 ()
+    }
+
+}
+
+类 拓扑实体 <公开 注释 = "拓扑实体: 原类 TopoDS_Solid (libTKBRep, 头文件 TopoDS/TopoDS_Solid.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 描述实体形状: - 引用底层实体形状, 后者可被赋予位置与朝向 - 持有底层形状的位置, 给出其在局部坐标系中的放置 - 持有底层形状的朝向, 以几何本身为准(而非相对其他形状的朝向)." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: TopoDS_Solid. 官方简介: 构造未定义的实体." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_Solid.构造 ()
+    }
+
+}
+
+类 拓扑顶点 <公开 注释 = "拓扑顶点: 原类 TopoDS_Vertex (libTKBRep, 头文件 TopoDS/TopoDS_Vertex.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 描述一个顶点: - 引用底层拓扑顶点, 后者可被赋予位置与朝向 - 持有底层拓扑顶点的位置, 给出其在局部坐标系中的放置 - 持有底层拓扑顶点的朝向, 以几何本身为准(而非相对其他形状的朝向)." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: TopoDS_Vertex. 官方简介: 未定义的顶点." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_Vertex.构造 ()
+    }
+
+}
+
+类 拓扑线框 <公开 注释 = "拓扑线框: 原类 TopoDS_Wire (libTKBRep, 头文件 TopoDS/TopoDS_Wire.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 描述一个线框: - 引用底层拓扑线框, 后者可被赋予位置与朝向 - 持有底层拓扑线框的位置, 给出其在局部坐标系中的放置 - 持有底层拓扑线框的朝向, 以几何本身为准(而非相对其他形状的朝向)." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: TopoDS_Wire. 官方简介: 未定义的线框." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKBRep.TopoDS_Wire.构造 ()
+    }
+
+}

@@ -1,0 +1,2856 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.安卓.XUI <注释 = "XUI 安卓 UI 工具库封装" @文档 = "category = \"XUI\"">
+
+
+类 XUI资源工具 <公开 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.utils.ResUtils)." @文档 = "category = \"XUI.工具\"">
+{
+    方法 取资源组 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：获取resources对象。 参数：无。 返回：对象类。 原方法：ResUtils.getResources()">
+    {
+        @ com.xuexiang.xui.utils.ResUtils.getResources ()
+    }
+
+    方法 取资源组_2 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：获取resources对象。 参数：context=安卓环境。 返回：对象类。 原方法：ResUtils.getResources()">
+    参数 值1 <类型 = 安卓环境>
+    {
+        @ com.xuexiang.xui.utils.ResUtils.getResources (@<值1>)
+    }
+
+    方法 取字符串 <公开 静态 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：获取字符串。 参数：resId=整数。 返回：文本型。 原方法：ResUtils.getString()">
+    参数 值1 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.ResUtils.getString (@<值1>)
+    }
+
+    方法 取字符串_2 <公开 静态 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：获取字符串。 参数：context=安卓环境、resId=整数。 返回：文本型。 原方法：ResUtils.getString()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.ResUtils.getString (@<值1>, @<值2>)
+    }
+
+    方法 取图形 <公开 静态 类型 = 可绘制对象类 @嵌入式方法 = "" 注释 = "用法：获取资源图片。 参数：resId=整数。 返回：可绘制对象类。 原方法：ResUtils.getDrawable()">
+    参数 值1 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.ResUtils.getDrawable (@<值1>)
+    }
+
+    方法 取图形_2 <公开 静态 类型 = 可绘制对象类 @嵌入式方法 = "" 注释 = "用法：获取资源图片【和主题有关】。 参数：context=安卓环境、resId=整数。 返回：可绘制对象类。 原方法：ResUtils.getDrawable()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.ResUtils.getDrawable (@<值1>, @<值2>)
+    }
+
+    方法 取矢量图形 <公开 静态 类型 = 可绘制对象类 @嵌入式方法 = "" 注释 = "用法：获取svg资源图片。 参数：context=安卓环境、resId=整数。 返回：可绘制对象类。 原方法：ResUtils.getVectorDrawable()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.ResUtils.getVectorDrawable (@<值1>, @<值2>)
+    }
+
+    方法 取图形属性资源 <公开 静态 类型 = 可绘制对象类 @嵌入式方法 = "" 注释 = "用法：获取Drawable属性（兼容VectorDrawable）。 参数：context=安卓环境、typedArray=对象、styleableResId=整数。 返回：可绘制对象类。 原方法：ResUtils.getDrawableAttrRes()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 对象类>
+    参数 值3 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.ResUtils.getDrawableAttrRes (@<值1>, (android.content.res.TypedArray) @<值2>, @<值3>)
+    }
+
+    方法 取颜色状态列表属性资源 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：获取ColorStateList属性（兼容?attr属性）。 参数：context=安卓环境、typedArray=对象、styleableResId=整数。 返回：对象类。 原方法：ResUtils.getColorStateListAttrRes()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 对象类>
+    参数 值3 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.ResUtils.getColorStateListAttrRes (@<值1>, (android.content.res.TypedArray) @<值2>, @<值3>)
+    }
+
+    方法 取尺寸集 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：获取dimes值，返回的是精确的值。 参数：resId=整数。 返回：小数。 原方法：ResUtils.getDimens()">
+    参数 值1 <类型 = 整数>
+    {
+        @ (double) (com.xuexiang.xui.utils.ResUtils.getDimens (@<值1>))
+    }
+
+    方法 取尺寸集_2 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：获取dimes值，返回的是精确的值。 参数：context=安卓环境、resId=整数。 返回：小数。 原方法：ResUtils.getDimens()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 整数>
+    {
+        @ (double) (com.xuexiang.xui.utils.ResUtils.getDimens (@<值1>, @<值2>))
+    }
+
+    方法 取颜色 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：获取Color值。 参数：resId=整数。 返回：整数。 原方法：ResUtils.getColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ (int) (com.xuexiang.xui.utils.ResUtils.getColor (@<值1>))
+    }
+
+    方法 取颜色_2 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：获取Color值。 参数：context=安卓环境、resId=整数。 返回：整数。 原方法：ResUtils.getColor()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 整数>
+    {
+        @ (int) (com.xuexiang.xui.utils.ResUtils.getColor (@<值1>, @<值2>))
+    }
+
+    方法 取颜色组 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：获取ColorStateList值。 参数：resId=整数。 返回：对象类。 原方法：ResUtils.getColors()">
+    参数 值1 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.ResUtils.getColors (@<值1>)
+    }
+
+    方法 取颜色组_2 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：获取ColorStateList值。 参数：context=安卓环境、resId=整数。 返回：对象类。 原方法：ResUtils.getColors()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.ResUtils.getColors (@<值1>, @<值2>)
+    }
+
+    方法 取尺寸值像素偏移 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：获取dimes值，返回的是【去余取整】的值。 参数：resId=整数。 返回：整数。 原方法：ResUtils.getDimensionPixelOffset()">
+    参数 值1 <类型 = 整数>
+    {
+        @ (int) (com.xuexiang.xui.utils.ResUtils.getDimensionPixelOffset (@<值1>))
+    }
+
+    方法 取尺寸值像素偏移_2 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：获取dimes值，返回的是【去余取整】的值。 参数：context=安卓环境、resId=整数。 返回：整数。 原方法：ResUtils.getDimensionPixelOffset()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 整数>
+    {
+        @ (int) (com.xuexiang.xui.utils.ResUtils.getDimensionPixelOffset (@<值1>, @<值2>))
+    }
+
+    方法 取尺寸值像素大小 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：获取dimes值，返回的是【4舍5入取整】的值。 参数：resId=整数。 返回：整数。 原方法：ResUtils.getDimensionPixelSize()">
+    参数 值1 <类型 = 整数>
+    {
+        @ (int) (com.xuexiang.xui.utils.ResUtils.getDimensionPixelSize (@<值1>))
+    }
+
+    方法 取尺寸值像素大小_2 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：获取dimes值，返回的是【4舍5入取整】的值。 参数：context=安卓环境、resId=整数。 返回：整数。 原方法：ResUtils.getDimensionPixelSize()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 整数>
+    {
+        @ (int) (com.xuexiang.xui.utils.ResUtils.getDimensionPixelSize (@<值1>, @<值2>))
+    }
+
+    方法 取字符串数组 <公开 静态 类型 = "文本型 []" @嵌入式方法 = "" 注释 = "用法：获取字符串的数组。 参数：resId=整数。 返回：无。 原方法：ResUtils.getStringArray()">
+    参数 值1 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.ResUtils.getStringArray (@<值1>)
+    }
+
+    方法 取字符串数组_2 <公开 静态 类型 = "文本型 []" @嵌入式方法 = "" 注释 = "用法：获取字符串的数组。 参数：context=安卓环境、resId=整数。 返回：无。 原方法：ResUtils.getStringArray()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.ResUtils.getStringArray (@<值1>, @<值2>)
+    }
+
+    方法 取字符串列表 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：获取字符串的集合。 参数：context=安卓环境、resId=整数。 返回：对象类。 原方法：ResUtils.getStringList()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.ResUtils.getStringList (@<值1>, @<值2>)
+    }
+
+    方法 取字符串列表_2 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：获取字符串的集合。 参数：context=安卓环境、resId=整数、emptyId=整数。 返回：对象类。 原方法：ResUtils.getStringList()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.ResUtils.getStringList (@<值1>, @<值2>, @<值3>)
+    }
+
+    方法 取图形数组 <公开 静态 类型 = "可绘制对象类 []" @嵌入式方法 = "" 注释 = "用法：获取Drawable的数组。 参数：context=安卓环境、resId=整数。 返回：无。 原方法：ResUtils.getDrawableArray()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.ResUtils.getDrawableArray (@<值1>, @<值2>)
+    }
+
+    方法 取整数数组 <公开 静态 类型 = "整数 []" @嵌入式方法 = "" 注释 = "用法：获取数字的数组。 参数：resId=整数。 返回：无。 原方法：ResUtils.getIntArray()">
+    参数 值1 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.ResUtils.getIntArray (@<值1>)
+    }
+
+    方法 取整数数组_2 <公开 静态 类型 = "整数 []" @嵌入式方法 = "" 注释 = "用法：获取数字的数组。 参数：context=安卓环境、resId=整数。 返回：无。 原方法：ResUtils.getIntArray()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.ResUtils.getIntArray (@<值1>, @<值2>)
+    }
+
+    方法 取动画 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：获取动画。 参数：resId=整数。 返回：对象类。 原方法：ResUtils.getAnim()">
+    参数 值1 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.ResUtils.getAnim (@<值1>)
+    }
+
+    方法 取动画_2 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：获取动画。 参数：context=安卓环境、resId=整数。 返回：对象类。 原方法：ResUtils.getAnim()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.ResUtils.getAnim (@<值1>, @<值2>)
+    }
+
+    方法 是否右到左 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断XUI资源工具是否右到左。 参数：无。 返回：逻辑型。 原方法：ResUtils.isRtl()">
+    {
+        @ com.xuexiang.xui.utils.ResUtils.isRtl ()
+    }
+
+    方法 是否右到左_2 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断XUI资源工具是否右到左_2。 参数：值1=安卓环境。 返回：逻辑型。 原方法：ResUtils.isRtl()">
+    参数 值1 <类型 = 安卓环境>
+    {
+        @ com.xuexiang.xui.utils.ResUtils.isRtl (@<值1>)
+    }
+
+    方法 更深 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：XUI资源工具 的 更深, 行为与 XUI 底层同名方法一致。 参数：值1=整数、值2=小数。 返回：整数。 原方法：ResUtils.darker()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 小数>
+    {
+        @ (int) (com.xuexiang.xui.utils.ResUtils.darker (@<值1>, (float) @<值2>))
+    }
+
+    方法 更浅 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：XUI资源工具 的 更浅, 行为与 XUI 底层同名方法一致。 参数：值1=整数、值2=小数。 返回：整数。 原方法：ResUtils.lighter()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 小数>
+    {
+        @ (int) (com.xuexiang.xui.utils.ResUtils.lighter (@<值1>, (float) @<值2>))
+    }
+}
+
+类 XUI密度工具 <公开 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.utils.DensityUtils)." @文档 = "category = \"XUI.工具\"">
+{
+    方法 取展示度量 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：获取上下文所在的度量信息。 参数：无。 返回：对象类。 原方法：DensityUtils.getDisplayMetrics()">
+    {
+        @ com.xuexiang.xui.utils.DensityUtils.getDisplayMetrics ()
+    }
+
+    方法 取展示度量_2 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：获取上下文所在的度量信息。 参数：context=安卓环境。 返回：对象类。 原方法：DensityUtils.getDisplayMetrics()">
+    参数 值1 <类型 = 安卓环境>
+    {
+        @ com.xuexiang.xui.utils.DensityUtils.getDisplayMetrics (@<值1>)
+    }
+
+    方法 DP转PX <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：根据手机的分辨率从 dp 的单位 转成为 px(像素)。 参数：dpValue=小数。 返回：整数。 原方法：DensityUtils.dp2px()">
+    参数 值1 <类型 = 小数>
+    {
+        @ (int) (com.xuexiang.xui.utils.DensityUtils.dp2px ((float) @<值1>))
+    }
+
+    方法 DP转PX_2 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：根据手机的分辨率从 dp 的单位 转成为 px(像素)。 参数：context=安卓环境、dpValue=小数。 返回：整数。 原方法：DensityUtils.dp2px()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 小数>
+    {
+        @ (int) (com.xuexiang.xui.utils.DensityUtils.dp2px (@<值1>, (float) @<值2>))
+    }
+
+    方法 PX转DP <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：根据手机的分辨率从 px(像素) 的单位 转成为 dp。 参数：pxValue=小数。 返回：整数。 原方法：DensityUtils.px2dp()">
+    参数 值1 <类型 = 小数>
+    {
+        @ (int) (com.xuexiang.xui.utils.DensityUtils.px2dp ((float) @<值1>))
+    }
+
+    方法 PX转DP_2 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：根据手机的分辨率从 px(像素) 的单位 转成为 dp。 参数：context=安卓环境、pxValue=小数。 返回：整数。 原方法：DensityUtils.px2dp()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 小数>
+    {
+        @ (int) (com.xuexiang.xui.utils.DensityUtils.px2dp (@<值1>, (float) @<值2>))
+    }
+
+    方法 PX转SP <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：根据手机的分辨率从 px(像素) 的单位 转成为 sp。 参数：pxValue=小数。 返回：整数。 原方法：DensityUtils.px2sp()">
+    参数 值1 <类型 = 小数>
+    {
+        @ (int) (com.xuexiang.xui.utils.DensityUtils.px2sp ((float) @<值1>))
+    }
+
+    方法 PX转SP_2 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：根据手机的分辨率从 px(像素) 的单位 转成为 sp。 参数：context=安卓环境、pxValue=小数。 返回：整数。 原方法：DensityUtils.px2sp()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 小数>
+    {
+        @ (int) (com.xuexiang.xui.utils.DensityUtils.px2sp (@<值1>, (float) @<值2>))
+    }
+
+    方法 SP转PX <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：根据手机的分辨率从 sp 的单位 转成为 px。 参数：spValue=小数。 返回：整数。 原方法：DensityUtils.sp2px()">
+    参数 值1 <类型 = 小数>
+    {
+        @ (int) (com.xuexiang.xui.utils.DensityUtils.sp2px ((float) @<值1>))
+    }
+
+    方法 SP转PX_2 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：根据手机的分辨率从 sp 的单位 转成为 px。 参数：context=安卓环境、spValue=小数。 返回：整数。 原方法：DensityUtils.sp2px()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 小数>
+    {
+        @ (int) (com.xuexiang.xui.utils.DensityUtils.sp2px (@<值1>, (float) @<值2>))
+    }
+
+    方法 取屏幕DPI <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：获取屏幕分辨率。 参数：无。 返回：整数。 原方法：DensityUtils.getScreenDpi()">
+    {
+        @ (int) (com.xuexiang.xui.utils.DensityUtils.getScreenDpi ())
+    }
+
+    方法 取屏幕DPI_2 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：获取屏幕分辨率。 参数：context=安卓环境。 返回：整数。 原方法：DensityUtils.getScreenDpi()">
+    参数 值1 <类型 = 安卓环境>
+    {
+        @ (int) (com.xuexiang.xui.utils.DensityUtils.getScreenDpi (@<值1>))
+    }
+
+    方法 取真实DPI <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：获取真实屏幕密度。 参数：context=安卓环境。 返回：整数。 原方法：DensityUtils.getRealDpi()">
+    参数 值1 <类型 = 安卓环境>
+    {
+        @ (int) (com.xuexiang.xui.utils.DensityUtils.getRealDpi (@<值1>))
+    }
+
+    方法 取应用大小 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：获取应用窗口的尺寸。 参数：activity=安卓窗口、isReal=真/假。 返回：对象类。 原方法：DensityUtils.getAppSize()">
+    参数 值1 <类型 = 安卓窗口>
+    参数 值2 <类型 = 逻辑型>
+    {
+        @ com.xuexiang.xui.utils.DensityUtils.getAppSize (@<值1>, @<值2>)
+    }
+
+    方法 取屏幕大小 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：获取屏幕的尺寸。 参数：isReal=真/假。 返回：对象类。 原方法：DensityUtils.getScreenSize()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ com.xuexiang.xui.utils.DensityUtils.getScreenSize (@<值1>)
+    }
+
+    方法 取展示大小 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：获取上下文所在的尺寸。 参数：context=安卓环境、isReal=真/假。 返回：对象类。 原方法：DensityUtils.getDisplaySize()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 逻辑型>
+    {
+        @ com.xuexiang.xui.utils.DensityUtils.getDisplaySize (@<值1>, @<值2>)
+    }
+
+    方法 取展示宽度 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：获取上下文所在的宽度。 参数：context=安卓环境、isReal=真/假。 返回：整数。 原方法：DensityUtils.getDisplayWidth()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 逻辑型>
+    {
+        @ (int) (com.xuexiang.xui.utils.DensityUtils.getDisplayWidth (@<值1>, @<值2>))
+    }
+
+    方法 取展示高度 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：获取上下文所在的高度。 参数：context=安卓环境、isReal=真/假。 返回：整数。 原方法：DensityUtils.getDisplayHeight()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 逻辑型>
+    {
+        @ (int) (com.xuexiang.xui.utils.DensityUtils.getDisplayHeight (@<值1>, @<值2>))
+    }
+
+    方法 取应用度量 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：获取应用窗口的度量信息。 参数：activity=安卓窗口、isReal=真/假。 返回：对象类。 原方法：DensityUtils.getAppMetrics()">
+    参数 值1 <类型 = 安卓窗口>
+    参数 值2 <类型 = 逻辑型>
+    {
+        @ com.xuexiang.xui.utils.DensityUtils.getAppMetrics (@<值1>, @<值2>)
+    }
+
+    方法 取屏幕度量 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：获取屏幕的度量信息。 参数：isReal=真/假。 返回：对象类。 原方法：DensityUtils.getScreenMetrics()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ com.xuexiang.xui.utils.DensityUtils.getScreenMetrics (@<值1>)
+    }
+
+    方法 取展示度量_3 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：获取上下文所在的度量信息。 参数：context=安卓环境、isReal=真/假。 返回：对象类。 原方法：DensityUtils.getDisplayMetrics()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 逻辑型>
+    {
+        @ com.xuexiang.xui.utils.DensityUtils.getDisplayMetrics (@<值1>, @<值2>)
+    }
+
+    方法 是否导航条存在 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：底部导航条是否开启。 参数：context=安卓环境。 返回：逻辑型。 原方法：DensityUtils.isNavigationBarExist()">
+    参数 值1 <类型 = 安卓环境>
+    {
+        @ com.xuexiang.xui.utils.DensityUtils.isNavigationBarExist (@<值1>)
+    }
+
+    方法 取导航条高度 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：获取系统底部导航栏的高度。 参数：context=安卓环境。 返回：整数。 原方法：DensityUtils.getNavigationBarHeight()">
+    参数 值1 <类型 = 安卓环境>
+    {
+        @ (int) (com.xuexiang.xui.utils.DensityUtils.getNavigationBarHeight (@<值1>))
+    }
+}
+
+类 XUI颜色工具 <公开 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.utils.ColorUtils)." @文档 = "category = \"XUI.工具\"">
+{
+    方法 设置颜色透明度 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：颜色辅助工具。 参数：color=整数、alpha=小数。 返回：整数。 原方法：ColorUtils.setColorAlpha()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 小数>
+    {
+        @ (int) (com.xuexiang.xui.utils.ColorUtils.setColorAlpha (@<值1>, (float) @<值2>))
+    }
+
+    方法 设置颜色透明度_2 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：设置颜色的alpha值。 参数：color=整数、alpha=小数、override=真/假。 返回：整数。 原方法：ColorUtils.setColorAlpha()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 小数>
+    参数 值3 <类型 = 逻辑型>
+    {
+        @ (int) (com.xuexiang.xui.utils.ColorUtils.setColorAlpha (@<值1>, (float) @<值2>, @<值3>))
+    }
+
+    方法 计算颜色 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：根据比例，在两个color值之间计算出一个color值。 参数：fromColor=整数、toColor=整数、fraction=小数。 返回：整数。 原方法：ColorUtils.computeColor()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 小数>
+    {
+        @ (int) (com.xuexiang.xui.utils.ColorUtils.computeColor (@<值1>, @<值2>, (float) @<值3>))
+    }
+
+    方法 颜色到字符串 <公开 静态 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：将 color 颜色值转换为十六进制字符串。 参数：color=整数。 返回：文本型。 原方法：ColorUtils.colorToString()">
+    参数 值1 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.ColorUtils.colorToString (@<值1>)
+    }
+
+    方法 更深 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：加深颜色。 参数：color=整数。 返回：整数。 原方法：ColorUtils.darker()">
+    参数 值1 <类型 = 整数>
+    {
+        @ (int) (com.xuexiang.xui.utils.ColorUtils.darker (@<值1>))
+    }
+
+    方法 更深_2 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：加深颜色。 参数：color=整数、factor=小数。 返回：整数。 原方法：ColorUtils.darker()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 小数>
+    {
+        @ (int) (com.xuexiang.xui.utils.ColorUtils.darker (@<值1>, (float) @<值2>))
+    }
+
+    方法 更浅 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：变浅颜色。 参数：color=整数。 返回：整数。 原方法：ColorUtils.lighter()">
+    参数 值1 <类型 = 整数>
+    {
+        @ (int) (com.xuexiang.xui.utils.ColorUtils.lighter (@<值1>))
+    }
+
+    方法 更浅_2 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：变浅颜色。 参数：color=整数、factor=小数。 返回：整数。 原方法：ColorUtils.lighter()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 小数>
+    {
+        @ (int) (com.xuexiang.xui.utils.ColorUtils.lighter (@<值1>, (float) @<值2>))
+    }
+
+    方法 是否颜色深色 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：是否是深色的颜色。 参数：color=整数。 返回：逻辑型。 原方法：ColorUtils.isColorDark()">
+    参数 值1 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.ColorUtils.isColorDark (@<值1>)
+    }
+
+    方法 是否颜色深色_2 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：是否是深色的颜色。 参数：color=整数、factor=小数。 返回：逻辑型。 原方法：ColorUtils.isColorDark()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 小数>
+    {
+        @ com.xuexiang.xui.utils.ColorUtils.isColorDark (@<值1>, @<值2>)
+    }
+
+    方法 取随机颜色 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI颜色工具的随机颜色。 参数：无。 返回：整数。 原方法：ColorUtils.getRandomColor()">
+    {
+        @ (int) (com.xuexiang.xui.utils.ColorUtils.getRandomColor ())
+    }
+}
+
+类 XUI设备工具 <公开 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.utils.DeviceUtils)." @文档 = "category = \"XUI.工具\"">
+{
+    方法 是否平板 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断是否为平板设备。 参数：context=安卓环境。 返回：逻辑型。 原方法：DeviceUtils.isTablet()">
+    参数 值1 <类型 = 安卓环境>
+    {
+        @ com.xuexiang.xui.utils.DeviceUtils.isTablet (@<值1>)
+    }
+
+    方法 是否Flyme <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断是否是flyme系统。 参数：无。 返回：逻辑型。 原方法：DeviceUtils.isFlyme()">
+    {
+        @ com.xuexiang.xui.utils.DeviceUtils.isFlyme ()
+    }
+
+    方法 是否MIUI <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断是否是MIUI系统。 参数：无。 返回：逻辑型。 原方法：DeviceUtils.isMIUI()">
+    {
+        @ com.xuexiang.xui.utils.DeviceUtils.isMIUI ()
+    }
+
+    方法 是否MIUI版5 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断XUI设备工具是否MIUI版5。 参数：无。 返回：逻辑型。 原方法：DeviceUtils.isMIUIV5()">
+    {
+        @ com.xuexiang.xui.utils.DeviceUtils.isMIUIV5 ()
+    }
+
+    方法 是否MIUI版6 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断XUI设备工具是否MIUI版6。 参数：无。 返回：逻辑型。 原方法：DeviceUtils.isMIUIV6()">
+    {
+        @ com.xuexiang.xui.utils.DeviceUtils.isMIUIV6 ()
+    }
+
+    方法 是否MIUI版7 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断XUI设备工具是否MIUI版7。 参数：无。 返回：逻辑型。 原方法：DeviceUtils.isMIUIV7()">
+    {
+        @ com.xuexiang.xui.utils.DeviceUtils.isMIUIV7 ()
+    }
+
+    方法 是否MIUI版8 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断XUI设备工具是否MIUI版8。 参数：无。 返回：逻辑型。 原方法：DeviceUtils.isMIUIV8()">
+    {
+        @ com.xuexiang.xui.utils.DeviceUtils.isMIUIV8 ()
+    }
+
+    方法 是否MIUI版9 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断XUI设备工具是否MIUI版9。 参数：无。 返回：逻辑型。 原方法：DeviceUtils.isMIUIV9()">
+    {
+        @ com.xuexiang.xui.utils.DeviceUtils.isMIUIV9 ()
+    }
+
+    方法 是否Flyme版本更高5_2_4 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断XUI设备工具是否Flyme版本更高5_2_4。 参数：无。 返回：逻辑型。 原方法：DeviceUtils.isFlymeVersionHigher5_2_4()">
+    {
+        @ com.xuexiang.xui.utils.DeviceUtils.isFlymeVersionHigher5_2_4 ()
+    }
+
+    方法 是否魅族 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断XUI设备工具是否魅族。 参数：无。 返回：逻辑型。 原方法：DeviceUtils.isMeizu()">
+    {
+        @ com.xuexiang.xui.utils.DeviceUtils.isMeizu ()
+    }
+
+    方法 是否小米 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断是否为小米。 参数：无。 返回：逻辑型。 原方法：DeviceUtils.isXiaomi()">
+    {
+        @ com.xuexiang.xui.utils.DeviceUtils.isXiaomi ()
+    }
+
+    方法 是否维沃 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断XUI设备工具是否维沃。 参数：无。 返回：逻辑型。 原方法：DeviceUtils.isVivo()">
+    {
+        @ com.xuexiang.xui.utils.DeviceUtils.isVivo ()
+    }
+
+    方法 是否OPPO <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断XUI设备工具是否OPPO。 参数：无。 返回：逻辑型。 原方法：DeviceUtils.isOppo()">
+    {
+        @ com.xuexiang.xui.utils.DeviceUtils.isOppo ()
+    }
+
+    方法 是否华为 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断XUI设备工具是否华为。 参数：无。 返回：逻辑型。 原方法：DeviceUtils.isHuawei()">
+    {
+        @ com.xuexiang.xui.utils.DeviceUtils.isHuawei ()
+    }
+
+    方法 是否必要手机 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断XUI设备工具是否必要手机。 参数：无。 返回：逻辑型。 原方法：DeviceUtils.isEssentialPhone()">
+    {
+        @ com.xuexiang.xui.utils.DeviceUtils.isEssentialPhone ()
+    }
+
+    方法 是否ZUKZ1 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断是否为 ZUK Z1 和 ZTK C2016。 参数：无。 返回：逻辑型。 原方法：DeviceUtils.isZUKZ1()">
+    {
+        @ com.xuexiang.xui.utils.DeviceUtils.isZUKZ1 ()
+    }
+
+    方法 是否中控2016 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断XUI设备工具是否中控2016。 参数：无。 返回：逻辑型。 原方法：DeviceUtils.isZTKC2016()">
+    {
+        @ com.xuexiang.xui.utils.DeviceUtils.isZTKC2016 ()
+    }
+
+    方法 是否浮点窗口操作已允许 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断悬浮窗权限（目前主要用户魅族与小米的检测）。 参数：context=安卓环境。 返回：逻辑型。 原方法：DeviceUtils.isFloatWindowOpAllowed()">
+    参数 值1 <类型 = 安卓环境>
+    {
+        @ com.xuexiang.xui.utils.DeviceUtils.isFloatWindowOpAllowed (@<值1>)
+    }
+}
+
+类 XUI键盘工具 <公开 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.utils.KeyboardUtils)." @文档 = "category = \"XUI.工具\"">
+{
+    方法 添加键盘切换监听器 <公开 静态 @嵌入式方法 = "" 注释 = "用法：向XUI键盘工具添加键盘切换监听器。 参数：值1=安卓窗口、值2=对象。 返回：无。 原方法：KeyboardUtils.addKeyboardToggleListener()">
+    参数 值1 <类型 = 安卓窗口>
+    参数 值2 <类型 = 对象类>
+    {
+        @ com.xuexiang.xui.utils.KeyboardUtils.addKeyboardToggleListener (@<值1>, (com.xuexiang.xui.utils.KeyboardUtils$SoftKeyboardToggleListener) @<值2>);
+    }
+
+    方法 添加键盘切换监听器_2 <公开 静态 @嵌入式方法 = "" 注释 = "用法：向XUI键盘工具添加键盘切换监听器_2。 参数：值1=窗口组件、值2=对象。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 对象类>
+    {
+        @ com.xuexiang.xui.utils.KeyboardUtils.addKeyboardToggleListener ((android.view.View) @<值1>.GetView (), (com.xuexiang.xui.utils.KeyboardUtils$SoftKeyboardToggleListener) @<值2>);
+    }
+
+    方法 移除键盘切换监听器 <公开 静态 @嵌入式方法 = "" 注释 = "用法：从XUI键盘工具移除键盘切换监听器。 参数：值1=对象。 返回：无。 原方法：KeyboardUtils.removeKeyboardToggleListener()">
+    参数 值1 <类型 = 对象类>
+    {
+        @ com.xuexiang.xui.utils.KeyboardUtils.removeKeyboardToggleListener ((com.xuexiang.xui.utils.KeyboardUtils$SoftKeyboardToggleListener) @<值1>);
+    }
+
+    方法 移除全部键盘切换监听器组 <公开 静态 @嵌入式方法 = "" 注释 = "用法：从XUI键盘工具移除全部键盘切换监听器组。 参数：无。 返回：无。 原方法：KeyboardUtils.removeAllKeyboardToggleListeners()">
+    {
+        @ com.xuexiang.xui.utils.KeyboardUtils.removeAllKeyboardToggleListeners ();
+    }
+
+    方法 切换键盘可见性 <公开 静态 @嵌入式方法 = "" 注释 = "用法：切换XUI键盘工具的键盘可见性状态。 参数：值1=安卓环境。 返回：无。 原方法：KeyboardUtils.toggleKeyboardVisibility()">
+    参数 值1 <类型 = 安卓环境>
+    {
+        @ com.xuexiang.xui.utils.KeyboardUtils.toggleKeyboardVisibility (@<值1>);
+    }
+
+    方法 强制关闭键盘 <公开 静态 @嵌入式方法 = "" 注释 = "用法：调用XUI键盘工具的强制关闭键盘。 参数：值1=窗口组件。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    {
+        @ com.xuexiang.xui.utils.KeyboardUtils.forceCloseKeyboard ((android.view.View) @<值1>.GetView ());
+    }
+
+    方法 设置软输入调整无内容 <公开 静态 @嵌入式方法 = "" 注释 = "用法：把XUI键盘工具的软输入调整无内容设为给定值。 参数：值1=安卓窗口。 返回：无。 原方法：KeyboardUtils.setSoftInputAdjustNothing()">
+    参数 值1 <类型 = 安卓窗口>
+    {
+        @ com.xuexiang.xui.utils.KeyboardUtils.setSoftInputAdjustNothing (@<值1>);
+    }
+
+    方法 设置软输入调整重设尺寸 <公开 静态 @嵌入式方法 = "" 注释 = "用法：把XUI键盘工具的软输入调整重设尺寸设为给定值。 参数：值1=安卓窗口。 返回：无。 原方法：KeyboardUtils.setSoftInputAdjustResize()">
+    参数 值1 <类型 = 安卓窗口>
+    {
+        @ com.xuexiang.xui.utils.KeyboardUtils.setSoftInputAdjustResize (@<值1>);
+    }
+
+    方法 设置软输入调整平移 <公开 静态 @嵌入式方法 = "" 注释 = "用法：把XUI键盘工具的软输入调整平移设为给定值。 参数：值1=安卓窗口。 返回：无。 原方法：KeyboardUtils.setSoftInputAdjustPan()">
+    参数 值1 <类型 = 安卓窗口>
+    {
+        @ com.xuexiang.xui.utils.KeyboardUtils.setSoftInputAdjustPan (@<值1>);
+    }
+
+    方法 是否软输入显示 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断XUI键盘工具是否软输入显示。 参数：值1=安卓窗口。 返回：逻辑型。 原方法：KeyboardUtils.isSoftInputShow()">
+    参数 值1 <类型 = 安卓窗口>
+    {
+        @ com.xuexiang.xui.utils.KeyboardUtils.isSoftInputShow (@<值1>)
+    }
+
+    方法 是否软输入显示_2 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断XUI键盘工具是否软输入显示_2。 参数：值1=窗口组件。 返回：逻辑型。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    {
+        @ com.xuexiang.xui.utils.KeyboardUtils.isSoftInputShow ((android.view.Window) @<值1>.GetView ())
+    }
+
+    方法 是否软输入显示_3 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断XUI键盘工具是否软输入显示_3。 参数：值1=窗口组件。 返回：逻辑型。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    {
+        @ com.xuexiang.xui.utils.KeyboardUtils.isSoftInputShow ((android.view.View) @<值1>.GetView ())
+    }
+
+    方法 响应禁用后退键按下 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：XUI键盘工具在禁用后退键按下时被 XUI 回调, 通常配合 挂接事件 使用。 参数：值1=整数。 返回：逻辑型。 原方法：KeyboardUtils.onDisableBackKeyDown()">
+    参数 值1 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.KeyboardUtils.onDisableBackKeyDown (@<值1>)
+    }
+
+    方法 派发触摸事件 <公开 静态 @嵌入式方法 = "" 注释 = "用法：把事件派发给XUI键盘工具。 参数：值1=窗口组件、值2=安卓窗口。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 安卓窗口>
+    {
+        @ com.xuexiang.xui.utils.KeyboardUtils.dispatchTouchEvent ((android.view.MotionEvent) @<值1>.GetView (), @<值2>);
+    }
+
+    方法 派发触摸事件_2 <公开 静态 @嵌入式方法 = "" 注释 = "用法：把事件派发给XUI键盘工具。 参数：值1=窗口组件、值2=对象。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 对象类>
+    {
+        @ com.xuexiang.xui.utils.KeyboardUtils.dispatchTouchEvent ((android.view.MotionEvent) @<值1>.GetView (), (android.app.Dialog) @<值2>);
+    }
+
+    方法 派发触摸事件_3 <公开 静态 @嵌入式方法 = "" 注释 = "用法：把事件派发给XUI键盘工具。 参数：值1=窗口组件、值2=窗口组件。 返回：无。 原方法：@<值2>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 窗口组件>
+    {
+        @ com.xuexiang.xui.utils.KeyboardUtils.dispatchTouchEvent ((android.view.MotionEvent) @<值1>.GetView (), (android.view.Window) @<值2>.GetView ());
+    }
+
+    方法 是否应当隐藏键盘 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断XUI键盘工具是否应当隐藏键盘。 参数：值1=窗口组件、值2=窗口组件。 返回：逻辑型。 原方法：@<值2>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 窗口组件>
+    {
+        @ com.xuexiang.xui.utils.KeyboardUtils.isShouldHideKeyboard ((android.view.View) @<值1>.GetView (), (android.view.MotionEvent) @<值2>.GetView ())
+    }
+
+    方法 是否应当隐藏键盘_2 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断XUI键盘工具是否应当隐藏键盘_2。 参数：值1=窗口组件、值2=窗口组件。 返回：逻辑型。 原方法：@<值2>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 窗口组件>
+    {
+        @ com.xuexiang.xui.utils.KeyboardUtils.isShouldHideKeyboard ((android.view.Window) @<值1>.GetView (), (android.view.MotionEvent) @<值2>.GetView ())
+    }
+
+    方法 隐藏软输入 <公开 静态 @嵌入式方法 = "" 注释 = "用法：让XUI键盘工具不再显示。 参数：值1=窗口组件。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    {
+        @ com.xuexiang.xui.utils.KeyboardUtils.hideSoftInput ((android.view.View) @<值1>.GetView ());
+    }
+
+    方法 隐藏软输入_2 <公开 静态 @嵌入式方法 = "" 注释 = "用法：让XUI键盘工具不再显示。 参数：值1=对象。 返回：无。 原方法：KeyboardUtils.hideSoftInput()">
+    参数 值1 <类型 = 对象类>
+    {
+        @ com.xuexiang.xui.utils.KeyboardUtils.hideSoftInput ((android.content.DialogInterface) @<值1>);
+    }
+
+    方法 隐藏软输入_3 <公开 静态 @嵌入式方法 = "" 注释 = "用法：让XUI键盘工具不再显示。 参数：值1=对象。 返回：无。 原方法：KeyboardUtils.hideSoftInput()">
+    参数 值1 <类型 = 对象类>
+    {
+        @ com.xuexiang.xui.utils.KeyboardUtils.hideSoftInput ((android.app.Dialog) @<值1>);
+    }
+
+    方法 隐藏软输入清空焦点 <公开 静态 @嵌入式方法 = "" 注释 = "用法：让XUI键盘工具不再显示。 参数：值1=窗口组件。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    {
+        @ com.xuexiang.xui.utils.KeyboardUtils.hideSoftInputClearFocus ((android.view.View) @<值1>.GetView ());
+    }
+
+    方法 切换软输入 <公开 静态 @嵌入式方法 = "" 注释 = "用法：切换XUI键盘工具的软输入状态。 参数：无。 返回：无。 原方法：KeyboardUtils.toggleSoftInput()">
+    {
+        @ com.xuexiang.xui.utils.KeyboardUtils.toggleSoftInput ();
+    }
+
+    方法 显示软输入强制 <公开 静态 @嵌入式方法 = "" 注释 = "用法：让XUI键盘工具显示出来。 参数：值1=安卓窗口。 返回：无。 原方法：KeyboardUtils.showSoftInputForce()">
+    参数 值1 <类型 = 安卓窗口>
+    {
+        @ com.xuexiang.xui.utils.KeyboardUtils.showSoftInputForce (@<值1>);
+    }
+
+    方法 显示软输入 <公开 静态 @嵌入式方法 = "" 注释 = "用法：让XUI键盘工具显示出来。 参数：值1=窗口组件。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    {
+        @ com.xuexiang.xui.utils.KeyboardUtils.showSoftInput ((android.view.View) @<值1>.GetView ());
+    }
+
+    方法 校正软输入泄漏 <公开 静态 @嵌入式方法 = "" 注释 = "用法：调用XUI键盘工具的校正软输入泄漏。 参数：值1=安卓环境。 返回：无。 原方法：KeyboardUtils.fixSoftInputLeaks()">
+    参数 值1 <类型 = 安卓环境>
+    {
+        @ com.xuexiang.xui.utils.KeyboardUtils.fixSoftInputLeaks (@<值1>);
+    }
+}
+
+类 XUI状态栏工具 <公开 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.utils.StatusBarUtils)." @文档 = "category = \"XUI.工具\"">
+{
+    方法 半透明 <公开 静态 @嵌入式方法 = "" 注释 = "用法：状态栏工具。 参数：activity=安卓窗口。 返回：无。 原方法：StatusBarUtils.translucent()">
+    参数 值1 <类型 = 安卓窗口>
+    {
+        @ com.xuexiang.xui.utils.StatusBarUtils.translucent (@<值1>);
+    }
+
+    方法 半透明_2 <公开 静态 @嵌入式方法 = "" 注释 = "用法：调用XUI状态栏工具的半透明_2。 参数：值1=窗口组件。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    {
+        @ com.xuexiang.xui.utils.StatusBarUtils.translucent ((android.view.Window) @<值1>.GetView ());
+    }
+
+    方法 初始化状态条样式 <公开 静态 @嵌入式方法 = "" 注释 = "用法：设置沉浸式状态栏样式。 参数：activity=安卓窗口、isDark=真/假。 返回：无。 原方法：StatusBarUtils.initStatusBarStyle()">
+    参数 值1 <类型 = 安卓窗口>
+    参数 值2 <类型 = 逻辑型>
+    {
+        @ com.xuexiang.xui.utils.StatusBarUtils.initStatusBarStyle (@<值1>, @<值2>);
+    }
+
+    方法 初始化状态条样式_2 <公开 静态 @嵌入式方法 = "" 注释 = "用法：设置沉浸式状态栏样式。 参数：activity=安卓窗口、isDark=真/假、colorOn5x=整数。 返回：无。 原方法：StatusBarUtils.initStatusBarStyle()">
+    参数 值1 <类型 = 安卓窗口>
+    参数 值2 <类型 = 逻辑型>
+    参数 值3 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.StatusBarUtils.initStatusBarStyle (@<值1>, @<值2>, @<值3>);
+    }
+
+    方法 半透明_3 <公开 静态 @嵌入式方法 = "" 注释 = "用法：沉浸式状态栏。 参数：activity=安卓窗口、colorOn5x=整数。 返回：无。 原方法：StatusBarUtils.translucent()">
+    参数 值1 <类型 = 安卓窗口>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.StatusBarUtils.translucent (@<值1>, @<值2>);
+    }
+
+    方法 半透明_4 <公开 静态 @嵌入式方法 = "" 注释 = "用法：调用XUI状态栏工具的半透明_4。 参数：值1=窗口组件、值2=整数。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.StatusBarUtils.translucent ((android.view.Window) @<值1>.GetView (), @<值2>);
+    }
+
+    方法 是否刘海屏官方支持 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断XUI状态栏工具是否刘海屏官方支持。 参数：无。 返回：逻辑型。 原方法：StatusBarUtils.isNotchOfficialSupport()">
+    {
+        @ com.xuexiang.xui.utils.StatusBarUtils.isNotchOfficialSupport ()
+    }
+
+    方法 设置状态条浅色模式 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：设置状态栏黑色字体图标，。 参数：activity=安卓窗口。 返回：逻辑型。 原方法：StatusBarUtils.setStatusBarLightMode()">
+    参数 值1 <类型 = 安卓窗口>
+    {
+        @ com.xuexiang.xui.utils.StatusBarUtils.setStatusBarLightMode (@<值1>)
+    }
+
+    方法 设置状态条深色模式 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：设置状态栏白色字体图标。 参数：activity=安卓窗口。 返回：逻辑型。 原方法：StatusBarUtils.setStatusBarDarkMode()">
+    参数 值1 <类型 = 安卓窗口>
+    {
+        @ com.xuexiang.xui.utils.StatusBarUtils.setStatusBarDarkMode (@<值1>)
+    }
+
+    方法 保留系统界面标志位 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：XUI状态栏工具 的 保留系统界面标志位, 行为与 XUI 底层同名方法一致。 参数：值1=窗口组件、值2=整数、值3=整数。 返回：整数。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    {
+        @ (int) (com.xuexiang.xui.utils.StatusBarUtils.retainSystemUiFlag ((android.view.Window) @<值1>.GetView (), @<值2>, @<值3>))
+    }
+
+    方法 MIUI设置状态条浅色模式 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：XUI状态栏工具 的 MIUI设置状态条浅色模式, 行为与 XUI 底层同名方法一致。 参数：值1=窗口组件、值2=真/假。 返回：逻辑型。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 逻辑型>
+    {
+        @ com.xuexiang.xui.utils.StatusBarUtils.MIUISetStatusBarLightMode ((android.view.Window) @<值1>.GetView (), @<值2>)
+    }
+
+    方法 Flyme设置状态条浅色模式 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：XUI状态栏工具 的 Flyme设置状态条浅色模式, 行为与 XUI 底层同名方法一致。 参数：值1=窗口组件、值2=真/假。 返回：逻辑型。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 逻辑型>
+    {
+        @ com.xuexiang.xui.utils.StatusBarUtils.FlymeSetStatusBarLightMode ((android.view.Window) @<值1>.GetView (), @<值2>)
+    }
+
+    方法 是否完整屏幕 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：获取是否全屏。 参数：activity=安卓窗口。 返回：逻辑型。 原方法：StatusBarUtils.isFullScreen()">
+    参数 值1 <类型 = 安卓窗口>
+    {
+        @ com.xuexiang.xui.utils.StatusBarUtils.isFullScreen (@<值1>)
+    }
+
+    方法 取状态条API透明值 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：API19之前透明状态栏：获取设置透明状态栏的system ui visibility的值，这是部分有提供接口的rom使用的。 参数：context=安卓环境。 返回：对象类。 原方法：StatusBarUtils.getStatusBarAPITransparentValue()">
+    参数 值1 <类型 = 安卓环境>
+    {
+        @ com.xuexiang.xui.utils.StatusBarUtils.getStatusBarAPITransparentValue (@<值1>)
+    }
+
+    方法 支持半透明状态条6 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：检测 Android 6.0 是否可以启用 window.setStatusBarColor(Color.TRANSPARENT)。 参数：无。 返回：逻辑型。 原方法：StatusBarUtils.supportTransclentStatusBar6()">
+    {
+        @ com.xuexiang.xui.utils.StatusBarUtils.supportTransclentStatusBar6 ()
+    }
+
+    方法 取状态条高度 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：获取状态栏的高度。 参数：context=安卓环境。 返回：整数。 原方法：StatusBarUtils.getStatusBarHeight()">
+    参数 值1 <类型 = 安卓环境>
+    {
+        @ (int) (com.xuexiang.xui.utils.StatusBarUtils.getStatusBarHeight (@<值1>))
+    }
+
+    方法 设置虚拟密度 <公开 静态 @嵌入式方法 = "" 注释 = "用法：把XUI状态栏工具的虚拟密度设为给定值。 参数：值1=小数。 返回：无。 原方法：StatusBarUtils.setVirtualDensity()">
+    参数 值1 <类型 = 小数>
+    {
+        @ com.xuexiang.xui.utils.StatusBarUtils.setVirtualDensity ((float) @<值1>);
+    }
+
+    方法 设置虚拟密度DPI <公开 静态 @嵌入式方法 = "" 注释 = "用法：把XUI状态栏工具的虚拟密度DPI设为给定值。 参数：值1=小数。 返回：无。 原方法：StatusBarUtils.setVirtualDensityDpi()">
+    参数 值1 <类型 = 小数>
+    {
+        @ com.xuexiang.xui.utils.StatusBarUtils.setVirtualDensityDpi ((float) @<值1>);
+    }
+
+    方法 全屏 <公开 静态 @嵌入式方法 = "" 注释 = "用法：全屏。 参数：activity=安卓窗口。 返回：无。 原方法：StatusBarUtils.fullScreen()">
+    参数 值1 <类型 = 安卓窗口>
+    {
+        @ com.xuexiang.xui.utils.StatusBarUtils.fullScreen (@<值1>);
+    }
+
+    方法 全屏_2 <公开 静态 @嵌入式方法 = "" 注释 = "用法：调用XUI状态栏工具的全屏_2。 参数：值1=窗口组件。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    {
+        @ com.xuexiang.xui.utils.StatusBarUtils.fullScreen ((android.view.Window) @<值1>.GetView ());
+    }
+
+    方法 取消完整屏幕 <公开 静态 @嵌入式方法 = "" 注释 = "用法：取消全屏。 参数：activity=安卓窗口、statusBarColor=整数、navigationBarColor=整数。 返回：无。 原方法：StatusBarUtils.cancelFullScreen()">
+    参数 值1 <类型 = 安卓窗口>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.StatusBarUtils.cancelFullScreen (@<值1>, @<值2>, @<值3>);
+    }
+
+    方法 取消完整屏幕_2 <公开 静态 @嵌入式方法 = "" 注释 = "用法：取消XUI状态栏工具当前动作。 参数：值1=窗口组件、值2=整数、值3=整数。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.StatusBarUtils.cancelFullScreen ((android.view.Window) @<值1>.GetView (), @<值2>, @<值3>);
+    }
+
+    方法 取消完整屏幕_3 <公开 静态 @嵌入式方法 = "" 注释 = "用法：取消全屏。 参数：activity=安卓窗口。 返回：无。 原方法：StatusBarUtils.cancelFullScreen()">
+    参数 值1 <类型 = 安卓窗口>
+    {
+        @ com.xuexiang.xui.utils.StatusBarUtils.cancelFullScreen (@<值1>);
+    }
+
+    方法 取消完整屏幕_4 <公开 静态 @嵌入式方法 = "" 注释 = "用法：取消XUI状态栏工具当前动作。 参数：值1=窗口组件。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    {
+        @ com.xuexiang.xui.utils.StatusBarUtils.cancelFullScreen ((android.view.Window) @<值1>.GetView ());
+    }
+
+    方法 设置导航条颜色 <公开 静态 @嵌入式方法 = "" 注释 = "用法：设置底部导航条的颜色。 参数：activity=安卓窗口、color=整数。 返回：无。 原方法：StatusBarUtils.setNavigationBarColor()">
+    参数 值1 <类型 = 安卓窗口>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.StatusBarUtils.setNavigationBarColor (@<值1>, @<值2>);
+    }
+
+    方法 取导航条高度 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：获取底部导航条的高度。 参数：context=安卓环境。 返回：整数。 原方法：StatusBarUtils.getNavigationBarHeight()">
+    参数 值1 <类型 = 安卓环境>
+    {
+        @ (int) (com.xuexiang.xui.utils.StatusBarUtils.getNavigationBarHeight (@<值1>))
+    }
+
+    方法 是否导航条存在 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：底部导航条是否显示。 参数：activity=安卓窗口。 返回：逻辑型。 原方法：StatusBarUtils.isNavigationBarExist()">
+    参数 值1 <类型 = 安卓窗口>
+    {
+        @ com.xuexiang.xui.utils.StatusBarUtils.isNavigationBarExist (@<值1>)
+    }
+
+    方法 显示对话框内完整屏幕 <公开 静态 @嵌入式方法 = "" 注释 = "用法：全屏下显示弹窗。 参数：dialog=对象。 返回：无。 原方法：StatusBarUtils.showDialogInFullScreen()">
+    参数 值1 <类型 = 对象类>
+    {
+        @ com.xuexiang.xui.utils.StatusBarUtils.showDialogInFullScreen ((android.app.Dialog) @<值1>);
+    }
+
+    方法 显示窗口内完整屏幕 <公开 静态 @嵌入式方法 = "" 注释 = "用法：让XUI状态栏工具显示出来。 参数：值1=窗口组件、值2=对象。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 对象类>
+    {
+        @ com.xuexiang.xui.utils.StatusBarUtils.showWindowInFullScreen ((android.view.Window) @<值1>.GetView (), (com.xuexiang.xui.utils.StatusBarUtils$IWindowShower) @<值2>);
+    }
+
+    方法 显示对话框 <公开 静态 @嵌入式方法 = "" 注释 = "用法：显示窗口【同步窗口系统view的可见度, 解决全屏下显示窗口导致界面退出全屏的问题】。 参数：activity=安卓窗口、dialog=对象。 返回：无。 原方法：StatusBarUtils.showDialog()">
+    参数 值1 <类型 = 安卓窗口>
+    参数 值2 <类型 = 对象类>
+    {
+        @ com.xuexiang.xui.utils.StatusBarUtils.showDialog (@<值1>, (android.app.Dialog) @<值2>);
+    }
+
+    方法 显示窗口 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：让XUI状态栏工具显示出来。 参数：值1=安卓窗口、值2=窗口组件、值3=对象。 返回：逻辑型。 原方法：@<值2>.GetView()">
+    参数 值1 <类型 = 安卓窗口>
+    参数 值2 <类型 = 窗口组件>
+    参数 值3 <类型 = 对象类>
+    {
+        @ com.xuexiang.xui.utils.StatusBarUtils.showWindow (@<值1>, (android.view.Window) @<值2>.GetView (), (com.xuexiang.xui.utils.StatusBarUtils$IWindowShower) @<值3>)
+    }
+
+    方法 同步系统界面可见性 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：XUI状态栏工具 的 同步系统界面可见性, 行为与 XUI 底层同名方法一致。 参数：值1=安卓窗口、值2=窗口组件。 返回：逻辑型。 原方法：@<值2>.GetView()">
+    参数 值1 <类型 = 安卓窗口>
+    参数 值2 <类型 = 窗口组件>
+    {
+        @ com.xuexiang.xui.utils.StatusBarUtils.syncSystemUiVisibility (@<值1>, (android.view.Window) @<值2>.GetView ())
+    }
+
+    方法 同步系统界面可见性_2 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：XUI状态栏工具 的 同步系统界面可见性_2, 行为与 XUI 底层同名方法一致。 参数：值1=窗口组件、值2=窗口组件。 返回：逻辑型。 原方法：@<值2>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 窗口组件>
+    {
+        @ com.xuexiang.xui.utils.StatusBarUtils.syncSystemUiVisibility ((android.view.Window) @<值1>.GetView (), (android.view.Window) @<值2>.GetView ())
+    }
+}
+
+类 XUI吐司工具 <公开 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.utils.XToastUtils)." @文档 = "category = \"XUI.工具\"">
+{
+    方法 轻提示 <公开 静态 @嵌入式方法 = "" 注释 = "用法：xtoast 工具类。 参数：message=文本。 返回：无。 原方法：XToastUtils.toast()">
+    参数 值1 <类型 = 文本型>
+    {
+        @ com.xuexiang.xui.utils.XToastUtils.toast (@<值1>);
+    }
+
+    方法 轻提示_2 <公开 静态 @嵌入式方法 = "" 注释 = "用法：xtoast 工具类。 参数：message=整数。 返回：无。 原方法：XToastUtils.toast()">
+    参数 值1 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.XToastUtils.toast (@<值1>);
+    }
+
+    方法 轻提示_3 <公开 静态 @嵌入式方法 = "" 注释 = "用法：xtoast 工具类。 参数：message=文本、值2=整数。 返回：无。 原方法：XToastUtils.toast()">
+    参数 值1 <类型 = 文本型>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.XToastUtils.toast (@<值1>, @<值2>);
+    }
+
+    方法 轻提示_4 <公开 静态 @嵌入式方法 = "" 注释 = "用法：xtoast 工具类。 参数：message=整数、值2=整数。 返回：无。 原方法：XToastUtils.toast()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.XToastUtils.toast (@<值1>, @<值2>);
+    }
+
+    方法 错误 <公开 静态 @嵌入式方法 = "" 注释 = "用法：调用XUI吐司工具的错误。 参数：值1=文本。 返回：无。 原方法：XToastUtils.error()">
+    参数 值1 <类型 = 文本型>
+    {
+        @ com.xuexiang.xui.utils.XToastUtils.error (@<值1>);
+    }
+
+    方法 错误_2 <公开 静态 @嵌入式方法 = "" 注释 = "用法：调用XUI吐司工具的错误_2。 参数：值1=对象。 返回：无。 原方法：XToastUtils.error()">
+    参数 值1 <类型 = 对象类>
+    {
+        @ com.xuexiang.xui.utils.XToastUtils.error ((java.lang.Throwable) @<值1>);
+    }
+
+    方法 错误_3 <公开 静态 @嵌入式方法 = "" 注释 = "用法：调用XUI吐司工具的错误_3。 参数：值1=整数。 返回：无。 原方法：XToastUtils.error()">
+    参数 值1 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.XToastUtils.error (@<值1>);
+    }
+
+    方法 错误_4 <公开 静态 @嵌入式方法 = "" 注释 = "用法：调用XUI吐司工具的错误_4。 参数：值1=文本、值2=整数。 返回：无。 原方法：XToastUtils.error()">
+    参数 值1 <类型 = 文本型>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.XToastUtils.error (@<值1>, @<值2>);
+    }
+
+    方法 错误_5 <公开 静态 @嵌入式方法 = "" 注释 = "用法：调用XUI吐司工具的错误_5。 参数：值1=整数、值2=整数。 返回：无。 原方法：XToastUtils.error()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.XToastUtils.error (@<值1>, @<值2>);
+    }
+
+    方法 成功 <公开 静态 @嵌入式方法 = "" 注释 = "用法：调用XUI吐司工具的成功。 参数：值1=文本。 返回：无。 原方法：XToastUtils.success()">
+    参数 值1 <类型 = 文本型>
+    {
+        @ com.xuexiang.xui.utils.XToastUtils.success (@<值1>);
+    }
+
+    方法 成功_2 <公开 静态 @嵌入式方法 = "" 注释 = "用法：调用XUI吐司工具的成功_2。 参数：值1=整数。 返回：无。 原方法：XToastUtils.success()">
+    参数 值1 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.XToastUtils.success (@<值1>);
+    }
+
+    方法 成功_3 <公开 静态 @嵌入式方法 = "" 注释 = "用法：调用XUI吐司工具的成功_3。 参数：值1=文本、值2=整数。 返回：无。 原方法：XToastUtils.success()">
+    参数 值1 <类型 = 文本型>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.XToastUtils.success (@<值1>, @<值2>);
+    }
+
+    方法 成功_4 <公开 静态 @嵌入式方法 = "" 注释 = "用法：调用XUI吐司工具的成功_4。 参数：值1=整数、值2=整数。 返回：无。 原方法：XToastUtils.success()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.XToastUtils.success (@<值1>, @<值2>);
+    }
+
+    方法 信息 <公开 静态 @嵌入式方法 = "" 注释 = "用法：调用XUI吐司工具的信息。 参数：值1=文本。 返回：无。 原方法：XToastUtils.info()">
+    参数 值1 <类型 = 文本型>
+    {
+        @ com.xuexiang.xui.utils.XToastUtils.info (@<值1>);
+    }
+
+    方法 信息_2 <公开 静态 @嵌入式方法 = "" 注释 = "用法：调用XUI吐司工具的信息_2。 参数：值1=整数。 返回：无。 原方法：XToastUtils.info()">
+    参数 值1 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.XToastUtils.info (@<值1>);
+    }
+
+    方法 信息_3 <公开 静态 @嵌入式方法 = "" 注释 = "用法：调用XUI吐司工具的信息_3。 参数：值1=文本、值2=整数。 返回：无。 原方法：XToastUtils.info()">
+    参数 值1 <类型 = 文本型>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.XToastUtils.info (@<值1>, @<值2>);
+    }
+
+    方法 信息_4 <公开 静态 @嵌入式方法 = "" 注释 = "用法：调用XUI吐司工具的信息_4。 参数：值1=整数、值2=整数。 返回：无。 原方法：XToastUtils.info()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.XToastUtils.info (@<值1>, @<值2>);
+    }
+
+    方法 警告 <公开 静态 @嵌入式方法 = "" 注释 = "用法：调用XUI吐司工具的警告。 参数：值1=文本。 返回：无。 原方法：XToastUtils.warning()">
+    参数 值1 <类型 = 文本型>
+    {
+        @ com.xuexiang.xui.utils.XToastUtils.warning (@<值1>);
+    }
+
+    方法 警告_2 <公开 静态 @嵌入式方法 = "" 注释 = "用法：调用XUI吐司工具的警告_2。 参数：值1=整数。 返回：无。 原方法：XToastUtils.warning()">
+    参数 值1 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.XToastUtils.warning (@<值1>);
+    }
+
+    方法 警告_3 <公开 静态 @嵌入式方法 = "" 注释 = "用法：调用XUI吐司工具的警告_3。 参数：值1=文本、值2=整数。 返回：无。 原方法：XToastUtils.warning()">
+    参数 值1 <类型 = 文本型>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.XToastUtils.warning (@<值1>, @<值2>);
+    }
+
+    方法 警告_4 <公开 静态 @嵌入式方法 = "" 注释 = "用法：调用XUI吐司工具的警告_4。 参数：值1=整数、值2=整数。 返回：无。 原方法：XToastUtils.warning()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.XToastUtils.warning (@<值1>, @<值2>);
+    }
+}
+
+类 XUI通用工具 <公开 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.utils.Utils)." @文档 = "category = \"XUI.工具\"">
+{
+    方法 取屏幕宽度 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：得到设备屏幕的宽度。 参数：context=安卓环境。 返回：整数。 原方法：Utils.getScreenWidth()">
+    参数 值1 <类型 = 安卓环境>
+    {
+        @ (int) (com.xuexiang.xui.utils.Utils.getScreenWidth (@<值1>))
+    }
+
+    方法 取屏幕高度 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：得到设备屏幕的高度。 参数：context=安卓环境。 返回：整数。 原方法：Utils.getScreenHeight()">
+    参数 值1 <类型 = 安卓环境>
+    {
+        @ (int) (com.xuexiang.xui.utils.Utils.getScreenHeight (@<值1>))
+    }
+
+    方法 取状态条高度 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：计算状态栏高度 getStatusBarHeight。 参数：context=安卓环境。 返回：整数。 原方法：Utils.getStatusBarHeight()">
+    参数 值1 <类型 = 安卓环境>
+    {
+        @ (int) (com.xuexiang.xui.utils.Utils.getStatusBarHeight (@<值1>))
+    }
+
+    方法 取状态条高度_2 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：计算状态栏高度 getStatusBarHeight。 参数：无。 返回：整数。 原方法：Utils.getStatusBarHeight()">
+    {
+        @ (int) (com.xuexiang.xui.utils.Utils.getStatusBarHeight ())
+    }
+
+    方法 取列表视图高度依据响应子项集 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI通用工具的列表视图高度依据响应子项集。 参数：值1=窗口组件。 返回：整数。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    {
+        @ (int) (com.xuexiang.xui.utils.Utils.getListViewHeightBasedOnChildren ((android.view.View) @<值1>.GetView ()))
+    }
+
+    方法 取绝对值列表视图高度依据响应子项集 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI通用工具的绝对值列表视图高度依据响应子项集。 参数：值1=窗口组件。 返回：整数。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    {
+        @ (int) (com.xuexiang.xui.utils.Utils.getAbsListViewHeightBasedOnChildren ((android.view.View) @<值1>.GetView ()))
+    }
+
+    方法 设置背景 <公开 静态 @嵌入式方法 = "" 注释 = "用法：把XUI通用工具的背景设为给定值。 参数：值1=安卓环境、值2=窗口组件、值3=整数。 返回：无。 原方法：@<值2>.GetView()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 窗口组件>
+    参数 值3 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.Utils.setBackground (@<值1>, (android.view.View) @<值2>.GetView (), @<值3>);
+    }
+
+    方法 回收背景 <公开 静态 @嵌入式方法 = "" 注释 = "用法：回收XUI通用工具占用的资源。 参数：值1=窗口组件。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    {
+        @ com.xuexiang.xui.utils.Utils.recycleBackground ((android.view.View) @<值1>.GetView ());
+    }
+
+    方法 清空图片视图 <公开 静态 @嵌入式方法 = "" 注释 = "用法：清空XUI通用工具的图片视图。 参数：值1=窗口组件。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    {
+        @ com.xuexiang.xui.utils.Utils.clearImageView ((android.view.View) @<值1>.GetView ());
+    }
+
+    方法 清空图片内存 <公开 静态 @嵌入式方法 = "" 注释 = "用法：清空XUI通用工具的图片内存。 参数：值1=窗口组件。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    {
+        @ com.xuexiang.xui.utils.Utils.clearImgMemory ((android.view.View) @<值1>.GetView ());
+    }
+
+    方法 缩放 <公开 静态 类型 = 位图类 @嵌入式方法 = "" 注释 = "用法：放大缩小图片。 参数：bitmap=位图类、w=整数、h=整数。 返回：位图类。 原方法：Utils.zoom()">
+    参数 值1 <类型 = 位图类>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.Utils.zoom (@<值1>, @<值2>, @<值3>)
+    }
+
+    方法 关闭读写静默地 <公开 静态 @嵌入式方法 = "" 注释 = "用法：安静关闭 IO。 参数：closeables=对象类。 返回：无。 原方法：Utils.closeIOQuietly()">
+    参数 值1 <类型 = "对象类 []">
+    {
+        @ com.xuexiang.xui.utils.Utils.closeIOQuietly ((java.io.Closeable[]) @<值1>);
+    }
+
+    方法 是否文件存在 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断XUI通用工具是否文件存在。 参数：值1=文本。 返回：逻辑型。 原方法：Utils.isFileExist()">
+    参数 值1 <类型 = 文本型>
+    {
+        @ com.xuexiang.xui.utils.Utils.isFileExist (@<值1>)
+    }
+
+    方法 取位图 <公开 静态 类型 = 位图类 @嵌入式方法 = "" 注释 = "用法：获取bitmap。 参数：filePath=文本。 返回：位图类。 原方法：Utils.getBitmap()">
+    参数 值1 <类型 = 文本型>
+    {
+        @ com.xuexiang.xui.utils.Utils.getBitmap (@<值1>)
+    }
+
+    方法 检查空 <公开 静态 @嵌入式方法 = "" 注释 = "用法：检查是否为空指针。 参数：object=对象、hint=文本。 返回：无。 原方法：Utils.checkNull()">
+    参数 值1 <类型 = 对象类>
+    参数 值2 <类型 = 文本型>
+    {
+        @ com.xuexiang.xui.utils.Utils.checkNull (@<值1>, @<值2>);
+    }
+
+    方法 检查非空 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：检查是否为空指针。 参数：t=对象、message=文本。 返回：对象类。 原方法：Utils.checkNotNull()">
+    参数 值1 <类型 = 对象类>
+    参数 值2 <类型 = 文本型>
+    {
+        @ com.xuexiang.xui.utils.Utils.checkNotNull (@<值1>, @<值2>)
+    }
+
+    方法 旋转 <公开 静态 类型 = 位图类 @嵌入式方法 = "" 注释 = "用法：旋转图片。 参数：bitmap=位图类、angle=整数。 返回：位图类。 原方法：Utils.rotate()">
+    参数 值1 <类型 = 位图类>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.Utils.rotate (@<值1>, @<值2>)
+    }
+
+    方法 取位图取自图形 <公开 静态 类型 = 位图类 @嵌入式方法 = "" 注释 = "用法：将Drawable转化为Bitmap。 参数：drawable=可绘制对象类。 返回：位图类。 原方法：Utils.getBitmapFromDrawable()">
+    参数 值1 <类型 = 可绘制对象类>
+    {
+        @ com.xuexiang.xui.utils.Utils.getBitmapFromDrawable (@<值1>)
+    }
+
+    方法 取位图取自图形_2 <公开 静态 类型 = 位图类 @嵌入式方法 = "" 注释 = "用法：将Drawable转化为Bitmap。 参数：drawable=可绘制对象类、color=整数。 返回：位图类。 原方法：Utils.getBitmapFromDrawable()">
+    参数 值1 <类型 = 可绘制对象类>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.Utils.getBitmapFromDrawable (@<值1>, @<值2>)
+    }
+
+    方法 取应用图标 <公开 静态 类型 = 可绘制对象类 @嵌入式方法 = "" 注释 = "用法：获取应用的图标。 参数：context=安卓环境。 返回：可绘制对象类。 原方法：Utils.getAppIcon()">
+    参数 值1 <类型 = 安卓环境>
+    {
+        @ com.xuexiang.xui.utils.Utils.getAppIcon (@<值1>)
+    }
+
+    方法 是否支持颜色属性组 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：支持?attrs属性 http://stackoverflow.com/questions/27986204 ：As mentioned here on API < 21 you can't use attrs to color in xml drawable. 参数：无。 返回：逻辑型。 原方法：Utils.isSupportColorAttrs()">
+    {
+        @ com.xuexiang.xui.utils.Utils.isSupportColorAttrs ()
+    }
+
+    方法 是否浅色 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断XUI通用工具是否浅色。 参数：值1=整数。 返回：逻辑型。 原方法：Utils.isLight()">
+    参数 值1 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.Utils.isLight (@<值1>)
+    }
+
+    方法 是否空或空 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断XUI通用工具是否空或空。 参数：值1=文本。 返回：逻辑型。 原方法：Utils.isNullOrEmpty()">
+    参数 值1 <类型 = 文本型>
+    {
+        @ com.xuexiang.xui.utils.Utils.isNullOrEmpty (@<值1>)
+    }
+
+    方法 取数字数字 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：获取数值的位数，例如9返回1，99返回2，999返回3。 参数：number=整数。 返回：整数。 原方法：Utils.getNumberDigits()">
+    参数 值1 <类型 = 整数>
+    {
+        @ (int) (com.xuexiang.xui.utils.Utils.getNumberDigits (@<值1>))
+    }
+
+    方法 设置图形着色颜色 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：设置Drawable的颜色。 参数：drawable=可绘制对象类、tintColor=整数。 返回：对象类。 原方法：Utils.setDrawableTintColor()">
+    参数 值1 <类型 = 可绘制对象类>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.Utils.setDrawableTintColor (@<值1>, @<值2>)
+    }
+
+    方法 取应用按反射 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：读出XUI通用工具的应用按反射。 参数：无。 返回：对象类。 原方法：Utils.getApplicationByReflect()">
+    {
+        @ com.xuexiang.xui.utils.Utils.getApplicationByReflect ()
+    }
+
+    方法 转型 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：类型强转。 参数：object=对象、clazz=对象。 返回：对象类。 原方法：Utils.cast()">
+    参数 值1 <类型 = 对象类>
+    参数 值2 <类型 = 对象类>
+    {
+        @ com.xuexiang.xui.utils.Utils.cast (@<值1>, (java.lang.Class) @<值2>)
+    }
+}
+
+类 XUI集合工具 <公开 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.utils.CollectionUtils)." @文档 = "category = \"XUI.工具\"">
+{
+    方法 是否索引有效 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：集合的索引是否有效。 参数：collection=对象、index=整数。 返回：逻辑型。 原方法：CollectionUtils.isIndexValid()">
+    参数 值1 <类型 = 对象类>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.CollectionUtils.isIndexValid ((java.util.Collection) @<值1>, @<值2>)
+    }
+
+    方法 取列表项 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：获取集合指定索引的元素。 参数：list=对象、index=整数。 返回：对象类。 原方法：CollectionUtils.getListItem()">
+    参数 值1 <类型 = 对象类>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.CollectionUtils.getListItem ((java.util.List) @<值1>, @<值2>)
+    }
+
+    方法 取大小 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：获取集合的大小。 参数：collection=对象。 返回：整数。 原方法：CollectionUtils.getSize()">
+    参数 值1 <类型 = 对象类>
+    {
+        @ (int) (com.xuexiang.xui.utils.CollectionUtils.getSize ((java.util.Collection) @<值1>))
+    }
+
+    方法 是否空 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：集合是否为空。 参数：collection=对象。 返回：逻辑型。 原方法：CollectionUtils.isEmpty()">
+    参数 值1 <类型 = 对象类>
+    {
+        @ com.xuexiang.xui.utils.CollectionUtils.isEmpty ((java.util.Collection) @<值1>)
+    }
+
+    方法 清空 <公开 静态 @嵌入式方法 = "" 注释 = "用法：清空集合。 参数：collection=对象。 返回：无。 原方法：CollectionUtils.clear()">
+    参数 值1 <类型 = 对象类>
+    {
+        @ com.xuexiang.xui.utils.CollectionUtils.clear ((java.util.Collection) @<值1>);
+    }
+}
+
+类 XUI视图工具 <公开 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.utils.ViewUtils)." @文档 = "category = \"XUI.工具\"">
+{
+    方法 检查应用兼容主题 <公开 静态 @嵌入式方法 = "" 注释 = "用法：控件工具类。 参数：context=安卓环境。 返回：无。 原方法：ViewUtils.checkAppCompatTheme()">
+    参数 值1 <类型 = 安卓环境>
+    {
+        @ com.xuexiang.xui.utils.ViewUtils.checkAppCompatTheme (@<值1>);
+    }
+
+    方法 取活动页根 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：获取activity的根view。 参数：activity=安卓窗口。 返回：对象类。 原方法：ViewUtils.getActivityRoot()">
+    参数 值1 <类型 = 安卓窗口>
+    {
+        @ com.xuexiang.xui.utils.ViewUtils.getActivityRoot (@<值1>)
+    }
+
+    方法 请求应用内缩组 <公开 静态 @嵌入式方法 = "" 注释 = "用法：向XUI视图工具发起应用内缩组请求。 参数：值1=窗口组件。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    {
+        @ com.xuexiang.xui.utils.ViewUtils.requestApplyInsets ((android.view.Window) @<值1>.GetView ());
+    }
+
+    方法 设置背景 <公开 静态 @嵌入式方法 = "" 注释 = "用法：把XUI视图工具的背景设为给定值。 参数：值1=窗口组件、值2=可绘制对象类。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 可绘制对象类>
+    {
+        @ com.xuexiang.xui.utils.ViewUtils.setBackground ((android.view.View) @<值1>.GetView (), @<值2>);
+    }
+
+    方法 设置背景保持内边距 <公开 静态 @嵌入式方法 = "" 注释 = "用法：把XUI视图工具的背景保持内边距设为给定值。 参数：值1=窗口组件、值2=可绘制对象类。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 可绘制对象类>
+    {
+        @ com.xuexiang.xui.utils.ViewUtils.setBackgroundKeepingPadding ((android.view.View) @<值1>.GetView (), @<值2>);
+    }
+
+    方法 设置背景保持内边距_2 <公开 静态 @嵌入式方法 = "" 注释 = "用法：把XUI视图工具的背景保持内边距_2设为给定值。 参数：值1=窗口组件、值2=整数。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.ViewUtils.setBackgroundKeepingPadding ((android.view.View) @<值1>.GetView (), @<值2>);
+    }
+
+    方法 设置背景颜色保持内边距 <公开 静态 @嵌入式方法 = "" 注释 = "用法：把XUI视图工具的背景颜色保持内边距设为给定值。 参数：值1=窗口组件、值2=整数。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.ViewUtils.setBackgroundColorKeepPadding ((android.view.View) @<值1>.GetView (), @<值2>);
+    }
+
+    方法 播放背景闪烁动画 <公开 静态 @嵌入式方法 = "" 注释 = "用法：让XUI视图工具播放。 参数：值1=窗口组件、值2=整数。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.ViewUtils.playBackgroundBlinkAnimation ((android.view.View) @<值1>.GetView (), @<值2>);
+    }
+
+    方法 播放视图背景动画 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：让XUI视图工具播放。 参数：值1=窗口组件、值2=整数、值3=整数、值4=整数、值5=对象。 返回：对象类。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = "整数 []">
+    参数 值4 <类型 = 整数>
+    参数 值5 <类型 = 对象类>
+    {
+        @ com.xuexiang.xui.utils.ViewUtils.playViewBackgroundAnimation ((android.view.View) @<值1>.GetView (), @<值2>, @<值3>, @<值4>, (java.lang.Runnable) @<值5>)
+    }
+
+    方法 播放视图背景动画_2 <公开 静态 @嵌入式方法 = "" 注释 = "用法：让XUI视图工具播放。 参数：值1=窗口组件、值2=整数、值3=整数、值4=整数。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = "整数 []">
+    参数 值4 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.ViewUtils.playViewBackgroundAnimation ((android.view.View) @<值1>.GetView (), @<值2>, @<值3>, @<值4>);
+    }
+
+    方法 播放视图背景动画_3 <公开 静态 @嵌入式方法 = "" 注释 = "用法：让XUI视图工具播放。 参数：值1=窗口组件、值2=整数、值3=整数、值4=整数、值5=整数、值6=整数、值7=对象。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 长整数>
+    参数 值5 <类型 = 整数>
+    参数 值6 <类型 = 整数>
+    参数 值7 <类型 = 对象类>
+    {
+        @ com.xuexiang.xui.utils.ViewUtils.playViewBackgroundAnimation ((android.view.View) @<值1>.GetView (), @<值2>, @<值3>, @<值4>, @<值5>, @<值6>, (java.lang.Runnable) @<值7>);
+    }
+
+    方法 播放视图背景动画_4 <公开 静态 @嵌入式方法 = "" 注释 = "用法：让XUI视图工具播放。 参数：值1=窗口组件、值2=整数、值3=整数、值4=整数。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 长整数>
+    {
+        @ com.xuexiang.xui.utils.ViewUtils.playViewBackgroundAnimation ((android.view.View) @<值1>.GetView (), @<值2>, @<值3>, @<值4>);
+    }
+
+    方法 生成视图标识 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：XUI视图工具 的 生成视图标识, 行为与 XUI 底层同名方法一致。 参数：无。 返回：整数。 原方法：ViewUtils.generateViewId()">
+    {
+        @ (int) (com.xuexiang.xui.utils.ViewUtils.generateViewId ())
+    }
+
+    方法 淡变内 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：XUI视图工具 的 淡变内, 行为与 XUI 底层同名方法一致。 参数：值1=窗口组件、值2=整数、值3=窗口组件。 返回：对象类。 原方法：@<值3>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 窗口组件>
+    {
+        @ com.xuexiang.xui.utils.ViewUtils.fadeIn ((android.view.View) @<值1>.GetView (), @<值2>, (android.view.animation.Animation$AnimationListener) @<值3>.GetView ())
+    }
+
+    方法 淡变内_2 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：XUI视图工具 的 淡变内_2, 行为与 XUI 底层同名方法一致。 参数：值1=窗口组件、值2=整数、值3=窗口组件、值4=真/假。 返回：对象类。 原方法：@<值3>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 窗口组件>
+    参数 值4 <类型 = 逻辑型>
+    {
+        @ com.xuexiang.xui.utils.ViewUtils.fadeIn ((android.view.View) @<值1>.GetView (), @<值2>, (android.view.animation.Animation$AnimationListener) @<值3>.GetView (), @<值4>)
+    }
+
+    方法 淡变外 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：XUI视图工具 的 淡变外, 行为与 XUI 底层同名方法一致。 参数：值1=窗口组件、值2=整数、值3=窗口组件。 返回：对象类。 原方法：@<值3>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 窗口组件>
+    {
+        @ com.xuexiang.xui.utils.ViewUtils.fadeOut ((android.view.View) @<值1>.GetView (), @<值2>, (android.view.animation.Animation$AnimationListener) @<值3>.GetView ())
+    }
+
+    方法 淡变外_2 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：XUI视图工具 的 淡变外_2, 行为与 XUI 底层同名方法一致。 参数：值1=窗口组件、值2=整数、值3=窗口组件、值4=真/假。 返回：对象类。 原方法：@<值3>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 窗口组件>
+    参数 值4 <类型 = 逻辑型>
+    {
+        @ com.xuexiang.xui.utils.ViewUtils.fadeOut ((android.view.View) @<值1>.GetView (), @<值2>, (android.view.animation.Animation$AnimationListener) @<值3>.GetView (), @<值4>)
+    }
+
+    方法 清空值动画器 <公开 静态 @嵌入式方法 = "" 注释 = "用法：清除数值动画。 参数：animator=对象。 返回：无。 原方法：ViewUtils.clearValueAnimator()">
+    参数 值1 <类型 = 对象类>
+    {
+        @ com.xuexiang.xui.utils.ViewUtils.clearValueAnimator ((android.animation.Animator) @<值1>);
+    }
+
+    方法 计算视图屏幕位置 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：XUI视图工具 的 计算视图屏幕位置, 行为与 XUI 底层同名方法一致。 参数：值1=窗口组件。 返回：对象类。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    {
+        @ com.xuexiang.xui.utils.ViewUtils.calculateViewScreenLocation ((android.view.View) @<值1>.GetView ())
+    }
+
+    方法 侧滑内 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：XUI视图工具 的 侧滑内, 行为与 XUI 底层同名方法一致。 参数：值1=窗口组件、值2=整数、值3=窗口组件、值4=对象。 返回：对象类。 原方法：@<值3>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 窗口组件>
+    参数 值4 <类型 = 对象类>
+    {
+        @ com.xuexiang.xui.utils.ViewUtils.slideIn ((android.view.View) @<值1>.GetView (), @<值2>, (android.view.animation.Animation$AnimationListener) @<值3>.GetView (), (com.xuexiang.xui.utils.ViewUtils$Direction) @<值4>)
+    }
+
+    方法 侧滑内_2 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：XUI视图工具 的 侧滑内_2, 行为与 XUI 底层同名方法一致。 参数：值1=窗口组件、值2=整数、值3=窗口组件、值4=真/假、值5=对象。 返回：对象类。 原方法：@<值3>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 窗口组件>
+    参数 值4 <类型 = 逻辑型>
+    参数 值5 <类型 = 对象类>
+    {
+        @ com.xuexiang.xui.utils.ViewUtils.slideIn ((android.view.View) @<值1>.GetView (), @<值2>, (android.view.animation.Animation$AnimationListener) @<值3>.GetView (), @<值4>, (com.xuexiang.xui.utils.ViewUtils$Direction) @<值5>)
+    }
+
+    方法 侧滑外 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：XUI视图工具 的 侧滑外, 行为与 XUI 底层同名方法一致。 参数：值1=窗口组件、值2=整数、值3=窗口组件、值4=对象。 返回：对象类。 原方法：@<值3>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 窗口组件>
+    参数 值4 <类型 = 对象类>
+    {
+        @ com.xuexiang.xui.utils.ViewUtils.slideOut ((android.view.View) @<值1>.GetView (), @<值2>, (android.view.animation.Animation$AnimationListener) @<值3>.GetView (), (com.xuexiang.xui.utils.ViewUtils$Direction) @<值4>)
+    }
+
+    方法 侧滑外_2 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：XUI视图工具 的 侧滑外_2, 行为与 XUI 底层同名方法一致。 参数：值1=窗口组件、值2=整数、值3=窗口组件、值4=真/假、值5=对象。 返回：对象类。 原方法：@<值3>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 窗口组件>
+    参数 值4 <类型 = 逻辑型>
+    参数 值5 <类型 = 对象类>
+    {
+        @ com.xuexiang.xui.utils.ViewUtils.slideOut ((android.view.View) @<值1>.GetView (), @<值2>, (android.view.animation.Animation$AnimationListener) @<值3>.GetView (), @<值4>, (com.xuexiang.xui.utils.ViewUtils$Direction) @<值5>)
+    }
+
+    方法 设置可见性 <公开 静态 @嵌入式方法 = "" 注释 = "用法：把XUI视图工具的可见性设为给定值。 参数：值1=窗口组件、值2=真/假。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 逻辑型>
+    {
+        @ com.xuexiang.xui.utils.ViewUtils.setVisibility ((android.view.View) @<值1>.GetView (), @<值2>);
+    }
+
+    方法 设置可见性_2 <公开 静态 @嵌入式方法 = "" 注释 = "用法：把XUI视图工具的可见性_2设为给定值。 参数：值1=窗口组件、值2=整数。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.ViewUtils.setVisibility ((android.view.View) @<值1>.GetView (), @<值2>);
+    }
+
+    方法 设置可用 <公开 静态 @嵌入式方法 = "" 注释 = "用法：把XUI视图工具的可用设为给定值。 参数：值1=窗口组件、值2=真/假。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 逻辑型>
+    {
+        @ com.xuexiang.xui.utils.ViewUtils.setEnabled ((android.view.View) @<值1>.GetView (), @<值2>);
+    }
+
+    方法 设置文本 <公开 静态 @嵌入式方法 = "" 注释 = "用法：把XUI视图工具的文本设为给定值。 参数：值1=窗口组件、值2=文本。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 文本型>
+    {
+        @ com.xuexiang.xui.utils.ViewUtils.setText ((android.view.View) @<值1>.GetView (), @<值2>);
+    }
+
+    方法 设置文本_2 <公开 静态 @嵌入式方法 = "" 注释 = "用法：把XUI视图工具的文本_2设为给定值。 参数：值1=窗口组件、值2=整数。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.ViewUtils.setText ((android.view.View) @<值1>.GetView (), @<值2>);
+    }
+
+    方法 文本颜色标识 <公开 静态 @嵌入式方法 = "" 注释 = "用法：调用XUI视图工具的文本颜色标识。 参数：值1=窗口组件、值2=整数。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.ViewUtils.textColorId ((android.view.View) @<值1>.GetView (), @<值2>);
+    }
+
+    方法 设置图片资源 <公开 静态 @嵌入式方法 = "" 注释 = "用法：把XUI视图工具的图片资源设为给定值。 参数：值1=窗口组件、值2=整数。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.ViewUtils.setImageResource ((android.view.View) @<值1>.GetView (), @<值2>);
+    }
+
+    方法 设置图片图形 <公开 静态 @嵌入式方法 = "" 注释 = "用法：把XUI视图工具的图片图形设为给定值。 参数：值1=窗口组件、值2=可绘制对象类。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 可绘制对象类>
+    {
+        @ com.xuexiang.xui.utils.ViewUtils.setImageDrawable ((android.view.View) @<值1>.GetView (), @<值2>);
+    }
+
+    方法 设置图片URI <公开 静态 @嵌入式方法 = "" 注释 = "用法：把XUI视图工具的图片URI设为给定值。 参数：值1=窗口组件、值2=对象。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 对象类>
+    {
+        @ com.xuexiang.xui.utils.ViewUtils.setImageUri ((android.view.View) @<值1>.GetView (), @<值2>);
+    }
+
+    方法 设置图片等级 <公开 静态 @嵌入式方法 = "" 注释 = "用法：把XUI视图工具的图片等级设为给定值。 参数：值1=窗口组件、值2=整数。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.ViewUtils.setImageLevel ((android.view.View) @<值1>.GetView (), @<值2>);
+    }
+
+    方法 设置图片着色 <公开 静态 @嵌入式方法 = "" 注释 = "用法：把XUI视图工具的图片着色设为给定值。 参数：值1=窗口组件、值2=对象。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 对象类>
+    {
+        @ com.xuexiang.xui.utils.ViewUtils.setImageTint ((android.view.View) @<值1>.GetView (), (android.content.res.ColorStateList) @<值2>);
+    }
+
+    方法 设置已勾选 <公开 静态 @嵌入式方法 = "" 注释 = "用法：把XUI视图工具的已勾选设为给定值。 参数：值1=窗口组件、值2=真/假。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 逻辑型>
+    {
+        @ com.xuexiang.xui.utils.ViewUtils.setChecked ((android.view.View) @<值1>.GetView (), @<值2>);
+    }
+
+    方法 设置响应已勾选改变监听器 <公开 静态 @嵌入式方法 = "" 注释 = "用法：把XUI视图工具的响应已勾选改变监听器设为给定值。 参数：值1=窗口组件、值2=窗口组件。 返回：无。 原方法：@<值2>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 窗口组件>
+    {
+        @ com.xuexiang.xui.utils.ViewUtils.setOnCheckedChangeListener ((android.view.View) @<值1>.GetView (), (android.widget.CompoundButton$OnCheckedChangeListener) @<值2>.GetView ());
+    }
+
+    方法 设置已勾选静默 <公开 静态 @嵌入式方法 = "" 注释 = "用法：把XUI视图工具的已勾选静默设为给定值。 参数：值1=窗口组件、值2=真/假、值3=窗口组件。 返回：无。 原方法：@<值3>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 逻辑型>
+    参数 值3 <类型 = 窗口组件>
+    {
+        @ com.xuexiang.xui.utils.ViewUtils.setCheckedSilent ((android.view.View) @<值1>.GetView (), @<值2>, (android.widget.CompoundButton$OnCheckedChangeListener) @<值3>.GetView ());
+    }
+
+    方法 展开触摸区域 <公开 静态 @嵌入式方法 = "" 注释 = "用法：展开XUI视图工具的触摸区域。 参数：值1=窗口组件、值2=整数。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.ViewUtils.expendTouchArea ((android.view.View) @<值1>.GetView (), @<值2>);
+    }
+
+    方法 设置内边距 <公开 静态 @嵌入式方法 = "" 注释 = "用法：把XUI视图工具的内边距设为给定值。 参数：值1=窗口组件、值2=整数。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.ViewUtils.setPadding ((android.view.View) @<值1>.GetView (), @<值2>);
+    }
+
+    方法 设置内边距左 <公开 静态 @嵌入式方法 = "" 注释 = "用法：把XUI视图工具的内边距左设为给定值。 参数：值1=窗口组件、值2=整数。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.ViewUtils.setPaddingLeft ((android.view.View) @<值1>.GetView (), @<值2>);
+    }
+
+    方法 设置内边距开始 <公开 静态 @嵌入式方法 = "" 注释 = "用法：把XUI视图工具的内边距开始设为给定值。 参数：值1=窗口组件、值2=整数。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.ViewUtils.setPaddingStart ((android.view.View) @<值1>.GetView (), @<值2>);
+    }
+
+    方法 设置内边距上 <公开 静态 @嵌入式方法 = "" 注释 = "用法：把XUI视图工具的内边距上设为给定值。 参数：值1=窗口组件、值2=整数。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.ViewUtils.setPaddingTop ((android.view.View) @<值1>.GetView (), @<值2>);
+    }
+
+    方法 设置内边距右 <公开 静态 @嵌入式方法 = "" 注释 = "用法：把XUI视图工具的内边距右设为给定值。 参数：值1=窗口组件、值2=整数。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.ViewUtils.setPaddingRight ((android.view.View) @<值1>.GetView (), @<值2>);
+    }
+
+    方法 设置内边距结束 <公开 静态 @嵌入式方法 = "" 注释 = "用法：把XUI视图工具的内边距结束设为给定值。 参数：值1=窗口组件、值2=整数。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.ViewUtils.setPaddingEnd ((android.view.View) @<值1>.GetView (), @<值2>);
+    }
+
+    方法 设置内边距下 <公开 静态 @嵌入式方法 = "" 注释 = "用法：把XUI视图工具的内边距下设为给定值。 参数：值1=窗口组件、值2=整数。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.ViewUtils.setPaddingBottom ((android.view.View) @<值1>.GetView (), @<值2>);
+    }
+
+    方法 取是否末位行间距额外错误 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断是否需要对 LineSpacingExtra 进行额外的兼容处理。 参数：无。 返回：逻辑型。 原方法：ViewUtils.getIsLastLineSpacingExtraError()">
+    {
+        @ com.xuexiang.xui.utils.ViewUtils.getIsLastLineSpacingExtraError ()
+    }
+
+    方法 查找视图取自视图占位桩 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：在XUI视图工具中查找视图取自视图占位桩。 参数：值1=窗口组件、值2=整数、值3=整数。 返回：对象类。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.ViewUtils.findViewFromViewStub ((android.view.View) @<值1>.GetView (), @<值2>, @<值3>)
+    }
+
+    方法 查找视图取自视图占位桩_2 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：在XUI视图工具中查找视图取自视图占位桩_2。 参数：值1=窗口组件、值2=整数、值3=整数、值4=整数。 返回：对象类。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.ViewUtils.findViewFromViewStub ((android.view.View) @<值1>.GetView (), @<值2>, @<值3>, @<值4>)
+    }
+
+    方法 安全设置图片视图选中 <公开 静态 @嵌入式方法 = "" 注释 = "用法：调用XUI视图工具的安全设置图片视图选中。 参数：值1=窗口组件、值2=真/假。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 逻辑型>
+    {
+        @ com.xuexiang.xui.utils.ViewUtils.safeSetImageViewSelected ((android.view.View) @<值1>.GetView (), @<值2>);
+    }
+
+    方法 设置图片视图着色颜色 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：把XUI视图工具的图片视图着色颜色设为给定值。 参数：值1=窗口组件、值2=整数。 返回：对象类。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.ViewUtils.setImageViewTintColor ((android.view.View) @<值1>.GetView (), @<值2>)
+    }
+
+    方法 是否列表视图已在下 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断XUI视图工具是否列表视图已在下。 参数：值1=窗口组件。 返回：逻辑型。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    {
+        @ com.xuexiang.xui.utils.ViewUtils.isListViewAlreadyAtBottom ((android.view.View) @<值1>.GetView ())
+    }
+
+    方法 取后代矩形 <公开 静态 @嵌入式方法 = "" 注释 = "用法：读出XUI视图工具的后代矩形。 参数：值1=窗口组件、值2=窗口组件、值3=对象。 返回：无。 原方法：@<值2>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 窗口组件>
+    参数 值3 <类型 = 对象类>
+    {
+        @ com.xuexiang.xui.utils.ViewUtils.getDescendantRect ((android.view.View) @<值1>.GetView (), (android.view.View) @<值2>.GetView (), (android.graphics.Rect) @<值3>);
+    }
+
+    方法 设置视图文本字体 <公开 静态 @嵌入式方法 = "" 注释 = "用法：把XUI视图工具的视图文本字体设为给定值。 参数：值1=窗口组件、值2=字体类。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 字体类>
+    {
+        @ com.xuexiang.xui.utils.ViewUtils.setViewTextFont ((android.view.View) @<值1>.GetView (), @<值2>);
+    }
+
+    方法 设置视图组字体 <公开 静态 @嵌入式方法 = "" 注释 = "用法：设置控件的字体。 参数：typeface=字体类、views=对象类。 返回：无。 原方法：ViewUtils.setViewsFont()">
+    参数 值1 <类型 = 字体类>
+    参数 值2 <类型 = "对象类 []">
+    {
+        @ com.xuexiang.xui.utils.ViewUtils.setViewsFont (@<值1>, (android.view.View[]) @<值2>);
+    }
+
+    方法 设置视图组字体_2 <公开 静态 @嵌入式方法 = "" 注释 = "用法：设置控件的字体。 参数：views=对象类。 返回：无。 原方法：ViewUtils.setViewsFont()">
+    参数 值1 <类型 = "对象类 []">
+    {
+        @ com.xuexiang.xui.utils.ViewUtils.setViewsFont ((android.view.View[]) @<值1>);
+    }
+
+    方法 清空视图长点击 <公开 静态 @嵌入式方法 = "" 注释 = "用法：清空XUI视图工具的视图长点击。 参数：值1=窗口组件、值2=整数。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = "整数 []">
+    {
+        @ com.xuexiang.xui.utils.ViewUtils.clearViewLongClick ((android.view.View) @<值1>.GetView (), @<值2>);
+    }
+
+    方法 清空全部视图长点击 <公开 静态 @嵌入式方法 = "" 注释 = "用法：清空XUI视图工具的全部视图长点击。 参数：值1=窗口组件。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    {
+        @ com.xuexiang.xui.utils.ViewUtils.clearAllViewLongClick ((android.view.View) @<值1>.GetView ());
+    }
+
+    方法 设置工具栏布局文本字体 <公开 静态 @嵌入式方法 = "" 注释 = "用法：把XUI视图工具的工具栏布局文本字体设为给定值。 参数：值1=窗口组件。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    {
+        @ com.xuexiang.xui.utils.ViewUtils.setToolbarLayoutTextFont ((android.view.View) @<值1>.GetView ());
+    }
+
+    方法 设置工具栏布局文本字体_2 <公开 静态 @嵌入式方法 = "" 注释 = "用法：把XUI视图工具的工具栏布局文本字体_2设为给定值。 参数：值1=窗口组件、值2=字体类。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 字体类>
+    {
+        @ com.xuexiang.xui.utils.ViewUtils.setToolbarLayoutTextFont ((android.view.View) @<值1>.GetView (), @<值2>);
+    }
+}
+
+类 XUI控件工具 <公开 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.utils.WidgetUtils)." @文档 = "category = \"XUI.工具\"">
+{
+    方法 请求完整屏幕 <公开 静态 @嵌入式方法 = "" 注释 = "用法：让Activity全屏显示。 参数：activity=安卓窗口。 返回：无。 原方法：WidgetUtils.requestFullScreen()">
+    参数 值1 <类型 = 安卓窗口>
+    {
+        @ com.xuexiang.xui.utils.WidgetUtils.requestFullScreen (@<值1>);
+    }
+
+    方法 初始化滚动选择框样式 <公开 静态 @嵌入式方法 = "" 注释 = "用法：初始化XUI控件工具, 通常在拿到对象后调用一次。 参数：值1=窗口组件、值2=文本型。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = "文本型 []">
+    {
+        @ com.xuexiang.xui.utils.WidgetUtils.initSpinnerStyle ((android.view.View) @<值1>.GetView (), @<值2>);
+    }
+
+    方法 初始化滚动选择框样式_2 <公开 静态 @嵌入式方法 = "" 注释 = "用法：初始化XUI控件工具, 通常在拿到对象后调用一次。 参数：值1=窗口组件。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    {
+        @ com.xuexiang.xui.utils.WidgetUtils.initSpinnerStyle ((android.view.View) @<值1>.GetView ());
+    }
+
+    方法 初始化滚动选择框项 <公开 静态 @嵌入式方法 = "" 注释 = "用法：初始化XUI控件工具, 通常在拿到对象后调用一次。 参数：值1=窗口组件、值2=文本型。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = "文本型 []">
+    {
+        @ com.xuexiang.xui.utils.WidgetUtils.initSpinnerItem ((android.view.View) @<值1>.GetView (), @<值2>);
+    }
+
+    方法 设置滚动选择框下拉按下垂直偏移 <公开 静态 @嵌入式方法 = "" 注释 = "用法：把XUI控件工具的滚动选择框下拉按下垂直偏移设为给定值。 参数：值1=窗口组件。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    {
+        @ com.xuexiang.xui.utils.WidgetUtils.setSpinnerDropDownVerticalOffset ((android.view.View) @<值1>.GetView ());
+    }
+
+    方法 添加标签页不带水波纹 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：向XUI控件工具添加标签页不带水波纹。 参数：值1=窗口组件、值2=文本、值3=整数。 返回：对象类。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 文本型>
+    参数 值3 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.WidgetUtils.addTabWithoutRipple ((android.view.View) @<值1>.GetView (), @<值2>, @<值3>)
+    }
+
+    方法 添加标签页不带水波纹_2 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：向XUI控件工具添加标签页不带水波纹_2。 参数：值1=窗口组件、值2=文本、值3=可绘制对象类。 返回：对象类。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 文本型>
+    参数 值3 <类型 = 可绘制对象类>
+    {
+        @ com.xuexiang.xui.utils.WidgetUtils.addTabWithoutRipple ((android.view.View) @<值1>.GetView (), @<值2>, @<值3>)
+    }
+
+    方法 设置标签页布局文本字体 <公开 静态 @嵌入式方法 = "" 注释 = "用法：把XUI控件工具的标签页布局文本字体设为给定值。 参数：值1=窗口组件。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    {
+        @ com.xuexiang.xui.utils.WidgetUtils.setTabLayoutTextFont ((android.view.View) @<值1>.GetView ());
+    }
+
+    方法 设置标签页布局文本字体_2 <公开 静态 @嵌入式方法 = "" 注释 = "用法：把XUI控件工具的标签页布局文本字体_2设为给定值。 参数：值1=窗口组件、值2=字体类。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 字体类>
+    {
+        @ com.xuexiang.xui.utils.WidgetUtils.setTabLayoutTextFont ((android.view.View) @<值1>.GetView (), @<值2>);
+    }
+
+    方法 初始化九宫格回收视图 <公开 静态 @嵌入式方法 = "" 注释 = "用法：初始化XUI控件工具, 通常在拿到对象后调用一次。 参数：值1=窗口组件、值2=整数。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.WidgetUtils.initGridRecyclerView ((android.view.View) @<值1>.GetView (), @<值2>);
+    }
+
+    方法 初始化九宫格回收视图_2 <公开 静态 @嵌入式方法 = "" 注释 = "用法：初始化XUI控件工具, 通常在拿到对象后调用一次。 参数：值1=窗口组件、值2=整数、值3=整数。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.WidgetUtils.initGridRecyclerView ((android.view.View) @<值1>.GetView (), @<值2>, @<值3>);
+    }
+
+    方法 初始化九宫格回收视图_3 <公开 静态 @嵌入式方法 = "" 注释 = "用法：初始化XUI控件工具, 通常在拿到对象后调用一次。 参数：值1=窗口组件、值2=整数、值3=整数、值4=整数。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.WidgetUtils.initGridRecyclerView ((android.view.View) @<值1>.GetView (), @<值2>, @<值3>, @<值4>);
+    }
+
+    方法 初始化九宫格回收视图_4 <公开 静态 @嵌入式方法 = "" 注释 = "用法：初始化XUI控件工具, 通常在拿到对象后调用一次。 参数：值1=窗口组件、值2=真/假、值3=整数、值4=整数、值5=整数。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 逻辑型>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 整数>
+    参数 值5 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.WidgetUtils.initGridRecyclerView ((android.view.View) @<值1>.GetView (), @<值2>, @<值3>, @<值4>, @<值5>);
+    }
+
+    方法 初始化回收视图 <公开 静态 @嵌入式方法 = "" 注释 = "用法：初始化XUI控件工具, 通常在拿到对象后调用一次。 参数：值1=窗口组件。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    {
+        @ com.xuexiang.xui.utils.WidgetUtils.initRecyclerView ((android.view.View) @<值1>.GetView ());
+    }
+
+    方法 初始化回收视图_2 <公开 静态 @嵌入式方法 = "" 注释 = "用法：初始化XUI控件工具, 通常在拿到对象后调用一次。 参数：值1=窗口组件、值2=整数。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.WidgetUtils.initRecyclerView ((android.view.View) @<值1>.GetView (), @<值2>);
+    }
+
+    方法 初始化回收视图_3 <公开 静态 @嵌入式方法 = "" 注释 = "用法：初始化XUI控件工具, 通常在拿到对象后调用一次。 参数：值1=窗口组件、值2=整数、值3=整数。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.WidgetUtils.initRecyclerView ((android.view.View) @<值1>.GetView (), @<值2>, @<值3>);
+    }
+
+    方法 初始化回收视图_4 <公开 静态 @嵌入式方法 = "" 注释 = "用法：初始化XUI控件工具, 通常在拿到对象后调用一次。 参数：值1=窗口组件、值2=真/假、值3=整数、值4=整数。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 逻辑型>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.WidgetUtils.initRecyclerView ((android.view.View) @<值1>.GetView (), @<值2>, @<值3>, @<值4>);
+    }
+
+    方法 取改变载荷 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：获取局部变化的值集合。 参数：payloads=对象。 返回：对象类。 原方法：WidgetUtils.getChangePayload()">
+    参数 值1 <类型 = 对象类>
+    {
+        @ com.xuexiang.xui.utils.WidgetUtils.getChangePayload ((java.util.List) @<值1>)
+    }
+
+    方法 取加载中对话框 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：获取loading加载框。 参数：context=安卓环境。 返回：对象类。 原方法：WidgetUtils.getLoadingDialog()">
+    参数 值1 <类型 = 安卓环境>
+    {
+        @ com.xuexiang.xui.utils.WidgetUtils.getLoadingDialog (@<值1>)
+    }
+
+    方法 取加载中对话框_2 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：获取loading加载框。 参数：context=安卓环境、message=文本。 返回：对象类。 原方法：WidgetUtils.getLoadingDialog()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 文本型>
+    {
+        @ com.xuexiang.xui.utils.WidgetUtils.getLoadingDialog (@<值1>, @<值2>)
+    }
+
+    方法 更新加载中消息 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：更新loading加载框的提示信息。 参数：loadingDialog=对象、context=安卓环境、message=文本。 返回：对象类。 原方法：WidgetUtils.updateLoadingMessage()">
+    参数 值1 <类型 = 对象类>
+    参数 值2 <类型 = 安卓环境>
+    参数 值3 <类型 = 文本型>
+    {
+        @ com.xuexiang.xui.utils.WidgetUtils.updateLoadingMessage ((com.xuexiang.xui.widget.dialog.LoadingDialog) @<值1>, @<值2>, @<值3>)
+    }
+
+    方法 取消息加载器 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：获取IMessageLoader。 参数：isDialog=真/假、context=安卓环境。 返回：对象类。 原方法：WidgetUtils.getMessageLoader()">
+    参数 值1 <类型 = 逻辑型>
+    参数 值2 <类型 = 安卓环境>
+    {
+        @ com.xuexiang.xui.utils.WidgetUtils.getMessageLoader (@<值1>, @<值2>)
+    }
+
+    方法 取迷你加载中对话框 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：获取MiniLoadingDialog加载框。 参数：context=安卓环境。 返回：对象类。 原方法：WidgetUtils.getMiniLoadingDialog()">
+    参数 值1 <类型 = 安卓环境>
+    {
+        @ com.xuexiang.xui.utils.WidgetUtils.getMiniLoadingDialog (@<值1>)
+    }
+
+    方法 取迷你加载中对话框_2 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：获取MiniLoadingDialog加载框。 参数：context=安卓环境、message=文本。 返回：对象类。 原方法：WidgetUtils.getMiniLoadingDialog()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 文本型>
+    {
+        @ com.xuexiang.xui.utils.WidgetUtils.getMiniLoadingDialog (@<值1>, @<值2>)
+    }
+
+    方法 透明下面板对话框背景 <公开 静态 @嵌入式方法 = "" 注释 = "用法：调用XUI控件工具的透明下面板对话框背景。 参数：值1=窗口组件。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    {
+        @ com.xuexiang.xui.utils.WidgetUtils.transparentBottomSheetDialogBackground ((android.view.View) @<值1>.GetView ());
+    }
+
+    方法 清空活动页背景 <公开 静态 @嵌入式方法 = "" 注释 = "用法：去除窗口的背景色【解决过度绘制问题】。 参数：activity=安卓窗口。 返回：无。 原方法：WidgetUtils.clearActivityBackground()">
+    参数 值1 <类型 = 安卓窗口>
+    {
+        @ com.xuexiang.xui.utils.WidgetUtils.clearActivityBackground (@<值1>);
+    }
+
+    方法 清空窗口背景 <公开 静态 @嵌入式方法 = "" 注释 = "用法：清空XUI控件工具的窗口背景。 参数：值1=窗口组件。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    {
+        @ com.xuexiang.xui.utils.WidgetUtils.clearWindowBackground ((android.view.Window) @<值1>.GetView ());
+    }
+
+    方法 清空视图背景 <公开 静态 @嵌入式方法 = "" 注释 = "用法：清空XUI控件工具的视图背景。 参数：值1=窗口组件。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    {
+        @ com.xuexiang.xui.utils.WidgetUtils.clearViewBackground ((android.view.View) @<值1>.GetView ());
+    }
+
+    方法 清空全部视图背景 <公开 静态 @嵌入式方法 = "" 注释 = "用法：清空XUI控件工具的全部视图背景。 参数：值1=窗口组件。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    {
+        @ com.xuexiang.xui.utils.WidgetUtils.clearAllViewBackground ((android.view.View) @<值1>.GetView ());
+    }
+
+    方法 查找活动页 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：根据上下文获取Activity。 参数：context=安卓环境。 返回：对象类。 原方法：WidgetUtils.findActivity()">
+    参数 值1 <类型 = 安卓环境>
+    {
+        @ com.xuexiang.xui.utils.WidgetUtils.findActivity (@<值1>)
+    }
+
+    方法 设置视图父项非裁剪 <公开 静态 @嵌入式方法 = "" 注释 = "用法：把XUI控件工具的视图父项非裁剪设为给定值。 参数：值1=窗口组件。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    {
+        @ com.xuexiang.xui.utils.WidgetUtils.setViewParentNotClip ((android.view.View) @<值1>.GetView ());
+    }
+
+    方法 安装布局装载器日志器 <公开 静态 @嵌入式方法 = "" 注释 = "用法：增加view的inflate日志，用于分析控件加载的性能。 参数：activity=对象。 返回：无。 原方法：WidgetUtils.installLayoutInflaterLogger()">
+    参数 值1 <类型 = 对象类>
+    {
+        @ com.xuexiang.xui.utils.WidgetUtils.installLayoutInflaterLogger ((androidx.appcompat.app.AppCompatActivity) @<值1>);
+    }
+
+    方法 安装布局装载器日志器_2 <公开 静态 @嵌入式方法 = "" 注释 = "用法：增加view的inflate日志，用于分析控件加载的性能。 参数：activity=对象、loggerTag=文本、limitCost=整数。 返回：无。 原方法：WidgetUtils.installLayoutInflaterLogger()">
+    参数 值1 <类型 = 对象类>
+    参数 值2 <类型 = 文本型>
+    参数 值3 <类型 = 长整数>
+    {
+        @ com.xuexiang.xui.utils.WidgetUtils.installLayoutInflaterLogger ((androidx.appcompat.app.AppCompatActivity) @<值1>, @<值2>, @<值3>);
+    }
+}
+
+类 XUI绘制工具 <公开 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.utils.DrawableUtils)." @文档 = "category = \"XUI.工具\"">
+{
+    方法 创建位图取自视图 <公开 静态 类型 = 位图类 @嵌入式方法 = "" 注释 = "用法：创建并返回一个XUI绘制工具, 尚未显示到界面。 参数：值1=窗口组件、值2=小数。 返回：位图类。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 小数>
+    {
+        @ com.xuexiang.xui.utils.DrawableUtils.createBitmapFromView ((android.view.View) @<值1>.GetView (), (float) @<值2>)
+    }
+
+    方法 创建位图取自网页视图 <公开 静态 类型 = 位图类 @嵌入式方法 = "" 注释 = "用法：创建并返回一个XUI绘制工具, 尚未显示到界面。 参数：值1=窗口组件。 返回：位图类。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    {
+        @ com.xuexiang.xui.utils.DrawableUtils.createBitmapFromWebView ((android.view.View) @<值1>.GetView ())
+    }
+
+    方法 创建位图取自网页视图_2 <公开 静态 类型 = 位图类 @嵌入式方法 = "" 注释 = "用法：创建并返回一个XUI绘制工具, 尚未显示到界面。 参数：值1=窗口组件、值2=小数。 返回：位图类。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 小数>
+    {
+        @ com.xuexiang.xui.utils.DrawableUtils.createBitmapFromWebView ((android.view.View) @<值1>.GetView (), (float) @<值2>)
+    }
+
+    方法 创建位图取自视图_2 <公开 静态 类型 = 位图类 @嵌入式方法 = "" 注释 = "用法：创建并返回一个XUI绘制工具, 尚未显示到界面。 参数：值1=窗口组件。 返回：位图类。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    {
+        @ com.xuexiang.xui.utils.DrawableUtils.createBitmapFromView ((android.view.View) @<值1>.GetView ())
+    }
+
+    方法 创建位图取自视图_3 <公开 静态 类型 = 位图类 @嵌入式方法 = "" 注释 = "用法：创建并返回一个XUI绘制工具, 尚未显示到界面。 参数：值1=窗口组件、值2=整数、值3=整数、值4=整数、值5=整数。 返回：位图类。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 整数>
+    参数 值5 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.DrawableUtils.createBitmapFromView ((android.view.View) @<值1>.GetView (), @<值2>, @<值3>, @<值4>, @<值5>)
+    }
+
+    方法 创建位图安全地 <公开 静态 类型 = 位图类 @嵌入式方法 = "" 注释 = "用法：安全的创建bitmap。 参数：width=整数、height=整数、config=对象、retryCount=整数。 返回：位图类。 原方法：DrawableUtils.createBitmapSafely()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 对象类>
+    参数 值4 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.DrawableUtils.createBitmapSafely (@<值1>, @<值2>, (android.graphics.Bitmap$Config) @<值3>, @<值4>)
+    }
+
+    方法 创建位图安全地_2 <公开 静态 类型 = 位图类 @嵌入式方法 = "" 注释 = "用法：安全的创建bitmap。 参数：source=位图类、x=整数、y=整数、width=整数、height=整数、retryCount=整数。 返回：位图类。 原方法：DrawableUtils.createBitmapSafely()">
+    参数 值1 <类型 = 位图类>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 整数>
+    参数 值5 <类型 = 整数>
+    参数 值6 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.DrawableUtils.createBitmapSafely (@<值1>, @<值2>, @<值3>, @<值4>, @<值5>, @<值6>)
+    }
+
+    方法 创建图形带大小 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：创建一张指定大小的纯色图片，支持圆角。 参数：resources=对象、width=整数、height=整数、cornerRadius=整数、filledColor=整数。 返回：对象类。 原方法：DrawableUtils.createDrawableWithSize()">
+    参数 值1 <类型 = 对象类>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 整数>
+    参数 值5 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.DrawableUtils.createDrawableWithSize ((android.content.res.Resources) @<值1>, @<值2>, @<值3>, @<值4>, @<值5>)
+    }
+
+    方法 设置图形着色颜色 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：设置Drawable的颜色。 参数：drawable=可绘制对象类、tintColor=整数。 返回：对象类。 原方法：DrawableUtils.setDrawableTintColor()">
+    参数 值1 <类型 = 可绘制对象类>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.DrawableUtils.setDrawableTintColor (@<值1>, @<值2>)
+    }
+
+    方法 创建圆形渐变图形 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：创建并返回一个XUI绘制工具, 尚未显示到界面。 参数：值1=整数、值2=整数、值3=整数、值4=小数、值5=小数。 返回：对象类。 原方法：DrawableUtils.createCircleGradientDrawable()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 小数>
+    参数 值5 <类型 = 小数>
+    {
+        @ com.xuexiang.xui.utils.DrawableUtils.createCircleGradientDrawable (@<值1>, @<值2>, @<值3>, (float) @<值4>, (float) @<值5>)
+    }
+
+    方法 创建项分隔符背景 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：动态创建带上分隔线或下分隔线的Drawable。 参数：separatorColor=整数、bgColor=整数、separatorHeight=整数、top=真/假。 返回：对象类。 原方法：DrawableUtils.createItemSeparatorBg()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 逻辑型>
+    {
+        @ com.xuexiang.xui.utils.DrawableUtils.createItemSeparatorBg (@<值1>, @<值2>, @<值3>, @<值4>)
+    }
+
+    方法 创建圆形图形带文本 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：创建一张指定大小的圆形图片，并附带文字。 参数：resources=对象、size=整数、filledColor=整数、text=文本、textSize=小数、textColor=整数。 返回：对象类。 原方法：DrawableUtils.createCircleDrawableWithText()">
+    参数 值1 <类型 = 对象类>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 文本型>
+    参数 值5 <类型 = 小数>
+    参数 值6 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.DrawableUtils.createCircleDrawableWithText ((android.content.res.Resources) @<值1>, @<值2>, @<值3>, @<值4>, (float) @<值5>, @<值6>)
+    }
+
+    方法 取基线距离 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：获取画笔的基线距离。 参数：paint=对象。 返回：小数。 原方法：DrawableUtils.getBaselineDistance()">
+    参数 值1 <类型 = 对象类>
+    {
+        @ (double) (com.xuexiang.xui.utils.DrawableUtils.getBaselineDistance ((android.graphics.Paint) @<值1>))
+    }
+
+    方法 取图形 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：实体 得到随机色 状态选择器。 参数：cornerRadius=整数。 返回：对象类。 原方法：DrawableUtils.getDrawable()">
+    参数 值1 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.DrawableUtils.getDrawable (@<值1>)
+    }
+
+    方法 取图形_2 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：实体 按下的颜色加深。 参数：cornerRadius=整数、normalColor=整数。 返回：对象类。 原方法：DrawableUtils.getDrawable()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.DrawableUtils.getDrawable (@<值1>, @<值2>)
+    }
+
+    方法 取图形_3 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：实体 状态选择器。 参数：cornerRadius=整数、pressedColor=整数、normalColor=整数。 返回：对象类。 原方法：DrawableUtils.getDrawable()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.DrawableUtils.getDrawable (@<值1>, @<值2>, @<值3>)
+    }
+
+    方法 取状态列表图形 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：背景选择器。 参数：pressedDrawable=可绘制对象类、normalDrawable=可绘制对象类。 返回：对象类。 原方法：DrawableUtils.getStateListDrawable()">
+    参数 值1 <类型 = 可绘制对象类>
+    参数 值2 <类型 = 可绘制对象类>
+    {
+        @ com.xuexiang.xui.utils.DrawableUtils.getStateListDrawable (@<值1>, @<值2>)
+    }
+
+    方法 取实心矩形图形 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：得到实心的drawable, 一般作为选中，点中的效果。 参数：cornerRadius=整数、solidColor=整数。 返回：对象类。 原方法：DrawableUtils.getSolidRectDrawable()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.DrawableUtils.getSolidRectDrawable (@<值1>, @<值2>)
+    }
+
+    方法 设置着色 <公开 静态 类型 = 可绘制对象类 @嵌入式方法 = "" 注释 = "用法：给drawable上色。 参数：drawable=可绘制对象类、tint=整数。 返回：可绘制对象类。 原方法：DrawableUtils.setTint()">
+    参数 值1 <类型 = 可绘制对象类>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.DrawableUtils.setTint (@<值1>, @<值2>)
+    }
+
+    方法 设置着色列表 <公开 静态 类型 = 可绘制对象类 @嵌入式方法 = "" 注释 = "用法：给drawable上色。 参数：drawable=可绘制对象类、tint=对象。 返回：可绘制对象类。 原方法：DrawableUtils.setTintList()">
+    参数 值1 <类型 = 可绘制对象类>
+    参数 值2 <类型 = 对象类>
+    {
+        @ com.xuexiang.xui.utils.DrawableUtils.setTintList (@<值1>, (android.content.res.ColorStateList) @<值2>)
+    }
+
+    方法 取矢量图形 <公开 静态 类型 = 可绘制对象类 @嵌入式方法 = "" 注释 = "用法：读出XUI绘制工具的矢量图形。 参数：值1=安卓环境、值2=整数。 返回：可绘制对象类。 原方法：DrawableUtils.getVectorDrawable()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.DrawableUtils.getVectorDrawable (@<值1>, @<值2>)
+    }
+
+    方法 矢量图形到位图 <公开 静态 类型 = 位图类 @嵌入式方法 = "" 注释 = "用法：XUI绘制工具 的 矢量图形到位图, 行为与 XUI 底层同名方法一致。 参数：值1=安卓环境、值2=整数。 返回：位图类。 原方法：DrawableUtils.vectorDrawableToBitmap()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.DrawableUtils.vectorDrawableToBitmap (@<值1>, @<值2>)
+    }
+
+    方法 取支持右到左图形 <公开 静态 类型 = 可绘制对象类 @嵌入式方法 = "" 注释 = "用法：获取支持RTL布局的drawable【如果是RTL布局就旋转180度】。 参数：context=安卓环境、src=可绘制对象类。 返回：可绘制对象类。 原方法：DrawableUtils.getSupportRTLDrawable()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 可绘制对象类>
+    {
+        @ com.xuexiang.xui.utils.DrawableUtils.getSupportRTLDrawable (@<值1>, @<值2>)
+    }
+
+    方法 取支持右到左图形_2 <公开 静态 类型 = 可绘制对象类 @嵌入式方法 = "" 注释 = "用法：获取支持RTL布局的drawable【如果是RTL布局就旋转180度】。 参数：context=安卓环境、src=可绘制对象类、recycle=真/假。 返回：可绘制对象类。 原方法：DrawableUtils.getSupportRTLDrawable()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 可绘制对象类>
+    参数 值3 <类型 = 逻辑型>
+    {
+        @ com.xuexiang.xui.utils.DrawableUtils.getSupportRTLDrawable (@<值1>, @<值2>, @<值3>)
+    }
+
+    方法 旋转 <公开 静态 类型 = 可绘制对象类 @嵌入式方法 = "" 注释 = "用法：XUI绘制工具 的 旋转, 行为与 XUI 底层同名方法一致。 参数：值1=可绘制对象类、值2=整数、值3=小数、值4=小数、值5=真/假。 返回：可绘制对象类。 原方法：DrawableUtils.rotate()">
+    参数 值1 <类型 = 可绘制对象类>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 小数>
+    参数 值4 <类型 = 小数>
+    参数 值5 <类型 = 逻辑型>
+    {
+        @ com.xuexiang.xui.utils.DrawableUtils.rotate (@<值1>, @<值2>, (float) @<值3>, (float) @<值4>, @<值5>)
+    }
+
+    方法 旋转_2 <公开 静态 类型 = 位图类 @嵌入式方法 = "" 注释 = "用法：XUI绘制工具 的 旋转_2, 行为与 XUI 底层同名方法一致。 参数：值1=位图类、值2=整数、值3=小数、值4=小数、值5=真/假。 返回：位图类。 原方法：DrawableUtils.rotate()">
+    参数 值1 <类型 = 位图类>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 小数>
+    参数 值4 <类型 = 小数>
+    参数 值5 <类型 = 逻辑型>
+    {
+        @ com.xuexiang.xui.utils.DrawableUtils.rotate (@<值1>, @<值2>, (float) @<值3>, (float) @<值4>, @<值5>)
+    }
+
+    方法 取位图按图形标识 <公开 静态 类型 = 位图类 @嵌入式方法 = "" 注释 = "用法：获取图片。 参数：context=安卓环境、resId=整数。 返回：位图类。 原方法：DrawableUtils.getBitmapByDrawableId()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.DrawableUtils.getBitmapByDrawableId (@<值1>, @<值2>)
+    }
+
+    方法 图形2位图 <公开 静态 类型 = 位图类 @嵌入式方法 = "" 注释 = "用法：XUI绘制工具 的 图形2位图, 行为与 XUI 底层同名方法一致。 参数：值1=可绘制对象类。 返回：位图类。 原方法：DrawableUtils.drawable2Bitmap()">
+    参数 值1 <类型 = 可绘制对象类>
+    {
+        @ com.xuexiang.xui.utils.DrawableUtils.drawable2Bitmap (@<值1>)
+    }
+
+    方法 位图2图形 <公开 静态 类型 = 可绘制对象类 @嵌入式方法 = "" 注释 = "用法：XUI绘制工具 的 位图2图形, 行为与 XUI 底层同名方法一致。 参数：值1=位图类。 返回：可绘制对象类。 原方法：DrawableUtils.bitmap2Drawable()">
+    参数 值1 <类型 = 位图类>
+    {
+        @ com.xuexiang.xui.utils.DrawableUtils.bitmap2Drawable (@<值1>)
+    }
+}
+
+类 XUI分割线工具 <公开 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.utils.DividerUtils)." @文档 = "category = \"XUI.工具\"">
+{
+    方法 绘制上 <公开 静态 @嵌入式方法 = "" 注释 = "用法：在XUI分割线工具上绘制上。 参数：值1=对象、值2=可绘制对象类、值3=窗口组件、值4=窗口组件。 返回：无。 原方法：@<值4>.GetView()">
+    参数 值1 <类型 = 对象类>
+    参数 值2 <类型 = 可绘制对象类>
+    参数 值3 <类型 = 窗口组件>
+    参数 值4 <类型 = 窗口组件>
+    {
+        @ com.xuexiang.xui.utils.DividerUtils.drawTop ((android.graphics.Canvas) @<值1>, @<值2>, (android.view.View) @<值3>.GetView (), (android.view.ViewGroup$MarginLayoutParams) @<值4>.GetView ());
+    }
+
+    方法 绘制下 <公开 静态 @嵌入式方法 = "" 注释 = "用法：在XUI分割线工具上绘制下。 参数：值1=对象、值2=可绘制对象类、值3=窗口组件、值4=窗口组件。 返回：无。 原方法：@<值4>.GetView()">
+    参数 值1 <类型 = 对象类>
+    参数 值2 <类型 = 可绘制对象类>
+    参数 值3 <类型 = 窗口组件>
+    参数 值4 <类型 = 窗口组件>
+    {
+        @ com.xuexiang.xui.utils.DividerUtils.drawBottom ((android.graphics.Canvas) @<值1>, @<值2>, (android.view.View) @<值3>.GetView (), (android.view.ViewGroup$MarginLayoutParams) @<值4>.GetView ());
+    }
+
+    方法 绘制左 <公开 静态 @嵌入式方法 = "" 注释 = "用法：在XUI分割线工具上绘制左。 参数：值1=对象、值2=可绘制对象类、值3=窗口组件、值4=窗口组件。 返回：无。 原方法：@<值4>.GetView()">
+    参数 值1 <类型 = 对象类>
+    参数 值2 <类型 = 可绘制对象类>
+    参数 值3 <类型 = 窗口组件>
+    参数 值4 <类型 = 窗口组件>
+    {
+        @ com.xuexiang.xui.utils.DividerUtils.drawLeft ((android.graphics.Canvas) @<值1>, @<值2>, (android.view.View) @<值3>.GetView (), (android.view.ViewGroup$MarginLayoutParams) @<值4>.GetView ());
+    }
+
+    方法 绘制右 <公开 静态 @嵌入式方法 = "" 注释 = "用法：在XUI分割线工具上绘制右。 参数：值1=对象、值2=可绘制对象类、值3=窗口组件、值4=窗口组件。 返回：无。 原方法：@<值4>.GetView()">
+    参数 值1 <类型 = 对象类>
+    参数 值2 <类型 = 可绘制对象类>
+    参数 值3 <类型 = 窗口组件>
+    参数 值4 <类型 = 窗口组件>
+    {
+        @ com.xuexiang.xui.utils.DividerUtils.drawRight ((android.graphics.Canvas) @<值1>, @<值2>, (android.view.View) @<值3>.GetView (), (android.view.ViewGroup$MarginLayoutParams) @<值4>.GetView ());
+    }
+
+    方法 绘制上对齐项 <公开 静态 @嵌入式方法 = "" 注释 = "用法：在XUI分割线工具上绘制上对齐项。 参数：值1=对象、值2=可绘制对象类、值3=窗口组件、值4=窗口组件。 返回：无。 原方法：@<值4>.GetView()">
+    参数 值1 <类型 = 对象类>
+    参数 值2 <类型 = 可绘制对象类>
+    参数 值3 <类型 = 窗口组件>
+    参数 值4 <类型 = 窗口组件>
+    {
+        @ com.xuexiang.xui.utils.DividerUtils.drawTopAlignItem ((android.graphics.Canvas) @<值1>, @<值2>, (android.view.View) @<值3>.GetView (), (android.view.ViewGroup$MarginLayoutParams) @<值4>.GetView ());
+    }
+
+    方法 绘制下对齐项 <公开 静态 @嵌入式方法 = "" 注释 = "用法：在XUI分割线工具上绘制下对齐项。 参数：值1=对象、值2=可绘制对象类、值3=窗口组件、值4=窗口组件。 返回：无。 原方法：@<值4>.GetView()">
+    参数 值1 <类型 = 对象类>
+    参数 值2 <类型 = 可绘制对象类>
+    参数 值3 <类型 = 窗口组件>
+    参数 值4 <类型 = 窗口组件>
+    {
+        @ com.xuexiang.xui.utils.DividerUtils.drawBottomAlignItem ((android.graphics.Canvas) @<值1>, @<值2>, (android.view.View) @<值3>.GetView (), (android.view.ViewGroup$MarginLayoutParams) @<值4>.GetView ());
+    }
+
+    方法 绘制左对齐项 <公开 静态 @嵌入式方法 = "" 注释 = "用法：在XUI分割线工具上绘制左对齐项。 参数：值1=对象、值2=可绘制对象类、值3=窗口组件、值4=窗口组件。 返回：无。 原方法：@<值4>.GetView()">
+    参数 值1 <类型 = 对象类>
+    参数 值2 <类型 = 可绘制对象类>
+    参数 值3 <类型 = 窗口组件>
+    参数 值4 <类型 = 窗口组件>
+    {
+        @ com.xuexiang.xui.utils.DividerUtils.drawLeftAlignItem ((android.graphics.Canvas) @<值1>, @<值2>, (android.view.View) @<值3>.GetView (), (android.view.ViewGroup$MarginLayoutParams) @<值4>.GetView ());
+    }
+
+    方法 绘制右对齐项 <公开 静态 @嵌入式方法 = "" 注释 = "用法：在XUI分割线工具上绘制右对齐项。 参数：值1=对象、值2=可绘制对象类、值3=窗口组件、值4=窗口组件。 返回：无。 原方法：@<值4>.GetView()">
+    参数 值1 <类型 = 对象类>
+    参数 值2 <类型 = 可绘制对象类>
+    参数 值3 <类型 = 窗口组件>
+    参数 值4 <类型 = 窗口组件>
+    {
+        @ com.xuexiang.xui.utils.DividerUtils.drawRightAlignItem ((android.graphics.Canvas) @<值1>, @<值2>, (android.view.View) @<值3>.GetView (), (android.view.ViewGroup$MarginLayoutParams) @<值4>.GetView ());
+    }
+}
+
+类 XUI主题工具 <公开 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.utils.ThemeUtils)." @文档 = "category = \"XUI.工具\"">
+{
+    方法 取已禁用颜色 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：主题工具。 参数：context=安卓环境。 返回：整数。 原方法：ThemeUtils.getDisabledColor()">
+    参数 值1 <类型 = 安卓环境>
+    {
+        @ (int) (com.xuexiang.xui.utils.ThemeUtils.getDisabledColor (@<值1>))
+    }
+
+    方法 调整透明度 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：XUI主题工具 的 调整透明度, 行为与 XUI 底层同名方法一致。 参数：值1=整数、值2=小数。 返回：整数。 原方法：ThemeUtils.adjustAlpha()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 小数>
+    {
+        @ (int) (com.xuexiang.xui.utils.ThemeUtils.adjustAlpha (@<值1>, (float) @<值2>))
+    }
+
+    方法 解析颜色 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：解析颜色并返回结果。 参数：值1=安卓环境、值2=整数。 返回：整数。 原方法：ThemeUtils.resolveColor()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 整数>
+    {
+        @ (int) (com.xuexiang.xui.utils.ThemeUtils.resolveColor (@<值1>, @<值2>))
+    }
+
+    方法 解析颜色_2 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：解析颜色_2并返回结果。 参数：值1=安卓环境、值2=整数、值3=整数。 返回：整数。 原方法：ThemeUtils.resolveColor()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    {
+        @ (int) (com.xuexiang.xui.utils.ThemeUtils.resolveColor (@<值1>, @<值2>, @<值3>))
+    }
+
+    方法 取颜色取自属性资源 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI主题工具的颜色取自属性资源。 参数：值1=整数、值2=整数、值3=安卓环境。 返回：整数。 原方法：ThemeUtils.getColorFromAttrRes()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 安卓环境>
+    {
+        @ (int) (com.xuexiang.xui.utils.ThemeUtils.getColorFromAttrRes (@<值1>, @<值2>, @<值3>))
+    }
+
+    方法 解析浮点 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：解析浮点并返回结果。 参数：值1=安卓环境、值2=整数。 返回：小数。 原方法：ThemeUtils.resolveFloat()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 整数>
+    {
+        @ (double) (com.xuexiang.xui.utils.ThemeUtils.resolveFloat (@<值1>, @<值2>))
+    }
+
+    方法 解析整数 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：解析整数并返回结果。 参数：值1=安卓环境、值2=整数。 返回：整数。 原方法：ThemeUtils.resolveInt()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 整数>
+    {
+        @ (int) (com.xuexiang.xui.utils.ThemeUtils.resolveInt (@<值1>, @<值2>))
+    }
+
+    方法 解析整数_2 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：解析整数_2并返回结果。 参数：值1=安卓环境、值2=整数、值3=整数。 返回：整数。 原方法：ThemeUtils.resolveInt()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    {
+        @ (int) (com.xuexiang.xui.utils.ThemeUtils.resolveInt (@<值1>, @<值2>, @<值3>))
+    }
+
+    方法 解析浮点_2 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：解析浮点_2并返回结果。 参数：值1=安卓环境、值2=整数、值3=小数。 返回：小数。 原方法：ThemeUtils.resolveFloat()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 小数>
+    {
+        @ (double) (com.xuexiang.xui.utils.ThemeUtils.resolveFloat (@<值1>, @<值2>, (float) @<值3>))
+    }
+
+    方法 解析动作文本颜色状态列表 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：解析动作文本颜色状态列表并返回结果。 参数：值1=安卓环境、值2=整数、值3=对象。 返回：对象类。 原方法：ThemeUtils.resolveActionTextColorStateList()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 对象类>
+    {
+        @ com.xuexiang.xui.utils.ThemeUtils.resolveActionTextColorStateList (@<值1>, @<值2>, (android.content.res.ColorStateList) @<值3>)
+    }
+
+    方法 取动作文本颜色状态列表 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：读出XUI主题工具的动作文本颜色状态列表。 参数：值1=安卓环境、值2=整数。 返回：对象类。 原方法：ThemeUtils.getActionTextColorStateList()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.ThemeUtils.getActionTextColorStateList (@<值1>, @<值2>)
+    }
+
+    方法 取颜色 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI主题工具的颜色。 参数：值1=安卓环境、值2=整数。 返回：整数。 原方法：ThemeUtils.getColor()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 整数>
+    {
+        @ (int) (com.xuexiang.xui.utils.ThemeUtils.getColor (@<值1>, @<值2>))
+    }
+
+    方法 解析字符串 <公开 静态 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：解析字符串并返回结果。 参数：值1=安卓环境、值2=整数。 返回：文本型。 原方法：ThemeUtils.resolveString()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.ThemeUtils.resolveString (@<值1>, @<值2>)
+    }
+
+    方法 解析字符串_2 <公开 静态 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：解析字符串_2并返回结果。 参数：值1=安卓环境、值2=整数、值3=文本。 返回：文本型。 原方法：ThemeUtils.resolveString()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 文本型>
+    {
+        @ com.xuexiang.xui.utils.ThemeUtils.resolveString (@<值1>, @<值2>, @<值3>)
+    }
+
+    方法 解析字符串_3 <公开 静态 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：解析字符串_3并返回结果。 参数：值1=对象、值2=整数。 返回：文本型。 原方法：ThemeUtils.resolveString()">
+    参数 值1 <类型 = 对象类>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.ThemeUtils.resolveString ((android.content.res.Resources$Theme) @<值1>, @<值2>)
+    }
+
+    方法 解析图形 <公开 静态 类型 = 可绘制对象类 @嵌入式方法 = "" 注释 = "用法：解析图形并返回结果。 参数：值1=安卓环境、值2=整数。 返回：可绘制对象类。 原方法：ThemeUtils.resolveDrawable()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.ThemeUtils.resolveDrawable (@<值1>, @<值2>)
+    }
+
+    方法 解析图形_2 <公开 静态 类型 = 可绘制对象类 @嵌入式方法 = "" 注释 = "用法：解析图形_2并返回结果。 参数：值1=安卓环境、值2=整数、值3=可绘制对象类。 返回：可绘制对象类。 原方法：ThemeUtils.resolveDrawable()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 可绘制对象类>
+    {
+        @ com.xuexiang.xui.utils.ThemeUtils.resolveDrawable (@<值1>, @<值2>, @<值3>)
+    }
+
+    方法 解析尺寸值 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：解析尺寸值并返回结果。 参数：值1=安卓环境、值2=整数。 返回：整数。 原方法：ThemeUtils.resolveDimension()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 整数>
+    {
+        @ (int) (com.xuexiang.xui.utils.ThemeUtils.resolveDimension (@<值1>, @<值2>))
+    }
+
+    方法 解析尺寸值_2 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：解析尺寸值_2并返回结果。 参数：值1=安卓环境、值2=整数、值3=整数。 返回：整数。 原方法：ThemeUtils.resolveDimension()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    {
+        @ (int) (com.xuexiang.xui.utils.ThemeUtils.resolveDimension (@<值1>, @<值2>, @<值3>))
+    }
+
+    方法 解析布尔 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：解析布尔并返回结果。 参数：值1=安卓环境、值2=整数、值3=真/假。 返回：逻辑型。 原方法：ThemeUtils.resolveBoolean()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 逻辑型>
+    {
+        @ com.xuexiang.xui.utils.ThemeUtils.resolveBoolean (@<值1>, @<值2>, @<值3>)
+    }
+
+    方法 解析布尔_2 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：解析布尔_2并返回结果。 参数：值1=安卓环境、值2=整数。 返回：逻辑型。 原方法：ThemeUtils.resolveBoolean()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.ThemeUtils.resolveBoolean (@<值1>, @<值2>)
+    }
+
+    方法 是否颜色深色 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断XUI主题工具是否颜色深色。 参数：值1=整数。 返回：逻辑型。 原方法：ThemeUtils.isColorDark()">
+    参数 值1 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.ThemeUtils.isColorDark (@<值1>)
+    }
+
+    方法 设置背景兼容 <公开 静态 @嵌入式方法 = "" 注释 = "用法：把XUI主题工具的背景兼容设为给定值。 参数：值1=窗口组件、值2=可绘制对象类。 返回：无。 原方法：@<值1>.GetView()">
+    参数 值1 <类型 = 窗口组件>
+    参数 值2 <类型 = 可绘制对象类>
+    {
+        @ com.xuexiang.xui.utils.ThemeUtils.setBackgroundCompat ((android.view.View) @<值1>.GetView (), @<值2>);
+    }
+
+    方法 取动作文本状态列表 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：读出XUI主题工具的动作文本状态列表。 参数：值1=安卓环境、值2=整数。 返回：对象类。 原方法：ThemeUtils.getActionTextStateList()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.ThemeUtils.getActionTextStateList (@<值1>, @<值2>)
+    }
+
+    方法 取颜色数组 <公开 静态 类型 = "整数 []" @嵌入式方法 = "" 注释 = "用法：读出XUI主题工具的颜色数组。 参数：值1=安卓环境、值2=整数。 返回：无。 原方法：ThemeUtils.getColorArray()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.ThemeUtils.getColorArray (@<值1>, @<值2>)
+    }
+
+    方法 是否内 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断XUI主题工具是否内。 参数：值1=对象、值2=对象类。 返回：逻辑型。 原方法：ThemeUtils.isIn()">
+    参数 值1 <类型 = 对象类>
+    参数 值2 <类型 = "对象类 []">
+    {
+        @ com.xuexiang.xui.utils.ThemeUtils.isIn (@<值1>, @<值2>)
+    }
+
+    方法 取主主题颜色 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：获取主题色。 参数：context=安卓环境。 返回：整数。 原方法：ThemeUtils.getMainThemeColor()">
+    参数 值1 <类型 = 安卓环境>
+    {
+        @ (int) (com.xuexiang.xui.utils.ThemeUtils.getMainThemeColor (@<值1>))
+    }
+
+    方法 是否夜间模式 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：当前是否是处于深色模式。 参数：无。 返回：逻辑型。 原方法：ThemeUtils.isNightMode()">
+    {
+        @ com.xuexiang.xui.utils.ThemeUtils.isNightMode ()
+    }
+
+    方法 是否夜间模式_2 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：当前是否是处于深色模式。 参数：context=安卓环境。 返回：逻辑型。 原方法：ThemeUtils.isNightMode()">
+    参数 值1 <类型 = 安卓环境>
+    {
+        @ com.xuexiang.xui.utils.ThemeUtils.isNightMode (@<值1>)
+    }
+
+    方法 应用主题 <公开 静态 @嵌入式方法 = "" 注释 = "用法：设置应用的主题（深色模式）。 参数：theme=整数。 返回：无。 原方法：ThemeUtils.applyTheme()">
+    参数 值1 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.utils.ThemeUtils.applyTheme (@<值1>);
+    }
+
+    方法 解析对齐方式枚举 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：解析对齐方式枚举并返回结果。 参数：值1=安卓环境、值2=整数、值3=对象。 返回：对象类。 原方法：ThemeUtils.resolveGravityEnum()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 对象类>
+    {
+        @ com.xuexiang.xui.utils.ThemeUtils.resolveGravityEnum (@<值1>, @<值2>, (com.xuexiang.xui.widget.dialog.materialdialog.GravityEnum) @<值3>)
+    }
+}
+
+类 XUI快捷方式工具 <公开 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.utils.ShortcutUtils)." @文档 = "category = \"XUI.工具\"">
+{
+    方法 添加固定快捷方式 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：增加桌面快捷方式。 参数：context=安卓环境、targetClass=对象、shortcutId=文本、iconResourceId=整数、shortLabel=文本、resultReceiver=对象。 返回：逻辑型。 原方法：ShortcutUtils.addPinShortcut()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 对象类>
+    参数 值3 <类型 = 文本型>
+    参数 值4 <类型 = 整数>
+    参数 值5 <类型 = 文本型>
+    参数 值6 <类型 = 对象类>
+    {
+        @ com.xuexiang.xui.utils.ShortcutUtils.addPinShortcut (@<值1>, (java.lang.Class) @<值2>, @<值3>, @<值4>, @<值5>, (java.lang.Class) @<值6>)
+    }
+
+    方法 添加固定快捷方式上方N <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：增加桌面快捷方式。 参数：context=安卓环境、targetClass=对象、shortcutId=文本、icon=对象、shortLabel=文本、resultReceiver=对象。 返回：逻辑型。 原方法：ShortcutUtils.addPinShortcutAboveN()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 对象类>
+    参数 值3 <类型 = 文本型>
+    参数 值4 <类型 = 对象类>
+    参数 值5 <类型 = 文本型>
+    参数 值6 <类型 = 对象类>
+    {
+        @ com.xuexiang.xui.utils.ShortcutUtils.addPinShortcutAboveN (@<值1>, (java.lang.Class) @<值2>, @<值3>, (androidx.core.graphics.drawable.IconCompat) @<值4>, @<值5>, (java.lang.Class) @<值6>)
+    }
+
+    方法 添加快捷方式下方安卓N <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：增加桌面快捷方式。 参数：context=安卓环境、targetClass=对象、iconResourceId=整数、shortLabel=文本。 返回：逻辑型。 原方法：ShortcutUtils.addShortcutBelowAndroidN()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 对象类>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 文本型>
+    {
+        @ com.xuexiang.xui.utils.ShortcutUtils.addShortcutBelowAndroidN (@<值1>, (java.lang.Class) @<值2>, @<值3>, @<值4>)
+    }
+}
+
+类 XUI原生吐司 <公开 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.toast.XToast)." @文档 = "category = \"XUI.工具\"">
+{
+    方法 常规 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：XUI原生吐司 的 常规, 行为与 XUI 底层同名方法一致。 参数：值1=安卓环境、值2=整数。 返回：对象类。 原方法：XToast.normal()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.widget.toast.XToast.normal (@<值1>, @<值2>)
+    }
+
+    方法 常规_2 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：XUI原生吐司 的 常规_2, 行为与 XUI 底层同名方法一致。 参数：值1=安卓环境、值2=文本。 返回：对象类。 原方法：XToast.normal()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 文本型>
+    {
+        @ com.xuexiang.xui.widget.toast.XToast.normal (@<值1>, @<值2>)
+    }
+
+    方法 常规_3 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：XUI原生吐司 的 常规_3, 行为与 XUI 底层同名方法一致。 参数：值1=安卓环境、值2=整数、值3=可绘制对象类。 返回：对象类。 原方法：XToast.normal()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 可绘制对象类>
+    {
+        @ com.xuexiang.xui.widget.toast.XToast.normal (@<值1>, @<值2>, @<值3>)
+    }
+
+    方法 常规_4 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：XUI原生吐司 的 常规_4, 行为与 XUI 底层同名方法一致。 参数：值1=安卓环境、值2=文本、值3=可绘制对象类。 返回：对象类。 原方法：XToast.normal()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 文本型>
+    参数 值3 <类型 = 可绘制对象类>
+    {
+        @ com.xuexiang.xui.widget.toast.XToast.normal (@<值1>, @<值2>, @<值3>)
+    }
+
+    方法 常规_5 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：XUI原生吐司 的 常规_5, 行为与 XUI 底层同名方法一致。 参数：值1=安卓环境、值2=整数、值3=整数。 返回：对象类。 原方法：XToast.normal()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.widget.toast.XToast.normal (@<值1>, @<值2>, @<值3>)
+    }
+
+    方法 常规_6 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：XUI原生吐司 的 常规_6, 行为与 XUI 底层同名方法一致。 参数：值1=安卓环境、值2=文本、值3=整数。 返回：对象类。 原方法：XToast.normal()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 文本型>
+    参数 值3 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.widget.toast.XToast.normal (@<值1>, @<值2>, @<值3>)
+    }
+
+    方法 常规_7 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：XUI原生吐司 的 常规_7, 行为与 XUI 底层同名方法一致。 参数：值1=安卓环境、值2=整数、值3=整数、值4=可绘制对象类。 返回：对象类。 原方法：XToast.normal()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 可绘制对象类>
+    {
+        @ com.xuexiang.xui.widget.toast.XToast.normal (@<值1>, @<值2>, @<值3>, @<值4>)
+    }
+
+    方法 常规_8 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：XUI原生吐司 的 常规_8, 行为与 XUI 底层同名方法一致。 参数：值1=安卓环境、值2=文本、值3=整数、值4=可绘制对象类。 返回：对象类。 原方法：XToast.normal()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 文本型>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 可绘制对象类>
+    {
+        @ com.xuexiang.xui.widget.toast.XToast.normal (@<值1>, @<值2>, @<值3>, @<值4>)
+    }
+
+    方法 常规_9 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：XUI原生吐司 的 常规_9, 行为与 XUI 底层同名方法一致。 参数：值1=安卓环境、值2=整数、值3=整数、值4=可绘制对象类、值5=真/假。 返回：对象类。 原方法：XToast.normal()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 可绘制对象类>
+    参数 值5 <类型 = 逻辑型>
+    {
+        @ com.xuexiang.xui.widget.toast.XToast.normal (@<值1>, @<值2>, @<值3>, @<值4>, @<值5>)
+    }
+
+    方法 常规_10 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：XUI原生吐司 的 常规_10, 行为与 XUI 底层同名方法一致。 参数：值1=安卓环境、值2=文本、值3=整数、值4=可绘制对象类、值5=真/假。 返回：对象类。 原方法：XToast.normal()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 文本型>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 可绘制对象类>
+    参数 值5 <类型 = 逻辑型>
+    {
+        @ com.xuexiang.xui.widget.toast.XToast.normal (@<值1>, @<值2>, @<值3>, @<值4>, @<值5>)
+    }
+
+    方法 警告 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：XUI原生吐司 的 警告, 行为与 XUI 底层同名方法一致。 参数：值1=安卓环境、值2=整数。 返回：对象类。 原方法：XToast.warning()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.widget.toast.XToast.warning (@<值1>, @<值2>)
+    }
+
+    方法 警告_2 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：XUI原生吐司 的 警告_2, 行为与 XUI 底层同名方法一致。 参数：值1=安卓环境、值2=文本。 返回：对象类。 原方法：XToast.warning()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 文本型>
+    {
+        @ com.xuexiang.xui.widget.toast.XToast.warning (@<值1>, @<值2>)
+    }
+
+    方法 警告_3 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：XUI原生吐司 的 警告_3, 行为与 XUI 底层同名方法一致。 参数：值1=安卓环境、值2=整数、值3=整数。 返回：对象类。 原方法：XToast.warning()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.widget.toast.XToast.warning (@<值1>, @<值2>, @<值3>)
+    }
+
+    方法 警告_4 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：XUI原生吐司 的 警告_4, 行为与 XUI 底层同名方法一致。 参数：值1=安卓环境、值2=文本、值3=整数。 返回：对象类。 原方法：XToast.warning()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 文本型>
+    参数 值3 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.widget.toast.XToast.warning (@<值1>, @<值2>, @<值3>)
+    }
+
+    方法 警告_5 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：XUI原生吐司 的 警告_5, 行为与 XUI 底层同名方法一致。 参数：值1=安卓环境、值2=整数、值3=整数、值4=真/假。 返回：对象类。 原方法：XToast.warning()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 逻辑型>
+    {
+        @ com.xuexiang.xui.widget.toast.XToast.warning (@<值1>, @<值2>, @<值3>, @<值4>)
+    }
+
+    方法 警告_6 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：XUI原生吐司 的 警告_6, 行为与 XUI 底层同名方法一致。 参数：值1=安卓环境、值2=文本、值3=整数、值4=真/假。 返回：对象类。 原方法：XToast.warning()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 文本型>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 逻辑型>
+    {
+        @ com.xuexiang.xui.widget.toast.XToast.warning (@<值1>, @<值2>, @<值3>, @<值4>)
+    }
+
+    方法 信息 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：XUI原生吐司 的 信息, 行为与 XUI 底层同名方法一致。 参数：值1=安卓环境、值2=整数。 返回：对象类。 原方法：XToast.info()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.widget.toast.XToast.info (@<值1>, @<值2>)
+    }
+
+    方法 信息_2 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：XUI原生吐司 的 信息_2, 行为与 XUI 底层同名方法一致。 参数：值1=安卓环境、值2=文本。 返回：对象类。 原方法：XToast.info()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 文本型>
+    {
+        @ com.xuexiang.xui.widget.toast.XToast.info (@<值1>, @<值2>)
+    }
+
+    方法 信息_3 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：XUI原生吐司 的 信息_3, 行为与 XUI 底层同名方法一致。 参数：值1=安卓环境、值2=整数、值3=整数。 返回：对象类。 原方法：XToast.info()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.widget.toast.XToast.info (@<值1>, @<值2>, @<值3>)
+    }
+
+    方法 信息_4 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：XUI原生吐司 的 信息_4, 行为与 XUI 底层同名方法一致。 参数：值1=安卓环境、值2=文本、值3=整数。 返回：对象类。 原方法：XToast.info()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 文本型>
+    参数 值3 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.widget.toast.XToast.info (@<值1>, @<值2>, @<值3>)
+    }
+
+    方法 信息_5 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：XUI原生吐司 的 信息_5, 行为与 XUI 底层同名方法一致。 参数：值1=安卓环境、值2=整数、值3=整数、值4=真/假。 返回：对象类。 原方法：XToast.info()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 逻辑型>
+    {
+        @ com.xuexiang.xui.widget.toast.XToast.info (@<值1>, @<值2>, @<值3>, @<值4>)
+    }
+
+    方法 信息_6 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：XUI原生吐司 的 信息_6, 行为与 XUI 底层同名方法一致。 参数：值1=安卓环境、值2=文本、值3=整数、值4=真/假。 返回：对象类。 原方法：XToast.info()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 文本型>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 逻辑型>
+    {
+        @ com.xuexiang.xui.widget.toast.XToast.info (@<值1>, @<值2>, @<值3>, @<值4>)
+    }
+
+    方法 成功 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：XUI原生吐司 的 成功, 行为与 XUI 底层同名方法一致。 参数：值1=安卓环境、值2=整数。 返回：对象类。 原方法：XToast.success()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.widget.toast.XToast.success (@<值1>, @<值2>)
+    }
+
+    方法 成功_2 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：XUI原生吐司 的 成功_2, 行为与 XUI 底层同名方法一致。 参数：值1=安卓环境、值2=文本。 返回：对象类。 原方法：XToast.success()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 文本型>
+    {
+        @ com.xuexiang.xui.widget.toast.XToast.success (@<值1>, @<值2>)
+    }
+
+    方法 成功_3 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：XUI原生吐司 的 成功_3, 行为与 XUI 底层同名方法一致。 参数：值1=安卓环境、值2=整数、值3=整数。 返回：对象类。 原方法：XToast.success()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.widget.toast.XToast.success (@<值1>, @<值2>, @<值3>)
+    }
+
+    方法 成功_4 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：XUI原生吐司 的 成功_4, 行为与 XUI 底层同名方法一致。 参数：值1=安卓环境、值2=文本、值3=整数。 返回：对象类。 原方法：XToast.success()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 文本型>
+    参数 值3 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.widget.toast.XToast.success (@<值1>, @<值2>, @<值3>)
+    }
+
+    方法 成功_5 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：XUI原生吐司 的 成功_5, 行为与 XUI 底层同名方法一致。 参数：值1=安卓环境、值2=整数、值3=整数、值4=真/假。 返回：对象类。 原方法：XToast.success()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 逻辑型>
+    {
+        @ com.xuexiang.xui.widget.toast.XToast.success (@<值1>, @<值2>, @<值3>, @<值4>)
+    }
+
+    方法 成功_6 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：XUI原生吐司 的 成功_6, 行为与 XUI 底层同名方法一致。 参数：值1=安卓环境、值2=文本、值3=整数、值4=真/假。 返回：对象类。 原方法：XToast.success()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 文本型>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 逻辑型>
+    {
+        @ com.xuexiang.xui.widget.toast.XToast.success (@<值1>, @<值2>, @<值3>, @<值4>)
+    }
+
+    方法 错误 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：XUI原生吐司 的 错误, 行为与 XUI 底层同名方法一致。 参数：值1=安卓环境、值2=整数。 返回：对象类。 原方法：XToast.error()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.widget.toast.XToast.error (@<值1>, @<值2>)
+    }
+
+    方法 错误_2 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：XUI原生吐司 的 错误_2, 行为与 XUI 底层同名方法一致。 参数：值1=安卓环境、值2=文本。 返回：对象类。 原方法：XToast.error()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 文本型>
+    {
+        @ com.xuexiang.xui.widget.toast.XToast.error (@<值1>, @<值2>)
+    }
+
+    方法 错误_3 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：XUI原生吐司 的 错误_3, 行为与 XUI 底层同名方法一致。 参数：值1=安卓环境、值2=整数、值3=整数。 返回：对象类。 原方法：XToast.error()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.widget.toast.XToast.error (@<值1>, @<值2>, @<值3>)
+    }
+
+    方法 错误_4 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：XUI原生吐司 的 错误_4, 行为与 XUI 底层同名方法一致。 参数：值1=安卓环境、值2=文本、值3=整数。 返回：对象类。 原方法：XToast.error()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 文本型>
+    参数 值3 <类型 = 整数>
+    {
+        @ com.xuexiang.xui.widget.toast.XToast.error (@<值1>, @<值2>, @<值3>)
+    }
+
+    方法 错误_5 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：XUI原生吐司 的 错误_5, 行为与 XUI 底层同名方法一致。 参数：值1=安卓环境、值2=整数、值3=整数、值4=真/假。 返回：对象类。 原方法：XToast.error()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 逻辑型>
+    {
+        @ com.xuexiang.xui.widget.toast.XToast.error (@<值1>, @<值2>, @<值3>, @<值4>)
+    }
+
+    方法 错误_6 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：XUI原生吐司 的 错误_6, 行为与 XUI 底层同名方法一致。 参数：值1=安卓环境、值2=文本、值3=整数、值4=真/假。 返回：对象类。 原方法：XToast.error()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 文本型>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 逻辑型>
+    {
+        @ com.xuexiang.xui.widget.toast.XToast.error (@<值1>, @<值2>, @<值3>, @<值4>)
+    }
+
+    方法 自定义 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：XUI原生吐司 的 自定义, 行为与 XUI 底层同名方法一致。 参数：值1=安卓环境、值2=整数、值3=可绘制对象类、值4=整数、值5=真/假。 返回：对象类。 原方法：XToast.custom()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 可绘制对象类>
+    参数 值4 <类型 = 整数>
+    参数 值5 <类型 = 逻辑型>
+    {
+        @ com.xuexiang.xui.widget.toast.XToast.custom (@<值1>, @<值2>, @<值3>, @<值4>, @<值5>)
+    }
+
+    方法 自定义_2 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：XUI原生吐司 的 自定义_2, 行为与 XUI 底层同名方法一致。 参数：值1=安卓环境、值2=文本、值3=可绘制对象类、值4=整数、值5=真/假。 返回：对象类。 原方法：XToast.custom()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 文本型>
+    参数 值3 <类型 = 可绘制对象类>
+    参数 值4 <类型 = 整数>
+    参数 值5 <类型 = 逻辑型>
+    {
+        @ com.xuexiang.xui.widget.toast.XToast.custom (@<值1>, @<值2>, @<值3>, @<值4>, @<值5>)
+    }
+
+    方法 自定义_3 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：XUI原生吐司 的 自定义_3, 行为与 XUI 底层同名方法一致。 参数：值1=安卓环境、值2=整数、值3=整数、值4=整数、值5=整数、值6=真/假、值7=真/假。 返回：对象类。 原方法：XToast.custom()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 整数>
+    参数 值5 <类型 = 整数>
+    参数 值6 <类型 = 逻辑型>
+    参数 值7 <类型 = 逻辑型>
+    {
+        @ com.xuexiang.xui.widget.toast.XToast.custom (@<值1>, @<值2>, @<值3>, @<值4>, @<值5>, @<值6>, @<值7>)
+    }
+
+    方法 自定义_4 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：XUI原生吐司 的 自定义_4, 行为与 XUI 底层同名方法一致。 参数：值1=安卓环境、值2=文本、值3=整数、值4=整数、值5=整数、值6=真/假、值7=真/假。 返回：对象类。 原方法：XToast.custom()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 文本型>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 整数>
+    参数 值5 <类型 = 整数>
+    参数 值6 <类型 = 逻辑型>
+    参数 值7 <类型 = 逻辑型>
+    {
+        @ com.xuexiang.xui.widget.toast.XToast.custom (@<值1>, @<值2>, @<值3>, @<值4>, @<值5>, @<值6>, @<值7>)
+    }
+
+    方法 自定义_5 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：XUI原生吐司 的 自定义_5, 行为与 XUI 底层同名方法一致。 参数：值1=安卓环境、值2=整数、值3=可绘制对象类、值4=整数、值5=整数、值6=真/假、值7=真/假。 返回：对象类。 原方法：XToast.custom()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 可绘制对象类>
+    参数 值4 <类型 = 整数>
+    参数 值5 <类型 = 整数>
+    参数 值6 <类型 = 逻辑型>
+    参数 值7 <类型 = 逻辑型>
+    {
+        @ com.xuexiang.xui.widget.toast.XToast.custom (@<值1>, @<值2>, @<值3>, @<值4>, @<值5>, @<值6>, @<值7>)
+    }
+
+    方法 自定义_6 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：XUI原生吐司 的 自定义_6, 行为与 XUI 底层同名方法一致。 参数：值1=安卓环境、值2=整数、值3=可绘制对象类、值4=整数、值5=整数、值6=整数、值7=真/假、值8=真/假。 返回：对象类。 原方法：XToast.custom()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 可绘制对象类>
+    参数 值4 <类型 = 整数>
+    参数 值5 <类型 = 整数>
+    参数 值6 <类型 = 整数>
+    参数 值7 <类型 = 逻辑型>
+    参数 值8 <类型 = 逻辑型>
+    {
+        @ com.xuexiang.xui.widget.toast.XToast.custom (@<值1>, @<值2>, @<值3>, @<值4>, @<值5>, @<值6>, @<值7>, @<值8>)
+    }
+
+    方法 自定义_7 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "用法：XUI原生吐司 的 自定义_7, 行为与 XUI 底层同名方法一致。 参数：值1=安卓环境、值2=文本、值3=可绘制对象类、值4=整数、值5=整数、值6=整数、值7=真/假、值8=真/假。 返回：对象类。 原方法：XToast.custom()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 文本型>
+    参数 值3 <类型 = 可绘制对象类>
+    参数 值4 <类型 = 整数>
+    参数 值5 <类型 = 整数>
+    参数 值6 <类型 = 整数>
+    参数 值7 <类型 = 逻辑型>
+    参数 值8 <类型 = 逻辑型>
+    {
+        @ com.xuexiang.xui.widget.toast.XToast.custom (@<值1>, @<值2>, @<值3>, @<值4>, @<值5>, @<值6>, @<值7>, @<值8>)
+    }
+}

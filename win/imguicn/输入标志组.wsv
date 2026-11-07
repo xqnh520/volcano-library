@@ -1,0 +1,48 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.即时界面 <注释 = "Dear ImGui v1.91.9b-docking 的火山视窗中文封装，全中文类名/方法名/参数名/注释。" @视窗.头文件搜寻目录 = "imgui"
+        @视窗.外部头文件 = "imcn_helper.h, imcn_host.h"
+        @视窗.外部源文件 = "imgui\\imgui.cpp, imgui\\imgui_draw.cpp, imgui\\imgui_tables.cpp, imgui\\imgui_widgets.cpp, imgui\\imgui_demo.cpp, imgui\\misc\\cpp\\imgui_stdlib.cpp, imgui\\backends\\imgui_impl_win32.cpp, imgui\\backends\\imgui_impl_dx11.cpp">
+
+类 输入框标志 <公开 注释 = "输入框标志，用于即时界面.输入文本" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 无 <公开 类型 = 整数 值 = @ImGuiInputTextFlags_None>
+    常量 仅允许十进制数字 <公开 类型 = 整数 值 = @ImGuiInputTextFlags_CharsDecimal>
+    常量 仅允许十六进制字符 <公开 类型 = 整数 值 = @ImGuiInputTextFlags_CharsHexadecimal>
+    常量 仅允许科学计数法字符 <公开 类型 = 整数 值 = @ImGuiInputTextFlags_CharsScientific>
+    常量 自动转大写 <公开 类型 = 整数 值 = @ImGuiInputTextFlags_CharsUppercase>
+    常量 禁止空格 <公开 类型 = 整数 值 = @ImGuiInputTextFlags_CharsNoBlank>
+    常量 允许制表符输入 <公开 类型 = 整数 值 = @ImGuiInputTextFlags_AllowTabInput>
+    常量 回车时返回真 <公开 类型 = 整数 值 = @ImGuiInputTextFlags_EnterReturnsTrue>
+    常量 Esc清空内容 <公开 类型 = 整数 值 = @ImGuiInputTextFlags_EscapeClearsAll>
+    常量 Ctrl回车换行 <公开 类型 = 整数 值 = @ImGuiInputTextFlags_CtrlEnterForNewLine>
+    常量 只读 <公开 类型 = 整数 值 = @ImGuiInputTextFlags_ReadOnly>
+    常量 密码模式 <公开 类型 = 整数 值 = @ImGuiInputTextFlags_Password>
+    常量 始终覆盖模式 <公开 类型 = 整数 值 = @ImGuiInputTextFlags_AlwaysOverwrite>
+    常量 自动全选 <公开 类型 = 整数 值 = @ImGuiInputTextFlags_AutoSelectAll>
+    常量 空值解析为0 <公开 类型 = 整数 值 = @ImGuiInputTextFlags_ParseEmptyRefVal>
+    常量 空值显示为空 <公开 类型 = 整数 值 = @ImGuiInputTextFlags_DisplayEmptyRefVal>
+    常量 禁止水平滚动 <公开 类型 = 整数 值 = @ImGuiInputTextFlags_NoHorizontalScroll>
+    常量 禁止撤销重做 <公开 类型 = 整数 值 = @ImGuiInputTextFlags_NoUndoRedo>
+    常量 左侧省略 <公开 类型 = 整数 值 = @ImGuiInputTextFlags_ElideLeft>
+    常量 回调补全 <公开 类型 = 整数 值 = @ImGuiInputTextFlags_CallbackCompletion>
+    常量 回调历史 <公开 类型 = 整数 值 = @ImGuiInputTextFlags_CallbackHistory>
+    常量 回调每帧 <公开 类型 = 整数 值 = @ImGuiInputTextFlags_CallbackAlways>
+    常量 回调字符过滤 <公开 类型 = 整数 值 = @ImGuiInputTextFlags_CallbackCharFilter>
+    常量 回调调整大小 <公开 类型 = 整数 值 = @ImGuiInputTextFlags_CallbackResize>
+    常量 回调编辑 <公开 类型 = 整数 值 = @ImGuiInputTextFlags_CallbackEdit>
+}
+类 输入标志 <公开 注释 = "快捷键输入标志" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 无 <公开 类型 = 整数 值 = @ImGuiInputFlags_None>
+    常量 允许重复 <公开 类型 = 整数 值 = @ImGuiInputFlags_Repeat>
+    常量 路由到活动项目 <公开 类型 = 整数 值 = @ImGuiInputFlags_RouteActive>
+    常量 路由到焦点窗口 <公开 类型 = 整数 值 = @ImGuiInputFlags_RouteFocused>
+    常量 全局路由 <公开 类型 = 整数 值 = @ImGuiInputFlags_RouteGlobal>
+    常量 始终路由 <公开 类型 = 整数 值 = @ImGuiInputFlags_RouteAlways>
+    常量 覆盖焦点路由 <公开 类型 = 整数 值 = @ImGuiInputFlags_RouteOverFocused>
+    常量 覆盖活动路由 <公开 类型 = 整数 值 = @ImGuiInputFlags_RouteOverActive>
+    常量 背景未聚焦时路由 <公开 类型 = 整数 值 = @ImGuiInputFlags_RouteUnlessBgFocused>
+    常量 从根窗口路由 <公开 类型 = 整数 值 = @ImGuiInputFlags_RouteFromRootWindow>
+    常量 用于提示框 <公开 类型 = 整数 值 = @ImGuiInputFlags_Tooltip>
+}

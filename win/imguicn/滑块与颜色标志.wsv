@@ -1,0 +1,47 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.即时界面 <注释 = "Dear ImGui v1.91.9b-docking 的火山视窗中文封装，全中文类名/方法名/参数名/注释。" @视窗.头文件搜寻目录 = "imgui"
+        @视窗.外部头文件 = "imcn_helper.h, imcn_host.h"
+        @视窗.外部源文件 = "imgui\\imgui.cpp, imgui\\imgui_draw.cpp, imgui\\imgui_tables.cpp, imgui\\imgui_widgets.cpp, imgui\\imgui_demo.cpp, imgui\\misc\\cpp\\imgui_stdlib.cpp, imgui\\backends\\imgui_impl_win32.cpp, imgui\\backends\\imgui_impl_dx11.cpp">
+
+类 滑块标志 <公开 注释 = "滑块/拖动框标志" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 无 <公开 类型 = 整数 值 = @ImGuiSliderFlags_None>
+    常量 对数刻度 <公开 类型 = 整数 值 = @ImGuiSliderFlags_Logarithmic>
+    常量 不按格式取整 <公开 类型 = 整数 值 = @ImGuiSliderFlags_NoRoundToFormat>
+    常量 禁止直接输入 <公开 类型 = 整数 值 = @ImGuiSliderFlags_NoInput>
+    常量 循环取值 <公开 类型 = 整数 值 = @ImGuiSliderFlags_WrapAround>
+    常量 输入时钳制 <公开 类型 = 整数 值 = @ImGuiSliderFlags_ClampOnInput>
+    常量 零范围钳制 <公开 类型 = 整数 值 = @ImGuiSliderFlags_ClampZeroRange>
+    常量 不调整拖动速度 <公开 类型 = 整数 值 = @ImGuiSliderFlags_NoSpeedTweaks>
+    常量 始终钳制 <公开 类型 = 整数 值 = @ImGuiSliderFlags_AlwaysClamp>
+}
+类 颜色编辑标志 <公开 注释 = "颜色编辑标志" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 无 <公开 类型 = 整数 值 = @ImGuiColorEditFlags_None>
+    常量 无透明度 <公开 类型 = 整数 值 = @ImGuiColorEditFlags_NoAlpha>
+    常量 无拾色器 <公开 类型 = 整数 值 = @ImGuiColorEditFlags_NoPicker>
+    常量 无选项菜单 <公开 类型 = 整数 值 = @ImGuiColorEditFlags_NoOptions>
+    常量 无小预览块 <公开 类型 = 整数 值 = @ImGuiColorEditFlags_NoSmallPreview>
+    常量 无输入框 <公开 类型 = 整数 值 = @ImGuiColorEditFlags_NoInputs>
+    常量 无提示 <公开 类型 = 整数 值 = @ImGuiColorEditFlags_NoTooltip>
+    常量 无标签 <公开 类型 = 整数 值 = @ImGuiColorEditFlags_NoLabel>
+    常量 无侧边预览 <公开 类型 = 整数 值 = @ImGuiColorEditFlags_NoSidePreview>
+    常量 禁止拖放 <公开 类型 = 整数 值 = @ImGuiColorEditFlags_NoDragDrop>
+    常量 无边框 <公开 类型 = 整数 值 = @ImGuiColorEditFlags_NoBorder>
+    常量 透明度不透明 <公开 类型 = 整数 值 = @ImGuiColorEditFlags_AlphaOpaque>
+    常量 透明度无背景 <公开 类型 = 整数 值 = @ImGuiColorEditFlags_AlphaNoBg>
+    常量 半透明度预览 <公开 类型 = 整数 值 = @ImGuiColorEditFlags_AlphaPreviewHalf>
+    常量 显示透明度条 <公开 类型 = 整数 值 = @ImGuiColorEditFlags_AlphaBar>
+    常量 允许HDR数值 <公开 类型 = 整数 值 = @ImGuiColorEditFlags_HDR>
+    常量 显示RGB <公开 类型 = 整数 值 = @ImGuiColorEditFlags_DisplayRGB>
+    常量 显示HSV <公开 类型 = 整数 值 = @ImGuiColorEditFlags_DisplayHSV>
+    常量 显示十六进制 <公开 类型 = 整数 值 = @ImGuiColorEditFlags_DisplayHex>
+    常量 使用8位整数 <公开 类型 = 整数 值 = @ImGuiColorEditFlags_Uint8>
+    常量 使用浮点数 <公开 类型 = 整数 值 = @ImGuiColorEditFlags_Float>
+    常量 色相条拾色器 <公开 类型 = 整数 值 = @ImGuiColorEditFlags_PickerHueBar>
+    常量 色相环拾色器 <公开 类型 = 整数 值 = @ImGuiColorEditFlags_PickerHueWheel>
+    常量 输入RGB <公开 类型 = 整数 值 = @ImGuiColorEditFlags_InputRGB>
+    常量 输入HSV <公开 类型 = 整数 值 = @ImGuiColorEditFlags_InputHSV>
+    常量 透明度预览 <公开 类型 = 整数 值 = @ImGuiColorEditFlags_AlphaPreview>
+}

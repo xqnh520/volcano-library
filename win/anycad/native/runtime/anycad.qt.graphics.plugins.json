@@ -1,0 +1,11 @@
+{
+  "Version": "1.0",
+  "Plugins": [
+    {
+      "Name": "Graphics.Qt",
+      "Url": "AnyCAD.Graphics.Window.Qt",
+      "Enabled": false,
+      "Group": "Graphics"
+    }
+  ]
+}

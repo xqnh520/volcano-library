@@ -1,0 +1,196 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.安卓.XUI <注释 = "XUI 安卓 UI 工具库封装" @文档 = "category = \"XUI\"">
+
+
+类 XUI流式布局 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.flowlayout.FlowLayout)."
+        @文档 = "category = \"XUI.流式布局\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.flowlayout.FlowLayout\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI流式布局, FlowLayout, com.xuexiang.xui.widget.flowlayout.FlowLayout)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetFlowLayout ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI流式布局的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI流式布局.getAlpha()">
+    {
+        @ (double)@sn<this>.GetFlowLayout ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI流式布局的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI流式布局.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetFlowLayout ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI流式布局的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI流式布局.isEnabled()">
+    {
+        @ @sn<this>.GetFlowLayout ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI流式布局的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI流式布局.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetFlowLayout ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI流式布局的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI流式布局.isClickable()">
+    {
+        @ @sn<this>.GetFlowLayout ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI流式布局的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI流式布局.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetFlowLayout ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI流式布局的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI流式布局.getElevation()">
+    {
+        @ (double)@sn<this>.GetFlowLayout ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI流式布局的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI流式布局.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetFlowLayout ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI流式布局的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI流式布局.getMinimumHeight()">
+    {
+        @ @sn<this>.GetFlowLayout ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI流式布局的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI流式布局.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetFlowLayout ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI流式布局的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI流式布局.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetFlowLayout ().setBackgroundColor (@<新值>))
+    }
+
+}
+
+类 XUI流式标签布局 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.flowlayout.FlowTagLayout)."
+        @文档 = "category = \"XUI.流式布局\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.flowlayout.FlowTagLayout\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.ftl_check_mode\n        shown_name = \"选择模式\"\n        data_type = string\n        detail_type = enum\n        item\n        {\n            name = none\n            shown_name = \"none\"\n        }\n        item\n        {\n            name = single\n            shown_name = \"single\"\n        }\n        item\n        {\n            name = multi\n            shown_name = \"multi\"\n        }\n        item\n        {\n            name = display\n            shown_name = \"display\"\n        }\n    }\n    attr\n    {\n        name = app.ftl_single_cancelable\n        shown_name = \"单选模式下选中是否可取消\"\n        data_type = boolean\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI流式标签布局, FlowTagLayout, com.xuexiang.xui.widget.flowlayout.FlowTagLayout)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetFlowTagLayout ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI流式标签布局的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI流式标签布局.getAlpha()">
+    {
+        @ (double)@sn<this>.GetFlowTagLayout ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI流式标签布局的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI流式标签布局.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetFlowTagLayout ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI流式标签布局的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI流式标签布局.isEnabled()">
+    {
+        @ @sn<this>.GetFlowTagLayout ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI流式标签布局的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI流式标签布局.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetFlowTagLayout ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI流式标签布局的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI流式标签布局.isClickable()">
+    {
+        @ @sn<this>.GetFlowTagLayout ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI流式标签布局的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI流式标签布局.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetFlowTagLayout ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI流式标签布局的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI流式标签布局.getElevation()">
+    {
+        @ (double)@sn<this>.GetFlowTagLayout ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI流式标签布局的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI流式标签布局.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetFlowTagLayout ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI流式标签布局的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI流式标签布局.getMinimumHeight()">
+    {
+        @ @sn<this>.GetFlowTagLayout ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI流式标签布局的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI流式标签布局.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetFlowTagLayout ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI流式标签布局的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI流式标签布局.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetFlowTagLayout ().setBackgroundColor (@<新值>))
+    }
+
+    方法 设置单个可取消 <公开 注释 = "用法：把XUI流式标签布局的单个可取消设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI流式标签布局.setSingleCancelable()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetFlowTagLayout ().setSingleCancelable (@<值1>))
+    }
+
+    方法 清空标记组 <公开 注释 = "用法：清空XUI流式标签布局的标记组。 参数：无。 返回：无。 原方法：XUI流式标签布局.clearTags()">
+    {
+        @ @m<RUN_UI_ACTION> (GetFlowTagLayout ().clearTags ())
+    }
+
+    方法 清空选择 <公开 注释 = "用法：清空XUI流式标签布局的选择。 参数：无。 返回：无。 原方法：XUI流式标签布局.clearSelection()">
+    {
+        @ @m<RUN_UI_ACTION> (GetFlowTagLayout ().clearSelection ())
+    }
+
+    方法 设置子项宽度 <公开 注释 = "用法：把XUI流式标签布局的子项宽度设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI流式标签布局.setChildWidth()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetFlowTagLayout ().setChildWidth (@<值1>))
+    }
+
+    方法 取标记检查模式 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI流式标签布局的标记检查模式。 参数：无。 返回：整数。 原方法：XUI流式标签布局.getTagCheckMode()">
+    {
+        @ @sn<this>.GetFlowTagLayout ().getTagCheckMode ()
+    }
+
+    方法 设置标记已勾选模式 <公开 注释 = "用法：把XUI流式标签布局的标记已勾选模式设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI流式标签布局.setTagCheckedMode()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetFlowTagLayout ().setTagCheckedMode (@<值1>))
+    }
+
+    方法 取选中索引 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI流式标签布局的选中索引。 参数：无。 返回：整数。 原方法：XUI流式标签布局.getSelectedIndex()">
+    {
+        @ @sn<this>.GetFlowTagLayout ().getSelectedIndex ()
+    }
+
+    方法 设置选中位置组 <公开 注释 = "用法：把XUI流式标签布局的选中位置组设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI流式标签布局.setSelectedPositions()">
+    参数 值1 <类型 = "整数 []">
+    {
+        @ @m<RUN_UI_ACTION> (GetFlowTagLayout ().setSelectedPositions (@<值1>))
+    }
+
+}

@@ -1,0 +1,7 @@
+{
+    "name":  "thorvg",
+    "version":  "1.0.0",
+    "desc":  "thorvg 类库",
+    "author":  "xqnh520",
+    "entry":  "thorvg.vgrp"
+}

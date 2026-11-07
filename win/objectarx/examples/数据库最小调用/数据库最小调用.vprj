@@ -1,0 +1,71 @@
+doc_format_version = 1
+project_identifier = "wutao.vproject.pc.win.1"
+
+root_filter
+{
+    child_filter
+    {
+        filter1
+        {
+            child_filter
+            {
+                filter1
+                {
+                    collapsed = true
+                    files.num_files = 16
+                    group_file_name = "*plugins\\vprj_win\\classlib\\sys\\base\\base.vgrp"
+                    name = 视窗基本类
+                }
+
+                filter2
+                {
+                    collapsed = true
+                    files.num_files = 4
+                    group_file_name = "*plugins\\vprj_win\\classlib\\sys\\mfc_ui_base\\mfc_ui_base.vgrp"
+                    name = MFC界面基本类
+                }
+
+                filter3
+                {
+                    collapsed = true
+                    files.num_files = 1
+                    group_file_name = "*plugins\\vprj_win\\classlib\\user\\objectarx\\ObjectARX数据库.vgrp"
+                    name = ObjectARX数据库
+                }
+
+                filter4
+                {
+                    collapsed = true
+                    files.num_files = 1
+                    group_file_name = "*plugins\\vprj_win\\classlib\\user\\objectarx\\ObjectARX几何.vgrp"
+                    name = ObjectARX几何
+                }
+
+                num_child_filters = 4
+            }
+
+            name = 系统类库
+        }
+
+        num_child_filters = 1
+    }
+
+    files
+    {
+        file1.file_name = "数据库最小调用.wsv"
+        num_files = 1
+    }
+
+    name = 数据库最小调用
+    type = project
+}
+
+settings
+{
+    project
+    {
+        result_type = 0
+        static_runtime_lib = true
+        target_platform = 0
+    }
+}

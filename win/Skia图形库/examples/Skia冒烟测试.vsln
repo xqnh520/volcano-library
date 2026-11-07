@@ -1,0 +1,21 @@
+doc_format_version = 1
+name = Skia冒烟测试
+property.settings.active_project_name = Skia冒烟测试
+
+root_filter
+{
+    child_filter
+    {
+        filter1
+        {
+            build_order = 0
+            project_file_name = "Skia冒烟测试\\Skia冒烟测试.vprj"
+            projects_dependent
+            type = project
+        }
+
+        num_child_filters = 1
+    }
+
+    name = root
+}

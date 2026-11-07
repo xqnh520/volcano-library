@@ -1,0 +1,684 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.安卓.XUI <注释 = "XUI 安卓 UI 工具库封装" @文档 = "category = \"XUI\"">
+
+
+类 XUI刻度尺 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.picker.RulerView)."
+        @文档 = "category = \"XUI.选择器\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.picker.RulerView\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.rv_rulerHeight\n        shown_name = \"尺子的高度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.rv_rulerToResultGap\n        shown_name = \"尺子距离结果的高度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.rv_scaleGap\n        shown_name = \"刻度间距\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.rv_scaleLimit\n        shown_name = \"相邻2个刻度之间的数量\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.rv_scaleCount\n        shown_name = \"刻度数\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.rv_firstScale\n        shown_name = \"默认选中的刻度\"\n        data_type = double\n    }\n    attr\n    {\n        name = app.rv_maxScale\n        shown_name = \"最大刻度\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.rv_minScale\n        shown_name = \"最小刻度\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.rv_bgColor\n        shown_name = \"背景色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.rv_smallScaleColor\n        shown_name = \"小刻度的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.rv_midScaleColor\n        shown_name = \"中刻度的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.rv_largeScaleColor\n        shown_name = \"大刻度的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.rv_scaleNumColor\n        shown_name = \"刻度数的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.rv_resultNumColor\n        shown_name = \"结果字体的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.rv_unit\n        shown_name = \"单位\"\n        data_type = string\n    }\n    attr\n    {\n        name = app.rv_unitColor\n        shown_name = \"单位颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.rv_smallScaleStroke\n        shown_name = \"小刻度的宽度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.rv_midScaleStroke\n        shown_name = \"中刻度的宽度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.rv_largeScaleStroke\n        shown_name = \"大刻度的宽度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.rv_resultNumTextSize\n        shown_name = \"结果字体大小\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.rv_scaleNumTextSize\n        shown_name = \"刻度字体大小\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.rv_unitTextSize\n        shown_name = \"单位字体大小\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.rv_showScaleResult\n        shown_name = \"是否显示结果值\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.rv_isBgRoundRect\n        shown_name = \"背景是否圆角\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.rv_roundRadius\n        shown_name = \"圆角大小\"\n        data_type = double\n        detail_type = dim\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI刻度尺, RulerView, com.xuexiang.xui.widget.picker.RulerView)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetRulerView ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI刻度尺的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI刻度尺.getAlpha()">
+    {
+        @ (double)@sn<this>.GetRulerView ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI刻度尺的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI刻度尺.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRulerView ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI刻度尺的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI刻度尺.isEnabled()">
+    {
+        @ @sn<this>.GetRulerView ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI刻度尺的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI刻度尺.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetRulerView ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI刻度尺的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI刻度尺.isClickable()">
+    {
+        @ @sn<this>.GetRulerView ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI刻度尺的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI刻度尺.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetRulerView ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI刻度尺的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI刻度尺.getElevation()">
+    {
+        @ (double)@sn<this>.GetRulerView ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI刻度尺的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI刻度尺.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRulerView ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI刻度尺的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI刻度尺.getMinimumHeight()">
+    {
+        @ @sn<this>.GetRulerView ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI刻度尺的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI刻度尺.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRulerView ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI刻度尺的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI刻度尺.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRulerView ().setBackgroundColor (@<新值>))
+    }
+
+    方法 设置字体 <公开 注释 = "用法：把XUI刻度尺的字体设为给定值。 参数：值1=字体类。 返回：无。 原方法：XUI刻度尺.setTypeface()">
+    参数 值1 <类型 = 字体类>
+    {
+        @ @m<RUN_UI_ACTION> (GetRulerView ().setTypeface (@<值1>))
+    }
+
+    方法 设置标尺高度 <公开 注释 = "用法：把XUI刻度尺的标尺高度设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI刻度尺.setRulerHeight()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRulerView ().setRulerHeight (@<值1>))
+    }
+
+    方法 设置标尺到结果间隙 <公开 注释 = "用法：把XUI刻度尺的标尺到结果间隙设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI刻度尺.setRulerToResultGap()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRulerView ().setRulerToResultGap (@<值1>))
+    }
+
+    方法 设置缩放数量 <公开 注释 = "用法：把XUI刻度尺的缩放数量设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI刻度尺.setScaleCount()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRulerView ().setScaleCount (@<值1>))
+    }
+
+    方法 设置缩放间隙 <公开 注释 = "用法：把XUI刻度尺的缩放间隙设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI刻度尺.setScaleGap()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRulerView ().setScaleGap (@<值1>))
+    }
+
+    方法 设置最小缩放 <公开 注释 = "用法：把XUI刻度尺的最小缩放设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI刻度尺.setMinScale()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRulerView ().setMinScale (@<值1>))
+    }
+
+    方法 设置首位缩放 <公开 注释 = "用法：把XUI刻度尺的首位缩放设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI刻度尺.setFirstScale()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRulerView ().setFirstScale ((float) @<值1>))
+    }
+
+    方法 设置最大缩放 <公开 注释 = "用法：把XUI刻度尺的最大缩放设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI刻度尺.setMaxScale()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRulerView ().setMaxScale (@<值1>))
+    }
+
+    方法 设置背景颜色 <公开 注释 = "用法：把XUI刻度尺的背景颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI刻度尺.setBgColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRulerView ().setBgColor (@<值1>))
+    }
+
+    方法 设置小缩放颜色 <公开 注释 = "用法：把XUI刻度尺的小缩放颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI刻度尺.setSmallScaleColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRulerView ().setSmallScaleColor (@<值1>))
+    }
+
+    方法 设置中缩放颜色 <公开 注释 = "用法：把XUI刻度尺的中缩放颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI刻度尺.setMidScaleColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRulerView ().setMidScaleColor (@<值1>))
+    }
+
+    方法 设置大缩放颜色 <公开 注释 = "用法：把XUI刻度尺的大缩放颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI刻度尺.setLargeScaleColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRulerView ().setLargeScaleColor (@<值1>))
+    }
+
+    方法 设置缩放数目颜色 <公开 注释 = "用法：把XUI刻度尺的缩放数目颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI刻度尺.setScaleNumColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRulerView ().setScaleNumColor (@<值1>))
+    }
+
+    方法 设置结果数目颜色 <公开 注释 = "用法：把XUI刻度尺的结果数目颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI刻度尺.setResultNumColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRulerView ().setResultNumColor (@<值1>))
+    }
+
+    方法 设置单位 <公开 注释 = "用法：把XUI刻度尺的单位设为给定值。 参数：值1=文本。 返回：无。 原方法：XUI刻度尺.setUnit()">
+    参数 值1 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetRulerView ().setUnit (@<值1>))
+    }
+
+    方法 设置单位颜色 <公开 注释 = "用法：把XUI刻度尺的单位颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI刻度尺.setUnitColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRulerView ().setUnitColor (@<值1>))
+    }
+
+    方法 设置小缩放描边 <公开 注释 = "用法：把XUI刻度尺的小缩放描边设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI刻度尺.setSmallScaleStroke()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRulerView ().setSmallScaleStroke (@<值1>))
+    }
+
+    方法 设置中缩放描边 <公开 注释 = "用法：把XUI刻度尺的中缩放描边设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI刻度尺.setMidScaleStroke()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRulerView ().setMidScaleStroke (@<值1>))
+    }
+
+    方法 设置大缩放描边 <公开 注释 = "用法：把XUI刻度尺的大缩放描边设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI刻度尺.setLargeScaleStroke()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRulerView ().setLargeScaleStroke (@<值1>))
+    }
+
+    方法 设置结果数目文本大小 <公开 注释 = "用法：把XUI刻度尺的结果数目文本大小设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI刻度尺.setResultNumTextSize()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRulerView ().setResultNumTextSize (@<值1>))
+    }
+
+    方法 设置缩放数目文本大小 <公开 注释 = "用法：把XUI刻度尺的缩放数目文本大小设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI刻度尺.setScaleNumTextSize()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRulerView ().setScaleNumTextSize (@<值1>))
+    }
+
+    方法 设置单位文本大小 <公开 注释 = "用法：把XUI刻度尺的单位文本大小设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI刻度尺.setUnitTextSize()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRulerView ().setUnitTextSize (@<值1>))
+    }
+
+    方法 设置显示缩放结果 <公开 注释 = "用法：把XUI刻度尺的显示缩放结果设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI刻度尺.setShowScaleResult()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetRulerView ().setShowScaleResult (@<值1>))
+    }
+
+    方法 设置是否背景圆形矩形 <公开 注释 = "用法：把XUI刻度尺的是否背景圆形矩形设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI刻度尺.setIsBgRoundRect()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetRulerView ().setIsBgRoundRect (@<值1>))
+    }
+
+    方法 设置缩放限制 <公开 注释 = "用法：把XUI刻度尺的缩放限制设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI刻度尺.setScaleLimit()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRulerView ().setScaleLimit (@<值1>))
+    }
+
+    方法 设置当前值 <公开 注释 = "用法：把XUI刻度尺的当前值设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI刻度尺.setCurrentValue()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRulerView ().setCurrentValue ((float) @<值1>))
+    }
+
+    方法 取当前值 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读出XUI刻度尺的当前值。 参数：无。 返回：小数。 原方法：XUI刻度尺.getCurrentValue()">
+    {
+        @ (double)@sn<this>.GetRulerView ().getCurrentValue ()
+    }
+
+    方法 取选择值 <公开 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读出XUI刻度尺的选择值。 参数：无。 返回：文本型。 原方法：XUI刻度尺.getSelectValue()">
+    {
+        @ @sn<this>.GetRulerView ().getSelectValue ()
+    }
+
+}
+
+类 XUI范围滑块 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.picker.XRangeSlider)."
+        @文档 = "category = \"XUI.选择器\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.picker.XRangeSlider\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.xrs_verticalPadding\n        shown_name = \"控件的垂直间距\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xrs_insideRangeLineColor\n        shown_name = \"选中范围的线条颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.xrs_outsideRangeLineColor\n        shown_name = \"不在选中范围的线条颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.xrs_insideRangeLineStrokeWidth\n        shown_name = \"选中范围的线条宽度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xrs_outsideRangeLineStrokeWidth\n        shown_name = \"不在选中范围的线条宽度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xrs_min\n        shown_name = \"滑块选择的最小值\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.xrs_max\n        shown_name = \"滑块选择的最大值\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.xrs_sliderIcon\n        shown_name = \"滑块的图标\"\n        data_type = string\n        detail_type = drawable_res_file\n    }\n    attr\n    {\n        name = app.xrs_sliderIconFocus\n        shown_name = \"滑块触摸时的图标\"\n        data_type = string\n        detail_type = drawable_res_file\n    }\n    attr\n    {\n        name = app.xrs_isLineRound\n        shown_name = \"线条是否有圆角\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.xrs_isShowBubble\n        shown_name = \"是否显示数字气泡\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.xrs_isFitColor\n        shown_name = \"是否自适应气泡和数字文字的颜色\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.xrs_bubbleResource\n        shown_name = \"气泡的背景资源\"\n        data_type = string\n        detail_type = drawable_res_file\n    }\n    attr\n    {\n        name = app.xrs_numberTextColor\n        shown_name = \"气泡数字的文字颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.xrs_numberTextSize\n        shown_name = \"气泡数字的文字大小\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xrs_numberMarginBottom\n        shown_name = \"气泡距离底部的距离\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xrs_isShowRuler\n        shown_name = \"是否显示刻度尺\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.xrs_rulerColor\n        shown_name = \"刻度尺的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.xrs_rulerTextColor\n        shown_name = \"刻度尺文字的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.xrs_rulerTextSize\n        shown_name = \"刻度尺文字的大小\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xrs_rulerMarginTop\n        shown_name = \"刻度尺刻度距离顶部的距离\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xrs_rulerDividerHeight\n        shown_name = \"刻度尺刻度的高度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xrs_rulerTextMarginTop\n        shown_name = \"刻度尺刻度文字距离上部的距离\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xrs_rulerInterval\n        shown_name = \"刻度尺刻度的间隔\"\n        data_type = string\n        detail_type = enum\n        item\n        {\n            name = ten\n            shown_name = \"ten\"\n        }\n        item\n        {\n            name = twenty\n            shown_name = \"twenty\"\n        }\n        item\n        {\n            name = forty\n            shown_name = \"forty\"\n        }\n        item\n        {\n            name = fifty\n            shown_name = \"fifty\"\n        }\n        item\n        {\n            name = hundred\n            shown_name = \"hundred\"\n        }\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI范围滑块, XRangeSlider, com.xuexiang.xui.widget.picker.XRangeSlider)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetXRangeSlider ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI范围滑块的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI范围滑块.getAlpha()">
+    {
+        @ (double)@sn<this>.GetXRangeSlider ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI范围滑块的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI范围滑块.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXRangeSlider ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI范围滑块的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI范围滑块.isEnabled()">
+    {
+        @ @sn<this>.GetXRangeSlider ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI范围滑块的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI范围滑块.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXRangeSlider ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI范围滑块的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI范围滑块.isClickable()">
+    {
+        @ @sn<this>.GetXRangeSlider ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI范围滑块的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI范围滑块.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXRangeSlider ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI范围滑块的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI范围滑块.getElevation()">
+    {
+        @ (double)@sn<this>.GetXRangeSlider ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI范围滑块的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI范围滑块.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXRangeSlider ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI范围滑块的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI范围滑块.getMinimumHeight()">
+    {
+        @ @sn<this>.GetXRangeSlider ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI范围滑块的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI范围滑块.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXRangeSlider ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI范围滑块的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI范围滑块.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXRangeSlider ().setBackgroundColor (@<新值>))
+    }
+
+    方法 取选中最小 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI范围滑块的选中最小。 参数：无。 返回：整数。 原方法：XUI范围滑块.getSelectedMin()">
+    {
+        @ @sn<this>.GetXRangeSlider ().getSelectedMin ()
+    }
+
+    方法 取选中最大 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI范围滑块的选中最大。 参数：无。 返回：整数。 原方法：XUI范围滑块.getSelectedMax()">
+    {
+        @ @sn<this>.GetXRangeSlider ().getSelectedMax ()
+    }
+
+    方法 设置起始最小最大 <公开 注释 = "用法：把XUI范围滑块的起始最小最大设为给定值。 参数：值1=整数、值2=整数。 返回：无。 原方法：XUI范围滑块.setStartingMinMax()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXRangeSlider ().setStartingMinMax (@<值1>, @<值2>))
+    }
+
+    方法 取最小 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI范围滑块的最小。 参数：无。 返回：整数。 原方法：XUI范围滑块.getMin()">
+    {
+        @ @sn<this>.GetXRangeSlider ().getMin ()
+    }
+
+    方法 设置最小 <公开 注释 = "用法：把XUI范围滑块的最小设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI范围滑块.setMin()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXRangeSlider ().setMin (@<值1>))
+    }
+
+    方法 取最大 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI范围滑块的最大。 参数：无。 返回：整数。 原方法：XUI范围滑块.getMax()">
+    {
+        @ @sn<this>.GetXRangeSlider ().getMax ()
+    }
+
+    方法 设置最大 <公开 注释 = "用法：把XUI范围滑块的最大设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI范围滑块.setMax()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXRangeSlider ().setMax (@<值1>))
+    }
+
+    方法 重置 <公开 注释 = "用法：把XUI范围滑块恢复到默认状态。 参数：无。 返回：无。 原方法：XUI范围滑块.reset()">
+    {
+        @ @m<RUN_UI_ACTION> (GetXRangeSlider ().reset ())
+    }
+
+}
+
+类 XUI拖动条 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.picker.XSeekBar)."
+        @文档 = "category = \"XUI.选择器\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.picker.XSeekBar\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.xsb_verticalPadding\n        shown_name = \"控件的垂直间距\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xsb_insideRangeLineColor\n        shown_name = \"选中范围的线条颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.xsb_outsideRangeLineColor\n        shown_name = \"不在选中范围的线条颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.xsb_insideRangeLineStrokeWidth\n        shown_name = \"选中范围的线条宽度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xsb_outsideRangeLineStrokeWidth\n        shown_name = \"不在选中范围的线条宽度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xsb_min\n        shown_name = \"滑块选择的最小值\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.xsb_max\n        shown_name = \"滑块选择的最大值\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.xsb_sliderIcon\n        shown_name = \"滑块的图标\"\n        data_type = string\n        detail_type = drawable_res_file\n    }\n    attr\n    {\n        name = app.xsb_sliderIconFocus\n        shown_name = \"滑块触摸时的图标\"\n        data_type = string\n        detail_type = drawable_res_file\n    }\n    attr\n    {\n        name = app.xsb_isLineRound\n        shown_name = \"线条是否有圆角\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.xsb_isShowBubble\n        shown_name = \"是否显示数字气泡\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.xsb_isShowNumber\n        shown_name = \"是否显示数字\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.xsb_isFitColor\n        shown_name = \"是否自适应气泡和数字文字的颜色\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.xsb_bubbleResource\n        shown_name = \"气泡的背景资源\"\n        data_type = string\n        detail_type = drawable_res_file\n    }\n    attr\n    {\n        name = app.xsb_numberTextColor\n        shown_name = \"气泡数字的文字颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.xsb_numberTextSize\n        shown_name = \"气泡数字的文字大小\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xsb_numberMarginBottom\n        shown_name = \"气泡距离底部的距离\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xsb_isShowRuler\n        shown_name = \"是否显示刻度尺\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.xsb_rulerColor\n        shown_name = \"刻度尺的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.xsb_rulerTextColor\n        shown_name = \"刻度尺文字的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.xsb_rulerTextSize\n        shown_name = \"刻度尺文字的大小\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xsb_rulerMarginTop\n        shown_name = \"刻度尺刻度距离顶部的距离\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xsb_rulerDividerHeight\n        shown_name = \"刻度尺刻度的高度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xsb_rulerTextMarginTop\n        shown_name = \"刻度尺刻度文字距离上部的距离\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.xsb_rulerInterval\n        shown_name = \"刻度尺刻度的间隔\"\n        data_type = string\n        detail_type = enum\n        item\n        {\n            name = ten\n            shown_name = \"ten\"\n        }\n        item\n        {\n            name = twenty\n            shown_name = \"twenty\"\n        }\n        item\n        {\n            name = forty\n            shown_name = \"forty\"\n        }\n        item\n        {\n            name = fifty\n            shown_name = \"fifty\"\n        }\n        item\n        {\n            name = hundred\n            shown_name = \"hundred\"\n        }\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI拖动条, XSeekBar, com.xuexiang.xui.widget.picker.XSeekBar)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetXSeekBar ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI拖动条的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI拖动条.getAlpha()">
+    {
+        @ (double)@sn<this>.GetXSeekBar ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI拖动条的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI拖动条.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXSeekBar ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI拖动条的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI拖动条.isEnabled()">
+    {
+        @ @sn<this>.GetXSeekBar ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI拖动条的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI拖动条.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXSeekBar ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI拖动条的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI拖动条.isClickable()">
+    {
+        @ @sn<this>.GetXSeekBar ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI拖动条的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI拖动条.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXSeekBar ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI拖动条的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI拖动条.getElevation()">
+    {
+        @ (double)@sn<this>.GetXSeekBar ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI拖动条的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI拖动条.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXSeekBar ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI拖动条的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI拖动条.getMinimumHeight()">
+    {
+        @ @sn<this>.GetXSeekBar ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI拖动条的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI拖动条.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXSeekBar ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI拖动条的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI拖动条.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXSeekBar ().setBackgroundColor (@<新值>))
+    }
+
+    方法 取选中数字 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI拖动条的选中数字。 参数：无。 返回：整数。 原方法：XUI拖动条.getSelectedNumber()">
+    {
+        @ @sn<this>.GetXSeekBar ().getSelectedNumber ()
+    }
+
+    方法 设置默认值 <公开 注释 = "用法：把XUI拖动条的默认值设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI拖动条.setDefaultValue()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXSeekBar ().setDefaultValue (@<值1>))
+    }
+
+    方法 取最小 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI拖动条的最小。 参数：无。 返回：整数。 原方法：XUI拖动条.getMin()">
+    {
+        @ @sn<this>.GetXSeekBar ().getMin ()
+    }
+
+    方法 设置最小 <公开 注释 = "用法：把XUI拖动条的最小设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI拖动条.setMin()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXSeekBar ().setMin (@<值1>))
+    }
+
+    方法 取最大 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI拖动条的最大。 参数：无。 返回：整数。 原方法：XUI拖动条.getMax()">
+    {
+        @ @sn<this>.GetXSeekBar ().getMax ()
+    }
+
+    方法 设置最大 <公开 注释 = "用法：把XUI拖动条的最大设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI拖动条.setMax()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXSeekBar ().setMax (@<值1>))
+    }
+
+    方法 设置间隔 <公开 注释 = "用法：把XUI拖动条的间隔设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI拖动条.setInterval()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXSeekBar ().setInterval (@<值1>))
+    }
+
+    方法 重置 <公开 注释 = "用法：把XUI拖动条恢复到默认状态。 参数：无。 返回：无。 原方法：XUI拖动条.reset()">
+    {
+        @ @m<RUN_UI_ACTION> (GetXSeekBar ().reset ())
+    }
+
+}
+
+类 XUI滚轮视图 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.picker.wheelview.WheelView)."
+        @文档 = "category = \"XUI.选择器\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.picker.wheelview.WheelView\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.wv_gravity\n        shown_name = \"wv_gravity\"\n        data_type = string\n        detail_type = enum\n        item\n        {\n            name = center\n            shown_name = \"center\"\n        }\n        item\n        {\n            name = left\n            shown_name = \"left\"\n        }\n        item\n        {\n            name = right\n            shown_name = \"right\"\n        }\n    }\n    attr\n    {\n        name = app.wv_textSize\n        shown_name = \"wv_textSize\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.wv_textColorOut\n        shown_name = \"wv_textColorOut\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.wv_textColorCenter\n        shown_name = \"wv_textColorCenter\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.wv_dividerColor\n        shown_name = \"wv_dividerColor\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.wv_lineSpacingMultiplier\n        shown_name = \"wv_lineSpacingMult\"\n        data_type = double\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI滚轮视图, WheelView, com.xuexiang.xui.widget.picker.wheelview.WheelView)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetWheelView ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI滚轮视图的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI滚轮视图.getAlpha()">
+    {
+        @ (double)@sn<this>.GetWheelView ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI滚轮视图的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI滚轮视图.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetWheelView ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI滚轮视图的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI滚轮视图.isEnabled()">
+    {
+        @ @sn<this>.GetWheelView ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI滚轮视图的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI滚轮视图.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetWheelView ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI滚轮视图的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI滚轮视图.isClickable()">
+    {
+        @ @sn<this>.GetWheelView ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI滚轮视图的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI滚轮视图.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetWheelView ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI滚轮视图的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI滚轮视图.getElevation()">
+    {
+        @ (double)@sn<this>.GetWheelView ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI滚轮视图的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI滚轮视图.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetWheelView ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI滚轮视图的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI滚轮视图.getMinimumHeight()">
+    {
+        @ @sn<this>.GetWheelView ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI滚轮视图的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI滚轮视图.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetWheelView ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI滚轮视图的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI滚轮视图.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetWheelView ().setBackgroundColor (@<新值>))
+    }
+
+    方法 滚动按 <公开 注释 = "用法：让XUI滚轮视图滚动到按。 参数：值1=小数。 返回：无。 原方法：XUI滚轮视图.scrollBy()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetWheelView ().scrollBy ((float) @<值1>))
+    }
+
+    方法 取消异步结果 <公开 注释 = "用法：取消XUI滚轮视图当前动作。 参数：无。 返回：无。 原方法：XUI滚轮视图.cancelFuture()">
+    {
+        @ @m<RUN_UI_ACTION> (GetWheelView ().cancelFuture ())
+    }
+
+    方法 设置循环 <公开 注释 = "用法：把XUI滚轮视图的循环设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI滚轮视图.setCyclic()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetWheelView ().setCyclic (@<值1>))
+    }
+
+    方法 设置字体 <公开 注释 = "用法：把XUI滚轮视图的字体设为给定值。 参数：值1=字体类。 返回：无。 原方法：XUI滚轮视图.setTypeface()">
+    参数 值1 <类型 = 字体类>
+    {
+        @ @m<RUN_UI_ACTION> (GetWheelView ().setTypeface (@<值1>))
+    }
+
+    方法 设置文本大小 <公开 注释 = "用法：把XUI滚轮视图的文本大小设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI滚轮视图.setTextSize()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetWheelView ().setTextSize ((float) @<值1>))
+    }
+
+    方法 设置当前项 <公开 注释 = "用法：把XUI滚轮视图的当前项设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI滚轮视图.setCurrentItem()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetWheelView ().setCurrentItem (@<值1>))
+    }
+
+    方法 取当前项 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI滚轮视图的当前项。 参数：无。 返回：整数。 原方法：XUI滚轮视图.getCurrentItem()">
+    {
+        @ @sn<this>.GetWheelView ().getCurrentItem ()
+    }
+
+    方法 响应项选中 <公开 注释 = "用法：XUI滚轮视图在项选中时被 XUI 回调, 通常配合 挂接事件 使用。 参数：无。 返回：无。 原方法：XUI滚轮视图.onItemSelected()">
+    {
+        @ @m<RUN_UI_ACTION> (GetWheelView ().onItemSelected ())
+    }
+
+    方法 取项集数量 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI滚轮视图的项集数量。 参数：无。 返回：整数。 原方法：XUI滚轮视图.getItemsCount()">
+    {
+        @ @sn<this>.GetWheelView ().getItemsCount ()
+    }
+
+    方法 设置标签 <公开 注释 = "用法：把XUI滚轮视图的标签设为给定值。 参数：值1=文本。 返回：无。 原方法：XUI滚轮视图.setLabel()">
+    参数 值1 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetWheelView ().setLabel (@<值1>))
+    }
+
+    方法 是否居中标签 <公开 注释 = "用法：判断XUI滚轮视图是否居中标签。 参数：值1=真/假。 返回：无。 原方法：XUI滚轮视图.isCenterLabel()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetWheelView ().isCenterLabel (@<值1>))
+    }
+
+    方法 设置对齐方式 <公开 注释 = "用法：把XUI滚轮视图的对齐方式设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI滚轮视图.setGravity()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetWheelView ().setGravity (@<值1>))
+    }
+
+    方法 设置是否选项集 <公开 注释 = "用法：把XUI滚轮视图的是否选项集设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI滚轮视图.setIsOptions()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetWheelView ().setIsOptions (@<值1>))
+    }
+
+    方法 设置文本颜色外 <公开 注释 = "用法：把XUI滚轮视图的文本颜色外设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI滚轮视图.setTextColorOut()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetWheelView ().setTextColorOut (@<值1>))
+    }
+
+    方法 设置文本颜色居中 <公开 注释 = "用法：把XUI滚轮视图的文本颜色居中设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI滚轮视图.setTextColorCenter()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetWheelView ().setTextColorCenter (@<值1>))
+    }
+
+    方法 设置文本X偏移 <公开 注释 = "用法：把XUI滚轮视图的文本X偏移设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI滚轮视图.setTextXOffset()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetWheelView ().setTextXOffset (@<值1>))
+    }
+
+    方法 设置分隔线颜色 <公开 注释 = "用法：把XUI滚轮视图的分隔线颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI滚轮视图.setDividerColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetWheelView ().setDividerColor (@<值1>))
+    }
+
+    方法 设置行间距倍率 <公开 注释 = "用法：把XUI滚轮视图的行间距倍率设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI滚轮视图.setLineSpacingMultiplier()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetWheelView ().setLineSpacingMultiplier ((float) @<值1>))
+    }
+
+    方法 是否循环 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断XUI滚轮视图是否循环。 参数：无。 返回：逻辑型。 原方法：XUI滚轮视图.isLoop()">
+    {
+        @ @sn<this>.GetWheelView ().isLoop ()
+    }
+
+    方法 取总计滚动Y <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读出XUI滚轮视图的总计滚动Y。 参数：无。 返回：小数。 原方法：XUI滚轮视图.getTotalScrollY()">
+    {
+        @ (double)@sn<this>.GetWheelView ().getTotalScrollY ()
+    }
+
+    方法 设置总计滚动Y <公开 注释 = "用法：把XUI滚轮视图的总计滚动Y设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI滚轮视图.setTotalScrollY()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetWheelView ().setTotalScrollY ((float) @<值1>))
+    }
+
+    方法 取项高度 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读出XUI滚轮视图的项高度。 参数：无。 返回：小数。 原方法：XUI滚轮视图.getItemHeight()">
+    {
+        @ (double)@sn<this>.GetWheelView ().getItemHeight ()
+    }
+
+    方法 取初始化位置 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI滚轮视图的初始化位置。 参数：无。 返回：整数。 原方法：XUI滚轮视图.getInitPosition()">
+    {
+        @ @sn<this>.GetWheelView ().getInitPosition ()
+    }
+
+}

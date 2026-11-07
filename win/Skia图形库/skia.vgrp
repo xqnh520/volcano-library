@@ -1,0 +1,19 @@
+doc_format_version = 1
+project_identifier = "wutao.vproject.pc.win.1"
+author = "火山Skia封装"
+name = "Skia图形库"
+version = 1
+unique_mark = skiavol
+explain = "Skia (libSkiaSharp.dll v4.154.0) C 接口全量封装, 64 位, CPU 软件光栅。770 个原生函数 -> 84 个中文类 / 1149 个方法, 覆盖 画布/画笔/路径/几何/图像/位图/表面/编解码/流/着色器/滤镜/颜色空间/文档(PDF)/文字字体。纯头文件绑定, 无 C++ 桥接层。"
+dependence = "*\\sys\\base\\base.vgrp"
+file
+{
+    name = "Skia核心.wsv"
+    name = "Skia几何.wsv"
+    name = "Skia图像.wsv"
+    name = "Skia流.wsv"
+    name = "Skia颜色空间.wsv"
+    name = "Skia文档.wsv"
+    name = "Skia效果.wsv"
+    name = "Skia文字.wsv"
+}

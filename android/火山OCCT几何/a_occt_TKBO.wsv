@@ -1,0 +1,530 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.安卓.OCCT几何 <注释 = "OpenCASCADE 7.8.0 全库封装 (自动生成, 请勿手改). 名称已汉化为中文显示名, 注释内附英文原名. TK 库 libTKBO: 10 个类 / 71 个方法.">
+
+类 布尔算法基类 <公开 注释 = "布尔算法基类: 原类 BRepAlgoAPI_Algo (libTKBO, 头文件 BRepAlgoAPI/BRepAlgoAPI_Algo.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 提供 API 算法的根接口." @禁止创建对象 = 真>
+{
+
+    方法 形状 <公开 静态 类型 = 长整数 注释 = "形状. 原方法: Shape. 官方简介: 返回由形状构造算法构建的形状. 不检查形状是否已构建." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_Algo.Shape (@<对象>)
+    }
+
+}
+
+类 布尔运算 <公开 注释 = "布尔运算: 原类 BRepAlgoAPI_BooleanOperation (libTKBO, 头文件 BRepAlgoAPI/BRepAlgoAPI_BooleanOperation.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 对任意形状执行布尔运算的根 API 类." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: BRepAlgoAPI_BooleanOperation. 官方简介: 空构造函数" @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_BooleanOperation.构造 ()
+    }
+
+    方法 形状1 <公开 静态 类型 = 长整数 注释 = "形状1. 原方法: Shape1. 官方简介: 返回该布尔运算涉及的第一个参数. 已废弃" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_BooleanOperation.Shape1 (@<对象>)
+    }
+
+    方法 形状2 <公开 静态 类型 = 长整数 注释 = "形状2. 原方法: Shape2. 官方简介: 返回该布尔运算涉及的第二个参数. 已废弃" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_BooleanOperation.Shape2 (@<对象>)
+    }
+
+    方法 设置操作 <公开 静态 注释 = "设置操作. 原方法: SetOperation. 官方简介: 设置布尔运算类型" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 BOP <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_BooleanOperation.SetOperation (@<对象>, @<BOP>)
+    }
+
+    方法 操作 <公开 静态 类型 = 整数 注释 = "操作. 原方法: Operation. 官方简介: 返回布尔运算类型" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_BooleanOperation.Operation (@<对象>)
+    }
+
+    方法 构建 <公开 静态 注释 = "构建. 原方法: Build. 官方简介: 执行布尔运算." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_BooleanOperation.Build (@<对象>)
+    }
+
+}
+
+类 布尔构建器 <公开 注释 = "布尔构建器: 原类 BRepAlgoAPI_BuilderAlgo (libTKBO, 头文件 BRepAlgoAPI/BRepAlgoAPI_BuilderAlgo.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 此类包含通用融合(General Fuse)算法的 API." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: BRepAlgoAPI_BuilderAlgo. 官方简介: 空构造函数" @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_BuilderAlgo.构造 ()
+    }
+
+    方法 设置非破坏性 <公开 静态 注释 = "设置非破坏性. 原方法: SetNonDestructive. 官方简介: 设置定义处理模式的标志. 在非破坏性模式下, 参数形状不被修改. 相反, 若子形状需要更新, 则在结果中创建子形状的副本." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 标志 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_BuilderAlgo.SetNonDestructive (@<对象>, @<标志>)
+    }
+
+    方法 非破坏性 <公开 静态 类型 = 逻辑型 注释 = "非破坏性. 原方法: NonDestructive. 官方简介: 返回定义处理模式的标志. 在非破坏性模式下, 参数形状不被修改. 相反, 若子形状需要更新, 则在结果中创建子形状的副本." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_BuilderAlgo.NonDestructive (@<对象>)
+    }
+
+    方法 设置粘合 <公开 静态 注释 = "设置粘合. 原方法: SetGlue. 官方简介: 设置算法的粘合选项, 它可以提高输入形状相交的性能." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 粘合 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_BuilderAlgo.SetGlue (@<对象>, @<粘合>)
+    }
+
+    方法 粘合 <公开 静态 类型 = 整数 注释 = "粘合. 原方法: Glue. 官方简介: 返回算法的粘合选项" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_BuilderAlgo.Glue (@<对象>)
+    }
+
+    方法 设置检查反向 <公开 静态 注释 = "设置检查反向. 原方法: SetCheckInverted. 官方简介: 启用/禁用对输入实体反向状态的检查" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 检查 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_BuilderAlgo.SetCheckInverted (@<对象>, @<检查>)
+    }
+
+    方法 检查反向 <公开 静态 类型 = 逻辑型 注释 = "检查反向. 原方法: CheckInverted. 官方简介: 返回标志, 定义是否对输入实体执行倒置状态检查." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_BuilderAlgo.CheckInverted (@<对象>)
+    }
+
+    方法 构建 <公开 静态 注释 = "构建. 原方法: Build. 官方简介: 执行算法" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_BuilderAlgo.Build (@<对象>)
+    }
+
+    方法 简化结果 <公开 静态 注释 = "简化结果. 原方法: SimplifyResult. 官方简介: 结果形状的简化通过 *ShapeUpgrade_UnifySameDomain* 算法执行. 操作结果将被简化后的结果覆盖." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 统一边 <类型 = 逻辑型>
+    参数 统一面 <类型 = 逻辑型>
+    参数 角度容差 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_BuilderAlgo.SimplifyResult (@<对象>, @<统一边>, @<统一面>, @<角度容差>)
+    }
+
+    方法 是否已删除 <公开 静态 类型 = 逻辑型 注释 = "是否已删除. 原方法: IsDeleted. 官方简介: 检查形状 <theS> 是否已从结果中完全移除, 即结果不包含该形状本身及其任何分裂. 若该形状已被删除则返回 TRUE." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_BuilderAlgo.IsDeleted (@<对象>, @<S>)
+    }
+
+    方法 是否有已修改 <公开 静态 类型 = 逻辑型 注释 = "是否有已修改. 原方法: HasModified. 官方简介: 若运算期间任一输入形状被修改则返回 true." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_BuilderAlgo.HasModified (@<对象>)
+    }
+
+    方法 是否有已生成 <公开 静态 类型 = 逻辑型 注释 = "是否有已生成. 原方法: HasGenerated. 官方简介: 若运算期间任一输入形状生成了形状则返回 true." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_BuilderAlgo.HasGenerated (@<对象>)
+    }
+
+    方法 是否有已删除 <公开 静态 类型 = 逻辑型 注释 = "是否有已删除. 原方法: HasDeleted. 官方简介: 若任何输入形状在操作期间已被删除则返回 true. 通常, General Fuse 操作不应有已删除元素, 但所有派生操作都可能有." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_BuilderAlgo.HasDeleted (@<对象>)
+    }
+
+    方法 设置填充历史标志 <公开 静态 注释 = "设置填充历史标志. 原方法: SetToFillHistory. 官方简介: 允许禁用历史收集" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 历史标志 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_BuilderAlgo.SetToFillHistory (@<对象>, @<历史标志>)
+    }
+
+    方法 是否有历史 <公开 静态 类型 = 逻辑型 注释 = "是否有历史. 原方法: HasHistory. 官方简介: 返回历史可用标志" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_BuilderAlgo.HasHistory (@<对象>)
+    }
+
+    方法 历史 <公开 静态 类型 = 长整数 注释 = "历史. 原方法: History. 官方简介: 历史工具" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_BuilderAlgo.History (@<对象>)
+    }
+
+}
+
+类 布尔检查 <公开 注释 = "布尔检查: 原类 BRepAlgoAPI_Check (libTKBO, 头文件 BRepAlgoAPI/BRepAlgoAPI_Check.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: Check 类提供检查单个形状或形状对有效性的诊断工具. 形状的检查项包括: - 拓扑有效性 - 小边 - 自干涉 - 特定类型布尔运算的有效性(仅形状对)." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: BRepAlgoAPI_Check. 官方简介: 空构造函数." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_Check.构造 ()
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: BRepAlgoAPI_Check. 官方简介: 用于检查一对形状的构造函数. 除了检查每个给定形状的有效性外, 还将检查给定形状的类型对给定类型的布尔运算是否有效." @嵌入式方法 = "">
+    参数 S <类型 = 长整数>
+    参数 测试自相切 <类型 = 逻辑型>
+    参数 测试自相交 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_Check.构造_2 (@<S>, @<测试自相切>, @<测试自相交>)
+    }
+
+    方法 创建_3 <公开 静态 类型 = 长整数 注释 = "创建_3. 原构造器: BRepAlgoAPI_Check. 官方简介: 用于检查一对形状的构造函数. 除了检查每个给定形状的有效性外, 还将检查给定形状的类型对给定类型的布尔运算是否有效." @嵌入式方法 = "">
+    参数 S1 <类型 = 长整数>
+    参数 S2 <类型 = 长整数>
+    参数 操作 <类型 = 整数>
+    参数 测试自相切 <类型 = 逻辑型>
+    参数 测试自相交 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_Check.构造_3 (@<S1>, @<S2>, @<操作>, @<测试自相切>, @<测试自相交>)
+    }
+
+    方法 设置数据 <公开 静态 注释 = "设置数据. 原方法: SetData. 官方简介: 用单个形状初始化算法." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    参数 测试自相切 <类型 = 逻辑型>
+    参数 测试自相交 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_Check.SetData (@<对象>, @<S>, @<测试自相切>, @<测试自相交>)
+    }
+
+    方法 设置数据_2 <公开 静态 注释 = "设置数据_2. 原方法: SetData. 官方简介: 用一对形状初始化该算法. 除对每个给定形状的有效性检查外, 还将检查给定形状的类型对于给定类型的布尔运算是否有效." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S1 <类型 = 长整数>
+    参数 S2 <类型 = 长整数>
+    参数 操作 <类型 = 整数>
+    参数 测试自相切 <类型 = 逻辑型>
+    参数 测试自相交 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_Check.SetData_2 (@<对象>, @<S1>, @<S2>, @<操作>, @<测试自相切>, @<测试自相交>)
+    }
+
+    方法 执行 <公开 静态 注释 = "执行. 原方法: Perform. 官方简介: 执行检查." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_Check.Perform (@<对象>)
+    }
+
+    方法 是否有效 <公开 静态 类型 = 逻辑型 注释 = "是否有效. 原方法: IsValid. 官方简介: 显示形状是否有效." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_Check.IsValid (@<对象>)
+    }
+
+}
+
+类 布尔交集 <公开 注释 = "布尔交集: 原类 BRepAlgoAPI_Common (libTKBO, 头文件 BRepAlgoAPI/BRepAlgoAPI_Common.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 此类提供参数对象与工具对象间的布尔公共运算(布尔交集)." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: BRepAlgoAPI_Common. 官方简介: 空构造函数" @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_Common.构造 ()
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: BRepAlgoAPI_Common. 官方简介: 由两个形状构造的构造函数: <S1> - 参数对象 <S2> - 工具对象 <anOperation> - 操作类型 已废弃" @嵌入式方法 = "">
+    参数 S1 <类型 = 长整数>
+    参数 S2 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_Common.构造_2 (@<S1>, @<S2>)
+    }
+
+    方法 创建_3 <公开 静态 类型 = 长整数 注释 = "桩(本地不可用): 参数类型 const BOPAlgo_PaveFiller& 未支持. 创建_3. 原构造器: BRepAlgoAPI_Common. 官方简介: 由两个形状构造的构造函数: <S1> - 参数对象 <S2> - 工具对象 <anOperation> - 操作类型 已废弃" @嵌入式方法 = "">
+    参数 S1 <类型 = 长整数>
+    参数 S2 <类型 = 长整数>
+    参数 PF <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_Common.构造_3 (@<S1>, @<S2>, @<PF>)
+    }
+
+}
+
+类 布尔差集 <公开 注释 = "布尔差集: 原类 BRepAlgoAPI_Cut (libTKBO, 头文件 BRepAlgoAPI/BRepAlgoAPI_Cut.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: Cut 类提供参数对象与工具对象间的布尔切割运算(布尔差集)." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: BRepAlgoAPI_Cut. 官方简介: 空构造函数" @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_Cut.构造 ()
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: BRepAlgoAPI_Cut. 官方简介: 由两个形状构造的构造函数: <S1> - 参数对象 <S2> - 工具对象 <anOperation> - 操作类型 已废弃" @嵌入式方法 = "">
+    参数 S1 <类型 = 长整数>
+    参数 S2 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_Cut.构造_2 (@<S1>, @<S2>)
+    }
+
+    方法 创建_3 <公开 静态 类型 = 长整数 注释 = "桩(本地不可用): 参数类型 const BOPAlgo_PaveFiller& 未支持. 创建_3. 原构造器: BRepAlgoAPI_Cut. 官方简介: 由两个形状构造的构造函数: <S1> - 参数对象 <S2> - 工具对象 <anOperation> - 操作类型 <PF> - 所执行的 PaveFiller 对象 已废弃" @嵌入式方法 = "">
+    参数 S1 <类型 = 长整数>
+    参数 S2 <类型 = 长整数>
+    参数 DSF <类型 = 长整数>
+    参数 正向标志 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_Cut.构造_3 (@<S1>, @<S2>, @<DSF>, @<正向标志>)
+    }
+
+}
+
+类 去特征运算 <公开 注释 = "去特征运算: 原类 BRepAlgoAPI_Defeaturing (libTKBO, 头文件 BRepAlgoAPI/BRepAlgoAPI_Defeaturing.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: BRepAlgoAPI_Defeaturing 算法是用于从形状中移除不需要部分的 API 算法. 不需要的部分(即特征)可以是孔, 凸台, 缺口, 倒角, 圆角等. 形状本身不被修改, 结果为新构建的形状." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: BRepAlgoAPI_Defeaturing. 官方简介: 空构造函数" @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_Defeaturing.构造 ()
+    }
+
+    方法 设置形状 <公开 静态 注释 = "设置形状. 原方法: SetShape. 官方简介: 设置要处理的形状. @param theShape [in] 要从中移除特征的形状. 它应当是 SOLID, COMPSOLID 或实体的 COMPOUND." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 形状 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_Defeaturing.SetShape (@<对象>, @<形状>)
+    }
+
+    方法 输入形状 <公开 静态 类型 = 长整数 注释 = "输入形状. 原方法: InputShape. 官方简介: 返回输入形状" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_Defeaturing.InputShape (@<对象>)
+    }
+
+    方法 添加待移除面 <公开 静态 注释 = "添加待移除面. 原方法: AddFaceToRemove. 官方简介: 添加要从输入形状中移除的特征. @param theFace [in] 要提取待移除面的形状." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 面 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_Defeaturing.AddFaceToRemove (@<对象>, @<面>)
+    }
+
+    方法 构建 <公开 静态 注释 = "构建. 原方法: Build. 官方简介: 执行操作" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_Defeaturing.Build (@<对象>)
+    }
+
+    方法 设置填充历史标志 <公开 静态 注释 = "设置填充历史标志. 原方法: SetToFillHistory. 官方简介: 定义是否跟踪形状的修改." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 标志 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_Defeaturing.SetToFillHistory (@<对象>, @<标志>)
+    }
+
+    方法 是否有历史 <公开 静态 类型 = 逻辑型 注释 = "是否有历史. 原方法: HasHistory. 官方简介: 返回是否请求了历史." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_Defeaturing.HasHistory (@<对象>)
+    }
+
+    方法 是否已删除 <公开 静态 类型 = 逻辑型 注释 = "是否已删除. 原方法: IsDeleted. 官方简介: 若形状 <theS> 在操作期间已被删除则返回 true. 这意味着该形状在结果中没有任何痕迹. 否则返回 false." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_Defeaturing.IsDeleted (@<对象>, @<S>)
+    }
+
+    方法 是否有已修改 <公开 静态 类型 = 逻辑型 注释 = "是否有已修改. 原方法: HasModified. 官方简介: 若运算期间任一输入形状被修改则返回 true." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_Defeaturing.HasModified (@<对象>)
+    }
+
+    方法 是否有已生成 <公开 静态 类型 = 逻辑型 注释 = "是否有已生成. 原方法: HasGenerated. 官方简介: 若运算期间任一输入形状生成了形状则返回 true." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_Defeaturing.HasGenerated (@<对象>)
+    }
+
+    方法 是否有已删除 <公开 静态 类型 = 逻辑型 注释 = "是否有已删除. 原方法: HasDeleted. 官方简介: 若运算期间删除了任一输入形状则返回 true." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_Defeaturing.HasDeleted (@<对象>)
+    }
+
+    方法 历史 <公开 静态 类型 = 长整数 注释 = "历史. 原方法: History. 官方简介: 返回形状修改的历史" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_Defeaturing.History (@<对象>)
+    }
+
+}
+
+类 布尔并集 <公开 注释 = "布尔并集: 原类 BRepAlgoAPI_Fuse (libTKBO, 头文件 BRepAlgoAPI/BRepAlgoAPI_Fuse.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 此类提供参数对象与工具对象间的布尔融合运算(布尔并集)." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: BRepAlgoAPI_Fuse. 官方简介: 空构造函数" @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_Fuse.构造 ()
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: BRepAlgoAPI_Fuse. 官方简介: 由两个形状构造的构造函数: <S1> - 参数对象 <S2> - 工具对象 <anOperation> - 操作类型 已废弃" @嵌入式方法 = "">
+    参数 S1 <类型 = 长整数>
+    参数 S2 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_Fuse.构造_2 (@<S1>, @<S2>)
+    }
+
+    方法 创建_3 <公开 静态 类型 = 长整数 注释 = "桩(本地不可用): 参数类型 const BOPAlgo_PaveFiller& 未支持. 创建_3. 原构造器: BRepAlgoAPI_Fuse. 官方简介: 由两个形状构造的构造函数: <S1> - 参数对象 <S2> - 工具对象 <anOperation> - 操作类型 已废弃" @嵌入式方法 = "">
+    参数 S1 <类型 = 长整数>
+    参数 S2 <类型 = 长整数>
+    参数 DSF <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_Fuse.构造_3 (@<S1>, @<S2>, @<DSF>)
+    }
+
+}
+
+类 布尔截面 <公开 注释 = "布尔截面: 原类 BRepAlgoAPI_Section (libTKBO, 头文件 BRepAlgoAPI/BRepAlgoAPI_Section.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 该算法构建参数对象与工具对象间的截面(Section)运算. 截面运算的结果由顶点与边组成. 截面运算的结果包含: 1. 作为 V/V, E/E, E/F, F/F 干涉对象的新顶点 2. 作为 V/E, V/F 干涉对象的顶点 3. 作为 F/F 干涉对象的新边 4. 构成公共块(Common Blocks)的边" @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: BRepAlgoAPI_Section. 官方简介: 空构造函数" @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_Section.构造 ()
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: BRepAlgoAPI_Section. 官方简介: 由两个形状构造的构造函数: <S1> - 参数对象 <S2> - 工具对象 <PerformNow> - 标志: 若 <PerformNow>=True - 立即执行算法 已废弃" @嵌入式方法 = "">
+    参数 S1 <类型 = 长整数>
+    参数 S2 <类型 = 长整数>
+    参数 立即执行 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_Section.构造_2 (@<S1>, @<S2>, @<立即执行>)
+    }
+
+    方法 创建_3 <公开 静态 类型 = 长整数 注释 = "创建_3. 原构造器: BRepAlgoAPI_Section. 官方简介: 由两个形状构造的构造函数: <S1> - 参数对象 <S2> - 工具对象 <PerformNow> - 标志: 若 <PerformNow>=True - 立即执行算法 已废弃" @嵌入式方法 = "">
+    参数 S1 <类型 = 长整数>
+    参数 平面 <类型 = 长整数>
+    参数 立即执行 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_Section.构造_3 (@<S1>, @<平面>, @<立即执行>)
+    }
+
+    方法 创建_4 <公开 静态 类型 = 长整数 注释 = "创建_4. 原构造器: BRepAlgoAPI_Section. 官方简介: 由两个形状构造的构造函数: <S1> - 参数对象 <S2> - 工具对象 <PerformNow> - 标志: 若 <PerformNow>=True - 立即执行算法 已废弃" @嵌入式方法 = "">
+    参数 S1 <类型 = 长整数>
+    参数 曲面 <类型 = 长整数>
+    参数 立即执行 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_Section.构造_4 (@<S1>, @<曲面>, @<立即执行>)
+    }
+
+    方法 创建_5 <公开 静态 类型 = 长整数 注释 = "创建_5. 原构造器: BRepAlgoAPI_Section. 官方简介: 由两个形状构造的构造函数: <S1> - 参数对象 <S2> - 工具对象 <PerformNow> - 标志: 若 <PerformNow>=True - 立即执行算法 已废弃" @嵌入式方法 = "">
+    参数 曲面 <类型 = 长整数>
+    参数 S2 <类型 = 长整数>
+    参数 立即执行 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_Section.构造_5 (@<曲面>, @<S2>, @<立即执行>)
+    }
+
+    方法 创建_6 <公开 静态 类型 = 长整数 注释 = "创建_6. 原构造器: BRepAlgoAPI_Section. 官方简介: 由两个形状构造的构造函数: <Sf1> - 参数对象 <Sf2> - 工具对象 <PerformNow> - 标志: 若 <PerformNow>=True - 立即执行算法 已废弃" @嵌入式方法 = "">
+    参数 曲面1 <类型 = 长整数>
+    参数 曲面2 <类型 = 长整数>
+    参数 立即执行 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_Section.构造_6 (@<曲面1>, @<曲面2>, @<立即执行>)
+    }
+
+    方法 初始化1 <公开 静态 注释 = "初始化1. 原方法: Init1. 官方简介: 初始化参数 <S1> - 参数已废弃" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S1 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_Section.Init1 (@<对象>, @<S1>)
+    }
+
+    方法 初始化1_2 <公开 静态 注释 = "初始化1_2. 原方法: Init1. 官方简介: 初始化参数 <Pl> - 参数已废弃" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 平面 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_Section.Init1_2 (@<对象>, @<平面>)
+    }
+
+    方法 初始化1_3 <公开 静态 注释 = "初始化1_3. 原方法: Init1. 官方简介: 初始化参数 <Sf> - 参数已废弃" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 曲面 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_Section.Init1_3 (@<对象>, @<曲面>)
+    }
+
+    方法 初始化2 <公开 静态 注释 = "初始化2. 原方法: Init2. 官方简介: 初始化工具 <S2> - 工具已废弃" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S2 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_Section.Init2 (@<对象>, @<S2>)
+    }
+
+    方法 初始化2_2 <公开 静态 注释 = "初始化2_2. 原方法: Init2. 官方简介: 初始化工具 <Pl> - 工具已废弃" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 平面 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_Section.Init2_2 (@<对象>, @<平面>)
+    }
+
+    方法 初始化2_3 <公开 静态 注释 = "初始化2_3. 原方法: Init2. 官方简介: 初始化工具 <Sf> - 工具已废弃" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 曲面 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_Section.Init2_3 (@<对象>, @<曲面>)
+    }
+
+    方法 逼近容差 <公开 静态 注释 = "逼近容差. 原方法: Approximation." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 B <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_Section.Approximation (@<对象>, @<B>)
+    }
+
+    方法 计算P曲线在1 <公开 静态 注释 = "计算P曲线在1. 原方法: ComputePCurveOn1. 官方简介: 指示是否对 argument 执行 P-Curve. 默认情况下, 结果的边不定义参数 2D 曲线(pcurve). 若 ComputePCurve1 等于 true, 则执行进一步计算, 把 argument 参数空间中的 P-Curve 附加到构造的边上. 已废弃" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 B <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_Section.ComputePCurveOn1 (@<对象>, @<B>)
+    }
+
+    方法 计算P曲线在2 <公开 静态 注释 = "计算P曲线在2. 原方法: ComputePCurveOn2. 官方简介: 指示是否对工具执行 P-Curve. 默认情况下, 结果的边不定义参数 2D 曲线(pcurve). 若 ComputePCurve1 等于 true, 则执行进一步计算, 把工具参数空间中的 P-Curve 附加到构造的边上. 已废弃" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 B <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_Section.ComputePCurveOn2 (@<对象>, @<B>)
+    }
+
+    方法 构建 <公开 静态 注释 = "构建. 原方法: Build. 官方简介: 执行算法: 填充干涉数据结构(若必要), 构建运算结果." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_Section.Build (@<对象>)
+    }
+
+    方法 是否有祖先面在1 <公开 静态 类型 = 逻辑型 注释 = "是否有祖先面在1. 原方法: HasAncestorFaceOn1. 官方简介: 获取给出截面边 <E> 的第一部分的面. 在以下三个条件成立时返回 True: 1/ <E> 是 Shape() 方法返回的边. 2/ 执行的截面的第一部分是形状. 3/ <E> 构建在交线上(即 <E> 不是公共边的结果). 当返回 False 时, F 保持不变. 已废弃" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 E <类型 = 长整数>
+    参数 输出F <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_Section.HasAncestorFaceOn1 (@<对象>, @<E>, @<输出F>)
+    }
+
+    方法 是否有祖先面在2 <公开 静态 类型 = 逻辑型 注释 = "是否有祖先面在2. 原方法: HasAncestorFaceOn2. 官方简介: 识别该框架中最后一次计算产生的相交边 E 的祖先面, 即边 E 所在的原始形状的面: - HasAncestorFaceOn1 给出第一个形状中的祖先面, 且 - HasAncestorFaceOn2 给出第二个形状中的祖先面. 若找到祖先面 F 则这些函数返回 true, 否则返回 false. 若满足以下条件, 则边 E 的祖先面是可识别的: - 该算法执行其最后一次计算所基于的第一个部件是形状, 即它在构造该算法时或之后由 Init1 函数给出时不是作为曲面或平面给出的, - E 是该相交算法最后一次计算构建的基本边之一. 要正确使用这些函数, 你必须在用祖先面之前测试返回的布尔值: F 仅在返回的布尔值等于 true 时才有意义. Obsolete" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 E <类型 = 长整数>
+    参数 输出F <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_Section.HasAncestorFaceOn2 (@<对象>, @<E>, @<输出F>)
+    }
+
+}
+
+类 布尔分割器 <公开 注释 = "布尔分割器: 原类 BRepAlgoAPI_Splitter (libTKBO, 头文件 BRepAlgoAPI/BRepAlgoAPI_Splitter.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 此类包含 **Splitter** 算法的 API, 它允许用一组任意形状分割另一组任意形状. 运算的参数分为两组: *Objects* - 将被分割的形状; *Tools* - 用于分割 *Objects* 的形状. 运算结果仅包含 *Objects* 组形状的分割部分. *Tools* 组形状的分割部分不包含在结果中. 形状也可被同组中的其他形状分割(当这些形状互相干涉时)." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: BRepAlgoAPI_Splitter. 官方简介: 空构造函数" @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_Splitter.构造 ()
+    }
+
+    方法 构建 <公开 静态 注释 = "构建. 原方法: Build. 官方简介: 执行 Split 操作. 执行参数形状(对象与工具两者)的相交, 并用工具分割对象." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBO.BRepAlgoAPI_Splitter.Build (@<对象>)
+    }
+
+}

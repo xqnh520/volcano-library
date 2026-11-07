@@ -1,0 +1,29 @@
+{
+  "Version": "1.0",
+  "Plugins": [
+    {
+      "Name": "Graphics.SDL",
+      "Url": "AnyCAD.Graphics.Window.SDL",
+      "Enabled": true,
+      "Group": "Graphics"
+    },
+    {
+      "Name": "Graphics.Effect",
+      "Url": "AnyCAD.Graphics.Effect",
+      "Enabled": true,
+      "Group": "Graphics"
+    },
+    {
+      "Name": "Graphics.Image",
+      "Url": "AnyCAD.Graphics.Image",
+      "Enabled": true,
+      "Group": "Graphics"
+    },
+    {
+      "Name": "Graphics.Gui",
+      "Url": "AnyCAD.Graphics.Gui",
+      "Enabled": true,
+      "Group": "Graphics"
+    }
+  ]
+}

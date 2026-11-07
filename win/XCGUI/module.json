@@ -1,0 +1,7 @@
+{
+    "name":  "XCGUI",
+    "version":  "1.0.0",
+    "desc":  "XCGUI 类库",
+    "author":  "xqnh520",
+    "entry":  "xcgui.vgrp"
+}

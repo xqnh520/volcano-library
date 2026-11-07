@@ -1,0 +1,640 @@
+#pragma once
+
+#ifndef NOMINMAX
+#define NOMINMAX
+#endif
+
+#ifndef WINVER
+#define WINVER 0x0601
+#endif
+
+#ifndef _WIN32_WINNT
+#define _WIN32_WINNT 0x0601
+#endif
+
+#ifndef NTDDI_VERSION
+#define NTDDI_VERSION 0x06010000
+#endif
+
+#include <windows.h>
+#include <windowsx.h>
+#include <d2d1_1.h>
+#include <dwrite.h>
+#include <wincodec.h>
+#include <wrl/client.h>
+#include <string>
+#include <vector>
+
+#pragma comment(lib, "d2d1.lib")
+#pragma comment(lib, "dwrite.lib")
+#pragma comment(lib, "windowscodecs.lib")
+
+namespace volcano_d2d {
+
+using Microsoft::WRL::ComPtr;
+
+using PaintCallback = void (*)(void*);
+using ResizeCallback = void (*)(void*, int, int);
+using MouseCallback = void (*)(void*, int, int, int);
+using KeyCallback = void (*)(void*, int, int);
+
+enum MouseEventType {
+    MOUSE_MOVE = 0,
+    MOUSE_DOWN = 1,
+    MOUSE_UP = 2,
+    MOUSE_LEAVE = 3,
+    MOUSE_WHEEL = 4
+};
+
+enum KeyEventType {
+    KEY_DOWN = 0,
+    KEY_UP = 1,
+    KEY_FOCUS = 2,
+    KEY_BLUR = 3
+};
+
+struct Color {
+    float r = 0.0f;
+    float g = 0.0f;
+    float b = 0.0f;
+    float a = 1.0f;
+};
+
+inline bool operator==(const Color& lhs, const Color& rhs) {
+    return lhs.r == rhs.r && lhs.g == rhs.g && lhs.b == rhs.b && lhs.a == rhs.a;
+}
+
+inline bool operator!=(const Color& lhs, const Color& rhs) {
+    return !(lhs == rhs);
+}
+
+struct Point {
+    float x = 0.0f;
+    float y = 0.0f;
+};
+
+struct Rect {
+    float left = 0.0f;
+    float top = 0.0f;
+    float right = 0.0f;
+    float bottom = 0.0f;
+};
+
+struct Matrix {
+    float m11 = 1.0f;
+    float m12 = 0.0f;
+    float m21 = 0.0f;
+    float m22 = 1.0f;
+    float dx = 0.0f;
+    float dy = 0.0f;
+};
+
+struct RenderOptions {
+    int factoryType = D2D1_FACTORY_TYPE_SINGLE_THREADED;
+    int debugLevel = D2D1_DEBUG_LEVEL_NONE;
+    int renderTargetType = D2D1_RENDER_TARGET_TYPE_DEFAULT;
+    int featureLevel = D2D1_FEATURE_LEVEL_DEFAULT;
+    int presentOptions = D2D1_PRESENT_OPTIONS_NONE;
+    int alphaMode = D2D1_ALPHA_MODE_UNKNOWN;
+    int pixelFormat = DXGI_FORMAT_UNKNOWN;
+    float dpiX = 0.0f;
+    float dpiY = 0.0f;
+    bool gdiCompatible = false;
+};
+
+struct GradientStop {
+    float position = 0.0f;
+    Color color;
+};
+
+class Engine;
+
+class UiComponent {
+public:
+    enum Type {
+        Panel = 1,
+        Button = 2,
+        TextBlock = 3,
+        ProgressBar = 4,
+        CheckBox = 5,
+        Slider = 6,
+        TabBar = 7
+    };
+
+    explicit UiComponent(Type type);
+    virtual ~UiComponent() = default;
+
+    Type type() const { return type_; }
+    Rect bounds() const { return bounds_; }
+    void SetBounds(Rect bounds) { bounds_ = bounds; }
+    void SetText(const std::wstring& text) { text_ = text; }
+    void SetValue(float value);
+    void SetRange(float minimum, float maximum);
+    void SetEnabled(bool enabled) { enabled_ = enabled; }
+    void SetVisible(bool visible) { visible_ = visible; }
+    void SetChecked(bool checked) { checked_ = checked; }
+    void SetSelectedIndex(int index) { selectedIndex_ = index; }
+    void SetButtonMetrics(float radius, float borderWidth);
+    void SetButtonFont(const std::wstring& family, float size, int weight);
+    void SetButtonFontDescriptor(const std::wstring& descriptor);
+    void SetButtonColors(Color normal, Color hover, Color pressed, Color disabled, Color text, Color disabledText, Color border);
+    void SetButtonStateColors(int state, Color background, bool hasBackground, Color text, bool hasText, Color border, bool hasBorder);
+    void SetButtonLayout(float paddingX, float paddingY, float iconGap, int iconPosition, int contentAlign, bool autoWrap);
+    void SetButtonOptions(int style, bool toggle, bool focused, bool defaultButton, Color focusColor, float focusWidth);
+    void SetButtonIcon(const std::wstring& fileName, float size, Color tint, bool useTint);
+    void SetButtonIconData(const void* data, int dataSize, float size, Color tint, bool useTint);
+    void SetButtonStateIconData(int state, const void* data, int dataSize, float size, Color tint, bool useTint);
+    int selectedIndex() const { return selectedIndex_; }
+    bool checked() const { return checked_; }
+    float value() const { return value_; }
+    bool Hit(Point point) const;
+
+    virtual void Draw(Engine& engine);
+    virtual bool OnMouse(Engine& engine, int x, int y, int eventType);
+    virtual bool OnKey(Engine& engine, int eventType, int keyCode);
+
+protected:
+    void DrawFrame(Engine& engine, Color fill, Color stroke, float radius);
+    bool EnsureButtonIcon(Engine& engine, int state);
+    void ClearButtonIconCache();
+    void ClearButtonIconCache(int state);
+    int ButtonVisualState() const;
+    int ResolveIconState(int state) const;
+    Color ResolveBackgroundColor(int state) const;
+    Color ResolveTextColor(int state) const;
+    Color ResolveBorderColor(int state) const;
+    float NormalizedValue() const;
+    Type type_;
+    Rect bounds_;
+    std::wstring text_;
+    float value_ = 0.0f;
+    float minimum_ = 0.0f;
+    float maximum_ = 100.0f;
+    bool enabled_ = true;
+    bool visible_ = true;
+    bool hovered_ = false;
+    bool pressed_ = false;
+    bool checked_ = false;
+    int selectedIndex_ = 0;
+    float buttonRadius_ = 8.0f;
+    float buttonBorderWidth_ = 0.0f;
+    std::wstring buttonFontFamily_ = L"Microsoft YaHei";
+    float buttonFontSize_ = 14.0f;
+    int buttonFontWeight_ = DWRITE_FONT_WEIGHT_SEMI_BOLD;
+    int buttonFontStyle_ = DWRITE_FONT_STYLE_NORMAL;
+    bool buttonFontUnderline_ = false;
+    bool buttonFontStrikeout_ = false;
+    float buttonFontRotationDegrees_ = 0.0f;
+    Color buttonNormalColor_;
+    Color buttonHoverColor_;
+    Color buttonPressedColor_;
+    Color buttonDisabledColor_;
+    Color buttonTextColor_;
+    Color buttonDisabledTextColor_;
+    Color buttonBorderColor_;
+    Color buttonStateBackground_[4]{};
+    Color buttonStateText_[4]{};
+    Color buttonStateBorder_[4]{};
+    bool buttonHasStateBackground_[4]{};
+    bool buttonHasStateText_[4]{};
+    bool buttonHasStateBorder_[4]{};
+    float buttonPaddingX_ = 12.0f;
+    float buttonPaddingY_ = 6.0f;
+    float buttonIconGap_ = 6.0f;
+    float buttonIconSize_ = 0.0f;
+    int buttonIconPosition_ = 0;
+    int buttonContentAlign_ = 0;
+    bool buttonAutoWrap_ = false;
+    int buttonStyle_ = 0;
+    bool buttonToggle_ = false;
+    bool buttonFocused_ = false;
+    bool buttonDefault_ = false;
+    Color buttonFocusColor_;
+    float buttonFocusWidth_ = 2.0f;
+    std::wstring buttonIconFile_;
+    std::vector<unsigned char> buttonIconData_;
+    Color buttonIconTint_;
+    bool buttonUseIconTint_ = false;
+    std::wstring buttonIconFileStates_[4];
+    std::vector<unsigned char> buttonIconDataStates_[4];
+    std::wstring buttonLoadedIconFileStates_[4];
+    Microsoft::WRL::ComPtr<ID2D1Bitmap> buttonIconBitmapStates_[4];
+    bool buttonIconIsSvgStates_[4]{};
+    bool buttonIconLoadAttemptedStates_[4]{};
+};
+
+class UiContainer : public UiComponent {
+public:
+    UiContainer();
+    ~UiContainer() override;
+    void Add(UiComponent* child);
+    void Clear();
+    void Draw(Engine& engine) override;
+    bool OnMouse(Engine& engine, int x, int y, int eventType) override;
+
+private:
+    std::vector<UiComponent*> children_;
+};
+
+class Engine {
+public:
+    Engine();
+    ~Engine();
+
+    HRESULT CreateForHwnd(HWND hwnd, int width, int height, const RenderOptions& options);
+    void Destroy();
+    bool IsReady() const;
+    HRESULT Resize(int width, int height);
+    void Invalidate(bool eraseBackground);
+    void UpdateNow();
+    bool InstallAutoRepaint(void* owner, PaintCallback paintCallback, ResizeCallback resizeCallback = nullptr, MouseCallback mouseCallback = nullptr, KeyCallback keyCallback = nullptr);
+    void UninstallAutoRepaint();
+
+    void BeginDraw();
+    HRESULT EndDraw();
+    void Flush();
+    void Clear(Color color);
+
+    void SetDpi(float dpiX, float dpiY);
+    void SetTransform(Matrix matrix);
+    void ResetTransform();
+    void SetAntialiasMode(int mode);
+    void SetTextAntialiasMode(int mode);
+    void SetTags(UINT64 tag1, UINT64 tag2);
+
+    void DrawLine(Point p1, Point p2, Color color, float strokeWidth);
+    void DrawRectangle(Rect rect, Color color, float strokeWidth);
+    void FillRectangle(Rect rect, Color color);
+    void DrawRoundedRectangle(Rect rect, float radiusX, float radiusY, Color color, float strokeWidth);
+    void FillRoundedRectangle(Rect rect, float radiusX, float radiusY, Color color);
+    void DrawEllipse(Point center, float radiusX, float radiusY, Color color, float strokeWidth);
+    void FillEllipse(Point center, float radiusX, float radiusY, Color color);
+
+    HRESULT CreateSolidBrush(Color color, float opacity, ID2D1SolidColorBrush** brush);
+    HRESULT CreateLinearGradientBrush(Point start, Point end, const GradientStop* stops, UINT32 count, ID2D1LinearGradientBrush** brush);
+    HRESULT CreateRadialGradientBrush(Point center, Point originOffset, float radiusX, float radiusY, const GradientStop* stops, UINT32 count, ID2D1RadialGradientBrush** brush);
+    void ReleaseUnknown(IUnknown* value);
+    void SetBrushOpacity(ID2D1Brush* brush, float opacity);
+    void SetBrushTransform(ID2D1Brush* brush, Matrix matrix);
+
+    void DrawLineByBrush(Point p1, Point p2, ID2D1Brush* brush, float strokeWidth, ID2D1StrokeStyle* strokeStyle);
+    void DrawRectByBrush(Rect rect, ID2D1Brush* brush, float strokeWidth, ID2D1StrokeStyle* strokeStyle);
+    void FillRectByBrush(Rect rect, ID2D1Brush* brush);
+    void DrawRoundedRectByBrush(Rect rect, float radiusX, float radiusY, ID2D1Brush* brush, float strokeWidth, ID2D1StrokeStyle* strokeStyle);
+    void FillRoundedRectByBrush(Rect rect, float radiusX, float radiusY, ID2D1Brush* brush);
+    void DrawEllipseByBrush(Point center, float radiusX, float radiusY, ID2D1Brush* brush, float strokeWidth, ID2D1StrokeStyle* strokeStyle);
+    void FillEllipseByBrush(Point center, float radiusX, float radiusY, ID2D1Brush* brush);
+
+    HRESULT CreateStrokeStyle(int startCap, int endCap, int dashCap, int lineJoin, float miterLimit, int dashStyle, float dashOffset, ID2D1StrokeStyle** style);
+    HRESULT CreateCustomStrokeStyle(int startCap, int endCap, int dashCap, int lineJoin, float miterLimit, float dashOffset, const float* dashes, UINT32 dashCount, ID2D1StrokeStyle** style);
+
+    HRESULT CreateRectangleGeometry(Rect rect, ID2D1RectangleGeometry** geometry);
+    HRESULT CreateRoundedRectangleGeometry(Rect rect, float radiusX, float radiusY, ID2D1RoundedRectangleGeometry** geometry);
+    HRESULT CreateEllipseGeometry(Point center, float radiusX, float radiusY, ID2D1EllipseGeometry** geometry);
+    HRESULT CreateTransformedGeometry(ID2D1Geometry* source, Matrix matrix, ID2D1TransformedGeometry** geometry);
+    HRESULT CreatePathGeometry(ID2D1PathGeometry** geometry);
+    HRESULT OpenGeometry(ID2D1PathGeometry* geometry, ID2D1GeometrySink** sink);
+    void GeometryBeginFigure(ID2D1GeometrySink* sink, Point start, bool filled);
+    void GeometryAddLine(ID2D1GeometrySink* sink, Point point);
+    void GeometryAddBezier(ID2D1GeometrySink* sink, Point p1, Point p2, Point p3);
+    void GeometryAddQuadraticBezier(ID2D1GeometrySink* sink, Point p1, Point p2);
+    void GeometryAddArc(ID2D1GeometrySink* sink, Point end, float radiusX, float radiusY, float rotation, int sweepDirection, int arcSize);
+    void GeometryEndFigure(ID2D1GeometrySink* sink, bool closed);
+    HRESULT GeometryClose(ID2D1GeometrySink* sink);
+    void DrawGeometry(ID2D1Geometry* geometry, ID2D1Brush* brush, float strokeWidth, ID2D1StrokeStyle* strokeStyle);
+    void FillGeometry(ID2D1Geometry* geometry, ID2D1Brush* brush);
+    HRESULT GeometryGetBounds(ID2D1Geometry* geometry, Rect* bounds);
+    HRESULT GeometryComputeArea(ID2D1Geometry* geometry, float* area);
+    HRESULT GeometryComputeLength(ID2D1Geometry* geometry, float* length);
+    bool GeometryFillContainsPoint(ID2D1Geometry* geometry, Point point);
+    bool GeometryStrokeContainsPoint(ID2D1Geometry* geometry, Point point, float strokeWidth, ID2D1StrokeStyle* strokeStyle);
+
+    HRESULT LoadBitmapFromFile(const wchar_t* fileName, ID2D1Bitmap** bitmap);
+    HRESULT LoadBitmapFromMemory(const void* data, int dataSize, ID2D1Bitmap** bitmap);
+    HRESULT CreateBitmapFromBgra(int width, int height, const void* pixels, UINT32 stride, ID2D1Bitmap** bitmap);
+    void DrawBitmap(ID2D1Bitmap* bitmap, Rect dest, float opacity, int interpolationMode, Rect source);
+    HRESULT CreateBitmapBrush(ID2D1Bitmap* bitmap, int extendModeX, int extendModeY, int interpolationMode, float opacity, ID2D1BitmapBrush** brush);
+    int BitmapWidth(ID2D1Bitmap* bitmap) const;
+    int BitmapHeight(ID2D1Bitmap* bitmap) const;
+
+    HRESULT CreateTextFormat(const wchar_t* fontFamily, float size, int weight, int style, int stretch, const wchar_t* locale, IDWriteTextFormat** format);
+    HRESULT CreateTextLayout(const wchar_t* text, IDWriteTextFormat* format, float maxWidth, float maxHeight, IDWriteTextLayout** layout);
+    void SetTextAlignment(IDWriteTextFormat* format, int alignment);
+    void SetParagraphAlignment(IDWriteTextFormat* format, int alignment);
+    void SetWordWrapping(IDWriteTextFormat* format, int wrapping);
+    void DrawTextSimple(const wchar_t* text, Rect rect, Color color, const wchar_t* fontFamily, float size, int weight, int style, int horizontalAlign, int verticalAlign);
+    void DrawTextDecorated(const wchar_t* text, Rect rect, Color color, const wchar_t* fontFamily, float size, int weight, int style, bool underline, bool strikeout, float rotationDegrees, int horizontalAlign, int verticalAlign, bool wordWrap = true);
+    void DrawTextLayout(Point origin, IDWriteTextLayout* layout, ID2D1Brush* brush, int options);
+
+    HRESULT CreateLayer(ID2D1Layer** layer);
+    void PushLayer(Rect contentBounds, ID2D1Layer* layer, float opacity);
+    void PopLayer();
+    void PushAxisAlignedClip(Rect rect, int antialiasMode);
+    void PopAxisAlignedClip();
+    HRESULT CreateDrawingStateBlock(ID2D1DrawingStateBlock** stateBlock);
+    void SaveDrawingState(ID2D1DrawingStateBlock* stateBlock);
+    void RestoreDrawingState(ID2D1DrawingStateBlock* stateBlock);
+
+    ID2D1Factory1* Factory() const { return factory_.Get(); }
+    IDWriteFactory* WriteFactory() const { return writeFactory_.Get(); }
+    IWICImagingFactory* WicFactory() const { return wicFactory_.Get(); }
+    ID2D1HwndRenderTarget* Target() const { return target_.Get(); }
+    HRESULT LastResult() const { return lastResult_; }
+    std::wstring LastErrorText() const;
+
+    UiComponent* CreateUiComponent(int type);
+    UiContainer* CreateUiContainer();
+    void DestroyUiComponent(UiComponent* component);
+    void UiAddChild(UiContainer* container, UiComponent* child);
+    void UiClearChildren(UiContainer* container);
+    void UiSetBounds(UiComponent* component, Rect bounds);
+    void UiSetPixelBounds(UiComponent* component, Rect bounds);
+    void UiSetText(UiComponent* component, const wchar_t* text);
+    void UiSetValue(UiComponent* component, float value);
+    void UiSetRange(UiComponent* component, float minimum, float maximum);
+    void UiSetEnabled(UiComponent* component, bool enabled);
+    void UiSetVisible(UiComponent* component, bool visible);
+    void UiSetChecked(UiComponent* component, bool checked);
+    void UiSetSelectedIndex(UiComponent* component, int index);
+    void UiSetButtonMetrics(UiComponent* component, float radius, float borderWidth);
+    void UiSetButtonFont(UiComponent* component, const wchar_t* family, float size, int weight);
+    void UiSetButtonFontDescriptor(UiComponent* component, const wchar_t* descriptor);
+    void UiSetButtonColors(UiComponent* component, Color normal, Color hover, Color pressed, Color disabled, Color text, Color disabledText, Color border);
+    void UiSetButtonStateColors(UiComponent* component, int state, Color background, bool hasBackground, Color text, bool hasText, Color border, bool hasBorder);
+    void UiSetButtonLayout(UiComponent* component, float paddingX, float paddingY, float iconGap, int iconPosition, int contentAlign, bool autoWrap);
+    void UiSetButtonOptions(UiComponent* component, int style, bool toggle, bool focused, bool defaultButton, Color focusColor, float focusWidth);
+    void UiSetButtonIcon(UiComponent* component, const wchar_t* fileName, float size, Color tint, bool useTint);
+    void UiSetButtonIconData(UiComponent* component, const void* data, int dataSize, float size, Color tint, bool useTint);
+    void UiSetButtonStateIconData(UiComponent* component, int state, const void* data, int dataSize, float size, Color tint, bool useTint);
+    int UiSelectedIndex(UiComponent* component) const;
+    bool UiChecked(UiComponent* component) const;
+    float UiValue(UiComponent* component) const;
+    void UiDraw(UiComponent* component);
+    bool UiMouseEvent(UiComponent* component, int x, int y, int eventType);
+    bool UiKeyEvent(UiComponent* component, int eventType, int keyCode);
+
+private:
+    D2D1_COLOR_F ToD2D(Color color) const;
+    D2D1_POINT_2F ToD2D(Point point) const;
+    D2D1_RECT_F ToD2D(Rect rect) const;
+    D2D1_MATRIX_3X2_F ToD2D(Matrix matrix) const;
+    ID2D1SolidColorBrush* TempBrush(Color color);
+    HRESULT EnsureFactories(const RenderOptions& options);
+    static LRESULT CALLBACK AutoRepaintWndProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam);
+    LRESULT HandleAutoRepaintMessage(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam);
+
+    HWND hwnd_ = nullptr;
+    WNDPROC oldWndProc_ = nullptr;
+    void* callbackOwner_ = nullptr;
+    PaintCallback paintCallback_ = nullptr;
+    ResizeCallback resizeCallback_ = nullptr;
+    MouseCallback mouseCallback_ = nullptr;
+    KeyCallback keyCallback_ = nullptr;
+    bool inAutoPaint_ = false;
+    bool trackingMouseLeave_ = false;
+    bool comInitialized_ = false;
+    HRESULT lastResult_ = S_OK;
+    RenderOptions options_;
+    ComPtr<ID2D1Factory1> factory_;
+    ComPtr<IDWriteFactory> writeFactory_;
+    ComPtr<IWICImagingFactory> wicFactory_;
+    ComPtr<ID2D1HwndRenderTarget> target_;
+    ComPtr<ID2D1SolidColorBrush> tempBrush_;
+};
+
+inline Color MakeColor(float r, float g, float b, float a = 1.0f) {
+    Color value;
+    value.r = r;
+    value.g = g;
+    value.b = b;
+    value.a = a;
+    return value;
+}
+
+inline Color MakeColorFromColorRef(int color) {
+    return MakeColor(
+        static_cast<float>(color & 0xFF) / 255.0f,
+        static_cast<float>((color >> 8) & 0xFF) / 255.0f,
+        static_cast<float>((color >> 16) & 0xFF) / 255.0f,
+        1.0f);
+}
+
+inline Point MakePoint(float x, float y) {
+    Point value;
+    value.x = x;
+    value.y = y;
+    return value;
+}
+
+inline Rect MakeRect(float left, float top, float right, float bottom) {
+    Rect value;
+    value.left = left;
+    value.top = top;
+    value.right = right;
+    value.bottom = bottom;
+    return value;
+}
+
+inline Matrix MakeIdentityMatrix() {
+    return Matrix{};
+}
+
+inline ID2D1SolidColorBrush* CreateSolidBrushPtr(Engine& engine, Color color, float opacity) {
+    ID2D1SolidColorBrush* brush = nullptr;
+    engine.CreateSolidBrush(color, opacity, &brush);
+    return brush;
+}
+
+inline ID2D1StrokeStyle* CreateStrokeStylePtr(Engine& engine, int startCap, int endCap, int dashCap, int lineJoin, float miterLimit, int dashStyle, float dashOffset) {
+    ID2D1StrokeStyle* style = nullptr;
+    engine.CreateStrokeStyle(startCap, endCap, dashCap, lineJoin, miterLimit, dashStyle, dashOffset, &style);
+    return style;
+}
+
+inline ID2D1StrokeStyle* CreateCustomStrokeStyle2Ptr(Engine& engine, float dash1, float dash2, int startCap, int endCap, int dashCap, int lineJoin, float miterLimit, float dashOffset) {
+    float dashes[2] = { dash1, dash2 };
+    ID2D1StrokeStyle* style = nullptr;
+    engine.CreateCustomStrokeStyle(startCap, endCap, dashCap, lineJoin, miterLimit, dashOffset, dashes, 2, &style);
+    return style;
+}
+
+inline ID2D1StrokeStyle* CreateCustomStrokeStyle4Ptr(Engine& engine, float dash1, float dash2, float dash3, float dash4, int startCap, int endCap, int dashCap, int lineJoin, float miterLimit, float dashOffset) {
+    float dashes[4] = { dash1, dash2, dash3, dash4 };
+    ID2D1StrokeStyle* style = nullptr;
+    engine.CreateCustomStrokeStyle(startCap, endCap, dashCap, lineJoin, miterLimit, dashOffset, dashes, 4, &style);
+    return style;
+}
+
+inline ID2D1LinearGradientBrush* CreateLinearGradientBrush2Ptr(Engine& engine, Point start, Point end, Color color1, Color color2) {
+    GradientStop stops[2];
+    stops[0].position = 0.0f;
+    stops[0].color = color1;
+    stops[1].position = 1.0f;
+    stops[1].color = color2;
+    ID2D1LinearGradientBrush* brush = nullptr;
+    engine.CreateLinearGradientBrush(start, end, stops, 2, &brush);
+    return brush;
+}
+
+inline ID2D1LinearGradientBrush* CreateLinearGradientBrush3Ptr(Engine& engine, Point start, Point end, Color color1, float middlePosition, Color color2, Color color3) {
+    GradientStop stops[3];
+    stops[0].position = 0.0f;
+    stops[0].color = color1;
+    stops[1].position = middlePosition;
+    stops[1].color = color2;
+    stops[2].position = 1.0f;
+    stops[2].color = color3;
+    ID2D1LinearGradientBrush* brush = nullptr;
+    engine.CreateLinearGradientBrush(start, end, stops, 3, &brush);
+    return brush;
+}
+
+inline ID2D1RadialGradientBrush* CreateRadialGradientBrush2Ptr(Engine& engine, Point center, Point originOffset, float radiusX, float radiusY, Color color1, Color color2) {
+    GradientStop stops[2];
+    stops[0].position = 0.0f;
+    stops[0].color = color1;
+    stops[1].position = 1.0f;
+    stops[1].color = color2;
+    ID2D1RadialGradientBrush* brush = nullptr;
+    engine.CreateRadialGradientBrush(center, originOffset, radiusX, radiusY, stops, 2, &brush);
+    return brush;
+}
+
+inline ID2D1RadialGradientBrush* CreateRadialGradientBrush3Ptr(Engine& engine, Point center, Point originOffset, float radiusX, float radiusY, Color color1, float middlePosition, Color color2, Color color3) {
+    GradientStop stops[3];
+    stops[0].position = 0.0f;
+    stops[0].color = color1;
+    stops[1].position = middlePosition;
+    stops[1].color = color2;
+    stops[2].position = 1.0f;
+    stops[2].color = color3;
+    ID2D1RadialGradientBrush* brush = nullptr;
+    engine.CreateRadialGradientBrush(center, originOffset, radiusX, radiusY, stops, 3, &brush);
+    return brush;
+}
+
+inline ID2D1PathGeometry* CreatePathGeometryPtr(Engine& engine) {
+    ID2D1PathGeometry* geometry = nullptr;
+    engine.CreatePathGeometry(&geometry);
+    return geometry;
+}
+
+inline ID2D1RectangleGeometry* CreateRectangleGeometryPtr(Engine& engine, Rect rect) {
+    ID2D1RectangleGeometry* geometry = nullptr;
+    engine.CreateRectangleGeometry(rect, &geometry);
+    return geometry;
+}
+
+inline ID2D1RoundedRectangleGeometry* CreateRoundedRectangleGeometryPtr(Engine& engine, Rect rect, float radiusX, float radiusY) {
+    ID2D1RoundedRectangleGeometry* geometry = nullptr;
+    engine.CreateRoundedRectangleGeometry(rect, radiusX, radiusY, &geometry);
+    return geometry;
+}
+
+inline ID2D1EllipseGeometry* CreateEllipseGeometryPtr(Engine& engine, Point center, float radiusX, float radiusY) {
+    ID2D1EllipseGeometry* geometry = nullptr;
+    engine.CreateEllipseGeometry(center, radiusX, radiusY, &geometry);
+    return geometry;
+}
+
+inline ID2D1TransformedGeometry* CreateTransformedGeometryPtr(Engine& engine, ID2D1Geometry* source, Matrix matrix) {
+    ID2D1TransformedGeometry* geometry = nullptr;
+    engine.CreateTransformedGeometry(source, matrix, &geometry);
+    return geometry;
+}
+
+inline ID2D1GeometrySink* OpenGeometryPtr(Engine& engine, ID2D1PathGeometry* geometry) {
+    ID2D1GeometrySink* sink = nullptr;
+    engine.OpenGeometry(geometry, &sink);
+    return sink;
+}
+
+inline Rect GeometryBoundsValue(Engine& engine, ID2D1Geometry* geometry) {
+    Rect bounds;
+    engine.GeometryGetBounds(geometry, &bounds);
+    return bounds;
+}
+
+inline float GeometryAreaValue(Engine& engine, ID2D1Geometry* geometry) {
+    float area = 0.0f;
+    engine.GeometryComputeArea(geometry, &area);
+    return area;
+}
+
+inline float GeometryLengthValue(Engine& engine, ID2D1Geometry* geometry) {
+    float length = 0.0f;
+    engine.GeometryComputeLength(geometry, &length);
+    return length;
+}
+
+inline ID2D1Bitmap* LoadBitmapFromFilePtr(Engine& engine, const wchar_t* fileName) {
+    ID2D1Bitmap* bitmap = nullptr;
+    engine.LoadBitmapFromFile(fileName, &bitmap);
+    return bitmap;
+}
+
+inline ID2D1Bitmap* CreateBitmapFromBgraPtr(Engine& engine, int width, int height, const void* pixels, UINT32 stride) {
+    ID2D1Bitmap* bitmap = nullptr;
+    engine.CreateBitmapFromBgra(width, height, pixels, stride, &bitmap);
+    return bitmap;
+}
+
+inline ID2D1BitmapBrush* CreateBitmapBrushPtr(Engine& engine, ID2D1Bitmap* bitmap, int extendModeX, int extendModeY, int interpolationMode, float opacity) {
+    ID2D1BitmapBrush* brush = nullptr;
+    engine.CreateBitmapBrush(bitmap, extendModeX, extendModeY, interpolationMode, opacity, &brush);
+    return brush;
+}
+
+inline IDWriteTextFormat* CreateTextFormatPtr(Engine& engine, const wchar_t* fontFamily, float size, int weight, int style, int stretch, const wchar_t* locale) {
+    IDWriteTextFormat* format = nullptr;
+    engine.CreateTextFormat(fontFamily, size, weight, style, stretch, locale, &format);
+    return format;
+}
+
+inline IDWriteTextLayout* CreateTextLayoutPtr(Engine& engine, const wchar_t* text, IDWriteTextFormat* format, float maxWidth, float maxHeight) {
+    IDWriteTextLayout* layout = nullptr;
+    engine.CreateTextLayout(text, format, maxWidth, maxHeight, &layout);
+    return layout;
+}
+
+inline ID2D1Layer* CreateLayerPtr(Engine& engine) {
+    ID2D1Layer* layer = nullptr;
+    engine.CreateLayer(&layer);
+    return layer;
+}
+
+inline ID2D1DrawingStateBlock* CreateDrawingStateBlockPtr(Engine& engine) {
+    ID2D1DrawingStateBlock* state = nullptr;
+    engine.CreateDrawingStateBlock(&state);
+    return state;
+}
+
+inline const void* CheckerPixels32() {
+    static unsigned int pixels[32 * 32];
+    static bool initialized = false;
+    if (!initialized) {
+        for (int y = 0; y < 32; ++y) {
+            for (int x = 0; x < 32; ++x) {
+                const bool light = ((x / 8) + (y / 8)) % 2 == 0;
+                pixels[y * 32 + x] = light ? 0xFFFFF4D8u : 0xFF2F6F89u;
+            }
+        }
+        initialized = true;
+    }
+    return pixels;
+}
+
+inline int HitTestDemoTab(int x, int y) {
+    if (y < 24 || y > 62) return -1;
+    if (x >= 24 && x < 112) return 0;
+    if (x >= 112 && x < 200) return 1;
+    if (x >= 200 && x < 288) return 2;
+    if (x >= 288 && x < 376) return 3;
+    if (x >= 376 && x < 464) return 4;
+    if (x >= 464 && x < 552) return 5;
+    if (x >= 552 && x < 640) return 6;
+    if (x >= 640 && x < 728) return 7;
+    return -1;
+}
+
+}  // namespace volcano_d2d

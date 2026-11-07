@@ -1,0 +1,14 @@
+doc_format_version = 1
+project_identifier = "wutao.vproject.pc.win.1"
+author = "水淼使用AI封装。如需封装类库，有偿联系水淼QQ897687648提供开源地址，一般200元一个，复杂或耗时库酌情高价。"
+name = "D2D全功能绘制引擎"
+version = 1
+unique_mark = d2d_drawing_engine
+explain = "火山视窗 Direct2D / DirectWrite / WIC 绘制引擎封装。绘制层可单独使用，不依赖 D2D 组件层或 MFC 组件适配。"
+dependence = "*\\sys\\base\\base.vgrp"
+file
+{
+    name = "D2D绘制引擎.wsv"
+    name = "D2D内存画板.wsv"
+    name = "SVG绘制库.wsv"
+}

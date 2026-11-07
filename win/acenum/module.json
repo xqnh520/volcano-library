@@ -1,0 +1,7 @@
+{
+    "name":  "acenum",
+    "version":  "1.0.0",
+    "desc":  "acenum 类库",
+    "author":  "xqnh520",
+    "entry":  "acenum.vgrp"
+}

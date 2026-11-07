@@ -1,0 +1,2054 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.安卓.组件.MP图表
+
+类 MP图表基础类 <公开 基础类 = 窗口组件 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.charts.Chart."
+        @安卓.外部库 = "src\\libs\\MPChartLib-release.aar" @禁止创建对象 = 真 @java.导入 = "com.github.mikephil.charting.charts.Chart" @安卓.编译时系统需求 = 28>
+{
+
+    # @ @m<DEFINE_ABS_CONTROL2> (MP图表基础类, Chart, com.github.mikephil.charting.charts.Chart)
+    #
+
+    方法 支持值选中监听 <公开 属性写 注释 = "设置当前图表是否把选中回调发成火山事件. 未开启则不发事件.">
+    参数 是否监听 <类型 = 逻辑型>
+    {
+        @ if (@<是否监听>){
+        @     GetChart ().setOnChartValueSelectedListener(new com.github.mikephil.charting.listener.OnChartValueSelectedListener(){
+        @         @Override public void onValueSelected(com.github.mikephil.charting.data.Entry e, com.github.mikephil.charting.highlight.Highlight h) { @<值内容被选中>(e, h); }
+        @         @Override public void onNothingSelected() { @<值内容脱离选中>(); }
+        @     });
+        @ }else{
+        @     GetChart ().setOnChartValueSelectedListener(null);
+        @ }
+    }
+
+    方法 值内容被选中 <公开 定义事件 类型 = 整数 注释 = "图表中的数据点被选中时响应.">
+    参数 数据点 <类型 = MP数据点类 注释 = "被选中的数据点.">
+    参数 高亮信息 <类型 = MP高亮信息类 注释 = "本次选中对应的高亮信息.">
+
+    方法 值内容脱离选中 <公开 定义事件 类型 = 整数 注释 = "图表中的数据点脱离选中状态时响应.">
+
+
+    方法 设置数据 <公开 注释 = "java: public void setData(T)">
+    参数 数据 <类型 = MP图表数据类>
+    {
+        @ @m<RUN_UI_ACTION> ( GetChart ().setData (@<数据>) )
+    }
+
+    方法 清空 <公开 注释 = "java: public void clear()">
+    {
+        @ @m<RUN_UI_ACTION> ( GetChart ().clear () )
+    }
+
+    方法 清空数值集 <公开 注释 = "java: public void clearValues()">
+    {
+        @ @m<RUN_UI_ACTION> ( GetChart ().clearValues () )
+    }
+
+    方法 是否空 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isEmpty()">
+    {
+        @ @sn<this>.GetChart ().isEmpty ()
+    }
+
+    方法 通知数据集已改变 <公开 注释 = "java: public abstract void notifyDataSetChanged()">
+    {
+        @ @m<RUN_UI_ACTION> ( GetChart ().notifyDataSetChanged () )
+    }
+
+    方法 取最大高亮距离 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getMaxHighlightDistance()">
+    {
+        @ (double)@sn<this>.GetChart ().getMaxHighlightDistance ()
+    }
+
+    方法 设置最大高亮距离 <公开 注释 = "java: public void setMaxHighlightDistance(float)">
+    参数 距离设备独立像素 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> ( GetChart ().setMaxHighlightDistance ((float) @<距离设备独立像素>) )
+    }
+
+    方法 取已高亮 <公开 类型 = "MP高亮信息类 []" @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.highlight.Highlight[] getHighlighted()">
+    {
+        @ @sn<this>.GetChart ().getHighlighted ()
+    }
+
+    方法 是否高亮每单击启用 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isHighlightPerTapEnabled()">
+    {
+        @ @sn<this>.GetChart ().isHighlightPerTapEnabled ()
+    }
+
+    方法 设置高亮每单击启用 <公开 注释 = "java: public void setHighlightPerTapEnabled(boolean)">
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> ( GetChart ().setHighlightPerTapEnabled (@<启用>) )
+    }
+
+    方法 数值集至高亮 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean valuesToHighlight()">
+    {
+        @ @sn<this>.GetChart ().valuesToHighlight ()
+    }
+
+    方法 高亮数值集 <公开 注释 = "java: public void highlightValues(com.github.mikephil.charting.highlight.Highlight[])">
+    参数 最高值集 <类型 = "MP高亮信息类 []">
+    {
+        @ @m<RUN_UI_ACTION> ( GetChart ().highlightValues (@<最高值集>) )
+    }
+
+    方法 高亮数值 <公开 注释 = "java: public void highlightValue(float, int, int)">
+    参数 横坐标 <类型 = 小数>
+    参数 数据集索引 <类型 = 整数>
+    参数 数据索引 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> ( GetChart ().highlightValue ((float) @<横坐标>, @<数据集索引>, @<数据索引>) )
+    }
+
+    方法 高亮数值_2 <公开 注释 = "java: public void highlightValue(float, int)">
+    参数 横坐标 <类型 = 小数>
+    参数 数据集索引 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> ( GetChart ().highlightValue ((float) @<横坐标>, @<数据集索引>) )
+    }
+
+    方法 高亮数值_3 <公开 注释 = "java: public void highlightValue(float, float, int, int)">
+    参数 横坐标 <类型 = 小数>
+    参数 纵坐标 <类型 = 小数>
+    参数 数据集索引 <类型 = 整数>
+    参数 数据索引 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> ( GetChart ().highlightValue ((float) @<横坐标>, (float) @<纵坐标>, @<数据集索引>, @<数据索引>) )
+    }
+
+    方法 高亮数值_4 <公开 注释 = "java: public void highlightValue(float, float, int)">
+    参数 横坐标 <类型 = 小数>
+    参数 纵坐标 <类型 = 小数>
+    参数 数据集索引 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> ( GetChart ().highlightValue ((float) @<横坐标>, (float) @<纵坐标>, @<数据集索引>) )
+    }
+
+    方法 高亮数值_5 <公开 注释 = "java: public void highlightValue(float, int, int, boolean)">
+    参数 横坐标 <类型 = 小数>
+    参数 数据集索引 <类型 = 整数>
+    参数 数据索引 <类型 = 整数>
+    参数 调用监听器 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> ( GetChart ().highlightValue ((float) @<横坐标>, @<数据集索引>, @<数据索引>, @<调用监听器>) )
+    }
+
+    方法 高亮数值_6 <公开 注释 = "java: public void highlightValue(float, int, boolean)">
+    参数 横坐标 <类型 = 小数>
+    参数 数据集索引 <类型 = 整数>
+    参数 调用监听器 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> ( GetChart ().highlightValue ((float) @<横坐标>, @<数据集索引>, @<调用监听器>) )
+    }
+
+    方法 高亮数值_7 <公开 注释 = "java: public void highlightValue(float, float, int, int, boolean)">
+    参数 横坐标 <类型 = 小数>
+    参数 纵坐标 <类型 = 小数>
+    参数 数据集索引 <类型 = 整数>
+    参数 数据索引 <类型 = 整数>
+    参数 调用监听器 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> ( GetChart ().highlightValue ((float) @<横坐标>, (float) @<纵坐标>, @<数据集索引>, @<数据索引>, @<调用监听器>) )
+    }
+
+    方法 高亮数值_8 <公开 注释 = "java: public void highlightValue(float, float, int, boolean)">
+    参数 横坐标 <类型 = 小数>
+    参数 纵坐标 <类型 = 小数>
+    参数 数据集索引 <类型 = 整数>
+    参数 调用监听器 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> ( GetChart ().highlightValue ((float) @<横坐标>, (float) @<纵坐标>, @<数据集索引>, @<调用监听器>) )
+    }
+
+    方法 高亮数值_9 <公开 注释 = "java: public void highlightValue(com.github.mikephil.charting.highlight.Highlight)">
+    参数 高亮 <类型 = MP高亮信息类>
+    {
+        @ @m<RUN_UI_ACTION> ( GetChart ().highlightValue (@<高亮>) )
+    }
+
+    方法 高亮数值_10 <公开 注释 = "java: public void highlightValue(com.github.mikephil.charting.highlight.Highlight, boolean)">
+    参数 高 <类型 = MP高亮信息类>
+    参数 调用监听器 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> ( GetChart ().highlightValue (@<高>, @<调用监听器>) )
+    }
+
+    方法 取高亮按触摸点 <公开 类型 = MP高亮信息类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.highlight.Highlight getHighlightByTouchPoint(float, float)">
+    参数 横坐标 <类型 = 小数>
+    参数 纵坐标 <类型 = 小数>
+    {
+        @ @sn<this>.GetChart ().getHighlightByTouchPoint ((float) @<横坐标>, (float) @<纵坐标>)
+    }
+
+    方法 设置上触摸监听器 <公开 注释 = "java: public void setOnTouchListener(com.github.mikephil.charting.listener.ChartTouchListener)">
+    参数 左 <类型 = MP图表触摸监听器类>
+    {
+        @ @m<RUN_UI_ACTION> ( GetChart ().setOnTouchListener (@<左>) )
+    }
+
+    方法 取上触摸监听器 <公开 类型 = MP图表触摸监听器类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.listener.ChartTouchListener getOnTouchListener()">
+    {
+        @ @sn<this>.GetChart ().getOnTouchListener ()
+    }
+
+    方法 取动画器 <公开 类型 = MP图表动画器类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.animation.ChartAnimator getAnimator()">
+    {
+        @ @sn<this>.GetChart ().getAnimator ()
+    }
+
+    方法 是否拖动减速启用 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isDragDecelerationEnabled()">
+    {
+        @ @sn<this>.GetChart ().isDragDecelerationEnabled ()
+    }
+
+    方法 设置拖动减速启用 <公开 注释 = "java: public void setDragDecelerationEnabled(boolean)">
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> ( GetChart ().setDragDecelerationEnabled (@<启用>) )
+    }
+
+    方法 取拖动减速摩擦系数 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getDragDecelerationFrictionCoef()">
+    {
+        @ (double)@sn<this>.GetChart ().getDragDecelerationFrictionCoef ()
+    }
+
+    方法 设置拖动减速摩擦系数 <公开 注释 = "java: public void setDragDecelerationFrictionCoef(float)">
+    参数 新数值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> ( GetChart ().setDragDecelerationFrictionCoef ((float) @<新数值>) )
+    }
+
+    方法 动画横纵 <公开 注释 = "java: public void animateXY(int, int, com.github.mikephil.charting.animation.Easing$EasingFunction, com.github.mikephil.charting.animation.Easing$EasingFunction)">
+    参数 时长毫秒横坐标 <类型 = 整数>
+    参数 时长毫秒纵坐标 <类型 = 整数>
+    参数 缓动横坐标 <类型 = MP缓动函数类>
+    参数 缓动纵坐标 <类型 = MP缓动函数类>
+    {
+        @ @m<RUN_UI_ACTION> ( GetChart ().animateXY (@<时长毫秒横坐标>, @<时长毫秒纵坐标>, @<缓动横坐标>, @<缓动纵坐标>) )
+    }
+
+    方法 动画横纵_2 <公开 注释 = "java: public void animateXY(int, int, com.github.mikephil.charting.animation.Easing$EasingFunction)">
+    参数 时长毫秒横坐标 <类型 = 整数>
+    参数 时长毫秒纵坐标 <类型 = 整数>
+    参数 缓动 <类型 = MP缓动函数类>
+    {
+        @ @m<RUN_UI_ACTION> ( GetChart ().animateXY (@<时长毫秒横坐标>, @<时长毫秒纵坐标>, @<缓动>) )
+    }
+
+    方法 动画横坐标 <公开 注释 = "java: public void animateX(int, com.github.mikephil.charting.animation.Easing$EasingFunction)">
+    参数 时长毫秒 <类型 = 整数>
+    参数 缓动 <类型 = MP缓动函数类>
+    {
+        @ @m<RUN_UI_ACTION> ( GetChart ().animateX (@<时长毫秒>, @<缓动>) )
+    }
+
+    方法 动画纵坐标 <公开 注释 = "java: public void animateY(int, com.github.mikephil.charting.animation.Easing$EasingFunction)">
+    参数 时长毫秒 <类型 = 整数>
+    参数 缓动 <类型 = MP缓动函数类>
+    {
+        @ @m<RUN_UI_ACTION> ( GetChart ().animateY (@<时长毫秒>, @<缓动>) )
+    }
+
+    方法 动画横坐标_2 <公开 注释 = "java: public void animateX(int)">
+    参数 时长毫秒 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> ( GetChart ().animateX (@<时长毫秒>) )
+    }
+
+    方法 动画纵坐标_2 <公开 注释 = "java: public void animateY(int)">
+    参数 时长毫秒 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> ( GetChart ().animateY (@<时长毫秒>) )
+    }
+
+    方法 动画横纵_3 <公开 注释 = "java: public void animateXY(int, int)">
+    参数 时长毫秒横坐标 <类型 = 整数>
+    参数 时长毫秒纵坐标 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> ( GetChart ().animateXY (@<时长毫秒横坐标>, @<时长毫秒纵坐标>) )
+    }
+
+    方法 取横坐标轴 <公开 类型 = MP横轴类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.components.XAxis getXAxis()">
+    {
+        @ @sn<this>.GetChart ().getXAxis ()
+    }
+
+    方法 取默认数值格式器 <公开 类型 = MP数值格式化接口 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.formatter.IValueFormatter getDefaultValueFormatter()">
+    {
+        @ @sn<this>.GetChart ().getDefaultValueFormatter ()
+    }
+
+    方法 设置上图表数值已选中监听器 <公开 注释 = "java: public void setOnChartValueSelectedListener(com.github.mikephil.charting.listener.OnChartValueSelectedListener)">
+    参数 左 <类型 = MP值选中监听接口>
+    {
+        @ @m<RUN_UI_ACTION> ( GetChart ().setOnChartValueSelectedListener (@<左>) )
+    }
+
+    方法 设置上图表手势监听器 <公开 注释 = "java: public void setOnChartGestureListener(com.github.mikephil.charting.listener.OnChartGestureListener)">
+    参数 左 <类型 = MP图表手势监听接口>
+    {
+        @ @m<RUN_UI_ACTION> ( GetChart ().setOnChartGestureListener (@<左>) )
+    }
+
+    方法 取上图表手势监听器 <公开 类型 = MP图表手势监听接口 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.listener.OnChartGestureListener getOnChartGestureListener()">
+    {
+        @ @sn<this>.GetChart ().getOnChartGestureListener ()
+    }
+
+    方法 取纵坐标最大 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getYMax()">
+    {
+        @ (double)@sn<this>.GetChart ().getYMax ()
+    }
+
+    方法 取纵坐标最小 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getYMin()">
+    {
+        @ (double)@sn<this>.GetChart ().getYMin ()
+    }
+
+    方法 取横坐标图表最大 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getXChartMax()">
+    {
+        @ (double)@sn<this>.GetChart ().getXChartMax ()
+    }
+
+    方法 取横坐标图表最小 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getXChartMin()">
+    {
+        @ (double)@sn<this>.GetChart ().getXChartMin ()
+    }
+
+    方法 取横坐标范围 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getXRange()">
+    {
+        @ (double)@sn<this>.GetChart ().getXRange ()
+    }
+
+    方法 取中心 <公开 类型 = MP单精度坐标类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.utils.MPPointF getCenter()">
+    {
+        @ @sn<this>.GetChart ().getCenter ()
+    }
+
+    方法 取中心偏移量集 <公开 类型 = MP单精度坐标类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.utils.MPPointF getCenterOffsets()">
+    {
+        @ @sn<this>.GetChart ().getCenterOffsets ()
+    }
+
+    方法 设置额外偏移量集 <公开 注释 = "java: public void setExtraOffsets(float, float, float, float)">
+    参数 左 <类型 = 小数>
+    参数 上 <类型 = 小数>
+    参数 右 <类型 = 小数>
+    参数 下 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> ( GetChart ().setExtraOffsets ((float) @<左>, (float) @<上>, (float) @<右>, (float) @<下>) )
+    }
+
+    方法 设置额外上偏移 <公开 注释 = "java: public void setExtraTopOffset(float)">
+    参数 偏移 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> ( GetChart ().setExtraTopOffset ((float) @<偏移>) )
+    }
+
+    方法 取额外上偏移 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getExtraTopOffset()">
+    {
+        @ (double)@sn<this>.GetChart ().getExtraTopOffset ()
+    }
+
+    方法 设置额外右偏移 <公开 注释 = "java: public void setExtraRightOffset(float)">
+    参数 偏移 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> ( GetChart ().setExtraRightOffset ((float) @<偏移>) )
+    }
+
+    方法 取额外右偏移 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getExtraRightOffset()">
+    {
+        @ (double)@sn<this>.GetChart ().getExtraRightOffset ()
+    }
+
+    方法 设置额外下偏移 <公开 注释 = "java: public void setExtraBottomOffset(float)">
+    参数 偏移 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> ( GetChart ().setExtraBottomOffset ((float) @<偏移>) )
+    }
+
+    方法 取额外下偏移 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getExtraBottomOffset()">
+    {
+        @ (double)@sn<this>.GetChart ().getExtraBottomOffset ()
+    }
+
+    方法 设置额外左偏移 <公开 注释 = "java: public void setExtraLeftOffset(float)">
+    参数 偏移 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> ( GetChart ().setExtraLeftOffset ((float) @<偏移>) )
+    }
+
+    方法 取额外左偏移 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getExtraLeftOffset()">
+    {
+        @ (double)@sn<this>.GetChart ().getExtraLeftOffset ()
+    }
+
+    方法 设置日志启用 <公开 注释 = "java: public void setLogEnabled(boolean)">
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> ( GetChart ().setLogEnabled (@<启用>) )
+    }
+
+    方法 是否日志启用 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isLogEnabled()">
+    {
+        @ @sn<this>.GetChart ().isLogEnabled ()
+    }
+
+    方法 设置无数据文本 <公开 注释 = "java: public void setNoDataText(java.lang.String)">
+    参数 文本 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> ( GetChart ().setNoDataText (@<文本>) )
+    }
+
+    方法 设置无数据文本颜色 <公开 注释 = "java: public void setNoDataTextColor(int)">
+    参数 颜色 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> ( GetChart ().setNoDataTextColor (@<颜色>) )
+    }
+
+    方法 设置无数据文本字体族 <公开 注释 = "java: public void setNoDataTextTypeface(android.graphics.Typeface)">
+    参数 字体度量 <类型 = 字体类>
+    {
+        @ @m<RUN_UI_ACTION> ( GetChart ().setNoDataTextTypeface (@<字体度量>) )
+    }
+
+    方法 设置无数据文本对齐方式 <公开 注释 = "java: public void setNoDataTextAlignment(android.graphics.Paint$Align)">
+    参数 对齐 <类型 = MP画笔对齐方式类>
+    {
+        @ @m<RUN_UI_ACTION> ( GetChart ().setNoDataTextAlignment (@<对齐>) )
+    }
+
+    方法 设置触摸启用 <公开 注释 = "java: public void setTouchEnabled(boolean)">
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> ( GetChart ().setTouchEnabled (@<启用>) )
+    }
+
+    方法 设置标记气泡 <公开 注释 = "java: public void setMarker(com.github.mikephil.charting.components.IMarker)">
+    参数 标记气泡 <类型 = MP标记接口>
+    {
+        @ @m<RUN_UI_ACTION> ( GetChart ().setMarker (@<标记气泡>) )
+    }
+
+    方法 取标记气泡 <公开 类型 = MP标记接口 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.components.IMarker getMarker()">
+    {
+        @ @sn<this>.GetChart ().getMarker ()
+    }
+
+    方法 设置标记气泡视图 <公开 注释 = "java: public void setMarkerView(com.github.mikephil.charting.components.IMarker)">
+    参数 数值 <类型 = MP标记接口>
+    {
+        @ @m<RUN_UI_ACTION> ( GetChart ().setMarkerView (@<数值>) )
+    }
+
+    方法 取标记气泡视图 <公开 类型 = MP标记接口 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.components.IMarker getMarkerView()">
+    {
+        @ @sn<this>.GetChart ().getMarkerView ()
+    }
+
+    方法 设置描述文本 <公开 注释 = "java: public void setDescription(com.github.mikephil.charting.components.Description)">
+    参数 描述 <类型 = MP描述文字类>
+    {
+        @ @m<RUN_UI_ACTION> ( GetChart ().setDescription (@<描述>) )
+    }
+
+    方法 取描述文本 <公开 类型 = MP描述文字类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.components.Description getDescription()">
+    {
+        @ @sn<this>.GetChart ().getDescription ()
+    }
+
+    方法 取图例 <公开 类型 = MP图例类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.components.Legend getLegend()">
+    {
+        @ @sn<this>.GetChart ().getLegend ()
+    }
+
+    方法 取图例渲染器 <公开 类型 = MP图例渲染器类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.renderer.LegendRenderer getLegendRenderer()">
+    {
+        @ @sn<this>.GetChart ().getLegendRenderer ()
+    }
+
+    方法 取内容矩形 <公开 类型 = 小数矩形类 @嵌入式方法 = "" 注释 = "java: public android.graphics.RectF getContentRect()">
+    {
+        @ @sn<this>.GetChart ().getContentRect ()
+    }
+
+    方法 停用滚动 <公开 注释 = "java: public void disableScroll()">
+    {
+        @ @m<RUN_UI_ACTION> ( GetChart ().disableScroll () )
+    }
+
+    方法 启用滚动 <公开 注释 = "java: public void enableScroll()">
+    {
+        @ @m<RUN_UI_ACTION> ( GetChart ().enableScroll () )
+    }
+
+    方法 设置画笔 <公开 注释 = "java: public void setPaint(android.graphics.Paint, int)">
+    参数 点 <类型 = 画笔类>
+    参数 哪个 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> ( GetChart ().setPaint (@<点>, @<哪个>) )
+    }
+
+    方法 取画笔 <公开 类型 = 画笔类 @嵌入式方法 = "" 注释 = "java: public android.graphics.Paint getPaint(int)">
+    参数 哪个 <类型 = 整数>
+    {
+        @ @sn<this>.GetChart ().getPaint (@<哪个>)
+    }
+
+    方法 是否绘制标记气泡视图集启用 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isDrawMarkerViewsEnabled()">
+    {
+        @ @sn<this>.GetChart ().isDrawMarkerViewsEnabled ()
+    }
+
+    方法 设置绘制标记气泡视图集 <公开 注释 = "java: public void setDrawMarkerViews(boolean)">
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> ( GetChart ().setDrawMarkerViews (@<启用>) )
+    }
+
+    方法 是否绘制标记气泡集启用 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isDrawMarkersEnabled()">
+    {
+        @ @sn<this>.GetChart ().isDrawMarkersEnabled ()
+    }
+
+    方法 设置绘制标记气泡集 <公开 注释 = "java: public void setDrawMarkers(boolean)">
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> ( GetChart ().setDrawMarkers (@<启用>) )
+    }
+
+    方法 取数据 <公开 类型 = MP图表数据类 @嵌入式方法 = "" 注释 = "java: public T getData()">
+    {
+        @ @sn<this>.GetChart ().getData ()
+    }
+
+    方法 取视口处理器 <公开 类型 = MP视图区域处理类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.utils.ViewPortHandler getViewPortHandler()">
+    {
+        @ @sn<this>.GetChart ().getViewPortHandler ()
+    }
+
+    方法 取渲染器 <公开 类型 = MP数据渲染器接口 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.renderer.DataRenderer getRenderer()">
+    {
+        @ @sn<this>.GetChart ().getRenderer ()
+    }
+
+    方法 设置渲染器 <公开 注释 = "java: public void setRenderer(com.github.mikephil.charting.renderer.DataRenderer)">
+    参数 渲染器 <类型 = MP数据渲染器接口>
+    {
+        @ @m<RUN_UI_ACTION> ( GetChart ().setRenderer (@<渲染器>) )
+    }
+
+    方法 取高亮器 <公开 类型 = MP高亮器接口 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.highlight.IHighlighter getHighlighter()">
+    {
+        @ @sn<this>.GetChart ().getHighlighter ()
+    }
+
+    方法 设置高亮器 <公开 注释 = "java: public void setHighlighter(com.github.mikephil.charting.highlight.ChartHighlighter)">
+    参数 高亮器 <类型 = MP高亮器基础类>
+    {
+        @ @m<RUN_UI_ACTION> ( GetChart ().setHighlighter (@<高亮器>) )
+    }
+
+    方法 取中心的视图 <公开 类型 = MP单精度坐标类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.utils.MPPointF getCenterOfView()">
+    {
+        @ @sn<this>.GetChart ().getCenterOfView ()
+    }
+
+    方法 取图表位图 <公开 类型 = 位图类 @嵌入式方法 = "" 注释 = "java: public android.graphics.Bitmap getChartBitmap()">
+    {
+        @ @sn<this>.GetChart ().getChartBitmap ()
+    }
+
+    方法 保存至路径 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean saveToPath(java.lang.String, java.lang.String)">
+    参数 标题 <类型 = 文本型>
+    参数 路径上标准差 <类型 = 文本型>
+    {
+        @ @sn<this>.GetChart ().saveToPath (@<标题>, @<路径上标准差>)
+    }
+
+    方法 保存至画廊 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean saveToGallery(java.lang.String, java.lang.String, java.lang.String, android.graphics.Bitmap$CompressFormat, int)">
+    参数 文件名称 <类型 = 文本型>
+    参数 子目录路径 <类型 = 文本型>
+    参数 文件描述文本 <类型 = 文本型>
+    参数 格式化 <类型 = MP位图压缩格式类>
+    参数 质量 <类型 = 整数>
+    {
+        @ @sn<this>.GetChart ().saveToGallery (@<文件名称>, @<子目录路径>, @<文件描述文本>, @<格式化>, @<质量>)
+    }
+
+    方法 保存至画廊_2 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean saveToGallery(java.lang.String, int)">
+    参数 文件名称 <类型 = 文本型>
+    参数 质量 <类型 = 整数>
+    {
+        @ @sn<this>.GetChart ().saveToGallery (@<文件名称>, @<质量>)
+    }
+
+    方法 保存至画廊_3 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean saveToGallery(java.lang.String)">
+    参数 文件名称 <类型 = 文本型>
+    {
+        @ @sn<this>.GetChart ().saveToGallery (@<文件名称>)
+    }
+
+    方法 移除视口任务 <公开 注释 = "java: public void removeViewportJob(java.lang.Runnable)">
+    参数 任务 <类型 = MP可运行任务类>
+    {
+        @ @m<RUN_UI_ACTION> ( GetChart ().removeViewportJob (@<任务>) )
+    }
+
+    方法 清空全部视口任务集 <公开 注释 = "java: public void clearAllViewportJobs()">
+    {
+        @ @m<RUN_UI_ACTION> ( GetChart ().clearAllViewportJobs () )
+    }
+
+    方法 添加视口任务 <公开 注释 = "java: public void addViewportJob(java.lang.Runnable)">
+    参数 任务 <类型 = MP可运行任务类>
+    {
+        @ @m<RUN_UI_ACTION> ( GetChart ().addViewportJob (@<任务>) )
+    }
+
+    方法 取任务集 <公开 类型 = MP数组列表类 @嵌入式方法 = "" 注释 = "java: public java.util.ArrayList<java.lang.Runnable> getJobs()">
+    {
+        @ @sn<this>.GetChart ().getJobs ()
+    }
+
+    方法 设置硬件加速度启用 <公开 注释 = "java: public void setHardwareAccelerationEnabled(boolean)">
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> ( GetChart ().setHardwareAccelerationEnabled (@<启用>) )
+    }
+
+    方法 设置解绑启用 <公开 注释 = "java: public void setUnbindEnabled(boolean)">
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> ( GetChart ().setUnbindEnabled (@<启用>) )
+    }
+
+    方法 取日志标签 <公开 静态 类型 = 文本型 @嵌入式方法 = "" 注释 = "java 常量: public static final java.lang.String LOG_TAG = 'MPAndroidChart'">
+    {
+        @ com.github.mikephil.charting.charts.Chart.LOG_TAG
+    }
+
+    常量 画笔网格背景 <公开 类型 = 整数 值 = 4 注释 = "java: public static final int PAINT_GRID_BACKGROUND = 4">
+
+    常量 画笔信息 <公开 类型 = 整数 值 = 7 注释 = "java: public static final int PAINT_INFO = 7">
+
+    常量 画笔描述文本 <公开 类型 = 整数 值 = 11 注释 = "java: public static final int PAINT_DESCRIPTION = 11">
+
+    常量 画笔中心孔 <公开 类型 = 整数 值 = 13 注释 = "java: public static final int PAINT_HOLE = 13">
+
+    常量 画笔中心文本 <公开 类型 = 整数 值 = 14 注释 = "java: public static final int PAINT_CENTER_TEXT = 14">
+
+    常量 画笔图例标签 <公开 类型 = 整数 值 = 18 注释 = "java: public static final int PAINT_LEGEND_LABEL = 18">
+
+}
+
+类 MP线柱基础图类 <公开 基础类 = MP图表基础类 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.charts.BarLineChartBase."
+        @禁止创建对象 = 真 @java.导入 = "com.github.mikephil.charting.charts.BarLineChartBase">
+{
+
+    # @ @m<DEFINE_ABS_CONTROL2> (MP线柱基础图类, BarLineChartBase, com.github.mikephil.charting.charts.BarLineChartBase)
+    #
+
+    方法 重置跟踪 <公开 注释 = "java: public void resetTracking()">
+    {
+        @ @m<RUN_UI_ACTION> ( GetBarLineChartBase ().resetTracking () )
+    }
+
+    方法 计算偏移量集 <公开 注释 = "java: public void calculateOffsets()">
+    {
+        @ @m<RUN_UI_ACTION> ( GetBarLineChartBase ().calculateOffsets () )
+    }
+
+    方法 取变换器 <公开 类型 = MP坐标转换器类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.utils.Transformer getTransformer(com.github.mikephil.charting.components.YAxis$AxisDependency)">
+    参数 哪个 <类型 = MP纵轴依附>
+    {
+        @ @sn<this>.GetBarLineChartBase ().getTransformer (@<哪个>)
+    }
+
+    方法 响应触摸事件 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean onTouchEvent(android.view.MotionEvent)">
+    参数 事件 <类型 = 动作事件类>
+    {
+        @ @sn<this>.GetBarLineChartBase ().onTouchEvent (@<事件>)
+    }
+
+    方法 算出滚动 <公开 注释 = "java: public void computeScroll()">
+    {
+        @ @m<RUN_UI_ACTION> ( GetBarLineChartBase ().computeScroll () )
+    }
+
+    方法 放大 <公开 注释 = "java: public void zoomIn()">
+    {
+        @ @m<RUN_UI_ACTION> ( GetBarLineChartBase ().zoomIn () )
+    }
+
+    方法 缩小 <公开 注释 = "java: public void zoomOut()">
+    {
+        @ @m<RUN_UI_ACTION> ( GetBarLineChartBase ().zoomOut () )
+    }
+
+    方法 重置缩放 <公开 注释 = "java: public void resetZoom()">
+    {
+        @ @m<RUN_UI_ACTION> ( GetBarLineChartBase ().resetZoom () )
+    }
+
+    方法 缩放 <公开 注释 = "java: public void zoom(float, float, float, float)">
+    参数 比例横坐标 <类型 = 小数>
+    参数 比例纵坐标 <类型 = 小数>
+    参数 横坐标 <类型 = 小数>
+    参数 纵坐标 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> ( GetBarLineChartBase ().zoom ((float) @<比例横坐标>, (float) @<比例纵坐标>, (float) @<横坐标>, (float) @<纵坐标>) )
+    }
+
+    方法 缩放_2 <公开 注释 = "java: public void zoom(float, float, float, float, com.github.mikephil.charting.components.YAxis$AxisDependency)">
+    参数 比例横坐标 <类型 = 小数>
+    参数 比例纵坐标 <类型 = 小数>
+    参数 横坐标数值 <类型 = 小数>
+    参数 纵坐标数值 <类型 = 小数>
+    参数 轴 <类型 = MP纵轴依附>
+    {
+        @ @m<RUN_UI_ACTION> ( GetBarLineChartBase ().zoom ((float) @<比例横坐标>, (float) @<比例纵坐标>, (float) @<横坐标数值>, (float) @<纵坐标数值>, @<轴>) )
+    }
+
+    方法 缩放至中心 <公开 注释 = "java: public void zoomToCenter(float, float)">
+    参数 比例横坐标 <类型 = 小数>
+    参数 比例纵坐标 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> ( GetBarLineChartBase ().zoomToCenter ((float) @<比例横坐标>, (float) @<比例纵坐标>) )
+    }
+
+    方法 缩放与中心已动画 <公开 注释 = "java: public void zoomAndCenterAnimated(float, float, float, float, com.github.mikephil.charting.components.YAxis$AxisDependency, long)">
+    参数 比例横坐标 <类型 = 小数>
+    参数 比例纵坐标 <类型 = 小数>
+    参数 横坐标数值 <类型 = 小数>
+    参数 纵坐标数值 <类型 = 小数>
+    参数 轴 <类型 = MP纵轴依附>
+    参数 时长 <类型 = 长整数>
+    {
+        @ @m<RUN_UI_ACTION> ( GetBarLineChartBase ().zoomAndCenterAnimated ((float) @<比例横坐标>, (float) @<比例纵坐标>, (float) @<横坐标数值>, (float) @<纵坐标数值>, @<轴>, @<时长>) )
+    }
+
+    方法 适配屏幕 <公开 注释 = "java: public void fitScreen()">
+    {
+        @ @m<RUN_UI_ACTION> ( GetBarLineChartBase ().fitScreen () )
+    }
+
+    方法 设置比例极小值 <公开 注释 = "java: public void setScaleMinima(float, float)">
+    参数 比例横坐标 <类型 = 小数>
+    参数 比例纵坐标 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> ( GetBarLineChartBase ().setScaleMinima ((float) @<比例横坐标>, (float) @<比例纵坐标>) )
+    }
+
+    方法 设置可见横坐标范围最大值 <公开 注释 = "java: public void setVisibleXRangeMaximum(float)">
+    参数 最大横坐标范围 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> ( GetBarLineChartBase ().setVisibleXRangeMaximum ((float) @<最大横坐标范围>) )
+    }
+
+    方法 设置可见横坐标范围最小值 <公开 注释 = "java: public void setVisibleXRangeMinimum(float)">
+    参数 最小横坐标范围 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> ( GetBarLineChartBase ().setVisibleXRangeMinimum ((float) @<最小横坐标范围>) )
+    }
+
+    方法 设置可见横坐标范围 <公开 注释 = "java: public void setVisibleXRange(float, float)">
+    参数 最小横坐标范围 <类型 = 小数>
+    参数 最大横坐标范围 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> ( GetBarLineChartBase ().setVisibleXRange ((float) @<最小横坐标范围>, (float) @<最大横坐标范围>) )
+    }
+
+    方法 设置可见纵坐标范围最大值 <公开 注释 = "java: public void setVisibleYRangeMaximum(float, com.github.mikephil.charting.components.YAxis$AxisDependency)">
+    参数 最大纵坐标范围 <类型 = 小数>
+    参数 轴 <类型 = MP纵轴依附>
+    {
+        @ @m<RUN_UI_ACTION> ( GetBarLineChartBase ().setVisibleYRangeMaximum ((float) @<最大纵坐标范围>, @<轴>) )
+    }
+
+    方法 设置可见纵坐标范围最小值 <公开 注释 = "java: public void setVisibleYRangeMinimum(float, com.github.mikephil.charting.components.YAxis$AxisDependency)">
+    参数 最小纵坐标范围 <类型 = 小数>
+    参数 轴 <类型 = MP纵轴依附>
+    {
+        @ @m<RUN_UI_ACTION> ( GetBarLineChartBase ().setVisibleYRangeMinimum ((float) @<最小纵坐标范围>, @<轴>) )
+    }
+
+    方法 设置可见纵坐标范围 <公开 注释 = "java: public void setVisibleYRange(float, float, com.github.mikephil.charting.components.YAxis$AxisDependency)">
+    参数 最小纵坐标范围 <类型 = 小数>
+    参数 最大纵坐标范围 <类型 = 小数>
+    参数 轴 <类型 = MP纵轴依附>
+    {
+        @ @m<RUN_UI_ACTION> ( GetBarLineChartBase ().setVisibleYRange ((float) @<最小纵坐标范围>, (float) @<最大纵坐标范围>, @<轴>) )
+    }
+
+    方法 移动视图至横坐标 <公开 注释 = "java: public void moveViewToX(float)">
+    参数 横坐标数值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> ( GetBarLineChartBase ().moveViewToX ((float) @<横坐标数值>) )
+    }
+
+    方法 移动视图至 <公开 注释 = "java: public void moveViewTo(float, float, com.github.mikephil.charting.components.YAxis$AxisDependency)">
+    参数 横坐标数值 <类型 = 小数>
+    参数 纵坐标数值 <类型 = 小数>
+    参数 轴 <类型 = MP纵轴依附>
+    {
+        @ @m<RUN_UI_ACTION> ( GetBarLineChartBase ().moveViewTo ((float) @<横坐标数值>, (float) @<纵坐标数值>, @<轴>) )
+    }
+
+    方法 移动视图至已动画 <公开 注释 = "java: public void moveViewToAnimated(float, float, com.github.mikephil.charting.components.YAxis$AxisDependency, long)">
+    参数 横坐标数值 <类型 = 小数>
+    参数 纵坐标数值 <类型 = 小数>
+    参数 轴 <类型 = MP纵轴依附>
+    参数 时长 <类型 = 长整数>
+    {
+        @ @m<RUN_UI_ACTION> ( GetBarLineChartBase ().moveViewToAnimated ((float) @<横坐标数值>, (float) @<纵坐标数值>, @<轴>, @<时长>) )
+    }
+
+    方法 中心视图至纵坐标 <公开 注释 = "java: public void centerViewToY(float, com.github.mikephil.charting.components.YAxis$AxisDependency)">
+    参数 纵坐标数值 <类型 = 小数>
+    参数 轴 <类型 = MP纵轴依附>
+    {
+        @ @m<RUN_UI_ACTION> ( GetBarLineChartBase ().centerViewToY ((float) @<纵坐标数值>, @<轴>) )
+    }
+
+    方法 中心视图至 <公开 注释 = "java: public void centerViewTo(float, float, com.github.mikephil.charting.components.YAxis$AxisDependency)">
+    参数 横坐标数值 <类型 = 小数>
+    参数 纵坐标数值 <类型 = 小数>
+    参数 轴 <类型 = MP纵轴依附>
+    {
+        @ @m<RUN_UI_ACTION> ( GetBarLineChartBase ().centerViewTo ((float) @<横坐标数值>, (float) @<纵坐标数值>, @<轴>) )
+    }
+
+    方法 中心视图至已动画 <公开 注释 = "java: public void centerViewToAnimated(float, float, com.github.mikephil.charting.components.YAxis$AxisDependency, long)">
+    参数 横坐标数值 <类型 = 小数>
+    参数 纵坐标数值 <类型 = 小数>
+    参数 轴 <类型 = MP纵轴依附>
+    参数 时长 <类型 = 长整数>
+    {
+        @ @m<RUN_UI_ACTION> ( GetBarLineChartBase ().centerViewToAnimated ((float) @<横坐标数值>, (float) @<纵坐标数值>, @<轴>, @<时长>) )
+    }
+
+    方法 设置视口偏移量集 <公开 注释 = "java: public void setViewPortOffsets(float, float, float, float)">
+    参数 左 <类型 = 小数>
+    参数 上 <类型 = 小数>
+    参数 右 <类型 = 小数>
+    参数 下 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> ( GetBarLineChartBase ().setViewPortOffsets ((float) @<左>, (float) @<上>, (float) @<右>, (float) @<下>) )
+    }
+
+    方法 重置视口偏移量集 <公开 注释 = "java: public void resetViewPortOffsets()">
+    {
+        @ @m<RUN_UI_ACTION> ( GetBarLineChartBase ().resetViewPortOffsets () )
+    }
+
+    方法 设置上绘制监听器 <公开 注释 = "java: public void setOnDrawListener(com.github.mikephil.charting.listener.OnDrawListener)">
+    参数 绘制监听器 <类型 = MP绘制监听接口>
+    {
+        @ @m<RUN_UI_ACTION> ( GetBarLineChartBase ().setOnDrawListener (@<绘制监听器>) )
+    }
+
+    方法 取绘制监听器 <公开 类型 = MP绘制监听接口 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.listener.OnDrawListener getDrawListener()">
+    {
+        @ @sn<this>.GetBarLineChartBase ().getDrawListener ()
+    }
+
+    方法 取位置 <公开 类型 = MP单精度坐标类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.utils.MPPointF getPosition(com.github.mikephil.charting.data.Entry, com.github.mikephil.charting.components.YAxis$AxisDependency)">
+    参数 数据点 <类型 = MP数据点类>
+    参数 轴 <类型 = MP纵轴依附>
+    {
+        @ @sn<this>.GetBarLineChartBase ().getPosition (@<数据点>, @<轴>)
+    }
+
+    方法 设置最大可见数值数量 <公开 注释 = "java: public void setMaxVisibleValueCount(int)">
+    参数 数量 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> ( GetBarLineChartBase ().setMaxVisibleValueCount (@<数量>) )
+    }
+
+    方法 取最大可见数量 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getMaxVisibleCount()">
+    {
+        @ @sn<this>.GetBarLineChartBase ().getMaxVisibleCount ()
+    }
+
+    方法 设置高亮每拖动启用 <公开 注释 = "java: public void setHighlightPerDragEnabled(boolean)">
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> ( GetBarLineChartBase ().setHighlightPerDragEnabled (@<启用>) )
+    }
+
+    方法 是否高亮每拖动启用 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isHighlightPerDragEnabled()">
+    {
+        @ @sn<this>.GetBarLineChartBase ().isHighlightPerDragEnabled ()
+    }
+
+    方法 设置网格背景颜色 <公开 注释 = "java: public void setGridBackgroundColor(int)">
+    参数 颜色 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> ( GetBarLineChartBase ().setGridBackgroundColor (@<颜色>) )
+    }
+
+    方法 设置拖动启用 <公开 注释 = "java: public void setDragEnabled(boolean)">
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> ( GetBarLineChartBase ().setDragEnabled (@<启用>) )
+    }
+
+    方法 是否拖动启用 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isDragEnabled()">
+    {
+        @ @sn<this>.GetBarLineChartBase ().isDragEnabled ()
+    }
+
+    方法 设置拖动横坐标启用 <公开 注释 = "java: public void setDragXEnabled(boolean)">
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> ( GetBarLineChartBase ().setDragXEnabled (@<启用>) )
+    }
+
+    方法 是否拖动横坐标启用 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isDragXEnabled()">
+    {
+        @ @sn<this>.GetBarLineChartBase ().isDragXEnabled ()
+    }
+
+    方法 设置拖动纵坐标启用 <公开 注释 = "java: public void setDragYEnabled(boolean)">
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> ( GetBarLineChartBase ().setDragYEnabled (@<启用>) )
+    }
+
+    方法 是否拖动纵坐标启用 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isDragYEnabled()">
+    {
+        @ @sn<this>.GetBarLineChartBase ().isDragYEnabled ()
+    }
+
+    方法 设置比例启用 <公开 注释 = "java: public void setScaleEnabled(boolean)">
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> ( GetBarLineChartBase ().setScaleEnabled (@<启用>) )
+    }
+
+    方法 设置比例横坐标启用 <公开 注释 = "java: public void setScaleXEnabled(boolean)">
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> ( GetBarLineChartBase ().setScaleXEnabled (@<启用>) )
+    }
+
+    方法 设置比例纵坐标启用 <公开 注释 = "java: public void setScaleYEnabled(boolean)">
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> ( GetBarLineChartBase ().setScaleYEnabled (@<启用>) )
+    }
+
+    方法 是否比例横坐标启用 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isScaleXEnabled()">
+    {
+        @ @sn<this>.GetBarLineChartBase ().isScaleXEnabled ()
+    }
+
+    方法 是否比例纵坐标启用 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isScaleYEnabled()">
+    {
+        @ @sn<this>.GetBarLineChartBase ().isScaleYEnabled ()
+    }
+
+    方法 设置双击至缩放启用 <公开 注释 = "java: public void setDoubleTapToZoomEnabled(boolean)">
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> ( GetBarLineChartBase ().setDoubleTapToZoomEnabled (@<启用>) )
+    }
+
+    方法 是否双击至缩放启用 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isDoubleTapToZoomEnabled()">
+    {
+        @ @sn<this>.GetBarLineChartBase ().isDoubleTapToZoomEnabled ()
+    }
+
+    方法 设置绘制网格背景 <公开 注释 = "java: public void setDrawGridBackground(boolean)">
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> ( GetBarLineChartBase ().setDrawGridBackground (@<启用>) )
+    }
+
+    方法 设置绘制边框集 <公开 注释 = "java: public void setDrawBorders(boolean)">
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> ( GetBarLineChartBase ().setDrawBorders (@<启用>) )
+    }
+
+    方法 是否绘制边框集启用 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isDrawBordersEnabled()">
+    {
+        @ @sn<this>.GetBarLineChartBase ().isDrawBordersEnabled ()
+    }
+
+    方法 设置裁剪数值集至内容 <公开 注释 = "java: public void setClipValuesToContent(boolean)">
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> ( GetBarLineChartBase ().setClipValuesToContent (@<启用>) )
+    }
+
+    方法 设置裁剪数据至内容 <公开 注释 = "java: public void setClipDataToContent(boolean)">
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> ( GetBarLineChartBase ().setClipDataToContent (@<启用>) )
+    }
+
+    方法 是否裁剪数值集至内容启用 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isClipValuesToContentEnabled()">
+    {
+        @ @sn<this>.GetBarLineChartBase ().isClipValuesToContentEnabled ()
+    }
+
+    方法 是否裁剪数据至内容启用 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isClipDataToContentEnabled()">
+    {
+        @ @sn<this>.GetBarLineChartBase ().isClipDataToContentEnabled ()
+    }
+
+    方法 设置边框宽度 <公开 注释 = "java: public void setBorderWidth(float)">
+    参数 宽度 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> ( GetBarLineChartBase ().setBorderWidth ((float) @<宽度>) )
+    }
+
+    方法 设置边框颜色 <公开 注释 = "java: public void setBorderColor(int)">
+    参数 颜色 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> ( GetBarLineChartBase ().setBorderColor (@<颜色>) )
+    }
+
+    方法 取最小偏移 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getMinOffset()">
+    {
+        @ (double)@sn<this>.GetBarLineChartBase ().getMinOffset ()
+    }
+
+    方法 设置最小偏移 <公开 注释 = "java: public void setMinOffset(float)">
+    参数 最小偏移 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> ( GetBarLineChartBase ().setMinOffset ((float) @<最小偏移>) )
+    }
+
+    方法 是否保持位置上旋转角 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isKeepPositionOnRotation()">
+    {
+        @ @sn<this>.GetBarLineChartBase ().isKeepPositionOnRotation ()
+    }
+
+    方法 设置保持位置上旋转角 <公开 注释 = "java: public void setKeepPositionOnRotation(boolean)">
+    参数 保持位置上旋转角 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> ( GetBarLineChartBase ().setKeepPositionOnRotation (@<保持位置上旋转角>) )
+    }
+
+    方法 取数值集按触摸点 <公开 类型 = MP双精度坐标类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.utils.MPPointD getValuesByTouchPoint(float, float, com.github.mikephil.charting.components.YAxis$AxisDependency)">
+    参数 横坐标 <类型 = 小数>
+    参数 纵坐标 <类型 = 小数>
+    参数 轴 <类型 = MP纵轴依附>
+    {
+        @ @sn<this>.GetBarLineChartBase ().getValuesByTouchPoint ((float) @<横坐标>, (float) @<纵坐标>, @<轴>)
+    }
+
+    方法 取数值集按触摸点_2 <公开 注释 = "java: public void getValuesByTouchPoint(float, float, com.github.mikephil.charting.components.YAxis$AxisDependency, com.github.mikephil.charting.utils.MPPointD)">
+    参数 横坐标 <类型 = 小数>
+    参数 纵坐标 <类型 = 小数>
+    参数 轴 <类型 = MP纵轴依附>
+    参数 输出点 <类型 = MP双精度坐标类>
+    {
+        @ @m<RUN_UI_ACTION> ( GetBarLineChartBase ().getValuesByTouchPoint ((float) @<横坐标>, (float) @<纵坐标>, @<轴>, @<输出点>) )
+    }
+
+    方法 取像素对应数值集 <公开 类型 = MP双精度坐标类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.utils.MPPointD getPixelForValues(float, float, com.github.mikephil.charting.components.YAxis$AxisDependency)">
+    参数 横坐标 <类型 = 小数>
+    参数 纵坐标 <类型 = 小数>
+    参数 轴 <类型 = MP纵轴依附>
+    {
+        @ @sn<this>.GetBarLineChartBase ().getPixelForValues ((float) @<横坐标>, (float) @<纵坐标>, @<轴>)
+    }
+
+    方法 取数据点按触摸点 <公开 类型 = MP数据点类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.Entry getEntryByTouchPoint(float, float)">
+    参数 横坐标 <类型 = 小数>
+    参数 纵坐标 <类型 = 小数>
+    {
+        @ @sn<this>.GetBarLineChartBase ().getEntryByTouchPoint ((float) @<横坐标>, (float) @<纵坐标>)
+    }
+
+    方法 取数据集按触摸点 <公开 类型 = MP线柱散蜡气数据集接口 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.interfaces.datasets.IBarLineScatterCandleBubbleDataSet getDataSetByTouchPoint(float, float)">
+    参数 横坐标 <类型 = 小数>
+    参数 纵坐标 <类型 = 小数>
+    {
+        @ @sn<this>.GetBarLineChartBase ().getDataSetByTouchPoint ((float) @<横坐标>, (float) @<纵坐标>)
+    }
+
+    方法 取最低可见横坐标 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getLowestVisibleX()">
+    {
+        @ (double)@sn<this>.GetBarLineChartBase ().getLowestVisibleX ()
+    }
+
+    方法 取最高可见横坐标 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getHighestVisibleX()">
+    {
+        @ (double)@sn<this>.GetBarLineChartBase ().getHighestVisibleX ()
+    }
+
+    方法 取可见横坐标范围 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getVisibleXRange()">
+    {
+        @ (double)@sn<this>.GetBarLineChartBase ().getVisibleXRange ()
+    }
+
+    方法 取比例横坐标 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getScaleX()">
+    {
+        @ (double)@sn<this>.GetBarLineChartBase ().getScaleX ()
+    }
+
+    方法 取比例纵坐标 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getScaleY()">
+    {
+        @ (double)@sn<this>.GetBarLineChartBase ().getScaleY ()
+    }
+
+    方法 是否完全缩小 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isFullyZoomedOut()">
+    {
+        @ @sn<this>.GetBarLineChartBase ().isFullyZoomedOut ()
+    }
+
+    方法 取轴左 <公开 类型 = MP纵轴类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.components.YAxis getAxisLeft()">
+    {
+        @ @sn<this>.GetBarLineChartBase ().getAxisLeft ()
+    }
+
+    方法 取轴右 <公开 类型 = MP纵轴类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.components.YAxis getAxisRight()">
+    {
+        @ @sn<this>.GetBarLineChartBase ().getAxisRight ()
+    }
+
+    方法 取轴 <公开 类型 = MP纵轴类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.components.YAxis getAxis(com.github.mikephil.charting.components.YAxis$AxisDependency)">
+    参数 轴 <类型 = MP纵轴依附>
+    {
+        @ @sn<this>.GetBarLineChartBase ().getAxis (@<轴>)
+    }
+
+    方法 是否已反转 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isInverted(com.github.mikephil.charting.components.YAxis$AxisDependency)">
+    参数 轴 <类型 = MP纵轴依附>
+    {
+        @ @sn<this>.GetBarLineChartBase ().isInverted (@<轴>)
+    }
+
+    方法 设置捏合缩放 <公开 注释 = "java: public void setPinchZoom(boolean)">
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> ( GetBarLineChartBase ().setPinchZoom (@<启用>) )
+    }
+
+    方法 是否捏合缩放启用 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isPinchZoomEnabled()">
+    {
+        @ @sn<this>.GetBarLineChartBase ().isPinchZoomEnabled ()
+    }
+
+    方法 设置拖动偏移横坐标 <公开 注释 = "java: public void setDragOffsetX(float)">
+    参数 偏移 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> ( GetBarLineChartBase ().setDragOffsetX ((float) @<偏移>) )
+    }
+
+    方法 设置拖动偏移纵坐标 <公开 注释 = "java: public void setDragOffsetY(float)">
+    参数 偏移 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> ( GetBarLineChartBase ().setDragOffsetY ((float) @<偏移>) )
+    }
+
+    方法 无拖动偏移 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean hasNoDragOffset()">
+    {
+        @ @sn<this>.GetBarLineChartBase ().hasNoDragOffset ()
+    }
+
+    方法 取渲染器横坐标轴 <公开 类型 = MP横轴渲染器类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.renderer.XAxisRenderer getRendererXAxis()">
+    {
+        @ @sn<this>.GetBarLineChartBase ().getRendererXAxis ()
+    }
+
+    方法 设置横坐标轴渲染器 <公开 注释 = "java: public void setXAxisRenderer(com.github.mikephil.charting.renderer.XAxisRenderer)">
+    参数 横坐标轴渲染器 <类型 = MP横轴渲染器类>
+    {
+        @ @m<RUN_UI_ACTION> ( GetBarLineChartBase ().setXAxisRenderer (@<横坐标轴渲染器>) )
+    }
+
+    方法 取渲染器左纵坐标轴 <公开 类型 = MP纵轴渲染器类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.renderer.YAxisRenderer getRendererLeftYAxis()">
+    {
+        @ @sn<this>.GetBarLineChartBase ().getRendererLeftYAxis ()
+    }
+
+    方法 设置渲染器左纵坐标轴 <公开 注释 = "java: public void setRendererLeftYAxis(com.github.mikephil.charting.renderer.YAxisRenderer)">
+    参数 渲染器左纵坐标轴 <类型 = MP纵轴渲染器类>
+    {
+        @ @m<RUN_UI_ACTION> ( GetBarLineChartBase ().setRendererLeftYAxis (@<渲染器左纵坐标轴>) )
+    }
+
+    方法 取渲染器右纵坐标轴 <公开 类型 = MP纵轴渲染器类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.renderer.YAxisRenderer getRendererRightYAxis()">
+    {
+        @ @sn<this>.GetBarLineChartBase ().getRendererRightYAxis ()
+    }
+
+    方法 设置渲染器右纵坐标轴 <公开 注释 = "java: public void setRendererRightYAxis(com.github.mikephil.charting.renderer.YAxisRenderer)">
+    参数 渲染器右纵坐标轴 <类型 = MP纵轴渲染器类>
+    {
+        @ @m<RUN_UI_ACTION> ( GetBarLineChartBase ().setRendererRightYAxis (@<渲染器右纵坐标轴>) )
+    }
+
+    方法 取纵坐标图表最大 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getYChartMax()">
+    {
+        @ (double)@sn<this>.GetBarLineChartBase ().getYChartMax ()
+    }
+
+    方法 取纵坐标图表最小 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getYChartMin()">
+    {
+        @ (double)@sn<this>.GetBarLineChartBase ().getYChartMin ()
+    }
+
+    方法 是否任意轴已反转 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isAnyAxisInverted()">
+    {
+        @ @sn<this>.GetBarLineChartBase ().isAnyAxisInverted ()
+    }
+
+    方法 设置自动比例最小最大启用 <公开 注释 = "java: public void setAutoScaleMinMaxEnabled(boolean)">
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> ( GetBarLineChartBase ().setAutoScaleMinMaxEnabled (@<启用>) )
+    }
+
+    方法 是否自动比例最小最大启用 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isAutoScaleMinMaxEnabled()">
+    {
+        @ @sn<this>.GetBarLineChartBase ().isAutoScaleMinMaxEnabled ()
+    }
+
+}
+
+类 MP柱状图 <公开 基础类 = MP线柱基础图类 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.charts.BarChart." @文档 = "category = \"窗口组件\""
+        @java.导入 = "com.github.mikephil.charting.charts.BarChart"
+        @安卓.窗口组件.布局配置 = "native_class = com.github.mikephil.charting.charts.BarChart\ncategory = \"MP图表组件\"">
+{
+
+    # @ @m<DEFINE_CONTROL2> (MP柱状图, BarChart, com.github.mikephil.charting.charts.BarChart)
+    #
+
+    方法 取柱边界 <公开 类型 = 小数矩形类 @嵌入式方法 = "" 注释 = "java: public android.graphics.RectF getBarBounds(com.github.mikephil.charting.data.BarEntry)">
+    参数 数据点 <类型 = MP柱形数据点类>
+    {
+        @ @sn<this>.GetBarChart ().getBarBounds (@<数据点>)
+    }
+
+    方法 取柱边界_2 <公开 注释 = "java: public void getBarBounds(com.github.mikephil.charting.data.BarEntry, android.graphics.RectF)">
+    参数 数据点 <类型 = MP柱形数据点类>
+    参数 输出矩形 <类型 = 小数矩形类>
+    {
+        @ @m<RUN_UI_ACTION> ( GetBarChart ().getBarBounds (@<数据点>, @<输出矩形>) )
+    }
+
+    方法 设置绘制数值上方柱 <公开 注释 = "java: public void setDrawValueAboveBar(boolean)">
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> ( GetBarChart ().setDrawValueAboveBar (@<启用>) )
+    }
+
+    方法 是否绘制数值上方柱启用 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isDrawValueAboveBarEnabled()">
+    {
+        @ @sn<this>.GetBarChart ().isDrawValueAboveBarEnabled ()
+    }
+
+    方法 设置绘制柱阴影 <公开 注释 = "java: public void setDrawBarShadow(boolean)">
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> ( GetBarChart ().setDrawBarShadow (@<启用>) )
+    }
+
+    方法 是否绘制柱阴影启用 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isDrawBarShadowEnabled()">
+    {
+        @ @sn<this>.GetBarChart ().isDrawBarShadowEnabled ()
+    }
+
+    方法 设置高亮整柱启用 <公开 注释 = "java: public void setHighlightFullBarEnabled(boolean)">
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> ( GetBarChart ().setHighlightFullBarEnabled (@<启用>) )
+    }
+
+    方法 是否高亮整柱启用 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isHighlightFullBarEnabled()">
+    {
+        @ @sn<this>.GetBarChart ().isHighlightFullBarEnabled ()
+    }
+
+    方法 取柱数据 <公开 类型 = MP柱形数据类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.BarData getBarData()">
+    {
+        @ @sn<this>.GetBarChart ().getBarData ()
+    }
+
+    方法 设置适配柱集 <公开 注释 = "java: public void setFitBars(boolean)">
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> ( GetBarChart ().setFitBars (@<启用>) )
+    }
+
+    方法 分组柱集 <公开 注释 = "java: public void groupBars(float, float, float)">
+    参数 来自横坐标 <类型 = 小数>
+    参数 分组间距 <类型 = 小数>
+    参数 柱间距 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> ( GetBarChart ().groupBars ((float) @<来自横坐标>, (float) @<分组间距>, (float) @<柱间距>) )
+    }
+
+}
+
+类 MP气泡图 <公开 基础类 = MP线柱基础图类 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.charts.BubbleChart." @文档 = "category = \"窗口组件\""
+        @java.导入 = "com.github.mikephil.charting.charts.BubbleChart"
+        @安卓.窗口组件.布局配置 = "native_class = com.github.mikephil.charting.charts.BubbleChart\ncategory = \"MP图表组件\"">
+{
+
+    # @ @m<DEFINE_CONTROL2> (MP气泡图, BubbleChart, com.github.mikephil.charting.charts.BubbleChart)
+    #
+
+    方法 取气泡数据 <公开 类型 = MP气泡数据类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.BubbleData getBubbleData()">
+    {
+        @ @sn<this>.GetBubbleChart ().getBubbleData ()
+    }
+
+}
+
+类 MP蜡烛图 <公开 基础类 = MP线柱基础图类 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.charts.CandleStickChart." @文档 = "category = \"窗口组件\""
+        @java.导入 = "com.github.mikephil.charting.charts.CandleStickChart"
+        @安卓.窗口组件.布局配置 = "native_class = com.github.mikephil.charting.charts.CandleStickChart\ncategory = \"MP图表组件\"">
+{
+
+    # @ @m<DEFINE_CONTROL2> (MP蜡烛图, CandleStickChart, com.github.mikephil.charting.charts.CandleStickChart)
+    #
+
+    方法 取蜡烛数据 <公开 类型 = MP蜡烛数据类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.CandleData getCandleData()">
+    {
+        @ @sn<this>.GetCandleStickChart ().getCandleData ()
+    }
+
+}
+
+类 MP复合图 <公开 基础类 = MP线柱基础图类 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.charts.CombinedChart." @文档 = "category = \"窗口组件\""
+        @java.导入 = "com.github.mikephil.charting.charts.CombinedChart"
+        @安卓.窗口组件.布局配置 = "native_class = com.github.mikephil.charting.charts.CombinedChart\ncategory = \"MP图表组件\"">
+{
+
+    # @ @m<DEFINE_CONTROL2> (MP复合图, CombinedChart, com.github.mikephil.charting.charts.CombinedChart)
+    #
+
+    方法 取组合数据 <公开 类型 = MP复合数据类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.CombinedData getCombinedData()">
+    {
+        @ @sn<this>.GetCombinedChart ().getCombinedData ()
+    }
+
+    方法 设置数据_2 <公开 注释 = "java: public void setData(com.github.mikephil.charting.data.CombinedData)">
+    参数 数据 <类型 = MP复合数据类>
+    {
+        @ @m<RUN_UI_ACTION> ( GetCombinedChart ().setData (@<数据>) )
+    }
+
+    方法 取线数据 <公开 类型 = MP折线数据类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.LineData getLineData()">
+    {
+        @ @sn<this>.GetCombinedChart ().getLineData ()
+    }
+
+    方法 取柱数据 <公开 类型 = MP柱形数据类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.BarData getBarData()">
+    {
+        @ @sn<this>.GetCombinedChart ().getBarData ()
+    }
+
+    方法 取散点数据 <公开 类型 = MP散点数据类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.ScatterData getScatterData()">
+    {
+        @ @sn<this>.GetCombinedChart ().getScatterData ()
+    }
+
+    方法 取蜡烛数据 <公开 类型 = MP蜡烛数据类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.CandleData getCandleData()">
+    {
+        @ @sn<this>.GetCombinedChart ().getCandleData ()
+    }
+
+    方法 取气泡数据 <公开 类型 = MP气泡数据类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.BubbleData getBubbleData()">
+    {
+        @ @sn<this>.GetCombinedChart ().getBubbleData ()
+    }
+
+    方法 是否绘制柱阴影启用 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isDrawBarShadowEnabled()">
+    {
+        @ @sn<this>.GetCombinedChart ().isDrawBarShadowEnabled ()
+    }
+
+    方法 是否绘制数值上方柱启用 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isDrawValueAboveBarEnabled()">
+    {
+        @ @sn<this>.GetCombinedChart ().isDrawValueAboveBarEnabled ()
+    }
+
+    方法 设置绘制数值上方柱 <公开 注释 = "java: public void setDrawValueAboveBar(boolean)">
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> ( GetCombinedChart ().setDrawValueAboveBar (@<启用>) )
+    }
+
+    方法 设置绘制柱阴影 <公开 注释 = "java: public void setDrawBarShadow(boolean)">
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> ( GetCombinedChart ().setDrawBarShadow (@<启用>) )
+    }
+
+    方法 设置高亮整柱启用 <公开 注释 = "java: public void setHighlightFullBarEnabled(boolean)">
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> ( GetCombinedChart ().setHighlightFullBarEnabled (@<启用>) )
+    }
+
+    方法 是否高亮整柱启用 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isHighlightFullBarEnabled()">
+    {
+        @ @sn<this>.GetCombinedChart ().isHighlightFullBarEnabled ()
+    }
+
+    方法 取绘制顺序 <公开 类型 = "MP复合图绘制次序 []" @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.charts.CombinedChart$DrawOrder[] getDrawOrder()">
+    {
+        @ @sn<this>.GetCombinedChart ().getDrawOrder ()
+    }
+
+    方法 设置绘制顺序 <公开 注释 = "java: public void setDrawOrder(com.github.mikephil.charting.charts.CombinedChart$DrawOrder[])">
+    参数 顺序 <类型 = "MP复合图绘制次序 []">
+    {
+        @ @m<RUN_UI_ACTION> ( GetCombinedChart ().setDrawOrder (@<顺序>) )
+    }
+
+}
+
+类 MP复合图绘制次序 <公开 @别名 = "com.github.mikephil.charting.charts.CombinedChart$DrawOrder" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.charts.CombinedChart$DrawOrder.">
+{
+
+    方法 数值集 <公开 静态 类型 = "MP复合图绘制次序 []" @嵌入式方法 = "" 注释 = "java: public static com.github.mikephil.charting.charts.CombinedChart$DrawOrder[] values()">
+    参数 当前对象 <类型 = MP复合图绘制次序>
+    {
+        @ com.github.mikephil.charting.charts.CombinedChart$DrawOrder.values ()
+    }
+
+    方法 取枚举值 <公开 静态 类型 = MP复合图绘制次序 @嵌入式方法 = "" 注释 = "java: public static com.github.mikephil.charting.charts.CombinedChart$DrawOrder valueOf(java.lang.String)">
+    参数 当前对象 <类型 = MP复合图绘制次序>
+    参数 名称 <类型 = 文本型>
+    {
+        @ com.github.mikephil.charting.charts.CombinedChart$DrawOrder.valueOf (@<名称>)
+    }
+
+    方法 取柱 <公开 静态 类型 = MP复合图绘制次序 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.charts.CombinedChart$DrawOrder BAR">
+    {
+        @ com.github.mikephil.charting.charts.CombinedChart$DrawOrder.BAR
+    }
+
+    方法 取气泡 <公开 静态 类型 = MP复合图绘制次序 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.charts.CombinedChart$DrawOrder BUBBLE">
+    {
+        @ com.github.mikephil.charting.charts.CombinedChart$DrawOrder.BUBBLE
+    }
+
+    方法 取线 <公开 静态 类型 = MP复合图绘制次序 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.charts.CombinedChart$DrawOrder LINE">
+    {
+        @ com.github.mikephil.charting.charts.CombinedChart$DrawOrder.LINE
+    }
+
+    方法 取蜡烛 <公开 静态 类型 = MP复合图绘制次序 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.charts.CombinedChart$DrawOrder CANDLE">
+    {
+        @ com.github.mikephil.charting.charts.CombinedChart$DrawOrder.CANDLE
+    }
+
+    方法 取散点 <公开 静态 类型 = MP复合图绘制次序 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.charts.CombinedChart$DrawOrder SCATTER">
+    {
+        @ com.github.mikephil.charting.charts.CombinedChart$DrawOrder.SCATTER
+    }
+
+}
+
+类 MP横向柱状图 <公开 基础类 = MP柱状图 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.charts.HorizontalBarChart." @文档 = "category = \"窗口组件\""
+        @java.导入 = "com.github.mikephil.charting.charts.HorizontalBarChart"
+        @安卓.窗口组件.布局配置 = "native_class = com.github.mikephil.charting.charts.HorizontalBarChart\ncategory = \"MP图表组件\"">
+{
+
+    # @ @m<DEFINE_CONTROL2> (MP横向柱状图, HorizontalBarChart, com.github.mikephil.charting.charts.HorizontalBarChart)
+    #
+
+    方法 取柱边界_3 <公开 注释 = "java: public void getBarBounds(com.github.mikephil.charting.data.BarEntry, android.graphics.RectF)">
+    参数 数据点 <类型 = MP柱形数据点类>
+    参数 输出矩形 <类型 = 小数矩形类>
+    {
+        @ @m<RUN_UI_ACTION> ( GetHorizontalBarChart ().getBarBounds (@<数据点>, @<输出矩形>) )
+    }
+
+}
+
+类 MP折线图 <公开 基础类 = MP线柱基础图类 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.charts.LineChart." @文档 = "category = \"窗口组件\""
+        @java.导入 = "com.github.mikephil.charting.charts.LineChart"
+        @安卓.窗口组件.布局配置 = "native_class = com.github.mikephil.charting.charts.LineChart\ncategory = \"MP图表组件\"">
+{
+
+    # @ @m<DEFINE_CONTROL2> (MP折线图, LineChart, com.github.mikephil.charting.charts.LineChart)
+    #
+
+    方法 取线数据 <公开 类型 = MP折线数据类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.LineData getLineData()">
+    {
+        @ @sn<this>.GetLineChart ().getLineData ()
+    }
+
+}
+
+类 MP饼径基础图类 <公开 基础类 = MP图表基础类 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.charts.PieRadarChartBase."
+        @禁止创建对象 = 真 @java.导入 = "com.github.mikephil.charting.charts.PieRadarChartBase">
+{
+
+    # @ @m<DEFINE_ABS_CONTROL2> (MP饼径基础图类, PieRadarChartBase, com.github.mikephil.charting.charts.PieRadarChartBase)
+    #
+
+    方法 取最大可见数量 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getMaxVisibleCount()">
+    {
+        @ @sn<this>.GetPieRadarChartBase ().getMaxVisibleCount ()
+    }
+
+    方法 响应触摸事件 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean onTouchEvent(android.view.MotionEvent)">
+    参数 事件 <类型 = 动作事件类>
+    {
+        @ @sn<this>.GetPieRadarChartBase ().onTouchEvent (@<事件>)
+    }
+
+    方法 算出滚动 <公开 注释 = "java: public void computeScroll()">
+    {
+        @ @m<RUN_UI_ACTION> ( GetPieRadarChartBase ().computeScroll () )
+    }
+
+    方法 计算偏移量集 <公开 注释 = "java: public void calculateOffsets()">
+    {
+        @ @m<RUN_UI_ACTION> ( GetPieRadarChartBase ().calculateOffsets () )
+    }
+
+    方法 取角度对应点 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getAngleForPoint(float, float)">
+    参数 横坐标 <类型 = 小数>
+    参数 纵坐标 <类型 = 小数>
+    {
+        @ (double)@sn<this>.GetPieRadarChartBase ().getAngleForPoint ((float) @<横坐标>, (float) @<纵坐标>)
+    }
+
+    方法 取位置 <公开 类型 = MP单精度坐标类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.utils.MPPointF getPosition(com.github.mikephil.charting.utils.MPPointF, float, float)">
+    参数 中心 <类型 = MP单精度坐标类>
+    参数 距离 <类型 = 小数>
+    参数 角度 <类型 = 小数>
+    {
+        @ @sn<this>.GetPieRadarChartBase ().getPosition (@<中心>, (float) @<距离>, (float) @<角度>)
+    }
+
+    方法 取位置_2 <公开 注释 = "java: public void getPosition(com.github.mikephil.charting.utils.MPPointF, float, float, com.github.mikephil.charting.utils.MPPointF)">
+    参数 中心 <类型 = MP单精度坐标类>
+    参数 距离 <类型 = 小数>
+    参数 角度 <类型 = 小数>
+    参数 输出点 <类型 = MP单精度坐标类>
+    {
+        @ @m<RUN_UI_ACTION> ( GetPieRadarChartBase ().getPosition (@<中心>, (float) @<距离>, (float) @<角度>, @<输出点>) )
+    }
+
+    方法 距离至中心 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float distanceToCenter(float, float)">
+    参数 横坐标 <类型 = 小数>
+    参数 纵坐标 <类型 = 小数>
+    {
+        @ (double)@sn<this>.GetPieRadarChartBase ().distanceToCenter ((float) @<横坐标>, (float) @<纵坐标>)
+    }
+
+    方法 取索引对应角度 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public abstract int getIndexForAngle(float)">
+    参数 角度 <类型 = 小数>
+    {
+        @ @sn<this>.GetPieRadarChartBase ().getIndexForAngle ((float) @<角度>)
+    }
+
+    方法 设置旋转角角度 <公开 注释 = "java: public void setRotationAngle(float)">
+    参数 角度 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> ( GetPieRadarChartBase ().setRotationAngle ((float) @<角度>) )
+    }
+
+    方法 取原始旋转角角度 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getRawRotationAngle()">
+    {
+        @ (double)@sn<this>.GetPieRadarChartBase ().getRawRotationAngle ()
+    }
+
+    方法 取旋转角角度 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getRotationAngle()">
+    {
+        @ (double)@sn<this>.GetPieRadarChartBase ().getRotationAngle ()
+    }
+
+    方法 设置旋转角启用 <公开 注释 = "java: public void setRotationEnabled(boolean)">
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> ( GetPieRadarChartBase ().setRotationEnabled (@<启用>) )
+    }
+
+    方法 是否旋转角启用 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isRotationEnabled()">
+    {
+        @ @sn<this>.GetPieRadarChartBase ().isRotationEnabled ()
+    }
+
+    方法 取最小偏移 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getMinOffset()">
+    {
+        @ (double)@sn<this>.GetPieRadarChartBase ().getMinOffset ()
+    }
+
+    方法 设置最小偏移 <公开 注释 = "java: public void setMinOffset(float)">
+    参数 最小偏移 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> ( GetPieRadarChartBase ().setMinOffset ((float) @<最小偏移>) )
+    }
+
+    方法 取直径 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getDiameter()">
+    {
+        @ (double)@sn<this>.GetPieRadarChartBase ().getDiameter ()
+    }
+
+    方法 取半径 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public abstract float getRadius()">
+    {
+        @ (double)@sn<this>.GetPieRadarChartBase ().getRadius ()
+    }
+
+    方法 取纵坐标图表最大 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getYChartMax()">
+    {
+        @ (double)@sn<this>.GetPieRadarChartBase ().getYChartMax ()
+    }
+
+    方法 取纵坐标图表最小 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getYChartMin()">
+    {
+        @ (double)@sn<this>.GetPieRadarChartBase ().getYChartMin ()
+    }
+
+    方法 自旋 <公开 注释 = "java: public void spin(int, float, float, com.github.mikephil.charting.animation.Easing$EasingFunction)">
+    参数 时长毫秒 <类型 = 整数>
+    参数 起始角 <类型 = 小数>
+    参数 终止角 <类型 = 小数>
+    参数 缓动 <类型 = MP缓动函数类>
+    {
+        @ @m<RUN_UI_ACTION> ( GetPieRadarChartBase ().spin (@<时长毫秒>, (float) @<起始角>, (float) @<终止角>, @<缓动>) )
+    }
+
+}
+
+类 MP饼状图 <公开 基础类 = MP饼径基础图类 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.charts.PieChart." @文档 = "category = \"窗口组件\""
+        @java.导入 = "com.github.mikephil.charting.charts.PieChart"
+        @安卓.窗口组件.布局配置 = "native_class = com.github.mikephil.charting.charts.PieChart\ncategory = \"MP图表组件\"">
+{
+
+    # @ @m<DEFINE_CONTROL2> (MP饼状图, PieChart, com.github.mikephil.charting.charts.PieChart)
+    #
+
+    方法 需要高亮 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean needsHighlight(int)">
+    参数 索引 <类型 = 整数>
+    {
+        @ @sn<this>.GetPieChart ().needsHighlight (@<索引>)
+    }
+
+    方法 取数据集索引对应索引 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getDataSetIndexForIndex(int)">
+    参数 横坐标索引 <类型 = 整数>
+    {
+        @ @sn<this>.GetPieChart ().getDataSetIndexForIndex (@<横坐标索引>)
+    }
+
+    方法 取绘制角度集 <公开 类型 = "小数 []" @嵌入式方法 = "" 注释 = "java: public float[] getDrawAngles()">
+    {
+        @ @sn<this>.GetPieChart ().getDrawAngles ()
+    }
+
+    方法 取绝对角度集 <公开 类型 = "小数 []" @嵌入式方法 = "" 注释 = "java: public float[] getAbsoluteAngles()">
+    {
+        @ @sn<this>.GetPieChart ().getAbsoluteAngles ()
+    }
+
+    方法 设置中心孔颜色 <公开 注释 = "java: public void setHoleColor(int)">
+    参数 颜色 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> ( GetPieChart ().setHoleColor (@<颜色>) )
+    }
+
+    方法 设置绘制扇区集下面中心孔 <公开 注释 = "java: public void setDrawSlicesUnderHole(boolean)">
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> ( GetPieChart ().setDrawSlicesUnderHole (@<启用>) )
+    }
+
+    方法 是否绘制扇区集下面中心孔启用 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isDrawSlicesUnderHoleEnabled()">
+    {
+        @ @sn<this>.GetPieChart ().isDrawSlicesUnderHoleEnabled ()
+    }
+
+    方法 设置绘制中心孔启用 <公开 注释 = "java: public void setDrawHoleEnabled(boolean)">
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> ( GetPieChart ().setDrawHoleEnabled (@<启用>) )
+    }
+
+    方法 是否绘制中心孔启用 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isDrawHoleEnabled()">
+    {
+        @ @sn<this>.GetPieChart ().isDrawHoleEnabled ()
+    }
+
+    方法 设置中心文本 <公开 注释 = "java: public void setCenterText(java.lang.CharSequence)">
+    参数 文本 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> ( GetPieChart ().setCenterText (@<文本>) )
+    }
+
+    方法 取中心文本 <公开 类型 = 文本型 @嵌入式方法 = "" 注释 = "java: public java.lang.CharSequence getCenterText()">
+    {
+        @ @sn<this>.GetPieChart ().getCenterText ()
+    }
+
+    方法 设置绘制中心文本 <公开 注释 = "java: public void setDrawCenterText(boolean)">
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> ( GetPieChart ().setDrawCenterText (@<启用>) )
+    }
+
+    方法 是否绘制中心文本启用 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isDrawCenterTextEnabled()">
+    {
+        @ @sn<this>.GetPieChart ().isDrawCenterTextEnabled ()
+    }
+
+    方法 取圆形盒 <公开 类型 = 小数矩形类 @嵌入式方法 = "" 注释 = "java: public android.graphics.RectF getCircleBox()">
+    {
+        @ @sn<this>.GetPieChart ().getCircleBox ()
+    }
+
+    方法 取中心圆形盒 <公开 类型 = MP单精度坐标类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.utils.MPPointF getCenterCircleBox()">
+    {
+        @ @sn<this>.GetPieChart ().getCenterCircleBox ()
+    }
+
+    方法 设置中心文本字体族 <公开 注释 = "java: public void setCenterTextTypeface(android.graphics.Typeface)">
+    参数 顶 <类型 = 字体类>
+    {
+        @ @m<RUN_UI_ACTION> ( GetPieChart ().setCenterTextTypeface (@<顶>) )
+    }
+
+    方法 设置中心文本尺寸 <公开 注释 = "java: public void setCenterTextSize(float)">
+    参数 尺寸设备独立像素 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> ( GetPieChart ().setCenterTextSize ((float) @<尺寸设备独立像素>) )
+    }
+
+    方法 设置中心文本尺寸像素 <公开 注释 = "java: public void setCenterTextSizePixels(float)">
+    参数 尺寸像素 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> ( GetPieChart ().setCenterTextSizePixels ((float) @<尺寸像素>) )
+    }
+
+    方法 设置中心文本偏移 <公开 注释 = "java: public void setCenterTextOffset(float, float)">
+    参数 横坐标 <类型 = 小数>
+    参数 纵坐标 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> ( GetPieChart ().setCenterTextOffset ((float) @<横坐标>, (float) @<纵坐标>) )
+    }
+
+    方法 取中心文本偏移 <公开 类型 = MP单精度坐标类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.utils.MPPointF getCenterTextOffset()">
+    {
+        @ @sn<this>.GetPieChart ().getCenterTextOffset ()
+    }
+
+    方法 设置中心文本颜色 <公开 注释 = "java: public void setCenterTextColor(int)">
+    参数 颜色 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> ( GetPieChart ().setCenterTextColor (@<颜色>) )
+    }
+
+    方法 设置中心孔半径 <公开 注释 = "java: public void setHoleRadius(float)">
+    参数 百分比 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> ( GetPieChart ().setHoleRadius ((float) @<百分比>) )
+    }
+
+    方法 取中心孔半径 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getHoleRadius()">
+    {
+        @ (double)@sn<this>.GetPieChart ().getHoleRadius ()
+    }
+
+    方法 设置透明圆形颜色 <公开 注释 = "java: public void setTransparentCircleColor(int)">
+    参数 颜色 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> ( GetPieChart ().setTransparentCircleColor (@<颜色>) )
+    }
+
+    方法 设置透明圆形半径 <公开 注释 = "java: public void setTransparentCircleRadius(float)">
+    参数 百分比 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> ( GetPieChart ().setTransparentCircleRadius ((float) @<百分比>) )
+    }
+
+    方法 取透明圆形半径 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getTransparentCircleRadius()">
+    {
+        @ (double)@sn<this>.GetPieChart ().getTransparentCircleRadius ()
+    }
+
+    方法 设置透明圆形透明度 <公开 注释 = "java: public void setTransparentCircleAlpha(int)">
+    参数 透明度 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> ( GetPieChart ().setTransparentCircleAlpha (@<透明度>) )
+    }
+
+    方法 设置绘制扇区文本 <公开 注释 = "java: public void setDrawSliceText(boolean)">
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> ( GetPieChart ().setDrawSliceText (@<启用>) )
+    }
+
+    方法 设置绘制数据点标签集 <公开 注释 = "java: public void setDrawEntryLabels(boolean)">
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> ( GetPieChart ().setDrawEntryLabels (@<启用>) )
+    }
+
+    方法 是否绘制数据点标签集启用 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isDrawEntryLabelsEnabled()">
+    {
+        @ @sn<this>.GetPieChart ().isDrawEntryLabelsEnabled ()
+    }
+
+    方法 设置数据点标签颜色 <公开 注释 = "java: public void setEntryLabelColor(int)">
+    参数 颜色 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> ( GetPieChart ().setEntryLabelColor (@<颜色>) )
+    }
+
+    方法 设置数据点标签字体族 <公开 注释 = "java: public void setEntryLabelTypeface(android.graphics.Typeface)">
+    参数 字体度量 <类型 = 字体类>
+    {
+        @ @m<RUN_UI_ACTION> ( GetPieChart ().setEntryLabelTypeface (@<字体度量>) )
+    }
+
+    方法 设置数据点标签文本尺寸 <公开 注释 = "java: public void setEntryLabelTextSize(float)">
+    参数 尺寸 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> ( GetPieChart ().setEntryLabelTextSize ((float) @<尺寸>) )
+    }
+
+    方法 设置绘制已圆化扇区集 <公开 注释 = "java: public void setDrawRoundedSlices(boolean)">
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> ( GetPieChart ().setDrawRoundedSlices (@<启用>) )
+    }
+
+    方法 是否绘制已圆化扇区集启用 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isDrawRoundedSlicesEnabled()">
+    {
+        @ @sn<this>.GetPieChart ().isDrawRoundedSlicesEnabled ()
+    }
+
+    方法 设置使用百分比数值集 <公开 注释 = "java: public void setUsePercentValues(boolean)">
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> ( GetPieChart ().setUsePercentValues (@<启用>) )
+    }
+
+    方法 是否使用百分比数值集启用 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isUsePercentValuesEnabled()">
+    {
+        @ @sn<this>.GetPieChart ().isUsePercentValuesEnabled ()
+    }
+
+    方法 设置中心文本半径百分比 <公开 注释 = "java: public void setCenterTextRadiusPercent(float)">
+    参数 百分比 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> ( GetPieChart ().setCenterTextRadiusPercent ((float) @<百分比>) )
+    }
+
+    方法 取中心文本半径百分比 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getCenterTextRadiusPercent()">
+    {
+        @ (double)@sn<this>.GetPieChart ().getCenterTextRadiusPercent ()
+    }
+
+    方法 取最大角度 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getMaxAngle()">
+    {
+        @ (double)@sn<this>.GetPieChart ().getMaxAngle ()
+    }
+
+    方法 设置最大角度 <公开 注释 = "java: public void setMaxAngle(float)">
+    参数 最大角 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> ( GetPieChart ().setMaxAngle ((float) @<最大角>) )
+    }
+
+    方法 取最小角度对应扇区集 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getMinAngleForSlices()">
+    {
+        @ (double)@sn<this>.GetPieChart ().getMinAngleForSlices ()
+    }
+
+    方法 设置最小角度对应扇区集 <公开 注释 = "java: public void setMinAngleForSlices(float)">
+    参数 最小角度 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> ( GetPieChart ().setMinAngleForSlices ((float) @<最小角度>) )
+    }
+
+}
+
+类 MP雷达图 <公开 基础类 = MP饼径基础图类 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.charts.RadarChart." @文档 = "category = \"窗口组件\""
+        @java.导入 = "com.github.mikephil.charting.charts.RadarChart"
+        @安卓.窗口组件.布局配置 = "native_class = com.github.mikephil.charting.charts.RadarChart\ncategory = \"MP图表组件\"">
+{
+
+    # @ @m<DEFINE_CONTROL2> (MP雷达图, RadarChart, com.github.mikephil.charting.charts.RadarChart)
+    #
+
+    方法 取系数 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getFactor()">
+    {
+        @ (double)@sn<this>.GetRadarChart ().getFactor ()
+    }
+
+    方法 取扇区角度 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getSliceAngle()">
+    {
+        @ (double)@sn<this>.GetRadarChart ().getSliceAngle ()
+    }
+
+    方法 取纵坐标轴 <公开 类型 = MP纵轴类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.components.YAxis getYAxis()">
+    {
+        @ @sn<this>.GetRadarChart ().getYAxis ()
+    }
+
+    方法 设置网页线宽度 <公开 注释 = "java: public void setWebLineWidth(float)">
+    参数 宽度 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> ( GetRadarChart ().setWebLineWidth ((float) @<宽度>) )
+    }
+
+    方法 取网页线宽度 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getWebLineWidth()">
+    {
+        @ (double)@sn<this>.GetRadarChart ().getWebLineWidth ()
+    }
+
+    方法 设置网页线宽度内 <公开 注释 = "java: public void setWebLineWidthInner(float)">
+    参数 宽度 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> ( GetRadarChart ().setWebLineWidthInner ((float) @<宽度>) )
+    }
+
+    方法 取网页线宽度内 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getWebLineWidthInner()">
+    {
+        @ (double)@sn<this>.GetRadarChart ().getWebLineWidthInner ()
+    }
+
+    方法 设置网页透明度 <公开 注释 = "java: public void setWebAlpha(int)">
+    参数 透明度 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> ( GetRadarChart ().setWebAlpha (@<透明度>) )
+    }
+
+    方法 取网页透明度 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getWebAlpha()">
+    {
+        @ @sn<this>.GetRadarChart ().getWebAlpha ()
+    }
+
+    方法 设置网页颜色 <公开 注释 = "java: public void setWebColor(int)">
+    参数 颜色 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> ( GetRadarChart ().setWebColor (@<颜色>) )
+    }
+
+    方法 取网页颜色 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getWebColor()">
+    {
+        @ @sn<this>.GetRadarChart ().getWebColor ()
+    }
+
+    方法 设置网页颜色内 <公开 注释 = "java: public void setWebColorInner(int)">
+    参数 颜色 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> ( GetRadarChart ().setWebColorInner (@<颜色>) )
+    }
+
+    方法 取网页颜色内 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getWebColorInner()">
+    {
+        @ @sn<this>.GetRadarChart ().getWebColorInner ()
+    }
+
+    方法 设置绘制网页 <公开 注释 = "java: public void setDrawWeb(boolean)">
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> ( GetRadarChart ().setDrawWeb (@<启用>) )
+    }
+
+    方法 设置跳过网页线数量 <公开 注释 = "java: public void setSkipWebLineCount(int)">
+    参数 数量 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> ( GetRadarChart ().setSkipWebLineCount (@<数量>) )
+    }
+
+    方法 取跳过网页线数量 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getSkipWebLineCount()">
+    {
+        @ @sn<this>.GetRadarChart ().getSkipWebLineCount ()
+    }
+
+    方法 取纵坐标范围 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getYRange()">
+    {
+        @ (double)@sn<this>.GetRadarChart ().getYRange ()
+    }
+
+}
+
+类 MP散点图 <公开 基础类 = MP线柱基础图类 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.charts.ScatterChart." @文档 = "category = \"窗口组件\""
+        @java.导入 = "com.github.mikephil.charting.charts.ScatterChart"
+        @安卓.窗口组件.布局配置 = "native_class = com.github.mikephil.charting.charts.ScatterChart\ncategory = \"MP图表组件\"">
+{
+
+    # @ @m<DEFINE_CONTROL2> (MP散点图, ScatterChart, com.github.mikephil.charting.charts.ScatterChart)
+    #
+
+    方法 取散点数据 <公开 类型 = MP散点数据类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.ScatterData getScatterData()">
+    {
+        @ @sn<this>.GetScatterChart ().getScatterData ()
+    }
+
+}
+
+类 MP散点形状 <公开 @别名 = "com.github.mikephil.charting.charts.ScatterChart$ScatterShape" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.charts.ScatterChart$ScatterShape.">
+{
+
+    方法 数值集 <公开 静态 类型 = "MP散点形状 []" @嵌入式方法 = "" 注释 = "java: public static com.github.mikephil.charting.charts.ScatterChart$ScatterShape[] values()">
+    参数 当前对象 <类型 = MP散点形状>
+    {
+        @ com.github.mikephil.charting.charts.ScatterChart$ScatterShape.values ()
+    }
+
+    方法 取枚举值 <公开 静态 类型 = MP散点形状 @嵌入式方法 = "" 注释 = "java: public static com.github.mikephil.charting.charts.ScatterChart$ScatterShape valueOf(java.lang.String)">
+    参数 当前对象 <类型 = MP散点形状>
+    参数 名称 <类型 = 文本型>
+    {
+        @ com.github.mikephil.charting.charts.ScatterChart$ScatterShape.valueOf (@<名称>)
+    }
+
+    方法 转为字符串 <公开 静态 类型 = 文本型 @嵌入式方法 = "" 注释 = "java: public java.lang.String toString()">
+    参数 当前对象 <类型 = MP散点形状>
+    {
+        @ @<当前对象>.toString ()
+    }
+
+    方法 取全部默认形状集 <公开 静态 类型 = "MP散点形状 []" @嵌入式方法 = "" 注释 = "java: public static com.github.mikephil.charting.charts.ScatterChart$ScatterShape[] getAllDefaultShapes()">
+    参数 当前对象 <类型 = MP散点形状>
+    {
+        @ com.github.mikephil.charting.charts.ScatterChart$ScatterShape.getAllDefaultShapes ()
+    }
+
+    方法 取方形 <公开 静态 类型 = MP散点形状 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.charts.ScatterChart$ScatterShape SQUARE">
+    {
+        @ com.github.mikephil.charting.charts.ScatterChart$ScatterShape.SQUARE
+    }
+
+    方法 取圆形 <公开 静态 类型 = MP散点形状 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.charts.ScatterChart$ScatterShape CIRCLE">
+    {
+        @ com.github.mikephil.charting.charts.ScatterChart$ScatterShape.CIRCLE
+    }
+
+    方法 取三角 <公开 静态 类型 = MP散点形状 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.charts.ScatterChart$ScatterShape TRIANGLE">
+    {
+        @ com.github.mikephil.charting.charts.ScatterChart$ScatterShape.TRIANGLE
+    }
+
+    方法 取十字 <公开 静态 类型 = MP散点形状 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.charts.ScatterChart$ScatterShape CROSS">
+    {
+        @ com.github.mikephil.charting.charts.ScatterChart$ScatterShape.CROSS
+    }
+
+    方法 取横坐标 <公开 静态 类型 = MP散点形状 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.charts.ScatterChart$ScatterShape X">
+    {
+        @ com.github.mikephil.charting.charts.ScatterChart$ScatterShape.X
+    }
+
+    方法 取人字向上 <公开 静态 类型 = MP散点形状 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.charts.ScatterChart$ScatterShape CHEVRON_UP">
+    {
+        @ com.github.mikephil.charting.charts.ScatterChart$ScatterShape.CHEVRON_UP
+    }
+
+    方法 取人字向下 <公开 静态 类型 = MP散点形状 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.charts.ScatterChart$ScatterShape CHEVRON_DOWN">
+    {
+        @ com.github.mikephil.charting.charts.ScatterChart$ScatterShape.CHEVRON_DOWN
+    }
+
+}
+

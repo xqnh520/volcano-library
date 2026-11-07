@@ -1,0 +1,54 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.即时界面 <注释 = "Dear ImGui v1.91.9b-docking 的火山视窗中文封装，全中文类名/方法名/参数名/注释。" @视窗.头文件搜寻目录 = "imgui"
+        @视窗.外部头文件 = "imcn_helper.h, imcn_host.h"
+        @视窗.外部源文件 = "imgui\\imgui.cpp, imgui\\imgui_draw.cpp, imgui\\imgui_tables.cpp, imgui\\imgui_widgets.cpp, imgui\\imgui_demo.cpp, imgui\\misc\\cpp\\imgui_stdlib.cpp, imgui\\backends\\imgui_impl_win32.cpp, imgui\\backends\\imgui_impl_dx11.cpp">
+
+类 窗口标志 <公开 注释 = "窗口标志，用于即时界面.开始窗口" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 无 <公开 类型 = 整数 值 = @ImGuiWindowFlags_None>
+    常量 禁止标题栏 <公开 类型 = 整数 值 = @ImGuiWindowFlags_NoTitleBar>
+    常量 禁止调整大小 <公开 类型 = 整数 值 = @ImGuiWindowFlags_NoResize>
+    常量 禁止移动 <公开 类型 = 整数 值 = @ImGuiWindowFlags_NoMove>
+    常量 禁止滚动条 <公开 类型 = 整数 值 = @ImGuiWindowFlags_NoScrollbar>
+    常量 禁止鼠标滚动 <公开 类型 = 整数 值 = @ImGuiWindowFlags_NoScrollWithMouse>
+    常量 禁止折叠 <公开 类型 = 整数 值 = @ImGuiWindowFlags_NoCollapse>
+    常量 始终自动调整大小 <公开 类型 = 整数 值 = @ImGuiWindowFlags_AlwaysAutoResize>
+    常量 禁止背景 <公开 类型 = 整数 值 = @ImGuiWindowFlags_NoBackground>
+    常量 禁止保存配置 <公开 类型 = 整数 值 = @ImGuiWindowFlags_NoSavedSettings>
+    常量 禁止鼠标输入 <公开 类型 = 整数 值 = @ImGuiWindowFlags_NoMouseInputs>
+    常量 菜单栏 <公开 类型 = 整数 值 = @ImGuiWindowFlags_MenuBar>
+    常量 水平滚动条 <公开 类型 = 整数 值 = @ImGuiWindowFlags_HorizontalScrollbar>
+    常量 显示时不获得焦点 <公开 类型 = 整数 值 = @ImGuiWindowFlags_NoFocusOnAppearing>
+    常量 获得焦点时不置于顶层 <公开 类型 = 整数 值 = @ImGuiWindowFlags_NoBringToFrontOnFocus>
+    常量 始终显示垂直滚动条 <公开 类型 = 整数 值 = @ImGuiWindowFlags_AlwaysVerticalScrollbar>
+    常量 始终显示水平滚动条 <公开 类型 = 整数 值 = @ImGuiWindowFlags_AlwaysHorizontalScrollbar>
+    常量 禁止导航输入 <公开 类型 = 整数 值 = @ImGuiWindowFlags_NoNavInputs>
+    常量 禁止导航焦点 <公开 类型 = 整数 值 = @ImGuiWindowFlags_NoNavFocus>
+    常量 未保存文档标记 <公开 类型 = 整数 值 = @ImGuiWindowFlags_UnsavedDocument>
+    常量 禁止停靠 <公开 类型 = 整数 值 = @ImGuiWindowFlags_NoDocking>
+    常量 禁止导航 <公开 类型 = 整数 值 = @ImGuiWindowFlags_NoNav>
+    常量 禁止窗口装饰 <公开 类型 = 整数 值 = @ImGuiWindowFlags_NoDecoration>
+    常量 禁止全部输入 <公开 类型 = 整数 值 = @ImGuiWindowFlags_NoInputs>
+    常量 停靠节点宿主 <公开 类型 = 整数 值 = @ImGuiWindowFlags_DockNodeHost>
+    常量 子窗口 <公开 类型 = 整数 值 = @ImGuiWindowFlags_ChildWindow>
+    常量 提示窗口 <公开 类型 = 整数 值 = @ImGuiWindowFlags_Tooltip>
+    常量 弹出窗口 <公开 类型 = 整数 值 = @ImGuiWindowFlags_Popup>
+    常量 模态窗口 <公开 类型 = 整数 值 = @ImGuiWindowFlags_Modal>
+    常量 子菜单 <公开 类型 = 整数 值 = @ImGuiWindowFlags_ChildMenu>
+    常量 平铺导航 <公开 类型 = 整数 值 = @ImGuiWindowFlags_NavFlattened>
+    常量 始终使用窗口内边距 <公开 类型 = 整数 值 = @ImGuiWindowFlags_AlwaysUseWindowPadding>
+}
+类 子窗口标志 <公开 注释 = "子窗口标志，用于即时界面.开始子窗口" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 无 <公开 类型 = 整数 值 = @ImGuiChildFlags_None>
+    常量 显示外边框 <公开 类型 = 整数 值 = @ImGuiChildFlags_Borders>
+    常量 始终启用窗口内边距 <公开 类型 = 整数 值 = @ImGuiChildFlags_AlwaysUseWindowPadding>
+    常量 允许调整水平大小 <公开 类型 = 整数 值 = @ImGuiChildFlags_ResizeX>
+    常量 允许调整垂直大小 <公开 类型 = 整数 值 = @ImGuiChildFlags_ResizeY>
+    常量 自动调整水平大小 <公开 类型 = 整数 值 = @ImGuiChildFlags_AutoResizeX>
+    常量 自动调整垂直大小 <公开 类型 = 整数 值 = @ImGuiChildFlags_AutoResizeY>
+    常量 始终自动调整大小 <公开 类型 = 整数 值 = @ImGuiChildFlags_AlwaysAutoResize>
+    常量 使用控件外框样式 <公开 类型 = 整数 值 = @ImGuiChildFlags_FrameStyle>
+    常量 平铺导航 <公开 类型 = 整数 值 = @ImGuiChildFlags_NavFlattened>
+}

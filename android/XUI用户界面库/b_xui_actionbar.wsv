@@ -1,0 +1,289 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.安卓.XUI <注释 = "XUI 安卓 UI 工具库封装" @文档 = "category = \"XUI\"">
+
+
+类 XUI标题栏 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.actionbar.TitleBar)."
+        @文档 = "category = \"XUI.标题栏\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.actionbar.TitleBar\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.tb_barHeight\n        shown_name = \"标题栏的高度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.tb_immersive\n        shown_name = \"是否是沉浸式标题栏\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.tb_actionPadding\n        shown_name = \"左右图标和文字的padding\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.tb_sideTextPadding\n        shown_name = \"标题栏两侧控件的padding\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.tb_sideTextColor\n        shown_name = \"标题栏左侧文字的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.tb_titleTextColor\n        shown_name = \"标题栏标题文字的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.tb_subTitleTextColor\n        shown_name = \"标题栏副标题文字的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.tb_actionTextColor\n        shown_name = \"标题栏右侧文字的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.tb_centerGravity\n        shown_name = \"中间title的对齐方式\"\n        data_type = string\n        detail_type = enum\n        item\n        {\n            name = center\n            shown_name = \"center\"\n        }\n        item\n        {\n            name = left\n            shown_name = \"left\"\n        }\n        item\n        {\n            name = right\n            shown_name = \"right\"\n        }\n    }\n    attr\n    {\n        name = app.tb_sideTextSize\n        shown_name = \"标题栏左侧文字的大小\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.tb_titleTextSize\n        shown_name = \"标题栏标题文字的大小\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.tb_subTitleTextSize\n        shown_name = \"标题栏副标题文字的大小\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.tb_actionTextSize\n        shown_name = \"标题栏右侧文字的大小\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.tb_leftImageResource\n        shown_name = \"文字的内容以及图标内容\"\n        data_type = string\n        detail_type = drawable_res_file\n    }\n    attr\n    {\n        name = app.tb_leftText\n        shown_name = \"标题栏左侧的文字\"\n        data_type = string\n    }\n    attr\n    {\n        name = app.tb_titleText\n        shown_name = \"标题栏标题的文字\"\n        data_type = string\n    }\n    attr\n    {\n        name = app.tb_subTitleText\n        shown_name = \"标题栏副标题的文字\"\n        data_type = string\n    }\n    attr\n    {\n        name = app.tb_dividerColor\n        shown_name = \"标题栏分割线的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.tb_dividerHeight\n        shown_name = \"标题栏分割线的高度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.tb_useThemeColor\n        shown_name = \"标题栏背景色是否使用主题颜色\"\n        data_type = boolean\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI标题栏, TitleBar, com.xuexiang.xui.widget.actionbar.TitleBar)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetTitleBar ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI标题栏的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI标题栏.getAlpha()">
+    {
+        @ (double)@sn<this>.GetTitleBar ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI标题栏的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI标题栏.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetTitleBar ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI标题栏的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI标题栏.isEnabled()">
+    {
+        @ @sn<this>.GetTitleBar ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI标题栏的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI标题栏.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetTitleBar ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI标题栏的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI标题栏.isClickable()">
+    {
+        @ @sn<this>.GetTitleBar ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI标题栏的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI标题栏.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetTitleBar ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI标题栏的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI标题栏.getElevation()">
+    {
+        @ (double)@sn<this>.GetTitleBar ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI标题栏的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI标题栏.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetTitleBar ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI标题栏的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI标题栏.getMinimumHeight()">
+    {
+        @ @sn<this>.GetTitleBar ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI标题栏的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI标题栏.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetTitleBar ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI标题栏的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI标题栏.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetTitleBar ().setBackgroundColor (@<新值>))
+    }
+
+    方法 设置沉浸 <公开 注释 = "用法：把XUI标题栏的沉浸设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI标题栏.setImmersive()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetTitleBar ().setImmersive (@<值1>))
+    }
+
+    方法 设置高度 <公开 注释 = "用法：把XUI标题栏的高度设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI标题栏.setHeight()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetTitleBar ().setHeight (@<值1>))
+    }
+
+    方法 设置左图片资源 <公开 注释 = "用法：把XUI标题栏的左图片资源设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI标题栏.setLeftImageResource()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetTitleBar ().setLeftImageResource (@<值1>))
+    }
+
+    方法 设置左图片图形 <公开 注释 = "用法：把XUI标题栏的左图片图形设为给定值。 参数：值1=可绘制对象类。 返回：无。 原方法：XUI标题栏.setLeftImageDrawable()">
+    参数 值1 <类型 = 可绘制对象类>
+    {
+        @ @m<RUN_UI_ACTION> (GetTitleBar ().setLeftImageDrawable (@<值1>))
+    }
+
+    方法 设置左文本加粗 <公开 注释 = "用法：把XUI标题栏的左文本加粗设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI标题栏.setLeftTextBold()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetTitleBar ().setLeftTextBold (@<值1>))
+    }
+
+    方法 设置居中文本加粗 <公开 注释 = "用法：把XUI标题栏的居中文本加粗设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI标题栏.setCenterTextBold()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetTitleBar ().setCenterTextBold (@<值1>))
+    }
+
+    方法 设置后退图片资源 <公开 注释 = "用法：把XUI标题栏的后退图片资源设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI标题栏.setBackImageResource()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetTitleBar ().setBackImageResource (@<值1>))
+    }
+
+    方法 设置左文本 <公开 注释 = "用法：把XUI标题栏的左文本设为给定值。 参数：值1=文本。 返回：无。 原方法：XUI标题栏.setLeftText()">
+    参数 值1 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetTitleBar ().setLeftText (@<值1>))
+    }
+
+    方法 设置左文本_2 <公开 注释 = "用法：把XUI标题栏的左文本_2设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI标题栏.setLeftText()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetTitleBar ().setLeftText (@<值1>))
+    }
+
+    方法 设置左文本大小 <公开 注释 = "用法：把XUI标题栏的左文本大小设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI标题栏.setLeftTextSize()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetTitleBar ().setLeftTextSize ((float) @<值1>))
+    }
+
+    方法 设置左文本最大EM宽度 <公开 注释 = "用法：把XUI标题栏的左文本最大EM宽度设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI标题栏.setLeftTextMaxEms()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetTitleBar ().setLeftTextMaxEms (@<值1>))
+    }
+
+    方法 设置左文本最大宽度 <公开 注释 = "用法：把XUI标题栏的左文本最大宽度设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI标题栏.setLeftTextMaxWidth()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetTitleBar ().setLeftTextMaxWidth (@<值1>))
+    }
+
+    方法 设置左文本内边距 <公开 注释 = "用法：把XUI标题栏的左文本内边距设为给定值。 参数：值1=整数、值2=整数。 返回：无。 原方法：XUI标题栏.setLeftTextPadding()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetTitleBar ().setLeftTextPadding (@<值1>, @<值2>))
+    }
+
+    方法 设置左文本颜色 <公开 注释 = "用法：把XUI标题栏的左文本颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI标题栏.setLeftTextColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetTitleBar ().setLeftTextColor (@<值1>))
+    }
+
+    方法 设置左可见 <公开 注释 = "用法：把XUI标题栏的左可见设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI标题栏.setLeftVisible()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetTitleBar ().setLeftVisible (@<值1>))
+    }
+
+    方法 设置标题 <公开 注释 = "用法：把XUI标题栏的标题设为给定值。 参数：值1=文本。 返回：无。 原方法：XUI标题栏.setTitle()">
+    参数 值1 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetTitleBar ().setTitle (@<值1>))
+    }
+
+    方法 设置标题_2 <公开 注释 = "用法：把XUI标题栏的标题_2设为给定值。 参数：值1=文本、值2=文本、值3=整数。 返回：无。 原方法：XUI标题栏.setTitle()">
+    参数 值1 <类型 = 文本型>
+    参数 值2 <类型 = 文本型>
+    参数 值3 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetTitleBar ().setTitle (@<值1>, @<值2>, @<值3>))
+    }
+
+    方法 设置子标题 <公开 注释 = "用法：把XUI标题栏的子标题设为给定值。 参数：值1=文本、值2=整数。 返回：无。 原方法：XUI标题栏.setSubTitle()">
+    参数 值1 <类型 = 文本型>
+    参数 值2 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetTitleBar ().setSubTitle (@<值1>, @<值2>))
+    }
+
+    方法 设置子标题_2 <公开 注释 = "用法：把XUI标题栏的子标题_2设为给定值。 参数：值1=文本。 返回：无。 原方法：XUI标题栏.setSubTitle()">
+    参数 值1 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetTitleBar ().setSubTitle (@<值1>))
+    }
+
+    方法 设置居中对齐方式 <公开 注释 = "用法：把XUI标题栏的居中对齐方式设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI标题栏.setCenterGravity()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetTitleBar ().setCenterGravity (@<值1>))
+    }
+
+    方法 设置标题_3 <公开 注释 = "用法：把XUI标题栏的标题_3设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI标题栏.setTitle()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetTitleBar ().setTitle (@<值1>))
+    }
+
+    方法 设置标题颜色 <公开 注释 = "用法：把XUI标题栏的标题颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI标题栏.setTitleColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetTitleBar ().setTitleColor (@<值1>))
+    }
+
+    方法 设置标题大小 <公开 注释 = "用法：把XUI标题栏的标题大小设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI标题栏.setTitleSize()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetTitleBar ().setTitleSize ((float) @<值1>))
+    }
+
+    方法 设置标题背景 <公开 注释 = "用法：把XUI标题栏的标题背景设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI标题栏.setTitleBackground()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetTitleBar ().setTitleBackground (@<值1>))
+    }
+
+    方法 设置子标题颜色 <公开 注释 = "用法：把XUI标题栏的子标题颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI标题栏.setSubTitleColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetTitleBar ().setSubTitleColor (@<值1>))
+    }
+
+    方法 设置子标题大小 <公开 注释 = "用法：把XUI标题栏的子标题大小设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI标题栏.setSubTitleSize()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetTitleBar ().setSubTitleSize ((float) @<值1>))
+    }
+
+    方法 设置分隔线 <公开 注释 = "用法：把XUI标题栏的分隔线设为给定值。 参数：值1=可绘制对象类。 返回：无。 原方法：XUI标题栏.setDivider()">
+    参数 值1 <类型 = 可绘制对象类>
+    {
+        @ @m<RUN_UI_ACTION> (GetTitleBar ().setDivider (@<值1>))
+    }
+
+    方法 设置分隔线颜色 <公开 注释 = "用法：把XUI标题栏的分隔线颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI标题栏.setDividerColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetTitleBar ().setDividerColor (@<值1>))
+    }
+
+    方法 设置分隔线高度 <公开 注释 = "用法：把XUI标题栏的分隔线高度设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI标题栏.setDividerHeight()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetTitleBar ().setDividerHeight (@<值1>))
+    }
+
+    方法 设置动作文本颜色 <公开 注释 = "用法：把XUI标题栏的动作文本颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI标题栏.setActionTextColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetTitleBar ().setActionTextColor (@<值1>))
+    }
+
+    方法 移除全部动作组 <公开 注释 = "用法：从XUI标题栏移除全部动作组。 参数：无。 返回：无。 原方法：XUI标题栏.removeAllActions()">
+    {
+        @ @m<RUN_UI_ACTION> (GetTitleBar ().removeAllActions ())
+    }
+
+    方法 移除动作在 <公开 注释 = "用法：从XUI标题栏移除动作在。 参数：值1=整数。 返回：无。 原方法：XUI标题栏.removeActionAt()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetTitleBar ().removeActionAt (@<值1>))
+    }
+
+    方法 取动作数量 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI标题栏的动作数量。 参数：无。 返回：整数。 原方法：XUI标题栏.getActionCount()">
+    {
+        @ @sn<this>.GetTitleBar ().getActionCount ()
+    }
+
+    方法 取状态条高度 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI标题栏的状态条高度。 参数：无。 返回：整数。 原方法：XUI标题栏.getStatusBarHeight()">
+    {
+        @ @sn<this>.GetTitleBar ().getStatusBarHeight ()
+    }
+
+    方法 设置字体 <公开 注释 = "用法：把XUI标题栏的字体设为给定值。 参数：值1=字体类。 返回：无。 原方法：XUI标题栏.setTypeface()">
+    参数 值1 <类型 = 字体类>
+    {
+        @ @m<RUN_UI_ACTION> (GetTitleBar ().setTypeface (@<值1>))
+    }
+
+}

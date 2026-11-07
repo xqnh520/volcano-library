@@ -1,0 +1,17 @@
+doc_format_version = 1
+project_identifier = "wutao.vproject.pc.win.1"
+author = "AnyCAD POC probe"
+name = "AC探针"
+version = 1
+unique_mark = 
+explain = "T01 capability probe"
+dependence = "*\sys\base\base.vgrp"
+file
+{
+    name = "a01_plain.wsv"
+    name = "a03_base.wsv"
+    name = "a05_const.wsv"
+    name = "a07_overload.wsv"
+    name = "a08_ascii.wsv"
+    name = "a09_paramcomment.wsv"
+}

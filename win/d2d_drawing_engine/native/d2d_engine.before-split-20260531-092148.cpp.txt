@@ -1,0 +1,1725 @@
+﻿#include "d2d_engine.hpp"
+
+#include "lunasvg_bridge.hpp"
+
+#include <algorithm>
+#include <cmath>
+#include <cwchar>
+#include <cwctype>
+#include <fstream>
+#include <sstream>
+
+namespace volcano_d2d {
+
+static const wchar_t* kEngineWindowProp = L"VolcanoD2DEnginePtr";
+
+namespace {
+
+struct ScopedBoolReset {
+    explicit ScopedBoolReset(bool& value) : value_(value) {
+        value_ = true;
+    }
+
+    ~ScopedBoolReset() {
+        value_ = false;
+    }
+
+    bool& value_;
+};
+
+struct ScopedPaint {
+    ScopedPaint(HWND hwnd, PAINTSTRUCT& paintStruct) : hwnd_(hwnd), paintStruct_(paintStruct) {
+        BeginPaint(hwnd_, &paintStruct_);
+    }
+
+    ~ScopedPaint() {
+        EndPaint(hwnd_, &paintStruct_);
+    }
+
+    HWND hwnd_;
+    PAINTSTRUCT& paintStruct_;
+};
+
+int ClampRenderSize(int value) {
+    return value > 0 ? value : 1;
+}
+
+std::wstring Trim(const std::wstring& text) {
+    size_t first = 0;
+    while (first < text.size() && iswspace(text[first])) ++first;
+    size_t last = text.size();
+    while (last > first && iswspace(text[last - 1])) --last;
+    return text.substr(first, last - first);
+}
+
+int ToIntOrDefault(const std::wstring& text, int fallback) {
+    try {
+        return std::stoi(Trim(text));
+    } catch (...) {
+        return fallback;
+    }
+}
+
+float ToFloatOrDefault(const std::wstring& text, float fallback) {
+    try {
+        return std::stof(Trim(text));
+    } catch (...) {
+        return fallback;
+    }
+}
+
+bool EndsWithInsensitive(const std::wstring& text, const std::wstring& suffix) {
+    if (text.size() < suffix.size()) return false;
+    for (size_t i = 0; i < suffix.size(); ++i) {
+        if (towlower(text[text.size() - suffix.size() + i]) != towlower(suffix[i])) return false;
+    }
+    return true;
+}
+
+float PointsToDips(float points) {
+    return points > 0.0f ? points * (96.0f / 72.0f) : points;
+}
+
+std::vector<unsigned char> ReadBinaryFile(const std::wstring& fileName) {
+    std::ifstream file(fileName.c_str(), std::ios::binary);
+    if (!file) return {};
+    file.seekg(0, std::ios::end);
+    const std::streamoff size = file.tellg();
+    if (size <= 0) return {};
+    file.seekg(0, std::ios::beg);
+    std::vector<unsigned char> data(static_cast<size_t>(size));
+    file.read(reinterpret_cast<char*>(data.data()), size);
+    return data;
+}
+
+bool LooksLikeSvg(const void* data, int dataSize) {
+    if (!data || dataSize <= 0) return false;
+    const char* bytes = static_cast<const char*>(data);
+    const int scan = std::min(dataSize, 512);
+    for (int i = 0; i + 3 < scan; ++i) {
+        if ((bytes[i] == '<') &&
+            (bytes[i + 1] == 's' || bytes[i + 1] == 'S') &&
+            (bytes[i + 2] == 'v' || bytes[i + 2] == 'V') &&
+            (bytes[i + 3] == 'g' || bytes[i + 3] == 'G')) {
+            return true;
+        }
+    }
+    return false;
+}
+
+float ParseFloatAt(const std::wstring& text, size_t& pos, float fallback = 0.0f) {
+    while (pos < text.size() && (iswspace(text[pos]) || text[pos] == L',')) ++pos;
+    const wchar_t* start = text.c_str() + pos;
+    wchar_t* end = nullptr;
+    const float value = std::wcstof(start, &end);
+    if (end == start) return fallback;
+    pos = static_cast<size_t>(end - text.c_str());
+    return value;
+}
+
+Point MeasureTextSize(Engine& engine, const std::wstring& text, const std::wstring& fontFamily, float fontSize, int fontWeight, int fontStyle) {
+    if (text.empty()) return MakePoint(0.0f, 0.0f);
+
+    ComPtr<IDWriteTextFormat> format;
+    if (FAILED(engine.CreateTextFormat(fontFamily.empty() ? L"Microsoft YaHei" : fontFamily.c_str(),
+        fontSize, fontWeight, fontStyle, DWRITE_FONT_STRETCH_NORMAL, L"zh-cn", format.GetAddressOf()))) {
+        return MakePoint(0.0f, fontSize * 1.35f);
+    }
+    format->SetWordWrapping(DWRITE_WORD_WRAPPING_NO_WRAP);
+
+    ComPtr<IDWriteTextLayout> layout;
+    if (FAILED(engine.CreateTextLayout(text.c_str(), format.Get(), 4096.0f, std::max(1.0f, fontSize * 2.0f), layout.GetAddressOf()))) {
+        return MakePoint(0.0f, fontSize * 1.35f);
+    }
+
+    DWRITE_TEXT_METRICS metrics{};
+    if (FAILED(layout->GetMetrics(&metrics))) {
+        return MakePoint(0.0f, fontSize * 1.35f);
+    }
+    const float width = std::max(metrics.width, metrics.widthIncludingTrailingWhitespace);
+    const float height = metrics.height > 0.0f ? metrics.height : fontSize * 1.35f;
+    return MakePoint(width, height);
+}
+
+}  // namespace
+
+UiComponent::UiComponent(Type type) : type_(type) {
+    buttonNormalColor_ = MakeColor(0.09f, 0.32f, 0.46f, 1.0f);
+    buttonHoverColor_ = MakeColor(0.08f, 0.38f, 0.53f, 1.0f);
+    buttonPressedColor_ = MakeColor(0.04f, 0.24f, 0.34f, 1.0f);
+    buttonDisabledColor_ = MakeColor(0.72f, 0.75f, 0.74f, 1.0f);
+    buttonTextColor_ = MakeColor(1.0f, 1.0f, 1.0f, 1.0f);
+    buttonDisabledTextColor_ = MakeColor(1.0f, 1.0f, 1.0f, 0.72f);
+    buttonBorderColor_ = MakeColor(1.0f, 1.0f, 1.0f, 0.22f);
+    buttonFocusColor_ = MakeColor(0.12f, 0.58f, 0.84f, 1.0f);
+}
+
+void UiComponent::SetValue(float value) {
+    value_ = value;
+    if (value_ < minimum_) value_ = minimum_;
+    if (value_ > maximum_) value_ = maximum_;
+}
+
+void UiComponent::SetRange(float minimum, float maximum) {
+    minimum_ = minimum;
+    maximum_ = maximum > minimum ? maximum : minimum + 1.0f;
+    SetValue(value_);
+}
+
+void UiComponent::SetButtonMetrics(float radius, float borderWidth) {
+    buttonRadius_ = radius < 0.0f ? 0.0f : radius;
+    buttonBorderWidth_ = borderWidth < 0.0f ? 0.0f : borderWidth;
+}
+
+void UiComponent::SetButtonFont(const std::wstring& family, float size, int weight) {
+    buttonFontFamily_ = family.empty() ? L"Microsoft YaHei" : family;
+    buttonFontSize_ = size > 0.0f ? PointsToDips(size) : 14.0f;
+    buttonFontWeight_ = weight;
+    buttonFontStyle_ = DWRITE_FONT_STYLE_NORMAL;
+    buttonFontUnderline_ = false;
+    buttonFontStrikeout_ = false;
+    buttonFontRotationDegrees_ = 0.0f;
+}
+
+void UiComponent::SetButtonFontDescriptor(const std::wstring& descriptor) {
+    std::vector<std::wstring> parts;
+    std::wstringstream stream(descriptor);
+    std::wstring part;
+    while (std::getline(stream, part, L',')) {
+        parts.push_back(Trim(part));
+    }
+
+    if (!parts.empty() && !parts[0].empty()) {
+        buttonFontFamily_ = parts[0];
+    }
+    if (parts.size() > 1) {
+        buttonFontSize_ = PointsToDips(ToFloatOrDefault(parts[1], buttonFontSize_ * (72.0f / 96.0f)));
+        if (buttonFontSize_ <= 0.0f) buttonFontSize_ = 14.0f;
+    }
+    if (parts.size() > 2) {
+        buttonFontWeight_ = ToIntOrDefault(parts[2], 0) != 0 ? DWRITE_FONT_WEIGHT_BOLD : DWRITE_FONT_WEIGHT_NORMAL;
+    }
+    if (parts.size() > 3) {
+        buttonFontStyle_ = ToIntOrDefault(parts[3], 0) != 0 ? DWRITE_FONT_STYLE_ITALIC : DWRITE_FONT_STYLE_NORMAL;
+    }
+    if (parts.size() > 4) {
+        buttonFontUnderline_ = ToIntOrDefault(parts[4], 0) != 0;
+    }
+    if (parts.size() > 5) {
+        buttonFontStrikeout_ = ToIntOrDefault(parts[5], 0) != 0;
+    }
+    if (parts.size() > 6) {
+        buttonFontRotationDegrees_ = static_cast<float>(ToFloatOrDefault(parts[6], 0.0f) / 10.0f);
+    }
+}
+
+void UiComponent::SetButtonColors(Color normal, Color hover, Color pressed, Color disabled, Color text, Color disabledText, Color border) {
+    buttonNormalColor_ = normal;
+    buttonHoverColor_ = hover;
+    buttonPressedColor_ = pressed;
+    buttonDisabledColor_ = disabled;
+    buttonTextColor_ = text;
+    buttonDisabledTextColor_ = disabledText;
+    buttonBorderColor_ = border;
+    SetButtonStateColors(0, normal, true, text, true, border, true);
+    SetButtonStateColors(1, hover, true, text, false, border, false);
+    SetButtonStateColors(2, pressed, true, text, false, border, false);
+    SetButtonStateColors(3, disabled, true, disabledText, true, border, false);
+}
+
+void UiComponent::SetButtonStateColors(int state, Color background, bool hasBackground, Color text, bool hasText, Color border, bool hasBorder) {
+    if (state < 0 || state > 3) return;
+    buttonStateBackground_[state] = background;
+    buttonStateText_[state] = text;
+    buttonStateBorder_[state] = border;
+    buttonHasStateBackground_[state] = hasBackground;
+    buttonHasStateText_[state] = hasText;
+    buttonHasStateBorder_[state] = hasBorder;
+}
+
+void UiComponent::SetButtonLayout(float paddingX, float paddingY, float iconGap, int iconPosition, int contentAlign, bool autoWrap) {
+    buttonPaddingX_ = paddingX < 0.0f ? 0.0f : paddingX;
+    buttonPaddingY_ = paddingY < 0.0f ? 0.0f : paddingY;
+    buttonIconGap_ = iconGap < 0.0f ? 0.0f : iconGap;
+    buttonIconPosition_ = iconPosition < 0 ? 0 : (iconPosition > 3 ? 3 : iconPosition);
+    buttonContentAlign_ = contentAlign < 0 ? 0 : (contentAlign > 2 ? 2 : contentAlign);
+    buttonAutoWrap_ = autoWrap;
+}
+
+void UiComponent::SetButtonOptions(int style, bool toggle, bool focused, bool defaultButton, Color focusColor, float focusWidth) {
+    buttonStyle_ = style < 0 ? 0 : (style > 4 ? 4 : style);
+    buttonToggle_ = toggle;
+    buttonFocused_ = focused;
+    buttonDefault_ = defaultButton;
+    buttonFocusColor_ = focusColor;
+    buttonFocusWidth_ = focusWidth < 0.0f ? 0.0f : focusWidth;
+}
+
+void UiComponent::ClearButtonIconCache() {
+    for (int state = 0; state < 4; ++state) ClearButtonIconCache(state);
+}
+
+void UiComponent::ClearButtonIconCache(int state) {
+    if (state < 0 || state > 3) return;
+    buttonLoadedIconFileStates_[state].clear();
+    buttonIconBitmapStates_[state].Reset();
+    buttonIconIsSvgStates_[state] = false;
+    buttonIconLoadAttemptedStates_[state] = false;
+}
+
+void UiComponent::SetButtonIcon(const std::wstring& fileName, float size, Color tint, bool useTint) {
+    if (buttonIconFile_ != fileName) {
+        buttonIconFile_ = fileName;
+        buttonIconFileStates_[0] = fileName;
+        buttonIconData_.clear();
+        buttonIconDataStates_[0].clear();
+        ClearButtonIconCache();
+    }
+    buttonIconSize_ = size < 0.0f ? 0.0f : size;
+    buttonIconTint_ = tint;
+    buttonUseIconTint_ = useTint;
+}
+
+void UiComponent::SetButtonIconData(const void* data, int dataSize, float size, Color tint, bool useTint) {
+    buttonIconFile_.clear();
+    const unsigned char* bytes = static_cast<const unsigned char*>(data);
+    std::vector<unsigned char> next;
+    if (bytes && dataSize > 0) next.assign(bytes, bytes + dataSize);
+    if (buttonIconData_ != next) {
+        buttonIconData_.swap(next);
+        buttonIconDataStates_[0] = buttonIconData_;
+        buttonIconFileStates_[0].clear();
+        ClearButtonIconCache(0);
+    }
+    buttonIconSize_ = size < 0.0f ? 0.0f : size;
+    buttonIconTint_ = tint;
+    buttonUseIconTint_ = useTint;
+}
+
+void UiComponent::SetButtonStateIconData(int state, const void* data, int dataSize, float size, Color tint, bool useTint) {
+    if (state < 0 || state > 3) return;
+    const unsigned char* bytes = static_cast<const unsigned char*>(data);
+    std::vector<unsigned char> next;
+    if (bytes && dataSize > 0) next.assign(bytes, bytes + dataSize);
+    if (buttonIconDataStates_[state] != next) {
+        buttonIconDataStates_[state].swap(next);
+        buttonIconFileStates_[state].clear();
+        ClearButtonIconCache(state);
+    }
+    if (state == 0) {
+        buttonIconData_ = buttonIconDataStates_[0];
+        buttonIconFile_.clear();
+    }
+    buttonIconSize_ = size < 0.0f ? 0.0f : size;
+    buttonIconTint_ = tint;
+    buttonUseIconTint_ = useTint;
+}
+
+int UiComponent::ButtonVisualState() const {
+    if (!enabled_) return 3;
+    if (pressed_) return 2;
+    if (hovered_) return 1;
+    if (buttonToggle_ && checked_) return 2;
+    return 0;
+}
+
+int UiComponent::ResolveIconState(int state) const {
+    auto hasIcon = [this](int s) { return s >= 0 && s < 4 && (!buttonIconDataStates_[s].empty() || !buttonIconFileStates_[s].empty()); };
+    if (hasIcon(state)) return state;
+    if (state == 2 && hasIcon(1)) return 1;
+    return hasIcon(0) ? 0 : -1;
+}
+
+Color UiComponent::ResolveBackgroundColor(int state) const {
+    if (state >= 0 && state < 4 && buttonHasStateBackground_[state]) return buttonStateBackground_[state];
+    if (state == 2 && buttonHasStateBackground_[1]) return buttonStateBackground_[1];
+    if (buttonHasStateBackground_[0]) return buttonStateBackground_[0];
+    if (state == 3) return buttonDisabledColor_;
+    if (state == 2) return buttonPressedColor_;
+    if (state == 1) return buttonHoverColor_;
+    return buttonNormalColor_;
+}
+
+Color UiComponent::ResolveTextColor(int state) const {
+    if (state >= 0 && state < 4 && buttonHasStateText_[state]) return buttonStateText_[state];
+    if (state == 2 && buttonHasStateText_[1]) return buttonStateText_[1];
+    if (buttonHasStateText_[0]) return buttonStateText_[0];
+    return state == 3 ? buttonDisabledTextColor_ : buttonTextColor_;
+}
+
+Color UiComponent::ResolveBorderColor(int state) const {
+    if (state >= 0 && state < 4 && buttonHasStateBorder_[state]) return buttonStateBorder_[state];
+    if (state == 2 && buttonHasStateBorder_[1]) return buttonStateBorder_[1];
+    if (buttonHasStateBorder_[0]) return buttonStateBorder_[0];
+    return buttonBorderColor_;
+}
+
+bool UiComponent::EnsureButtonIcon(Engine& engine, int state) {
+    const int iconState = ResolveIconState(state);
+    if (iconState < 0) return false;
+    auto& iconData = buttonIconDataStates_[iconState];
+    auto& iconFile = buttonIconFileStates_[iconState];
+    auto& loadedIconFile = buttonLoadedIconFileStates_[iconState];
+    auto& iconBitmap = buttonIconBitmapStates_[iconState];
+    auto& iconIsSvg = buttonIconIsSvgStates_[iconState];
+    auto& iconLoadAttempted = buttonIconLoadAttemptedStates_[iconState];
+    if (iconFile.empty() && iconData.empty()) return false;
+    if (!iconData.empty()) {
+        if (iconLoadAttempted && loadedIconFile == L":memory:") return iconBitmap;
+        ClearButtonIconCache(iconState);
+        loadedIconFile = L":memory:";
+        iconLoadAttempted = true;
+        if (LooksLikeSvg(iconData.data(), static_cast<int>(iconData.size()))) {
+            std::vector<unsigned char> pixels;
+            int width = 0;
+            int height = 0;
+            int stride = 0;
+            const int desiredSize = std::max(32, static_cast<int>(std::ceil((buttonIconSize_ > 0.0f ? buttonIconSize_ : buttonFontSize_ * 1.35f) * 2.0f)));
+            ID2D1Bitmap* bitmap = nullptr;
+            if (RenderSvgToBgraBitmap(iconData.data(), static_cast<int>(iconData.size()), desiredSize, desiredSize, pixels, width, height, stride)
+                && SUCCEEDED(engine.CreateBitmapFromBgra(width, height, pixels.data(), static_cast<UINT32>(stride), &bitmap)) && bitmap) {
+                iconBitmap.Attach(bitmap);
+                iconIsSvg = true;
+                return true;
+            }
+            return false;
+        }
+        ID2D1Bitmap* bitmap = nullptr;
+        if (SUCCEEDED(engine.LoadBitmapFromMemory(iconData.data(), static_cast<int>(iconData.size()), &bitmap)) && bitmap) {
+            iconBitmap.Attach(bitmap);
+            return true;
+        }
+        return false;
+    }
+    if (loadedIconFile == iconFile && iconBitmap) return true;
+    if (iconLoadAttempted && loadedIconFile == iconFile) return false;
+
+    ClearButtonIconCache(iconState);
+    loadedIconFile = iconFile;
+    iconLoadAttempted = true;
+    iconIsSvg = EndsWithInsensitive(iconFile, L".svg");
+    if (iconIsSvg) {
+        std::vector<unsigned char> data = ReadBinaryFile(iconFile);
+        std::vector<unsigned char> pixels;
+        int width = 0;
+        int height = 0;
+        int stride = 0;
+        const int desiredSize = std::max(32, static_cast<int>(std::ceil((buttonIconSize_ > 0.0f ? buttonIconSize_ : buttonFontSize_ * 1.35f) * 2.0f)));
+        ID2D1Bitmap* bitmap = nullptr;
+        if (!data.empty()
+            && RenderSvgToBgraBitmap(data.data(), static_cast<int>(data.size()), desiredSize, desiredSize, pixels, width, height, stride)
+            && SUCCEEDED(engine.CreateBitmapFromBgra(width, height, pixels.data(), static_cast<UINT32>(stride), &bitmap)) && bitmap) {
+            iconBitmap.Attach(bitmap);
+            return true;
+        }
+        return false;
+    }
+    ID2D1Bitmap* bitmap = nullptr;
+    if (SUCCEEDED(engine.LoadBitmapFromFile(iconFile.c_str(), &bitmap)) && bitmap) {
+        iconBitmap.Attach(bitmap);
+        return true;
+    }
+    return false;
+}
+
+bool UiComponent::Hit(Point point) const {
+    return visible_
+        && point.x >= bounds_.left && point.x <= bounds_.right
+        && point.y >= bounds_.top && point.y <= bounds_.bottom;
+}
+
+float UiComponent::NormalizedValue() const {
+    const float span = maximum_ - minimum_;
+    if (span <= 0.0f) return 0.0f;
+    float ratio = (value_ - minimum_) / span;
+    if (ratio < 0.0f) ratio = 0.0f;
+    if (ratio > 1.0f) ratio = 1.0f;
+    return ratio;
+}
+
+void UiComponent::DrawFrame(Engine& engine, Color fill, Color stroke, float radius) {
+    engine.FillRoundedRectangle(bounds_, radius, radius, fill);
+    engine.DrawRoundedRectangle(bounds_, radius, radius, stroke, 1.0f);
+}
+
+void UiComponent::Draw(Engine& engine) {
+    if (!visible_) return;
+
+    switch (type_) {
+    case Panel:
+        DrawFrame(engine, MakeColor(1.0f, 1.0f, 1.0f, 0.76f), MakeColor(0.64f, 0.68f, 0.66f, 1.0f), 8.0f);
+        if (!text_.empty()) {
+            engine.DrawTextSimple(text_.c_str(), MakeRect(bounds_.left + 14.0f, bounds_.top + 10.0f, bounds_.right - 14.0f, bounds_.top + 36.0f),
+                MakeColor(0.10f, 0.14f, 0.16f, 1.0f), L"Microsoft YaHei", 15.0f, DWRITE_FONT_WEIGHT_SEMI_BOLD, DWRITE_FONT_STYLE_NORMAL,
+                DWRITE_TEXT_ALIGNMENT_LEADING, DWRITE_PARAGRAPH_ALIGNMENT_CENTER);
+        }
+        break;
+    case Button: {
+        const int visualState = ButtonVisualState();
+        Color fill = ResolveBackgroundColor(visualState);
+        Color textColor = ResolveTextColor(visualState);
+        Color borderColor = ResolveBorderColor(visualState);
+        if (buttonStyle_ == 1) {
+            fill.a *= visualState == 0 ? 0.16f : 0.24f;
+            textColor = ResolveBackgroundColor(visualState);
+            borderColor = ResolveBackgroundColor(visualState);
+        } else if (buttonStyle_ == 2) {
+            fill.a = visualState == 0 ? 0.0f : 0.10f;
+            textColor = ResolveBackgroundColor(visualState);
+            borderColor = ResolveBackgroundColor(visualState);
+        } else if (buttonStyle_ == 3) {
+            fill.a = visualState == 0 ? 0.0f : 0.10f;
+            textColor = ResolveBackgroundColor(visualState);
+            borderColor.a = 0.0f;
+        } else if (buttonStyle_ == 4 && !buttonHasStateBackground_[0]) {
+            fill = visualState == 2 ? MakeColor(0.50f, 0.08f, 0.08f, 1.0f)
+                 : visualState == 1 ? MakeColor(0.86f, 0.21f, 0.21f, 1.0f)
+                 : visualState == 3 ? buttonDisabledColor_
+                 : MakeColor(0.72f, 0.16f, 0.16f, 1.0f);
+            textColor = visualState == 3 ? buttonDisabledTextColor_ : MakeColor(1.0f, 1.0f, 1.0f, 1.0f);
+            borderColor = MakeColor(1.0f, 1.0f, 1.0f, 0.20f);
+        }
+        engine.FillRoundedRectangle(bounds_, buttonRadius_, buttonRadius_, fill);
+        const float effectiveBorderWidth = std::max(buttonBorderWidth_, (buttonStyle_ == 2 || buttonDefault_) ? 1.0f : 0.0f);
+        if (effectiveBorderWidth > 0.0f && borderColor.a > 0.0f) {
+            engine.DrawRoundedRectangle(bounds_, buttonRadius_, buttonRadius_, borderColor, effectiveBorderWidth);
+        }
+        if ((buttonFocused_ || buttonDefault_) && buttonFocusWidth_ > 0.0f) {
+            const float inset = buttonFocusWidth_ * 0.5f + 2.0f;
+            Rect focusRect = MakeRect(bounds_.left + inset, bounds_.top + inset, bounds_.right - inset, bounds_.bottom - inset);
+            if (focusRect.right > focusRect.left && focusRect.bottom > focusRect.top) {
+                const float focusRadius = std::max(0.0f, buttonRadius_ - inset);
+                engine.DrawRoundedRectangle(focusRect, focusRadius, focusRadius, buttonFocusColor_, buttonFocusWidth_);
+            }
+        }
+        Rect contentRect = MakeRect(bounds_.left + buttonPaddingX_ + buttonBorderWidth_,
+                                    bounds_.top + buttonPaddingY_ + buttonBorderWidth_,
+                                    bounds_.right - buttonPaddingX_ - buttonBorderWidth_,
+                                    bounds_.bottom - buttonPaddingY_ - buttonBorderWidth_);
+        if (pressed_) {
+            contentRect.left += 1.0f;
+            contentRect.top += 1.0f;
+            contentRect.right += 1.0f;
+            contentRect.bottom += 1.0f;
+        }
+        const bool hasIcon = EnsureButtonIcon(engine, visualState);
+        const int iconState = ResolveIconState(visualState);
+        ID2D1Bitmap* iconBitmap = iconState >= 0 ? buttonIconBitmapStates_[iconState].Get() : nullptr;
+        const bool hasText = !text_.empty();
+        const float contentWidth = std::max(0.0f, contentRect.right - contentRect.left);
+        const float contentHeight = std::max(0.0f, contentRect.bottom - contentRect.top);
+        const float autoIconSize = std::max(1.0f, std::min(contentHeight, buttonFontSize_ * 1.35f));
+        const float iconSize = hasIcon ? (buttonIconSize_ > 0.0f ? buttonIconSize_ : autoIconSize) : 0.0f;
+        const Point measuredText = MeasureTextSize(engine, text_, buttonFontFamily_, buttonFontSize_, buttonFontWeight_, buttonFontStyle_);
+        const float textHeight = hasText ? std::min(contentHeight, std::max(1.0f, measuredText.y)) : 0.0f;
+        int textAlignment = DWRITE_TEXT_ALIGNMENT_CENTER;
+        Rect iconRect{};
+        Rect textRect = contentRect;
+        if (hasIcon) {
+            if (buttonIconPosition_ == 0 || buttonIconPosition_ == 1) {
+                const float gap = hasText ? buttonIconGap_ : 0.0f;
+                const float layoutIconSize = std::min(iconSize, contentWidth);
+                const float maxTextWidth = std::max(0.0f, contentWidth - layoutIconSize - gap);
+                const float measuredTextWidth = hasText ? std::max(1.0f, std::ceil(measuredText.x) + 2.0f) : 0.0f;
+                const float desiredTextWidth = hasText ? std::min(maxTextWidth, measuredTextWidth) : 0.0f;
+                const bool drawText = desiredTextWidth > 0.5f;
+                const float textWidth = drawText ? desiredTextWidth : 0.0f;
+                const float usedGap = drawText ? gap : 0.0f;
+                const float totalWidth = std::min(contentWidth, layoutIconSize + usedGap + textWidth);
+                float groupLeft = contentRect.left;
+                if (buttonContentAlign_ == 0) groupLeft = contentRect.left + std::max(0.0f, contentWidth - totalWidth) * 0.5f;
+                if (buttonContentAlign_ == 2) groupLeft = contentRect.right - totalWidth;
+                const float top = contentRect.top + (contentHeight - layoutIconSize) * 0.5f;
+                if (buttonIconPosition_ == 0) {
+                    iconRect = MakeRect(groupLeft, top, groupLeft + layoutIconSize, top + layoutIconSize);
+                    textRect = MakeRect(iconRect.right + usedGap, contentRect.top, iconRect.right + usedGap + textWidth, contentRect.bottom);
+                    textAlignment = buttonAutoWrap_ ? (buttonContentAlign_ == 2 ? DWRITE_TEXT_ALIGNMENT_TRAILING : buttonContentAlign_ == 1 ? DWRITE_TEXT_ALIGNMENT_LEADING : DWRITE_TEXT_ALIGNMENT_CENTER) : DWRITE_TEXT_ALIGNMENT_LEADING;
+                } else {
+                    textRect = MakeRect(groupLeft, contentRect.top, groupLeft + textWidth, contentRect.bottom);
+                    iconRect = MakeRect(textRect.right + usedGap, top, textRect.right + usedGap + layoutIconSize, top + layoutIconSize);
+                    textAlignment = buttonAutoWrap_ ? (buttonContentAlign_ == 2 ? DWRITE_TEXT_ALIGNMENT_TRAILING : buttonContentAlign_ == 1 ? DWRITE_TEXT_ALIGNMENT_LEADING : DWRITE_TEXT_ALIGNMENT_CENTER) : DWRITE_TEXT_ALIGNMENT_TRAILING;
+                }
+            } else {
+                const float gap = hasText ? buttonIconGap_ : 0.0f;
+                const float layoutIconSize = std::min(iconSize, std::min(contentWidth, contentHeight));
+                const float maxTextHeight = std::max(0.0f, contentHeight - layoutIconSize - gap);
+                const float layoutTextHeight = hasText ? std::min(textHeight, maxTextHeight) : 0.0f;
+                const bool drawText = layoutTextHeight > 0.5f;
+                const float usedGap = drawText ? gap : 0.0f;
+                const float totalHeight = std::min(contentHeight, layoutIconSize + usedGap + (drawText ? layoutTextHeight : 0.0f));
+                const float groupWidth = std::min(contentWidth, std::max(iconSize, hasText ? std::ceil(measuredText.x) + 2.0f : 0.0f));
+                float groupLeft = contentRect.left;
+                if (buttonContentAlign_ == 0) groupLeft = contentRect.left + std::max(0.0f, contentWidth - groupWidth) * 0.5f;
+                if (buttonContentAlign_ == 2) groupLeft = contentRect.right - groupWidth;
+                const float top = contentRect.top + std::max(0.0f, contentHeight - totalHeight) * 0.5f;
+                const float iconLeft = groupLeft + std::max(0.0f, groupWidth - layoutIconSize) * 0.5f;
+                const float textWidth = drawText ? groupWidth : 0.0f;
+                const float textLeft = groupLeft + std::max(0.0f, groupWidth - textWidth) * 0.5f;
+                if (buttonIconPosition_ == 2) {
+                    iconRect = MakeRect(iconLeft, top, iconLeft + layoutIconSize, top + layoutIconSize);
+                    textRect = MakeRect(textLeft, iconRect.bottom + usedGap, textLeft + textWidth, iconRect.bottom + usedGap + (drawText ? layoutTextHeight : 0.0f));
+                } else {
+                    textRect = MakeRect(textLeft, top, textLeft + textWidth, top + (drawText ? layoutTextHeight : 0.0f));
+                    iconRect = MakeRect(iconLeft, textRect.bottom + usedGap, iconLeft + layoutIconSize, textRect.bottom + usedGap + layoutIconSize);
+                }
+            }
+            if (iconBitmap) {
+                engine.DrawBitmap(iconBitmap, iconRect, enabled_ ? 1.0f : 0.55f, D2D1_BITMAP_INTERPOLATION_MODE_LINEAR, MakeRect(0, 0, 0, 0));
+            }
+        } else if (hasText) {
+            const float textWidth = std::min(contentWidth, std::max(1.0f, std::ceil(measuredText.x) + 2.0f));
+            float textLeft = contentRect.left;
+            if (buttonContentAlign_ == 0) textLeft = contentRect.left + std::max(0.0f, contentWidth - textWidth) * 0.5f;
+            if (buttonContentAlign_ == 2) textLeft = contentRect.right - textWidth;
+            textRect = MakeRect(textLeft, contentRect.top, textLeft + textWidth, contentRect.bottom);
+            textAlignment = buttonContentAlign_ == 2 ? DWRITE_TEXT_ALIGNMENT_TRAILING : buttonContentAlign_ == 1 ? DWRITE_TEXT_ALIGNMENT_LEADING : DWRITE_TEXT_ALIGNMENT_CENTER;
+        }
+        if (hasText && textRect.right - textRect.left > 0.5f && textRect.bottom - textRect.top > 0.5f) {
+            engine.DrawTextDecorated(text_.c_str(), textRect, textColor, buttonFontFamily_.c_str(), buttonFontSize_, buttonFontWeight_,
+                buttonFontStyle_, buttonFontUnderline_, buttonFontStrikeout_, buttonFontRotationDegrees_, textAlignment, DWRITE_PARAGRAPH_ALIGNMENT_CENTER, buttonAutoWrap_);
+        }
+        break;
+    }
+    case TextBlock:
+        engine.DrawTextSimple(text_.c_str(), bounds_, MakeColor(0.10f, 0.14f, 0.16f, enabled_ ? 1.0f : 0.55f),
+            L"Microsoft YaHei", 14.0f, DWRITE_FONT_WEIGHT_NORMAL, DWRITE_FONT_STYLE_NORMAL,
+            DWRITE_TEXT_ALIGNMENT_LEADING, DWRITE_PARAGRAPH_ALIGNMENT_NEAR);
+        break;
+    case ProgressBar: {
+        DrawFrame(engine, MakeColor(0.89f, 0.92f, 0.91f, 1.0f), MakeColor(0.62f, 0.67f, 0.65f, 1.0f), 7.0f);
+        Rect fill = bounds_;
+        fill.right = fill.left + (bounds_.right - bounds_.left) * NormalizedValue();
+        if (fill.right > fill.left) {
+            engine.FillRoundedRectangle(fill, 7.0f, 7.0f, MakeColor(0.20f, 0.58f, 0.38f, 1.0f));
+        }
+        break;
+    }
+    case CheckBox: {
+        Rect box = MakeRect(bounds_.left, bounds_.top + 3.0f, bounds_.left + 20.0f, bounds_.top + 23.0f);
+        engine.FillRoundedRectangle(box, 4.0f, 4.0f, MakeColor(1.0f, 1.0f, 1.0f, 1.0f));
+        engine.DrawRoundedRectangle(box, 4.0f, 4.0f, MakeColor(0.30f, 0.42f, 0.45f, 1.0f), 1.4f);
+        if (checked_) {
+            engine.DrawLine(MakePoint(box.left + 4.0f, box.top + 10.0f), MakePoint(box.left + 9.0f, box.bottom - 5.0f), MakeColor(0.07f, 0.42f, 0.30f, 1.0f), 2.6f);
+            engine.DrawLine(MakePoint(box.left + 9.0f, box.bottom - 5.0f), MakePoint(box.right - 4.0f, box.top + 5.0f), MakeColor(0.07f, 0.42f, 0.30f, 1.0f), 2.6f);
+        }
+        engine.DrawTextSimple(text_.c_str(), MakeRect(bounds_.left + 28.0f, bounds_.top, bounds_.right, bounds_.bottom),
+            MakeColor(0.10f, 0.14f, 0.16f, 1.0f), L"Microsoft YaHei", 14.0f, DWRITE_FONT_WEIGHT_NORMAL,
+            DWRITE_FONT_STYLE_NORMAL, DWRITE_TEXT_ALIGNMENT_LEADING, DWRITE_PARAGRAPH_ALIGNMENT_CENTER);
+        break;
+    }
+    case Slider: {
+        const float cy = (bounds_.top + bounds_.bottom) * 0.5f;
+        engine.DrawLine(MakePoint(bounds_.left, cy), MakePoint(bounds_.right, cy), MakeColor(0.72f, 0.76f, 0.74f, 1.0f), 5.0f);
+        const float x = bounds_.left + (bounds_.right - bounds_.left) * NormalizedValue();
+        engine.DrawLine(MakePoint(bounds_.left, cy), MakePoint(x, cy), MakeColor(0.15f, 0.52f, 0.70f, 1.0f), 5.0f);
+        engine.FillEllipse(MakePoint(x, cy), pressed_ ? 8.5f : 7.0f, pressed_ ? 8.5f : 7.0f, MakeColor(1.0f, 1.0f, 1.0f, 1.0f));
+        engine.DrawEllipse(MakePoint(x, cy), pressed_ ? 8.5f : 7.0f, pressed_ ? 8.5f : 7.0f, MakeColor(0.10f, 0.34f, 0.48f, 1.0f), 1.6f);
+        break;
+    }
+    case TabBar: {
+        const int tabCount = 4;
+        const float width = (bounds_.right - bounds_.left) / tabCount;
+        const int selectedIndex = selectedIndex_ < 0 ? 0 : (selectedIndex_ >= tabCount ? tabCount - 1 : selectedIndex_);
+        for (int i = 0; i < tabCount; ++i) {
+            Rect tab = MakeRect(bounds_.left + width * i + 2.0f, bounds_.top, bounds_.left + width * (i + 1) - 2.0f, bounds_.bottom);
+            const bool selected = i == selectedIndex;
+            engine.FillRoundedRectangle(tab, 7.0f, 7.0f, selected ? MakeColor(0.08f, 0.34f, 0.50f, 1.0f) : MakeColor(1.0f, 1.0f, 1.0f, 0.72f));
+            engine.DrawRoundedRectangle(tab, 7.0f, 7.0f, MakeColor(0.58f, 0.64f, 0.62f, 1.0f), 1.0f);
+            std::wstring label = L"Tab ";
+            label += std::to_wstring(i + 1);
+            engine.DrawTextSimple(label.c_str(), MakeRect(tab.left + 6.0f, tab.top, tab.right - 6.0f, tab.bottom),
+                selected ? MakeColor(1.0f, 1.0f, 1.0f, 1.0f) : MakeColor(0.10f, 0.14f, 0.16f, 1.0f),
+                L"Microsoft YaHei", 13.0f, selected ? DWRITE_FONT_WEIGHT_SEMI_BOLD : DWRITE_FONT_WEIGHT_NORMAL,
+                DWRITE_FONT_STYLE_NORMAL, DWRITE_TEXT_ALIGNMENT_CENTER, DWRITE_PARAGRAPH_ALIGNMENT_CENTER);
+        }
+        break;
+    }
+    default:
+        break;
+    }
+}
+
+bool UiComponent::OnMouse(Engine& engine, int x, int y, int eventType) {
+    if (!visible_ || !enabled_) return false;
+    Point point = MakePoint(static_cast<float>(x), static_cast<float>(y));
+    const bool hit = Hit(point);
+    if (eventType == MOUSE_MOVE) {
+        bool changed = hovered_ != hit;
+        hovered_ = hit;
+        if (pressed_ && type_ == Slider) {
+            SetValue(minimum_ + ((point.x - bounds_.left) / (bounds_.right - bounds_.left)) * (maximum_ - minimum_));
+            changed = true;
+        }
+        if (changed) engine.Invalidate(false);
+        return hit || pressed_;
+    }
+    if (eventType == MOUSE_DOWN && hit) {
+        pressed_ = true;
+        if (type_ == CheckBox) checked_ = !checked_;
+        if (type_ == Slider) SetValue(minimum_ + ((point.x - bounds_.left) / (bounds_.right - bounds_.left)) * (maximum_ - minimum_));
+        if (type_ == TabBar) {
+            const int tabCount = 4;
+            const float width = (bounds_.right - bounds_.left) / tabCount;
+            int index = static_cast<int>((point.x - bounds_.left) / width);
+            if (index < 0) index = 0;
+            if (index >= tabCount) index = tabCount - 1;
+            selectedIndex_ = index;
+        }
+        engine.Invalidate(false);
+        return true;
+    }
+    if (eventType == MOUSE_UP) {
+        const bool handled = pressed_;
+        const bool clicked = pressed_ && hit;
+        pressed_ = false;
+        if (clicked && type_ == Button && buttonToggle_) checked_ = !checked_;
+        if (handled) engine.Invalidate(false);
+        if (type_ == Button || type_ == CheckBox) return clicked;
+        return handled;
+    }
+    if (eventType == MOUSE_LEAVE) {
+        const bool changed = hovered_ || pressed_;
+        hovered_ = false;
+        pressed_ = false;
+        if (changed) engine.Invalidate(false);
+        return changed;
+    }
+    return hit;
+}
+
+bool UiComponent::OnKey(Engine& engine, int eventType, int keyCode) {
+    if (!visible_ || !enabled_) return false;
+    if (eventType == KEY_FOCUS) {
+        buttonFocused_ = true;
+        engine.Invalidate(false);
+        return true;
+    }
+    if (eventType == KEY_BLUR) {
+        const bool changed = buttonFocused_ || pressed_;
+        buttonFocused_ = false;
+        pressed_ = false;
+        if (changed) engine.Invalidate(false);
+        return changed;
+    }
+    if (type_ != Button) return false;
+    const bool activateKey = keyCode == VK_SPACE || keyCode == VK_RETURN;
+    if (!activateKey) return false;
+    if (eventType == KEY_DOWN) {
+        if (!pressed_) {
+            pressed_ = true;
+            engine.Invalidate(false);
+        }
+        return false;
+    }
+    if (eventType == KEY_UP) {
+        const bool clicked = pressed_ || keyCode == VK_RETURN;
+        pressed_ = false;
+        if (clicked && buttonToggle_) checked_ = !checked_;
+        engine.Invalidate(false);
+        return clicked;
+    }
+    return false;
+}
+
+UiContainer::UiContainer() : UiComponent(Panel) {}
+
+UiContainer::~UiContainer() {
+    Clear();
+}
+
+void UiContainer::Add(UiComponent* child) {
+    if (child) children_.push_back(child);
+}
+
+void UiContainer::Clear() {
+    for (UiComponent* child : children_) delete child;
+    children_.clear();
+}
+
+void UiContainer::Draw(Engine& engine) {
+    for (UiComponent* child : children_) {
+        if (child) child->Draw(engine);
+    }
+}
+
+bool UiContainer::OnMouse(Engine& engine, int x, int y, int eventType) {
+    for (auto it = children_.rbegin(); it != children_.rend(); ++it) {
+        if (*it && (*it)->OnMouse(engine, x, y, eventType)) return true;
+    }
+    return false;
+}
+
+Engine::Engine() = default;
+Engine::~Engine() {
+    Destroy();
+}
+
+HRESULT Engine::EnsureFactories(const RenderOptions& options) {
+    if (!comInitialized_) {
+        HRESULT comResult = CoInitializeEx(nullptr, COINIT_APARTMENTTHREADED);
+        if (SUCCEEDED(comResult)) {
+            comInitialized_ = true;
+        } else if (comResult != RPC_E_CHANGED_MODE) {
+            lastResult_ = comResult;
+            return lastResult_;
+        }
+    }
+
+    if (!factory_) {
+        D2D1_FACTORY_OPTIONS factoryOptions{};
+        factoryOptions.debugLevel = static_cast<D2D1_DEBUG_LEVEL>(options.debugLevel);
+        lastResult_ = D2D1CreateFactory(
+            static_cast<D2D1_FACTORY_TYPE>(options.factoryType),
+            __uuidof(ID2D1Factory1),
+            &factoryOptions,
+            reinterpret_cast<void**>(factory_.ReleaseAndGetAddressOf()));
+        if (FAILED(lastResult_)) return lastResult_;
+    }
+
+    if (!writeFactory_) {
+        lastResult_ = DWriteCreateFactory(
+            DWRITE_FACTORY_TYPE_SHARED,
+            __uuidof(IDWriteFactory),
+            reinterpret_cast<IUnknown**>(writeFactory_.ReleaseAndGetAddressOf()));
+        if (FAILED(lastResult_)) return lastResult_;
+    }
+
+    if (!wicFactory_) {
+        lastResult_ = CoCreateInstance(
+            CLSID_WICImagingFactory,
+            nullptr,
+            CLSCTX_INPROC_SERVER,
+            IID_PPV_ARGS(wicFactory_.ReleaseAndGetAddressOf()));
+        if (FAILED(lastResult_)) return lastResult_;
+    }
+
+    return S_OK;
+}
+
+HRESULT Engine::CreateForHwnd(HWND hwnd, int width, int height, const RenderOptions& options) {
+    if (!hwnd || !IsWindow(hwnd)) return lastResult_ = E_INVALIDARG;
+    if (hwnd_ && hwnd_ != hwnd) {
+        UninstallAutoRepaint();
+        tempBrush_.Reset();
+        target_.Reset();
+    }
+    hwnd_ = hwnd;
+    options_ = options;
+    lastResult_ = EnsureFactories(options);
+    if (FAILED(lastResult_)) return lastResult_;
+
+    RECT client{};
+    if (width <= 0 || height <= 0) {
+        GetClientRect(hwnd, &client);
+        width = client.right - client.left;
+        height = client.bottom - client.top;
+    }
+    width = ClampRenderSize(width);
+    height = ClampRenderSize(height);
+
+    D2D1_RENDER_TARGET_PROPERTIES rtProps = D2D1::RenderTargetProperties(
+        static_cast<D2D1_RENDER_TARGET_TYPE>(options.renderTargetType),
+        D2D1::PixelFormat(static_cast<DXGI_FORMAT>(options.pixelFormat), static_cast<D2D1_ALPHA_MODE>(options.alphaMode)),
+        options.dpiX,
+        options.dpiY,
+        static_cast<D2D1_RENDER_TARGET_USAGE>(options.gdiCompatible ? D2D1_RENDER_TARGET_USAGE_GDI_COMPATIBLE : D2D1_RENDER_TARGET_USAGE_NONE),
+        static_cast<D2D1_FEATURE_LEVEL>(options.featureLevel));
+
+    D2D1_HWND_RENDER_TARGET_PROPERTIES hwndProps = D2D1::HwndRenderTargetProperties(
+        hwnd,
+        D2D1::SizeU(static_cast<UINT32>(width), static_cast<UINT32>(height)),
+        static_cast<D2D1_PRESENT_OPTIONS>(options.presentOptions));
+
+    lastResult_ = factory_->CreateHwndRenderTarget(rtProps, hwndProps, target_.ReleaseAndGetAddressOf());
+    tempBrush_.Reset();
+    return lastResult_;
+}
+
+void Engine::Destroy() {
+    UninstallAutoRepaint();
+    tempBrush_.Reset();
+    target_.Reset();
+    wicFactory_.Reset();
+    writeFactory_.Reset();
+    factory_.Reset();
+    if (comInitialized_) {
+        CoUninitialize();
+        comInitialized_ = false;
+    }
+    hwnd_ = nullptr;
+    lastResult_ = S_OK;
+}
+
+bool Engine::IsReady() const {
+    return target_ != nullptr;
+}
+
+HRESULT Engine::Resize(int width, int height) {
+    if (!target_) return lastResult_ = E_POINTER;
+    if (width <= 0 || height <= 0) {
+        RECT client{};
+        GetClientRect(hwnd_, &client);
+        width = client.right - client.left;
+        height = client.bottom - client.top;
+    }
+    width = ClampRenderSize(width);
+    height = ClampRenderSize(height);
+    lastResult_ = target_->Resize(D2D1::SizeU(static_cast<UINT32>(width), static_cast<UINT32>(height)));
+    return lastResult_;
+}
+
+void Engine::Invalidate(bool eraseBackground) {
+    if (hwnd_) InvalidateRect(hwnd_, nullptr, eraseBackground ? TRUE : FALSE);
+}
+
+void Engine::UpdateNow() {
+    if (hwnd_) UpdateWindow(hwnd_);
+}
+
+bool Engine::InstallAutoRepaint(void* owner, PaintCallback paintCallback, ResizeCallback resizeCallback, MouseCallback mouseCallback, KeyCallback keyCallback) {
+    if (!hwnd_ || !paintCallback) return false;
+    auto* existing = reinterpret_cast<Engine*>(GetPropW(hwnd_, kEngineWindowProp));
+    if (existing && existing != this) {
+        lastResult_ = HRESULT_FROM_WIN32(ERROR_ALREADY_EXISTS);
+        return false;
+    }
+
+    callbackOwner_ = owner;
+    paintCallback_ = paintCallback;
+    resizeCallback_ = resizeCallback;
+    mouseCallback_ = mouseCallback;
+    keyCallback_ = keyCallback;
+
+    if (!oldWndProc_) {
+        SetLastError(0);
+        oldWndProc_ = reinterpret_cast<WNDPROC>(
+            SetWindowLongPtrW(hwnd_, GWLP_WNDPROC, reinterpret_cast<LONG_PTR>(&Engine::AutoRepaintWndProc)));
+        if (!oldWndProc_ && GetLastError() != 0) {
+            lastResult_ = HRESULT_FROM_WIN32(GetLastError());
+            callbackOwner_ = nullptr;
+            paintCallback_ = nullptr;
+            resizeCallback_ = nullptr;
+            mouseCallback_ = nullptr;
+            keyCallback_ = nullptr;
+            return false;
+        }
+    }
+
+    if (!SetPropW(hwnd_, kEngineWindowProp, this)) {
+        lastResult_ = HRESULT_FROM_WIN32(GetLastError());
+        if (oldWndProc_) {
+            SetWindowLongPtrW(hwnd_, GWLP_WNDPROC, reinterpret_cast<LONG_PTR>(oldWndProc_));
+            oldWndProc_ = nullptr;
+        }
+        callbackOwner_ = nullptr;
+        paintCallback_ = nullptr;
+        resizeCallback_ = nullptr;
+        mouseCallback_ = nullptr;
+        keyCallback_ = nullptr;
+        return false;
+    }
+    Invalidate(false);
+    return true;
+}
+
+void Engine::UninstallAutoRepaint() {
+    if (hwnd_ && oldWndProc_) {
+        SetWindowLongPtrW(hwnd_, GWLP_WNDPROC, reinterpret_cast<LONG_PTR>(oldWndProc_));
+        RemovePropW(hwnd_, kEngineWindowProp);
+    }
+    oldWndProc_ = nullptr;
+    callbackOwner_ = nullptr;
+    paintCallback_ = nullptr;
+    resizeCallback_ = nullptr;
+    mouseCallback_ = nullptr;
+    keyCallback_ = nullptr;
+    inAutoPaint_ = false;
+    trackingMouseLeave_ = false;
+}
+
+LRESULT CALLBACK Engine::AutoRepaintWndProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam) {
+    auto* engine = reinterpret_cast<Engine*>(GetPropW(hwnd, kEngineWindowProp));
+    if (engine) return engine->HandleAutoRepaintMessage(hwnd, message, wParam, lParam);
+    return DefWindowProcW(hwnd, message, wParam, lParam);
+}
+
+LRESULT Engine::HandleAutoRepaintMessage(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam) {
+    switch (message) {
+    case WM_ERASEBKGND:
+        return 1;
+    case WM_SIZE: {
+        const int width = LOWORD(lParam);
+        const int height = HIWORD(lParam);
+        Resize(width, height);
+        if (resizeCallback_) resizeCallback_(callbackOwner_, width, height);
+        Invalidate(false);
+        break;
+    }
+    case WM_PAINT: {
+        PAINTSTRUCT ps{};
+        ScopedPaint paint(hwnd, ps);
+        if (paintCallback_ && !inAutoPaint_) {
+            ScopedBoolReset reset(inAutoPaint_);
+            paintCallback_(callbackOwner_);
+        }
+        return 0;
+    }
+    case WM_MOUSEMOVE:
+    case WM_LBUTTONDOWN:
+    case WM_LBUTTONUP: {
+        if (mouseCallback_) {
+            int x = GET_X_LPARAM(lParam);
+            int y = GET_Y_LPARAM(lParam);
+            if (target_) {
+                float dpiX = 96.0f;
+                float dpiY = 96.0f;
+                target_->GetDpi(&dpiX, &dpiY);
+                if (dpiX > 0.0f) x = static_cast<int>((x * 96.0f) / dpiX);
+                if (dpiY > 0.0f) y = static_cast<int>((y * 96.0f) / dpiY);
+            }
+            if (message == WM_MOUSEMOVE && !trackingMouseLeave_) {
+                TRACKMOUSEEVENT track{};
+                track.cbSize = sizeof(track);
+                track.dwFlags = TME_LEAVE;
+                track.hwndTrack = hwnd;
+                trackingMouseLeave_ = TrackMouseEvent(&track) != FALSE;
+            }
+            const int type = message == WM_LBUTTONDOWN ? MOUSE_DOWN
+                           : message == WM_LBUTTONUP ? MOUSE_UP
+                           : MOUSE_MOVE;
+            mouseCallback_(callbackOwner_, x, y, type);
+        }
+        break;
+    }
+    case WM_MOUSELEAVE:
+        trackingMouseLeave_ = false;
+        if (mouseCallback_) {
+            mouseCallback_(callbackOwner_, 0, 0, MOUSE_LEAVE);
+        }
+        break;
+    case WM_MOUSEWHEEL:
+        if (mouseCallback_) {
+            POINT pt{ GET_X_LPARAM(lParam), GET_Y_LPARAM(lParam) };
+            ScreenToClient(hwnd, &pt);
+            int x = pt.x;
+            int y = pt.y;
+            if (target_) {
+                float dpiX = 96.0f;
+                float dpiY = 96.0f;
+                target_->GetDpi(&dpiX, &dpiY);
+                if (dpiX > 0.0f) x = static_cast<int>((x * 96.0f) / dpiX);
+                if (dpiY > 0.0f) y = static_cast<int>((y * 96.0f) / dpiY);
+            }
+            mouseCallback_(callbackOwner_, x, y, MOUSE_WHEEL);
+        }
+        break;
+    case WM_SETFOCUS:
+        if (keyCallback_) keyCallback_(callbackOwner_, KEY_FOCUS, 0);
+        break;
+    case WM_KILLFOCUS:
+        if (keyCallback_) keyCallback_(callbackOwner_, KEY_BLUR, 0);
+        break;
+    case WM_KEYDOWN:
+    case WM_SYSKEYDOWN:
+        if (keyCallback_) {
+            keyCallback_(callbackOwner_, KEY_DOWN, static_cast<int>(wParam));
+            if (wParam == VK_SPACE || wParam == VK_RETURN) return 0;
+        }
+        break;
+    case WM_KEYUP:
+    case WM_SYSKEYUP:
+        if (keyCallback_) {
+            keyCallback_(callbackOwner_, KEY_UP, static_cast<int>(wParam));
+            if (wParam == VK_SPACE || wParam == VK_RETURN) return 0;
+        }
+        break;
+    case WM_NCDESTROY: {
+        WNDPROC previous = oldWndProc_;
+        UninstallAutoRepaint();
+        return previous ? CallWindowProcW(previous, hwnd, message, wParam, lParam)
+                        : DefWindowProcW(hwnd, message, wParam, lParam);
+    }
+    default:
+        break;
+    }
+    return oldWndProc_ ? CallWindowProcW(oldWndProc_, hwnd, message, wParam, lParam)
+                       : DefWindowProcW(hwnd, message, wParam, lParam);
+}
+
+void Engine::BeginDraw() {
+    if (target_) target_->BeginDraw();
+}
+
+HRESULT Engine::EndDraw() {
+    if (!target_) return lastResult_ = E_POINTER;
+    lastResult_ = target_->EndDraw();
+    if (lastResult_ == D2DERR_RECREATE_TARGET) {
+        tempBrush_.Reset();
+        target_.Reset();
+    }
+    return lastResult_;
+}
+
+void Engine::Flush() {
+    if (target_) lastResult_ = target_->Flush();
+}
+
+void Engine::Clear(Color color) {
+    if (target_) target_->Clear(ToD2D(color));
+}
+
+void Engine::SetDpi(float dpiX, float dpiY) {
+    if (target_) target_->SetDpi(dpiX, dpiY);
+}
+
+void Engine::SetTransform(Matrix matrix) {
+    if (target_) target_->SetTransform(ToD2D(matrix));
+}
+
+void Engine::ResetTransform() {
+    if (target_) target_->SetTransform(D2D1::Matrix3x2F::Identity());
+}
+
+void Engine::SetAntialiasMode(int mode) {
+    if (target_) target_->SetAntialiasMode(static_cast<D2D1_ANTIALIAS_MODE>(mode));
+}
+
+void Engine::SetTextAntialiasMode(int mode) {
+    if (target_) target_->SetTextAntialiasMode(static_cast<D2D1_TEXT_ANTIALIAS_MODE>(mode));
+}
+
+void Engine::SetTags(UINT64 tag1, UINT64 tag2) {
+    if (target_) target_->SetTags(tag1, tag2);
+}
+
+void Engine::DrawLine(Point p1, Point p2, Color color, float strokeWidth) {
+    if (auto brush = TempBrush(color)) target_->DrawLine(ToD2D(p1), ToD2D(p2), brush, strokeWidth);
+}
+
+void Engine::DrawRectangle(Rect rect, Color color, float strokeWidth) {
+    if (auto brush = TempBrush(color)) target_->DrawRectangle(ToD2D(rect), brush, strokeWidth);
+}
+
+void Engine::FillRectangle(Rect rect, Color color) {
+    if (auto brush = TempBrush(color)) target_->FillRectangle(ToD2D(rect), brush);
+}
+
+void Engine::DrawRoundedRectangle(Rect rect, float radiusX, float radiusY, Color color, float strokeWidth) {
+    if (auto brush = TempBrush(color)) {
+        target_->DrawRoundedRectangle(D2D1::RoundedRect(ToD2D(rect), radiusX, radiusY), brush, strokeWidth);
+    }
+}
+
+void Engine::FillRoundedRectangle(Rect rect, float radiusX, float radiusY, Color color) {
+    if (auto brush = TempBrush(color)) {
+        target_->FillRoundedRectangle(D2D1::RoundedRect(ToD2D(rect), radiusX, radiusY), brush);
+    }
+}
+
+void Engine::DrawEllipse(Point center, float radiusX, float radiusY, Color color, float strokeWidth) {
+    if (auto brush = TempBrush(color)) target_->DrawEllipse(D2D1::Ellipse(ToD2D(center), radiusX, radiusY), brush, strokeWidth);
+}
+
+void Engine::FillEllipse(Point center, float radiusX, float radiusY, Color color) {
+    if (auto brush = TempBrush(color)) target_->FillEllipse(D2D1::Ellipse(ToD2D(center), radiusX, radiusY), brush);
+}
+
+HRESULT Engine::CreateSolidBrush(Color color, float opacity, ID2D1SolidColorBrush** brush) {
+    if (!target_ || !brush) return lastResult_ = E_POINTER;
+    D2D1_BRUSH_PROPERTIES props = D2D1::BrushProperties(opacity);
+    lastResult_ = target_->CreateSolidColorBrush(ToD2D(color), props, brush);
+    return lastResult_;
+}
+
+HRESULT Engine::CreateLinearGradientBrush(Point start, Point end, const GradientStop* stops, UINT32 count, ID2D1LinearGradientBrush** brush) {
+    if (!target_ || !stops || count == 0 || !brush) return lastResult_ = E_INVALIDARG;
+    std::vector<D2D1_GRADIENT_STOP> nativeStops(count);
+    for (UINT32 i = 0; i < count; ++i) {
+        nativeStops[i].position = stops[i].position;
+        nativeStops[i].color = ToD2D(stops[i].color);
+    }
+    ComPtr<ID2D1GradientStopCollection> collection;
+    lastResult_ = target_->CreateGradientStopCollection(nativeStops.data(), count, collection.GetAddressOf());
+    if (FAILED(lastResult_)) return lastResult_;
+    lastResult_ = target_->CreateLinearGradientBrush(D2D1::LinearGradientBrushProperties(ToD2D(start), ToD2D(end)), collection.Get(), brush);
+    return lastResult_;
+}
+
+HRESULT Engine::CreateRadialGradientBrush(Point center, Point originOffset, float radiusX, float radiusY, const GradientStop* stops, UINT32 count, ID2D1RadialGradientBrush** brush) {
+    if (!target_ || !stops || count == 0 || !brush) return lastResult_ = E_INVALIDARG;
+    std::vector<D2D1_GRADIENT_STOP> nativeStops(count);
+    for (UINT32 i = 0; i < count; ++i) {
+        nativeStops[i].position = stops[i].position;
+        nativeStops[i].color = ToD2D(stops[i].color);
+    }
+    ComPtr<ID2D1GradientStopCollection> collection;
+    lastResult_ = target_->CreateGradientStopCollection(nativeStops.data(), count, collection.GetAddressOf());
+    if (FAILED(lastResult_)) return lastResult_;
+    lastResult_ = target_->CreateRadialGradientBrush(
+        D2D1::RadialGradientBrushProperties(ToD2D(center), ToD2D(originOffset), radiusX, radiusY),
+        collection.Get(),
+        brush);
+    return lastResult_;
+}
+
+void Engine::ReleaseUnknown(IUnknown* value) {
+    if (value) value->Release();
+}
+
+void Engine::SetBrushOpacity(ID2D1Brush* brush, float opacity) {
+    if (brush) brush->SetOpacity(opacity);
+}
+
+void Engine::SetBrushTransform(ID2D1Brush* brush, Matrix matrix) {
+    if (brush) brush->SetTransform(ToD2D(matrix));
+}
+
+void Engine::DrawLineByBrush(Point p1, Point p2, ID2D1Brush* brush, float strokeWidth, ID2D1StrokeStyle* strokeStyle) {
+    if (target_ && brush) target_->DrawLine(ToD2D(p1), ToD2D(p2), brush, strokeWidth, strokeStyle);
+}
+
+void Engine::DrawRectByBrush(Rect rect, ID2D1Brush* brush, float strokeWidth, ID2D1StrokeStyle* strokeStyle) {
+    if (target_ && brush) target_->DrawRectangle(ToD2D(rect), brush, strokeWidth, strokeStyle);
+}
+
+void Engine::FillRectByBrush(Rect rect, ID2D1Brush* brush) {
+    if (target_ && brush) target_->FillRectangle(ToD2D(rect), brush);
+}
+
+void Engine::DrawRoundedRectByBrush(Rect rect, float radiusX, float radiusY, ID2D1Brush* brush, float strokeWidth, ID2D1StrokeStyle* strokeStyle) {
+    if (target_ && brush) target_->DrawRoundedRectangle(D2D1::RoundedRect(ToD2D(rect), radiusX, radiusY), brush, strokeWidth, strokeStyle);
+}
+
+void Engine::FillRoundedRectByBrush(Rect rect, float radiusX, float radiusY, ID2D1Brush* brush) {
+    if (target_ && brush) target_->FillRoundedRectangle(D2D1::RoundedRect(ToD2D(rect), radiusX, radiusY), brush);
+}
+
+void Engine::DrawEllipseByBrush(Point center, float radiusX, float radiusY, ID2D1Brush* brush, float strokeWidth, ID2D1StrokeStyle* strokeStyle) {
+    if (target_ && brush) target_->DrawEllipse(D2D1::Ellipse(ToD2D(center), radiusX, radiusY), brush, strokeWidth, strokeStyle);
+}
+
+void Engine::FillEllipseByBrush(Point center, float radiusX, float radiusY, ID2D1Brush* brush) {
+    if (target_ && brush) target_->FillEllipse(D2D1::Ellipse(ToD2D(center), radiusX, radiusY), brush);
+}
+
+HRESULT Engine::CreateStrokeStyle(int startCap, int endCap, int dashCap, int lineJoin, float miterLimit, int dashStyle, float dashOffset, ID2D1StrokeStyle** style) {
+    if (!factory_ || !style) return lastResult_ = E_POINTER;
+    D2D1_STROKE_STYLE_PROPERTIES props = D2D1::StrokeStyleProperties(
+        static_cast<D2D1_CAP_STYLE>(startCap),
+        static_cast<D2D1_CAP_STYLE>(endCap),
+        static_cast<D2D1_CAP_STYLE>(dashCap),
+        static_cast<D2D1_LINE_JOIN>(lineJoin),
+        miterLimit,
+        static_cast<D2D1_DASH_STYLE>(dashStyle),
+        dashOffset);
+    lastResult_ = factory_->CreateStrokeStyle(props, nullptr, 0, style);
+    return lastResult_;
+}
+
+HRESULT Engine::CreateCustomStrokeStyle(int startCap, int endCap, int dashCap, int lineJoin, float miterLimit, float dashOffset, const float* dashes, UINT32 dashCount, ID2D1StrokeStyle** style) {
+    if (!factory_ || !style || !dashes || dashCount == 0) return lastResult_ = E_INVALIDARG;
+    D2D1_STROKE_STYLE_PROPERTIES props = D2D1::StrokeStyleProperties(
+        static_cast<D2D1_CAP_STYLE>(startCap),
+        static_cast<D2D1_CAP_STYLE>(endCap),
+        static_cast<D2D1_CAP_STYLE>(dashCap),
+        static_cast<D2D1_LINE_JOIN>(lineJoin),
+        miterLimit,
+        D2D1_DASH_STYLE_CUSTOM,
+        dashOffset);
+    lastResult_ = factory_->CreateStrokeStyle(props, dashes, dashCount, style);
+    return lastResult_;
+}
+
+HRESULT Engine::CreateRectangleGeometry(Rect rect, ID2D1RectangleGeometry** geometry) {
+    if (!factory_ || !geometry) return lastResult_ = E_POINTER;
+    lastResult_ = factory_->CreateRectangleGeometry(ToD2D(rect), geometry);
+    return lastResult_;
+}
+
+HRESULT Engine::CreateRoundedRectangleGeometry(Rect rect, float radiusX, float radiusY, ID2D1RoundedRectangleGeometry** geometry) {
+    if (!factory_ || !geometry) return lastResult_ = E_POINTER;
+    lastResult_ = factory_->CreateRoundedRectangleGeometry(D2D1::RoundedRect(ToD2D(rect), radiusX, radiusY), geometry);
+    return lastResult_;
+}
+
+HRESULT Engine::CreateEllipseGeometry(Point center, float radiusX, float radiusY, ID2D1EllipseGeometry** geometry) {
+    if (!factory_ || !geometry) return lastResult_ = E_POINTER;
+    lastResult_ = factory_->CreateEllipseGeometry(D2D1::Ellipse(ToD2D(center), radiusX, radiusY), geometry);
+    return lastResult_;
+}
+
+HRESULT Engine::CreateTransformedGeometry(ID2D1Geometry* source, Matrix matrix, ID2D1TransformedGeometry** geometry) {
+    if (!factory_ || !source || !geometry) return lastResult_ = E_POINTER;
+    lastResult_ = factory_->CreateTransformedGeometry(source, ToD2D(matrix), geometry);
+    return lastResult_;
+}
+
+HRESULT Engine::CreatePathGeometry(ID2D1PathGeometry** geometry) {
+    if (!factory_ || !geometry) return lastResult_ = E_POINTER;
+    lastResult_ = factory_->CreatePathGeometry(geometry);
+    return lastResult_;
+}
+
+HRESULT Engine::OpenGeometry(ID2D1PathGeometry* geometry, ID2D1GeometrySink** sink) {
+    if (!geometry || !sink) return lastResult_ = E_POINTER;
+    lastResult_ = geometry->Open(sink);
+    return lastResult_;
+}
+
+void Engine::GeometryBeginFigure(ID2D1GeometrySink* sink, Point start, bool filled) {
+    if (sink) sink->BeginFigure(ToD2D(start), filled ? D2D1_FIGURE_BEGIN_FILLED : D2D1_FIGURE_BEGIN_HOLLOW);
+}
+
+void Engine::GeometryAddLine(ID2D1GeometrySink* sink, Point point) {
+    if (sink) sink->AddLine(ToD2D(point));
+}
+
+void Engine::GeometryAddBezier(ID2D1GeometrySink* sink, Point p1, Point p2, Point p3) {
+    if (sink) sink->AddBezier(D2D1::BezierSegment(ToD2D(p1), ToD2D(p2), ToD2D(p3)));
+}
+
+void Engine::GeometryAddQuadraticBezier(ID2D1GeometrySink* sink, Point p1, Point p2) {
+    if (sink) sink->AddQuadraticBezier(D2D1::QuadraticBezierSegment(ToD2D(p1), ToD2D(p2)));
+}
+
+void Engine::GeometryAddArc(ID2D1GeometrySink* sink, Point end, float radiusX, float radiusY, float rotation, int sweepDirection, int arcSize) {
+    if (sink) {
+        sink->AddArc(D2D1::ArcSegment(
+            ToD2D(end),
+            D2D1::SizeF(radiusX, radiusY),
+            rotation,
+            static_cast<D2D1_SWEEP_DIRECTION>(sweepDirection),
+            static_cast<D2D1_ARC_SIZE>(arcSize)));
+    }
+}
+
+void Engine::GeometryEndFigure(ID2D1GeometrySink* sink, bool closed) {
+    if (sink) sink->EndFigure(closed ? D2D1_FIGURE_END_CLOSED : D2D1_FIGURE_END_OPEN);
+}
+
+HRESULT Engine::GeometryClose(ID2D1GeometrySink* sink) {
+    if (!sink) return lastResult_ = E_POINTER;
+    lastResult_ = sink->Close();
+    sink->Release();
+    return lastResult_;
+}
+
+void Engine::DrawGeometry(ID2D1Geometry* geometry, ID2D1Brush* brush, float strokeWidth, ID2D1StrokeStyle* strokeStyle) {
+    if (target_ && geometry && brush) target_->DrawGeometry(geometry, brush, strokeWidth, strokeStyle);
+}
+
+void Engine::FillGeometry(ID2D1Geometry* geometry, ID2D1Brush* brush) {
+    if (target_ && geometry && brush) target_->FillGeometry(geometry, brush);
+}
+
+HRESULT Engine::GeometryGetBounds(ID2D1Geometry* geometry, Rect* bounds) {
+    if (!geometry || !bounds) return lastResult_ = E_POINTER;
+    D2D1_RECT_F nativeBounds{};
+    lastResult_ = geometry->GetBounds(nullptr, &nativeBounds);
+    if (SUCCEEDED(lastResult_)) {
+        bounds->left = nativeBounds.left;
+        bounds->top = nativeBounds.top;
+        bounds->right = nativeBounds.right;
+        bounds->bottom = nativeBounds.bottom;
+    }
+    return lastResult_;
+}
+
+HRESULT Engine::GeometryComputeArea(ID2D1Geometry* geometry, float* area) {
+    if (!geometry || !area) return lastResult_ = E_POINTER;
+    lastResult_ = geometry->ComputeArea(nullptr, D2D1_DEFAULT_FLATTENING_TOLERANCE, area);
+    return lastResult_;
+}
+
+HRESULT Engine::GeometryComputeLength(ID2D1Geometry* geometry, float* length) {
+    if (!geometry || !length) return lastResult_ = E_POINTER;
+    lastResult_ = geometry->ComputeLength(nullptr, D2D1_DEFAULT_FLATTENING_TOLERANCE, length);
+    return lastResult_;
+}
+
+bool Engine::GeometryFillContainsPoint(ID2D1Geometry* geometry, Point point) {
+    if (!geometry) {
+        lastResult_ = E_POINTER;
+        return false;
+    }
+    BOOL contains = FALSE;
+    lastResult_ = geometry->FillContainsPoint(ToD2D(point), nullptr, D2D1_DEFAULT_FLATTENING_TOLERANCE, &contains);
+    return SUCCEEDED(lastResult_) && contains;
+}
+
+bool Engine::GeometryStrokeContainsPoint(ID2D1Geometry* geometry, Point point, float strokeWidth, ID2D1StrokeStyle* strokeStyle) {
+    if (!geometry) {
+        lastResult_ = E_POINTER;
+        return false;
+    }
+    BOOL contains = FALSE;
+    lastResult_ = geometry->StrokeContainsPoint(ToD2D(point), strokeWidth, strokeStyle, nullptr, D2D1_DEFAULT_FLATTENING_TOLERANCE, &contains);
+    return SUCCEEDED(lastResult_) && contains;
+}
+
+HRESULT Engine::LoadBitmapFromFile(const wchar_t* fileName, ID2D1Bitmap** bitmap) {
+    if (!target_ || !wicFactory_ || !fileName || !bitmap) return lastResult_ = E_POINTER;
+    ComPtr<IWICBitmapDecoder> decoder;
+    ComPtr<IWICBitmapFrameDecode> frame;
+    ComPtr<IWICFormatConverter> converter;
+    lastResult_ = wicFactory_->CreateDecoderFromFilename(fileName, nullptr, GENERIC_READ, WICDecodeMetadataCacheOnLoad, decoder.GetAddressOf());
+    if (FAILED(lastResult_)) return lastResult_;
+    lastResult_ = decoder->GetFrame(0, frame.GetAddressOf());
+    if (FAILED(lastResult_)) return lastResult_;
+    lastResult_ = wicFactory_->CreateFormatConverter(converter.GetAddressOf());
+    if (FAILED(lastResult_)) return lastResult_;
+    lastResult_ = converter->Initialize(frame.Get(), GUID_WICPixelFormat32bppPBGRA, WICBitmapDitherTypeNone, nullptr, 0.0f, WICBitmapPaletteTypeMedianCut);
+    if (FAILED(lastResult_)) return lastResult_;
+    lastResult_ = target_->CreateBitmapFromWicBitmap(converter.Get(), nullptr, bitmap);
+    return lastResult_;
+}
+
+HRESULT Engine::LoadBitmapFromMemory(const void* data, int dataSize, ID2D1Bitmap** bitmap) {
+    if (!target_ || !wicFactory_ || !data || dataSize <= 0 || !bitmap) return lastResult_ = E_INVALIDARG;
+    ComPtr<IWICStream> stream;
+    ComPtr<IWICBitmapDecoder> decoder;
+    ComPtr<IWICBitmapFrameDecode> frame;
+    ComPtr<IWICFormatConverter> converter;
+    lastResult_ = wicFactory_->CreateStream(stream.GetAddressOf());
+    if (FAILED(lastResult_)) return lastResult_;
+    lastResult_ = stream->InitializeFromMemory(static_cast<BYTE*>(const_cast<void*>(data)), static_cast<DWORD>(dataSize));
+    if (FAILED(lastResult_)) return lastResult_;
+    lastResult_ = wicFactory_->CreateDecoderFromStream(stream.Get(), nullptr, WICDecodeMetadataCacheOnLoad, decoder.GetAddressOf());
+    if (FAILED(lastResult_)) return lastResult_;
+    lastResult_ = decoder->GetFrame(0, frame.GetAddressOf());
+    if (FAILED(lastResult_)) return lastResult_;
+    lastResult_ = wicFactory_->CreateFormatConverter(converter.GetAddressOf());
+    if (FAILED(lastResult_)) return lastResult_;
+    lastResult_ = converter->Initialize(frame.Get(), GUID_WICPixelFormat32bppPBGRA, WICBitmapDitherTypeNone, nullptr, 0.0f, WICBitmapPaletteTypeMedianCut);
+    if (FAILED(lastResult_)) return lastResult_;
+    lastResult_ = target_->CreateBitmapFromWicBitmap(converter.Get(), nullptr, bitmap);
+    return lastResult_;
+}
+
+HRESULT Engine::CreateBitmapFromBgra(int width, int height, const void* pixels, UINT32 stride, ID2D1Bitmap** bitmap) {
+    if (!target_ || !pixels || !bitmap || width <= 0 || height <= 0) return lastResult_ = E_INVALIDARG;
+    D2D1_BITMAP_PROPERTIES props = D2D1::BitmapProperties(
+        D2D1::PixelFormat(DXGI_FORMAT_B8G8R8A8_UNORM, D2D1_ALPHA_MODE_PREMULTIPLIED));
+    lastResult_ = target_->CreateBitmap(D2D1::SizeU(static_cast<UINT32>(width), static_cast<UINT32>(height)), pixels, stride, props, bitmap);
+    return lastResult_;
+}
+
+void Engine::DrawBitmap(ID2D1Bitmap* bitmap, Rect dest, float opacity, int interpolationMode, Rect source) {
+    if (!target_ || !bitmap) return;
+    D2D1_RECT_F src = ToD2D(source);
+    const bool hasSource = source.right > source.left && source.bottom > source.top;
+    target_->DrawBitmap(bitmap, ToD2D(dest), opacity, static_cast<D2D1_BITMAP_INTERPOLATION_MODE>(interpolationMode), hasSource ? &src : nullptr);
+}
+
+HRESULT Engine::CreateBitmapBrush(ID2D1Bitmap* bitmap, int extendModeX, int extendModeY, int interpolationMode, float opacity, ID2D1BitmapBrush** brush) {
+    if (!target_ || !bitmap || !brush) return lastResult_ = E_POINTER;
+    const D2D1_BITMAP_BRUSH_PROPERTIES bitmapProps = D2D1::BitmapBrushProperties(
+        static_cast<D2D1_EXTEND_MODE>(extendModeX),
+        static_cast<D2D1_EXTEND_MODE>(extendModeY),
+        static_cast<D2D1_BITMAP_INTERPOLATION_MODE>(interpolationMode));
+    const D2D1_BRUSH_PROPERTIES brushProps = D2D1::BrushProperties(opacity);
+    lastResult_ = target_->CreateBitmapBrush(bitmap, bitmapProps, brushProps, brush);
+    return lastResult_;
+}
+
+int Engine::BitmapWidth(ID2D1Bitmap* bitmap) const {
+    return bitmap ? static_cast<int>(bitmap->GetPixelSize().width) : 0;
+}
+
+int Engine::BitmapHeight(ID2D1Bitmap* bitmap) const {
+    return bitmap ? static_cast<int>(bitmap->GetPixelSize().height) : 0;
+}
+
+HRESULT Engine::CreateTextFormat(const wchar_t* fontFamily, float size, int weight, int style, int stretch, const wchar_t* locale, IDWriteTextFormat** format) {
+    if (!writeFactory_ || !fontFamily || !format) return lastResult_ = E_POINTER;
+    lastResult_ = writeFactory_->CreateTextFormat(
+        fontFamily,
+        nullptr,
+        static_cast<DWRITE_FONT_WEIGHT>(weight),
+        static_cast<DWRITE_FONT_STYLE>(style),
+        static_cast<DWRITE_FONT_STRETCH>(stretch),
+        size,
+        locale && locale[0] ? locale : L"zh-cn",
+        format);
+    return lastResult_;
+}
+
+HRESULT Engine::CreateTextLayout(const wchar_t* text, IDWriteTextFormat* format, float maxWidth, float maxHeight, IDWriteTextLayout** layout) {
+    if (!writeFactory_ || !text || !format || !layout) return lastResult_ = E_POINTER;
+    lastResult_ = writeFactory_->CreateTextLayout(text, static_cast<UINT32>(wcslen(text)), format, maxWidth, maxHeight, layout);
+    return lastResult_;
+}
+
+void Engine::SetTextAlignment(IDWriteTextFormat* format, int alignment) {
+    if (format) format->SetTextAlignment(static_cast<DWRITE_TEXT_ALIGNMENT>(alignment));
+}
+
+void Engine::SetParagraphAlignment(IDWriteTextFormat* format, int alignment) {
+    if (format) format->SetParagraphAlignment(static_cast<DWRITE_PARAGRAPH_ALIGNMENT>(alignment));
+}
+
+void Engine::SetWordWrapping(IDWriteTextFormat* format, int wrapping) {
+    if (format) format->SetWordWrapping(static_cast<DWRITE_WORD_WRAPPING>(wrapping));
+}
+
+void Engine::DrawTextSimple(const wchar_t* text, Rect rect, Color color, const wchar_t* fontFamily, float size, int weight, int style, int horizontalAlign, int verticalAlign) {
+    if (!target_ || !text) return;
+    ComPtr<IDWriteTextFormat> format;
+    if (FAILED(CreateTextFormat(fontFamily && fontFamily[0] ? fontFamily : L"Microsoft YaHei", size, weight, style, DWRITE_FONT_STRETCH_NORMAL, L"zh-cn", format.GetAddressOf()))) return;
+    format->SetTextAlignment(static_cast<DWRITE_TEXT_ALIGNMENT>(horizontalAlign));
+    format->SetParagraphAlignment(static_cast<DWRITE_PARAGRAPH_ALIGNMENT>(verticalAlign));
+    if (auto brush = TempBrush(color)) {
+        target_->DrawText(text, static_cast<UINT32>(wcslen(text)), format.Get(), ToD2D(rect), brush);
+    }
+}
+
+void Engine::DrawTextDecorated(const wchar_t* text, Rect rect, Color color, const wchar_t* fontFamily, float size, int weight, int style, bool underline, bool strikeout, float rotationDegrees, int horizontalAlign, int verticalAlign, bool wordWrap) {
+    if (!target_ || !text) return;
+
+    ComPtr<IDWriteTextFormat> format;
+    if (FAILED(CreateTextFormat(fontFamily && fontFamily[0] ? fontFamily : L"Microsoft YaHei", size, weight, style, DWRITE_FONT_STRETCH_NORMAL, L"zh-cn", format.GetAddressOf()))) return;
+    format->SetTextAlignment(static_cast<DWRITE_TEXT_ALIGNMENT>(horizontalAlign));
+    format->SetParagraphAlignment(static_cast<DWRITE_PARAGRAPH_ALIGNMENT>(verticalAlign));
+    format->SetWordWrapping(wordWrap ? DWRITE_WORD_WRAPPING_WRAP : DWRITE_WORD_WRAPPING_NO_WRAP);
+
+    ComPtr<IDWriteTextLayout> layout;
+    const UINT32 length = static_cast<UINT32>(wcslen(text));
+    if (FAILED(CreateTextLayout(text, format.Get(), rect.right - rect.left, rect.bottom - rect.top, layout.GetAddressOf()))) return;
+    DWRITE_TEXT_RANGE range{0, length};
+    if (underline) layout->SetUnderline(TRUE, range);
+    if (strikeout) layout->SetStrikethrough(TRUE, range);
+    if (auto brush = TempBrush(color)) {
+        D2D1_MATRIX_3X2_F oldTransform{};
+        if (rotationDegrees != 0.0f) {
+            target_->GetTransform(&oldTransform);
+            const auto center = D2D1::Point2F((rect.left + rect.right) * 0.5f, (rect.top + rect.bottom) * 0.5f);
+            target_->SetTransform(D2D1::Matrix3x2F::Rotation(rotationDegrees, center) * oldTransform);
+        }
+        target_->DrawTextLayout(D2D1::Point2F(rect.left, rect.top), layout.Get(), brush, D2D1_DRAW_TEXT_OPTIONS_CLIP);
+        if (rotationDegrees != 0.0f) {
+            target_->SetTransform(oldTransform);
+        }
+    }
+}
+
+void Engine::DrawTextLayout(Point origin, IDWriteTextLayout* layout, ID2D1Brush* brush, int options) {
+    if (target_ && layout && brush) target_->DrawTextLayout(ToD2D(origin), layout, brush, static_cast<D2D1_DRAW_TEXT_OPTIONS>(options));
+}
+
+HRESULT Engine::CreateLayer(ID2D1Layer** layer) {
+    if (!target_ || !layer) return lastResult_ = E_POINTER;
+    lastResult_ = target_->CreateLayer(nullptr, layer);
+    return lastResult_;
+}
+
+void Engine::PushLayer(Rect contentBounds, ID2D1Layer* layer, float opacity) {
+    if (target_ && layer) {
+        target_->PushLayer(D2D1::LayerParameters(ToD2D(contentBounds), nullptr, D2D1_ANTIALIAS_MODE_PER_PRIMITIVE, D2D1::IdentityMatrix(), opacity), layer);
+    }
+}
+
+void Engine::PopLayer() {
+    if (target_) target_->PopLayer();
+}
+
+void Engine::PushAxisAlignedClip(Rect rect, int antialiasMode) {
+    if (target_) target_->PushAxisAlignedClip(ToD2D(rect), static_cast<D2D1_ANTIALIAS_MODE>(antialiasMode));
+}
+
+void Engine::PopAxisAlignedClip() {
+    if (target_) target_->PopAxisAlignedClip();
+}
+
+HRESULT Engine::CreateDrawingStateBlock(ID2D1DrawingStateBlock** stateBlock) {
+    if (!factory_ || !stateBlock) return lastResult_ = E_POINTER;
+    lastResult_ = factory_->CreateDrawingStateBlock(stateBlock);
+    return lastResult_;
+}
+
+void Engine::SaveDrawingState(ID2D1DrawingStateBlock* stateBlock) {
+    if (target_ && stateBlock) target_->SaveDrawingState(stateBlock);
+}
+
+void Engine::RestoreDrawingState(ID2D1DrawingStateBlock* stateBlock) {
+    if (target_ && stateBlock) target_->RestoreDrawingState(stateBlock);
+}
+
+std::wstring Engine::LastErrorText() const {
+    std::wstringstream ss;
+    ss << L"HRESULT=0x" << std::hex << static_cast<unsigned long>(lastResult_);
+    if (lastResult_ == D2DERR_RECREATE_TARGET) ss << L" D2DERR_RECREATE_TARGET";
+    return ss.str();
+}
+
+UiComponent* Engine::CreateUiComponent(int type) {
+    switch (type) {
+    case UiComponent::Panel:
+    case UiComponent::Button:
+    case UiComponent::TextBlock:
+    case UiComponent::ProgressBar:
+    case UiComponent::CheckBox:
+    case UiComponent::Slider:
+    case UiComponent::TabBar:
+        return new UiComponent(static_cast<UiComponent::Type>(type));
+    default:
+        return nullptr;
+    }
+}
+
+UiContainer* Engine::CreateUiContainer() {
+    return new UiContainer();
+}
+
+void Engine::DestroyUiComponent(UiComponent* component) {
+    delete component;
+}
+
+void Engine::UiAddChild(UiContainer* container, UiComponent* child) {
+    if (container) container->Add(child);
+}
+
+void Engine::UiClearChildren(UiContainer* container) {
+    if (container) container->Clear();
+}
+
+void Engine::UiSetBounds(UiComponent* component, Rect bounds) {
+    if (component) component->SetBounds(bounds);
+}
+
+void Engine::UiSetPixelBounds(UiComponent* component, Rect bounds) {
+    if (!component) return;
+    float dpiX = 96.0f;
+    float dpiY = 96.0f;
+    if (target_) target_->GetDpi(&dpiX, &dpiY);
+    if (dpiX <= 0.0f) dpiX = 96.0f;
+    if (dpiY <= 0.0f) dpiY = 96.0f;
+    component->SetBounds(MakeRect(
+        bounds.left * 96.0f / dpiX,
+        bounds.top * 96.0f / dpiY,
+        bounds.right * 96.0f / dpiX,
+        bounds.bottom * 96.0f / dpiY));
+}
+
+void Engine::UiSetText(UiComponent* component, const wchar_t* text) {
+    if (component) component->SetText(text ? text : L"");
+}
+
+void Engine::UiSetValue(UiComponent* component, float value) {
+    if (component) component->SetValue(value);
+}
+
+void Engine::UiSetRange(UiComponent* component, float minimum, float maximum) {
+    if (component) component->SetRange(minimum, maximum);
+}
+
+void Engine::UiSetEnabled(UiComponent* component, bool enabled) {
+    if (component) component->SetEnabled(enabled);
+}
+
+void Engine::UiSetVisible(UiComponent* component, bool visible) {
+    if (component) component->SetVisible(visible);
+}
+
+void Engine::UiSetChecked(UiComponent* component, bool checked) {
+    if (component) component->SetChecked(checked);
+}
+
+void Engine::UiSetSelectedIndex(UiComponent* component, int index) {
+    if (component) component->SetSelectedIndex(index);
+}
+
+void Engine::UiSetButtonMetrics(UiComponent* component, float radius, float borderWidth) {
+    if (component) component->SetButtonMetrics(radius, borderWidth);
+}
+
+void Engine::UiSetButtonFont(UiComponent* component, const wchar_t* family, float size, int weight) {
+    if (component) component->SetButtonFont(family ? family : L"", size, weight);
+}
+
+void Engine::UiSetButtonFontDescriptor(UiComponent* component, const wchar_t* descriptor) {
+    if (component) component->SetButtonFontDescriptor(descriptor ? descriptor : L"");
+}
+
+void Engine::UiSetButtonColors(UiComponent* component, Color normal, Color hover, Color pressed, Color disabled, Color text, Color disabledText, Color border) {
+    if (component) component->SetButtonColors(normal, hover, pressed, disabled, text, disabledText, border);
+}
+
+void Engine::UiSetButtonStateColors(UiComponent* component, int state, Color background, bool hasBackground, Color text, bool hasText, Color border, bool hasBorder) {
+    if (component) component->SetButtonStateColors(state, background, hasBackground, text, hasText, border, hasBorder);
+}
+
+void Engine::UiSetButtonLayout(UiComponent* component, float paddingX, float paddingY, float iconGap, int iconPosition, int contentAlign, bool autoWrap) {
+    if (component) component->SetButtonLayout(paddingX, paddingY, iconGap, iconPosition, contentAlign, autoWrap);
+}
+
+void Engine::UiSetButtonOptions(UiComponent* component, int style, bool toggle, bool focused, bool defaultButton, Color focusColor, float focusWidth) {
+    if (component) component->SetButtonOptions(style, toggle, focused, defaultButton, focusColor, focusWidth);
+}
+
+void Engine::UiSetButtonIcon(UiComponent* component, const wchar_t* fileName, float size, Color tint, bool useTint) {
+    if (component) component->SetButtonIcon(fileName ? fileName : L"", size, tint, useTint);
+}
+
+void Engine::UiSetButtonIconData(UiComponent* component, const void* data, int dataSize, float size, Color tint, bool useTint) {
+    if (component) component->SetButtonIconData(data, dataSize, size, tint, useTint);
+}
+
+void Engine::UiSetButtonStateIconData(UiComponent* component, int state, const void* data, int dataSize, float size, Color tint, bool useTint) {
+    if (component) component->SetButtonStateIconData(state, data, dataSize, size, tint, useTint);
+}
+
+int Engine::UiSelectedIndex(UiComponent* component) const {
+    return component ? component->selectedIndex() : -1;
+}
+
+bool Engine::UiChecked(UiComponent* component) const {
+    return component ? component->checked() : false;
+}
+
+float Engine::UiValue(UiComponent* component) const {
+    return component ? component->value() : 0.0f;
+}
+
+void Engine::UiDraw(UiComponent* component) {
+    if (component) component->Draw(*this);
+}
+
+bool Engine::UiMouseEvent(UiComponent* component, int x, int y, int eventType) {
+    return component ? component->OnMouse(*this, x, y, eventType) : false;
+}
+
+bool Engine::UiKeyEvent(UiComponent* component, int eventType, int keyCode) {
+    return component ? component->OnKey(*this, eventType, keyCode) : false;
+}
+
+D2D1_COLOR_F Engine::ToD2D(Color color) const {
+    return D2D1::ColorF(color.r, color.g, color.b, color.a);
+}
+
+D2D1_POINT_2F Engine::ToD2D(Point point) const {
+    return D2D1::Point2F(point.x, point.y);
+}
+
+D2D1_RECT_F Engine::ToD2D(Rect rect) const {
+    return D2D1::RectF(rect.left, rect.top, rect.right, rect.bottom);
+}
+
+D2D1_MATRIX_3X2_F Engine::ToD2D(Matrix matrix) const {
+    return D2D1::Matrix3x2F(matrix.m11, matrix.m12, matrix.m21, matrix.m22, matrix.dx, matrix.dy);
+}
+
+ID2D1SolidColorBrush* Engine::TempBrush(Color color) {
+    if (!target_) {
+        lastResult_ = E_POINTER;
+        return nullptr;
+    }
+    if (!tempBrush_) {
+        lastResult_ = target_->CreateSolidColorBrush(ToD2D(color), tempBrush_.GetAddressOf());
+        if (FAILED(lastResult_)) return nullptr;
+    } else {
+        tempBrush_->SetColor(ToD2D(color));
+    }
+    return tempBrush_.Get();
+}
+
+}  // namespace volcano_d2d

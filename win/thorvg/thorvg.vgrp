@@ -1,0 +1,15 @@
+doc_format_version = 1
+project_identifier = "wutao.vproject.pc.win.1"
+author = "火山ThorVG封装"
+name = "ThorVG矢量图形"
+version = 1
+unique_mark = 
+explain = ""
+dependence = "*\\sys\\base\\base.vgrp"
+file
+{
+    name = "ThorVG核心.wsv"
+    name = "ThorVG形状.wsv"
+    name = "ThorVG对象.wsv"
+    name = "ThorVG界面.wsv"
+}

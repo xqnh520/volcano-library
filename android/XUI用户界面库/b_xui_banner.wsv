@@ -1,0 +1,235 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.安卓.XUI <注释 = "XUI 安卓 UI 工具库封装" @文档 = "category = \"XUI\"">
+
+
+类 XUI横幅布局 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.banner.recycler.BannerLayout)."
+        @文档 = "category = \"XUI.横幅\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.banner.recycler.BannerLayout\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.bl_interval\n        shown_name = \"轮播间隔\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.bl_showIndicator\n        shown_name = \"是否显示轮播索引\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.bl_orientation\n        shown_name = \"轮播的方向\"\n        data_type = string\n        detail_type = enum\n        item\n        {\n            name = horizontal\n            shown_name = \"horizontal\"\n        }\n        item\n        {\n            name = vertical\n            shown_name = \"vertical\"\n        }\n    }\n    attr\n    {\n        name = app.bl_autoPlaying\n        shown_name = \"是否是自动轮播\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.bl_indicatorSelectedSrc\n        shown_name = \"轮播索引选中的效果\"\n        data_type = string\n        detail_type = drawable_res_file\n    }\n    attr\n    {\n        name = app.bl_indicatorUnselectedSrc\n        shown_name = \"轮播索引未选中的效果\"\n        data_type = string\n        detail_type = drawable_res_file\n    }\n    attr\n    {\n        name = app.bl_indicatorSize\n        shown_name = \"轮播索引的大小\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.bl_indicatorSelectedColor\n        shown_name = \"轮播索引选中的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.bl_indicatorUnselectedColor\n        shown_name = \"轮播索引未选中的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.bl_indicatorSpace\n        shown_name = \"索引器之间的间隔\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.bl_indicatorMarginLeft\n        shown_name = \"索引器的左侧边距\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.bl_indicatorMarginRight\n        shown_name = \"索引器的右侧边距\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.bl_indicatorMarginBottom\n        shown_name = \"索引器的底部边距\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.bl_indicatorGravity\n        shown_name = \"索引器的对齐方式\"\n        data_type = string\n        detail_type = enum\n        item\n        {\n            name = left\n            shown_name = \"left\"\n        }\n        item\n        {\n            name = center\n            shown_name = \"center\"\n        }\n        item\n        {\n            name = right\n            shown_name = \"right\"\n        }\n    }\n    attr\n    {\n        name = app.bl_itemSpace\n        shown_name = \"轮播图之间的间距\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.bl_centerScale\n        shown_name = \"图片缩放系数\"\n        data_type = double\n    }\n    attr\n    {\n        name = app.bl_moveSpeed\n        shown_name = \"轮播速度\"\n        data_type = double\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI横幅布局, BannerLayout, com.xuexiang.xui.widget.banner.recycler.BannerLayout)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetBannerLayout ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI横幅布局的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI横幅布局.getAlpha()">
+    {
+        @ (double)@sn<this>.GetBannerLayout ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI横幅布局的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI横幅布局.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetBannerLayout ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI横幅布局的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI横幅布局.isEnabled()">
+    {
+        @ @sn<this>.GetBannerLayout ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI横幅布局的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI横幅布局.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetBannerLayout ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI横幅布局的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI横幅布局.isClickable()">
+    {
+        @ @sn<this>.GetBannerLayout ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI横幅布局的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI横幅布局.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetBannerLayout ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI横幅布局的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI横幅布局.getElevation()">
+    {
+        @ (double)@sn<this>.GetBannerLayout ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI横幅布局的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI横幅布局.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetBannerLayout ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI横幅布局的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI横幅布局.getMinimumHeight()">
+    {
+        @ @sn<this>.GetBannerLayout ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI横幅布局的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI横幅布局.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetBannerLayout ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI横幅布局的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI横幅布局.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetBannerLayout ().setBackgroundColor (@<新值>))
+    }
+
+    方法 设置自动播放中 <公开 注释 = "用法：把XUI横幅布局的自动播放中设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI横幅布局.setAutoPlaying()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetBannerLayout ().setAutoPlaying (@<值1>))
+    }
+
+    方法 是否播放中 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断XUI横幅布局是否播放中。 参数：无。 返回：逻辑型。 原方法：XUI横幅布局.isPlaying()">
+    {
+        @ @sn<this>.GetBannerLayout ().isPlaying ()
+    }
+
+    方法 设置显示指示器 <公开 注释 = "用法：把XUI横幅布局的显示指示器设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI横幅布局.setShowIndicator()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetBannerLayout ().setShowIndicator (@<值1>))
+    }
+
+    方法 设置居中缩放 <公开 注释 = "用法：把XUI横幅布局的居中缩放设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI横幅布局.setCenterScale()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetBannerLayout ().setCenterScale ((float) @<值1>))
+    }
+
+    方法 设置移动速度 <公开 注释 = "用法：把XUI横幅布局的移动速度设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI横幅布局.setMoveSpeed()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetBannerLayout ().setMoveSpeed ((float) @<值1>))
+    }
+
+    方法 设置项间距 <公开 注释 = "用法：把XUI横幅布局的项间距设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI横幅布局.setItemSpace()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetBannerLayout ().setItemSpace (@<值1>))
+    }
+
+    方法 设置自动播放时长 <公开 注释 = "用法：把XUI横幅布局的自动播放时长设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI横幅布局.setAutoPlayDuration()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetBannerLayout ().setAutoPlayDuration (@<值1>))
+    }
+
+    方法 设置方位 <公开 注释 = "用法：把XUI横幅布局的方位设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI横幅布局.setOrientation()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetBannerLayout ().setOrientation (@<值1>))
+    }
+
+}
+
+类 XUI循环页视图 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.banner.widget.loopviewpager.LoopViewPager)."
+        @文档 = "category = \"XUI.组件\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.banner.widget.loopviewpager.LoopViewPager\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI循环页视图, LoopViewPager, com.xuexiang.xui.widget.banner.widget.loopviewpager.LoopViewPager)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetLoopViewPager ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI循环页视图的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI循环页视图.getAlpha()">
+    {
+        @ (double)@sn<this>.GetLoopViewPager ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI循环页视图的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI循环页视图.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLoopViewPager ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI循环页视图的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI循环页视图.isEnabled()">
+    {
+        @ @sn<this>.GetLoopViewPager ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI循环页视图的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI循环页视图.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLoopViewPager ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI循环页视图的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI循环页视图.isClickable()">
+    {
+        @ @sn<this>.GetLoopViewPager ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI循环页视图的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI循环页视图.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLoopViewPager ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI循环页视图的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI循环页视图.getElevation()">
+    {
+        @ (double)@sn<this>.GetLoopViewPager ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI循环页视图的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI循环页视图.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLoopViewPager ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI循环页视图的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI循环页视图.getMinimumHeight()">
+    {
+        @ @sn<this>.GetLoopViewPager ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI循环页视图的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI循环页视图.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLoopViewPager ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI循环页视图的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI循环页视图.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLoopViewPager ().setBackgroundColor (@<新值>))
+    }
+
+    方法 到真实位置 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：XUI循环页视图 的 到真实位置, 行为与 XUI 底层同名方法一致。 参数：值1=整数、值2=整数。 返回：整数。 原方法：XUI循环页视图.toRealPosition()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    {
+        @ @sn<this>.GetLoopViewPager ().toRealPosition (@<值1>, @<值2>)
+    }
+
+    方法 设置边界缓存 <公开 注释 = "用法：把XUI循环页视图的边界缓存设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI循环页视图.setBoundaryCaching()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLoopViewPager ().setBoundaryCaching (@<值1>))
+    }
+
+    方法 取当前项 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI循环页视图的当前项。 参数：无。 返回：整数。 原方法：XUI循环页视图.getCurrentItem()">
+    {
+        @ @sn<this>.GetLoopViewPager ().getCurrentItem ()
+    }
+
+    方法 设置当前项 <公开 注释 = "用法：把XUI循环页视图的当前项设为给定值。 参数：值1=整数、值2=真/假。 返回：无。 原方法：XUI循环页视图.setCurrentItem()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLoopViewPager ().setCurrentItem (@<值1>, @<值2>))
+    }
+
+    方法 设置当前项_2 <公开 注释 = "用法：把XUI循环页视图的当前项_2设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI循环页视图.setCurrentItem()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLoopViewPager ().setCurrentItem (@<值1>))
+    }
+
+    方法 清空响应页改变监听器组 <公开 注释 = "用法：清空XUI循环页视图的响应页改变监听器组。 参数：无。 返回：无。 原方法：XUI循环页视图.clearOnPageChangeListeners()">
+    {
+        @ @m<RUN_UI_ACTION> (GetLoopViewPager ().clearOnPageChangeListeners ())
+    }
+
+}

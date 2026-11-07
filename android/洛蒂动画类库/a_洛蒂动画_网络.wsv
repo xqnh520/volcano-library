@@ -1,0 +1,267 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.安卓.组件.洛蒂动画
+
+类 洛蒂可取消接口 <公开 @别名 = "com.airbnb.lottie.Cancellable" @禁止创建对象 = 真 注释 = "★ 封装自 com.airbnb.android:lottie:6.7.1 (档 B 面向用户层).">
+{
+
+    方法 取消 <公开 静态 注释 = "java: public abstract void cancel()">
+    参数 当前对象 <类型 = 洛蒂可取消接口>
+    {
+        @ @<当前对象>.cancel ();
+    }
+
+}
+
+类 洛蒂结果监听接口 <公开 @别名 = "com.airbnb.lottie.LottieListener" @禁止创建对象 = 真 注释 = "★ 封装自 com.airbnb.android:lottie:6.7.1 (档 B 面向用户层).">
+{
+
+    方法 响应结果 <公开 静态 注释 = "java: public abstract void onResult(T)">
+    参数 当前对象 <类型 = 洛蒂结果监听接口>
+    参数 结果 <类型 = 对象类>
+    {
+        @ @<当前对象>.onResult (@<结果>);
+    }
+
+}
+
+类 洛蒂日志接口 <公开 @别名 = "com.airbnb.lottie.LottieLogger" @禁止创建对象 = 真 注释 = "★ 封装自 com.airbnb.android:lottie:6.7.1 (档 B 面向用户层).">
+{
+
+    方法 报调试 <公开 静态 注释 = "java: public abstract void debug(java.lang.String)">
+    参数 当前对象 <类型 = 洛蒂日志接口>
+    参数 消息 <类型 = 文本型>
+    {
+        @ @<当前对象>.debug (@<消息>);
+    }
+
+    方法 报调试_可俘获异常 <公开 静态 注释 = "java: public abstract void debug(java.lang.String, java.lang.Throwable)">
+    参数 当前对象 <类型 = 洛蒂日志接口>
+    参数 消息 <类型 = 文本型>
+    参数 异常 <类型 = 可俘获异常类>
+    {
+        @ @<当前对象>.debug (@<消息>, @<异常>);
+    }
+
+    方法 报警告 <公开 静态 注释 = "java: public abstract void warning(java.lang.String)">
+    参数 当前对象 <类型 = 洛蒂日志接口>
+    参数 消息 <类型 = 文本型>
+    {
+        @ @<当前对象>.warning (@<消息>);
+    }
+
+    方法 报警告_可俘获异常 <公开 静态 注释 = "java: public abstract void warning(java.lang.String, java.lang.Throwable)">
+    参数 当前对象 <类型 = 洛蒂日志接口>
+    参数 消息 <类型 = 文本型>
+    参数 异常 <类型 = 可俘获异常类>
+    {
+        @ @<当前对象>.warning (@<消息>, @<异常>);
+    }
+
+    方法 报错误 <公开 静态 注释 = "java: public abstract void error(java.lang.String, java.lang.Throwable)">
+    参数 当前对象 <类型 = 洛蒂日志接口>
+    参数 消息 <类型 = 文本型>
+    参数 异常 <类型 = 可俘获异常类>
+    {
+        @ @<当前对象>.error (@<消息>, @<异常>);
+    }
+
+}
+
+类 洛蒂默认抓取结果 <公开 @别名 = "com.airbnb.lottie.network.DefaultLottieFetchResult" @禁止创建对象 = 真 注释 = "★ 封装自 com.airbnb.android:lottie:6.7.1 (档 B 面向用户层).">
+{
+
+    方法 新建默认抓取结果 <公开 静态 类型 = 洛蒂默认抓取结果 @嵌入式方法 = "" 注释 = "java: public com.airbnb.lottie.network.DefaultLottieFetchResult(java.net.HttpURLConnection)">
+    参数 连接 <类型 = 洛蒂HTTP连接类>
+    {
+        @ new com.airbnb.lottie.network.DefaultLottieFetchResult (@<连接>)
+    }
+
+    方法 是否成功 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isSuccessful()">
+    参数 当前对象 <类型 = 洛蒂默认抓取结果>
+    {
+        @ @<当前对象>.isSuccessful ()
+    }
+
+    方法 本体字节流 <公开 静态 类型 = 洛蒂输入流类 @嵌入式方法 = "" 注释 = "java: public java.io.InputStream bodyByteStream() throws java.io.IOException">
+    参数 当前对象 <类型 = 洛蒂默认抓取结果>
+    {
+        @ @<当前对象>.bodyByteStream ()
+    }
+
+    方法 内容类型 <公开 静态 类型 = 文本型 @嵌入式方法 = "" 注释 = "java: public java.lang.String contentType()">
+    参数 当前对象 <类型 = 洛蒂默认抓取结果>
+    {
+        @ @<当前对象>.contentType ()
+    }
+
+    方法 报错误 <公开 静态 类型 = 文本型 @嵌入式方法 = "" 注释 = "java: public java.lang.String error()">
+    参数 当前对象 <类型 = 洛蒂默认抓取结果>
+    {
+        @ @<当前对象>.error ()
+    }
+
+    方法 闭合 <公开 静态 注释 = "java: public void close()">
+    参数 当前对象 <类型 = 洛蒂默认抓取结果>
+    {
+        @ @<当前对象>.close ();
+    }
+
+}
+
+类 洛蒂默认网络抓取器 <公开 @别名 = "com.airbnb.lottie.network.DefaultLottieNetworkFetcher" @禁止创建对象 = 真 注释 = "★ 封装自 com.airbnb.android:lottie:6.7.1 (档 B 面向用户层).">
+{
+
+    方法 新建默认网络抓取器 <公开 静态 类型 = 洛蒂默认网络抓取器 @嵌入式方法 = "" 注释 = "java: public com.airbnb.lottie.network.DefaultLottieNetworkFetcher()">
+    {
+        @ new com.airbnb.lottie.network.DefaultLottieNetworkFetcher ()
+    }
+
+    方法 抓取同步 <公开 静态 类型 = 洛蒂抓取结果 @嵌入式方法 = "" 注释 = "java: public com.airbnb.lottie.network.LottieFetchResult fetchSync(java.lang.String) throws java.io.IOException">
+    参数 当前对象 <类型 = 洛蒂默认网络抓取器>
+    参数 网址 <类型 = 文本型>
+    {
+        @ @<当前对象>.fetchSync (@<网址>)
+    }
+
+}
+
+类 洛蒂文件扩展名 <公开 @别名 = "com.airbnb.lottie.network.FileExtension" @禁止创建对象 = 真 注释 = "★ 封装自 com.airbnb.android:lottie:6.7.1 (档 B 面向用户层).">
+{
+
+    方法 取枚举集 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "java: public static com.airbnb.lottie.network.FileExtension[] values()">
+    {
+        @ com.airbnb.lottie.network.FileExtension.values ()
+    }
+
+    方法 取枚举值 <公开 静态 类型 = 洛蒂文件扩展名 @嵌入式方法 = "" 注释 = "java: public static com.airbnb.lottie.network.FileExtension valueOf(java.lang.String)">
+    参数 参数1 <类型 = 文本型>
+    {
+        @ com.airbnb.lottie.network.FileExtension.valueOf (@<参数1>)
+    }
+
+    方法 临时扩展 <公开 静态 类型 = 文本型 @嵌入式方法 = "" 注释 = "java: public java.lang.String tempExtension()">
+    参数 当前对象 <类型 = 洛蒂文件扩展名>
+    {
+        @ @<当前对象>.tempExtension ()
+    }
+
+    方法 转为字符串 <公开 静态 类型 = 文本型 @嵌入式方法 = "" 注释 = "java: public java.lang.String toString()">
+    参数 当前对象 <类型 = 洛蒂文件扩展名>
+    {
+        @ @<当前对象>.toString ()
+    }
+
+    方法 JSON <公开 静态 类型 = 洛蒂文件扩展名 @嵌入式方法 = "" 注释 = "java 字段: public static final com.airbnb.lottie.network.FileExtension JSON">
+    {
+        @ com.airbnb.lottie.network.FileExtension.JSON
+    }
+
+    方法 ZIP <公开 静态 类型 = 洛蒂文件扩展名 @嵌入式方法 = "" 注释 = "java 字段: public static final com.airbnb.lottie.network.FileExtension ZIP">
+    {
+        @ com.airbnb.lottie.network.FileExtension.ZIP
+    }
+
+    方法 GZIP <公开 静态 类型 = 洛蒂文件扩展名 @嵌入式方法 = "" 注释 = "java 字段: public static final com.airbnb.lottie.network.FileExtension GZIP">
+    {
+        @ com.airbnb.lottie.network.FileExtension.GZIP
+    }
+
+    方法 扩展 <公开 静态 类型 = 文本型 @嵌入式方法 = "" 注释 = "java 字段: public final java.lang.String extension">
+    参数 当前对象 <类型 = 洛蒂文件扩展名>
+    {
+        @ @<当前对象>.extension
+    }
+
+}
+
+类 洛蒂抓取结果 <公开 @别名 = "com.airbnb.lottie.network.LottieFetchResult" @禁止创建对象 = 真 注释 = "★ 封装自 com.airbnb.android:lottie:6.7.1 (档 B 面向用户层).">
+{
+
+    方法 是否成功 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public abstract boolean isSuccessful()">
+    参数 当前对象 <类型 = 洛蒂抓取结果>
+    {
+        @ @<当前对象>.isSuccessful ()
+    }
+
+    方法 本体字节流 <公开 静态 类型 = 洛蒂输入流类 @嵌入式方法 = "" 注释 = "java: public abstract java.io.InputStream bodyByteStream() throws java.io.IOException">
+    参数 当前对象 <类型 = 洛蒂抓取结果>
+    {
+        @ @<当前对象>.bodyByteStream ()
+    }
+
+    方法 内容类型 <公开 静态 类型 = 文本型 @嵌入式方法 = "" 注释 = "java: public abstract java.lang.String contentType()">
+    参数 当前对象 <类型 = 洛蒂抓取结果>
+    {
+        @ @<当前对象>.contentType ()
+    }
+
+    方法 报错误 <公开 静态 类型 = 文本型 @嵌入式方法 = "" 注释 = "java: public abstract java.lang.String error()">
+    参数 当前对象 <类型 = 洛蒂抓取结果>
+    {
+        @ @<当前对象>.error ()
+    }
+
+}
+
+类 洛蒂网络缓存提供者 <公开 @别名 = "com.airbnb.lottie.network.LottieNetworkCacheProvider" @禁止创建对象 = 真 注释 = "★ 封装自 com.airbnb.android:lottie:6.7.1 (档 B 面向用户层).">
+{
+
+    方法 取缓存目录 <公开 静态 类型 = 洛蒂文件类 @嵌入式方法 = "" 注释 = "java: public abstract java.io.File getCacheDir()">
+    参数 当前对象 <类型 = 洛蒂网络缓存提供者>
+    {
+        @ @<当前对象>.getCacheDir ()
+    }
+
+}
+
+类 洛蒂网络抓取接口 <公开 @别名 = "com.airbnb.lottie.network.LottieNetworkFetcher" @禁止创建对象 = 真 注释 = "★ 封装自 com.airbnb.android:lottie:6.7.1 (档 B 面向用户层).">
+{
+
+    方法 抓取同步 <公开 静态 类型 = 洛蒂抓取结果 @嵌入式方法 = "" 注释 = "java: public abstract com.airbnb.lottie.network.LottieFetchResult fetchSync(java.lang.String) throws java.io.IOException">
+    参数 当前对象 <类型 = 洛蒂网络抓取接口>
+    参数 网址 <类型 = 文本型>
+    {
+        @ @<当前对象>.fetchSync (@<网址>)
+    }
+
+}
+
+类 洛蒂网络缓存 <公开 @别名 = "com.airbnb.lottie.network.NetworkCache" @禁止创建对象 = 真 注释 = "★ 封装自 com.airbnb.android:lottie:6.7.1 (档 B 面向用户层).">
+{
+
+    方法 新建网络缓存 <公开 静态 类型 = 洛蒂网络缓存 @嵌入式方法 = "" 注释 = "java: public com.airbnb.lottie.network.NetworkCache(com.airbnb.lottie.network.LottieNetworkCacheProvider)">
+    参数 缓存提供者 <类型 = 洛蒂网络缓存提供者>
+    {
+        @ new com.airbnb.lottie.network.NetworkCache (@<缓存提供者>)
+    }
+
+    方法 清空 <公开 静态 注释 = "java: public void clear()">
+    参数 当前对象 <类型 = 洛蒂网络缓存>
+    {
+        @ @<当前对象>.clear ();
+    }
+
+}
+
+类 洛蒂网络抓取器 <公开 @别名 = "com.airbnb.lottie.network.NetworkFetcher" @禁止创建对象 = 真 注释 = "★ 封装自 com.airbnb.android:lottie:6.7.1 (档 B 面向用户层).">
+{
+
+    方法 新建网络抓取器 <公开 静态 类型 = 洛蒂网络抓取器 @嵌入式方法 = "" 注释 = "java: public com.airbnb.lottie.network.NetworkFetcher(com.airbnb.lottie.network.NetworkCache, com.airbnb.lottie.network.LottieNetworkFetcher)">
+    参数 网络缓存 <类型 = 洛蒂网络缓存>
+    参数 抓取器 <类型 = 洛蒂网络抓取接口>
+    {
+        @ new com.airbnb.lottie.network.NetworkFetcher (@<网络缓存>, @<抓取器>)
+    }
+
+    方法 抓取同步 <公开 静态 类型 = 洛蒂结果 @嵌入式方法 = "" 注释 = "java: public com.airbnb.lottie.LottieResult<com.airbnb.lottie.LottieComposition> fetchSync(android.content.Context, java.lang.String, java.lang.String)">
+    参数 当前对象 <类型 = 洛蒂网络抓取器>
+    参数 上下文 <类型 = 安卓窗口环境>
+    参数 网址 <类型 = 文本型>
+    参数 缓存键 <类型 = 文本型>
+    {
+        @ @<当前对象>.fetchSync (@<上下文>, @<网址>, @<缓存键>)
+    }
+
+}
+

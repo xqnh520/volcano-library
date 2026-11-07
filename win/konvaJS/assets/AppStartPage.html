@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Konva WebView2 Canvas</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="panel">
+      <div class="panel-title">Konva 画布</div>
+      <label>
+        绘图模式
+        <select id="tool">
+          <option value="select">选择/拖放</option>
+          <option value="rect">画矩形</option>
+          <option value="circle">画圆形</option>
+          <option value="ellipse">画椭圆</option>
+          <option value="line">画直线</option>
+          <option value="free">自由画笔</option>
+        </select>
+      </label>
+      <label>
+        宽度
+        <input id="shapeWidth" type="number" min="1" value="160">
+      </label>
+      <label>
+        高度
+        <input id="shapeHeight" type="number" min="1" value="90">
+      </label>
+      <label>
+        填充色
+        <input id="fill" type="color" value="#2f80ed">
+      </label>
+      <label>
+        线条色
+        <input id="stroke" type="color" value="#1f2937">
+      </label>
+      <div class="buttons">
+        <button id="addRect">添加矩形</button>
+        <button id="addCircle">添加圆形</button>
+        <button id="applySize">修改选中尺寸</button>
+        <button id="clear">清空</button>
+      </div>
+      <textarea id="eventLog" spellcheck="false" readonly></textarea>
+    </aside>
+    <main class="canvas-wrap">
+      <div id="container"></div>
+    </main>
+  </div>
+  <script src="./konva.js"></script>
+  <script src="./konva_bridge.js"></script>
+  <script>
+    window.KonvaBridge.startDemo();
+  </script>
+</body>
+</html>

@@ -1,0 +1,1305 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.Box2D <注释 = "关节定义与 9 种关节共 151 个接口 · Box2D 3.2.0 单精度" @视窗.头文件搜寻目录 = "include"
+        @视窗.外部头文件 = "b2vol.h" @视窗.库文件搜寻目录 = "lib/x64"
+        @视窗.外部库 = "box2d$(d).lib">
+
+类 B2关节定义 <公开 注释 = "关节定义 · b2JointDef" @别名 = "b2JointDef" @别名类型 = 本地结构>
+{
+    变量 刚体标识甲 <公开 类型 = B2刚体标识 注释 = "第一个相连的刚体 · b2JointDef.bodyIdA" @输出名 = "bodyIdA">
+    变量 刚体标识乙 <公开 类型 = B2刚体标识 注释 = "第二个相连的刚体 · b2JointDef.bodyIdB" @输出名 = "bodyIdB">
+    变量 局部坐标系甲 <公开 类型 = B2变换 注释 = "第一个关节的局部坐标系 · b2JointDef.localFrameA" @输出名 = "localFrameA">
+    变量 局部坐标系乙 <公开 类型 = B2变换 注释 = "第二个关节的局部坐标系 · b2JointDef.localFrameB" @输出名 = "localFrameB">
+    变量 力阈值 <公开 类型 = 单精度小数 注释 = "关节事件的力阈值 · b2JointDef.forceThreshold" @输出名 = "forceThreshold">
+    变量 扭矩阈值 <公开 类型 = 单精度小数 注释 = "关节事件的扭矩阈值 · b2JointDef.torqueThreshold" @输出名 = "torqueThreshold">
+    变量 约束赫兹 <公开 类型 = 单精度小数 注释 = "约束刚度，高级选项 · b2JointDef.constraintHertz" @输出名 = "constraintHertz">
+    变量 约束阻尼比 <公开 类型 = 单精度小数 注释 = "约束阻尼比，高级选项 · b2JointDef.constraintDampingRatio" @输出名 = "constraintDampingRatio">
+    变量 绘制倍率 <公开 类型 = 单精度小数 注释 = "调试绘制缩放 · b2JointDef.drawScale" @输出名 = "drawScale">
+    变量 允许连接体碰撞 <公开 类型 = 逻辑型 注释 = "相连两刚体之间是否互相碰撞 · b2JointDef.collideConnected" @输出名 = "collideConnected">
+
+    方法 取用户数据指针 <公开 静态 类型 = 变整数 注释 = "读取用户数据字段指针 · b2vol_jointDef_getUserData" @嵌入式方法 = "">
+    参数 定义 <类型 = B2关节定义>
+    {
+        @ (intptr_t)b2vol_jointDef_getUserData(&@<定义>)
+    }
+
+    方法 置用户数据指针 <公开 静态 注释 = "写入用户数据字段指针 · b2vol_jointDef_setUserData" @嵌入式方法 = "">
+    参数 定义 <类型 = B2关节定义>
+    参数 新值 <类型 = 变整数>
+    {
+        @ b2vol_jointDef_setUserData(&@<定义>, (void*)@<新值>)
+    }
+
+}
+
+类 B2距离关节定义 <公开 注释 = "距离关节定义 · b2DistanceJointDef" @别名 = "b2DistanceJointDef" @别名类型 = 本地结构>
+{
+    变量 基础定义 <公开 类型 = B2关节定义 注释 = "关节基础定义 · b2DistanceJointDef.base" @输出名 = "base">
+    变量 长度值 <公开 类型 = 单精度小数 注释 = "该关节的静止长度 · b2DistanceJointDef.length" @输出名 = "length">
+    变量 启用弹簧 <公开 类型 = 逻辑型 注释 = "让距离约束表现为弹簧 · b2DistanceJointDef.enableSpring" @输出名 = "enableSpring">
+    变量 下弹簧力 <公开 类型 = 单精度小数 注释 = "弹簧力下限，控制可承受的最大拉力 · b2DistanceJointDef.lowerSpringForce" @输出名 = "lowerSpringForce">
+    变量 上弹簧力 <公开 类型 = 单精度小数 注释 = "弹簧力上限，控制可承受的最大压力 · b2DistanceJointDef.upperSpringForce" @输出名 = "upperSpringForce">
+    变量 赫兹 <公开 类型 = 单精度小数 注释 = "弹簧线性刚度，单位为每秒周期数 · b2DistanceJointDef.hertz" @输出名 = "hertz">
+    变量 阻尼比 <公开 类型 = 单精度小数 注释 = "弹簧线性阻尼比，无量纲 · b2DistanceJointDef.dampingRatio" @输出名 = "dampingRatio">
+    变量 启用限制 <公开 类型 = 逻辑型 注释 = "启用或禁用关节限制 · b2DistanceJointDef.enableLimit" @输出名 = "enableLimit">
+    变量 最小长度 <公开 类型 = 单精度小数 注释 = "限制所用的最小长度 · b2DistanceJointDef.minLength" @输出名 = "minLength">
+    变量 最大长度 <公开 类型 = 单精度小数 注释 = "限制所用的最大长度 · b2DistanceJointDef.maxLength" @输出名 = "maxLength">
+    变量 启用马达 <公开 类型 = 逻辑型 注释 = "启用或禁用关节马达 · b2DistanceJointDef.enableMotor" @输出名 = "enableMotor">
+    变量 最大马达力 <公开 类型 = 单精度小数 注释 = "马达最大力，单位为牛顿 · b2DistanceJointDef.maxMotorForce" @输出名 = "maxMotorForce">
+    变量 马达速度 <公开 类型 = 单精度小数 注释 = "期望的马达速度，单位为米每秒 · b2DistanceJointDef.motorSpeed" @输出名 = "motorSpeed">
+    变量 内部值 <公开 类型 = 整数 注释 = "内部用，检测定义是否有效 · b2DistanceJointDef.internalValue" @输出名 = "internalValue">
+    方法 取默认定义 <公开 静态 类型 = B2距离关节定义 注释 = "用此函数初始化距离关节定义 · b2DefaultDistanceJointDef" @嵌入式方法 = "">
+    {
+        @ b2DefaultDistanceJointDef()
+    }
+
+}
+
+类 B2过滤关节定义 <公开 注释 = "过滤关节定义 · b2FilterJointDef" @别名 = "b2FilterJointDef" @别名类型 = 本地结构>
+{
+    变量 基础定义 <公开 类型 = B2关节定义 注释 = "关节基础定义 · b2FilterJointDef.base" @输出名 = "base">
+    变量 内部值 <公开 类型 = 整数 注释 = "内部用，检测定义是否有效 · b2FilterJointDef.internalValue" @输出名 = "internalValue">
+    方法 取默认定义 <公开 静态 类型 = B2过滤关节定义 注释 = "用此函数初始化过滤关节定义 · b2DefaultFilterJointDef" @嵌入式方法 = "">
+    {
+        @ b2DefaultFilterJointDef()
+    }
+
+}
+
+类 B2马达关节定义 <公开 注释 = "马达关节定义 · b2MotorJointDef" @别名 = "b2MotorJointDef" @别名类型 = 本地结构>
+{
+    变量 基础定义 <公开 类型 = B2关节定义 注释 = "关节基础定义 · b2MotorJointDef.base" @输出名 = "base">
+    变量 线速度 <公开 类型 = B2向量 注释 = "期望的线速度 · b2MotorJointDef.linearVelocity" @输出名 = "linearVelocity">
+    变量 最大速度力 <公开 类型 = 单精度小数 注释 = "马达最大力，单位为牛顿 · b2MotorJointDef.maxVelocityForce" @输出名 = "maxVelocityForce">
+    变量 角速度 <公开 类型 = 单精度小数 注释 = "期望的角速度 · b2MotorJointDef.angularVelocity" @输出名 = "angularVelocity">
+    变量 最大速度扭矩 <公开 类型 = 单精度小数 注释 = "马达最大扭矩，单位为牛顿米 · b2MotorJointDef.maxVelocityTorque" @输出名 = "maxVelocityTorque">
+    变量 线赫兹 <公开 类型 = 单精度小数 注释 = "位置控制所用的线性弹簧刚度 · b2MotorJointDef.linearHertz" @输出名 = "linearHertz">
+    变量 线阻尼比 <公开 类型 = 单精度小数 注释 = "线性弹簧阻尼比 · b2MotorJointDef.linearDampingRatio" @输出名 = "linearDampingRatio">
+    变量 最大弹簧力 <公开 类型 = 单精度小数 注释 = "弹簧最大力，单位为牛顿 · b2MotorJointDef.maxSpringForce" @输出名 = "maxSpringForce">
+    变量 角赫兹 <公开 类型 = 单精度小数 注释 = "位置控制所用的角弹簧刚度 · b2MotorJointDef.angularHertz" @输出名 = "angularHertz">
+    变量 角阻尼比 <公开 类型 = 单精度小数 注释 = "角弹簧阻尼比 · b2MotorJointDef.angularDampingRatio" @输出名 = "angularDampingRatio">
+    变量 最大弹簧扭矩 <公开 类型 = 单精度小数 注释 = "弹簧最大扭矩，单位为牛顿米 · b2MotorJointDef.maxSpringTorque" @输出名 = "maxSpringTorque">
+    变量 内部值 <公开 类型 = 整数 注释 = "内部用，检测定义是否有效 · b2MotorJointDef.internalValue" @输出名 = "internalValue">
+    方法 取默认定义 <公开 静态 类型 = B2马达关节定义 注释 = "用此函数初始化马达关节定义 · b2DefaultMotorJointDef" @嵌入式方法 = "">
+    {
+        @ b2DefaultMotorJointDef()
+    }
+
+}
+
+类 B2移动关节定义 <公开 注释 = "移动关节定义 · b2MoverJointDef" @别名 = "b2MoverJointDef" @别名类型 = 本地结构>
+{
+    变量 基础定义 <公开 类型 = B2关节定义 注释 = "关节基础定义 · b2MoverJointDef.base" @输出名 = "base">
+    变量 线速度 <公开 类型 = B2向量 注释 = "期望的线速度 · b2MoverJointDef.linearVelocity" @输出名 = "linearVelocity">
+    变量 最大速度力 <公开 类型 = B2向量 注释 = "马达最大力，单位为牛顿 · b2MoverJointDef.maxVelocityForce" @输出名 = "maxVelocityForce">
+    变量 内部值 <公开 类型 = 整数 注释 = "内部用，检测定义是否有效 · b2MoverJointDef.internalValue" @输出名 = "internalValue">
+    方法 取默认定义 <公开 静态 类型 = B2移动关节定义 注释 = "用此函数初始化移动体关节定义 · b2DefaultMoverJointDef" @嵌入式方法 = "">
+    {
+        @ b2DefaultMoverJointDef()
+    }
+
+}
+
+类 B2弹簧关节定义 <公开 注释 = "弹簧关节定义 · b2PogoJointDef" @别名 = "b2PogoJointDef" @别名类型 = 本地结构>
+{
+    变量 基础定义 <公开 类型 = B2关节定义 注释 = "关节基础定义 · b2PogoJointDef.base" @输出名 = "base">
+    变量 法线 <公开 类型 = B2向量 注释 = "接触处的法线 · b2PogoJointDef.normal" @输出名 = "normal">
+    变量 赫兹 <公开 类型 = 单精度小数 注释 = "弹簧刚度，单位为每秒周期数 · b2PogoJointDef.hertz" @输出名 = "hertz">
+    变量 阻尼比 <公开 类型 = 单精度小数 注释 = "弹簧阻尼比，无量纲 · b2PogoJointDef.dampingRatio" @输出名 = "dampingRatio">
+    变量 静止长度 <公开 类型 = 单精度小数 注释 = "弹簧长度 · b2PogoJointDef.restLength" @输出名 = "restLength">
+    变量 最大拉力 <公开 类型 = 单精度小数 注释 = "最大拉伸力 · b2PogoJointDef.maxTensionForce" @输出名 = "maxTensionForce">
+    变量 最大压缩力 <公开 类型 = 单精度小数 注释 = "最大压缩力 · b2PogoJointDef.maxCompressionForce" @输出名 = "maxCompressionForce">
+    变量 冲量 <公开 类型 = 单精度小数 注释 = "弹跳关节的初始内部冲量 · b2PogoJointDef.impulse" @输出名 = "impulse">
+    变量 速度 <公开 类型 = 单精度小数 注释 = "弹跳关节的初始内部速度 · b2PogoJointDef.velocity" @输出名 = "velocity">
+    变量 内部值 <公开 类型 = 整数 注释 = "内部用，检测定义是否有效 · b2PogoJointDef.internalValue" @输出名 = "internalValue">
+    方法 取默认定义 <公开 静态 类型 = B2弹簧关节定义 注释 = "用此函数初始化弹跳关节定义 · b2DefaultPogoJointDef" @嵌入式方法 = "">
+    {
+        @ b2DefaultPogoJointDef()
+    }
+
+}
+
+类 B2棱柱关节定义 <公开 注释 = "棱柱关节定义 · b2PrismaticJointDef" @别名 = "b2PrismaticJointDef" @别名类型 = 本地结构>
+{
+    变量 基础定义 <公开 类型 = B2关节定义 注释 = "关节基础定义 · b2PrismaticJointDef.base" @输出名 = "base">
+    变量 启用弹簧 <公开 类型 = 逻辑型 注释 = "沿滑动轴启用线性弹簧 · b2PrismaticJointDef.enableSpring" @输出名 = "enableSpring">
+    变量 赫兹 <公开 类型 = 单精度小数 注释 = "弹簧刚度，单位为每秒周期数 · b2PrismaticJointDef.hertz" @输出名 = "hertz">
+    变量 阻尼比 <公开 类型 = 单精度小数 注释 = "弹簧阻尼比，无量纲 · b2PrismaticJointDef.dampingRatio" @输出名 = "dampingRatio">
+    变量 目标平移 <公开 类型 = 单精度小数 注释 = "关节的目标平移量，单位为米 · b2PrismaticJointDef.targetTranslation" @输出名 = "targetTranslation">
+    变量 启用限制 <公开 类型 = 逻辑型 注释 = "启用或禁用关节限制 · b2PrismaticJointDef.enableLimit" @输出名 = "enableLimit">
+    变量 下限平移 <公开 类型 = 单精度小数 注释 = "平移下限 · b2PrismaticJointDef.lowerTranslation" @输出名 = "lowerTranslation">
+    变量 上限平移 <公开 类型 = 单精度小数 注释 = "平移上限 · b2PrismaticJointDef.upperTranslation" @输出名 = "upperTranslation">
+    变量 启用马达 <公开 类型 = 逻辑型 注释 = "启用或禁用关节马达 · b2PrismaticJointDef.enableMotor" @输出名 = "enableMotor">
+    变量 最大马达力 <公开 类型 = 单精度小数 注释 = "马达最大力，通常以牛顿计 · b2PrismaticJointDef.maxMotorForce" @输出名 = "maxMotorForce">
+    变量 马达速度 <公开 类型 = 单精度小数 注释 = "期望的马达速度，通常以米每秒计 · b2PrismaticJointDef.motorSpeed" @输出名 = "motorSpeed">
+    变量 内部值 <公开 类型 = 整数 注释 = "内部用，检测定义是否有效 · b2PrismaticJointDef.internalValue" @输出名 = "internalValue">
+    方法 取默认定义 <公开 静态 类型 = B2棱柱关节定义 注释 = "用此函数初始化滑动关节定义 · b2DefaultPrismaticJointDef" @嵌入式方法 = "">
+    {
+        @ b2DefaultPrismaticJointDef()
+    }
+
+}
+
+类 B2旋转关节定义 <公开 注释 = "旋转关节定义 · b2RevoluteJointDef" @别名 = "b2RevoluteJointDef" @别名类型 = 本地结构>
+{
+    变量 基础定义 <公开 类型 = B2关节定义 注释 = "关节基础定义 · b2RevoluteJointDef.base" @输出名 = "base">
+    变量 目标角度 <公开 类型 = 单精度小数 注释 = "关节的目标角度，单位为弧度 · b2RevoluteJointDef.targetAngle" @输出名 = "targetAngle">
+    变量 启用弹簧 <公开 类型 = 逻辑型 注释 = "在旋转轴上启用旋转弹簧 · b2RevoluteJointDef.enableSpring" @输出名 = "enableSpring">
+    变量 赫兹 <公开 类型 = 单精度小数 注释 = "弹簧刚度，单位为每秒周期数 · b2RevoluteJointDef.hertz" @输出名 = "hertz">
+    变量 阻尼比 <公开 类型 = 单精度小数 注释 = "弹簧阻尼比，无量纲 · b2RevoluteJointDef.dampingRatio" @输出名 = "dampingRatio">
+    变量 启用限制 <公开 类型 = 逻辑型 注释 = "是否启用关节限制 · b2RevoluteJointDef.enableLimit" @输出名 = "enableLimit">
+    变量 下限角度 <公开 类型 = 单精度小数 注释 = "关节限制的下角，单位为弧度 · b2RevoluteJointDef.lowerAngle" @输出名 = "lowerAngle">
+    变量 上限角度 <公开 类型 = 单精度小数 注释 = "关节限制的上角，单位为弧度 · b2RevoluteJointDef.upperAngle" @输出名 = "upperAngle">
+    变量 启用马达 <公开 类型 = 逻辑型 注释 = "是否启用关节马达 · b2RevoluteJointDef.enableMotor" @输出名 = "enableMotor">
+    变量 最大马达扭矩 <公开 类型 = 单精度小数 注释 = "马达最大扭矩，通常以牛顿米计 · b2RevoluteJointDef.maxMotorTorque" @输出名 = "maxMotorTorque">
+    变量 马达速度 <公开 类型 = 单精度小数 注释 = "期望的马达速度，单位为弧度每秒 · b2RevoluteJointDef.motorSpeed" @输出名 = "motorSpeed">
+    变量 内部值 <公开 类型 = 整数 注释 = "内部用，检测定义是否有效 · b2RevoluteJointDef.internalValue" @输出名 = "internalValue">
+    方法 取默认定义 <公开 静态 类型 = B2旋转关节定义 注释 = "用此函数初始化旋转关节定义 · b2DefaultRevoluteJointDef" @嵌入式方法 = "">
+    {
+        @ b2DefaultRevoluteJointDef()
+    }
+
+}
+
+类 B2焊接关节定义 <公开 注释 = "焊接关节定义 · b2WeldJointDef" @别名 = "b2WeldJointDef" @别名类型 = 本地结构>
+{
+    变量 基础定义 <公开 类型 = B2关节定义 注释 = "关节基础定义 · b2WeldJointDef.base" @输出名 = "base">
+    变量 线赫兹 <公开 类型 = 单精度小数 注释 = "线性刚度，以赫兹表示 · b2WeldJointDef.linearHertz" @输出名 = "linearHertz">
+    变量 角赫兹 <公开 类型 = 单精度小数 注释 = "角刚度，以赫兹表示 · b2WeldJointDef.angularHertz" @输出名 = "angularHertz">
+    变量 线阻尼比 <公开 类型 = 单精度小数 注释 = "线性阻尼比，无量纲 · b2WeldJointDef.linearDampingRatio" @输出名 = "linearDampingRatio">
+    变量 角阻尼比 <公开 类型 = 单精度小数 注释 = "角阻尼比，无量纲 · b2WeldJointDef.angularDampingRatio" @输出名 = "angularDampingRatio">
+    变量 内部值 <公开 类型 = 整数 注释 = "内部用，检测定义是否有效 · b2WeldJointDef.internalValue" @输出名 = "internalValue">
+    方法 取默认定义 <公开 静态 类型 = B2焊接关节定义 注释 = "用此函数初始化焊接关节定义 · b2DefaultWeldJointDef" @嵌入式方法 = "">
+    {
+        @ b2DefaultWeldJointDef()
+    }
+
+}
+
+类 B2车轮关节定义 <公开 注释 = "车轮关节定义 · b2WheelJointDef" @别名 = "b2WheelJointDef" @别名类型 = 本地结构>
+{
+    变量 基础定义 <公开 类型 = B2关节定义 注释 = "关节基础定义 · b2WheelJointDef.base" @输出名 = "base">
+    变量 启用弹簧 <公开 类型 = 逻辑型 注释 = "沿局部轴启用线性弹簧 · b2WheelJointDef.enableSpring" @输出名 = "enableSpring">
+    变量 赫兹 <公开 类型 = 单精度小数 注释 = "弹簧刚度，单位为赫兹 · b2WheelJointDef.hertz" @输出名 = "hertz">
+    变量 阻尼比 <公开 类型 = 单精度小数 注释 = "弹簧阻尼比，无量纲 · b2WheelJointDef.dampingRatio" @输出名 = "dampingRatio">
+    变量 启用限制 <公开 类型 = 逻辑型 注释 = "启用或禁用关节线性限制 · b2WheelJointDef.enableLimit" @输出名 = "enableLimit">
+    变量 下限平移 <公开 类型 = 单精度小数 注释 = "平移下限 · b2WheelJointDef.lowerTranslation" @输出名 = "lowerTranslation">
+    变量 上限平移 <公开 类型 = 单精度小数 注释 = "平移上限 · b2WheelJointDef.upperTranslation" @输出名 = "upperTranslation">
+    变量 启用马达 <公开 类型 = 逻辑型 注释 = "启用或禁用关节旋转马达 · b2WheelJointDef.enableMotor" @输出名 = "enableMotor">
+    变量 最大马达扭矩 <公开 类型 = 单精度小数 注释 = "马达最大扭矩，通常以牛顿米计 · b2WheelJointDef.maxMotorTorque" @输出名 = "maxMotorTorque">
+    变量 马达速度 <公开 类型 = 单精度小数 注释 = "期望的马达速度，单位为弧度每秒 · b2WheelJointDef.motorSpeed" @输出名 = "motorSpeed">
+    变量 内部值 <公开 类型 = 整数 注释 = "内部用，检测定义是否有效 · b2WheelJointDef.internalValue" @输出名 = "internalValue">
+    方法 取默认定义 <公开 静态 类型 = B2车轮关节定义 注释 = "用此函数初始化车轮关节定义 · b2DefaultWheelJointDef" @嵌入式方法 = "">
+    {
+        @ b2DefaultWheelJointDef()
+    }
+
+}
+
+类 B2关节 <公开 注释 = "关节 · 接口包装类">
+{
+    方法 销毁关节 <公开 静态 注释 = "销毁关节 · b2DestroyJoint" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2DestroyJoint(@<关节标识>)
+    }
+
+    方法 是否有效 <公开 静态 类型 = 逻辑型 注释 = "校验关节标识是否有效 · b2Joint_IsValid" @嵌入式方法 = "">
+    参数 标识 <类型 = B2关节标识>
+    {
+        @ (b2Joint_IsValid(@<标识>) != 0)
+    }
+
+    方法 取类型 <公开 静态 类型 = 整数 注释 = "取关节类型 · b2Joint_GetType" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ (int)b2Joint_GetType(@<关节标识>)
+    }
+
+    方法 取刚体甲 <公开 静态 类型 = B2刚体标识 注释 = "取关节上的刚体甲标识 · b2Joint_GetBodyA" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2Joint_GetBodyA(@<关节标识>)
+    }
+
+    方法 取刚体乙 <公开 静态 类型 = B2刚体标识 注释 = "取关节上的刚体乙标识 · b2Joint_GetBodyB" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2Joint_GetBodyB(@<关节标识>)
+    }
+
+    方法 取世界 <公开 静态 类型 = B2世界标识 注释 = "取拥有该关节的世界 · b2Joint_GetWorld" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2Joint_GetWorld(@<关节标识>)
+    }
+
+    方法 置局部坐标系甲 <公开 静态 注释 = "设置刚体甲上的局部坐标系 · b2Joint_SetLocalFrameA" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    参数 局部坐标系 <类型 = B2变换>
+    {
+        @ b2Joint_SetLocalFrameA(@<关节标识>, @<局部坐标系>)
+    }
+
+    方法 取局部坐标系甲 <公开 静态 类型 = B2变换 注释 = "取刚体甲上的局部坐标系 · b2Joint_GetLocalFrameA" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2Joint_GetLocalFrameA(@<关节标识>)
+    }
+
+    方法 置局部坐标系乙 <公开 静态 注释 = "设置刚体乙上的局部坐标系 · b2Joint_SetLocalFrameB" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    参数 局部坐标系 <类型 = B2变换>
+    {
+        @ b2Joint_SetLocalFrameB(@<关节标识>, @<局部坐标系>)
+    }
+
+    方法 取局部坐标系乙 <公开 静态 类型 = B2变换 注释 = "取刚体乙上的局部坐标系 · b2Joint_GetLocalFrameB" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2Joint_GetLocalFrameB(@<关节标识>)
+    }
+
+    方法 置求碰撞连接 <公开 静态 注释 = "切换相连两刚体之间是否碰撞 · b2Joint_SetCollideConnected" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    参数 应当碰撞 <类型 = 逻辑型>
+    {
+        @ b2Joint_SetCollideConnected(@<关节标识>, (@<应当碰撞> != 0))
+    }
+
+    方法 取求碰撞连接 <公开 静态 类型 = 逻辑型 注释 = "相连两刚体之间是否允许碰撞 · b2Joint_GetCollideConnected" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ (b2Joint_GetCollideConnected(@<关节标识>) != 0)
+    }
+
+    方法 置用户数据 <公开 静态 注释 = "设置关节上的用户数据 · b2Joint_SetUserData" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    参数 用户数据 <类型 = 变整数>
+    {
+        @ b2Joint_SetUserData(@<关节标识>, (void*)@<用户数据>)
+    }
+
+    方法 取用户数据 <公开 静态 类型 = 变整数 注释 = "取关节上的用户数据 · b2Joint_GetUserData" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ (intptr_t)b2Joint_GetUserData(@<关节标识>)
+    }
+
+    方法 唤醒刚体 <公开 静态 注释 = "唤醒与该关节相连的刚体 · b2Joint_WakeBodies" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2Joint_WakeBodies(@<关节标识>)
+    }
+
+    方法 取约束力 <公开 静态 类型 = B2向量 注释 = "取该关节当前的约束力 · b2Joint_GetConstraintForce" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2Joint_GetConstraintForce(@<关节标识>)
+    }
+
+    方法 取约束扭矩 <公开 静态 类型 = 小数 注释 = "取该关节当前的约束扭矩 · b2Joint_GetConstraintTorque" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2Joint_GetConstraintTorque(@<关节标识>)
+    }
+
+    方法 取线性分离 <公开 静态 类型 = 小数 注释 = "取该关节当前的线分离误差 · b2Joint_GetLinearSeparation" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2Joint_GetLinearSeparation(@<关节标识>)
+    }
+
+    方法 取角度分离 <公开 静态 类型 = 小数 注释 = "取该关节当前的角分离误差 · b2Joint_GetAngularSeparation" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2Joint_GetAngularSeparation(@<关节标识>)
+    }
+
+    方法 置约束调优 <公开 静态 注释 = "设置关节约束调优参数 · b2Joint_SetConstraintTuning" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    参数 赫兹 <类型 = 单精度小数>
+    参数 阻尼比 <类型 = 单精度小数>
+    {
+        @ b2Joint_SetConstraintTuning(@<关节标识>, (float)@<赫兹>, (float)@<阻尼比>)
+    }
+
+    方法 取约束调优频率 <公开 静态 类型 = 小数 注释 = "取关节约束调优参数 · b2Joint_GetConstraintTuning">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        变量 返回结果 <类型 = 小数>
+        @ b2vol_joint_getConstraintTuning(@<关节标识>);
+        @ @<返回结果> = b2vol_jt_hertz();
+        返回 (返回结果)
+    }
+
+    方法 取约束调优阻尼比 <公开 静态 类型 = 小数 注释 = "取关节约束调优参数 · b2Joint_GetConstraintTuning">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        变量 返回结果 <类型 = 小数>
+        @ b2vol_joint_getConstraintTuning(@<关节标识>);
+        @ @<返回结果> = b2vol_jt_damping();
+        返回 (返回结果)
+    }
+
+    方法 置力阈值 <公开 静态 注释 = "设置关节事件的力阈值，单位为牛顿 · b2Joint_SetForceThreshold" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    参数 阈值 <类型 = 单精度小数>
+    {
+        @ b2Joint_SetForceThreshold(@<关节标识>, (float)@<阈值>)
+    }
+
+    方法 取力阈值 <公开 静态 类型 = 小数 注释 = "取关节事件的力阈值，单位为牛顿 · b2Joint_GetForceThreshold" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2Joint_GetForceThreshold(@<关节标识>)
+    }
+
+    方法 置扭矩阈值 <公开 静态 注释 = "设置关节事件的扭矩阈值，单位为牛顿米 · b2Joint_SetTorqueThreshold" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    参数 阈值 <类型 = 单精度小数>
+    {
+        @ b2Joint_SetTorqueThreshold(@<关节标识>, (float)@<阈值>)
+    }
+
+    方法 取扭矩阈值 <公开 静态 类型 = 小数 注释 = "取关节事件的扭矩阈值，单位为牛顿米 · b2Joint_GetTorqueThreshold" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2Joint_GetTorqueThreshold(@<关节标识>)
+    }
+
+}
+
+类 B2距离关节 <公开 注释 = "距离关节 · 接口包装类">
+{
+    方法 创建距离关节 <公开 静态 类型 = B2关节标识 注释 = "创建距离关节 · b2CreateDistanceJoint" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    参数 定义 <类型 = B2距离关节定义>
+    {
+        @ b2CreateDistanceJoint(@<世界标识>, &@<定义>)
+    }
+
+    方法 置静止长度 <公开 静态 注释 = "设置距离关节的静止长度 · b2DistanceJoint_SetRestLength" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    参数 长度 <类型 = 单精度小数>
+    {
+        @ b2DistanceJoint_SetRestLength(@<关节标识>, (float)@<长度>)
+    }
+
+    方法 取静止长度 <公开 静态 类型 = 小数 注释 = "取距离关节的静止长度 · b2DistanceJoint_GetRestLength" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2DistanceJoint_GetRestLength(@<关节标识>)
+    }
+
+    方法 启用弹簧 <公开 静态 注释 = "启用或禁用距离关节弹簧 · b2DistanceJoint_EnableSpring" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    参数 启用弹簧 <类型 = 逻辑型>
+    {
+        @ b2DistanceJoint_EnableSpring(@<关节标识>, (@<启用弹簧> != 0))
+    }
+
+    方法 是否弹簧已启用 <公开 静态 类型 = 逻辑型 注释 = "距离关节弹簧是否已启用 · b2DistanceJoint_IsSpringEnabled" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ (b2DistanceJoint_IsSpringEnabled(@<关节标识>) != 0)
+    }
+
+    方法 置弹簧力范围 <公开 静态 注释 = "设置弹簧的力范围 · b2DistanceJoint_SetSpringForceRange" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    参数 下弹簧力 <类型 = 单精度小数>
+    参数 上弹簧力 <类型 = 单精度小数>
+    {
+        @ b2DistanceJoint_SetSpringForceRange(@<关节标识>, (float)@<下弹簧力>, (float)@<上弹簧力>)
+    }
+
+    方法 取弹簧力下限 <公开 静态 类型 = 小数 注释 = "取弹簧的力范围 · b2DistanceJoint_GetSpringForceRange">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        变量 返回结果 <类型 = 小数>
+        @ b2vol_distanceJoint_getSpringForceRange(@<关节标识>);
+        @ @<返回结果> = b2vol_dj_lowerForce();
+        返回 (返回结果)
+    }
+
+    方法 取弹簧力上限 <公开 静态 类型 = 小数 注释 = "取弹簧的力范围 · b2DistanceJoint_GetSpringForceRange">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        变量 返回结果 <类型 = 小数>
+        @ b2vol_distanceJoint_getSpringForceRange(@<关节标识>);
+        @ @<返回结果> = b2vol_dj_upperForce();
+        返回 (返回结果)
+    }
+
+    方法 置弹簧赫兹 <公开 静态 注释 = "设置弹簧刚度，单位为赫兹 · b2DistanceJoint_SetSpringHertz" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    参数 赫兹 <类型 = 单精度小数>
+    {
+        @ b2DistanceJoint_SetSpringHertz(@<关节标识>, (float)@<赫兹>)
+    }
+
+    方法 置弹簧阻尼比 <公开 静态 注释 = "设置弹簧阻尼比，无量纲 · b2DistanceJoint_SetSpringDampingRatio" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    参数 阻尼比 <类型 = 单精度小数>
+    {
+        @ b2DistanceJoint_SetSpringDampingRatio(@<关节标识>, (float)@<阻尼比>)
+    }
+
+    方法 取弹簧赫兹 <公开 静态 类型 = 小数 注释 = "取弹簧刚度（赫兹） · b2DistanceJoint_GetSpringHertz" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2DistanceJoint_GetSpringHertz(@<关节标识>)
+    }
+
+    方法 取弹簧阻尼比 <公开 静态 类型 = 小数 注释 = "取弹簧阻尼比 · b2DistanceJoint_GetSpringDampingRatio" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2DistanceJoint_GetSpringDampingRatio(@<关节标识>)
+    }
+
+    方法 取弹簧力 <公开 静态 类型 = 小数 注释 = "取当前弹簧力 · b2DistanceJoint_GetSpringForce" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2DistanceJoint_GetSpringForce(@<关节标识>)
+    }
+
+    方法 启用限制 <公开 静态 注释 = "启用关节限制 · b2DistanceJoint_EnableLimit" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    参数 启用限制 <类型 = 逻辑型>
+    {
+        @ b2DistanceJoint_EnableLimit(@<关节标识>, (@<启用限制> != 0))
+    }
+
+    方法 是否限制已启用 <公开 静态 类型 = 逻辑型 注释 = "距离关节限制是否已启用 · b2DistanceJoint_IsLimitEnabled" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ (b2DistanceJoint_IsLimitEnabled(@<关节标识>) != 0)
+    }
+
+    方法 置限制 <公开 静态 注释 = "设置距离关节的最小与最大长度 · b2DistanceJoint_SetLimits" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    参数 最小长度 <类型 = 单精度小数>
+    参数 最大长度 <类型 = 单精度小数>
+    {
+        @ b2DistanceJoint_SetLimits(@<关节标识>, (float)@<最小长度>, (float)@<最大长度>)
+    }
+
+    方法 取下限限制 <公开 静态 类型 = 小数 注释 = "取距离关节最小长度 · b2DistanceJoint_GetLowerLimit" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2DistanceJoint_GetLowerLimit(@<关节标识>)
+    }
+
+    方法 取上限限制 <公开 静态 类型 = 小数 注释 = "取距离关节最大长度 · b2DistanceJoint_GetUpperLimit" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2DistanceJoint_GetUpperLimit(@<关节标识>)
+    }
+
+    方法 取当前长度 <公开 静态 类型 = 小数 注释 = "取距离关节的当前长度 · b2DistanceJoint_GetCurrentLength" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2DistanceJoint_GetCurrentLength(@<关节标识>)
+    }
+
+    方法 启用马达 <公开 静态 注释 = "启用或禁用距离关节马达 · b2DistanceJoint_EnableMotor" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    参数 启用马达 <类型 = 逻辑型>
+    {
+        @ b2DistanceJoint_EnableMotor(@<关节标识>, (@<启用马达> != 0))
+    }
+
+    方法 是否马达已启用 <公开 静态 类型 = 逻辑型 注释 = "距离关节马达是否已启用 · b2DistanceJoint_IsMotorEnabled" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ (b2DistanceJoint_IsMotorEnabled(@<关节标识>) != 0)
+    }
+
+    方法 置目标马达速度 <公开 静态 注释 = "设置距离关节马达速度，通常以米每秒计 · b2DistanceJoint_SetTargetMotorSpeed" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    参数 马达速度 <类型 = 单精度小数>
+    {
+        @ b2DistanceJoint_SetTargetMotorSpeed(@<关节标识>, (float)@<马达速度>)
+    }
+
+    方法 取目标马达速度 <公开 静态 类型 = 小数 注释 = "取距离关节马达速度，通常以米每秒计 · b2DistanceJoint_GetTargetMotorSpeed" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2DistanceJoint_GetTargetMotorSpeed(@<关节标识>)
+    }
+
+    方法 置最大马达力 <公开 静态 注释 = "设置距离关节马达最大力，通常以牛顿计 · b2DistanceJoint_SetMaxMotorForce" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    参数 力值 <类型 = 单精度小数>
+    {
+        @ b2DistanceJoint_SetMaxMotorForce(@<关节标识>, (float)@<力值>)
+    }
+
+    方法 取最大马达力 <公开 静态 类型 = 小数 注释 = "取距离关节马达最大力，通常以牛顿计 · b2DistanceJoint_GetMaxMotorForce" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2DistanceJoint_GetMaxMotorForce(@<关节标识>)
+    }
+
+    方法 取当前马达力 <公开 静态 类型 = 小数 注释 = "取距离关节马达当前力，通常以牛顿计 · b2DistanceJoint_GetCurrentMotorForce" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2DistanceJoint_GetCurrentMotorForce(@<关节标识>)
+    }
+
+}
+
+类 B2过滤关节 <公开 注释 = "过滤关节 · 接口包装类">
+{
+    方法 创建过滤器关节 <公开 静态 类型 = B2关节标识 注释 = "创建过滤关节 · b2CreateFilterJoint" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    参数 定义 <类型 = B2过滤关节定义>
+    {
+        @ b2CreateFilterJoint(@<世界标识>, &@<定义>)
+    }
+
+}
+
+类 B2马达关节 <公开 注释 = "马达关节 · 接口包装类">
+{
+    方法 创建马达关节 <公开 静态 类型 = B2关节标识 注释 = "创建马达关节 · b2CreateMotorJoint" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    参数 定义 <类型 = B2马达关节定义>
+    {
+        @ b2CreateMotorJoint(@<世界标识>, &@<定义>)
+    }
+
+    方法 置线性速度 <公开 静态 注释 = "设置期望的相对线速度，单位为米每秒 · b2MotorJoint_SetLinearVelocity" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    参数 速度值 <类型 = B2向量>
+    {
+        @ b2MotorJoint_SetLinearVelocity(@<关节标识>, @<速度值>)
+    }
+
+    方法 取线性速度 <公开 静态 类型 = B2向量 注释 = "取期望的相对线速度，单位为米每秒 · b2MotorJoint_GetLinearVelocity" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2MotorJoint_GetLinearVelocity(@<关节标识>)
+    }
+
+    方法 置角度速度 <公开 静态 注释 = "设置期望的相对角速度，单位为弧度每秒 · b2MotorJoint_SetAngularVelocity" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    参数 速度值 <类型 = 单精度小数>
+    {
+        @ b2MotorJoint_SetAngularVelocity(@<关节标识>, (float)@<速度值>)
+    }
+
+    方法 取角度速度 <公开 静态 类型 = 小数 注释 = "取期望的相对角速度，单位为弧度每秒 · b2MotorJoint_GetAngularVelocity" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2MotorJoint_GetAngularVelocity(@<关节标识>)
+    }
+
+    方法 置最大速度力 <公开 静态 注释 = "设置马达关节最大力，通常以牛顿计 · b2MotorJoint_SetMaxVelocityForce" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    参数 最大力 <类型 = 单精度小数>
+    {
+        @ b2MotorJoint_SetMaxVelocityForce(@<关节标识>, (float)@<最大力>)
+    }
+
+    方法 取最大速度力 <公开 静态 类型 = 小数 注释 = "取马达关节最大力，通常以牛顿计 · b2MotorJoint_GetMaxVelocityForce" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2MotorJoint_GetMaxVelocityForce(@<关节标识>)
+    }
+
+    方法 置最大速度扭矩 <公开 静态 注释 = "设置马达关节最大扭矩，通常以牛顿米计 · b2MotorJoint_SetMaxVelocityTorque" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    参数 最大扭矩 <类型 = 单精度小数>
+    {
+        @ b2MotorJoint_SetMaxVelocityTorque(@<关节标识>, (float)@<最大扭矩>)
+    }
+
+    方法 取最大速度扭矩 <公开 静态 类型 = 小数 注释 = "取马达关节最大扭矩，通常以牛顿米计 · b2MotorJoint_GetMaxVelocityTorque" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2MotorJoint_GetMaxVelocityTorque(@<关节标识>)
+    }
+
+    方法 置线性赫兹 <公开 静态 注释 = "设置弹簧线性刚度 · b2MotorJoint_SetLinearHertz" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    参数 赫兹 <类型 = 单精度小数>
+    {
+        @ b2MotorJoint_SetLinearHertz(@<关节标识>, (float)@<赫兹>)
+    }
+
+    方法 取线性赫兹 <公开 静态 类型 = 小数 注释 = "取弹簧线性刚度 · b2MotorJoint_GetLinearHertz" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2MotorJoint_GetLinearHertz(@<关节标识>)
+    }
+
+    方法 置线性阻尼比 <公开 静态 注释 = "设置弹簧线性阻尼比 · b2MotorJoint_SetLinearDampingRatio" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    参数 阻尼值 <类型 = 单精度小数>
+    {
+        @ b2MotorJoint_SetLinearDampingRatio(@<关节标识>, (float)@<阻尼值>)
+    }
+
+    方法 取线性阻尼比 <公开 静态 类型 = 小数 注释 = "取弹簧线性阻尼比 · b2MotorJoint_GetLinearDampingRatio" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2MotorJoint_GetLinearDampingRatio(@<关节标识>)
+    }
+
+    方法 置角度赫兹 <公开 静态 注释 = "设置弹簧角刚度 · b2MotorJoint_SetAngularHertz" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    参数 赫兹 <类型 = 单精度小数>
+    {
+        @ b2MotorJoint_SetAngularHertz(@<关节标识>, (float)@<赫兹>)
+    }
+
+    方法 取角度赫兹 <公开 静态 类型 = 小数 注释 = "取弹簧角刚度 · b2MotorJoint_GetAngularHertz" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2MotorJoint_GetAngularHertz(@<关节标识>)
+    }
+
+    方法 置角度阻尼比 <公开 静态 注释 = "设置弹簧角阻尼比 · b2MotorJoint_SetAngularDampingRatio" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    参数 阻尼值 <类型 = 单精度小数>
+    {
+        @ b2MotorJoint_SetAngularDampingRatio(@<关节标识>, (float)@<阻尼值>)
+    }
+
+    方法 取角度阻尼比 <公开 静态 类型 = 小数 注释 = "取弹簧角阻尼比 · b2MotorJoint_GetAngularDampingRatio" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2MotorJoint_GetAngularDampingRatio(@<关节标识>)
+    }
+
+    方法 置最大弹簧力 <公开 静态 注释 = "设置弹簧最大力，单位为牛顿 · b2MotorJoint_SetMaxSpringForce" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    参数 最大力 <类型 = 单精度小数>
+    {
+        @ b2MotorJoint_SetMaxSpringForce(@<关节标识>, (float)@<最大力>)
+    }
+
+    方法 取最大弹簧力 <公开 静态 类型 = 小数 注释 = "取弹簧最大力，单位为牛顿 · b2MotorJoint_GetMaxSpringForce" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2MotorJoint_GetMaxSpringForce(@<关节标识>)
+    }
+
+    方法 置最大弹簧扭矩 <公开 静态 注释 = "设置弹簧最大扭矩，单位为牛顿米 · b2MotorJoint_SetMaxSpringTorque" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    参数 最大扭矩 <类型 = 单精度小数>
+    {
+        @ b2MotorJoint_SetMaxSpringTorque(@<关节标识>, (float)@<最大扭矩>)
+    }
+
+    方法 取最大弹簧扭矩 <公开 静态 类型 = 小数 注释 = "取弹簧最大扭矩，单位为牛顿米 · b2MotorJoint_GetMaxSpringTorque" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2MotorJoint_GetMaxSpringTorque(@<关节标识>)
+    }
+
+}
+
+类 B2移动关节 <公开 注释 = "移动关节 · 接口包装类">
+{
+    方法 创建移动器关节 <公开 静态 类型 = B2关节标识 注释 = "创建移动体关节 · b2CreateMoverJoint" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    参数 定义 <类型 = B2移动关节定义>
+    {
+        @ b2CreateMoverJoint(@<世界标识>, &@<定义>)
+    }
+
+    方法 置线性速度 <公开 静态 注释 = "设置期望的相对线速度，单位为米每秒 · b2MoverJoint_SetLinearVelocity" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    参数 速度值 <类型 = B2向量>
+    {
+        @ b2MoverJoint_SetLinearVelocity(@<关节标识>, @<速度值>)
+    }
+
+    方法 取线性速度 <公开 静态 类型 = B2向量 注释 = "取期望的相对线速度，单位为米每秒 · b2MoverJoint_GetLinearVelocity" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2MoverJoint_GetLinearVelocity(@<关节标识>)
+    }
+
+    方法 置最大速度力 <公开 静态 注释 = "设置关节最大力，通常以牛顿计 · b2MoverJoint_SetMaxVelocityForce" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    参数 最大力 <类型 = B2向量>
+    {
+        @ b2MoverJoint_SetMaxVelocityForce(@<关节标识>, @<最大力>)
+    }
+
+    方法 取最大速度力 <公开 静态 类型 = B2向量 注释 = "取关节最大力，通常以牛顿计 · b2MoverJoint_GetMaxVelocityForce" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2MoverJoint_GetMaxVelocityForce(@<关节标识>)
+    }
+
+}
+
+类 B2弹簧关节 <公开 注释 = "弹簧关节 · 接口包装类">
+{
+    方法 创建弹簧关节 <公开 静态 类型 = B2关节标识 注释 = "创建弹跳关节 · b2CreatePogoJoint" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    参数 定义 <类型 = B2弹簧关节定义>
+    {
+        @ b2CreatePogoJoint(@<世界标识>, &@<定义>)
+    }
+
+    方法 置静止长度 <公开 静态 注释 = "设置弹跳关节的静止长度 · b2PogoJoint_SetRestLength" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    参数 长度 <类型 = 单精度小数>
+    {
+        @ b2PogoJoint_SetRestLength(@<关节标识>, (float)@<长度>)
+    }
+
+    方法 取静止长度 <公开 静态 类型 = 小数 注释 = "取弹跳关节的静止长度 · b2PogoJoint_GetRestLength" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2PogoJoint_GetRestLength(@<关节标识>)
+    }
+
+    方法 置弹簧赫兹 <公开 静态 注释 = "设置弹簧刚度，单位为赫兹 · b2PogoJoint_SetSpringHertz" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    参数 赫兹 <类型 = 单精度小数>
+    {
+        @ b2PogoJoint_SetSpringHertz(@<关节标识>, (float)@<赫兹>)
+    }
+
+    方法 取弹簧赫兹 <公开 静态 类型 = 小数 注释 = "取弹簧刚度（赫兹） · b2PogoJoint_GetSpringHertz" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2PogoJoint_GetSpringHertz(@<关节标识>)
+    }
+
+    方法 置弹簧阻尼比 <公开 静态 注释 = "设置弹簧阻尼比，无量纲 · b2PogoJoint_SetSpringDampingRatio" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    参数 阻尼比 <类型 = 单精度小数>
+    {
+        @ b2PogoJoint_SetSpringDampingRatio(@<关节标识>, (float)@<阻尼比>)
+    }
+
+    方法 取弹簧阻尼比 <公开 静态 类型 = 小数 注释 = "取弹簧阻尼比 · b2PogoJoint_GetSpringDampingRatio" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2PogoJoint_GetSpringDampingRatio(@<关节标识>)
+    }
+
+    方法 取当前长度 <公开 静态 类型 = 小数 注释 = "取弹跳关节的当前长度 · b2PogoJoint_GetCurrentLength" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2PogoJoint_GetCurrentLength(@<关节标识>)
+    }
+
+    方法 取当前速度 <公开 静态 类型 = 小数 注释 = "取弹跳关节的内部速度 · b2PogoJoint_GetCurrentSpeed" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2PogoJoint_GetCurrentSpeed(@<关节标识>)
+    }
+
+    方法 取冲量 <公开 静态 类型 = 小数 注释 = "取弹跳关节的内部冲量 · b2PogoJoint_GetImpulse" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2PogoJoint_GetImpulse(@<关节标识>)
+    }
+
+}
+
+类 B2棱柱关节 <公开 注释 = "棱柱关节 · 接口包装类">
+{
+    方法 创建棱柱关节 <公开 静态 类型 = B2关节标识 注释 = "创建滑动（棱柱）关节 · b2CreatePrismaticJoint" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    参数 定义 <类型 = B2棱柱关节定义>
+    {
+        @ b2CreatePrismaticJoint(@<世界标识>, &@<定义>)
+    }
+
+    方法 启用弹簧 <公开 静态 注释 = "启用或禁用关节弹簧 · b2PrismaticJoint_EnableSpring" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    参数 启用弹簧 <类型 = 逻辑型>
+    {
+        @ b2PrismaticJoint_EnableSpring(@<关节标识>, (@<启用弹簧> != 0))
+    }
+
+    方法 是否弹簧已启用 <公开 静态 类型 = 逻辑型 注释 = "滑动关节弹簧是否已启用 · b2PrismaticJoint_IsSpringEnabled" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ (b2PrismaticJoint_IsSpringEnabled(@<关节标识>) != 0)
+    }
+
+    方法 置弹簧赫兹 <公开 静态 注释 = "设置滑动关节刚度，单位为赫兹 · b2PrismaticJoint_SetSpringHertz" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    参数 赫兹 <类型 = 单精度小数>
+    {
+        @ b2PrismaticJoint_SetSpringHertz(@<关节标识>, (float)@<赫兹>)
+    }
+
+    方法 取弹簧赫兹 <公开 静态 类型 = 小数 注释 = "取滑动关节刚度，单位为赫兹 · b2PrismaticJoint_GetSpringHertz" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2PrismaticJoint_GetSpringHertz(@<关节标识>)
+    }
+
+    方法 置弹簧阻尼比 <公开 静态 注释 = "设置滑动关节阻尼比 · b2PrismaticJoint_SetSpringDampingRatio" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    参数 阻尼比 <类型 = 单精度小数>
+    {
+        @ b2PrismaticJoint_SetSpringDampingRatio(@<关节标识>, (float)@<阻尼比>)
+    }
+
+    方法 取弹簧阻尼比 <公开 静态 类型 = 小数 注释 = "取滑动关节弹簧阻尼比 · b2PrismaticJoint_GetSpringDampingRatio" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2PrismaticJoint_GetSpringDampingRatio(@<关节标识>)
+    }
+
+    方法 置目标平移 <公开 静态 注释 = "设置滑动关节弹簧的目标平移量，通常以米计 · b2PrismaticJoint_SetTargetTranslation" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    参数 平移 <类型 = 单精度小数>
+    {
+        @ b2PrismaticJoint_SetTargetTranslation(@<关节标识>, (float)@<平移>)
+    }
+
+    方法 取目标平移 <公开 静态 类型 = 小数 注释 = "取滑动关节弹簧的目标平移量，通常以米计 · b2PrismaticJoint_GetTargetTranslation" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2PrismaticJoint_GetTargetTranslation(@<关节标识>)
+    }
+
+    方法 启用限制 <公开 静态 注释 = "启用或禁用滑动关节限制 · b2PrismaticJoint_EnableLimit" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    参数 启用限制 <类型 = 逻辑型>
+    {
+        @ b2PrismaticJoint_EnableLimit(@<关节标识>, (@<启用限制> != 0))
+    }
+
+    方法 是否限制已启用 <公开 静态 类型 = 逻辑型 注释 = "滑动关节限制是否已启用 · b2PrismaticJoint_IsLimitEnabled" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ (b2PrismaticJoint_IsLimitEnabled(@<关节标识>) != 0)
+    }
+
+    方法 取下限限制 <公开 静态 类型 = 小数 注释 = "取滑动关节下限 · b2PrismaticJoint_GetLowerLimit" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2PrismaticJoint_GetLowerLimit(@<关节标识>)
+    }
+
+    方法 取上限限制 <公开 静态 类型 = 小数 注释 = "取滑动关节上限 · b2PrismaticJoint_GetUpperLimit" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2PrismaticJoint_GetUpperLimit(@<关节标识>)
+    }
+
+    方法 置限制 <公开 静态 注释 = "设置滑动关节的限制 · b2PrismaticJoint_SetLimits" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    参数 下限 <类型 = 单精度小数>
+    参数 上限 <类型 = 单精度小数>
+    {
+        @ b2PrismaticJoint_SetLimits(@<关节标识>, (float)@<下限>, (float)@<上限>)
+    }
+
+    方法 启用马达 <公开 静态 注释 = "启用或禁用滑动关节马达 · b2PrismaticJoint_EnableMotor" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    参数 启用马达 <类型 = 逻辑型>
+    {
+        @ b2PrismaticJoint_EnableMotor(@<关节标识>, (@<启用马达> != 0))
+    }
+
+    方法 是否马达已启用 <公开 静态 类型 = 逻辑型 注释 = "滑动关节马达是否已启用 · b2PrismaticJoint_IsMotorEnabled" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ (b2PrismaticJoint_IsMotorEnabled(@<关节标识>) != 0)
+    }
+
+    方法 置目标马达速度 <公开 静态 注释 = "设置滑动关节马达速度，通常以米每秒计 · b2PrismaticJoint_SetTargetMotorSpeed" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    参数 马达速度 <类型 = 单精度小数>
+    {
+        @ b2PrismaticJoint_SetTargetMotorSpeed(@<关节标识>, (float)@<马达速度>)
+    }
+
+    方法 取目标马达速度 <公开 静态 类型 = 小数 注释 = "取滑动关节马达速度，通常以米每秒计 · b2PrismaticJoint_GetTargetMotorSpeed" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2PrismaticJoint_GetTargetMotorSpeed(@<关节标识>)
+    }
+
+    方法 置最大马达力 <公开 静态 注释 = "设置滑动关节马达最大力，通常以牛顿计 · b2PrismaticJoint_SetMaxMotorForce" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    参数 力值 <类型 = 单精度小数>
+    {
+        @ b2PrismaticJoint_SetMaxMotorForce(@<关节标识>, (float)@<力值>)
+    }
+
+    方法 取最大马达力 <公开 静态 类型 = 小数 注释 = "取滑动关节马达最大力，通常以牛顿计 · b2PrismaticJoint_GetMaxMotorForce" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2PrismaticJoint_GetMaxMotorForce(@<关节标识>)
+    }
+
+    方法 取当前平移 <公开 静态 类型 = 小数 注释 = "取关节当前平移量，通常以米计 · b2PrismaticJoint_GetCurrentTranslation" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2PrismaticJoint_GetCurrentTranslation(@<关节标识>)
+    }
+
+    方法 取当前速度 <公开 静态 类型 = 小数 注释 = "取关节当前平移速度，通常以米每秒计 · b2PrismaticJoint_GetCurrentSpeed" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2PrismaticJoint_GetCurrentSpeed(@<关节标识>)
+    }
+
+    方法 取当前马达力 <公开 静态 类型 = 小数 注释 = "取滑动关节马达当前力，通常以牛顿计 · b2PrismaticJoint_GetCurrentMotorForce" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2PrismaticJoint_GetCurrentMotorForce(@<关节标识>)
+    }
+
+}
+
+类 B2旋转关节 <公开 注释 = "旋转关节 · 接口包装类">
+{
+    方法 创建旋转关节 <公开 静态 类型 = B2关节标识 注释 = "创建旋转关节 · b2CreateRevoluteJoint" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    参数 定义 <类型 = B2旋转关节定义>
+    {
+        @ b2CreateRevoluteJoint(@<世界标识>, &@<定义>)
+    }
+
+    方法 启用弹簧 <公开 静态 注释 = "启用或禁用旋转关节弹簧 · b2RevoluteJoint_EnableSpring" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    参数 启用弹簧 <类型 = 逻辑型>
+    {
+        @ b2RevoluteJoint_EnableSpring(@<关节标识>, (@<启用弹簧> != 0))
+    }
+
+    方法 是否弹簧已启用 <公开 静态 类型 = 逻辑型 注释 = "旋转关节角弹簧是否已启用 · b2RevoluteJoint_IsSpringEnabled" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ (b2RevoluteJoint_IsSpringEnabled(@<关节标识>) != 0)
+    }
+
+    方法 置弹簧赫兹 <公开 静态 注释 = "设置旋转关节弹簧刚度，单位为赫兹 · b2RevoluteJoint_SetSpringHertz" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    参数 赫兹 <类型 = 单精度小数>
+    {
+        @ b2RevoluteJoint_SetSpringHertz(@<关节标识>, (float)@<赫兹>)
+    }
+
+    方法 取弹簧赫兹 <公开 静态 类型 = 小数 注释 = "取旋转关节弹簧刚度，单位为赫兹 · b2RevoluteJoint_GetSpringHertz" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2RevoluteJoint_GetSpringHertz(@<关节标识>)
+    }
+
+    方法 置弹簧阻尼比 <公开 静态 注释 = "设置旋转关节弹簧阻尼比，无量纲 · b2RevoluteJoint_SetSpringDampingRatio" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    参数 阻尼比 <类型 = 单精度小数>
+    {
+        @ b2RevoluteJoint_SetSpringDampingRatio(@<关节标识>, (float)@<阻尼比>)
+    }
+
+    方法 取弹簧阻尼比 <公开 静态 类型 = 小数 注释 = "取旋转关节弹簧阻尼比，无量纲 · b2RevoluteJoint_GetSpringDampingRatio" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2RevoluteJoint_GetSpringDampingRatio(@<关节标识>)
+    }
+
+    方法 置目标角度 <公开 静态 注释 = "设置旋转关节弹簧的目标角度，单位为弧度 · b2RevoluteJoint_SetTargetAngle" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    参数 角度 <类型 = 单精度小数>
+    {
+        @ b2RevoluteJoint_SetTargetAngle(@<关节标识>, (float)@<角度>)
+    }
+
+    方法 取目标角度 <公开 静态 类型 = 小数 注释 = "取旋转关节弹簧的目标角度，单位为弧度 · b2RevoluteJoint_GetTargetAngle" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2RevoluteJoint_GetTargetAngle(@<关节标识>)
+    }
+
+    方法 启用限制 <公开 静态 注释 = "启用或禁用旋转关节限制 · b2RevoluteJoint_EnableLimit" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    参数 启用限制 <类型 = 逻辑型>
+    {
+        @ b2RevoluteJoint_EnableLimit(@<关节标识>, (@<启用限制> != 0))
+    }
+
+    方法 是否限制已启用 <公开 静态 类型 = 逻辑型 注释 = "旋转关节限制是否已启用 · b2RevoluteJoint_IsLimitEnabled" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ (b2RevoluteJoint_IsLimitEnabled(@<关节标识>) != 0)
+    }
+
+    方法 取下限限制 <公开 静态 类型 = 小数 注释 = "取旋转关节下限，单位为弧度 · b2RevoluteJoint_GetLowerLimit" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2RevoluteJoint_GetLowerLimit(@<关节标识>)
+    }
+
+    方法 取上限限制 <公开 静态 类型 = 小数 注释 = "取旋转关节上限，单位为弧度 · b2RevoluteJoint_GetUpperLimit" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2RevoluteJoint_GetUpperLimit(@<关节标识>)
+    }
+
+    方法 置限制 <公开 静态 注释 = "设置旋转关节限制，单位为弧度 · b2RevoluteJoint_SetLimits" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    参数 下限 <类型 = 单精度小数>
+    参数 上限 <类型 = 单精度小数>
+    {
+        @ b2RevoluteJoint_SetLimits(@<关节标识>, (float)@<下限>, (float)@<上限>)
+    }
+
+    方法 启用马达 <公开 静态 注释 = "启用或禁用旋转关节马达 · b2RevoluteJoint_EnableMotor" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    参数 启用马达 <类型 = 逻辑型>
+    {
+        @ b2RevoluteJoint_EnableMotor(@<关节标识>, (@<启用马达> != 0))
+    }
+
+    方法 是否马达已启用 <公开 静态 类型 = 逻辑型 注释 = "旋转关节马达是否已启用 · b2RevoluteJoint_IsMotorEnabled" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ (b2RevoluteJoint_IsMotorEnabled(@<关节标识>) != 0)
+    }
+
+    方法 置目标马达速度 <公开 静态 注释 = "设置旋转关节马达速度，单位为弧度每秒 · b2RevoluteJoint_SetTargetMotorSpeed" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    参数 马达速度 <类型 = 单精度小数>
+    {
+        @ b2RevoluteJoint_SetTargetMotorSpeed(@<关节标识>, (float)@<马达速度>)
+    }
+
+    方法 取目标马达速度 <公开 静态 类型 = 小数 注释 = "取旋转关节马达速度，单位为弧度每秒 · b2RevoluteJoint_GetTargetMotorSpeed" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2RevoluteJoint_GetTargetMotorSpeed(@<关节标识>)
+    }
+
+    方法 置最大马达扭矩 <公开 静态 注释 = "设置旋转关节马达最大扭矩，通常以牛顿米计 · b2RevoluteJoint_SetMaxMotorTorque" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    参数 扭矩值 <类型 = 单精度小数>
+    {
+        @ b2RevoluteJoint_SetMaxMotorTorque(@<关节标识>, (float)@<扭矩值>)
+    }
+
+    方法 取最大马达扭矩 <公开 静态 类型 = 小数 注释 = "取旋转关节马达最大扭矩，通常以牛顿米计 · b2RevoluteJoint_GetMaxMotorTorque" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2RevoluteJoint_GetMaxMotorTorque(@<关节标识>)
+    }
+
+    方法 取当前角度 <公开 静态 类型 = 小数 注释 = "取旋转关节当前角度，单位为弧度 · b2RevoluteJoint_GetCurrentAngle" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2RevoluteJoint_GetCurrentAngle(@<关节标识>)
+    }
+
+    方法 取当前速度 <公开 静态 类型 = 小数 注释 = "取旋转关节马达当前速度，单位为弧度每秒 · b2RevoluteJoint_GetCurrentSpeed" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2RevoluteJoint_GetCurrentSpeed(@<关节标识>)
+    }
+
+    方法 取当前马达扭矩 <公开 静态 类型 = 小数 注释 = "取旋转关节马达当前扭矩，通常以牛顿米计 · b2RevoluteJoint_GetCurrentMotorTorque" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2RevoluteJoint_GetCurrentMotorTorque(@<关节标识>)
+    }
+
+}
+
+类 B2焊接关节 <公开 注释 = "焊接关节 · 接口包装类">
+{
+    方法 创建焊接关节 <公开 静态 类型 = B2关节标识 注释 = "创建焊接关节 · b2CreateWeldJoint" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    参数 定义 <类型 = B2焊接关节定义>
+    {
+        @ b2CreateWeldJoint(@<世界标识>, &@<定义>)
+    }
+
+    方法 置线性赫兹 <公开 静态 注释 = "设置焊接关节线性刚度，单位为赫兹 · b2WeldJoint_SetLinearHertz" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    参数 赫兹 <类型 = 单精度小数>
+    {
+        @ b2WeldJoint_SetLinearHertz(@<关节标识>, (float)@<赫兹>)
+    }
+
+    方法 取线性赫兹 <公开 静态 类型 = 小数 注释 = "取焊接关节线性刚度，单位为赫兹 · b2WeldJoint_GetLinearHertz" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2WeldJoint_GetLinearHertz(@<关节标识>)
+    }
+
+    方法 置线性阻尼比 <公开 静态 注释 = "设置焊接关节线性阻尼比，无量纲 · b2WeldJoint_SetLinearDampingRatio" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    参数 阻尼比 <类型 = 单精度小数>
+    {
+        @ b2WeldJoint_SetLinearDampingRatio(@<关节标识>, (float)@<阻尼比>)
+    }
+
+    方法 取线性阻尼比 <公开 静态 类型 = 小数 注释 = "取焊接关节线性阻尼比，无量纲 · b2WeldJoint_GetLinearDampingRatio" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2WeldJoint_GetLinearDampingRatio(@<关节标识>)
+    }
+
+    方法 置角度赫兹 <公开 静态 注释 = "设置焊接关节角刚度，单位为赫兹 · b2WeldJoint_SetAngularHertz" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    参数 赫兹 <类型 = 单精度小数>
+    {
+        @ b2WeldJoint_SetAngularHertz(@<关节标识>, (float)@<赫兹>)
+    }
+
+    方法 取角度赫兹 <公开 静态 类型 = 小数 注释 = "取焊接关节角刚度，单位为赫兹 · b2WeldJoint_GetAngularHertz" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2WeldJoint_GetAngularHertz(@<关节标识>)
+    }
+
+    方法 置角度阻尼比 <公开 静态 注释 = "设置焊接关节角阻尼比，无量纲 · b2WeldJoint_SetAngularDampingRatio" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    参数 阻尼比 <类型 = 单精度小数>
+    {
+        @ b2WeldJoint_SetAngularDampingRatio(@<关节标识>, (float)@<阻尼比>)
+    }
+
+    方法 取角度阻尼比 <公开 静态 类型 = 小数 注释 = "取焊接关节角阻尼比，无量纲 · b2WeldJoint_GetAngularDampingRatio" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2WeldJoint_GetAngularDampingRatio(@<关节标识>)
+    }
+
+}
+
+类 B2车轮关节 <公开 注释 = "车轮关节 · 接口包装类">
+{
+    方法 创建车轮关节 <公开 静态 类型 = B2关节标识 注释 = "创建车轮关节 · b2CreateWheelJoint" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    参数 定义 <类型 = B2车轮关节定义>
+    {
+        @ b2CreateWheelJoint(@<世界标识>, &@<定义>)
+    }
+
+    方法 启用弹簧 <公开 静态 注释 = "启用或禁用车轮关节弹簧 · b2WheelJoint_EnableSpring" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    参数 启用弹簧 <类型 = 逻辑型>
+    {
+        @ b2WheelJoint_EnableSpring(@<关节标识>, (@<启用弹簧> != 0))
+    }
+
+    方法 是否弹簧已启用 <公开 静态 类型 = 逻辑型 注释 = "车轮关节弹簧是否已启用 · b2WheelJoint_IsSpringEnabled" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ (b2WheelJoint_IsSpringEnabled(@<关节标识>) != 0)
+    }
+
+    方法 置弹簧赫兹 <公开 静态 注释 = "设置车轮关节刚度，单位为赫兹 · b2WheelJoint_SetSpringHertz" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    参数 赫兹 <类型 = 单精度小数>
+    {
+        @ b2WheelJoint_SetSpringHertz(@<关节标识>, (float)@<赫兹>)
+    }
+
+    方法 取弹簧赫兹 <公开 静态 类型 = 小数 注释 = "取车轮关节刚度，单位为赫兹 · b2WheelJoint_GetSpringHertz" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2WheelJoint_GetSpringHertz(@<关节标识>)
+    }
+
+    方法 置弹簧阻尼比 <公开 静态 注释 = "设置车轮关节阻尼比，无量纲 · b2WheelJoint_SetSpringDampingRatio" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    参数 阻尼比 <类型 = 单精度小数>
+    {
+        @ b2WheelJoint_SetSpringDampingRatio(@<关节标识>, (float)@<阻尼比>)
+    }
+
+    方法 取弹簧阻尼比 <公开 静态 类型 = 小数 注释 = "取车轮关节阻尼比，无量纲 · b2WheelJoint_GetSpringDampingRatio" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2WheelJoint_GetSpringDampingRatio(@<关节标识>)
+    }
+
+    方法 启用限制 <公开 静态 注释 = "启用或禁用车轮关节限制 · b2WheelJoint_EnableLimit" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    参数 启用限制 <类型 = 逻辑型>
+    {
+        @ b2WheelJoint_EnableLimit(@<关节标识>, (@<启用限制> != 0))
+    }
+
+    方法 是否限制已启用 <公开 静态 类型 = 逻辑型 注释 = "车轮关节限制是否已启用 · b2WheelJoint_IsLimitEnabled" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ (b2WheelJoint_IsLimitEnabled(@<关节标识>) != 0)
+    }
+
+    方法 取下限限制 <公开 静态 类型 = 小数 注释 = "取车轮关节下限 · b2WheelJoint_GetLowerLimit" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2WheelJoint_GetLowerLimit(@<关节标识>)
+    }
+
+    方法 取上限限制 <公开 静态 类型 = 小数 注释 = "取车轮关节上限 · b2WheelJoint_GetUpperLimit" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2WheelJoint_GetUpperLimit(@<关节标识>)
+    }
+
+    方法 置限制 <公开 静态 注释 = "设置车轮关节限制 · b2WheelJoint_SetLimits" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    参数 下限 <类型 = 单精度小数>
+    参数 上限 <类型 = 单精度小数>
+    {
+        @ b2WheelJoint_SetLimits(@<关节标识>, (float)@<下限>, (float)@<上限>)
+    }
+
+    方法 启用马达 <公开 静态 注释 = "启用或禁用车轮关节马达 · b2WheelJoint_EnableMotor" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    参数 启用马达 <类型 = 逻辑型>
+    {
+        @ b2WheelJoint_EnableMotor(@<关节标识>, (@<启用马达> != 0))
+    }
+
+    方法 是否马达已启用 <公开 静态 类型 = 逻辑型 注释 = "车轮关节马达是否已启用 · b2WheelJoint_IsMotorEnabled" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ (b2WheelJoint_IsMotorEnabled(@<关节标识>) != 0)
+    }
+
+    方法 置目标马达速度 <公开 静态 注释 = "设置车轮关节马达速度，单位为弧度每秒 · b2WheelJoint_SetTargetMotorSpeed" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    参数 马达速度 <类型 = 单精度小数>
+    {
+        @ b2WheelJoint_SetTargetMotorSpeed(@<关节标识>, (float)@<马达速度>)
+    }
+
+    方法 取目标马达速度 <公开 静态 类型 = 小数 注释 = "取车轮关节马达速度，单位为弧度每秒 · b2WheelJoint_GetTargetMotorSpeed" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2WheelJoint_GetTargetMotorSpeed(@<关节标识>)
+    }
+
+    方法 置最大马达扭矩 <公开 静态 注释 = "设置车轮关节马达最大扭矩，通常以牛顿米计 · b2WheelJoint_SetMaxMotorTorque" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    参数 扭矩值 <类型 = 单精度小数>
+    {
+        @ b2WheelJoint_SetMaxMotorTorque(@<关节标识>, (float)@<扭矩值>)
+    }
+
+    方法 取最大马达扭矩 <公开 静态 类型 = 小数 注释 = "取车轮关节马达最大扭矩，通常以牛顿米计 · b2WheelJoint_GetMaxMotorTorque" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2WheelJoint_GetMaxMotorTorque(@<关节标识>)
+    }
+
+    方法 取当前马达扭矩 <公开 静态 类型 = 小数 注释 = "取车轮关节马达当前扭矩，通常以牛顿米计 · b2WheelJoint_GetCurrentMotorTorque" @嵌入式方法 = "">
+    参数 关节标识 <类型 = B2关节标识>
+    {
+        @ b2WheelJoint_GetCurrentMotorTorque(@<关节标识>)
+    }
+
+}
+

@@ -1,0 +1,875 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.Box2D <注释 = "世界、事件、录制与接触 · Box2D 3.2.0 单精度" @视窗.头文件搜寻目录 = "include"
+        @视窗.外部头文件 = "b2vol.h" @视窗.库文件搜寻目录 = "lib/x64"
+        @视窗.外部库 = "box2d$(d).lib">
+
+类 B2任务回调 <公开 注释 = "任务回调 · b2TaskCallbackFcn" @别名 = "b2TaskCallbackFcn*" @别名类型 = 本地整数基本类型 @有效值范围 = "">
+{
+    常量 空指针 <公开 类型 = B2任务回调 注释 = "空指针 · @nullptr" 值 = @nullptr>
+
+    方法 回调模板 <公开 静态 注释 = "并行任务函数 · b2TaskCallbackFcn">
+    参数 任务上下文 <类型 = 变整数>
+    {
+    }
+
+    方法 创建 <公开 静态 类型 = B2任务回调 注释 = "创建回调值 · b2TaskCallbackFcn*" @嵌入式方法 = "">
+    参数 回调函数 <@匹配方法 = "回调模板">
+    {
+        @ (b2TaskCallbackFcn*)&@<回调函数>
+    }
+
+}
+
+类 B2射线结果 <公开 注释 = "射线结果 · b2RayResult" @别名 = "b2RayResult" @别名类型 = 本地结构>
+{
+    变量 形状标识 <公开 类型 = B2形状标识 注释 = "被命中的形状 · b2RayResult.shapeId" @输出名 = "shapeId">
+    变量 点 <公开 类型 = B2向量 注释 = "命中形状表面上的接触点 · b2RayResult.point" @输出名 = "point">
+    变量 法线 <公开 类型 = B2向量 注释 = "接触点处的单位法线 · b2RayResult.normal" @输出名 = "normal">
+    变量 比例 <公开 类型 = 单精度小数 注释 = "输入射线上的比例 · b2RayResult.fraction" @输出名 = "fraction">
+    变量 节点访问数 <公开 类型 = 整数 注释 = "访问的层次包围盒节点数量 · b2RayResult.nodeVisits" @输出名 = "nodeVisits">
+    变量 叶子访问数 <公开 类型 = 整数 注释 = "访问的层次包围盒叶节点数量 · b2RayResult.leafVisits" @输出名 = "leafVisits">
+    变量 是否撞击 <公开 类型 = 逻辑型 注释 = "射线是否命中 · b2RayResult.hit" @输出名 = "hit">
+}
+
+类 B2世界定义 <公开 注释 = "世界定义 · b2WorldDef" @别名 = "b2WorldDef" @别名类型 = 本地结构>
+{
+    变量 重力 <公开 类型 = B2向量 注释 = "重力向量 · b2WorldDef.gravity" @输出名 = "gravity">
+    变量 恢复系数阈值 <公开 类型 = 单精度小数 注释 = "恢复系数的速度阈值，通常以米每秒计 · b2WorldDef.restitutionThreshold" @输出名 = "restitutionThreshold">
+    变量 恢复系数迭代数 <公开 类型 = 整数 注释 = "恢复系数求解器的迭代次数 · b2WorldDef.restitutionIterations" @输出名 = "restitutionIterations">
+    变量 启用恢复系数传播 <公开 类型 = 逻辑型 注释 = "在恢复系数求解器中启用完整接触传播 · b2WorldDef.enableRestitutionPropagation" @输出名 = "enableRestitutionPropagation">
+    变量 撞击事件阈值 <公开 类型 = 单精度小数 注释 = "撞击事件的速度阈值 · b2WorldDef.hitEventThreshold" @输出名 = "hitEventThreshold">
+    变量 接触赫兹 <公开 类型 = 单精度小数 注释 = "接触刚度 · b2WorldDef.contactHertz" @输出名 = "contactHertz">
+    变量 接触阻尼比 <公开 类型 = 单精度小数 注释 = "接触弹性 · b2WorldDef.contactDampingRatio" @输出名 = "contactDampingRatio">
+    变量 接触速度 <公开 类型 = 单精度小数 注释 = "控制重叠消除速度的参数，单位通常为米每秒 · b2WorldDef.contactSpeed" @输出名 = "contactSpeed">
+    变量 最大线速度 <公开 类型 = 单精度小数 注释 = "最大线速度 · b2WorldDef.maximumLinearSpeed" @输出名 = "maximumLinearSpeed">
+    变量 启用休眠 <公开 类型 = 逻辑型 注释 = "是否允许刚体休眠以提升性能 · b2WorldDef.enableSleep" @输出名 = "enableSleep">
+    变量 启用连续碰撞 <公开 类型 = 逻辑型 注释 = "启用连续碰撞 · b2WorldDef.enableContinuous" @输出名 = "enableContinuous">
+    变量 工作线程数量 <公开 类型 = 整数 注释 = "多线程使用的工作线程数量 · b2WorldDef.workerCount" @输出名 = "workerCount">
+    变量 容量 <公开 类型 = B2容量 注释 = "可选的初始容量 · b2WorldDef.capacity" @输出名 = "capacity">
+    变量 内部值 <公开 类型 = 整数 注释 = "内部用，检测定义是否有效 · b2WorldDef.internalValue" @输出名 = "internalValue">
+
+    方法 取用户任务上下文指针 <公开 静态 类型 = 变整数 注释 = "读取用户任务上下文字段指针 · b2vol_worldDef_getUserTaskContext" @嵌入式方法 = "">
+    参数 定义 <类型 = B2世界定义>
+    {
+        @ (intptr_t)b2vol_worldDef_getUserTaskContext(&@<定义>)
+    }
+
+    方法 置用户任务上下文指针 <公开 静态 注释 = "写入用户任务上下文字段指针 · b2vol_worldDef_setUserTaskContext" @嵌入式方法 = "">
+    参数 定义 <类型 = B2世界定义>
+    参数 新值 <类型 = 变整数>
+    {
+        @ b2vol_worldDef_setUserTaskContext(&@<定义>, (void*)@<新值>)
+    }
+
+    方法 取用户数据指针 <公开 静态 类型 = 变整数 注释 = "读取用户数据字段指针 · b2vol_worldDef_getUserData" @嵌入式方法 = "">
+    参数 定义 <类型 = B2世界定义>
+    {
+        @ (intptr_t)b2vol_worldDef_getUserData(&@<定义>)
+    }
+
+    方法 置用户数据指针 <公开 静态 注释 = "写入用户数据字段指针 · b2vol_worldDef_setUserData" @嵌入式方法 = "">
+    参数 定义 <类型 = B2世界定义>
+    参数 新值 <类型 = 变整数>
+    {
+        @ b2vol_worldDef_setUserData(&@<定义>, (void*)@<新值>)
+    }
+
+    方法 置摩擦回调 <公开 静态 注释 = "写入摩擦回调字段 · b2vol_worldDef_setFrictionCallback" @嵌入式方法 = "">
+    参数 定义 <类型 = B2世界定义>
+    参数 回调 <类型 = B2摩擦回调>
+    {
+        @ b2vol_worldDef_setFrictionCallback(&@<定义>, @<回调>)
+    }
+
+    方法 取摩擦回调 <公开 静态 类型 = B2摩擦回调 注释 = "读取摩擦回调字段 · b2vol_worldDef_getFrictionCallback" @嵌入式方法 = "">
+    参数 定义 <类型 = B2世界定义>
+    {
+        @ b2vol_worldDef_getFrictionCallback(&@<定义>)
+    }
+
+    方法 置恢复系数回调 <公开 静态 注释 = "写入恢复系数回调字段 · b2vol_worldDef_setRestitutionCallback" @嵌入式方法 = "">
+    参数 定义 <类型 = B2世界定义>
+    参数 回调 <类型 = B2恢复系数回调>
+    {
+        @ b2vol_worldDef_setRestitutionCallback(&@<定义>, @<回调>)
+    }
+
+    方法 取恢复系数回调 <公开 静态 类型 = B2恢复系数回调 注释 = "读取恢复系数回调字段 · b2vol_worldDef_getRestitutionCallback" @嵌入式方法 = "">
+    参数 定义 <类型 = B2世界定义>
+    {
+        @ b2vol_worldDef_getRestitutionCallback(&@<定义>)
+    }
+
+    方法 置入队任务回调 <公开 静态 注释 = "写入入队任务回调字段 · b2vol_worldDef_setEnqueueTask" @嵌入式方法 = "">
+    参数 定义 <类型 = B2世界定义>
+    参数 回调 <类型 = B2入队任务回调>
+    {
+        @ b2vol_worldDef_setEnqueueTask(&@<定义>, @<回调>)
+    }
+
+    方法 取入队任务回调 <公开 静态 类型 = B2入队任务回调 注释 = "读取入队任务回调字段 · b2vol_worldDef_getEnqueueTask" @嵌入式方法 = "">
+    参数 定义 <类型 = B2世界定义>
+    {
+        @ b2vol_worldDef_getEnqueueTask(&@<定义>)
+    }
+
+    方法 置完成任务回调 <公开 静态 注释 = "写入完成任务回调字段 · b2vol_worldDef_setFinishTask" @嵌入式方法 = "">
+    参数 定义 <类型 = B2世界定义>
+    参数 回调 <类型 = B2完成任务回调>
+    {
+        @ b2vol_worldDef_setFinishTask(&@<定义>, @<回调>)
+    }
+
+    方法 取完成任务回调 <公开 静态 类型 = B2完成任务回调 注释 = "读取完成任务回调字段 · b2vol_worldDef_getFinishTask" @嵌入式方法 = "">
+    参数 定义 <类型 = B2世界定义>
+    {
+        @ b2vol_worldDef_getFinishTask(&@<定义>)
+    }
+
+    方法 取默认定义 <公开 静态 类型 = B2世界定义 注释 = "用此函数初始化世界定义 · b2DefaultWorldDef" @嵌入式方法 = "">
+    {
+        @ b2DefaultWorldDef()
+    }
+
+}
+
+类 B2爆炸定义 <公开 注释 = "爆炸定义 · b2ExplosionDef" @别名 = "b2ExplosionDef" @别名类型 = 本地结构>
+{
+    变量 掩码位 <公开 类型 = 长整数 注释 = "用于过滤形状的掩码位 · b2ExplosionDef.maskBits" @输出名 = "maskBits">
+    变量 位置 <公开 类型 = B2向量 注释 = "爆炸中心的世界坐标 · b2ExplosionDef.position" @输出名 = "position">
+    变量 半径 <公开 类型 = 单精度小数 注释 = "爆炸半径 · b2ExplosionDef.radius" @输出名 = "radius">
+    变量 衰减 <公开 类型 = 单精度小数 注释 = "超出半径后的衰减距离 · b2ExplosionDef.falloff" @输出名 = "falloff">
+    变量 单位长度冲量 <公开 类型 = 单精度小数 注释 = "单位长度上的冲量 · b2ExplosionDef.impulsePerLength" @输出名 = "impulsePerLength">
+    方法 取默认定义 <公开 静态 类型 = B2爆炸定义 注释 = "用此函数初始化爆炸定义 · b2DefaultExplosionDef" @嵌入式方法 = "">
+    {
+        @ b2DefaultExplosionDef()
+    }
+
+}
+
+类 B2传感器开始事件 <公开 注释 = "传感器开始事件 · b2SensorBeginTouchEvent" @别名 = "b2SensorBeginTouchEvent" @别名类型 = 本地结构>
+{
+    变量 传感器形状标识 <公开 类型 = B2形状标识 注释 = "传感器形状的标识 · b2SensorBeginTouchEvent.sensorShapeId" @输出名 = "sensorShapeId">
+    变量 访客形状标识 <公开 类型 = B2形状标识 注释 = "开始接触该传感器形状的形状标识 · b2SensorBeginTouchEvent.visitorShapeId" @输出名 = "visitorShapeId">
+}
+
+类 B2传感器结束事件 <公开 注释 = "传感器结束事件 · b2SensorEndTouchEvent" @别名 = "b2SensorEndTouchEvent" @别名类型 = 本地结构>
+{
+    变量 传感器形状标识 <公开 类型 = B2形状标识 注释 = "传感器形状的标识，该形状可能已被销毁 · b2SensorEndTouchEvent.sensorShapeId" @输出名 = "sensorShapeId">
+    变量 访客形状标识 <公开 类型 = B2形状标识 注释 = "停止接触该传感器形状的形状标识，可能已被销毁 · b2SensorEndTouchEvent.visitorShapeId" @输出名 = "visitorShapeId">
+}
+
+类 B2传感器事件集 <公开 注释 = "传感器事件集 · b2SensorEvents" @别名 = "b2SensorEvents" @别名类型 = 本地结构>
+{
+    变量 开始数量 <公开 类型 = 整数 注释 = "开始接触事件数量 · b2SensorEvents.beginCount" @输出名 = "beginCount">
+    变量 结束数量 <公开 类型 = 整数 注释 = "结束接触事件数量 · b2SensorEvents.endCount" @输出名 = "endCount">
+
+    方法 取开始事件指针 <公开 静态 类型 = 变整数 注释 = "读取开始事件数组字段首地址 · b2vol_sensorEvents_getBeginEvents" @嵌入式方法 = "">
+    参数 定义 <类型 = B2传感器事件集>
+    {
+        @ (intptr_t)b2vol_sensorEvents_getBeginEvents(&@<定义>)
+    }
+
+    方法 取开始事件 <公开 静态 类型 = B2传感器开始事件 注释 = "读取开始事件数组字段的一个元素 · b2vol_sensorEvents_getBeginEvent" @嵌入式方法 = "">
+    参数 定义 <类型 = B2传感器事件集>
+    参数 序号 <类型 = 整数>
+    {
+        @ b2vol_sensorEvents_getBeginEvent(&@<定义>, @<序号>)
+    }
+
+    方法 取结束事件指针 <公开 静态 类型 = 变整数 注释 = "读取结束事件数组字段首地址 · b2vol_sensorEvents_getEndEvents" @嵌入式方法 = "">
+    参数 定义 <类型 = B2传感器事件集>
+    {
+        @ (intptr_t)b2vol_sensorEvents_getEndEvents(&@<定义>)
+    }
+
+    方法 取结束事件 <公开 静态 类型 = B2传感器结束事件 注释 = "读取结束事件数组字段的一个元素 · b2vol_sensorEvents_getEndEvent" @嵌入式方法 = "">
+    参数 定义 <类型 = B2传感器事件集>
+    参数 序号 <类型 = 整数>
+    {
+        @ b2vol_sensorEvents_getEndEvent(&@<定义>, @<序号>)
+    }
+
+}
+
+类 B2接触开始事件 <公开 注释 = "接触开始事件 · b2ContactBeginTouchEvent" @别名 = "b2ContactBeginTouchEvent" @别名类型 = 本地结构>
+{
+    变量 形状标识甲 <公开 类型 = B2形状标识 注释 = "第一个形状的标识 · b2ContactBeginTouchEvent.shapeIdA" @输出名 = "shapeIdA">
+    变量 形状标识乙 <公开 类型 = B2形状标识 注释 = "第二个形状的标识 · b2ContactBeginTouchEvent.shapeIdB" @输出名 = "shapeIdB">
+    变量 接触标识 <公开 类型 = B2接触标识 注释 = "瞬态接触标识 · b2ContactBeginTouchEvent.contactId" @输出名 = "contactId">
+}
+
+类 B2接触结束事件 <公开 注释 = "接触结束事件 · b2ContactEndTouchEvent" @别名 = "b2ContactEndTouchEvent" @别名类型 = 本地结构>
+{
+    变量 形状标识甲 <公开 类型 = B2形状标识 注释 = "第一个形状标识，该形状可能已被销毁 · b2ContactEndTouchEvent.shapeIdA" @输出名 = "shapeIdA">
+    变量 形状标识乙 <公开 类型 = B2形状标识 注释 = "第二个形状标识，该形状可能已被销毁 · b2ContactEndTouchEvent.shapeIdB" @输出名 = "shapeIdB">
+    变量 接触标识 <公开 类型 = B2接触标识 注释 = "接触标识 · b2ContactEndTouchEvent.contactId" @输出名 = "contactId">
+}
+
+类 B2接触撞击事件 <公开 注释 = "接触撞击事件 · b2ContactHitEvent" @别名 = "b2ContactHitEvent" @别名类型 = 本地结构>
+{
+    变量 形状标识甲 <公开 类型 = B2形状标识 注释 = "第一个形状标识 · b2ContactHitEvent.shapeIdA" @输出名 = "shapeIdA">
+    变量 形状标识乙 <公开 类型 = B2形状标识 注释 = "第二个形状标识 · b2ContactHitEvent.shapeIdB" @输出名 = "shapeIdB">
+    变量 接触标识 <公开 类型 = B2接触标识 注释 = "接触标识 · b2ContactHitEvent.contactId" @输出名 = "contactId">
+    变量 点 <公开 类型 = B2向量 注释 = "两形状相撞的点 · b2ContactHitEvent.point" @输出名 = "point">
+    变量 法线 <公开 类型 = B2向量 注释 = "由形状甲指向形状乙的法线 · b2ContactHitEvent.normal" @输出名 = "normal">
+    变量 接近速度 <公开 类型 = 单精度小数 注释 = "两形状相互接近的速度 · b2ContactHitEvent.approachSpeed" @输出名 = "approachSpeed">
+}
+
+类 B2接触事件集 <公开 注释 = "接触事件集 · b2ContactEvents" @别名 = "b2ContactEvents" @别名类型 = 本地结构>
+{
+    变量 开始数量 <公开 类型 = 整数 注释 = "开始接触事件数量 · b2ContactEvents.beginCount" @输出名 = "beginCount">
+    变量 结束数量 <公开 类型 = 整数 注释 = "结束接触事件数量 · b2ContactEvents.endCount" @输出名 = "endCount">
+    变量 撞击数量 <公开 类型 = 整数 注释 = "撞击事件数量 · b2ContactEvents.hitCount" @输出名 = "hitCount">
+
+    方法 取开始事件指针 <公开 静态 类型 = 变整数 注释 = "读取开始事件数组字段首地址 · b2vol_contactEvents_getBeginEvents" @嵌入式方法 = "">
+    参数 定义 <类型 = B2接触事件集>
+    {
+        @ (intptr_t)b2vol_contactEvents_getBeginEvents(&@<定义>)
+    }
+
+    方法 取开始事件 <公开 静态 类型 = B2接触开始事件 注释 = "读取开始事件数组字段的一个元素 · b2vol_contactEvents_getBeginEvent" @嵌入式方法 = "">
+    参数 定义 <类型 = B2接触事件集>
+    参数 序号 <类型 = 整数>
+    {
+        @ b2vol_contactEvents_getBeginEvent(&@<定义>, @<序号>)
+    }
+
+    方法 取结束事件指针 <公开 静态 类型 = 变整数 注释 = "读取结束事件数组字段首地址 · b2vol_contactEvents_getEndEvents" @嵌入式方法 = "">
+    参数 定义 <类型 = B2接触事件集>
+    {
+        @ (intptr_t)b2vol_contactEvents_getEndEvents(&@<定义>)
+    }
+
+    方法 取结束事件 <公开 静态 类型 = B2接触结束事件 注释 = "读取结束事件数组字段的一个元素 · b2vol_contactEvents_getEndEvent" @嵌入式方法 = "">
+    参数 定义 <类型 = B2接触事件集>
+    参数 序号 <类型 = 整数>
+    {
+        @ b2vol_contactEvents_getEndEvent(&@<定义>, @<序号>)
+    }
+
+    方法 取撞击事件指针 <公开 静态 类型 = 变整数 注释 = "读取撞击事件数组字段首地址 · b2vol_contactEvents_getHitEvents" @嵌入式方法 = "">
+    参数 定义 <类型 = B2接触事件集>
+    {
+        @ (intptr_t)b2vol_contactEvents_getHitEvents(&@<定义>)
+    }
+
+    方法 取撞击事件 <公开 静态 类型 = B2接触撞击事件 注释 = "读取撞击事件数组字段的一个元素 · b2vol_contactEvents_getHitEvent" @嵌入式方法 = "">
+    参数 定义 <类型 = B2接触事件集>
+    参数 序号 <类型 = 整数>
+    {
+        @ b2vol_contactEvents_getHitEvent(&@<定义>, @<序号>)
+    }
+
+}
+
+类 B2刚体移动事件 <公开 注释 = "刚体移动事件 · b2BodyMoveEvent" @别名 = "b2BodyMoveEvent" @别名类型 = 本地结构>
+{
+    变量 变换 <公开 类型 = B2变换 注释 = "刚体的世界变换 · b2BodyMoveEvent.transform" @输出名 = "transform">
+    变量 刚体标识 <公开 类型 = B2刚体标识 注释 = "发生移动的刚体标识 · b2BodyMoveEvent.bodyId" @输出名 = "bodyId">
+    变量 已休眠 <公开 类型 = 逻辑型 注释 = "本时间步该刚体是否进入休眠 · b2BodyMoveEvent.fellAsleep" @输出名 = "fellAsleep">
+
+    方法 取用户数据指针 <公开 静态 类型 = 变整数 注释 = "读取用户数据字段指针 · b2vol_bodyMoveEvent_getUserData" @嵌入式方法 = "">
+    参数 定义 <类型 = B2刚体移动事件>
+    {
+        @ (intptr_t)b2vol_bodyMoveEvent_getUserData(&@<定义>)
+    }
+
+    方法 置用户数据指针 <公开 静态 注释 = "写入用户数据字段指针 · b2vol_bodyMoveEvent_setUserData" @嵌入式方法 = "">
+    参数 定义 <类型 = B2刚体移动事件>
+    参数 新值 <类型 = 变整数>
+    {
+        @ b2vol_bodyMoveEvent_setUserData(&@<定义>, (void*)@<新值>)
+    }
+
+}
+
+类 B2刚体事件集 <公开 注释 = "刚体事件集 · b2BodyEvents" @别名 = "b2BodyEvents" @别名类型 = 本地结构>
+{
+    变量 移动数量 <公开 类型 = 整数 注释 = "移动事件数量 · b2BodyEvents.moveCount" @输出名 = "moveCount">
+
+    方法 取移动事件指针 <公开 静态 类型 = 变整数 注释 = "读取移动事件数组字段首地址 · b2vol_bodyEvents_getMoveEvents" @嵌入式方法 = "">
+    参数 定义 <类型 = B2刚体事件集>
+    {
+        @ (intptr_t)b2vol_bodyEvents_getMoveEvents(&@<定义>)
+    }
+
+    方法 取移动事件 <公开 静态 类型 = B2刚体移动事件 注释 = "读取移动事件数组字段的一个元素 · b2vol_bodyEvents_getMoveEvent" @嵌入式方法 = "">
+    参数 定义 <类型 = B2刚体事件集>
+    参数 序号 <类型 = 整数>
+    {
+        @ b2vol_bodyEvents_getMoveEvent(&@<定义>, @<序号>)
+    }
+
+}
+
+类 B2关节事件 <公开 注释 = "关节事件 · b2JointEvent" @别名 = "b2JointEvent" @别名类型 = 本地结构>
+{
+    变量 关节标识 <公开 类型 = B2关节标识 注释 = "关节标识 · b2JointEvent.jointId" @输出名 = "jointId">
+
+    方法 取用户数据指针 <公开 静态 类型 = 变整数 注释 = "读取用户数据字段指针 · b2vol_jointEvent_getUserData" @嵌入式方法 = "">
+    参数 定义 <类型 = B2关节事件>
+    {
+        @ (intptr_t)b2vol_jointEvent_getUserData(&@<定义>)
+    }
+
+    方法 置用户数据指针 <公开 静态 注释 = "写入用户数据字段指针 · b2vol_jointEvent_setUserData" @嵌入式方法 = "">
+    参数 定义 <类型 = B2关节事件>
+    参数 新值 <类型 = 变整数>
+    {
+        @ b2vol_jointEvent_setUserData(&@<定义>, (void*)@<新值>)
+    }
+
+}
+
+类 B2关节事件集 <公开 注释 = "关节事件集 · b2JointEvents" @别名 = "b2JointEvents" @别名类型 = 本地结构>
+{
+    变量 数量 <公开 类型 = 整数 注释 = "事件数量 · b2JointEvents.count" @输出名 = "count">
+
+    方法 取关节事件指针 <公开 静态 类型 = 变整数 注释 = "读取关节事件数组字段首地址 · b2vol_jointEvents_getJointEvents" @嵌入式方法 = "">
+    参数 定义 <类型 = B2关节事件集>
+    {
+        @ (intptr_t)b2vol_jointEvents_getJointEvents(&@<定义>)
+    }
+
+    方法 取关节事件 <公开 静态 类型 = B2关节事件 注释 = "读取关节事件数组字段的一个元素 · b2vol_jointEvents_getJointEvent" @嵌入式方法 = "">
+    参数 定义 <类型 = B2关节事件集>
+    参数 序号 <类型 = 整数>
+    {
+        @ b2vol_jointEvents_getJointEvent(&@<定义>, @<序号>)
+    }
+
+}
+
+类 B2接触数据 <公开 注释 = "接触数据 · b2ContactData" @别名 = "b2ContactData" @别名类型 = 本地结构>
+{
+    变量 接触标识 <公开 类型 = B2接触标识 注释 = "接触标识 · b2ContactData.contactId" @输出名 = "contactId">
+    变量 形状标识甲 <公开 类型 = B2形状标识 注释 = "第一个形状标识 · b2ContactData.shapeIdA" @输出名 = "shapeIdA">
+    变量 形状标识乙 <公开 类型 = B2形状标识 注释 = "第二个形状标识 · b2ContactData.shapeIdB" @输出名 = "shapeIdB">
+    变量 流形 <公开 类型 = B2流形 注释 = "从接触复制出来的流形 · b2ContactData.manifold" @输出名 = "manifold">
+}
+
+类 B2世界 <公开 注释 = "世界 · 接口包装类">
+{
+    方法 创建世界 <公开 静态 类型 = B2世界标识 注释 = "创建用于刚体仿真的世界 · b2CreateWorld" @嵌入式方法 = "">
+    参数 定义 <类型 = B2世界定义>
+    {
+        @ b2CreateWorld(&@<定义>)
+    }
+
+    方法 销毁世界 <公开 静态 注释 = "销毁世界 · b2DestroyWorld" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    {
+        @ b2DestroyWorld(@<世界标识>)
+    }
+
+    方法 是否有效 <公开 静态 类型 = 逻辑型 注释 = "校验世界标识是否有效 · b2World_IsValid" @嵌入式方法 = "">
+    参数 标识 <类型 = B2世界标识>
+    {
+        @ (b2World_IsValid(@<标识>) != 0)
+    }
+
+    方法 步进 <公开 静态 注释 = "把一个世界推进一个时间步 · b2World_Step" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    参数 时间步 <类型 = 单精度小数>
+    参数 子步数 <类型 = 整数>
+    {
+        @ b2World_Step(@<世界标识>, (float)@<时间步>, @<子步数>)
+    }
+
+    方法 绘制 <公开 静态 注释 = "绘制形状及其它调试绘制数据 · b2World_Draw" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    参数 绘制 <类型 = B2调试绘制>
+    {
+        @ b2World_Draw(@<世界标识>, &@<绘制>)
+    }
+
+    方法 取包围盒 <公开 静态 类型 = B2包围盒 注释 = "按全部形状包围盒的并集取世界范围 · b2World_GetBounds" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    {
+        @ b2World_GetBounds(@<世界标识>)
+    }
+
+    方法 取刚体事件集 <公开 静态 类型 = B2刚体事件集 注释 = "取当前时间步的刚体事件 · b2World_GetBodyEvents" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    {
+        @ b2World_GetBodyEvents(@<世界标识>)
+    }
+
+    方法 取传感器事件集 <公开 静态 类型 = B2传感器事件集 注释 = "取当前时间步的传感器事件 · b2World_GetSensorEvents" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    {
+        @ b2World_GetSensorEvents(@<世界标识>)
+    }
+
+    方法 取接触事件集 <公开 静态 类型 = B2接触事件集 注释 = "取当前时间步的接触事件 · b2World_GetContactEvents" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    {
+        @ b2World_GetContactEvents(@<世界标识>)
+    }
+
+    方法 取关节事件集 <公开 静态 类型 = B2关节事件集 注释 = "取当前时间步的关节事件 · b2World_GetJointEvents" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    {
+        @ b2World_GetJointEvents(@<世界标识>)
+    }
+
+    方法 重叠包围盒 <公开 静态 类型 = B2树统计 注释 = "检测所有可能与给定包围盒重叠的形状 · b2World_OverlapAABB" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    参数 原点 <类型 = B2向量>
+    参数 包围盒 <类型 = B2包围盒>
+    参数 过滤器 <类型 = B2查询过滤>
+    参数 回调函数 <类型 = B2重叠结果回调>
+    参数 上下文 <类型 = 变整数>
+    {
+        @ b2vol_world_overlapAABB(@<世界标识>, @<原点>, @<包围盒>, @<过滤器>, @<回调函数>, (void*)@<上下文>)
+    }
+
+    方法 重叠形状 <公开 静态 类型 = B2树统计 注释 = "检测所有与给定形状代理重叠的形状 · b2World_OverlapShape" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    参数 原点 <类型 = B2向量>
+    参数 形状代理 <类型 = B2形状代理>
+    参数 过滤器 <类型 = B2查询过滤>
+    参数 回调函数 <类型 = B2重叠结果回调>
+    参数 上下文 <类型 = 变整数>
+    {
+        @ b2vol_world_overlapShape(@<世界标识>, @<原点>, &@<形状代理>, @<过滤器>, @<回调函数>, (void*)@<上下文>)
+    }
+
+    方法 投射射线 <公开 静态 类型 = B2树统计 注释 = "向世界投射射线，收集射线路径上的形状 · b2World_CastRay" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    参数 原点 <类型 = B2向量>
+    参数 平移 <类型 = B2向量>
+    参数 过滤器 <类型 = B2查询过滤>
+    参数 回调函数 <类型 = B2投射结果回调>
+    参数 上下文 <类型 = 变整数>
+    {
+        @ b2vol_world_castRay(@<世界标识>, @<原点>, @<平移>, @<过滤器>, @<回调函数>, (void*)@<上下文>)
+    }
+
+    方法 投射射线最近 <公开 静态 类型 = B2射线结果 注释 = "向世界投射射线，只取最近的一次命中 · b2World_CastRayClosest" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    参数 原点 <类型 = B2向量>
+    参数 平移 <类型 = B2向量>
+    参数 过滤器 <类型 = B2查询过滤>
+    {
+        @ b2World_CastRayClosest(@<世界标识>, @<原点>, @<平移>, @<过滤器>)
+    }
+
+    方法 投射形状 <公开 静态 类型 = B2树统计 注释 = "把形状在世界中做投射 · b2World_CastShape" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    参数 原点 <类型 = B2向量>
+    参数 形状代理 <类型 = B2形状代理>
+    参数 平移 <类型 = B2向量>
+    参数 过滤器 <类型 = B2查询过滤>
+    参数 回调函数 <类型 = B2投射结果回调>
+    参数 上下文 <类型 = 变整数>
+    {
+        @ b2vol_world_castShape(@<世界标识>, @<原点>, &@<形状代理>, @<平移>, @<过滤器>, @<回调函数>, (void*)@<上下文>)
+    }
+
+    方法 投射移动器 <公开 静态 类型 = 小数 注释 = "把胶囊移动体在世界中做投射 · b2World_CastMover" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    参数 原点 <类型 = B2向量>
+    参数 值丙 <类型 = B2胶囊>
+    参数 平移 <类型 = B2向量>
+    参数 过滤器 <类型 = B2查询过滤>
+    {
+        @ b2World_CastMover(@<世界标识>, @<原点>, &@<值丙>, @<平移>, @<过滤器>)
+    }
+
+    方法 求碰撞移动器 <公开 静态 注释 = "让胶囊移动体与世界求碰撞，收集可交给平面求解的碰撞平面 · b2World_CollideMover" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    参数 原点 <类型 = B2向量>
+    参数 值丙 <类型 = B2胶囊>
+    参数 过滤器 <类型 = B2查询过滤>
+    参数 回调函数 <类型 = B2平面结果回调>
+    参数 上下文 <类型 = 变整数>
+    {
+        @ b2vol_world_collideMover(@<世界标识>, @<原点>, &@<值丙>, @<过滤器>, @<回调函数>, (void*)@<上下文>)
+    }
+
+    方法 启用休眠 <公开 静态 注释 = "启用或禁用休眠 · b2World_EnableSleeping" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    参数 开关 <类型 = 逻辑型>
+    {
+        @ b2World_EnableSleeping(@<世界标识>, (@<开关> != 0))
+    }
+
+    方法 是否休眠已启用 <公开 静态 类型 = 逻辑型 注释 = "刚体休眠是否已启用 · b2World_IsSleepingEnabled" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    {
+        @ (b2World_IsSleepingEnabled(@<世界标识>) != 0)
+    }
+
+    方法 启用连续 <公开 静态 注释 = "启用或禁用动态刚体与静态刚体之间的连续碰撞 · b2World_EnableContinuous" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    参数 开关 <类型 = 逻辑型>
+    {
+        @ b2World_EnableContinuous(@<世界标识>, (@<开关> != 0))
+    }
+
+    方法 是否连续已启用 <公开 静态 类型 = 逻辑型 注释 = "连续碰撞是否已启用 · b2World_IsContinuousEnabled" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    {
+        @ (b2World_IsContinuousEnabled(@<世界标识>) != 0)
+    }
+
+    方法 置恢复系数阈值 <公开 静态 注释 = "调整恢复系数的速度阈值 · b2World_SetRestitutionThreshold" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    参数 新值 <类型 = 单精度小数>
+    {
+        @ b2World_SetRestitutionThreshold(@<世界标识>, (float)@<新值>)
+    }
+
+    方法 取恢复系数阈值 <公开 静态 类型 = 小数 注释 = "取恢复系数的速度阈值 · b2World_GetRestitutionThreshold" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    {
+        @ b2World_GetRestitutionThreshold(@<世界标识>)
+    }
+
+    方法 置恢复系数迭代数 <公开 静态 注释 = "设置恢复系数求解器所用迭代次数 · b2World_SetRestitutionIterations" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    参数 迭代数 <类型 = 整数>
+    {
+        @ b2World_SetRestitutionIterations(@<世界标识>, @<迭代数>)
+    }
+
+    方法 取恢复系数迭代数 <公开 静态 类型 = 整数 注释 = "取恢复系数求解器所用迭代次数 · b2World_GetRestitutionIterations" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    {
+        @ b2World_GetRestitutionIterations(@<世界标识>)
+    }
+
+    方法 启用恢复系数传播 <公开 静态 注释 = "启用或禁用恢复系数传播 · b2World_EnableRestitutionPropagation" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    参数 开关 <类型 = 逻辑型>
+    {
+        @ b2World_EnableRestitutionPropagation(@<世界标识>, (@<开关> != 0))
+    }
+
+    方法 是否恢复系数传播已启用 <公开 静态 类型 = 逻辑型 注释 = "恢复系数传播是否已启用 · b2World_IsRestitutionPropagationEnabled" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    {
+        @ (b2World_IsRestitutionPropagationEnabled(@<世界标识>) != 0)
+    }
+
+    方法 置撞击事件阈值 <公开 静态 注释 = "调整撞击事件的速度阈值 · b2World_SetHitEventThreshold" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    参数 新值 <类型 = 单精度小数>
+    {
+        @ b2World_SetHitEventThreshold(@<世界标识>, (float)@<新值>)
+    }
+
+    方法 取撞击事件阈值 <公开 静态 类型 = 小数 注释 = "取撞击事件的速度阈值 · b2World_GetHitEventThreshold" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    {
+        @ b2World_GetHitEventThreshold(@<世界标识>)
+    }
+
+    方法 置自定义过滤器回调 <公开 静态 注释 = "注册自定义过滤回调 · b2World_SetCustomFilterCallback" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    参数 回调函数 <类型 = B2自定义过滤回调>
+    参数 上下文 <类型 = 变整数>
+    {
+        @ b2vol_world_setCustomFilterCallback(@<世界标识>, @<回调函数>, (void*)@<上下文>)
+    }
+
+    方法 置预求解回调 <公开 静态 注释 = "注册求解前与连续碰撞前回调 · b2World_SetPreSolveCallback" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    参数 值乙 <类型 = B2接触前求解回调>
+    参数 值丙 <类型 = B2连续碰撞前回调>
+    参数 上下文 <类型 = 变整数>
+    {
+        @ b2vol_world_setPreSolveCallback(@<世界标识>, @<值乙>, @<值丙>, (void*)@<上下文>)
+    }
+
+    方法 置重力 <公开 静态 注释 = "为整个世界设置重力向量 · b2World_SetGravity" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    参数 重力 <类型 = B2向量>
+    {
+        @ b2World_SetGravity(@<世界标识>, @<重力>)
+    }
+
+    方法 取重力 <公开 静态 类型 = B2向量 注释 = "取重力向量 · b2World_GetGravity" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    {
+        @ b2World_GetGravity(@<世界标识>)
+    }
+
+    方法 爆炸 <公开 静态 注释 = "施加一次径向爆炸 · b2World_Explode" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    参数 值乙 <类型 = B2爆炸定义>
+    {
+        @ b2World_Explode(@<世界标识>, &@<值乙>)
+    }
+
+    方法 置接触调优 <公开 静态 注释 = "调整接触调优参数：刚度、弹性与最大推出速度 · b2World_SetContactTuning" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    参数 赫兹 <类型 = 单精度小数>
+    参数 阻尼比 <类型 = 单精度小数>
+    参数 推进速度 <类型 = 单精度小数>
+    {
+        @ b2World_SetContactTuning(@<世界标识>, (float)@<赫兹>, (float)@<阻尼比>, (float)@<推进速度>)
+    }
+
+    方法 取接触调优频率 <公开 静态 类型 = 小数 注释 = "取接触调优参数 · b2World_GetContactTuning">
+    参数 世界标识 <类型 = B2世界标识>
+    {
+        变量 返回结果 <类型 = 小数>
+        @ b2vol_world_getContactTuning(@<世界标识>);
+        @ @<返回结果> = b2vol_ct_hertz();
+        返回 (返回结果)
+    }
+
+    方法 取接触调优阻尼比 <公开 静态 类型 = 小数 注释 = "取接触调优参数 · b2World_GetContactTuning">
+    参数 世界标识 <类型 = B2世界标识>
+    {
+        变量 返回结果 <类型 = 小数>
+        @ b2vol_world_getContactTuning(@<世界标识>);
+        @ @<返回结果> = b2vol_ct_damping();
+        返回 (返回结果)
+    }
+
+    方法 取接触调优推进速度 <公开 静态 类型 = 小数 注释 = "取接触调优参数 · b2World_GetContactTuning">
+    参数 世界标识 <类型 = B2世界标识>
+    {
+        变量 返回结果 <类型 = 小数>
+        @ b2vol_world_getContactTuning(@<世界标识>);
+        @ @<返回结果> = b2vol_ct_speed();
+        返回 (返回结果)
+    }
+
+    方法 置接触回收距离 <公开 静态 注释 = "设置接触点回收距离 · b2World_SetContactRecycleDistance" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    参数 回收距离 <类型 = 单精度小数>
+    {
+        @ b2World_SetContactRecycleDistance(@<世界标识>, (float)@<回收距离>)
+    }
+
+    方法 取接触回收距离 <公开 静态 类型 = 小数 注释 = "取接触点回收距离 · b2World_GetContactRecycleDistance" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    {
+        @ b2World_GetContactRecycleDistance(@<世界标识>)
+    }
+
+    方法 置最大线性速度 <公开 静态 注释 = "设置最大线速度 · b2World_SetMaxLinearSpeed" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    参数 最大线速度 <类型 = 单精度小数>
+    {
+        @ b2World_SetMaxLinearSpeed(@<世界标识>, (float)@<最大线速度>)
+    }
+
+    方法 取最大线性速度 <公开 静态 类型 = 小数 注释 = "取最大线速度 · b2World_GetMaxLinearSpeed" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    {
+        @ b2World_GetMaxLinearSpeed(@<世界标识>)
+    }
+
+    方法 启用热启动 <公开 静态 注释 = "启用或禁用约束热启动 · b2World_EnableWarmStarting" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    参数 开关 <类型 = 逻辑型>
+    {
+        @ b2World_EnableWarmStarting(@<世界标识>, (@<开关> != 0))
+    }
+
+    方法 是否热启动已启用 <公开 静态 类型 = 逻辑型 注释 = "约束热启动是否已启用 · b2World_IsWarmStartingEnabled" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    {
+        @ (b2World_IsWarmStartingEnabled(@<世界标识>) != 0)
+    }
+
+    方法 启用单指令流扩展回退 <公开 静态 注释 = "即使支持高级向量扩展2也强制使用单指令流扩展2 · b2World_EnableSSE2Fallback" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    参数 开关 <类型 = 逻辑型>
+    {
+        @ b2World_EnableSSE2Fallback(@<世界标识>, (@<开关> != 0))
+    }
+
+    方法 取唤醒刚体数量 <公开 静态 类型 = 整数 注释 = "取处于唤醒状态的刚体数量 · b2World_GetAwakeBodyCount" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    {
+        @ b2World_GetAwakeBodyCount(@<世界标识>)
+    }
+
+    方法 取性能剖析 <公开 静态 类型 = B2性能剖析 注释 = "取当前世界的性能剖析数据 · b2World_GetProfile" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    {
+        @ b2World_GetProfile(@<世界标识>)
+    }
+
+    方法 取计数器 <公开 静态 类型 = B2计数器 注释 = "取世界计数器与规模统计 · b2World_GetCounters" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    {
+        @ b2World_GetCounters(@<世界标识>)
+    }
+
+    方法 取最大容量 <公开 静态 类型 = B2容量 注释 = "取最大容量 · b2World_GetMaxCapacity" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    {
+        @ b2World_GetMaxCapacity(@<世界标识>)
+    }
+
+    方法 置用户数据 <公开 静态 注释 = "设置用户数据指针 · b2World_SetUserData" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    参数 用户数据 <类型 = 变整数>
+    {
+        @ b2World_SetUserData(@<世界标识>, (void*)@<用户数据>)
+    }
+
+    方法 取用户数据 <公开 静态 类型 = 变整数 注释 = "取用户数据指针 · b2World_GetUserData" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    {
+        @ (intptr_t)b2World_GetUserData(@<世界标识>)
+    }
+
+    方法 置摩擦回调 <公开 静态 注释 = "设置摩擦回调 · b2World_SetFrictionCallback" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    参数 值乙 <类型 = B2摩擦回调>
+    {
+        @ b2World_SetFrictionCallback(@<世界标识>, @<值乙>)
+    }
+
+    方法 置恢复系数回调 <公开 静态 注释 = "设置恢复系数回调 · b2World_SetRestitutionCallback" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    参数 值乙 <类型 = B2恢复系数回调>
+    {
+        @ b2World_SetRestitutionCallback(@<世界标识>, @<值乙>)
+    }
+
+    方法 置工作线程数量 <公开 静态 注释 = "设置工作线程数量 · b2World_SetWorkerCount" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    参数 数量 <类型 = 整数>
+    {
+        @ b2World_SetWorkerCount(@<世界标识>, @<数量>)
+    }
+
+    方法 取工作线程数量 <公开 静态 类型 = 整数 注释 = "取工作线程数量 · b2World_GetWorkerCount" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    {
+        @ b2World_GetWorkerCount(@<世界标识>)
+    }
+
+    方法 转储内存统计 <公开 静态 注释 = "把内存统计转储到文本文件 · b2World_DumpMemoryStats" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    {
+        @ b2World_DumpMemoryStats(@<世界标识>)
+    }
+
+    方法 重建静态树 <公开 静态 注释 = "重建静态树，仅供内部测试 · b2World_RebuildStaticTree" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    {
+        @ b2World_RebuildStaticTree(@<世界标识>)
+    }
+
+    方法 取状态哈希 <公开 静态 类型 = 长整数 注释 = "计算仿真状态的哈希值 · b2World_GetStateHash" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    {
+        @ (int64_t)b2World_GetStateHash(@<世界标识>)
+    }
+
+    方法 开始录制 <公开 静态 注释 = "开始把该世界录制到录制缓冲区 · b2World_StartRecording" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    参数 录制 <类型 = 变整数>
+    {
+        @ b2World_StartRecording(@<世界标识>, (b2Recording*)@<录制>)
+    }
+
+    方法 停止录制 <公开 静态 注释 = "停止录制 · b2World_StopRecording" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    {
+        @ b2World_StopRecording(@<世界标识>)
+    }
+
+    方法 取快照 <公开 静态 类型 = 整数 注释 = "把世界仿真状态的快照写入调用方提供的缓冲区 · b2World_GetSnapshot" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    参数 图像 <类型 = 变整数>
+    参数 容量 <类型 = 整数>
+    {
+        @ b2World_GetSnapshot(@<世界标识>, (uint8_t*)@<图像>, @<容量>)
+    }
+
+    方法 恢复从快照 <公开 静态 类型 = 逻辑型 注释 = "由快照影像恢复世界的仿真状态 · b2World_RestoreFromSnapshot" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    参数 图像 <类型 = 变整数>
+    参数 尺寸 <类型 = 整数>
+    {
+        @ (b2World_RestoreFromSnapshot(@<世界标识>, (const uint8_t*)@<图像>, @<尺寸>) != 0)
+    }
+
+    方法 创建世界从快照 <公开 静态 类型 = B2世界标识 注释 = "由快照影像创建新世界 · b2CreateWorldFromSnapshot" @嵌入式方法 = "">
+    参数 图像 <类型 = 变整数>
+    参数 尺寸 <类型 = 整数>
+    参数 工作线程数 <类型 = 整数>
+    {
+        @ b2CreateWorldFromSnapshot((const uint8_t*)@<图像>, @<尺寸>, @<工作线程数>)
+    }
+
+}
+
+类 B2录制 <公开 注释 = "录制 · 接口包装类">
+{
+    方法 创建录制 <公开 静态 类型 = 变整数 注释 = "创建录制缓冲区 · b2CreateRecording" @嵌入式方法 = "">
+    参数 字节容量 <类型 = 整数>
+    {
+        @ (intptr_t)b2CreateRecording(@<字节容量>)
+    }
+
+    方法 销毁录制 <公开 静态 注释 = "销毁录制缓冲区并释放其内存 · b2DestroyRecording" @嵌入式方法 = "">
+    参数 录制 <类型 = 变整数>
+    {
+        @ b2DestroyRecording((b2Recording*)@<录制>)
+    }
+
+    方法 取数据 <公开 静态 类型 = 变整数 注释 = "取录制字节的指针，用于存盘或传输 · b2Recording_GetData" @嵌入式方法 = "">
+    参数 录制 <类型 = 变整数>
+    {
+        @ (intptr_t)b2Recording_GetData((const b2Recording*)@<录制>)
+    }
+
+    方法 取尺寸 <公开 静态 类型 = 整数 注释 = "取已录制的字节数量 · b2Recording_GetSize" @嵌入式方法 = "">
+    参数 录制 <类型 = 变整数>
+    {
+        @ b2Recording_GetSize((const b2Recording*)@<录制>)
+    }
+
+    方法 保存转文件 <公开 静态 类型 = 逻辑型 注释 = "把录制缓冲区保存到文件 · b2Recording_SaveToFile" @嵌入式方法 = "req_str_param_text_pointer_u8 = true">
+    参数 录制 <类型 = 变整数>
+    参数 路径 <类型 = 文本型>
+    {
+        @ (b2Recording_SaveToFile((const b2Recording*)@<录制>, @<路径>) != 0)
+    }
+
+    方法 创建录制从文件 <公开 静态 类型 = 变整数 注释 = "从文件读入录制数据到新的录制缓冲区 · b2CreateRecordingFromFile" @嵌入式方法 = "req_str_param_text_pointer_u8 = true">
+    参数 路径 <类型 = 文本型>
+    {
+        @ (intptr_t)b2CreateRecordingFromFile(@<路径>)
+    }
+
+    方法 校验录制 <公开 静态 类型 = 逻辑型 注释 = "重跑引擎并比对录制的标识与状态，以此验证一段录制 · b2ValidateRecording" @嵌入式方法 = "">
+    参数 值甲 <类型 = 变整数>
+    参数 尺寸 <类型 = 整数>
+    参数 工作线程数 <类型 = 整数>
+    {
+        @ (b2ValidateRecording((void*)@<值甲>, @<尺寸>, @<工作线程数>) != 0)
+    }
+
+}
+
+类 B2接触 <公开 注释 = "接触 · 接口包装类">
+{
+    方法 是否有效 <公开 静态 类型 = 逻辑型 注释 = "校验接触标识是否有效 · b2Contact_IsValid" @嵌入式方法 = "">
+    参数 标识 <类型 = B2接触标识>
+    {
+        @ (b2Contact_IsValid(@<标识>) != 0)
+    }
+
+    方法 取数据 <公开 静态 类型 = B2接触数据 注释 = "取某个接触的数据 · b2Contact_GetData" @嵌入式方法 = "">
+    参数 接触标识 <类型 = B2接触标识>
+    {
+        @ b2Contact_GetData(@<接触标识>)
+    }
+
+}
+

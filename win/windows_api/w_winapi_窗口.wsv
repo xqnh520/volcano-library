@@ -1,0 +1,1163 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.WinAPI
+
+# 辅助结构 ===
+
+类 窗口矩形类 <公开 基础类 = 扩展对象类 注释 = "对应 Win32 RECT 结构(左, 顶, 右, 底), 用作接收窗口/客户区等矩形数据" @视窗.结构类 = 0>
+{
+    变量 左边 <公开 类型 = 整数 注释 = "矩形左边界(RECT.left)" @输出名 = "left">
+    变量 顶边 <公开 类型 = 整数 注释 = "矩形上边界(RECT.top)" @输出名 = "top">
+    变量 右边 <公开 类型 = 整数 注释 = "矩形右边界(RECT.right)" @输出名 = "right">
+    变量 底边 <公开 类型 = 整数 注释 = "矩形下边界(RECT.bottom)" @输出名 = "bottom">
+
+    方法 取宽度 <公开 类型 = 整数 注释 = "返回矩形宽度(右边-左边)">
+    {
+        返回 (右边 - 左边)
+    }
+
+    方法 取高度 <公开 类型 = 整数 注释 = "返回矩形高度(底边-顶边)">
+    {
+        返回 (底边 - 顶边)
+    }
+}
+
+类 坐标点类 <公开 基础类 = 扩展对象类 注释 = "对应 Win32 POINT 结构" @视窗.结构类 = 0>
+{
+    变量 横坐标 <公开 类型 = 整数 注释 = "X 坐标(POINT.x)" @输出名 = "x">
+    变量 纵坐标 <公开 类型 = 整数 注释 = "Y 坐标(POINT.y)" @输出名 = "y">
+}
+
+类 显示器信息类 <公开 基础类 = 扩展对象类 注释 = "对应 Win32 MONITORINFO 结构(显示器监控区/工作区/标志)" @视窗.结构类 = 0>
+{
+    变量 结构大小 <公开 类型 = 整数 注释 = "结构尺寸(MONITORINFO.cbSize)" @输出名 = "cbSize">
+    变量 监控区 <公开 类型 = 窗口矩形类 注释 = "显示器完整区域(MONITORINFO.rcMonitor)" @输出名 = "rcMonitor">
+    变量 工作区 <公开 类型 = 窗口矩形类 注释 = "显示器工作区, 不含任务栏等(MONITORINFO.rcWork)" @输出名 = "rcWork">
+    变量 标志 <公开 类型 = 整数 注释 = "显示器标志(MONITORINFO.dwFlags), 1 = 主显示器" @输出名 = "dwFlags">
+
+    方法 是否主显示器 <公开 类型 = 逻辑型 注释 = "判断该显示器是否为主显示器(MONITORINFOF_PRIMARY)">
+    {
+        返回 (标志 == 1)
+    }
+}
+
+类 内存状态类 <公开 基础类 = 扩展对象类 注释 = "对应 Win32 MEMORYSTATUSEX 结构, 接收 GlobalMemoryStatusEx 的内存状态数据" @视窗.结构类 = 0>
+{
+    变量 结构大小 <公开 类型 = 整数 注释 = "结构尺寸(MEMORYSTATUSEX.dwLength)" @输出名 = "dwLength">
+    变量 内存使用率 <公开 类型 = 整数 注释 = "物理内存使用率百分比(MEMORYSTATUSEX.dwMemoryLoad), 0-100" @输出名 = "dwMemoryLoad">
+    变量 物理内存总量 <公开 类型 = 长整数 注释 = "物理内存总量(字节)" @输出名 = "ullTotalPhys">
+    变量 物理内存可用 <公开 类型 = 长整数 注释 = "当前可用物理内存(字节)" @输出名 = "ullAvailPhys">
+    变量 页面文件总量 <公开 类型 = 长整数 注释 = "页面文件总量(字节)" @输出名 = "ullTotalPageFile">
+    变量 页面文件可用 <公开 类型 = 长整数 注释 = "当前可用页面文件(字节)" @输出名 = "ullAvailPageFile">
+    变量 虚拟内存总量 <公开 类型 = 长整数 注释 = "虚拟内存总量(字节)" @输出名 = "ullTotalVirtual">
+    变量 虚拟内存可用 <公开 类型 = 长整数 注释 = "当前可用虚拟内存(字节)" @输出名 = "ullAvailVirtual">
+    变量 扩展虚拟内存可用 <公开 类型 = 长整数 注释 = "可用扩展虚拟内存(字节, 保留字段)" @输出名 = "ullAvailExtendedVirtual">
+}
+
+# 常量 ===
+
+类 窗口显示方式 <公开 注释 = "ShowWindow 的显示方式(SW_*)" @常量类 = 整数>
+{
+    常量 隐藏 <公开 值 = 0 注释 = "SW_HIDE: 隐藏窗口">
+    常量 普通显示 <公开 值 = 1 注释 = "SW_SHOWNORMAL: 激活并显示">
+    常量 最小化 <公开 值 = 2 注释 = "SW_SHOWMINIMIZED: 最小化显示">
+    常量 最大化 <公开 值 = 3 注释 = "SW_SHOWMAXIMIZED: 最大化显示">
+    常量 显示 <公开 值 = 5 注释 = "SW_SHOW: 按当前位置和大小显示">
+    常量 还原 <公开 值 = 9 注释 = "SW_RESTORE: 还原并激活">
+}
+
+类 窗口位置标志 <公开 注释 = "SetWindowPos 的标志位(SWP_*), 可以相加组合使用" @常量类 = 整数>
+{
+    常量 无 <公开 值 = 0 注释 = "不使用任何标志">
+    常量 不改变尺寸 <公开 值 = 1 注释 = "SWP_NOSIZE: 忽略宽度和高度参数">
+    常量 不改变位置 <公开 值 = 2 注释 = "SWP_NOMOVE: 忽略左边和顶边参数">
+    常量 不改变顺序 <公开 值 = 4 注释 = "SWP_NOZORDER: 保持当前 Z 顺序">
+    常量 不激活 <公开 值 = 16 注释 = "SWP_NOACTIVATE: 不激活窗口">
+    常量 显示窗口 <公开 值 = 64 注释 = "SWP_SHOWWINDOW: 同时显示窗口">
+    常量 隐藏窗口 <公开 值 = 128 注释 = "SWP_HIDEWINDOW: 同时隐藏窗口">
+}
+
+类 窗口层次位置 <公开 注释 = "SetWindowPos 的 Z 顺序插入位置(HWND_*)" @常量类 = 整数>
+{
+    常量 顶端 <公开 值 = 0 注释 = "HWND_TOP: 放在 Z 顺序顶端">
+    常量 底端 <公开 值 = 1 注释 = "HWND_BOTTOM: 放在 Z 顺序底端">
+    常量 置顶 <公开 值 = -1 注释 = "HWND_TOPMOST: 置顶显示">
+    常量 取消置顶 <公开 值 = -2 注释 = "HWND_NOTOPMOST: 取消置顶">
+}
+
+类 系统度量项目 <公开 注释 = "GetSystemMetrics 的度量项目(SM_*)" @常量类 = 整数>
+{
+    常量 屏幕宽度 <公开 值 = 0 注释 = "SM_CXSCREEN: 主屏宽度(像素)">
+    常量 屏幕高度 <公开 值 = 1 注释 = "SM_CYSCREEN: 主屏高度(像素)">
+    常量 虚拟屏幕左边 <公开 值 = 76 注释 = "SM_XVIRTUALSCREEN: 虚拟屏幕左边界">
+    常量 虚拟屏幕顶边 <公开 值 = 77 注释 = "SM_YVIRTUALSCREEN: 虚拟屏幕顶边界">
+    常量 虚拟屏幕宽度 <公开 值 = 78 注释 = "SM_CXVIRTUALSCREEN: 虚拟屏幕宽度">
+    常量 虚拟屏幕高度 <公开 值 = 79 注释 = "SM_CYVIRTUALSCREEN: 虚拟屏幕高度">
+}
+
+类 闪烁方式 <公开 注释 = "FlashWindowEx 的闪烁方式(FLASHW_*)" @常量类 = 整数>
+{
+    常量 窗口标题 <公开 值 = 1 注释 = "FLASHW_CAPTION: 闪烁窗口标题栏">
+    常量 任务栏按钮 <公开 值 = 2 注释 = "FLASHW_TRAY: 闪烁任务栏按钮">
+    常量 全部 <公开 值 = 3 注释 = "FLASHW_ALL: 同时闪烁标题栏和任务栏按钮">
+}
+
+类 窗口动画方式 <公开 注释 = "AnimateWindow 的动画标志(AW_*), 可以相加组合使用" @常量类 = 整数>
+{
+    常量 水平正向 <公开 值 = 1 注释 = "AW_HOR_POSITIVE: 从左到右展开">
+    常量 水平负向 <公开 值 = 2 注释 = "AW_HOR_NEGATIVE: 从右到左展开">
+    常量 垂直正向 <公开 值 = 4 注释 = "AW_VER_POSITIVE: 从上到下展开">
+    常量 垂直负向 <公开 值 = 8 注释 = "AW_VER_NEGATIVE: 从下到上展开">
+    常量 中心扩散 <公开 值 = 16 注释 = "AW_CENTER: 从中心向四周展开">
+    常量 隐藏 <公开 值 = 65536 注释 = "AW_HIDE: 隐藏窗口(默认为显示窗口)">
+    常量 激活 <公开 值 = 131072 注释 = "AW_ACTIVATE: 激活窗口(默认为不激活)">
+    常量 滑动 <公开 值 = 262144 注释 = "AW_SLIDE: 使用滑动动画">
+    常量 混合 <公开 值 = 524288 注释 = "AW_BLEND: 使用淡入淡出效果">
+}
+
+类 注册表根键 <公开 注释 = "注册表预定义根键(HKEY_*)" @常量类 = 长整数>
+{
+    常量 类根 <公开 值 = 2147483648 注释 = "HKEY_CLASSES_ROOT (0x80000000)">
+    常量 当前用户 <公开 值 = 2147483649 注释 = "HKEY_CURRENT_USER (0x80000001)">
+    常量 本地机器 <公开 值 = 2147483650 注释 = "HKEY_LOCAL_MACHINE (0x80000002)">
+    常量 用户 <公开 值 = 2147483651 注释 = "HKEY_USERS (0x80000003)">
+    常量 配置 <公开 值 = 2147483653 注释 = "HKEY_CURRENT_CONFIG (0x80000005)">
+}
+
+类 注册表访问权限 <公开 注释 = "RegOpenKeyExW 的访问权限(KEY_* 组合)" @常量类 = 整数>
+{
+    常量 读取 <公开 值 = 131097 注释 = "KEY_READ (0x20019): 查询值并枚举子键">
+    常量 写入 <公开 值 = 131078 注释 = "KEY_WRITE (0x20006): 设置值并创建子键">
+    常量 完全控制 <公开 值 = 983103 注释 = "KEY_ALL_ACCESS (0xF003F)">
+}
+
+类 退出Windows标志 <公开 注释 = "ExitWindowsEx 的退出方式(EWX_*)" @常量类 = 整数>
+{
+    常量 注销 <公开 值 = 0 注释 = "EWX_LOGOFF (0): 注销当前用户">
+    常量 关机 <公开 值 = 1 注释 = "EWX_SHUTDOWN (1): 关机">
+    常量 重启 <公开 值 = 2 注释 = "EWX_REBOOT (2): 重启">
+    常量 断电 <公开 值 = 8 注释 = "EWX_POWEROFF (8): 关机并断电">
+}
+
+# 窗口操作 ===
+
+类 窗口操作类 <公开 注释 = "通过窗口句柄操作 Win32 窗口的静态方法集合" @别名 = "//" @别名类型 = 本地类 @类用途 = 访问静态成员>
+{
+    方法 取前台窗口 <公开 静态 类型 = 变整数 注释 = "获取前台窗口句柄(GetForegroundWindow)" @嵌入式方法 = "">
+    {
+        @ (INT_P)::GetForegroundWindow()
+    }
+
+    方法 置前台窗口 <公开 静态 类型 = 逻辑型 注释 = "将窗口带到前台并激活(SetForegroundWindow)" @嵌入式方法 = "">
+    参数 窗口句柄 <类型 = 变整数 注释 = "目标窗口句柄">
+    {
+        @ (::SetForegroundWindow((HWND)@<窗口句柄>) != 0)
+    }
+
+    方法 取桌面窗口 <公开 静态 类型 = 变整数 注释 = "获取桌面窗口句柄(GetDesktopWindow)" @嵌入式方法 = "">
+    {
+        @ (INT_P)::GetDesktopWindow()
+    }
+
+    方法 显示窗口 <公开 静态 类型 = 逻辑型 注释 = "设置窗口的显示状态(ShowWindow), 返回窗口原来是否可见. 显示方式参见\"窗口显示方式\"常量类" @嵌入式方法 = "">
+    参数 窗口句柄 <类型 = 变整数 注释 = "目标窗口句柄">
+    参数 显示方式 <类型 = 窗口显示方式 注释 = "显示方式, 参见\"窗口显示方式\"常量类" @默认值 = 窗口显示方式.显示>
+    {
+        @ (::ShowWindow((HWND)@<窗口句柄>, (int)@<显示方式>) != 0)
+    }
+
+    方法 是否最小化 <公开 静态 类型 = 逻辑型 注释 = "判断窗口是否处于最小化状态(IsIconic)" @嵌入式方法 = "">
+    参数 窗口句柄 <类型 = 变整数 注释 = "目标窗口句柄">
+    {
+        @ (::IsIconic((HWND)@<窗口句柄>) != 0)
+    }
+
+    方法 是否最大化 <公开 静态 类型 = 逻辑型 注释 = "判断窗口是否处于最大化状态(IsZoomed)" @嵌入式方法 = "">
+    参数 窗口句柄 <类型 = 变整数 注释 = "目标窗口句柄">
+    {
+        @ (::IsZoomed((HWND)@<窗口句柄>) != 0)
+    }
+
+    方法 窗口是否可见 <公开 静态 类型 = 逻辑型 注释 = "判断窗口是否可见(IsWindowVisible)" @嵌入式方法 = "">
+    参数 窗口句柄 <类型 = 变整数 注释 = "目标窗口句柄">
+    {
+        @ (::IsWindowVisible((HWND)@<窗口句柄>) != 0)
+    }
+
+    方法 是否有效窗口 <公开 静态 类型 = 逻辑型 注释 = "判断句柄是否为有效窗口(IsWindow)" @嵌入式方法 = "">
+    参数 窗口句柄 <类型 = 变整数 注释 = "欲判断的窗口句柄">
+    {
+        @ (::IsWindow((HWND)@<窗口句柄>) != 0)
+    }
+
+    方法 窗口置顶 <公开 静态 类型 = 逻辑型 注释 = "设置或取消窗口置顶显示" @嵌入式方法 = "">
+    参数 窗口句柄 <类型 = 变整数 注释 = "目标窗口句柄">
+    参数 是否置顶 <类型 = 逻辑型 注释 = "真 = 置顶显示, 假 = 取消置顶" @默认值 = 真>
+    {
+        @ (::SetWindowPos((HWND)@<窗口句柄>, @<是否置顶> ? HWND_TOPMOST : HWND_NOTOPMOST, 0, 0, 0, 0, SWP_NOMOVE | SWP_NOSIZE | SWP_NOACTIVATE) != 0)
+    }
+
+    方法 移动窗口 <公开 静态 类型 = 逻辑型 注释 = "移动窗口并调整其大小(MoveWindow)" @嵌入式方法 = "">
+    参数 窗口句柄 <类型 = 变整数 注释 = "目标窗口句柄">
+    参数 左边 <类型 = 整数 注释 = "新的左边界坐标">
+    参数 顶边 <类型 = 整数 注释 = "新的上边界坐标">
+    参数 宽度 <类型 = 整数 注释 = "新的窗口宽度">
+    参数 高度 <类型 = 整数 注释 = "新的窗口高度">
+    参数 是否重画 <类型 = 逻辑型 注释 = "是否重画窗口" @默认值 = 真>
+    {
+        @ (::MoveWindow((HWND)@<窗口句柄>, (int)@<左边>, (int)@<顶边>, (int)@<宽度>, (int)@<高度>, (BOOL)@<是否重画>) != 0)
+    }
+
+    方法 置窗口位置与大小 <公开 静态 类型 = 逻辑型 注释 = "同时设置窗口的位置/尺寸/Z 顺序(SetWindowPos)" @嵌入式方法 = "">
+    参数 窗口句柄 <类型 = 变整数 注释 = "目标窗口句柄">
+    参数 层次位置 <类型 = 窗口层次位置 注释 = "Z 顺序插入位置, 参见\"窗口层次位置\"常量类">
+    参数 左边 <类型 = 整数 注释 = "新的左边界坐标">
+    参数 顶边 <类型 = 整数 注释 = "新的上边界坐标">
+    参数 宽度 <类型 = 整数 注释 = "新的窗口宽度">
+    参数 高度 <类型 = 整数 注释 = "新的窗口高度">
+    参数 标志 <类型 = 整数 注释 = "位置标志, 参见\"窗口位置标志\"常量类, 组合使用时请分别强制转换到整数后相加" @默认值 = 0>
+    {
+        @ (::SetWindowPos((HWND)@<窗口句柄>, (HWND)(INT_P)@<层次位置>, (int)@<左边>, (int)@<顶边>, (int)@<宽度>, (int)@<高度>, (UINT)@<标志>) != 0)
+    }
+
+    方法 闪烁窗口 <公开 静态 类型 = 逻辑型 注释 = "闪烁窗口以提醒用户(FlashWindowEx)" @禁止流程检查 = 真>
+    参数 窗口句柄 <类型 = 变整数 注释 = "目标窗口句柄">
+    参数 闪烁方式 <类型 = 闪烁方式 注释 = "闪烁方式, 参见\"闪烁方式\"常量类" @默认值 = 闪烁方式.全部>
+    参数 闪烁次数 <类型 = 整数 注释 = "闪烁次数" @默认值 = 3>
+    参数 闪烁间隔毫秒 <类型 = 整数 注释 = "闪烁间隔(毫秒), 0 表示使用系统默认值" @默认值 = 0>
+    {
+        @ FLASHWINFO __fw = {sizeof(FLASHWINFO), (HWND)@<窗口句柄>, (UINT)@<闪烁方式>, (UINT)@<闪烁次数>, (UINT)@<闪烁间隔毫秒>};
+        @ return (::FlashWindowEx(&__fw) != 0);
+    }
+
+    方法 取窗口矩形 <公开 静态 类型 = 逻辑型 注释 = "获取窗口在屏幕坐标系中的矩形(GetWindowRect)" @禁止流程检查 = 真>
+    参数 窗口句柄 <类型 = 变整数 注释 = "目标窗口句柄">
+    参数 矩形 <类型 = 窗口矩形类 注释 = "成功时填入窗口矩形">
+    {
+        @ @<矩形>.ResetToNullObject();
+        @ RECT __rc = {0};
+        @ if (!::GetWindowRect((HWND)@<窗口句柄>, &__rc))
+        @     return FALSE;
+        @ @<矩形>.SetStruct(reinterpret_cast<@dt<窗口矩形类>::S*>(&__rc));
+        @ return TRUE;
+    }
+
+    方法 取客户区矩形 <公开 静态 类型 = 逻辑型 注释 = "获取窗口客户区矩形(GetClientRect), 坐标相对于客户区左上角" @禁止流程检查 = 真>
+    参数 窗口句柄 <类型 = 变整数 注释 = "目标窗口句柄">
+    参数 矩形 <类型 = 窗口矩形类 注释 = "成功时填入客户区矩形">
+    {
+        @ @<矩形>.ResetToNullObject();
+        @ RECT __rc = {0};
+        @ if (!::GetClientRect((HWND)@<窗口句柄>, &__rc))
+        @     return FALSE;
+        @ @<矩形>.SetStruct(reinterpret_cast<@dt<窗口矩形类>::S*>(&__rc));
+        @ return TRUE;
+    }
+
+    方法 取主屏工作区矩形 <公开 静态 类型 = 逻辑型 注释 = "获取主屏工作区(桌面除去任务栏等区域)矩形" @禁止流程检查 = 真>
+    参数 矩形 <类型 = 窗口矩形类 注释 = "成功时填入主屏工作区矩形">
+    {
+        @ @<矩形>.ResetToNullObject();
+        @ RECT __rc = {0};
+        @ if (!::SystemParametersInfoW(SPI_GETWORKAREA, 0, &__rc, 0))
+        @     return FALSE;
+        @ @<矩形>.SetStruct(reinterpret_cast<@dt<窗口矩形类>::S*>(&__rc));
+        @ return TRUE;
+    }
+
+    方法 取窗口进程ID <公开 静态 类型 = 整数 注释 = "获取创建窗口的进程ID(GetWindowThreadProcessId)" @禁止流程检查 = 真>
+    参数 窗口句柄 <类型 = 变整数 注释 = "目标窗口句柄">
+    {
+        @ DWORD __pid = 0;
+        @ ::GetWindowThreadProcessId((HWND)@<窗口句柄>, &__pid);
+        @ return (INT)__pid;
+    }
+
+    方法 取窗口线程ID <公开 静态 类型 = 整数 注释 = "获取创建窗口的线程ID(GetWindowThreadProcessId)" @禁止流程检查 = 真>
+    参数 窗口句柄 <类型 = 变整数 注释 = "目标窗口句柄">
+    {
+        @ DWORD __pid = 0;
+        @ DWORD __tid = ::GetWindowThreadProcessId((HWND)@<窗口句柄>, &__pid);
+        @ return (INT)__tid;
+    }
+
+    方法 取窗口类名 <公开 静态 类型 = 文本型 注释 = "获取指定窗口的窗口类名(GetClassNameW)" @禁止流程检查 = 真>
+    参数 窗口句柄 <类型 = 变整数 注释 = "目标窗口句柄">
+    {
+        @ wchar_t ClassName[257] = {0};
+        @ int len = ::GetClassNameW((HWND)@<窗口句柄>, ClassName, 256);
+        @ if (len)
+        @     return @an<CVolString>(ClassName, len);
+        @ else
+        @     return @an<CVolString>("");
+    }
+
+    方法 取窗口标题 <公开 静态 类型 = 文本型 注释 = "获取指定窗口的标题文本(GetWindowTextW), 超过 511 个字符的部分被截断" @禁止流程检查 = 真>
+    参数 窗口句柄 <类型 = 变整数 注释 = "目标窗口句柄">
+    {
+        @ wchar_t __buf[512] = {0};
+        @ int __len = ::GetWindowTextW((HWND)@<窗口句柄>, __buf, 511);
+        @ return @an<CVolString>(__buf, __len);
+    }
+
+    方法 置窗口标题 <公开 静态 类型 = 逻辑型 注释 = "设置指定窗口的标题文本(SetWindowTextW)" @嵌入式方法 = "">
+    参数 窗口句柄 <类型 = 变整数 注释 = "目标窗口句柄">
+    参数 标题 <类型 = 文本型 注释 = "新标题文本">
+    {
+        @ ::SetWindowTextW((HWND)@<窗口句柄>, @<标题>.GetText())
+    }
+
+    方法 寻找窗口句柄 <公开 静态 类型 = 变整数 注释 = "寻找与指定类名和标题匹配的顶层窗口(FindWindowW)" @嵌入式方法 = "">
+    参数 窗口类名 <类型 = 文本型 注释 = "窗口类名, 不区分大小写, 空对象表示匹配所有类名" @默认值 = 空对象>
+    参数 窗口标题 <类型 = 文本型 注释 = "窗口标题, 不区分大小写, 空对象表示匹配所有标题" @默认值 = 空对象>
+    {
+        @ (INT_P)::FindWindowW (@<窗口类名>.GetTextMaybeNull(), @<窗口标题>.GetTextMaybeNull())
+    }
+
+    方法 发送信息 <公开 静态 类型 = 变整数 注释 = "发送消息到窗口并等待处理结果(SendMessageW)" @嵌入式方法 = "">
+    参数 窗口句柄 <类型 = 变整数 注释 = "目标窗口句柄">
+    参数 信息值 <类型 = 整数 注释 = "消息值, 例如 WM_NULL = 0">
+    参数 参数1 <类型 = 变整数 注释 = "消息参数1(wParam)">
+    参数 参数2 <类型 = 变整数 注释 = "消息参数2(lParam)">
+    {
+        @ (INT_P)::SendMessageW((HWND)@<窗口句柄>, (UINT)@<信息值>, (WPARAM)@<参数1>, (LPARAM)@<参数2>)
+    }
+
+    方法 投递信息 <公开 静态 类型 = 逻辑型 注释 = "投递消息到窗口消息队列后立即返回(PostMessageW)" @嵌入式方法 = "">
+    参数 窗口句柄 <类型 = 变整数 注释 = "目标窗口句柄">
+    参数 信息值 <类型 = 整数 注释 = "消息值">
+    参数 参数1 <类型 = 变整数 注释 = "消息参数1(wParam)">
+    参数 参数2 <类型 = 变整数 注释 = "消息参数2(lParam)">
+    {
+        @ (::PostMessageW((HWND)@<窗口句柄>, (UINT)@<信息值>, (WPARAM)@<参数1>, (LPARAM)@<参数2>) != 0)
+    }
+
+    方法 取窗口属性值 <公开 静态 类型 = 变整数 注释 = "获取指定窗口的属性值(GetWindowLongPtrW)" @嵌入式方法 = "">
+    参数 窗口句柄 <类型 = 变整数 注释 = "目标窗口句柄">
+    参数 属性索引 <类型 = 整数 注释 = "属性索引, 例如 GWLP_USERDATA = -21">
+    {
+        @ (INT_P)::GetWindowLongPtrW((HWND)@<窗口句柄>, @<属性索引>)
+    }
+
+    方法 置窗口属性值 <公开 静态 类型 = 变整数 注释 = "修改指定窗口的属性值并返回原值(SetWindowLongPtrW)" @嵌入式方法 = "">
+    参数 窗口句柄 <类型 = 变整数 注释 = "目标窗口句柄">
+    参数 属性索引 <类型 = 整数 注释 = "属性索引">
+    参数 新属性值 <类型 = 变整数 注释 = "新的属性值">
+    {
+        @ (INT_P)::SetWindowLongPtrW((HWND)@<窗口句柄>, @<属性索引>, (LONG_PTR)@<新属性值>)
+    }
+
+    方法 取系统度量 <公开 静态 类型 = 整数 注释 = "获取系统度量值(GetSystemMetrics), 度量项目参见\"系统度量项目\"常量类" @嵌入式方法 = "">
+    参数 度量项目 <类型 = 系统度量项目 注释 = "系统度量项目, 参见\"系统度量项目\"常量类">
+    {
+        @ (INT)::GetSystemMetrics((int)@<度量项目>)
+    }
+
+    方法 取光标位置 <公开 静态 类型 = 逻辑型 注释 = "获取光标在屏幕坐标系中的位置(GetCursorPos)" @禁止流程检查 = 真>
+    参数 坐标点 <类型 = 坐标点类 注释 = "成功时填入光标位置">
+    {
+        @ @<坐标点>.ResetToNullObject();
+        @ POINT __pt = {0};
+        @ if (!::GetCursorPos(&__pt))
+        @     return FALSE;
+        @ @<坐标点>.SetStruct(reinterpret_cast<@dt<坐标点类>::S*>(&__pt));
+        @ return TRUE;
+    }
+
+    方法 置光标位置 <公开 静态 类型 = 逻辑型 注释 = "设置光标在屏幕上的位置(SetCursorPos)" @嵌入式方法 = "">
+    参数 横坐标 <类型 = 整数 注释 = "屏幕 X 坐标">
+    参数 纵坐标 <类型 = 整数 注释 = "屏幕 Y 坐标">
+    {
+        @ (::SetCursorPos((int)@<横坐标>, (int)@<纵坐标>) != 0)
+    }
+
+    方法 取光标所在窗口 <公开 静态 类型 = 变整数 注释 = "获取光标所在位置的窗口句柄(WindowFromPoint), 失败返回 0" @禁止流程检查 = 真>
+    {
+        @ POINT __pt = {0};
+        @ if (!::GetCursorPos(&__pt))
+        @     return (INT_P)0;
+        @ return (INT_P)::WindowFromPoint(__pt);
+    }
+
+    方法 窗口坐标到屏幕坐标 <公开 静态 类型 = 逻辑型 注释 = "将窗口客户区坐标转换为屏幕坐标(ClientToScreen), 结果就地写回参数" @禁止流程检查 = 真>
+    参数 窗口句柄 <类型 = 变整数 注释 = "目标窗口句柄">
+    参数 坐标点 <类型 = 坐标点类 注释 = "输入客户区坐标, 成功时就地写回屏幕坐标">
+    {
+        @ @dt<坐标点类>::S __pt = {0};
+        @ @<坐标点>.GetStruct(&__pt);
+        @ if (!::ClientToScreen((HWND)@<窗口句柄>, (LPPOINT)&__pt))
+        @     return FALSE;
+        @ @<坐标点>.SetStruct(reinterpret_cast<@dt<坐标点类>::S*>(&__pt));
+        @ return TRUE;
+    }
+
+    方法 屏幕坐标到窗口坐标 <公开 静态 类型 = 逻辑型 注释 = "将屏幕坐标转换为窗口客户区坐标(ScreenToClient), 结果就地写回参数" @禁止流程检查 = 真>
+    参数 窗口句柄 <类型 = 变整数 注释 = "目标窗口句柄">
+    参数 坐标点 <类型 = 坐标点类 注释 = "输入屏幕坐标, 成功时就地写回客户区坐标">
+    {
+        @ @dt<坐标点类>::S __pt = {0};
+        @ @<坐标点>.GetStruct(&__pt);
+        @ if (!::ScreenToClient((HWND)@<窗口句柄>, (LPPOINT)&__pt))
+        @     return FALSE;
+        @ @<坐标点>.SetStruct(reinterpret_cast<@dt<坐标点类>::S*>(&__pt));
+        @ return TRUE;
+    }
+
+    方法 播放窗口动画 <公开 静态 类型 = 逻辑型 注释 = "播放窗口显示或隐藏动画(AnimateWindow), 动画标志参见\"窗口动画方式\"常量类, 组合使用多个标志时请分别强制转换到整数后相加" @禁止流程检查 = 真>
+    参数 窗口句柄 <类型 = 变整数 注释 = "目标窗口句柄">
+    参数 动画标志 <类型 = 整数 注释 = "动画标志, 参见\"窗口动画方式\"常量类">
+    参数 毫秒数 <类型 = 整数 注释 = "动画持续时长(毫秒), 典型值 200">
+    {
+        @ return (::AnimateWindow((HWND)@<窗口句柄>, (DWORD)@<毫秒数>, (DWORD)@<动画标志>) != 0);
+    }
+
+    方法 提到顶层 <公开 静态 类型 = 逻辑型 注释 = "将窗口提到 Z 顺序顶层并激活(BringWindowToTop)" @嵌入式方法 = "">
+    参数 窗口句柄 <类型 = 变整数 注释 = "目标窗口句柄">
+    {
+        @ (::BringWindowToTop((HWND)@<窗口句柄>) != 0)
+    }
+}
+
+# 显示器操作 ===
+
+类 显示器操作类 <公开 注释 = "显示器相关静态方法集合(MonitorFromWindow / GetMonitorInfoW / EnumDisplayMonitors)" @别名 = "//" @别名类型 = 本地类 @类用途 = 访问静态成员>
+{
+    方法 从窗口取显示器 <公开 静态 类型 = 变整数 注释 = "获取窗口所在显示器的句柄(MonitorFromWindow), 找不到时返回最近的显示器" @嵌入式方法 = "">
+    参数 窗口句柄 <类型 = 变整数 注释 = "目标窗口句柄">
+    {
+        @ (INT_P)::MonitorFromWindow((HWND)@<窗口句柄>, MONITOR_DEFAULTTONEAREST)
+    }
+
+    方法 从点取显示器 <公开 静态 类型 = 变整数 注释 = "获取指定屏幕坐标点所在显示器的句柄(MonitorFromPoint)" @禁止流程检查 = 真>
+    参数 横坐标 <类型 = 整数 注释 = "屏幕 X 坐标">
+    参数 纵坐标 <类型 = 整数 注释 = "屏幕 Y 坐标">
+    {
+        @ POINT __pt = {(LONG)@<横坐标>, (LONG)@<纵坐标>};
+        @ return (INT_P)::MonitorFromPoint(__pt, MONITOR_DEFAULTTONEAREST);
+    }
+
+    方法 取显示器信息 <公开 静态 类型 = 逻辑型 注释 = "获取窗口所在显示器的信息(GetMonitorInfoW/MONITORINFO)" @禁止流程检查 = 真>
+    参数 窗口句柄 <类型 = 变整数 注释 = "目标窗口句柄">
+    参数 显示器信息 <类型 = 显示器信息类 注释 = "成功时填入显示器信息">
+    {
+        @ @<显示器信息>.ResetToNullObject();
+        @ MONITORINFO __mi = {sizeof(MONITORINFO)};
+        @ HMONITOR __hm = ::MonitorFromWindow((HWND)@<窗口句柄>, MONITOR_DEFAULTTONEAREST);
+        @ if (!::GetMonitorInfoW(__hm, &__mi))
+        @     return FALSE;
+        @ @<显示器信息>.SetStruct(reinterpret_cast<@dt<显示器信息类>::S*>(&__mi));
+        @ return TRUE;
+    }
+
+    方法 取显示器设备名 <公开 静态 类型 = 文本型 注释 = "获取窗口所在显示器的设备名(GetMonitorInfoW/MONITORINFOEXW), 例如 \\\\.\\DISPLAY1, 失败返回空文本" @禁止流程检查 = 真>
+    参数 窗口句柄 <类型 = 变整数 注释 = "目标窗口句柄">
+    {
+        @ MONITORINFOEXW __mi;
+        @ ::ZeroMemory(&__mi, sizeof(__mi));
+        @ __mi.cbSize = sizeof(MONITORINFOEXW);
+        @ HMONITOR __hm = ::MonitorFromWindow((HWND)@<窗口句柄>, MONITOR_DEFAULTTONEAREST);
+        @ if (!::GetMonitorInfoW(__hm, &__mi))
+        @     return @an<CVolString>("");
+        @ return @an<CVolString>(__mi.szDevice, (int)::lstrlenW(__mi.szDevice));
+    }
+
+    方法 枚举显示器 <公开 静态 类型 = 逻辑型 注释 = "枚举所有显示器(EnumDisplayMonitors), 回调返回假可中止枚举" @嵌入式方法 = "">
+    参数 枚举回调 <注释 = "格式与\"显示器枚举回调模板\"一致的静态方法" @匹配方法 = "显示器枚举回调模板">
+    参数 用户数据 <注释 = "传递到回调函数的自定义数据" @匹配类型 = 通用整数型 @默认值 = 0>
+    {
+        @ (::EnumDisplayMonitors(NULL, NULL, (MONITORENUMPROC)&@<枚举回调>, (LPARAM)@<用户数据>) != 0)
+    }
+
+    方法 显示器枚举回调模板 <公开 静态 类型 = 逻辑型 注释 = "显示器枚举回调函数格式模板, 用户提供的回调方法必须与其参数和返回值格式一致">
+    参数 显示器句柄 <类型 = 变整数 注释 = "当前枚举到的显示器句柄">
+    参数 设备上下文 <类型 = 变整数 注释 = "显示器设备上下文(通常为 0)">
+    参数 监视矩形指针 <类型 = 变整数 注释 = "指向显示器矩形(RECT)的指针">
+    参数 用户数据 <类型 = 变整数 注释 = "枚举时提供的自定义数据">
+    {
+        返回 (真)
+    }
+}
+
+# 窗口枚举 ===
+
+类 窗口枚举类 <公开 注释 = "窗口枚举静态方法集合(EnumWindows / EnumChildWindows / EnumThreadWindows)" @别名 = "//" @别名类型 = 本地类 @类用途 = 访问静态成员>
+{
+    方法 枚举顶层窗口 <公开 静态 类型 = 逻辑型 注释 = "枚举所有顶层窗口(EnumWindows), 回调返回假可中止枚举" @嵌入式方法 = "">
+    参数 枚举回调 <注释 = "格式与\"窗口枚举回调模板\"一致的静态方法" @匹配方法 = "窗口枚举回调模板">
+    参数 用户数据 <注释 = "传递到回调函数的自定义数据" @匹配类型 = 通用整数型 @默认值 = 0>
+    {
+        @ (::EnumWindows((WNDENUMPROC)&@<枚举回调>, (LPARAM)@<用户数据>) != 0)
+    }
+
+    方法 枚举子窗口 <公开 静态 类型 = 逻辑型 注释 = "枚举指定窗口的所有子窗口(EnumChildWindows), 回调返回假可中止枚举" @嵌入式方法 = "">
+    参数 父窗口句柄 <注释 = "父窗口句柄" @匹配类型 = 通用整数型>
+    参数 枚举回调 <注释 = "格式与\"窗口枚举回调模板\"一致的静态方法" @匹配方法 = "窗口枚举回调模板">
+    参数 用户数据 <注释 = "传递到回调函数的自定义数据" @匹配类型 = 通用整数型 @默认值 = 0>
+    {
+        @ (::EnumChildWindows((HWND)@<父窗口句柄>, (WNDENUMPROC)&@<枚举回调>, (LPARAM)@<用户数据>) != 0)
+    }
+
+    方法 枚举线程窗口 <公开 静态 类型 = 逻辑型 注释 = "枚举指定线程创建的所有非子窗口(EnumThreadWindows), 回调返回假可中止枚举" @嵌入式方法 = "">
+    参数 线程ID <类型 = 整数 注释 = "线程ID, 例如取窗口线程ID()的返回值">
+    参数 枚举回调 <注释 = "格式与\"窗口枚举回调模板\"一致的静态方法" @匹配方法 = "窗口枚举回调模板">
+    参数 用户数据 <注释 = "传递到回调函数的自定义数据" @匹配类型 = 通用整数型 @默认值 = 0>
+    {
+        @ (::EnumThreadWindows((DWORD)@<线程ID>, (WNDENUMPROC)&@<枚举回调>, (LPARAM)@<用户数据>) != 0)
+    }
+
+    方法 查找窗口 <公开 静态 类型 = 变整数 注释 = "查找符合类和标题的顶层窗口(FindWindowW), 类名或标题为空文本时匹配任意, 未找到返回 0" @禁止流程检查 = 真>
+    参数 类名 <类型 = 文本型 注释 = "窗口类名, 空文本表示任意" @默认值 = "">
+    参数 标题 <类型 = 文本型 注释 = "窗口标题, 空文本表示任意" @默认值 = "">
+    {
+        @ const wchar_t* __c = (@<类名>.GetLength() > 0) ? @<类名>.GetText() : NULL;
+        @ const wchar_t* __t = (@<标题>.GetLength() > 0) ? @<标题>.GetText() : NULL;
+        @ return (INT_P)::FindWindowW(__c, __t);
+    }
+
+    方法 查找子窗口 <公开 静态 类型 = 变整数 注释 = "查找指定窗口下符合类和标题的子窗口(FindWindowExW), 类名或标题为空文本时匹配任意, 未找到返回 0" @禁止流程检查 = 真>
+    参数 父窗口句柄 <类型 = 变整数 注释 = "父窗口句柄">
+    参数 类名 <类型 = 文本型 注释 = "窗口类名, 空文本表示任意" @默认值 = "">
+    参数 标题 <类型 = 文本型 注释 = "窗口标题, 空文本表示任意" @默认值 = "">
+    {
+        @ const wchar_t* __c = (@<类名>.GetLength() > 0) ? @<类名>.GetText() : NULL;
+        @ const wchar_t* __t = (@<标题>.GetLength() > 0) ? @<标题>.GetText() : NULL;
+        @ return (INT_P)::FindWindowExW((HWND)@<父窗口句柄>, NULL, __c, __t);
+    }
+
+    方法 窗口枚举回调模板 <公开 静态 类型 = 逻辑型 注释 = "窗口枚举回调函数格式模板, 用户提供的回调方法必须与其参数和返回值格式一致">
+    参数 窗口句柄 <类型 = 变整数 注释 = "当前枚举到的窗口句柄">
+    参数 用户数据 <类型 = 变整数 注释 = "枚举时提供的自定义数据">
+    {
+        返回 (真)
+    }
+}
+
+# 窗口子类化 ===
+
+类 窗口子类化类 <公开 注释 = "窗口子类化静态方法集合(SetWindowSubclass)" @别名 = "//" @别名类型 = 本地类 @类用途 = 访问静态成员>
+{
+    方法 安装窗口子类 <公开 静态 类型 = 逻辑型 注释 = "安装或更新窗口的子类回调函数(SetWindowSubclass)" @嵌入式方法 = "">
+    参数 窗口句柄 <注释 = "目标窗口句柄" @匹配类型 = 通用整数型>
+    参数 子类回调函数 <注释 = "格式与\"窗口子类回调模板\"一致的静态方法" @匹配方法 = "窗口子类回调模板">
+    参数 子类ID <注释 = "子类回调函数与子类ID共同构成子类的唯一标识" @匹配类型 = 通用整数型>
+    参数 引用数据 <注释 = "传递到子类回调函数的自定义数据" @匹配类型 = 通用整数型 @默认值 = 0>
+    {
+        @ ::SetWindowSubclass((HWND)@<窗口句柄>, (SUBCLASSPROC)&@<子类回调函数>, (UINT_PTR)@<子类ID>, (DWORD_PTR)@<引用数据>)
+    }
+
+    方法 移除窗口子类 <公开 静态 类型 = 逻辑型 注释 = "移除窗口上指定的子类回调函数(RemoveWindowSubclass)" @嵌入式方法 = "">
+    参数 窗口句柄 <注释 = "目标窗口句柄" @匹配类型 = 通用整数型>
+    参数 子类回调函数 <注释 = "格式与\"窗口子类回调模板\"一致的静态方法" @匹配方法 = "窗口子类回调模板">
+    参数 子类ID <注释 = "子类回调函数与子类ID共同构成子类的唯一标识" @匹配类型 = 通用整数型>
+    {
+        @ ::RemoveWindowSubclass((HWND)@<窗口句柄>, (SUBCLASSPROC)&@<子类回调函数>, (UINT_PTR)@<子类ID>)
+    }
+
+    方法 调用子类过程 <公开 静态 类型 = 变整数 注释 = "在窗口的子类链中调用下一个处理程序(DefSubclassProc)" @嵌入式方法 = "">
+    参数 窗口句柄 <注释 = "消息所对应的窗口句柄" @匹配类型 = 通用整数型>
+    参数 消息值 <注释 = "消息值" @匹配类型 = 通用整数型>
+    参数 消息参数1 <注释 = "消息参数1(wParam)" @匹配类型 = 通用整数型>
+    参数 消息参数2 <注释 = "消息参数2(lParam)" @匹配类型 = 通用整数型>
+    {
+        @ (INT_P)::DefSubclassProc((HWND)@<窗口句柄>, (UINT)@<消息值>, (WPARAM)@<消息参数1>, (LPARAM)@<消息参数2>)
+    }
+
+    方法 取子类引用数据 <公开 静态 类型 = 逻辑型 注释 = "获取先前传递给指定窗口子类回调函数的引用数据(GetWindowSubclass)" @嵌入式方法 = "">
+    参数 窗口句柄 <注释 = "目标窗口句柄" @匹配类型 = 通用整数型>
+    参数 子类回调函数 <注释 = "先前安装的子类回调函数" @匹配方法 = "">
+    参数 子类ID <注释 = "子类回调函数与子类ID共同构成子类的唯一标识" @匹配类型 = 通用整数型>
+    参数 返回引用数据 <类型 = 变整数 注释 = "成功时写回引用数据" @需求类型 = 可写入变量>
+    {
+        @ (::GetWindowSubclass((HWND)@<窗口句柄>, (SUBCLASSPROC)&@<子类回调函数>, (UINT_PTR)@<子类ID>, (DWORD_PTR*)&@<返回引用数据>) != 0)
+    }
+
+    方法 窗口子类回调模板 <公开 静态 类型 = 变整数 注释 = "窗口子类回调函数格式模板, 用户提供的回调方法必须与其参数和返回值格式一致">
+    参数 窗口句柄 <类型 = 变整数 注释 = "消息所对应的窗口句柄">
+    参数 消息值 <类型 = 整数 注释 = "消息值">
+    参数 消息参数1 <类型 = 变整数 注释 = "消息参数1(wParam)">
+    参数 消息参数2 <类型 = 变整数 注释 = "消息参数2(lParam)">
+    参数 子类ID <类型 = 变整数 注释 = "子类ID">
+    参数 引用数据 <类型 = 变整数 注释 = "安装时提供的引用数据">
+    {
+        返回 (0)
+    }
+}
+
+# 系统信息 ===
+
+类 系统信息操作类 <公开 注释 = "系统信息静态方法集合(GetSystemInfo / GlobalMemoryStatusEx)" @别名 = "//" @别名类型 = 本地类 @类用途 = 访问静态成员>
+{
+    方法 取处理器数量 <公开 静态 类型 = 整数 注释 = "获取当前系统的处理器数量(GetSystemInfo)" @禁止流程检查 = 真>
+    {
+        @ SYSTEM_INFO __si;
+        @ ::GetSystemInfo(&__si);
+        @ return (INT)__si.dwNumberOfProcessors;
+    }
+
+    方法 取内存信息 <公开 静态 类型 = 逻辑型 注释 = "获取系统内存使用状态(GlobalMemoryStatusEx)" @禁止流程检查 = 真>
+    参数 内存状态 <类型 = 内存状态类 注释 = "成功时填入内存状态">
+    {
+        @ @<内存状态>.ResetToNullObject();
+        @ MEMORYSTATUSEX __ms;
+        @ ::ZeroMemory(&__ms, sizeof(__ms));
+        @ __ms.dwLength = sizeof(MEMORYSTATUSEX);
+        @ if (!::GlobalMemoryStatusEx(&__ms))
+        @     return FALSE;
+        @ @<内存状态>.SetStruct(reinterpret_cast<@dt<内存状态类>::S*>(&__ms));
+        @ return TRUE;
+    }
+
+    方法 取系统运行毫秒 <公开 静态 类型 = 长整数 注释 = "获取系统启动以来的毫秒数(GetTickCount, 约 49.7 天后回绕)" @嵌入式方法 = "">
+    {
+        @ ((INT64)::GetTickCount())
+    }
+
+    方法 取系统空闲毫秒 <公开 静态 类型 = 长整数 注释 = "获取系统自上次键盘或鼠标输入以来的毫秒数(GetLastInputInfo), 失败返回 -1" @禁止流程检查 = 真>
+    {
+        @ LASTINPUTINFO __li;
+        @ ::ZeroMemory(&__li, sizeof(__li));
+        @ __li.cbSize = sizeof(__li);
+        @ if (!::GetLastInputInfo(&__li))
+        @     return (INT64)-1;
+        @ return (INT64)(DWORD)(::GetTickCount() - __li.dwTime);
+    }
+}
+
+# 电源操作 ===
+
+类 电源操作类 <公开 注释 = "电源与会话控制静态方法集合(LockWorkStation / SetSuspendState / ExitWindowsEx), 均为破坏性操作, 调用前请确认" @别名 = "//" @别名类型 = 本地类 @类用途 = 访问静态成员>
+{
+    方法 锁定工作站 <公开 静态 类型 = 逻辑型 注释 = "锁定当前工作站(LockWorkStation), 调用成功后桌面立即锁定" @禁止流程检查 = 真>
+    {
+        @ return (::LockWorkStation() != 0);
+    }
+
+    方法 进入睡眠 <公开 静态 类型 = 逻辑型 注释 = "使系统进入睡眠或休眠状态(SetSuspendState, 动态加载 powrprof.dll), 调用成功后系统立即挂起" @禁止流程检查 = 真>
+    参数 是否休眠 <类型 = 逻辑型 注释 = "真 = 休眠(需要系统支持休眠并具有相应权限), 假 = 睡眠" @默认值 = 假>
+    参数 是否强制 <类型 = 逻辑型 注释 = "为真时即使有程序请求禁止挂起也强行挂起" @默认值 = 假>
+    参数 禁用唤醒事件 <类型 = 逻辑型 注释 = "是否禁用所有唤醒事件" @默认值 = 假>
+    {
+        @ typedef BOOLEAN (WINAPI *__PFN_SetSuspendState) (BOOLEAN, BOOLEAN, BOOLEAN);
+        @ HMODULE __h = ::LoadLibraryW(L"powrprof.dll");
+        @ if (!__h)
+        @     return FALSE;
+        @ __PFN_SetSuspendState __fn = (__PFN_SetSuspendState)::GetProcAddress(__h, "SetSuspendState");
+        @ BOOLEAN __r = __fn ? __fn((BOOLEAN)@<是否休眠>, (BOOLEAN)@<是否强制>, (BOOLEAN)@<禁用唤醒事件>) : FALSE;
+        @ ::FreeLibrary(__h);
+        @ return (__r != 0);
+    }
+
+    方法 退出Windows <公开 静态 类型 = 逻辑型 注释 = "注销/关机/重启系统(ExitWindowsEx), 调用前请保存工作" @禁止流程检查 = 真>
+    参数 退出方式 <类型 = 退出Windows标志 注释 = "退出方式, 参见\"退出Windows标志\"常量类">
+    参数 是否强制 <类型 = 逻辑型 注释 = "为真时强制结束未响应程序" @默认值 = 假>
+    {
+        @ return (::ExitWindowsEx((UINT)@<退出方式> | (@<是否强制> ? EWX_FORCEIFHUNG : 0), 0) != 0);
+    }
+}
+
+# 注册表操作 ===
+
+类 注册表操作类 <公开 注释 = "注册表只读访问静态方法集合(RegOpenKeyExW / RegEnumKeyExW / RegEnumValueW)" @别名 = "//" @别名类型 = 本地类 @类用途 = 访问静态成员>
+{
+    方法 打开注册表键 <公开 静态 类型 = 逻辑型 注释 = "打开指定的注册表键(RegOpenKeyExW), 成功时写回键句柄" @禁止流程检查 = 真>
+    参数 根键 <类型 = 注册表根键 注释 = "根键, 参见\"注册表根键\"常量类">
+    参数 子键路径 <类型 = 文本型 注释 = "相对于根键的子键路径, 例如 \"SOFTWARE\"" @默认值 = "">
+    参数 访问权限 <类型 = 注册表访问权限 注释 = "访问权限, 参见\"注册表访问权限\"常量类" @默认值 = 注册表访问权限.读取>
+    参数 键句柄 <类型 = 变整数 注释 = "成功时写回打开的键句柄, 失败时保持为 0" @需求类型 = 可写入变量>
+    {
+        @ @<键句柄> = 0;
+        @ HKEY __hk = NULL;
+        @ if (::RegOpenKeyExW((HKEY)(INT_P)(INT)@<根键>, @<子键路径>.GetText(), 0, (REGSAM)@<访问权限>, &__hk) != ERROR_SUCCESS)
+        @     return FALSE;
+        @ @<键句柄> = (INT_P)__hk;
+        @ return TRUE;
+    }
+
+    方法 关闭注册表键 <公开 静态 类型 = 逻辑型 注释 = "关闭先前打开的注册表键(RegCloseKey)" @嵌入式方法 = "">
+    参数 键句柄 <类型 = 变整数 注释 = "先前打开的键句柄">
+    {
+        @ (::RegCloseKey((HKEY)(INT_P)@<键句柄>) == ERROR_SUCCESS)
+    }
+
+    方法 枚举注册表子键名 <公开 静态 类型 = 文本型 注释 = "枚举注册表键的第 N 个子键名称(RegEnumKeyExW), 序号从 0 开始, 无更多子键或失败时返回空文本, 名称超过 255 个字符时截断" @禁止流程检查 = 真>
+    参数 键句柄 <类型 = 变整数 注释 = "已打开的键句柄">
+    参数 序号 <类型 = 整数 注释 = "子键序号, 从 0 开始">
+    {
+        @ wchar_t __buf[256] = {0};
+        @ DWORD __len = 256;
+        @ if (::RegEnumKeyExW((HKEY)(INT_P)@<键句柄>, (DWORD)@<序号>, __buf, &__len, NULL, NULL, NULL, NULL) != ERROR_SUCCESS)
+        @     return @an<CVolString>("");
+        @ return @an<CVolString>(__buf, (INT)__len);
+    }
+
+    方法 枚举注册表值名 <公开 静态 类型 = 文本型 注释 = "枚举注册表键的第 N 个值名称(RegEnumValueW), 序号从 0 开始, 无更多值或失败时返回空文本, 名称为默认值时也返回空文本" @禁止流程检查 = 真>
+    参数 键句柄 <类型 = 变整数 注释 = "已打开的键句柄">
+    参数 序号 <类型 = 整数 注释 = "值序号, 从 0 开始">
+    {
+        @ wchar_t __buf[256] = {0};
+        @ DWORD __len = 256;
+        @ if (::RegEnumValueW((HKEY)(INT_P)@<键句柄>, (DWORD)@<序号>, __buf, &__len, NULL, NULL, NULL, NULL) != ERROR_SUCCESS)
+        @     return @an<CVolString>("");
+        @ return @an<CVolString>(__buf, (INT)__len);
+    }
+}
+
+# 进程操作 ===
+
+类 进程操作类 <公开 注释 = "进程信息静态方法集合(动态解析自 kernel32.dll, 无需 psapi 库)" @别名 = "//" @别名类型 = 本地类 @类用途 = 访问静态成员>
+{
+    方法 取进程ID列表 <公开 静态 类型 = 整数 注释 = "枚举当前系统中所有进程的 ID(K32EnumProcesses), 每个 ID 占缓冲内 4 字节, 返回写入的进程数量; 缓冲容量不足时只返回能容纳的数量, 建议缓冲取 4096 字节以上" @禁止流程检查 = 真>
+    参数 缓冲 <类型 = 字节集类 注释 = "接收进程 ID 列表的缓冲区, 请使用取空白字节集预先分配(如 4096 字节)">
+    {
+        @ typedef BOOL (WINAPI *__PFN_K32EnumProcesses) (DWORD*, DWORD, DWORD*);
+        @ __PFN_K32EnumProcesses __fn = (__PFN_K32EnumProcesses)::GetProcAddress(::GetModuleHandleW(L"kernel32.dll"), "K32EnumProcesses");
+        @ if (!__fn)
+        @     return 0;
+        @ DWORD __needed = 0;
+        @ DWORD __cap = (DWORD)@<缓冲>.GetSize();
+        @ if (!__fn((DWORD*)@<缓冲>.GetPtr(), __cap, &__needed))
+        @     return 0;
+        @ if (__needed > __cap)
+        @     __needed = __cap;
+        @ return (INT)(__needed / sizeof(DWORD));
+    }
+
+    方法 取进程ID <公开 静态 类型 = 整数 注释 = "读取进程 ID 列表中指定序号的进程 ID, 序号从 0 开始" @嵌入式方法 = "">
+    参数 缓冲 <类型 = 字节集类 注释 = "取进程ID列表() 填写的缓冲区">
+    参数 序号 <类型 = 整数 注释 = "进程在列表中的序号">
+    {
+        @ ((INT)((DWORD*)@<缓冲>.GetPtr())[@<序号>])
+    }
+
+    方法 列表包含进程ID <公开 静态 类型 = 逻辑型 注释 = "判断进程 ID 列表中是否包含指定进程 ID" @禁止流程检查 = 真>
+    参数 缓冲 <类型 = 字节集类 注释 = "取进程ID列表() 填写的缓冲区">
+    参数 数量 <类型 = 整数 注释 = "列表中的进程数量, 即取进程ID列表() 的返回值">
+    参数 进程ID <类型 = 整数 注释 = "欲查找的进程 ID">
+    {
+        @ DWORD* __ids = (DWORD*)@<缓冲>.GetPtr();
+        @ for (INT __i = 0; __i < (INT)@<数量>; __i++)
+        @     if (__ids[__i] == (DWORD)@<进程ID>)
+        @         return TRUE;
+        @ return FALSE;
+    }
+
+    方法 取进程映像名 <公开 静态 类型 = 文本型 注释 = "获取指定进程的可执行文件完整路径(QueryFullProcessImageNameW, K32/非K32 双名回退解析), 失败(权限不足或进程不存在)时返回空文本" @禁止流程检查 = 真>
+    参数 进程ID <类型 = 整数 注释 = "目标进程 ID">
+    {
+        @ typedef BOOL (WINAPI *__PFN_QueryFullProcessImageNameW) (HANDLE, DWORD, LPWSTR, PDWORD);
+        @ HMODULE __k = ::GetModuleHandleW(L"kernel32.dll");
+        @ __PFN_QueryFullProcessImageNameW __fn = (__PFN_QueryFullProcessImageNameW)::GetProcAddress(__k, "K32QueryFullProcessImageNameW");
+        @ if (!__fn)
+        @     __fn = (__PFN_QueryFullProcessImageNameW)::GetProcAddress(__k, "QueryFullProcessImageNameW");
+        @ if (!__fn)
+        @     return @an<CVolString>("");
+        @ HANDLE __h = ::OpenProcess(PROCESS_QUERY_LIMITED_INFORMATION, FALSE, (DWORD)@<进程ID>);
+        @ if (!__h)
+        @     return @an<CVolString>("");
+        @ wchar_t __buf[512] = {0};
+        @ DWORD __len = 512;
+        @ BOOL __ok = __fn(__h, 0, __buf, &__len);
+        @ ::CloseHandle(__h);
+        @ if (!__ok)
+        @     return @an<CVolString>("");
+        @ return @an<CVolString>(__buf, (INT)__len);
+    }
+}
+
+# 文件操作 ===
+
+类 文件操作类 <公开 注释 = "常用文件读写静态方法集合(CreateFileW / ReadFile / WriteFile / DeleteFileW)" @别名 = "//" @别名类型 = 本地类 @类用途 = 访问静态成员>
+{
+    方法 文件是否存在 <公开 静态 类型 = 逻辑型 注释 = "判断文件或目录是否存在(GetFileAttributesW)" @嵌入式方法 = "">
+    参数 文件路径 <类型 = 文本型 注释 = "文件或目录的完整路径, 推荐使用正斜杠">
+    {
+        @ (::GetFileAttributesW(@<文件路径>.GetText()) != INVALID_FILE_ATTRIBUTES)
+    }
+
+    方法 目录是否存在 <公开 静态 类型 = 逻辑型 注释 = "判断指定路径是否为已存在的目录(GetFileAttributesW)" @禁止流程检查 = 真>
+    参数 目录路径 <类型 = 文本型 注释 = "目录的完整路径, 推荐使用正斜杠">
+    {
+        @ DWORD __attr = ::GetFileAttributesW(@<目录路径>.GetText());
+        @ return ((__attr != INVALID_FILE_ATTRIBUTES) && ((__attr & FILE_ATTRIBUTE_DIRECTORY) != 0));
+    }
+
+    方法 取文件大小 <公开 静态 类型 = 长整数 注释 = "获取文件大小(字节, GetFileSizeEx), 文件不存在或失败时返回 -1" @禁止流程检查 = 真>
+    参数 文件路径 <类型 = 文本型 注释 = "文件完整路径">
+    {
+        @ HANDLE __h = ::CreateFileW(@<文件路径>.GetText(), GENERIC_READ, FILE_SHARE_READ, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
+        @ if (__h == INVALID_HANDLE_VALUE)
+        @     return (INT64)-1;
+        @ LARGE_INTEGER __size = {0};
+        @ BOOL __ok = ::GetFileSizeEx(__h, &__size);
+        @ ::CloseHandle(__h);
+        @ if (!__ok)
+        @     return (INT64)-1;
+        @ return (INT64)__size.QuadPart;
+    }
+
+    方法 读文件字节 <公开 静态 类型 = 逻辑型 注释 = "将文件内容读入字节集缓冲(ReadFile), 缓冲容量不足时返回假" @禁止流程检查 = 真>
+    参数 文件路径 <类型 = 文本型 注释 = "文件完整路径">
+    参数 缓冲 <类型 = 字节集类 注释 = "接收文件内容的缓冲区, 容量需不小于文件大小(可先用取文件大小查询)">
+    {
+        @ HANDLE __h = ::CreateFileW(@<文件路径>.GetText(), GENERIC_READ, FILE_SHARE_READ, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
+        @ if (__h == INVALID_HANDLE_VALUE)
+        @     return FALSE;
+        @ LARGE_INTEGER __size = {0};
+        @ if (!::GetFileSizeEx(__h, &__size) || (__size.QuadPart > (LONGLONG)@<缓冲>.GetSize()))
+        @     { ::CloseHandle(__h); return FALSE; }
+        @ DWORD __read = 0;
+        @ BOOL __ok = ::ReadFile(__h, @<缓冲>.GetPtr(), (DWORD)__size.QuadPart, &__read, NULL);
+        @ ::CloseHandle(__h);
+        @ return (__ok != 0);
+    }
+
+    方法 写文件字节 <公开 静态 类型 = 逻辑型 注释 = "将字节集内容写入文件, 文件已存在时覆盖(CreateFileW / WriteFile)" @禁止流程检查 = 真>
+    参数 文件路径 <类型 = 文本型 注释 = "文件完整路径">
+    参数 缓冲 <类型 = 字节集类 注释 = "欲写入的数据">
+    {
+        @ HANDLE __h = ::CreateFileW(@<文件路径>.GetText(), GENERIC_WRITE, 0, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
+        @ if (__h == INVALID_HANDLE_VALUE)
+        @     return FALSE;
+        @ DWORD __written = 0;
+        @ BOOL __ok = ::WriteFile(__h, @<缓冲>.GetPtr(), (DWORD)@<缓冲>.GetSize(), &__written, NULL);
+        @ ::CloseHandle(__h);
+        @ return (__ok != 0);
+    }
+
+    方法 删除文件 <公开 静态 类型 = 逻辑型 注释 = "删除指定文件(DeleteFileW)" @嵌入式方法 = "">
+    参数 文件路径 <类型 = 文本型 注释 = "文件完整路径">
+    {
+        @ (::DeleteFileW(@<文件路径>.GetText()) != 0)
+    }
+}
+
+# 剪贴板操作 ===
+
+类 剪贴板操作类 <公开 注释 = "剪贴板文本操作静态方法集合(CF_UNICODETEXT)" @别名 = "//" @别名类型 = 本地类 @类用途 = 访问静态成员>
+{
+    方法 置剪贴板文本 <公开 静态 类型 = 逻辑型 注释 = "将文本写入系统剪贴板(OpenClipboard / EmptyClipboard / SetClipboardData), 剪贴板被占用时自动重试" @禁止流程检查 = 真>
+    参数 文本 <类型 = 文本型 注释 = "欲写入剪贴板的文本">
+    {
+        @ BOOL __open = FALSE;
+        @ for (INT __i = 0; __i < 5 && !__open; __i++)
+        @     { __open = (::OpenClipboard(NULL) != 0); if (!__open) ::Sleep(10); }
+        @ if (!__open)
+        @     return FALSE;
+        @ if (!::EmptyClipboard())
+        @     { ::CloseClipboard(); return FALSE; }
+        @ SIZE_T __bytes = (@<文本>.GetLength() + 1) * sizeof(wchar_t);
+        @ HGLOBAL __h = ::GlobalAlloc(GMEM_MOVEABLE, __bytes);
+        @ if (!__h)
+        @     { ::CloseClipboard(); return FALSE; }
+        @ ::CopyMemory(::GlobalLock(__h), @<文本>.GetText(), __bytes);
+        @ ::GlobalUnlock(__h);
+        @ if (!::SetClipboardData(CF_UNICODETEXT, __h))
+        @     { ::GlobalFree(__h); ::CloseClipboard(); return FALSE; }
+        @ ::CloseClipboard();
+        @ return TRUE;
+    }
+
+    方法 取剪贴板文本 <公开 静态 类型 = 文本型 注释 = "读取剪贴板中的文本内容(GetClipboardData), 剪贴板无文本或被占用时返回空文本, 被占用时自动重试" @禁止流程检查 = 真>
+    {
+        @ BOOL __open = FALSE;
+        @ for (INT __i = 0; __i < 5 && !__open; __i++)
+        @     { __open = (::OpenClipboard(NULL) != 0); if (!__open) ::Sleep(10); }
+        @ if (!__open)
+        @     return @an<CVolString>("");
+        @ HANDLE __h = ::GetClipboardData(CF_UNICODETEXT);
+        @ if (!__h)
+        @     { ::CloseClipboard(); return @an<CVolString>(""); }
+        @ const wchar_t* __p = (const wchar_t*)::GlobalLock(__h);
+        @ if (!__p)
+        @     { ::CloseClipboard(); return @an<CVolString>(""); }
+        @ CVolString __r = @an<CVolString>(__p, (INT)::lstrlenW(__p));
+        @ ::GlobalUnlock(__h);
+        @ ::CloseClipboard();
+        @ return __r;
+    }
+}
+
+# 外壳运行 ===
+
+类 外壳操作类 <公开 注释 = "ShellExecuteExW 程序运行静态方法集合(动态解析自 shell32.dll)" @别名 = "//" @别名类型 = 本地类 @类用途 = 访问静态成员>
+{
+    方法 运行程序 <公开 静态 类型 = 逻辑型 注释 = "运行指定程序或文档(ShellExecuteExW), 不等待其结束, 失败返回假" @禁止流程检查 = 真>
+    参数 文件路径 <类型 = 文本型 注释 = "程序、文档或网址">
+    参数 参数 <类型 = 文本型 注释 = "命令行参数" @默认值 = "">
+    参数 显示方式 <类型 = 窗口显示方式 注释 = "启动窗口的显示方式" @默认值 = 窗口显示方式.普通显示>
+    {
+        @ typedef BOOL (WINAPI *__PFN_ShellExecuteExW) (SHELLEXECUTEINFOW*);
+        @ HMODULE __m = ::LoadLibraryW(L"shell32.dll");
+        @ if (!__m)
+        @     return FALSE;
+        @ __PFN_ShellExecuteExW __fn = (__PFN_ShellExecuteExW)::GetProcAddress(__m, "ShellExecuteExW");
+        @ if (!__fn)
+        @     { ::FreeLibrary(__m); return FALSE; }
+        @ SHELLEXECUTEINFOW __sei;
+        @ ::ZeroMemory(&__sei, sizeof(__sei));
+        @ __sei.cbSize = sizeof(__sei);
+        @ __sei.fMask = SEE_MASK_FLAG_NO_UI | SEE_MASK_NOCLOSEPROCESS;
+        @ __sei.lpFile = @<文件路径>.GetText();
+        @ __sei.lpParameters = (@<参数>.GetLength() > 0) ? @<参数>.GetText() : NULL;
+        @ __sei.nShow = (INT)@<显示方式>;
+        @ BOOL __ok = __fn(&__sei);
+        @ if (__sei.hProcess)
+        @     ::CloseHandle(__sei.hProcess);
+        @ ::FreeLibrary(__m);
+        @ return (__ok != 0);
+    }
+
+    方法 运行程序并等待 <公开 静态 类型 = 整数 注释 = "运行指定程序并等待其结束(ShellExecuteExW), 返回其退出代码, 失败或等待超时返回 -1" @禁止流程检查 = 真>
+    参数 文件路径 <类型 = 文本型 注释 = "程序、文档或网址">
+    参数 参数 <类型 = 文本型 注释 = "命令行参数" @默认值 = "">
+    参数 显示方式 <类型 = 窗口显示方式 注释 = "启动窗口的显示方式" @默认值 = 窗口显示方式.普通显示>
+    参数 超时毫秒 <类型 = 整数 注释 = "等待超时毫秒数" @默认值 = 30000>
+    {
+        @ typedef BOOL (WINAPI *__PFN_ShellExecuteExW2) (SHELLEXECUTEINFOW*);
+        @ HMODULE __m = ::LoadLibraryW(L"shell32.dll");
+        @ if (!__m)
+        @     return -1;
+        @ __PFN_ShellExecuteExW2 __fn = (__PFN_ShellExecuteExW2)::GetProcAddress(__m, "ShellExecuteExW");
+        @ if (!__fn)
+        @     { ::FreeLibrary(__m); return -1; }
+        @ SHELLEXECUTEINFOW __sei;
+        @ ::ZeroMemory(&__sei, sizeof(__sei));
+        @ __sei.cbSize = sizeof(__sei);
+        @ __sei.fMask = SEE_MASK_FLAG_NO_UI | SEE_MASK_NOCLOSEPROCESS;
+        @ __sei.lpFile = @<文件路径>.GetText();
+        @ __sei.lpParameters = (@<参数>.GetLength() > 0) ? @<参数>.GetText() : NULL;
+        @ __sei.nShow = (INT)@<显示方式>;
+        @ if (!__fn(&__sei) || !__sei.hProcess)
+        @     { ::FreeLibrary(__m); return -1; }
+        @ DWORD __code = (DWORD)-1;
+        @ if (::WaitForSingleObject(__sei.hProcess, (DWORD)@<超时毫秒>) == WAIT_OBJECT_0)
+        @     ::GetExitCodeProcess(__sei.hProcess, &__code);
+        @ ::CloseHandle(__sei.hProcess);
+        @ ::FreeLibrary(__m);
+        @ return (INT)__code;
+    }
+
+    方法 提权运行 <公开 静态 类型 = 逻辑型 注释 = "以管理员权限运行指定程序(ShellExecuteExW + runas), 系统会弹出 UAC 确认框" @禁止流程检查 = 真>
+    参数 文件路径 <类型 = 文本型 注释 = "程序的完整路径">
+    参数 参数 <类型 = 文本型 注释 = "命令行参数" @默认值 = "">
+    {
+        @ typedef BOOL (WINAPI *__PFN_ShellExecuteExW3) (SHELLEXECUTEINFOW*);
+        @ HMODULE __m = ::LoadLibraryW(L"shell32.dll");
+        @ if (!__m)
+        @     return FALSE;
+        @ __PFN_ShellExecuteExW3 __fn = (__PFN_ShellExecuteExW3)::GetProcAddress(__m, "ShellExecuteExW");
+        @ if (!__fn)
+        @     { ::FreeLibrary(__m); return FALSE; }
+        @ SHELLEXECUTEINFOW __sei;
+        @ ::ZeroMemory(&__sei, sizeof(__sei));
+        @ __sei.cbSize = sizeof(__sei);
+        @ __sei.fMask = SEE_MASK_FLAG_NO_UI | SEE_MASK_NOCLOSEPROCESS;
+        @ __sei.lpVerb = L"runas";
+        @ __sei.lpFile = @<文件路径>.GetText();
+        @ __sei.lpParameters = (@<参数>.GetLength() > 0) ? @<参数>.GetText() : NULL;
+        @ __sei.nShow = SW_SHOWNORMAL;
+        @ BOOL __ok = __fn(&__sei);
+        @ if (__sei.hProcess)
+        @     ::CloseHandle(__sei.hProcess);
+        @ ::FreeLibrary(__m);
+        @ return (__ok != 0);
+    }
+}
+
+# 窗口位图 ===
+
+类 窗口位图操作类 <公开 注释 = "窗口图像抓取静态方法集合(PrintWindow / BitBlt / GetDIBits, 输出 32 位 BGRA 自上而下位图)" @别名 = "//" @别名类型 = 本地类 @类用途 = 访问静态成员>
+{
+    方法 取窗口位图 <公开 静态 类型 = 逻辑型 注释 = "将窗口图像抓取到字节集缓冲(每像素 4 字节 BGRA, 自上而下), 缓冲容量需不小于 宽度*高度*4(可用取窗口矩形计算), 失败返回假" @禁止流程检查 = 真>
+    参数 窗口句柄 <类型 = 变整数 注释 = "目标窗口句柄">
+    参数 缓冲 <类型 = 字节集类 注释 = "接收位图数据的缓冲区">
+    {
+        @ RECT __rc = {0};
+        @ if (!::GetWindowRect((HWND)@<窗口句柄>, &__rc))
+        @     return FALSE;
+        @ INT __w = __rc.right - __rc.left;
+        @ INT __h = __rc.bottom - __rc.top;
+        @ if (__w <= 0 || __h <= 0)
+        @     return FALSE;
+        @ if (((SIZE_T)__w * (SIZE_T)__h * 4) > @<缓冲>.GetSize())
+        @     return FALSE;
+        @ HDC __hdc = ::GetWindowDC((HWND)@<窗口句柄>);
+        @ if (!__hdc)
+        @     return FALSE;
+        @ HDC __mem = ::CreateCompatibleDC(__hdc);
+        @ HBITMAP __bmp = ::CreateCompatibleBitmap(__hdc, __w, __h);
+        @ HGDIOBJ __old = ::SelectObject(__mem, __bmp);
+        @ BOOL __ok = ::PrintWindow((HWND)@<窗口句柄>, __mem, 2);
+        @ if (!__ok)
+        @     __ok = ::BitBlt(__mem, 0, 0, __w, __h, __hdc, 0, 0, SRCCOPY);
+        @ BITMAPINFO __bi;
+        @ ::ZeroMemory(&__bi, sizeof(__bi));
+        @ __bi.bmiHeader.biSize = sizeof(BITMAPINFOHEADER);
+        @ __bi.bmiHeader.biWidth = __w;
+        @ __bi.bmiHeader.biHeight = -__h;
+        @ __bi.bmiHeader.biPlanes = 1;
+        @ __bi.bmiHeader.biBitCount = 32;
+        @ __bi.bmiHeader.biCompression = BI_RGB;
+        @ INT __lines = __ok ? ::GetDIBits(__mem, __bmp, 0, (UINT)__h, @<缓冲>.GetPtr(), &__bi, DIB_RGB_COLORS) : 0;
+        @ ::SelectObject(__mem, __old);
+        @ ::DeleteObject(__bmp);
+        @ ::DeleteDC(__mem);
+        @ ::ReleaseDC((HWND)@<窗口句柄>, __hdc);
+        @ return (__lines != 0);
+    }
+
+    方法 计数非零字节 <公开 静态 类型 = 整数 注释 = "统计字节集中非零字节的个数, 可用于判断抓图缓冲是否包含内容" @禁止流程检查 = 真>
+    参数 缓冲 <类型 = 字节集类 注释 = "目标字节集">
+    {
+        @ BYTE* __p = (BYTE*)@<缓冲>.GetPtr();
+        @ SIZE_T __n = @<缓冲>.GetSize();
+        @ SIZE_T __c = 0;
+        @ for (SIZE_T __i = 0; __i < __n; __i++)
+        @     if (__p[__i] != 0)
+        @         __c++;
+        @ return (INT)__c;
+    }
+}
+
+# 托盘图标 ===
+
+类 托盘图标操作类 <公开 注释 = "系统托盘图标静态方法集合(Shell_NotifyIconW, 动态解析自 shell32.dll)" @别名 = "//" @别名类型 = 本地类 @类用途 = 访问静态成员>
+{
+    方法 取系统图标 <公开 静态 类型 = 变整数 注释 = "加载系统预定义图标(LoadIconW), 返回图标句柄" @禁止流程检查 = 真>
+    参数 图标编号 <类型 = 整数 注释 = "系统图标编号, 32512=应用程序, 32513=问号, 32514=感叹号, 32515=错误, 32516=信息" @默认值 = 32512>
+    {
+        @ return (INT_P)::LoadIconW(NULL, (LPCWSTR)(INT_P)@<图标编号>);
+    }
+
+    方法 添加托盘图标 <公开 静态 类型 = 逻辑型 注释 = "在系统托盘区添加图标(Shell_NotifyIconW/NIM_ADD), 图标为系统应用程序图标, 鼠标事件回调消息发往 WM_APP(32768)" @禁止流程检查 = 真>
+    参数 窗口句柄 <类型 = 变整数 注释 = "接收托盘回调消息的窗口句柄">
+    参数 提示文本 <类型 = 文本型 注释 = "鼠标悬停提示, 最长 127 个字符" @默认值 = "">
+    参数 图标ID <类型 = 整数 注释 = "应用内图标标识, 修改和删除时使用同一 ID" @默认值 = 1>
+    {
+        @ typedef BOOL (WINAPI *__PFN_Shell_NotifyIconW) (DWORD, PNOTIFYICONDATAW);
+        @ HMODULE __m = ::LoadLibraryW(L"shell32.dll");
+        @ if (!__m)
+        @     return FALSE;
+        @ __PFN_Shell_NotifyIconW __fn = (__PFN_Shell_NotifyIconW)::GetProcAddress(__m, "Shell_NotifyIconW");
+        @ if (!__fn)
+        @     { ::FreeLibrary(__m); return FALSE; }
+        @ NOTIFYICONDATAW __nid;
+        @ ::ZeroMemory(&__nid, sizeof(__nid));
+        @ __nid.cbSize = sizeof(__nid);
+        @ __nid.hWnd = (HWND)@<窗口句柄>;
+        @ __nid.uID = (UINT)@<图标ID>;
+        @ __nid.uFlags = NIF_MESSAGE | NIF_ICON | NIF_TIP;
+        @ __nid.uCallbackMessage = 32768;
+        @ __nid.hIcon = ::LoadIconW(NULL, IDI_APPLICATION);
+        @ ::lstrcpynW(__nid.szTip, @<提示文本>.GetText(), 128);
+        @ BOOL __ok = __fn(NIM_ADD, &__nid);
+        @ ::FreeLibrary(__m);
+        @ return (__ok != 0);
+    }
+
+    方法 修改托盘提示 <公开 静态 类型 = 逻辑型 注释 = "修改托盘图标的悬停提示(Shell_NotifyIconW/NIM_MODIFY)" @禁止流程检查 = 真>
+    参数 窗口句柄 <类型 = 变整数 注释 = "接收托盘回调消息的窗口句柄">
+    参数 提示文本 <类型 = 文本型 注释 = "新的鼠标悬停提示" @默认值 = "">
+    参数 图标ID <类型 = 整数 注释 = "应用内图标标识, 与添加时一致" @默认值 = 1>
+    {
+        @ typedef BOOL (WINAPI *__PFN_Shell_NotifyIconW2) (DWORD, PNOTIFYICONDATAW);
+        @ HMODULE __m = ::LoadLibraryW(L"shell32.dll");
+        @ if (!__m)
+        @     return FALSE;
+        @ __PFN_Shell_NotifyIconW2 __fn = (__PFN_Shell_NotifyIconW2)::GetProcAddress(__m, "Shell_NotifyIconW");
+        @ if (!__fn)
+        @     { ::FreeLibrary(__m); return FALSE; }
+        @ NOTIFYICONDATAW __nid;
+        @ ::ZeroMemory(&__nid, sizeof(__nid));
+        @ __nid.cbSize = sizeof(__nid);
+        @ __nid.hWnd = (HWND)@<窗口句柄>;
+        @ __nid.uID = (UINT)@<图标ID>;
+        @ __nid.uFlags = NIF_TIP;
+        @ ::lstrcpynW(__nid.szTip, @<提示文本>.GetText(), 128);
+        @ BOOL __ok = __fn(NIM_MODIFY, &__nid);
+        @ ::FreeLibrary(__m);
+        @ return (__ok != 0);
+    }
+
+    方法 删除托盘图标 <公开 静态 类型 = 逻辑型 注释 = "从系统托盘区删除图标(Shell_NotifyIconW/NIM_DELETE)" @禁止流程检查 = 真>
+    参数 窗口句柄 <类型 = 变整数 注释 = "添加图标时使用的窗口句柄">
+    参数 图标ID <类型 = 整数 注释 = "应用内图标标识, 与添加时一致" @默认值 = 1>
+    {
+        @ typedef BOOL (WINAPI *__PFN_Shell_NotifyIconW3) (DWORD, PNOTIFYICONDATAW);
+        @ HMODULE __m = ::LoadLibraryW(L"shell32.dll");
+        @ if (!__m)
+        @     return FALSE;
+        @ __PFN_Shell_NotifyIconW3 __fn = (__PFN_Shell_NotifyIconW3)::GetProcAddress(__m, "Shell_NotifyIconW");
+        @ if (!__fn)
+        @     { ::FreeLibrary(__m); return FALSE; }
+        @ NOTIFYICONDATAW __nid;
+        @ ::ZeroMemory(&__nid, sizeof(__nid));
+        @ __nid.cbSize = sizeof(__nid);
+        @ __nid.hWnd = (HWND)@<窗口句柄>;
+        @ __nid.uID = (UINT)@<图标ID>;
+        @ __nid.uFlags = 0;
+        @ BOOL __ok = __fn(NIM_DELETE, &__nid);
+        @ ::FreeLibrary(__m);
+        @ return (__ok != 0);
+    }
+}
+
+# 定时器 ===
+
+类 定时器操作类 <公开 注释 = "窗口定时器静态方法集合(SetTimer / KillTimer)" @别名 = "//" @别名类型 = 本地类 @类用途 = 访问静态成员>
+{
+    方法 置定时器 <公开 静态 类型 = 变整数 注释 = "为窗口创建或重置定时器(SetTimer), 到期后窗口收到 WM_TIMER(275) 消息, 返回定时器ID, 失败返回 0" @嵌入式方法 = "">
+    参数 窗口句柄 <注释 = "接收 WM_TIMER 消息的窗口句柄" @匹配类型 = 通用整数型>
+    参数 定时器ID <注释 = "定时器标识, 传 0 表示自动分配" @匹配类型 = 通用整数型>
+    参数 间隔毫秒 <注释 = "触发间隔毫秒" @匹配类型 = 通用整数型>
+    {
+        @ (INT_P)::SetTimer((HWND)@<窗口句柄>, (UINT_PTR)@<定时器ID>, (UINT)@<间隔毫秒>, NULL)
+    }
+
+    方法 取消定时器 <公开 静态 类型 = 逻辑型 注释 = "取消指定定时器(KillTimer), 指定 ID 不存在时返回假" @嵌入式方法 = "">
+    参数 窗口句柄 <注释 = "定时器所属窗口句柄" @匹配类型 = 通用整数型>
+    参数 定时器ID <注释 = "定时器标识, 即置定时器()的返回值" @匹配类型 = 通用整数型>
+    {
+        @ (::KillTimer((HWND)@<窗口句柄>, (UINT_PTR)@<定时器ID>) != 0)
+    }
+}
+
+# 消息钩子 ===
+
+类 钩子操作类 <公开 注释 = "线程/全局消息钩子静态方法集合(SetWindowsHookExW / UnhookWindowsHookEx, 低级键盘与鼠标钩子)" @别名 = "//" @别名类型 = 本地类 @类用途 = 访问静态成员>
+{
+    方法 安装键盘钩子 <公开 静态 类型 = 变整数 注释 = "安装全局低级键盘钩子(SetWindowsHookExW/WH_KEYBOARD_LL), 安装线程需有消息循环才能收到回调, 失败返回 0" @嵌入式方法 = "">
+    参数 钩子回调 <注释 = "格式与\"低级钩子回调模板\"一致的静态方法" @匹配方法 = "低级钩子回调模板">
+    {
+        @ (INT_P)::SetWindowsHookExW(WH_KEYBOARD_LL, (HOOKPROC)&@<钩子回调>, (HINSTANCE)::GetModuleHandleW(NULL), 0)
+    }
+
+    方法 安装鼠标钩子 <公开 静态 类型 = 变整数 注释 = "安装全局低级鼠标钩子(SetWindowsHookExW/WH_MOUSE_LL), 安装线程需有消息循环才能收到回调, 失败返回 0" @嵌入式方法 = "">
+    参数 钩子回调 <注释 = "格式与\"低级钩子回调模板\"一致的静态方法" @匹配方法 = "低级钩子回调模板">
+    {
+        @ (INT_P)::SetWindowsHookExW(WH_MOUSE_LL, (HOOKPROC)&@<钩子回调>, (HINSTANCE)::GetModuleHandleW(NULL), 0)
+    }
+
+    方法 卸载钩子 <公开 静态 类型 = 逻辑型 注释 = "卸载先前安装的消息钩子(UnhookWindowsHookEx)" @嵌入式方法 = "">
+    参数 钩子句柄 <注释 = "安装键盘/鼠标钩子返回的钩子句柄" @匹配类型 = 通用整数型>
+    {
+        @ (::UnhookWindowsHookEx((HHOOK)@<钩子句柄>) != 0)
+    }
+
+    方法 调用下一钩子 <公开 静态 类型 = 变整数 注释 = "将钩子消息传递给钩子链中的下一个处理程序(CallNextHookEx), 钩子回调应调用它" @嵌入式方法 = "">
+    参数 钩子句柄 <注释 = "当前钩子句柄, 由回调参数提供" @匹配类型 = 通用整数型>
+    参数 通知码 <注释 = "通知码(nCode)" @匹配类型 = 通用整数型>
+    参数 消息参数1 <注释 = "消息参数1(wParam)" @匹配类型 = 通用整数型>
+    参数 消息参数2 <注释 = "消息参数2(lParam)" @匹配类型 = 通用整数型>
+    {
+        @ (INT_P)::CallNextHookEx((HHOOK)@<钩子句柄>, (INT)@<通知码>, (WPARAM)@<消息参数1>, (LPARAM)@<消息参数2>)
+    }
+
+    方法 低级钩子回调模板 <公开 静态 类型 = 变整数 注释 = "低级键盘/鼠标钩子回调函数格式模板, 用户提供的回调方法必须与其参数和返回值格式一致">
+    参数 通知码 <类型 = 整数 注释 = "通知码(nCode), 为 0(HC_ACTION) 时消息参数有效">
+    参数 消息参数1 <类型 = 变整数 注释 = "键盘钩子为虚拟键码, 鼠标钩子为鼠标消息标识(wParam)">
+    参数 消息参数2 <类型 = 变整数 注释 = "指向 KBDLLHOOKSTRUCT / MSLLHOOKSTRUCT 的指针(lParam)">
+    {
+        返回 (0)
+    }
+}

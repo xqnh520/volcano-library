@@ -1,0 +1,1242 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.D2D绘制引擎 <注释 = "Direct2D / DirectWrite / WIC 绘制引擎封装。" 注释 = "火山语法依据官方火山视窗文本格式；封装组织参考 PIV 三方库的外部头文件/源文件 + 嵌入式方法风格。"
+        注释 = "系统依赖：Windows 桌面 HWND 环境，编译期需要 Windows SDK 中的 d2d1.h、dwrite.h、wincodec.h 以及 d2d1.lib、dwrite.lib、windowscodecs.lib；Windows SDK 下载页：https://developer.microsoft.com/windows/downloads/windows-sdk/"
+        注释 = "运行环境：Direct2D、DirectWrite、WIC 为 Windows 图形组件。Windows 10/11 与新版 Windows Server 通常系统自带；Windows 7 SP1 / Windows Server 2008 R2 SP1 若缺少 Direct2D/DirectWrite 更新，请安装微软 Platform Update，下载页：https://www.microsoft.com/download/details.aspx?id=36805"
+        注释 = "通常不需要安装旧 DirectX End-User Runtime 来获得 Direct2D；只有程序另用 D3DX/XAudio/XInput 等旧 DirectX SDK 组件时才考虑安装 DirectX End-User Runtime，下载页：https://www.microsoft.com/download/details.aspx?id=35"
+        注释 = "SVG 依赖：lunasvg/plutovg 源码随本类库一起编译，通常不需要额外安装 SVG 运行库；若编译器不支持 C++17，请升级 VS/Windows SDK 工具链或移除 SVG 桥接源文件。" 注释 = ""
+        注释 = "水淼使用AI封装。如需封装类库，有偿联系水淼QQ897687648提供开源地址，一般200元一个，复杂或耗时库酌情高价。"
+        @视窗.头文件搜寻目录 = "native\r\nnative\\third_party\\lunasvg\\include\r\nnative\\third_party\\lunasvg\\source\r\nnative\\third_party\\lunasvg\\plutovg\\include\r\nnative\\third_party\\lunasvg\\plutovg\\source"
+        @视窗.外部头文件 = "native\\d2d_engine.hpp"
+        @视窗.外部源文件 = "native\\d2d_engine.cpp\r\nnative\\lunasvg_bridge.cpp\r\nnative\\third_party\\lunasvg\\source\\graphics.cpp\r\nnative\\third_party\\lunasvg\\source\\lunasvg.cpp\r\nnative\\third_party\\lunasvg\\source\\svgelement.cpp\r\nnative\\third_party\\lunasvg\\source\\svggeometryelement.cpp\r\nnative\\third_party\\lunasvg\\source\\svglayoutstate.cpp\r\nnative\\third_party\\lunasvg\\source\\svgpaintelement.cpp\r\nnative\\third_party\\lunasvg\\source\\svgparser.cpp\r\nnative\\third_party\\lunasvg\\source\\svgproperty.cpp\r\nnative\\third_party\\lunasvg\\source\\svgrenderstate.cpp\r\nnative\\third_party\\lunasvg\\source\\svgtextelement.cpp\r\nnative\\third_party\\lunasvg\\plutovg\\source\\plutovg-blend.c\r\nnative\\third_party\\lunasvg\\plutovg\\source\\plutovg-canvas.c\r\nnative\\third_party\\lunasvg\\plutovg\\source\\plutovg-font.c\r\nnative\\third_party\\lunasvg\\plutovg\\source\\plutovg-ft-math.c\r\nnative\\third_party\\lunasvg\\plutovg\\source\\plutovg-ft-raster.c\r\nnative\\third_party\\lunasvg\\plutovg\\source\\plutovg-ft-stroker.c\r\nnative\\third_party\\lunasvg\\plutovg\\source\\plutovg-matrix.c\r\nnative\\third_party\\lunasvg\\plutovg\\source\\plutovg-paint.c\r\nnative\\third_party\\lunasvg\\plutovg\\source\\plutovg-path.c\r\nnative\\third_party\\lunasvg\\plutovg\\source\\plutovg-rasterize.c\r\nnative\\third_party\\lunasvg\\plutovg\\source\\plutovg-surface.c"
+        @视窗.附加编译参数 = "cpp: /std:c++17"
+        @视窗.预定义宏 = "UNICODE,_UNICODE,D2D_ENGINE_VOLCANO,LUNASVG_BUILD_STATIC,PLUTOVG_BUILD_STATIC,_CRT_SECURE_NO_WARNINGS,WINVER=0x0601,_WIN32_WINNT=0x0601,NTDDI_VERSION=0x06010000">
+
+类 D2D工厂类型 <公开 注释 = "D2D1_FACTORY_TYPE" 折叠>
+{
+    常量 单线程 <公开 类型 = 整数 值 = 0>
+    常量 多线程 <公开 类型 = 整数 值 = 1>
+}
+
+类 D2D调试级别 <公开 注释 = "D2D1_DEBUG_LEVEL" 折叠>
+{
+    常量 无 <公开 类型 = 整数 值 = 0>
+    常量 错误 <公开 类型 = 整数 值 = 1>
+    常量 警告 <公开 类型 = 整数 值 = 2>
+    常量 信息 <公开 类型 = 整数 值 = 3>
+}
+
+类 D2D渲染目标类型 <公开 注释 = "D2D1_RENDER_TARGET_TYPE" 折叠>
+{
+    常量 默认 <公开 类型 = 整数 值 = 0>
+    常量 软件 <公开 类型 = 整数 值 = 1>
+    常量 硬件 <公开 类型 = 整数 值 = 2>
+}
+
+类 D2D呈现选项 <公开 注释 = "D2D1_PRESENT_OPTIONS，可组合。" 折叠>
+{
+    常量 无 <公开 类型 = 整数 值 = 0>
+    常量 保留内容 <公开 类型 = 整数 值 = 1>
+    常量 立即呈现 <公开 类型 = 整数 值 = 2>
+}
+
+类 D2D透明模式 <公开 注释 = "D2D1_ALPHA_MODE" 折叠>
+{
+    常量 未知 <公开 类型 = 整数 值 = 0>
+    常量 预乘 <公开 类型 = 整数 值 = 1>
+    常量 直通 <公开 类型 = 整数 值 = 2>
+    常量 忽略 <公开 类型 = 整数 值 = 3>
+}
+
+类 D2D抗锯齿模式 <公开 注释 = "D2D1_ANTIALIAS_MODE" 折叠>
+{
+    常量 单个图元 <公开 类型 = 整数 值 = 0>
+    常量 锯齿 <公开 类型 = 整数 值 = 1>
+}
+
+类 D2D文本抗锯齿模式 <公开 注释 = "D2D1_TEXT_ANTIALIAS_MODE" 折叠>
+{
+    常量 默认 <公开 类型 = 整数 值 = 0>
+    常量 清晰类型 <公开 类型 = 整数 值 = 1>
+    常量 灰度 <公开 类型 = 整数 值 = 2>
+    常量 锯齿 <公开 类型 = 整数 值 = 3>
+}
+
+类 D2D位图插值模式 <公开 注释 = "D2D1_BITMAP_INTERPOLATION_MODE" 折叠>
+{
+    常量 最近邻 <公开 类型 = 整数 值 = 0>
+    常量 线性 <公开 类型 = 整数 值 = 1>
+}
+
+类 D2D延展模式 <公开 注释 = "D2D1_EXTEND_MODE，用于位图画刷。" 折叠>
+{
+    常量 夹紧 <公开 类型 = 整数 值 = 0>
+    常量 平铺 <公开 类型 = 整数 值 = 1>
+    常量 镜像 <公开 类型 = 整数 值 = 2>
+}
+
+类 D2D线帽样式 <公开 注释 = "D2D1_CAP_STYLE" 折叠>
+{
+    常量 平直 <公开 类型 = 整数 值 = 0>
+    常量 方形 <公开 类型 = 整数 值 = 1>
+    常量 圆形 <公开 类型 = 整数 值 = 2>
+    常量 三角 <公开 类型 = 整数 值 = 3>
+}
+
+类 D2D线连接样式 <公开 注释 = "D2D1_LINE_JOIN" 折叠>
+{
+    常量 斜接 <公开 类型 = 整数 值 = 0>
+    常量 斜切 <公开 类型 = 整数 值 = 1>
+    常量 圆形 <公开 类型 = 整数 值 = 2>
+    常量 斜接或斜切 <公开 类型 = 整数 值 = 3>
+}
+
+类 D2D虚线样式 <公开 注释 = "D2D1_DASH_STYLE" 折叠>
+{
+    常量 实线 <公开 类型 = 整数 值 = 0>
+    常量 短划线 <公开 类型 = 整数 值 = 1>
+    常量 点线 <公开 类型 = 整数 值 = 2>
+    常量 短划点 <公开 类型 = 整数 值 = 3>
+    常量 短划点点 <公开 类型 = 整数 值 = 4>
+    常量 自定义 <公开 类型 = 整数 值 = 5>
+}
+
+类 D2D扫描方向 <公开 注释 = "D2D1_SWEEP_DIRECTION" 折叠>
+{
+    常量 逆时针 <公开 类型 = 整数 值 = 0>
+    常量 顺时针 <公开 类型 = 整数 值 = 1>
+}
+
+类 D2D弧线大小 <公开 注释 = "D2D1_ARC_SIZE" 折叠>
+{
+    常量 小弧 <公开 类型 = 整数 值 = 0>
+    常量 大弧 <公开 类型 = 整数 值 = 1>
+}
+
+类 D2D几何合并模式 <公开 注释 = "D2D1_COMBINE_MODE" 折叠>
+{
+    常量 合并 <公开 类型 = 整数 值 = 0 注释 = "0.并集，默认值。">
+    常量 相交 <公开 类型 = 整数 值 = 1 注释 = "1.交集。">
+    常量 异或 <公开 类型 = 整数 值 = 2 注释 = "2.异或。">
+    常量 排除 <公开 类型 = 整数 值 = 3 注释 = "3.从第一个几何中排除第二个几何。">
+}
+
+类 D2D几何简化选项 <公开 注释 = "D2D1_GEOMETRY_SIMPLIFICATION_OPTION" 折叠>
+{
+    常量 立方贝塞尔和直线 <公开 类型 = 整数 值 = 0 注释 = "0.保留三次贝塞尔和直线，默认值。">
+    常量 仅直线 <公开 类型 = 整数 值 = 1 注释 = "1.展开为直线。">
+}
+
+类 D2D填充模式 <公开 注释 = "D2D1_FILL_MODE" 折叠>
+{
+    常量 交替 <公开 类型 = 整数 值 = 0 注释 = "0.交替填充，默认值。">
+    常量 缠绕 <公开 类型 = 整数 值 = 1 注释 = "1.缠绕填充。">
+}
+
+类 D2D文本对齐 <公开 注释 = "DWRITE_TEXT_ALIGNMENT" 折叠>
+{
+    常量 左 <公开 类型 = 整数 值 = 0>
+    常量 右 <公开 类型 = 整数 值 = 1>
+    常量 居中 <公开 类型 = 整数 值 = 2>
+    常量 两端 <公开 类型 = 整数 值 = 3>
+}
+
+类 D2D段落对齐 <公开 注释 = "DWRITE_PARAGRAPH_ALIGNMENT" 折叠>
+{
+    常量 顶部 <公开 类型 = 整数 值 = 0>
+    常量 底部 <公开 类型 = 整数 值 = 1>
+    常量 居中 <公开 类型 = 整数 值 = 2>
+}
+
+类 D2D字体样式 <公开 注释 = "DWRITE_FONT_STYLE" 折叠>
+{
+    常量 正常 <公开 类型 = 整数 值 = 0>
+    常量 斜体 <公开 类型 = 整数 值 = 1>
+    常量 倾斜 <公开 类型 = 整数 值 = 2>
+}
+
+类 D2D字体粗细 <公开 注释 = "DWRITE_FONT_WEIGHT 常用值" 折叠>
+{
+    常量 细 <公开 类型 = 整数 值 = 100>
+    常量 常规 <公开 类型 = 整数 值 = 400>
+    常量 中等 <公开 类型 = 整数 值 = 500>
+    常量 半粗 <公开 类型 = 整数 值 = 600>
+    常量 粗体 <公开 类型 = 整数 值 = 700>
+    常量 黑体 <公开 类型 = 整数 值 = 900>
+}
+
+类 D2D文本换行 <公开 注释 = "DWRITE_WORD_WRAPPING" 折叠>
+{
+    常量 自动换行 <公开 类型 = 整数 值 = 0>
+    常量 不换行 <公开 类型 = 整数 值 = 1>
+    常量 紧急断行 <公开 类型 = 整数 值 = 2>
+    常量 整词换行 <公开 类型 = 整数 值 = 3>
+    常量 按字符 <公开 类型 = 整数 值 = 4>
+}
+
+类 D2D绘制文本选项 <公开 注释 = "D2D1_DRAW_TEXT_OPTIONS，可组合。" 折叠>
+{
+    常量 无 <公开 类型 = 整数 值 = 0>
+    常量 不吸附像素 <公开 类型 = 整数 值 = 1>
+    常量 裁剪 <公开 类型 = 整数 值 = 2>
+    常量 启用彩色字体 <公开 类型 = 整数 值 = 4>
+    常量 禁止彩色位图吸附 <公开 类型 = 整数 值 = 8>
+}
+
+类 D2D鼠标事件类型 <公开 注释 = "自动重画鼠标回调事件类型。" 折叠>
+{
+    常量 移动 <公开 类型 = 整数 值 = 0>
+    常量 左键按下 <公开 类型 = 整数 值 = 1>
+    常量 左键放开 <公开 类型 = 整数 值 = 2>
+    常量 离开 <公开 类型 = 整数 值 = 3>
+    常量 滚轮 <公开 类型 = 整数 值 = 4>
+}
+
+类 D2D颜色 <公开 注释 = "RGBA 颜色，范围 0.0 到 1.0。" 折叠 @别名 = "volcano_d2d::Color" @别名类型 = 本地值类型>
+{
+    变量 红 <公开 类型 = 单精度小数 @输出名 = "r">
+    变量 绿 <公开 类型 = 单精度小数 @输出名 = "g">
+    变量 蓝 <公开 类型 = 单精度小数 @输出名 = "b">
+    变量 透明度 <公开 类型 = 单精度小数 @输出名 = "a">
+
+    方法 创建 <公开 静态 类型 = D2D颜色 @嵌入式方法 = "">
+    参数 红值 <类型 = 单精度小数>
+    参数 绿值 <类型 = 单精度小数>
+    参数 蓝值 <类型 = 单精度小数>
+    参数 透明度值 <类型 = 单精度小数 @默认值 = 1.0>
+    {
+        @ volcano_d2d::MakeColor(@<红值>, @<绿值>, @<蓝值>, @<透明度值>)
+    }
+
+    方法 透明 <公开 静态 类型 = D2D颜色 @嵌入式方法 = "">
+    {
+        @ volcano_d2d::MakeColor(0, 0, 0, 0)
+    }
+
+    方法 白色 <公开 静态 类型 = D2D颜色 @嵌入式方法 = "">
+    {
+        @ volcano_d2d::MakeColor(1, 1, 1, 1)
+    }
+
+    方法 黑色 <公开 静态 类型 = D2D颜色 @嵌入式方法 = "">
+    {
+        @ volcano_d2d::MakeColor(0, 0, 0, 1)
+    }
+
+    方法 浅蓝 <公开 静态 类型 = D2D颜色 @嵌入式方法 = "">
+    {
+        @ volcano_d2d::MakeColor(0.26f, 0.58f, 0.94f, 1)
+    }
+
+    方法 从整数 <公开 静态 类型 = D2D颜色 注释 = "把火山/Windows 颜色整数值转换为 D2D RGBA 颜色。颜色整数按 COLORREF 低字节红色、中字节绿色、高字节蓝色处理。" @嵌入式方法 = "">
+    参数 颜色值 <类型 = 整数 注释 = "火山颜色整数值，可来自颜色类常量或设计器颜色属性。">
+    {
+        @ volcano_d2d::MakeColorFromColorRef(@<颜色值>)
+    }
+}
+
+类 D2D点 <公开 注释 = "二维坐标。" 折叠 @别名 = "volcano_d2d::Point" @别名类型 = 本地值类型>
+{
+    变量 横坐标 <公开 类型 = 单精度小数 @输出名 = "x">
+    变量 纵坐标 <公开 类型 = 单精度小数 @输出名 = "y">
+
+    方法 创建 <公开 静态 类型 = D2D点 @嵌入式方法 = "">
+    参数 横坐标值 <类型 = 单精度小数>
+    参数 纵坐标值 <类型 = 单精度小数>
+    {
+        @ volcano_d2d::MakePoint(@<横坐标值>, @<纵坐标值>)
+    }
+}
+
+类 D2D矩形 <公开 注释 = "左上右下矩形。" 折叠 @别名 = "volcano_d2d::Rect" @别名类型 = 本地值类型>
+{
+    变量 左 <公开 类型 = 单精度小数 @输出名 = "left">
+    变量 顶 <公开 类型 = 单精度小数 @输出名 = "top">
+    变量 右 <公开 类型 = 单精度小数 @输出名 = "right">
+    变量 底 <公开 类型 = 单精度小数 @输出名 = "bottom">
+
+    方法 创建 <公开 静态 类型 = D2D矩形 @嵌入式方法 = "">
+    参数 左值 <类型 = 单精度小数>
+    参数 顶值 <类型 = 单精度小数>
+    参数 右值 <类型 = 单精度小数>
+    参数 底值 <类型 = 单精度小数>
+    {
+        @ volcano_d2d::MakeRect(@<左值>, @<顶值>, @<右值>, @<底值>)
+    }
+}
+
+类 D2D矩阵 <公开 注释 = "D2D1_MATRIX_3X2_F。" 折叠 @别名 = "volcano_d2d::Matrix" @别名类型 = 本地值类型>
+{
+    变量 M11 <公开 类型 = 单精度小数 @输出名 = "m11">
+    变量 M12 <公开 类型 = 单精度小数 @输出名 = "m12">
+    变量 M21 <公开 类型 = 单精度小数 @输出名 = "m21">
+    变量 M22 <公开 类型 = 单精度小数 @输出名 = "m22">
+    变量 DX <公开 类型 = 单精度小数 @输出名 = "dx">
+    变量 DY <公开 类型 = 单精度小数 @输出名 = "dy">
+
+    方法 单位矩阵 <公开 静态 类型 = D2D矩阵 @嵌入式方法 = "">
+    {
+        @ volcano_d2d::MakeIdentityMatrix()
+    }
+
+    方法 平移 <公开 静态 类型 = D2D矩阵 @嵌入式方法 = "">
+    参数 横向 <类型 = 单精度小数>
+    参数 纵向 <类型 = 单精度小数>
+    {
+        @ volcano_d2d::MakeTranslationMatrix(@<横向>, @<纵向>)
+    }
+
+    方法 缩放 <公开 静态 类型 = D2D矩阵 @嵌入式方法 = "">
+    参数 横向比例 <类型 = 单精度小数>
+    参数 纵向比例 <类型 = 单精度小数>
+    参数 中心X <类型 = 单精度小数 @默认值 = 0.0>
+    参数 中心Y <类型 = 单精度小数 @默认值 = 0.0>
+    {
+        @ volcano_d2d::MakeScaleMatrix(@<横向比例>, @<纵向比例>, @<中心X>, @<中心Y>)
+    }
+
+    方法 旋转 <公开 静态 类型 = D2D矩阵 @嵌入式方法 = "">
+    参数 角度 <类型 = 单精度小数 注释 = "旋转角度，单位度。">
+    参数 中心X <类型 = 单精度小数 @默认值 = 0.0>
+    参数 中心Y <类型 = 单精度小数 @默认值 = 0.0>
+    {
+        @ volcano_d2d::MakeRotationMatrix(@<角度>, @<中心X>, @<中心Y>)
+    }
+
+    方法 斜切 <公开 静态 类型 = D2D矩阵 @嵌入式方法 = "">
+    参数 横向角度 <类型 = 单精度小数>
+    参数 纵向角度 <类型 = 单精度小数>
+    参数 中心X <类型 = 单精度小数 @默认值 = 0.0>
+    参数 中心Y <类型 = 单精度小数 @默认值 = 0.0>
+    {
+        @ volcano_d2d::MakeSkewMatrix(@<横向角度>, @<纵向角度>, @<中心X>, @<中心Y>)
+    }
+
+    方法 相乘 <公开 静态 类型 = D2D矩阵 @嵌入式方法 = "">
+    参数 前矩阵 <类型 = D2D矩阵>
+    参数 后矩阵 <类型 = D2D矩阵>
+    {
+        @ volcano_d2d::MultiplyMatrix(@<前矩阵>, @<后矩阵>)
+    }
+}
+
+类 D2D文本度量 <公开 注释 = "DirectWrite 文本布局度量。" 折叠 @别名 = "volcano_d2d::TextMetrics" @别名类型 = 本地值类型>
+{
+    变量 左 <公开 类型 = 单精度小数 @输出名 = "left">
+    变量 顶 <公开 类型 = 单精度小数 @输出名 = "top">
+    变量 宽度 <公开 类型 = 单精度小数 @输出名 = "width">
+    变量 含尾随空白宽度 <公开 类型 = 单精度小数 @输出名 = "widthIncludingTrailingWhitespace">
+    变量 高度 <公开 类型 = 单精度小数 @输出名 = "height">
+    变量 布局宽度 <公开 类型 = 单精度小数 @输出名 = "layoutWidth">
+    变量 布局高度 <公开 类型 = 单精度小数 @输出名 = "layoutHeight">
+    变量 最大双向重排深度 <公开 类型 = 整数 @输出名 = "maxBidiReorderingDepth">
+    变量 行数 <公开 类型 = 整数 @输出名 = "lineCount">
+}
+
+类 D2D渲染选项 <公开 注释 = "创建窗口渲染目标时使用的完整选项。" 折叠 @别名 = "volcano_d2d::RenderOptions" @别名类型 = 本地值类型>
+{
+    变量 工厂类型 <公开 类型 = 整数 @输出名 = "factoryType">
+    变量 调试级别 <公开 类型 = 整数 @输出名 = "debugLevel">
+    变量 渲染目标类型 <公开 类型 = 整数 @输出名 = "renderTargetType">
+    变量 特性级别 <公开 类型 = 整数 @输出名 = "featureLevel">
+    变量 呈现选项 <公开 类型 = 整数 @输出名 = "presentOptions">
+    变量 透明模式 <公开 类型 = 整数 @输出名 = "alphaMode">
+    变量 像素格式 <公开 类型 = 整数 @输出名 = "pixelFormat">
+    变量 DPI横向 <公开 类型 = 单精度小数 @输出名 = "dpiX">
+    变量 DPI纵向 <公开 类型 = 单精度小数 @输出名 = "dpiY">
+    变量 GDI兼容 <公开 类型 = 逻辑型 @输出名 = "gdiCompatible">
+
+    方法 默认选项 <公开 静态 类型 = D2D渲染选项 @嵌入式方法 = "">
+    {
+        @ volcano_d2d::RenderOptions()
+    }
+}
+
+类 D2D绘制引擎 <公开
+        注释 = "窗口级 Direct2D 绘制引擎；依赖 Windows 桌面 HWND、Direct2D、DirectWrite、WIC 和 Windows SDK，要求 C++17 编译。编译缺头文件/库时安装 Windows SDK；老 Windows 7/Server 2008 R2 缺图形组件时安装 Platform Update。此类不依赖上层控件封装，可单独用于原生窗口绘制。">
+{
+
+    #
+    # @ @m<DECLARE_REF_OBJECT_CLASS_WITH_DATA> (volcano_d2d::Engine)
+
+    方法 创建到窗口 <公开 类型 = 逻辑型 注释 = "用默认选项创建 HWND 渲染目标。宽高为 0 时自动取客户区尺寸。" @嵌入式方法 = "">
+    参数 窗口句柄 <类型 = 变整数>
+    参数 宽度 <类型 = 整数 @默认值 = 0>
+    参数 高度 <类型 = 整数 @默认值 = 0>
+    {
+        @ volcano_d2d::RenderOptions options; SUCCEEDED(@sn<this>.data().CreateForHwnd((HWND)@<窗口句柄>, @<宽度>, @<高度>, options))
+    }
+
+    方法 创建到窗口Ex <公开 类型 = 逻辑型 注释 = "用完整选项创建 HWND 渲染目标。宽高为 0 时自动取客户区尺寸。" @嵌入式方法 = "">
+    参数 窗口句柄 <类型 = 变整数>
+    参数 宽度 <类型 = 整数 @默认值 = 0>
+    参数 高度 <类型 = 整数 @默认值 = 0>
+    参数 选项 <类型 = D2D渲染选项>
+    {
+        @ SUCCEEDED(@sn<this>.data().CreateForHwnd((HWND)@<窗口句柄>, @<宽度>, @<高度>, @<选项>))
+    }
+
+    方法 销毁 <公开 注释 = "释放渲染目标、工厂与所有内部临时资源。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.data().Destroy()
+    }
+
+    方法 是否可用 <公开 类型 = 逻辑型 @嵌入式方法 = "">
+    {
+        @ @sn<this>.data().IsReady()
+    }
+
+    方法 窗口是否启用 <公开 类型 = 逻辑型 @嵌入式方法 = "">
+    参数 窗口句柄 <类型 = 变整数>
+    {
+        @ ::IsWindowEnabled((HWND)@<窗口句柄>) != FALSE
+    }
+
+    方法 窗口是否可视 <公开 类型 = 逻辑型 @嵌入式方法 = "">
+    参数 窗口句柄 <类型 = 变整数>
+    {
+        @ ::IsWindowVisible((HWND)@<窗口句柄>) != FALSE
+    }
+
+    方法 调整尺寸 <公开 类型 = 逻辑型 注释 = "窗口大小变化时调用。宽高为 0 时自动取客户区。" @嵌入式方法 = "">
+    参数 宽度 <类型 = 整数 @默认值 = 0>
+    参数 高度 <类型 = 整数 @默认值 = 0>
+    {
+        @ SUCCEEDED(@sn<this>.data().Resize(@<宽度>, @<高度>))
+    }
+
+    方法 请求重画 <公开 注释 = "通知当前绑定的窗口句柄需要重画。建议在宿主绘画事件中实际执行绘制。" @嵌入式方法 = "">
+    参数 擦除背景 <类型 = 逻辑型 @默认值 = 假>
+    {
+        @ @sn<this>.data().Invalidate(@<擦除背景>)
+    }
+
+    方法 立即重画 <公开 注释 = "立即更新当前绑定的窗口句柄。通常在请求重画之后调用。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.data().UpdateNow()
+    }
+
+    方法 安装自动重画 <公开 类型 = 逻辑型 注释 = "挂接当前绑定 HWND 的 WM_PAINT/WM_SIZE，在重画时回调指定绘制函数。绘制回调原型: void (*)(void*)。" @嵌入式方法 = "">
+    参数 回调对象 <类型 = 通用指针>
+    参数 绘制回调 <类型 = 通用指针>
+    {
+        @ @sn<this>.data().InstallAutoRepaint(@<回调对象>, reinterpret_cast<volcano_d2d::PaintCallback>(@<绘制回调>))
+    }
+
+    方法 安装自动重画Ex <公开 类型 = 逻辑型 注释 = "安装自动重画并接收鼠标回调。鼠标回调原型: void (*)(void*, int x, int y, int type)。" @嵌入式方法 = "">
+    参数 回调对象 <类型 = 通用指针>
+    参数 绘制回调 <类型 = 通用指针>
+    参数 鼠标回调 <类型 = 通用指针>
+    {
+        @ @sn<this>.data().InstallAutoRepaint(@<回调对象>, reinterpret_cast<volcano_d2d::PaintCallback>(@<绘制回调>), nullptr, reinterpret_cast<volcano_d2d::MouseCallback>(@<鼠标回调>))
+    }
+
+    方法 安装自动重画Ex2 <公开 类型 = 逻辑型 注释 = "安装自动重画并接收鼠标、键盘和焦点回调。键盘回调原型: void (*)(void*, int type, int key)。" @嵌入式方法 = "">
+    参数 回调对象 <类型 = 通用指针>
+    参数 绘制回调 <类型 = 通用指针>
+    参数 鼠标回调 <类型 = 通用指针>
+    参数 键盘回调 <类型 = 通用指针>
+    {
+        @ @sn<this>.data().InstallAutoRepaint(@<回调对象>, reinterpret_cast<volcano_d2d::PaintCallback>(@<绘制回调>), nullptr, reinterpret_cast<volcano_d2d::MouseCallback>(@<鼠标回调>), reinterpret_cast<volcano_d2d::KeyCallback>(@<键盘回调>))
+    }
+
+    方法 卸载自动重画 <公开 注释 = "恢复当前绑定 HWND 原窗口过程。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.data().UninstallAutoRepaint()
+    }
+
+    方法 开始绘制 <公开 @嵌入式方法 = "">
+    {
+        @ @sn<this>.data().BeginDraw()
+    }
+
+    方法 结束绘制 <公开 类型 = 逻辑型 注释 = "返回假且错误码为 D2DERR_RECREATE_TARGET 时，应销毁并重新创建。" @嵌入式方法 = "">
+    {
+        @ SUCCEEDED(@sn<this>.data().EndDraw())
+    }
+
+    方法 刷新 <公开 @嵌入式方法 = "">
+    {
+        @ @sn<this>.data().Flush()
+    }
+
+    方法 清除 <公开 @嵌入式方法 = "">
+    参数 颜色 <类型 = D2D颜色>
+    {
+        @ @sn<this>.data().Clear(@<颜色>)
+    }
+
+    方法 置DPI <公开 @嵌入式方法 = "">
+    参数 横向DPI <类型 = 单精度小数>
+    参数 纵向DPI <类型 = 单精度小数>
+    {
+        @ @sn<this>.data().SetDpi(@<横向DPI>, @<纵向DPI>)
+    }
+
+    方法 置变换 <公开 @嵌入式方法 = "">
+    参数 矩阵 <类型 = D2D矩阵>
+    {
+        @ @sn<this>.data().SetTransform(@<矩阵>)
+    }
+
+    方法 重置变换 <公开 @嵌入式方法 = "">
+    {
+        @ @sn<this>.data().ResetTransform()
+    }
+
+    方法 置抗锯齿模式 <公开 @嵌入式方法 = "">
+    参数 模式 <类型 = 整数>
+    {
+        @ @sn<this>.data().SetAntialiasMode(@<模式>)
+    }
+
+    方法 置文本抗锯齿模式 <公开 @嵌入式方法 = "">
+    参数 模式 <类型 = 整数>
+    {
+        @ @sn<this>.data().SetTextAntialiasMode(@<模式>)
+    }
+
+    方法 置标签 <公开 @嵌入式方法 = "">
+    参数 标签1 <类型 = 长整数>
+    参数 标签2 <类型 = 长整数>
+    {
+        @ @sn<this>.data().SetTags((UINT64)@<标签1>, (UINT64)@<标签2>)
+    }
+
+    方法 绘制直线 <公开 @嵌入式方法 = "">
+    参数 起点横坐标 <类型 = 单精度小数>
+    参数 起点纵坐标 <类型 = 单精度小数>
+    参数 终点横坐标 <类型 = 单精度小数>
+    参数 终点纵坐标 <类型 = 单精度小数>
+    参数 颜色 <类型 = D2D颜色>
+    参数 线宽 <类型 = 单精度小数 @默认值 = 1.0>
+    {
+        @ @sn<this>.data().DrawLine(volcano_d2d::MakePoint(@<起点横坐标>, @<起点纵坐标>), volcano_d2d::MakePoint(@<终点横坐标>, @<终点纵坐标>), @<颜色>, @<线宽>)
+    }
+
+    方法 绘制矩形 <公开 @嵌入式方法 = "">
+    参数 左 <类型 = 单精度小数>
+    参数 顶 <类型 = 单精度小数>
+    参数 右 <类型 = 单精度小数>
+    参数 底 <类型 = 单精度小数>
+    参数 颜色 <类型 = D2D颜色>
+    参数 线宽 <类型 = 单精度小数 @默认值 = 1.0>
+    {
+        @ @sn<this>.data().DrawRectangle(volcano_d2d::MakeRect(@<左>, @<顶>, @<右>, @<底>), @<颜色>, @<线宽>)
+    }
+
+    方法 填充矩形 <公开 @嵌入式方法 = "">
+    参数 左 <类型 = 单精度小数>
+    参数 顶 <类型 = 单精度小数>
+    参数 右 <类型 = 单精度小数>
+    参数 底 <类型 = 单精度小数>
+    参数 颜色 <类型 = D2D颜色>
+    {
+        @ @sn<this>.data().FillRectangle(volcano_d2d::MakeRect(@<左>, @<顶>, @<右>, @<底>), @<颜色>)
+    }
+
+    方法 绘制圆角矩形 <公开 @嵌入式方法 = "">
+    参数 左 <类型 = 单精度小数>
+    参数 顶 <类型 = 单精度小数>
+    参数 右 <类型 = 单精度小数>
+    参数 底 <类型 = 单精度小数>
+    参数 圆角X <类型 = 单精度小数>
+    参数 圆角Y <类型 = 单精度小数>
+    参数 颜色 <类型 = D2D颜色>
+    参数 线宽 <类型 = 单精度小数 @默认值 = 1.0>
+    {
+        @ @sn<this>.data().DrawRoundedRectangle(volcano_d2d::MakeRect(@<左>, @<顶>, @<右>, @<底>), @<圆角X>, @<圆角Y>, @<颜色>, @<线宽>)
+    }
+
+    方法 填充圆角矩形 <公开 @嵌入式方法 = "">
+    参数 左 <类型 = 单精度小数>
+    参数 顶 <类型 = 单精度小数>
+    参数 右 <类型 = 单精度小数>
+    参数 底 <类型 = 单精度小数>
+    参数 圆角X <类型 = 单精度小数>
+    参数 圆角Y <类型 = 单精度小数>
+    参数 颜色 <类型 = D2D颜色>
+    {
+        @ @sn<this>.data().FillRoundedRectangle(volcano_d2d::MakeRect(@<左>, @<顶>, @<右>, @<底>), @<圆角X>, @<圆角Y>, @<颜色>)
+    }
+
+    方法 绘制椭圆 <公开 @嵌入式方法 = "">
+    参数 中心X <类型 = 单精度小数>
+    参数 中心Y <类型 = 单精度小数>
+    参数 半径X <类型 = 单精度小数>
+    参数 半径Y <类型 = 单精度小数>
+    参数 颜色 <类型 = D2D颜色>
+    参数 线宽 <类型 = 单精度小数 @默认值 = 1.0>
+    {
+        @ @sn<this>.data().DrawEllipse(volcano_d2d::MakePoint(@<中心X>, @<中心Y>), @<半径X>, @<半径Y>, @<颜色>, @<线宽>)
+    }
+
+    方法 填充椭圆 <公开 @嵌入式方法 = "">
+    参数 中心X <类型 = 单精度小数>
+    参数 中心Y <类型 = 单精度小数>
+    参数 半径X <类型 = 单精度小数>
+    参数 半径Y <类型 = 单精度小数>
+    参数 颜色 <类型 = D2D颜色>
+    {
+        @ @sn<this>.data().FillEllipse(volcano_d2d::MakePoint(@<中心X>, @<中心Y>), @<半径X>, @<半径Y>, @<颜色>)
+    }
+
+    方法 创建纯色画刷 <公开 类型 = 通用指针 注释 = "返回 ID2D1SolidColorBrush*，用 释放对象 释放。" @嵌入式方法 = "">
+    参数 颜色 <类型 = D2D颜色>
+    参数 不透明度 <类型 = 单精度小数 @默认值 = 1.0>
+    {
+        @ volcano_d2d::CreateSolidBrushPtr(@sn<this>.data(), @<颜色>, @<不透明度>)
+    }
+
+    方法 创建描边样式 <公开 类型 = 通用指针 注释 = "返回 ID2D1StrokeStyle*，用 释放对象 释放。" @嵌入式方法 = "">
+    参数 起点线帽 <类型 = 整数 @默认值 = D2D线帽样式.平直>
+    参数 终点线帽 <类型 = 整数 @默认值 = D2D线帽样式.平直>
+    参数 虚线线帽 <类型 = 整数 @默认值 = D2D线帽样式.平直>
+    参数 线连接 <类型 = 整数 @默认值 = D2D线连接样式.斜接>
+    参数 斜接限制 <类型 = 单精度小数 @默认值 = 10.0>
+    参数 虚线样式 <类型 = 整数 @默认值 = D2D虚线样式.实线>
+    参数 虚线偏移 <类型 = 单精度小数 @默认值 = 0.0>
+    {
+        @ volcano_d2d::CreateStrokeStylePtr(@sn<this>.data(), @<起点线帽>, @<终点线帽>, @<虚线线帽>, @<线连接>, @<斜接限制>, @<虚线样式>, @<虚线偏移>)
+    }
+
+    方法 创建自定义虚线样式2段 <公开 类型 = 通用指针 注释 = "创建两段自定义虚线样式，返回 ID2D1StrokeStyle*。" @嵌入式方法 = "">
+    参数 实线长度 <类型 = 单精度小数>
+    参数 空白长度 <类型 = 单精度小数>
+    参数 起点线帽 <类型 = 整数 @默认值 = D2D线帽样式.平直>
+    参数 终点线帽 <类型 = 整数 @默认值 = D2D线帽样式.平直>
+    参数 虚线线帽 <类型 = 整数 @默认值 = D2D线帽样式.平直>
+    参数 线连接 <类型 = 整数 @默认值 = D2D线连接样式.斜接>
+    参数 斜接限制 <类型 = 单精度小数 @默认值 = 10.0>
+    参数 虚线偏移 <类型 = 单精度小数 @默认值 = 0.0>
+    {
+        @ volcano_d2d::CreateCustomStrokeStyle2Ptr(@sn<this>.data(), @<实线长度>, @<空白长度>, @<起点线帽>, @<终点线帽>, @<虚线线帽>, @<线连接>, @<斜接限制>, @<虚线偏移>)
+    }
+
+    方法 创建自定义虚线样式4段 <公开 类型 = 通用指针 注释 = "创建四段自定义虚线样式，返回 ID2D1StrokeStyle*。" @嵌入式方法 = "">
+    参数 段1 <类型 = 单精度小数>
+    参数 段2 <类型 = 单精度小数>
+    参数 段3 <类型 = 单精度小数>
+    参数 段4 <类型 = 单精度小数>
+    参数 起点线帽 <类型 = 整数 @默认值 = D2D线帽样式.平直>
+    参数 终点线帽 <类型 = 整数 @默认值 = D2D线帽样式.平直>
+    参数 虚线线帽 <类型 = 整数 @默认值 = D2D线帽样式.平直>
+    参数 线连接 <类型 = 整数 @默认值 = D2D线连接样式.斜接>
+    参数 斜接限制 <类型 = 单精度小数 @默认值 = 10.0>
+    参数 虚线偏移 <类型 = 单精度小数 @默认值 = 0.0>
+    {
+        @ volcano_d2d::CreateCustomStrokeStyle4Ptr(@sn<this>.data(), @<段1>, @<段2>, @<段3>, @<段4>, @<起点线帽>, @<终点线帽>, @<虚线线帽>, @<线连接>, @<斜接限制>, @<虚线偏移>)
+    }
+
+    方法 创建线性渐变画刷2色 <公开 类型 = 通用指针 注释 = "创建两色线性渐变画刷，返回 ID2D1LinearGradientBrush*。" @嵌入式方法 = "">
+    参数 起点X <类型 = 单精度小数>
+    参数 起点Y <类型 = 单精度小数>
+    参数 终点X <类型 = 单精度小数>
+    参数 终点Y <类型 = 单精度小数>
+    参数 起点颜色 <类型 = D2D颜色>
+    参数 终点颜色 <类型 = D2D颜色>
+    {
+        @ volcano_d2d::CreateLinearGradientBrush2Ptr(@sn<this>.data(), volcano_d2d::MakePoint(@<起点X>, @<起点Y>), volcano_d2d::MakePoint(@<终点X>, @<终点Y>), @<起点颜色>, @<终点颜色>)
+    }
+
+    方法 创建线性渐变画刷3色 <公开 类型 = 通用指针 注释 = "创建三色线性渐变画刷，返回 ID2D1LinearGradientBrush*。" @嵌入式方法 = "">
+    参数 起点X <类型 = 单精度小数>
+    参数 起点Y <类型 = 单精度小数>
+    参数 终点X <类型 = 单精度小数>
+    参数 终点Y <类型 = 单精度小数>
+    参数 起点颜色 <类型 = D2D颜色>
+    参数 中间位置 <类型 = 单精度小数>
+    参数 中间颜色 <类型 = D2D颜色>
+    参数 终点颜色 <类型 = D2D颜色>
+    {
+        @ volcano_d2d::CreateLinearGradientBrush3Ptr(@sn<this>.data(), volcano_d2d::MakePoint(@<起点X>, @<起点Y>), volcano_d2d::MakePoint(@<终点X>, @<终点Y>), @<起点颜色>, @<中间位置>, @<中间颜色>, @<终点颜色>)
+    }
+
+    方法 创建径向渐变画刷2色 <公开 类型 = 通用指针 注释 = "创建两色径向渐变画刷，返回 ID2D1RadialGradientBrush*。" @嵌入式方法 = "">
+    参数 中心X <类型 = 单精度小数>
+    参数 中心Y <类型 = 单精度小数>
+    参数 原点偏移X <类型 = 单精度小数>
+    参数 原点偏移Y <类型 = 单精度小数>
+    参数 半径X <类型 = 单精度小数>
+    参数 半径Y <类型 = 单精度小数>
+    参数 中心颜色 <类型 = D2D颜色>
+    参数 边缘颜色 <类型 = D2D颜色>
+    {
+        @ volcano_d2d::CreateRadialGradientBrush2Ptr(@sn<this>.data(), volcano_d2d::MakePoint(@<中心X>, @<中心Y>), volcano_d2d::MakePoint(@<原点偏移X>, @<原点偏移Y>), @<半径X>, @<半径Y>, @<中心颜色>, @<边缘颜色>)
+    }
+
+    方法 创建径向渐变画刷3色 <公开 类型 = 通用指针 注释 = "创建三色径向渐变画刷，返回 ID2D1RadialGradientBrush*。" @嵌入式方法 = "">
+    参数 中心X <类型 = 单精度小数>
+    参数 中心Y <类型 = 单精度小数>
+    参数 原点偏移X <类型 = 单精度小数>
+    参数 原点偏移Y <类型 = 单精度小数>
+    参数 半径X <类型 = 单精度小数>
+    参数 半径Y <类型 = 单精度小数>
+    参数 中心颜色 <类型 = D2D颜色>
+    参数 中间位置 <类型 = 单精度小数>
+    参数 中间颜色 <类型 = D2D颜色>
+    参数 边缘颜色 <类型 = D2D颜色>
+    {
+        @ volcano_d2d::CreateRadialGradientBrush3Ptr(@sn<this>.data(), volcano_d2d::MakePoint(@<中心X>, @<中心Y>), volcano_d2d::MakePoint(@<原点偏移X>, @<原点偏移Y>), @<半径X>, @<半径Y>, @<中心颜色>, @<中间位置>, @<中间颜色>, @<边缘颜色>)
+    }
+
+    方法 释放对象 <公开 注释 = "释放本类返回的 COM 指针。" @嵌入式方法 = "">
+    参数 对象指针 <类型 = 通用指针>
+    {
+        @ @sn<this>.data().ReleaseUnknown((IUnknown*)@<对象指针>)
+    }
+
+    方法 画刷置透明度 <公开 @嵌入式方法 = "">
+    参数 画刷 <类型 = 通用指针>
+    参数 不透明度 <类型 = 单精度小数>
+    {
+        @ @sn<this>.data().SetBrushOpacity((ID2D1Brush*)@<画刷>, @<不透明度>)
+    }
+
+    方法 画刷置变换 <公开 @嵌入式方法 = "">
+    参数 画刷 <类型 = 通用指针>
+    参数 矩阵 <类型 = D2D矩阵>
+    {
+        @ @sn<this>.data().SetBrushTransform((ID2D1Brush*)@<画刷>, @<矩阵>)
+    }
+
+    方法 画刷绘制矩形 <公开 @嵌入式方法 = "">
+    参数 画刷 <类型 = 通用指针>
+    参数 左 <类型 = 单精度小数>
+    参数 顶 <类型 = 单精度小数>
+    参数 右 <类型 = 单精度小数>
+    参数 底 <类型 = 单精度小数>
+    参数 线宽 <类型 = 单精度小数 @默认值 = 1.0>
+    参数 描边样式 <类型 = 通用指针>
+    {
+        @ @sn<this>.data().DrawRectByBrush(volcano_d2d::MakeRect(@<左>, @<顶>, @<右>, @<底>), (ID2D1Brush*)@<画刷>, @<线宽>, (ID2D1StrokeStyle*)@<描边样式>)
+    }
+
+    方法 画刷绘制直线 <公开 @嵌入式方法 = "">
+    参数 画刷 <类型 = 通用指针>
+    参数 起点X <类型 = 单精度小数>
+    参数 起点Y <类型 = 单精度小数>
+    参数 终点X <类型 = 单精度小数>
+    参数 终点Y <类型 = 单精度小数>
+    参数 线宽 <类型 = 单精度小数 @默认值 = 1.0>
+    参数 描边样式 <类型 = 通用指针>
+    {
+        @ @sn<this>.data().DrawLineByBrush(volcano_d2d::MakePoint(@<起点X>, @<起点Y>), volcano_d2d::MakePoint(@<终点X>, @<终点Y>), (ID2D1Brush*)@<画刷>, @<线宽>, (ID2D1StrokeStyle*)@<描边样式>)
+    }
+
+    方法 画刷填充矩形 <公开 @嵌入式方法 = "">
+    参数 画刷 <类型 = 通用指针>
+    参数 左 <类型 = 单精度小数>
+    参数 顶 <类型 = 单精度小数>
+    参数 右 <类型 = 单精度小数>
+    参数 底 <类型 = 单精度小数>
+    {
+        @ @sn<this>.data().FillRectByBrush(volcano_d2d::MakeRect(@<左>, @<顶>, @<右>, @<底>), (ID2D1Brush*)@<画刷>)
+    }
+
+    方法 画刷绘制圆角矩形 <公开 @嵌入式方法 = "">
+    参数 画刷 <类型 = 通用指针>
+    参数 左 <类型 = 单精度小数>
+    参数 顶 <类型 = 单精度小数>
+    参数 右 <类型 = 单精度小数>
+    参数 底 <类型 = 单精度小数>
+    参数 圆角X <类型 = 单精度小数>
+    参数 圆角Y <类型 = 单精度小数>
+    参数 线宽 <类型 = 单精度小数 @默认值 = 1.0>
+    参数 描边样式 <类型 = 通用指针>
+    {
+        @ @sn<this>.data().DrawRoundedRectByBrush(volcano_d2d::MakeRect(@<左>, @<顶>, @<右>, @<底>), @<圆角X>, @<圆角Y>, (ID2D1Brush*)@<画刷>, @<线宽>, (ID2D1StrokeStyle*)@<描边样式>)
+    }
+
+    方法 画刷填充圆角矩形 <公开 @嵌入式方法 = "">
+    参数 画刷 <类型 = 通用指针>
+    参数 左 <类型 = 单精度小数>
+    参数 顶 <类型 = 单精度小数>
+    参数 右 <类型 = 单精度小数>
+    参数 底 <类型 = 单精度小数>
+    参数 圆角X <类型 = 单精度小数>
+    参数 圆角Y <类型 = 单精度小数>
+    {
+        @ @sn<this>.data().FillRoundedRectByBrush(volcano_d2d::MakeRect(@<左>, @<顶>, @<右>, @<底>), @<圆角X>, @<圆角Y>, (ID2D1Brush*)@<画刷>)
+    }
+
+    方法 画刷绘制椭圆 <公开 @嵌入式方法 = "">
+    参数 画刷 <类型 = 通用指针>
+    参数 中心X <类型 = 单精度小数>
+    参数 中心Y <类型 = 单精度小数>
+    参数 半径X <类型 = 单精度小数>
+    参数 半径Y <类型 = 单精度小数>
+    参数 线宽 <类型 = 单精度小数 @默认值 = 1.0>
+    参数 描边样式 <类型 = 通用指针>
+    {
+        @ @sn<this>.data().DrawEllipseByBrush(volcano_d2d::MakePoint(@<中心X>, @<中心Y>), @<半径X>, @<半径Y>, (ID2D1Brush*)@<画刷>, @<线宽>, (ID2D1StrokeStyle*)@<描边样式>)
+    }
+
+    方法 画刷填充椭圆 <公开 @嵌入式方法 = "">
+    参数 画刷 <类型 = 通用指针>
+    参数 中心X <类型 = 单精度小数>
+    参数 中心Y <类型 = 单精度小数>
+    参数 半径X <类型 = 单精度小数>
+    参数 半径Y <类型 = 单精度小数>
+    {
+        @ @sn<this>.data().FillEllipseByBrush(volcano_d2d::MakePoint(@<中心X>, @<中心Y>), @<半径X>, @<半径Y>, (ID2D1Brush*)@<画刷>)
+    }
+
+    方法 创建路径 <公开 类型 = 通用指针 注释 = "返回 ID2D1PathGeometry*。" @嵌入式方法 = "">
+    {
+        @ volcano_d2d::CreatePathGeometryPtr(@sn<this>.data())
+    }
+
+    方法 创建矩形几何 <公开 类型 = 通用指针 注释 = "返回 ID2D1RectangleGeometry*。" @嵌入式方法 = "">
+    参数 左 <类型 = 单精度小数>
+    参数 顶 <类型 = 单精度小数>
+    参数 右 <类型 = 单精度小数>
+    参数 底 <类型 = 单精度小数>
+    {
+        @ volcano_d2d::CreateRectangleGeometryPtr(@sn<this>.data(), volcano_d2d::MakeRect(@<左>, @<顶>, @<右>, @<底>))
+    }
+
+    方法 创建圆角矩形几何 <公开 类型 = 通用指针 注释 = "返回 ID2D1RoundedRectangleGeometry*。" @嵌入式方法 = "">
+    参数 左 <类型 = 单精度小数>
+    参数 顶 <类型 = 单精度小数>
+    参数 右 <类型 = 单精度小数>
+    参数 底 <类型 = 单精度小数>
+    参数 圆角X <类型 = 单精度小数>
+    参数 圆角Y <类型 = 单精度小数>
+    {
+        @ volcano_d2d::CreateRoundedRectangleGeometryPtr(@sn<this>.data(), volcano_d2d::MakeRect(@<左>, @<顶>, @<右>, @<底>), @<圆角X>, @<圆角Y>)
+    }
+
+    方法 创建椭圆几何 <公开 类型 = 通用指针 注释 = "返回 ID2D1EllipseGeometry*。" @嵌入式方法 = "">
+    参数 中心X <类型 = 单精度小数>
+    参数 中心Y <类型 = 单精度小数>
+    参数 半径X <类型 = 单精度小数>
+    参数 半径Y <类型 = 单精度小数>
+    {
+        @ volcano_d2d::CreateEllipseGeometryPtr(@sn<this>.data(), volcano_d2d::MakePoint(@<中心X>, @<中心Y>), @<半径X>, @<半径Y>)
+    }
+
+    方法 创建变换几何 <公开 类型 = 通用指针 注释 = "根据已有几何和矩阵创建 ID2D1TransformedGeometry*。" @嵌入式方法 = "">
+    参数 源几何 <类型 = 通用指针>
+    参数 矩阵 <类型 = D2D矩阵>
+    {
+        @ volcano_d2d::CreateTransformedGeometryPtr(@sn<this>.data(), (ID2D1Geometry*)@<源几何>, @<矩阵>)
+    }
+
+    方法 创建合并几何 <公开 类型 = 通用指针 注释 = "对两个几何做布尔运算，返回 ID2D1PathGeometry*。合并模式：0.并集，1.交集，2.异或，3.排除；默认值：0。" @嵌入式方法 = "">
+    参数 第一几何 <类型 = 通用指针>
+    参数 第二几何 <类型 = 通用指针>
+    参数 合并模式 <类型 = 整数 注释 = "0.并集，1.交集，2.异或，3.排除。默认值：0。" @默认值 = D2D几何合并模式.合并>
+    {
+        @ volcano_d2d::CreateCombinedGeometryPtr(@sn<this>.data(), (ID2D1Geometry*)@<第一几何>, (ID2D1Geometry*)@<第二几何>, @<合并模式>)
+    }
+
+    方法 创建简化几何 <公开 类型 = 通用指针 注释 = "把几何简化为路径，返回 ID2D1PathGeometry*。简化选项：0.保留三次贝塞尔和直线，1.仅直线；默认值：0。" @嵌入式方法 = "">
+    参数 源几何 <类型 = 通用指针>
+    参数 简化选项 <类型 = 整数 注释 = "0.保留三次贝塞尔和直线，1.仅直线。默认值：0。" @默认值 = D2D几何简化选项.立方贝塞尔和直线>
+    {
+        @ volcano_d2d::CreateSimplifiedGeometryPtr(@sn<this>.data(), (ID2D1Geometry*)@<源几何>, @<简化选项>)
+    }
+
+    方法 创建扩宽几何 <公开 类型 = 通用指针 注释 = "按描边宽度把几何扩宽为可填充路径，返回 ID2D1PathGeometry*。" @嵌入式方法 = "">
+    参数 源几何 <类型 = 通用指针>
+    参数 线宽 <类型 = 单精度小数 注释 = "描边宽度，默认值：1。" @默认值 = 1.0>
+    参数 描边样式 <类型 = 通用指针 注释 = "ID2D1StrokeStyle*；默认值：0，表示普通实线。" @默认值 = 0>
+    {
+        @ volcano_d2d::CreateWidenedGeometryPtr(@sn<this>.data(), (ID2D1Geometry*)@<源几何>, @<线宽>, (ID2D1StrokeStyle*)@<描边样式>)
+    }
+
+    方法 创建轮廓几何 <公开 类型 = 通用指针 注释 = "把几何转为轮廓路径，返回 ID2D1PathGeometry*。" @嵌入式方法 = "">
+    参数 源几何 <类型 = 通用指针>
+    {
+        @ volcano_d2d::CreateOutlinedGeometryPtr(@sn<this>.data(), (ID2D1Geometry*)@<源几何>)
+    }
+
+    方法 创建几何组2 <公开 类型 = 通用指针 注释 = "用两个几何创建 ID2D1GeometryGroup*。填充模式：0.交替，1.缠绕；默认值：0。" @嵌入式方法 = "">
+    参数 第一几何 <类型 = 通用指针>
+    参数 第二几何 <类型 = 通用指针>
+    参数 填充模式 <类型 = 整数 注释 = "0.交替，1.缠绕。默认值：0。" @默认值 = D2D填充模式.交替>
+    {
+        @ volcano_d2d::CreateGeometryGroup2Ptr(@sn<this>.data(), (ID2D1Geometry*)@<第一几何>, (ID2D1Geometry*)@<第二几何>, @<填充模式>)
+    }
+
+    方法 打开路径 <公开 类型 = 通用指针 注释 = "返回 ID2D1GeometrySink*，完成后调用 关闭路径。" @嵌入式方法 = "">
+    参数 路径 <类型 = 通用指针>
+    {
+        @ volcano_d2d::OpenGeometryPtr(@sn<this>.data(), (ID2D1PathGeometry*)@<路径>)
+    }
+
+    方法 路径开始图形 <公开 @嵌入式方法 = "">
+    参数 接收器 <类型 = 通用指针>
+    参数 起点X <类型 = 单精度小数>
+    参数 起点Y <类型 = 单精度小数>
+    参数 填充 <类型 = 逻辑型 @默认值 = 真>
+    {
+        @ @sn<this>.data().GeometryBeginFigure((ID2D1GeometrySink*)@<接收器>, volcano_d2d::MakePoint(@<起点X>, @<起点Y>), @<填充>)
+    }
+
+    方法 路径加线 <公开 @嵌入式方法 = "">
+    参数 接收器 <类型 = 通用指针>
+    参数 点X <类型 = 单精度小数>
+    参数 点Y <类型 = 单精度小数>
+    {
+        @ @sn<this>.data().GeometryAddLine((ID2D1GeometrySink*)@<接收器>, volcano_d2d::MakePoint(@<点X>, @<点Y>))
+    }
+
+    方法 路径加三次贝塞尔 <公开 @嵌入式方法 = "">
+    参数 接收器 <类型 = 通用指针>
+    参数 控制1X <类型 = 单精度小数>
+    参数 控制1Y <类型 = 单精度小数>
+    参数 控制2X <类型 = 单精度小数>
+    参数 控制2Y <类型 = 单精度小数>
+    参数 终点X <类型 = 单精度小数>
+    参数 终点Y <类型 = 单精度小数>
+    {
+        @ @sn<this>.data().GeometryAddBezier((ID2D1GeometrySink*)@<接收器>, volcano_d2d::MakePoint(@<控制1X>, @<控制1Y>), volcano_d2d::MakePoint(@<控制2X>, @<控制2Y>), volcano_d2d::MakePoint(@<终点X>, @<终点Y>))
+    }
+
+    方法 路径加二次贝塞尔 <公开 @嵌入式方法 = "">
+    参数 接收器 <类型 = 通用指针>
+    参数 控制X <类型 = 单精度小数>
+    参数 控制Y <类型 = 单精度小数>
+    参数 终点X <类型 = 单精度小数>
+    参数 终点Y <类型 = 单精度小数>
+    {
+        @ @sn<this>.data().GeometryAddQuadraticBezier((ID2D1GeometrySink*)@<接收器>, volcano_d2d::MakePoint(@<控制X>, @<控制Y>), volcano_d2d::MakePoint(@<终点X>, @<终点Y>))
+    }
+
+    方法 路径加弧线 <公开 @嵌入式方法 = "">
+    参数 接收器 <类型 = 通用指针>
+    参数 终点X <类型 = 单精度小数>
+    参数 终点Y <类型 = 单精度小数>
+    参数 半径X <类型 = 单精度小数>
+    参数 半径Y <类型 = 单精度小数>
+    参数 旋转角度 <类型 = 单精度小数 @默认值 = 0.0>
+    参数 扫描方向 <类型 = 整数 @默认值 = 1>
+    参数 弧线大小 <类型 = 整数 @默认值 = 0>
+    {
+        @ @sn<this>.data().GeometryAddArc((ID2D1GeometrySink*)@<接收器>, volcano_d2d::MakePoint(@<终点X>, @<终点Y>), @<半径X>, @<半径Y>, @<旋转角度>, @<扫描方向>, @<弧线大小>)
+    }
+
+    方法 路径结束图形 <公开 @嵌入式方法 = "">
+    参数 接收器 <类型 = 通用指针>
+    参数 闭合 <类型 = 逻辑型 @默认值 = 真>
+    {
+        @ @sn<this>.data().GeometryEndFigure((ID2D1GeometrySink*)@<接收器>, @<闭合>)
+    }
+
+    方法 关闭路径 <公开 类型 = 逻辑型 @嵌入式方法 = "">
+    参数 接收器 <类型 = 通用指针>
+    {
+        @ SUCCEEDED(@sn<this>.data().GeometryClose((ID2D1GeometrySink*)@<接收器>))
+    }
+
+    方法 画刷绘制路径 <公开 @嵌入式方法 = "">
+    参数 路径 <类型 = 通用指针>
+    参数 画刷 <类型 = 通用指针>
+    参数 线宽 <类型 = 单精度小数 @默认值 = 1.0>
+    参数 描边样式 <类型 = 通用指针 @默认值 = 0>
+    {
+        @ @sn<this>.data().DrawGeometry((ID2D1Geometry*)@<路径>, (ID2D1Brush*)@<画刷>, @<线宽>, (ID2D1StrokeStyle*)@<描边样式>)
+    }
+
+    方法 画刷填充路径 <公开 @嵌入式方法 = "">
+    参数 路径 <类型 = 通用指针>
+    参数 画刷 <类型 = 通用指针>
+    {
+        @ @sn<this>.data().FillGeometry((ID2D1Geometry*)@<路径>, (ID2D1Brush*)@<画刷>)
+    }
+
+    方法 取几何边界 <公开 类型 = D2D矩形 注释 = "返回几何对象的轴对齐边界。" @嵌入式方法 = "">
+    参数 几何 <类型 = 通用指针>
+    {
+        @ volcano_d2d::GeometryBoundsValue(@sn<this>.data(), (ID2D1Geometry*)@<几何>)
+    }
+
+    方法 取几何面积 <公开 类型 = 单精度小数 @嵌入式方法 = "">
+    参数 几何 <类型 = 通用指针>
+    {
+        @ volcano_d2d::GeometryAreaValue(@sn<this>.data(), (ID2D1Geometry*)@<几何>)
+    }
+
+    方法 取几何长度 <公开 类型 = 单精度小数 @嵌入式方法 = "">
+    参数 几何 <类型 = 通用指针>
+    {
+        @ volcano_d2d::GeometryLengthValue(@sn<this>.data(), (ID2D1Geometry*)@<几何>)
+    }
+
+    方法 几何填充包含点 <公开 类型 = 逻辑型 @嵌入式方法 = "">
+    参数 几何 <类型 = 通用指针>
+    参数 横坐标 <类型 = 单精度小数>
+    参数 纵坐标 <类型 = 单精度小数>
+    {
+        @ @sn<this>.data().GeometryFillContainsPoint((ID2D1Geometry*)@<几何>, volcano_d2d::MakePoint(@<横坐标>, @<纵坐标>))
+    }
+
+    方法 几何描边包含点 <公开 类型 = 逻辑型 @嵌入式方法 = "">
+    参数 几何 <类型 = 通用指针>
+    参数 横坐标 <类型 = 单精度小数>
+    参数 纵坐标 <类型 = 单精度小数>
+    参数 线宽 <类型 = 单精度小数 @默认值 = 1.0>
+    参数 描边样式 <类型 = 通用指针>
+    {
+        @ @sn<this>.data().GeometryStrokeContainsPoint((ID2D1Geometry*)@<几何>, volcano_d2d::MakePoint(@<横坐标>, @<纵坐标>), @<线宽>, (ID2D1StrokeStyle*)@<描边样式>)
+    }
+
+    方法 载入位图文件 <公开 类型 = 通用指针 注释 = "返回 ID2D1Bitmap*，支持 WIC 可解码格式。" @嵌入式方法 = "">
+    参数 文件名 <类型 = 文本型>
+    {
+        @ volcano_d2d::LoadBitmapFromFilePtr(@sn<this>.data(), (const wchar_t*)@<文件名>.GetText())
+    }
+
+    方法 载入位图数据 <公开 类型 = 通用指针 注释 = "从图片字节集载入 ID2D1Bitmap*，支持 WIC 可解码格式，如 PNG/BMP/GIF/JPG/ICO。返回指针用 释放对象 释放。" @嵌入式方法 = "">
+    参数 图片数据 <类型 = 字节集类 注释 = "完整图片文件字节数据。">
+    {
+        @ ([&]() -> ID2D1Bitmap* { auto& __data = @<图片数据>; ID2D1Bitmap* __bitmap = nullptr; @sn<this>.data().LoadBitmapFromMemory(__data.GetPtr(), (int)__data.GetSize(), &__bitmap); return __bitmap; }())
+    }
+
+    方法 创建BGRA位图 <公开 类型 = 通用指针 注释 = "从 32bpp 预乘 BGRA 内存创建位图，返回 ID2D1Bitmap*。" @嵌入式方法 = "">
+    参数 宽度 <类型 = 整数>
+    参数 高度 <类型 = 整数>
+    参数 像素指针 <类型 = 通用指针>
+    参数 跨距 <类型 = 整数>
+    {
+        @ volcano_d2d::CreateBitmapFromBgraPtr(@sn<this>.data(), @<宽度>, @<高度>, @<像素指针>, (UINT32)@<跨距>)
+    }
+
+    方法 绘制位图 <公开 @嵌入式方法 = "">
+    参数 位图 <类型 = 通用指针>
+    参数 左 <类型 = 单精度小数>
+    参数 顶 <类型 = 单精度小数>
+    参数 右 <类型 = 单精度小数>
+    参数 底 <类型 = 单精度小数>
+    参数 不透明度 <类型 = 单精度小数 @默认值 = 1.0>
+    参数 插值模式 <类型 = 整数 @默认值 = D2D位图插值模式.线性>
+    {
+        @ @sn<this>.data().DrawBitmap((ID2D1Bitmap*)@<位图>, volcano_d2d::MakeRect(@<左>, @<顶>, @<右>, @<底>), @<不透明度>, @<插值模式>, volcano_d2d::MakeRect(0, 0, 0, 0))
+    }
+
+    方法 绘制位图区域 <公开 注释 = "把位图的指定源矩形绘制到目标矩形。" @嵌入式方法 = "">
+    参数 位图 <类型 = 通用指针>
+    参数 目标左 <类型 = 单精度小数>
+    参数 目标顶 <类型 = 单精度小数>
+    参数 目标右 <类型 = 单精度小数>
+    参数 目标底 <类型 = 单精度小数>
+    参数 源左 <类型 = 单精度小数>
+    参数 源顶 <类型 = 单精度小数>
+    参数 源右 <类型 = 单精度小数>
+    参数 源底 <类型 = 单精度小数>
+    参数 不透明度 <类型 = 单精度小数 @默认值 = 1.0>
+    参数 插值模式 <类型 = 整数 @默认值 = D2D位图插值模式.线性>
+    {
+        @ @sn<this>.data().DrawBitmap((ID2D1Bitmap*)@<位图>, volcano_d2d::MakeRect(@<目标左>, @<目标顶>, @<目标右>, @<目标底>), @<不透明度>, @<插值模式>, volcano_d2d::MakeRect(@<源左>, @<源顶>, @<源右>, @<源底>))
+    }
+
+    方法 创建位图画刷 <公开 类型 = 通用指针 注释 = "从位图创建 ID2D1BitmapBrush*，可用于填充任意图形。" @嵌入式方法 = "">
+    参数 位图 <类型 = 通用指针>
+    参数 横向延展 <类型 = 整数 @默认值 = D2D延展模式.平铺>
+    参数 纵向延展 <类型 = 整数 @默认值 = D2D延展模式.平铺>
+    参数 插值模式 <类型 = 整数 @默认值 = D2D位图插值模式.线性>
+    参数 不透明度 <类型 = 单精度小数 @默认值 = 1.0>
+    {
+        @ volcano_d2d::CreateBitmapBrushPtr(@sn<this>.data(), (ID2D1Bitmap*)@<位图>, @<横向延展>, @<纵向延展>, @<插值模式>, @<不透明度>)
+    }
+
+    方法 取位图宽度 <公开 类型 = 整数 @嵌入式方法 = "">
+    参数 位图 <类型 = 通用指针>
+    {
+        @ @sn<this>.data().BitmapWidth((ID2D1Bitmap*)@<位图>)
+    }
+
+    方法 取位图高度 <公开 类型 = 整数 @嵌入式方法 = "">
+    参数 位图 <类型 = 通用指针>
+    {
+        @ @sn<this>.data().BitmapHeight((ID2D1Bitmap*)@<位图>)
+    }
+
+    方法 创建文本格式 <公开 类型 = 通用指针 注释 = "返回 IDWriteTextFormat*。" @嵌入式方法 = "">
+    参数 字体名 <类型 = 文本型 @默认值 = "微软雅黑">
+    参数 字号 <类型 = 单精度小数 @默认值 = 16.0>
+    参数 粗细 <类型 = 整数 @默认值 = D2D字体粗细.常规>
+    参数 样式 <类型 = 整数 @默认值 = D2D字体样式.正常>
+    参数 拉伸 <类型 = 整数 @默认值 = 5>
+    参数 区域 <类型 = 文本型 @默认值 = "zh-cn">
+    {
+        @ volcano_d2d::CreateTextFormatPtr(@sn<this>.data(), (const wchar_t*)@<字体名>.GetText(), @<字号>, @<粗细>, @<样式>, @<拉伸>, (const wchar_t*)@<区域>.GetText())
+    }
+
+    方法 文本格式置对齐 <公开 @嵌入式方法 = "">
+    参数 文本格式 <类型 = 通用指针>
+    参数 对齐 <类型 = 整数>
+    {
+        @ @sn<this>.data().SetTextAlignment((IDWriteTextFormat*)@<文本格式>, @<对齐>)
+    }
+
+    方法 文本格式置段落对齐 <公开 @嵌入式方法 = "">
+    参数 文本格式 <类型 = 通用指针>
+    参数 对齐 <类型 = 整数>
+    {
+        @ @sn<this>.data().SetParagraphAlignment((IDWriteTextFormat*)@<文本格式>, @<对齐>)
+    }
+
+    方法 文本格式置换行 <公开 @嵌入式方法 = "">
+    参数 文本格式 <类型 = 通用指针>
+    参数 换行模式 <类型 = 整数>
+    {
+        @ @sn<this>.data().SetWordWrapping((IDWriteTextFormat*)@<文本格式>, @<换行模式>)
+    }
+
+    方法 创建文本布局 <公开 类型 = 通用指针 注释 = "返回 IDWriteTextLayout*，用于复杂文本排版后绘制。" @嵌入式方法 = "">
+    参数 文本 <类型 = 文本型>
+    参数 文本格式 <类型 = 通用指针>
+    参数 最大宽度 <类型 = 单精度小数>
+    参数 最大高度 <类型 = 单精度小数>
+    {
+        @ volcano_d2d::CreateTextLayoutPtr(@sn<this>.data(), (const wchar_t*)@<文本>.GetText(), (IDWriteTextFormat*)@<文本格式>, @<最大宽度>, @<最大高度>)
+    }
+
+    方法 取文本布局度量 <公开 类型 = D2D文本度量 注释 = "返回 IDWriteTextLayout 的宽高、行数等度量。" @嵌入式方法 = "">
+    参数 文本布局 <类型 = 通用指针>
+    {
+        @ volcano_d2d::TextLayoutMetricsValue(@sn<this>.data(), (IDWriteTextLayout*)@<文本布局>)
+    }
+
+    方法 文本布局点取字符位置 <公开 类型 = 整数 注释 = "对 IDWriteTextLayout 做命中测试，返回坐标处字符位置；失败返回 -1。" @嵌入式方法 = "">
+    参数 文本布局 <类型 = 通用指针>
+    参数 横坐标 <类型 = 单精度小数>
+    参数 纵坐标 <类型 = 单精度小数>
+    {
+        @ volcano_d2d::TextLayoutHitTextPosition(@sn<this>.data(), (IDWriteTextLayout*)@<文本布局>, @<横坐标>, @<纵坐标>)
+    }
+
+    方法 画刷绘制文本布局 <公开 @嵌入式方法 = "">
+    参数 文本布局 <类型 = 通用指针>
+    参数 画刷 <类型 = 通用指针>
+    参数 横坐标 <类型 = 单精度小数>
+    参数 纵坐标 <类型 = 单精度小数>
+    参数 选项 <类型 = 整数 @默认值 = D2D绘制文本选项.无>
+    {
+        @ @sn<this>.data().DrawTextLayout(volcano_d2d::MakePoint(@<横坐标>, @<纵坐标>), (IDWriteTextLayout*)@<文本布局>, (ID2D1Brush*)@<画刷>, @<选项>)
+    }
+
+    方法 绘制文本 <公开 @嵌入式方法 = "">
+    参数 文本 <类型 = 文本型>
+    参数 左 <类型 = 单精度小数>
+    参数 顶 <类型 = 单精度小数>
+    参数 右 <类型 = 单精度小数>
+    参数 底 <类型 = 单精度小数>
+    参数 颜色 <类型 = D2D颜色>
+    参数 字体名 <类型 = 文本型 @默认值 = "微软雅黑">
+    参数 字号 <类型 = 单精度小数 @默认值 = 16.0>
+    参数 粗细 <类型 = 整数 @默认值 = D2D字体粗细.常规>
+    参数 样式 <类型 = 整数 @默认值 = D2D字体样式.正常>
+    参数 水平对齐 <类型 = 整数 @默认值 = D2D文本对齐.左>
+    参数 垂直对齐 <类型 = 整数 @默认值 = D2D段落对齐.顶部>
+    {
+        @ @sn<this>.data().DrawTextSimple((const wchar_t*)@<文本>.GetText(), volcano_d2d::MakeRect(@<左>, @<顶>, @<右>, @<底>), @<颜色>, (const wchar_t*)@<字体名>.GetText(), @<字号>, @<粗细>, @<样式>, @<水平对齐>, @<垂直对齐>)
+    }
+
+    方法 绘制装饰文本 <公开 注释 = "绘制带下划线、删除线、旋转和可选换行的文本。" @嵌入式方法 = "">
+    参数 文本 <类型 = 文本型>
+    参数 左 <类型 = 单精度小数>
+    参数 顶 <类型 = 单精度小数>
+    参数 右 <类型 = 单精度小数>
+    参数 底 <类型 = 单精度小数>
+    参数 颜色 <类型 = D2D颜色>
+    参数 字体名 <类型 = 文本型 @默认值 = "微软雅黑">
+    参数 字号 <类型 = 单精度小数 @默认值 = 16.0>
+    参数 粗细 <类型 = 整数 @默认值 = D2D字体粗细.常规>
+    参数 样式 <类型 = 整数 @默认值 = D2D字体样式.正常>
+    参数 下划线 <类型 = 逻辑型 @默认值 = 假>
+    参数 删除线 <类型 = 逻辑型 @默认值 = 假>
+    参数 旋转角度 <类型 = 单精度小数 注释 = "旋转角度，单位度；默认值：0。" @默认值 = 0.0>
+    参数 水平对齐 <类型 = 整数 注释 = "0.左，1.右，2.居中，3.两端；默认值：0。" @默认值 = D2D文本对齐.左>
+    参数 垂直对齐 <类型 = 整数 注释 = "0.顶部，1.底部，2.居中；默认值：0。" @默认值 = D2D段落对齐.顶部>
+    参数 自动换行 <类型 = 逻辑型 @默认值 = 真>
+    {
+        @ @sn<this>.data().DrawTextDecorated((const wchar_t*)@<文本>.GetText(), volcano_d2d::MakeRect(@<左>, @<顶>, @<右>, @<底>), @<颜色>, (const wchar_t*)@<字体名>.GetText(), @<字号>, @<粗细>, @<样式>, @<下划线>, @<删除线>, @<旋转角度>, @<水平对齐>, @<垂直对齐>, @<自动换行>)
+    }
+
+    方法 创建图层 <公开 类型 = 通用指针 注释 = "返回 ID2D1Layer*。" @嵌入式方法 = "">
+    {
+        @ volcano_d2d::CreateLayerPtr(@sn<this>.data())
+    }
+
+    方法 压入图层 <公开 @嵌入式方法 = "">
+    参数 图层 <类型 = 通用指针>
+    参数 左 <类型 = 单精度小数>
+    参数 顶 <类型 = 单精度小数>
+    参数 右 <类型 = 单精度小数>
+    参数 底 <类型 = 单精度小数>
+    参数 不透明度 <类型 = 单精度小数 @默认值 = 1.0>
+    {
+        @ @sn<this>.data().PushLayer(volcano_d2d::MakeRect(@<左>, @<顶>, @<右>, @<底>), (ID2D1Layer*)@<图层>, @<不透明度>)
+    }
+
+    方法 弹出图层 <公开 @嵌入式方法 = "">
+    {
+        @ @sn<this>.data().PopLayer()
+    }
+
+    方法 压入裁剪 <公开 @嵌入式方法 = "">
+    参数 左 <类型 = 单精度小数>
+    参数 顶 <类型 = 单精度小数>
+    参数 右 <类型 = 单精度小数>
+    参数 底 <类型 = 单精度小数>
+    参数 抗锯齿模式 <类型 = 整数 @默认值 = D2D抗锯齿模式.单个图元>
+    {
+        @ @sn<this>.data().PushAxisAlignedClip(volcano_d2d::MakeRect(@<左>, @<顶>, @<右>, @<底>), @<抗锯齿模式>)
+    }
+
+    方法 弹出裁剪 <公开 @嵌入式方法 = "">
+    {
+        @ @sn<this>.data().PopAxisAlignedClip()
+    }
+
+    方法 创建绘制状态 <公开 类型 = 通用指针 注释 = "返回 ID2D1DrawingStateBlock*。" @嵌入式方法 = "">
+    {
+        @ volcano_d2d::CreateDrawingStateBlockPtr(@sn<this>.data())
+    }
+
+    方法 保存绘制状态 <公开 @嵌入式方法 = "">
+    参数 状态 <类型 = 通用指针>
+    {
+        @ @sn<this>.data().SaveDrawingState((ID2D1DrawingStateBlock*)@<状态>)
+    }
+
+    方法 恢复绘制状态 <公开 @嵌入式方法 = "">
+    参数 状态 <类型 = 通用指针>
+    {
+        @ @sn<this>.data().RestoreDrawingState((ID2D1DrawingStateBlock*)@<状态>)
+    }
+
+    方法 取错误码 <公开 类型 = 整数 @嵌入式方法 = "">
+    {
+        @ (int)@sn<this>.data().LastResult()
+    }
+
+    方法 取错误文本 <公开 类型 = 文本型 @嵌入式方法 = "">
+    {
+        @ @an<CVolString>(@sn<this>.data().LastErrorText().c_str())
+    }
+
+    方法 取工厂指针 <公开 类型 = 通用指针 @嵌入式方法 = "">
+    {
+        @ @sn<this>.data().Factory()
+    }
+
+    方法 取DWrite工厂指针 <公开 类型 = 通用指针 @嵌入式方法 = "">
+    {
+        @ @sn<this>.data().WriteFactory()
+    }
+
+    方法 取WIC工厂指针 <公开 类型 = 通用指针 @嵌入式方法 = "">
+    {
+        @ @sn<this>.data().WicFactory()
+    }
+
+    方法 取渲染目标指针 <公开 类型 = 通用指针 @嵌入式方法 = "">
+    {
+        @ @sn<this>.data().Target()
+    }
+}

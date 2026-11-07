@@ -1,0 +1,7 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.D2D绘制引擎 <注释 = "SVG 渲染支持库封装说明。lunasvg 与 plutovg 源码由 D2D绘制引擎.wsv 的外部源文件列表统一纳入编译，避免当前 IDE 未重新加载项目时漏编或重编。">
+
+类 D2DSVG绘制库 <公开 折叠 注释 = "内部说明类：项目使用 sammycage/lunasvg 与 plutovg 把 SVG 栅格化为 BGRA 位图。D2D 按钮图标通过 native\\lunasvg_bridge.hpp 调用，不需要用户直接创建本类。">
+{
+}

@@ -1,0 +1,7 @@
+doc_format_version = 1
+project_identifier = "wutao.vproject.pc.win.1"
+author = "搬码渔"
+name = "KonvaJS图形工具"
+version = 1
+explain = "Konva 是一个基于 HTML5 Canvas 的 JavaScript 框架，用于构建交互式二维图形。它会在画布上给你一个对象模型——你创建形状、分组、添加事件监听器、拖动、动画化，框架负责渲染、命中检测和状态管理。"
+file.name = "KonvaApiWrappers.wsv"

@@ -1,0 +1,151 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.安卓.组件.洛蒂动画
+
+# 只作成员签名出现的类型: 档 B 已剔除的 lottie 实现类型 + 官方无别名的 java/androidx/okio 类型.
+
+类 洛蒂JSON读取器 <公开 @别名 = "com.airbnb.lottie.parser.moshi.JsonReader" @禁止创建对象 = 真 注释 = "★ 只作类型使用, 其实现包按档 B 口径已剔除.">
+{
+}
+
+类 洛蒂图层 <公开 @别名 = "com.airbnb.lottie.model.layer.Layer" @禁止创建对象 = 真 注释 = "★ 只作类型使用, 其实现包按档 B 口径已剔除.">
+{
+}
+
+类 洛蒂基础关键帧动画 <公开 @别名 = "com.airbnb.lottie.animation.keyframe.BaseKeyframeAnimation" @禁止创建对象 = 真 注释 = "★ 只作类型使用, 其实现包按档 B 口径已剔除.">
+{
+}
+
+类 洛蒂字体 <公开 @别名 = "com.airbnb.lottie.model.Font" @禁止创建对象 = 真 注释 = "★ 只作类型使用, 其实现包按档 B 口径已剔除.">
+{
+}
+
+类 洛蒂帧监听接口 <公开 @别名 = "com.airbnb.lottie.PerformanceTracker$FrameListener" @禁止创建对象 = 真 注释 = "★ 只作类型使用, 其实现包按档 B 口径已剔除.">
+{
+}
+
+类 洛蒂插值基值 <公开 @别名 = "com.airbnb.lottie.value.LottieInterpolatedValue" @禁止创建对象 = 真 注释 = "★ 只作类型使用, 其实现包按档 B 口径已剔除.">
+{
+}
+
+类 洛蒂标记 <公开 @别名 = "com.airbnb.lottie.model.Marker" @禁止创建对象 = 真 注释 = "★ 只作类型使用, 其实现包按档 B 口径已剔除.">
+{
+}
+
+类 洛蒂键路径元素接口 <公开 @别名 = "com.airbnb.lottie.model.KeyPathElement" @禁止创建对象 = 真 注释 = "★ 只作类型使用, 其实现包按档 B 口径已剔除.">
+{
+}
+
+类 洛蒂动画监听类 <公开 @别名 = "android.animation.Animator$AnimatorListener" @禁止创建对象 = 真 注释 = "★ 桥接类型.">
+{
+}
+
+类 洛蒂动画暂停监听类 <公开 @别名 = "android.animation.Animator$AnimatorPauseListener" @禁止创建对象 = 真 注释 = "★ 桥接类型.">
+{
+}
+
+类 洛蒂动画更新监听类 <公开 @别名 = "android.animation.ValueAnimator$AnimatorUpdateListener" @禁止创建对象 = 真 注释 = "★ 桥接类型.">
+{
+}
+
+类 洛蒂颜色过滤器类 <公开 @别名 = "android.graphics.ColorFilter" @禁止创建对象 = 真 注释 = "★ 桥接类型.">
+{
+}
+
+类 洛蒂可绘制对象回调接口 <公开 @别名 = "android.graphics.drawable.Drawable$Callback" @禁止创建对象 = 真 注释 = "★ 桥接类型.">
+{
+}
+
+类 洛蒂属性集类 <公开 @别名 = "android.util.AttributeSet" @禁止创建对象 = 真 注释 = "★ 桥接类型.">
+{
+}
+
+类 洛蒂插值器类 <公开 @别名 = "android.view.animation.Interpolator" @禁止创建对象 = 真 注释 = "★ 桥接类型.">
+{
+}
+
+类 洛蒂长稀疏数组类 <公开 @别名 = "androidx.collection.LongSparseArray" @禁止创建对象 = 真 注释 = "★ 桥接类型.">
+{
+}
+
+类 洛蒂稀疏数组类 <公开 @别名 = "androidx.collection.SparseArrayCompat" @禁止创建对象 = 真 注释 = "★ 桥接类型.">
+{
+}
+
+类 洛蒂缓冲输入流类 <公开 @别名 = "java.io.BufferedInputStream" @禁止创建对象 = 真 注释 = "★ 桥接类型.">
+{
+}
+
+类 洛蒂缓冲输出流类 <公开 @别名 = "java.io.BufferedOutputStream" @禁止创建对象 = 真 注释 = "★ 桥接类型.">
+{
+}
+
+类 洛蒂文件类 <公开 @别名 = "java.io.File" @禁止创建对象 = 真 注释 = "★ 桥接类型.">
+{
+}
+
+类 洛蒂输入流类 <公开 @别名 = "java.io.InputStream" @禁止创建对象 = 真 注释 = "★ 桥接类型.">
+{
+}
+
+类 洛蒂字符读入类 <公开 @别名 = "java.io.Reader" @禁止创建对象 = 真 注释 = "★ 桥接类型.">
+{
+}
+
+类 洛蒂可运行任务类 <公开 @别名 = "java.lang.Runnable" @禁止创建对象 = 真 注释 = "★ 桥接类型.">
+{
+}
+
+类 洛蒂HTTP连接类 <公开 @别名 = "java.net.HttpURLConnection" @禁止创建对象 = 真 注释 = "★ 桥接类型.">
+{
+}
+
+类 洛蒂数组列表类 <公开 @别名 = "java.util.ArrayList" @禁止创建对象 = 真 注释 = "★ 桥接类型.">
+{
+}
+
+类 洛蒂哈希表类 <公开 @别名 = "java.util.HashMap" @禁止创建对象 = 真 注释 = "★ 桥接类型.">
+{
+}
+
+类 洛蒂列表类 <公开 @别名 = "java.util.List" @禁止创建对象 = 真 注释 = "★ 桥接类型.">
+{
+}
+
+类 洛蒂区域设置类 <公开 @别名 = "java.util.Locale" @禁止创建对象 = 真 注释 = "★ 桥接类型.">
+{
+}
+
+类 洛蒂键值表类 <公开 @别名 = "java.util.Map" @禁止创建对象 = 真 注释 = "★ 桥接类型.">
+{
+}
+
+类 洛蒂不重复集合类 <公开 @别名 = "java.util.Set" @禁止创建对象 = 真 注释 = "★ 桥接类型.">
+{
+}
+
+类 洛蒂可调用任务接口 <公开 @别名 = "java.util.concurrent.Callable" @禁止创建对象 = 真 注释 = "★ 桥接类型.">
+{
+}
+
+类 洛蒂执行器类 <公开 @别名 = "java.util.concurrent.Executor" @禁止创建对象 = 真 注释 = "★ 桥接类型.">
+{
+}
+
+类 洛蒂压缩包输入流类 <公开 @别名 = "java.util.zip.ZipInputStream" @禁止创建对象 = 真 注释 = "★ 桥接类型.">
+{
+}
+
+类 洛蒂缓冲字节源类 <公开 @别名 = "okio.BufferedSource" @禁止创建对象 = 真 注释 = "★ 桥接类型.">
+{
+}
+
+类 洛蒂字节源类 <公开 @别名 = "okio.Source" @禁止创建对象 = 真 注释 = "★ 桥接类型.">
+{
+}
+
+类 洛蒂JSON对象类 <公开 @别名 = "org.json.JSONObject" @禁止创建对象 = 真 注释 = "★ 桥接类型.">
+{
+}
+
+# 外部库(aar/jar)只声明在组件类 洛蒂动画框 头部: 实测未被引用的类上的 @安卓.外部库 会被按需编译剔除.

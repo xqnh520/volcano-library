@@ -1,0 +1,789 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.安卓.XUI <注释 = "XUI 安卓 UI 工具库封装" @文档 = "category = \"XUI\"">
+
+
+类 XUI简易指示器 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.tabbar.EasyIndicator)."
+        @文档 = "category = \"XUI.标签栏\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.tabbar.EasyIndicator\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.indicator_width\n        shown_name = \"指示器\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.indicator_height\n        shown_name = \"指示器的高度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.indicator_background\n        shown_name = \"指示器（2）\"\n        data_type = string\n        detail_type = drawable_res_file\n    }\n    attr\n    {\n        name = app.indicator_textSize\n        shown_name = \"指示器文字的大小\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.indicator_select_textSize\n        shown_name = \"指示器选中时文字的大小\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.indicator_selected_color\n        shown_name = \"指示器选中时的背景颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.indicator_normal_color\n        shown_name = \"指示器未选中时的背景颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.indicator_line_show\n        shown_name = \"是否显示底部指示器\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.indicator_line_height\n        shown_name = \"指示器底部的高度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.indicator_line_width\n        shown_name = \"指示器底部的宽度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.indicator_line_color\n        shown_name = \"指示器指示线的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.indicator_line_res\n        shown_name = \"指示器指示线的资源\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.indicator_bottom_line_color\n        shown_name = \"指示器底部指示线的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.indicator_bottom_line_height\n        shown_name = \"指示器底部指示线的高度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.indicator_vertical_line_w\n        shown_name = \"指示器垂直分割线的宽度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.indicator_vertical_line_h\n        shown_name = \"指示器垂直分割线的高度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.indicator_vertical_line_color\n        shown_name = \"指示器垂直分割线的颜色\"\n        data_type = string\n        detail_type = color\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI简易指示器, EasyIndicator, com.xuexiang.xui.widget.tabbar.EasyIndicator)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetEasyIndicator ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI简易指示器的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI简易指示器.getAlpha()">
+    {
+        @ (double)@sn<this>.GetEasyIndicator ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI简易指示器的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI简易指示器.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetEasyIndicator ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI简易指示器的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI简易指示器.isEnabled()">
+    {
+        @ @sn<this>.GetEasyIndicator ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI简易指示器的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI简易指示器.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetEasyIndicator ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI简易指示器的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI简易指示器.isClickable()">
+    {
+        @ @sn<this>.GetEasyIndicator ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI简易指示器的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI简易指示器.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetEasyIndicator ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI简易指示器的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI简易指示器.getElevation()">
+    {
+        @ (double)@sn<this>.GetEasyIndicator ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI简易指示器的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI简易指示器.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetEasyIndicator ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI简易指示器的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI简易指示器.getMinimumHeight()">
+    {
+        @ @sn<this>.GetEasyIndicator ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI简易指示器的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI简易指示器.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetEasyIndicator ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI简易指示器的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI简易指示器.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetEasyIndicator ().setBackgroundColor (@<新值>))
+    }
+
+    方法 设置标签页标题组 <公开 注释 = "用法：把XUI简易指示器的标签页标题组设为给定值。 参数：值1=文本型。 返回：无。 原方法：XUI简易指示器.setTabTitles()">
+    参数 值1 <类型 = "文本型 []">
+    {
+        @ @m<RUN_UI_ACTION> (GetEasyIndicator ().setTabTitles (@<值1>))
+    }
+
+    方法 响应页已滚动 <公开 注释 = "用法：XUI简易指示器在页已滚动时被 XUI 回调, 通常配合 挂接事件 使用。 参数：值1=整数、值2=小数、值3=整数。 返回：无。 原方法：XUI简易指示器.onPageScrolled()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 小数>
+    参数 值3 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetEasyIndicator ().onPageScrolled (@<值1>, (float) @<值2>, @<值3>))
+    }
+
+    方法 响应页选中 <公开 注释 = "用法：XUI简易指示器在页选中时被 XUI 回调, 通常配合 挂接事件 使用。 参数：值1=整数。 返回：无。 原方法：XUI简易指示器.onPageSelected()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetEasyIndicator ().onPageSelected (@<值1>))
+    }
+
+    方法 响应页滚动状态已改变 <公开 注释 = "用法：XUI简易指示器在页滚动状态已改变时被 XUI 回调, 通常配合 挂接事件 使用。 参数：值1=整数。 返回：无。 原方法：XUI简易指示器.onPageScrollStateChanged()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetEasyIndicator ().onPageScrollStateChanged (@<值1>))
+    }
+
+    方法 设置字体 <公开 注释 = "用法：把XUI简易指示器的字体设为给定值。 参数：值1=字体类。 返回：无。 原方法：XUI简易指示器.setTypeface()">
+    参数 值1 <类型 = 字体类>
+    {
+        @ @m<RUN_UI_ACTION> (GetEasyIndicator ().setTypeface (@<值1>))
+    }
+
+}
+
+类 XUI多标签控件 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.tabbar.MultiTabControlView)."
+        @文档 = "category = \"XUI.标签栏\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.tabbar.MultiTabControlView\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.tcv_textSize\n        shown_name = \"文字字体的大小\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.tcv_unselectedTextColor\n        shown_name = \"没选中的文字颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.tcv_selectedTextColor\n        shown_name = \"选中的文字颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.tcv_unselectedColor\n        shown_name = \"没选中的背景颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.tcv_selectedColor\n        shown_name = \"选中的背景颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.tcv_strokeWidth\n        shown_name = \"边框宽度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.tcv_item_padding\n        shown_name = \"选项卡间的padding\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.tcv_item_padding_horizontal\n        shown_name = \"选项卡水平间的padding\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.tcv_item_padding_vertical\n        shown_name = \"选项卡垂直间的padding\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.tcv_equalWidth\n        shown_name = \"是否等宽显示\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.tcv_stretch\n        shown_name = \"是否伸展开\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.tcv_defaultSelection\n        shown_name = \"默认选中项的索引\"\n        data_type = int\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI多标签控件, MultiTabControlView, com.xuexiang.xui.widget.tabbar.MultiTabControlView)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetMultiTabControlView ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI多标签控件的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI多标签控件.getAlpha()">
+    {
+        @ (double)@sn<this>.GetMultiTabControlView ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI多标签控件的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI多标签控件.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMultiTabControlView ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI多标签控件的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI多标签控件.isEnabled()">
+    {
+        @ @sn<this>.GetMultiTabControlView ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI多标签控件的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI多标签控件.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetMultiTabControlView ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI多标签控件的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI多标签控件.isClickable()">
+    {
+        @ @sn<this>.GetMultiTabControlView ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI多标签控件的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI多标签控件.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetMultiTabControlView ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI多标签控件的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI多标签控件.getElevation()">
+    {
+        @ (double)@sn<this>.GetMultiTabControlView ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI多标签控件的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI多标签控件.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMultiTabControlView ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI多标签控件的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI多标签控件.getMinimumHeight()">
+    {
+        @ @sn<this>.GetMultiTabControlView ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI多标签控件的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI多标签控件.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMultiTabControlView ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI多标签控件的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI多标签控件.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMultiTabControlView ().setBackgroundColor (@<新值>))
+    }
+
+    方法 是否已勾选 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断XUI多标签控件是否已勾选。 参数：值1=整数。 返回：逻辑型。 原方法：XUI多标签控件.isChecked()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @sn<this>.GetMultiTabControlView ().isChecked (@<值1>)
+    }
+
+    方法 设置是否已勾选 <公开 注释 = "用法：把XUI多标签控件的是否已勾选设为给定值。 参数：值1=整数、值2=真/假。 返回：无。 原方法：XUI多标签控件.setIsChecked()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetMultiTabControlView ().setIsChecked (@<值1>, @<值2>))
+    }
+
+    方法 设置项集 <公开 注释 = "用法：把XUI多标签控件的项集设为给定值。 参数：值1=文本型、值2=文本型。 返回：无。 原方法：XUI多标签控件.setItems()">
+    参数 值1 <类型 = "文本型 []">
+    参数 值2 <类型 = "文本型 []">
+    {
+        @ @m<RUN_UI_ACTION> (GetMultiTabControlView ().setItems (@<值1>, @<值2>))
+    }
+
+    方法 设置选择 <公开 注释 = "用法：把XUI多标签控件的选择设为给定值。 参数：值1=文本。 返回：无。 原方法：XUI多标签控件.setSelection()">
+    参数 值1 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetMultiTabControlView ().setSelection (@<值1>))
+    }
+
+    方法 设置选择状态 <公开 注释 = "用法：把XUI多标签控件的选择状态设为给定值。 参数：值1=文本、值2=真/假。 返回：无。 原方法：XUI多标签控件.setSelectionStatus()">
+    参数 值1 <类型 = 文本型>
+    参数 值2 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetMultiTabControlView ().setSelectionStatus (@<值1>, @<值2>))
+    }
+
+    方法 设置选择状态按标题 <公开 注释 = "用法：把XUI多标签控件的选择状态按标题设为给定值。 参数：值1=文本、值2=真/假。 返回：无。 原方法：XUI多标签控件.setSelectionStatusByTitle()">
+    参数 值1 <类型 = 文本型>
+    参数 值2 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetMultiTabControlView ().setSelectionStatusByTitle (@<值1>, @<值2>))
+    }
+
+    方法 设置选择状态按标题_2 <公开 注释 = "用法：把XUI多标签控件的选择状态按标题_2设为给定值。 参数：值1=文本、值2=真/假、值3=真/假。 返回：无。 原方法：XUI多标签控件.setSelectionStatusByTitle()">
+    参数 值1 <类型 = 文本型>
+    参数 值2 <类型 = 逻辑型>
+    参数 值3 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetMultiTabControlView ().setSelectionStatusByTitle (@<值1>, @<值2>, @<值3>))
+    }
+
+    方法 设置颜色组 <公开 注释 = "用法：把XUI多标签控件的颜色组设为给定值。 参数：值1=整数、值2=整数。 返回：无。 原方法：XUI多标签控件.setColors()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMultiTabControlView ().setColors (@<值1>, @<值2>))
+    }
+
+    方法 设置颜色组_2 <公开 注释 = "用法：把XUI多标签控件的颜色组_2设为给定值。 参数：值1=整数、值2=整数、值3=整数、值4=整数。 返回：无。 原方法：XUI多标签控件.setColors()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMultiTabControlView ().setColors (@<值1>, @<值2>, @<值3>, @<值4>))
+    }
+
+    方法 设置相等宽度 <公开 注释 = "用法：把XUI多标签控件的相等宽度设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI多标签控件.setEqualWidth()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetMultiTabControlView ().setEqualWidth (@<值1>))
+    }
+
+    方法 设置拉伸 <公开 注释 = "用法：把XUI多标签控件的拉伸设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI多标签控件.setStretch()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetMultiTabControlView ().setStretch (@<值1>))
+    }
+
+    方法 设置字体 <公开 注释 = "用法：把XUI多标签控件的字体设为给定值。 参数：值1=字体类。 返回：无。 原方法：XUI多标签控件.setTypeface()">
+    参数 值1 <类型 = 字体类>
+    {
+        @ @m<RUN_UI_ACTION> (GetMultiTabControlView ().setTypeface (@<值1>))
+    }
+
+}
+
+类 XUI标签控件视图 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.tabbar.TabControlView)."
+        @文档 = "category = \"XUI.标签栏\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.tabbar.TabControlView\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.tcv_textSize\n        shown_name = \"文字字体的大小\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.tcv_unselectedTextColor\n        shown_name = \"没选中的文字颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.tcv_selectedTextColor\n        shown_name = \"选中的文字颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.tcv_unselectedColor\n        shown_name = \"没选中的背景颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.tcv_selectedColor\n        shown_name = \"选中的背景颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.tcv_strokeWidth\n        shown_name = \"边框宽度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.tcv_item_padding\n        shown_name = \"选项卡间的padding\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.tcv_item_padding_horizontal\n        shown_name = \"选项卡水平间的padding\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.tcv_item_padding_vertical\n        shown_name = \"选项卡垂直间的padding\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.tcv_equalWidth\n        shown_name = \"是否等宽显示\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.tcv_stretch\n        shown_name = \"是否伸展开\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.tcv_defaultSelection\n        shown_name = \"默认选中项的索引\"\n        data_type = int\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI标签控件视图, TabControlView, com.xuexiang.xui.widget.tabbar.TabControlView)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetTabControlView ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI标签控件视图的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI标签控件视图.getAlpha()">
+    {
+        @ (double)@sn<this>.GetTabControlView ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI标签控件视图的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI标签控件视图.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetTabControlView ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI标签控件视图的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI标签控件视图.isEnabled()">
+    {
+        @ @sn<this>.GetTabControlView ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI标签控件视图的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI标签控件视图.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetTabControlView ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI标签控件视图的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI标签控件视图.isClickable()">
+    {
+        @ @sn<this>.GetTabControlView ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI标签控件视图的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI标签控件视图.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetTabControlView ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI标签控件视图的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI标签控件视图.getElevation()">
+    {
+        @ (double)@sn<this>.GetTabControlView ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI标签控件视图的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI标签控件视图.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetTabControlView ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI标签控件视图的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI标签控件视图.getMinimumHeight()">
+    {
+        @ @sn<this>.GetTabControlView ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI标签控件视图的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI标签控件视图.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetTabControlView ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI标签控件视图的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI标签控件视图.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetTabControlView ().setBackgroundColor (@<新值>))
+    }
+
+    方法 取已勾选带标识 <公开 类型 = "文本型 []" @嵌入式方法 = "" 注释 = "用法：读出XUI标签控件视图的已勾选带标识。 参数：无。 返回：无。 原方法：XUI标签控件视图.getCheckedWithIdentifier()">
+    {
+        @ @sn<this>.GetTabControlView ().getCheckedWithIdentifier ()
+    }
+
+    方法 取已勾选 <公开 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读出XUI标签控件视图的已勾选。 参数：无。 返回：文本型。 原方法：XUI标签控件视图.getChecked()">
+    {
+        @ @sn<this>.GetTabControlView ().getChecked ()
+    }
+
+    方法 设置项集 <公开 注释 = "用法：把XUI标签控件视图的项集设为给定值。 参数：值1=文本型、值2=文本型。 返回：无。 原方法：XUI标签控件视图.setItems()">
+    参数 值1 <类型 = "文本型 []">
+    参数 值2 <类型 = "文本型 []">
+    {
+        @ @m<RUN_UI_ACTION> (GetTabControlView ().setItems (@<值1>, @<值2>))
+    }
+
+    方法 设置项集_2 <公开 注释 = "用法：把XUI标签控件视图的项集_2设为给定值。 参数：值1=文本型、值2=文本型、值3=整数。 返回：无。 原方法：XUI标签控件视图.setItems()">
+    参数 值1 <类型 = "文本型 []">
+    参数 值2 <类型 = "文本型 []">
+    参数 值3 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetTabControlView ().setItems (@<值1>, @<值2>, @<值3>))
+    }
+
+    方法 设置默认选择 <公开 注释 = "用法：把XUI标签控件视图的默认选择设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI标签控件视图.setDefaultSelection()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetTabControlView ().setDefaultSelection (@<值1>))
+    }
+
+    方法 设置选择 <公开 注释 = "用法：把XUI标签控件视图的选择设为给定值。 参数：值1=文本。 返回：无。 原方法：XUI标签控件视图.setSelection()">
+    参数 值1 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetTabControlView ().setSelection (@<值1>))
+    }
+
+    方法 设置选择_2 <公开 注释 = "用法：把XUI标签控件视图的选择_2设为给定值。 参数：值1=文本、值2=真/假。 返回：无。 原方法：XUI标签控件视图.setSelection()">
+    参数 值1 <类型 = 文本型>
+    参数 值2 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetTabControlView ().setSelection (@<值1>, @<值2>))
+    }
+
+    方法 设置选择标题 <公开 注释 = "用法：把XUI标签控件视图的选择标题设为给定值。 参数：值1=文本。 返回：无。 原方法：XUI标签控件视图.setSelectionTitle()">
+    参数 值1 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetTabControlView ().setSelectionTitle (@<值1>))
+    }
+
+    方法 设置选择标题_2 <公开 注释 = "用法：把XUI标签控件视图的选择标题_2设为给定值。 参数：值1=文本、值2=真/假。 返回：无。 原方法：XUI标签控件视图.setSelectionTitle()">
+    参数 值1 <类型 = 文本型>
+    参数 值2 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetTabControlView ().setSelectionTitle (@<值1>, @<值2>))
+    }
+
+    方法 设置颜色组 <公开 注释 = "用法：把XUI标签控件视图的颜色组设为给定值。 参数：值1=整数、值2=整数。 返回：无。 原方法：XUI标签控件视图.setColors()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetTabControlView ().setColors (@<值1>, @<值2>))
+    }
+
+    方法 设置颜色组_2 <公开 注释 = "用法：把XUI标签控件视图的颜色组_2设为给定值。 参数：值1=整数、值2=整数、值3=整数、值4=整数。 返回：无。 原方法：XUI标签控件视图.setColors()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetTabControlView ().setColors (@<值1>, @<值2>, @<值3>, @<值4>))
+    }
+
+    方法 设置相等宽度 <公开 注释 = "用法：把XUI标签控件视图的相等宽度设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI标签控件视图.setEqualWidth()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetTabControlView ().setEqualWidth (@<值1>))
+    }
+
+    方法 设置拉伸 <公开 注释 = "用法：把XUI标签控件视图的拉伸设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI标签控件视图.setStretch()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetTabControlView ().setStretch (@<值1>))
+    }
+
+    方法 设置字体 <公开 注释 = "用法：把XUI标签控件视图的字体设为给定值。 参数：值1=字体类。 返回：无。 原方法：XUI标签控件视图.setTypeface()">
+    参数 值1 <类型 = 字体类>
+    {
+        @ @m<RUN_UI_ACTION> (GetTabControlView ().setTypeface (@<值1>))
+    }
+
+}
+
+类 XUI分段标签 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.tabbar.TabSegment)."
+        @文档 = "category = \"XUI.标签栏\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.tabbar.TabSegment\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.ts_selected_color\n        shown_name = \"tab选中时的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.ts_normal_color\n        shown_name = \"tab未选中时的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.ts_indicator_height\n        shown_name = \"指示器的高度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.ts_has_indicator\n        shown_name = \"是否显示指示器\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.ts_indicator_top\n        shown_name = \"指示器是否在顶端\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.ts_mode\n        shown_name = \"指示器的模式\"\n        data_type = string\n        detail_type = enum\n        item\n        {\n            name = scrollable\n            shown_name = \"scrollable\"\n        }\n        item\n        {\n            name = fixed\n            shown_name = \"fixed\"\n        }\n    }\n    attr\n    {\n        name = app.ts_space\n        shown_name = \"tab间的空隙\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.ts_icon_position\n        shown_name = \"图标的位置\"\n        data_type = string\n        detail_type = enum\n        item\n        {\n            name = left\n            shown_name = \"left\"\n        }\n        item\n        {\n            name = top\n            shown_name = \"top\"\n        }\n        item\n        {\n            name = right\n            shown_name = \"right\"\n        }\n        item\n        {\n            name = bottom\n            shown_name = \"bottom\"\n        }\n    }\n    attr\n    {\n        name = app.ts_typeface_provider\n        shown_name = \"文字的样式\"\n        data_type = string\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI分段标签, TabSegment, com.xuexiang.xui.widget.tabbar.TabSegment)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetTabSegment ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI分段标签的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI分段标签.getAlpha()">
+    {
+        @ (double)@sn<this>.GetTabSegment ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI分段标签的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI分段标签.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetTabSegment ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI分段标签的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI分段标签.isEnabled()">
+    {
+        @ @sn<this>.GetTabSegment ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI分段标签的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI分段标签.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetTabSegment ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI分段标签的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI分段标签.isClickable()">
+    {
+        @ @sn<this>.GetTabSegment ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI分段标签的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI分段标签.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetTabSegment ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI分段标签的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI分段标签.getElevation()">
+    {
+        @ (double)@sn<this>.GetTabSegment ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI分段标签的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI分段标签.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetTabSegment ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI分段标签的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI分段标签.getMinimumHeight()">
+    {
+        @ @sn<this>.GetTabSegment ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI分段标签的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI分段标签.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetTabSegment ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI分段标签的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI分段标签.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetTabSegment ().setBackgroundColor (@<新值>))
+    }
+
+    方法 设置标签页文本大小 <公开 注释 = "用法：把XUI分段标签的标签页文本大小设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI分段标签.setTabTextSize()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetTabSegment ().setTabTextSize (@<值1>))
+    }
+
+    方法 重置 <公开 注释 = "用法：把XUI分段标签恢复到默认状态。 参数：无。 返回：无。 原方法：XUI分段标签.reset()">
+    {
+        @ @m<RUN_UI_ACTION> (GetTabSegment ().reset ())
+    }
+
+    方法 通知数据已改变 <公开 注释 = "用法：通知XUI分段标签数据已变化, 需要重绘。 参数：无。 返回：无。 原方法：XUI分段标签.notifyDataChanged()">
+    {
+        @ @m<RUN_UI_ACTION> (GetTabSegment ().notifyDataChanged ())
+    }
+
+    方法 设置项间距内滚动模式 <公开 注释 = "用法：把XUI分段标签的项间距内滚动模式设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI分段标签.setItemSpaceInScrollMode()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetTabSegment ().setItemSpaceInScrollMode (@<值1>))
+    }
+
+    方法 设置指示器图形 <公开 注释 = "用法：把XUI分段标签的指示器图形设为给定值。 参数：值1=可绘制对象类。 返回：无。 原方法：XUI分段标签.setIndicatorDrawable()">
+    参数 值1 <类型 = 可绘制对象类>
+    {
+        @ @m<RUN_UI_ACTION> (GetTabSegment ().setIndicatorDrawable (@<值1>))
+    }
+
+    方法 设置指示器宽度调整内容 <公开 注释 = "用法：把XUI分段标签的指示器宽度调整内容设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI分段标签.setIndicatorWidthAdjustContent()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetTabSegment ().setIndicatorWidthAdjustContent (@<值1>))
+    }
+
+    方法 设置指示器位置 <公开 注释 = "用法：把XUI分段标签的指示器位置设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI分段标签.setIndicatorPosition()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetTabSegment ().setIndicatorPosition (@<值1>))
+    }
+
+    方法 设置是否含指示器 <公开 注释 = "用法：把XUI分段标签的是否含指示器设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI分段标签.setHasIndicator()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetTabSegment ().setHasIndicator (@<值1>))
+    }
+
+    方法 取模式 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI分段标签的模式。 参数：无。 返回：整数。 原方法：XUI分段标签.getMode()">
+    {
+        @ @sn<this>.GetTabSegment ().getMode ()
+    }
+
+    方法 设置模式 <公开 注释 = "用法：把XUI分段标签的模式设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI分段标签.setMode()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetTabSegment ().setMode (@<值1>))
+    }
+
+    方法 清空响应标签页选中监听器组 <公开 注释 = "用法：清空XUI分段标签的响应标签页选中监听器组。 参数：无。 返回：无。 原方法：XUI分段标签.clearOnTabSelectedListeners()">
+    {
+        @ @m<RUN_UI_ACTION> (GetTabSegment ().clearOnTabSelectedListeners ())
+    }
+
+    方法 设置默认常规颜色 <公开 注释 = "用法：把XUI分段标签的默认常规颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI分段标签.setDefaultNormalColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetTabSegment ().setDefaultNormalColor (@<值1>))
+    }
+
+    方法 设置默认选中颜色 <公开 注释 = "用法：把XUI分段标签的默认选中颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI分段标签.setDefaultSelectedColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetTabSegment ().setDefaultSelectedColor (@<值1>))
+    }
+
+    方法 设置默认标签页图标位置 <公开 注释 = "用法：把XUI分段标签的默认标签页图标位置设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI分段标签.setDefaultTabIconPosition()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetTabSegment ().setDefaultTabIconPosition (@<值1>))
+    }
+
+    方法 选择标签页 <公开 注释 = "用法：在XUI分段标签中选择标签页。 参数：值1=整数。 返回：无。 原方法：XUI分段标签.selectTab()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetTabSegment ().selectTab (@<值1>))
+    }
+
+    方法 选择标签页_2 <公开 注释 = "用法：在XUI分段标签中选择标签页_2。 参数：值1=整数、值2=真/假、值3=真/假。 返回：无。 原方法：XUI分段标签.selectTab()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 逻辑型>
+    参数 值3 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetTabSegment ().selectTab (@<值1>, @<值2>, @<值3>))
+    }
+
+    方法 更新指示器位置 <公开 注释 = "用法：用传入值刷新XUI分段标签的指示器位置。 参数：值1=整数、值2=小数。 返回：无。 原方法：XUI分段标签.updateIndicatorPosition()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetTabSegment ().updateIndicatorPosition (@<值1>, (float) @<值2>))
+    }
+
+    方法 更新标签页文本 <公开 注释 = "用法：用传入值刷新XUI分段标签的标签页文本。 参数：值1=整数、值2=文本。 返回：无。 原方法：XUI分段标签.updateTabText()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetTabSegment ().updateTabText (@<值1>, @<值2>))
+    }
+
+    方法 取选中索引 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI分段标签的选中索引。 参数：无。 返回：整数。 原方法：XUI分段标签.getSelectedIndex()">
+    {
+        @ @sn<this>.GetTabSegment ().getSelectedIndex ()
+    }
+
+    方法 显示符号数量视图 <公开 注释 = "用法：让XUI分段标签显示出来。 参数：值1=安卓环境、值2=整数、值3=整数。 返回：无。 原方法：XUI分段标签.showSignCountView()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetTabSegment ().showSignCountView (@<值1>, @<值2>, @<值3>))
+    }
+
+    方法 隐藏符号数量视图 <公开 注释 = "用法：让XUI分段标签不再显示。 参数：值1=整数。 返回：无。 原方法：XUI分段标签.hideSignCountView()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetTabSegment ().hideSignCountView (@<值1>))
+    }
+
+    方法 取符号数量 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI分段标签的符号数量。 参数：值1=整数。 返回：整数。 原方法：XUI分段标签.getSignCount()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @sn<this>.GetTabSegment ().getSignCount (@<值1>)
+    }
+
+}
+
+类 XUI垂直标签布局 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.tabbar.VerticalTabLayout)."
+        @文档 = "category = \"XUI.标签栏\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.tabbar.VerticalTabLayout\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.vtl_indicator_color\n        shown_name = \"指示器的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.vtl_indicator_width\n        shown_name = \"指示器的宽度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.vtl_indicator_corners\n        shown_name = \"指示器圆角角度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.vtl_indicator_gravity\n        shown_name = \"指示器的对齐方式\"\n        data_type = string\n        detail_type = enum\n        item\n        {\n            name = left\n            shown_name = \"left\"\n        }\n        item\n        {\n            name = right\n            shown_name = \"right\"\n        }\n        item\n        {\n            name = fill\n            shown_name = \"fill\"\n        }\n    }\n    attr\n    {\n        name = app.vtl_tab_margin\n        shown_name = \"tab间的空隙\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.vtl_tab_mode\n        shown_name = \"tab的模式\"\n        data_type = string\n        detail_type = enum\n        item\n        {\n            name = fixed\n            shown_name = \"fixed\"\n        }\n        item\n        {\n            name = scrollable\n            shown_name = \"scrollable\"\n        }\n    }\n    attr\n    {\n        name = app.vtl_tab_height\n        shown_name = \"tab的高度\"\n        data_type = double\n        detail_type = dim\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI垂直标签布局, VerticalTabLayout, com.xuexiang.xui.widget.tabbar.VerticalTabLayout)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetVerticalTabLayout ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI垂直标签布局的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI垂直标签布局.getAlpha()">
+    {
+        @ (double)@sn<this>.GetVerticalTabLayout ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI垂直标签布局的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI垂直标签布局.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetVerticalTabLayout ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI垂直标签布局的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI垂直标签布局.isEnabled()">
+    {
+        @ @sn<this>.GetVerticalTabLayout ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI垂直标签布局的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI垂直标签布局.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetVerticalTabLayout ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI垂直标签布局的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI垂直标签布局.isClickable()">
+    {
+        @ @sn<this>.GetVerticalTabLayout ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI垂直标签布局的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI垂直标签布局.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetVerticalTabLayout ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI垂直标签布局的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI垂直标签布局.getElevation()">
+    {
+        @ (double)@sn<this>.GetVerticalTabLayout ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI垂直标签布局的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI垂直标签布局.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetVerticalTabLayout ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI垂直标签布局的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI垂直标签布局.getMinimumHeight()">
+    {
+        @ @sn<this>.GetVerticalTabLayout ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI垂直标签布局的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI垂直标签布局.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetVerticalTabLayout ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI垂直标签布局的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI垂直标签布局.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetVerticalTabLayout ().setBackgroundColor (@<新值>))
+    }
+
+    方法 移除全部标签页组 <公开 注释 = "用法：从XUI垂直标签布局移除全部标签页组。 参数：无。 返回：无。 原方法：XUI垂直标签布局.removeAllTabs()">
+    {
+        @ @m<RUN_UI_ACTION> (GetVerticalTabLayout ().removeAllTabs ())
+    }
+
+    方法 取标签页数量 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI垂直标签布局的标签页数量。 参数：无。 返回：整数。 原方法：XUI垂直标签布局.getTabCount()">
+    {
+        @ @sn<this>.GetVerticalTabLayout ().getTabCount ()
+    }
+
+    方法 取选中标签页位置 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI垂直标签布局的选中标签页位置。 参数：无。 返回：整数。 原方法：XUI垂直标签布局.getSelectedTabPosition()">
+    {
+        @ @sn<this>.GetVerticalTabLayout ().getSelectedTabPosition ()
+    }
+
+    方法 设置标签页选中 <公开 注释 = "用法：把XUI垂直标签布局的标签页选中设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI垂直标签布局.setTabSelected()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetVerticalTabLayout ().setTabSelected (@<值1>))
+    }
+
+    方法 设置标签页角标 <公开 注释 = "用法：把XUI垂直标签布局的标签页角标设为给定值。 参数：值1=整数、值2=整数。 返回：无。 原方法：XUI垂直标签布局.setTabBadge()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetVerticalTabLayout ().setTabBadge (@<值1>, @<值2>))
+    }
+
+    方法 设置标签页角标_2 <公开 注释 = "用法：把XUI垂直标签布局的标签页角标_2设为给定值。 参数：值1=整数、值2=文本。 返回：无。 原方法：XUI垂直标签布局.setTabBadge()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetVerticalTabLayout ().setTabBadge (@<值1>, @<值2>))
+    }
+
+    方法 设置标签页模式 <公开 注释 = "用法：把XUI垂直标签布局的标签页模式设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI垂直标签布局.setTabMode()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetVerticalTabLayout ().setTabMode (@<值1>))
+    }
+
+    方法 设置标签页外边距 <公开 注释 = "用法：把XUI垂直标签布局的标签页外边距设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI垂直标签布局.setTabMargin()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetVerticalTabLayout ().setTabMargin (@<值1>))
+    }
+
+    方法 设置标签页高度 <公开 注释 = "用法：把XUI垂直标签布局的标签页高度设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI垂直标签布局.setTabHeight()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetVerticalTabLayout ().setTabHeight (@<值1>))
+    }
+
+    方法 设置指示器颜色 <公开 注释 = "用法：把XUI垂直标签布局的指示器颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI垂直标签布局.setIndicatorColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetVerticalTabLayout ().setIndicatorColor (@<值1>))
+    }
+
+    方法 设置指示器宽度 <公开 注释 = "用法：把XUI垂直标签布局的指示器宽度设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI垂直标签布局.setIndicatorWidth()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetVerticalTabLayout ().setIndicatorWidth (@<值1>))
+    }
+
+    方法 设置指示器四角 <公开 注释 = "用法：把XUI垂直标签布局的指示器四角设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI垂直标签布局.setIndicatorCorners()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetVerticalTabLayout ().setIndicatorCorners (@<值1>))
+    }
+
+    方法 设置指示器对齐方式 <公开 注释 = "用法：把XUI垂直标签布局的指示器对齐方式设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI垂直标签布局.setIndicatorGravity()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetVerticalTabLayout ().setIndicatorGravity (@<值1>))
+    }
+
+}

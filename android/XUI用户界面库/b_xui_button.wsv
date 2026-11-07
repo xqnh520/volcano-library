@@ -1,0 +1,2264 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.安卓.XUI <注释 = "XUI 安卓 UI 工具库封装" @文档 = "category = \"XUI\"">
+
+
+类 XUI按钮视图 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.button.ButtonView)."
+        @文档 = "category = \"XUI.按钮\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.button.ButtonView\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.textSolidColor\n        shown_name = \"按钮的填充颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.textSelectedSolidColor\n        shown_name = \"按钮的选中颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.textStrokeColor\n        shown_name = \"按钮的边框颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.textStrokeWidth\n        shown_name = \"按钮的边框的宽度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.textRadius\n        shown_name = \"按钮的边角角度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.textLeftTopRadius\n        shown_name = \"textLeftTopRadius\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.textLeftBottomRadius\n        shown_name = \"textLeftBottomRadi\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.textRightTopRadius\n        shown_name = \"textRightTopRadius\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.textRightBottomRadius\n        shown_name = \"textRightBottomRad\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.textDrawable\n        shown_name = \"按钮的图标\"\n        data_type = string\n        detail_type = drawable_res_file\n    }\n    attr\n    {\n        name = app.textNormalTextColor\n        shown_name = \"按钮的文字的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.textSelectedTextColor\n        shown_name = \"按钮的文字点击时的颜色\"\n        data_type = string\n        detail_type = color\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI按钮视图, ButtonView, com.xuexiang.xui.widget.button.ButtonView)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetButtonView ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI按钮视图的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI按钮视图.getAlpha()">
+    {
+        @ (double)@sn<this>.GetButtonView ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI按钮视图的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI按钮视图.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetButtonView ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI按钮视图的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI按钮视图.isEnabled()">
+    {
+        @ @sn<this>.GetButtonView ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI按钮视图的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI按钮视图.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetButtonView ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI按钮视图的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI按钮视图.isClickable()">
+    {
+        @ @sn<this>.GetButtonView ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI按钮视图的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI按钮视图.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetButtonView ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI按钮视图的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI按钮视图.getElevation()">
+    {
+        @ (double)@sn<this>.GetButtonView ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI按钮视图的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI按钮视图.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetButtonView ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI按钮视图的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI按钮视图.getMinimumHeight()">
+    {
+        @ @sn<this>.GetButtonView ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI按钮视图的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI按钮视图.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetButtonView ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI按钮视图的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI按钮视图.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetButtonView ().setBackgroundColor (@<新值>))
+    }
+
+    方法 XUI文本 <公开 属性读 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读取XUI按钮视图的XUI文本当前值。 参数：无。 返回：文本型。 原方法：XUI按钮视图.getText()">
+    {
+        @ java.lang.String.valueOf (@sn<this>.GetButtonView ().getText ())
+    }
+
+    方法 XUI文本 <公开 属性写 注释 = "用法：设置XUI按钮视图的XUI文本, 传入新值后立刻生效。 参数：新值=文本。 返回：无。 原方法：XUI按钮视图.setText()">
+    参数 新值 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetButtonView ().setText (@<新值>))
+    }
+
+    方法 XUI文字颜色 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI按钮视图的XUI文字颜色当前值。 参数：无。 返回：整数。 原方法：XUI按钮视图.getCurrentTextColor()">
+    {
+        @ @sn<this>.GetButtonView ().getCurrentTextColor ()
+    }
+
+    方法 XUI文字颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI按钮视图的XUI文字颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI按钮视图.setTextColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetButtonView ().setTextColor (@<新值>))
+    }
+
+    方法 XUI文字大小 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI按钮视图的XUI文字大小当前值。 参数：无。 返回：小数。 原方法：XUI按钮视图.getTextSize()">
+    {
+        @ (double)@sn<this>.GetButtonView ().getTextSize ()
+    }
+
+    方法 XUI文字大小 <公开 属性写 注释 = "用法：设置XUI按钮视图的XUI文字大小, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI按钮视图.setTextSize()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetButtonView ().setTextSize ((float) @<新值>))
+    }
+
+    方法 XUI提示文字 <公开 属性读 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读取XUI按钮视图的XUI提示文字当前值。 参数：无。 返回：文本型。 原方法：XUI按钮视图.getHint()">
+    {
+        @ java.lang.String.valueOf (@sn<this>.GetButtonView ().getHint ())
+    }
+
+    方法 XUI提示文字 <公开 属性写 注释 = "用法：设置XUI按钮视图的XUI提示文字, 传入新值后立刻生效。 参数：新值=文本。 返回：无。 原方法：XUI按钮视图.setHint()">
+    参数 新值 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetButtonView ().setHint (@<新值>))
+    }
+
+    方法 XUI最大行数 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI按钮视图的XUI最大行数当前值。 参数：无。 返回：整数。 原方法：XUI按钮视图.getMaxLines()">
+    {
+        @ @sn<this>.GetButtonView ().getMaxLines ()
+    }
+
+    方法 XUI最大行数 <公开 属性写 注释 = "用法：设置XUI按钮视图的XUI最大行数, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI按钮视图.setMaxLines()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetButtonView ().setMaxLines (@<新值>))
+    }
+
+    方法 XUI单行 <公开 属性写 注释 = "用法：设置XUI按钮视图的XUI单行, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI按钮视图.setSingleLine()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetButtonView ().setSingleLine (@<新值>))
+    }
+
+    方法 设置文本图形 <公开 注释 = "用法：把XUI按钮视图的文本图形设为给定值。 参数：值1=整数、值2=整数。 返回：无。 原方法：XUI按钮视图.setTextDrawable()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetButtonView ().setTextDrawable (@<值1>, @<值2>))
+    }
+
+    方法 设置文本图形_2 <公开 注释 = "用法：把XUI按钮视图的文本图形_2设为给定值。 参数：值1=可绘制对象类、值2=整数。 返回：无。 原方法：XUI按钮视图.setTextDrawable()">
+    参数 值1 <类型 = 可绘制对象类>
+    参数 值2 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetButtonView ().setTextDrawable (@<值1>, @<值2>))
+    }
+
+    方法 设置实心颜色 <公开 注释 = "用法：把XUI按钮视图的实心颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI按钮视图.setSolidColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetButtonView ().setSolidColor (@<值1>))
+    }
+
+    方法 设置圆角 <公开 注释 = "用法：把XUI按钮视图的圆角设为给定值。 参数：值1=整数、值2=整数、值3=整数、值4=整数。 返回：无。 原方法：XUI按钮视图.setRadius()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetButtonView ().setRadius (@<值1>, @<值2>, @<值3>, @<值4>))
+    }
+
+    方法 设置描边颜色与宽度 <公开 注释 = "用法：把XUI按钮视图的描边颜色与宽度设为给定值。 参数：值1=整数、值2=整数。 返回：无。 原方法：XUI按钮视图.setStrokeColorAndWidth()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetButtonView ().setStrokeColorAndWidth (@<值1>, @<值2>))
+    }
+
+    方法 设置选中文本颜色 <公开 注释 = "用法：把XUI按钮视图的选中文本颜色设为给定值。 参数：值1=整数、值2=整数。 返回：无。 原方法：XUI按钮视图.setSelectedTextColor()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetButtonView ().setSelectedTextColor (@<值1>, @<值2>))
+    }
+
+    方法 设置选中实心颜色 <公开 注释 = "用法：把XUI按钮视图的选中实心颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI按钮视图.setSelectedSolidColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetButtonView ().setSelectedSolidColor (@<值1>))
+    }
+
+}
+
+类 XUI倒计时按钮 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.button.CountDownButton)."
+        @文档 = "category = \"XUI.按钮\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.button.CountDownButton\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.cdbt_countDownFormat\n        shown_name = \"倒计时过程中按钮文本的格式\"\n        data_type = string\n    }\n    attr\n    {\n        name = app.cdbt_countDown\n        shown_name = \"倒计时总时长\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.cdbt_countDownInterval\n        shown_name = \"倒计时间隔\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.cdbt_enableCountDown\n        shown_name = \"倒计时是否可用\"\n        data_type = boolean\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI倒计时按钮, CountDownButton, com.xuexiang.xui.widget.button.CountDownButton)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetCountDownButton ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI倒计时按钮的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI倒计时按钮.getAlpha()">
+    {
+        @ (double)@sn<this>.GetCountDownButton ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI倒计时按钮的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI倒计时按钮.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCountDownButton ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI倒计时按钮的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI倒计时按钮.isEnabled()">
+    {
+        @ @sn<this>.GetCountDownButton ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI倒计时按钮的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI倒计时按钮.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetCountDownButton ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI倒计时按钮的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI倒计时按钮.isClickable()">
+    {
+        @ @sn<this>.GetCountDownButton ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI倒计时按钮的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI倒计时按钮.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetCountDownButton ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI倒计时按钮的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI倒计时按钮.getElevation()">
+    {
+        @ (double)@sn<this>.GetCountDownButton ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI倒计时按钮的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI倒计时按钮.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCountDownButton ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI倒计时按钮的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI倒计时按钮.getMinimumHeight()">
+    {
+        @ @sn<this>.GetCountDownButton ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI倒计时按钮的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI倒计时按钮.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCountDownButton ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI倒计时按钮的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI倒计时按钮.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCountDownButton ().setBackgroundColor (@<新值>))
+    }
+
+    方法 XUI文本 <公开 属性读 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读取XUI倒计时按钮的XUI文本当前值。 参数：无。 返回：文本型。 原方法：XUI倒计时按钮.getText()">
+    {
+        @ java.lang.String.valueOf (@sn<this>.GetCountDownButton ().getText ())
+    }
+
+    方法 XUI文本 <公开 属性写 注释 = "用法：设置XUI倒计时按钮的XUI文本, 传入新值后立刻生效。 参数：新值=文本。 返回：无。 原方法：XUI倒计时按钮.setText()">
+    参数 新值 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetCountDownButton ().setText (@<新值>))
+    }
+
+    方法 XUI文字颜色 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI倒计时按钮的XUI文字颜色当前值。 参数：无。 返回：整数。 原方法：XUI倒计时按钮.getCurrentTextColor()">
+    {
+        @ @sn<this>.GetCountDownButton ().getCurrentTextColor ()
+    }
+
+    方法 XUI文字颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI倒计时按钮的XUI文字颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI倒计时按钮.setTextColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCountDownButton ().setTextColor (@<新值>))
+    }
+
+    方法 XUI文字大小 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI倒计时按钮的XUI文字大小当前值。 参数：无。 返回：小数。 原方法：XUI倒计时按钮.getTextSize()">
+    {
+        @ (double)@sn<this>.GetCountDownButton ().getTextSize ()
+    }
+
+    方法 XUI文字大小 <公开 属性写 注释 = "用法：设置XUI倒计时按钮的XUI文字大小, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI倒计时按钮.setTextSize()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCountDownButton ().setTextSize ((float) @<新值>))
+    }
+
+    方法 XUI提示文字 <公开 属性读 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读取XUI倒计时按钮的XUI提示文字当前值。 参数：无。 返回：文本型。 原方法：XUI倒计时按钮.getHint()">
+    {
+        @ java.lang.String.valueOf (@sn<this>.GetCountDownButton ().getHint ())
+    }
+
+    方法 XUI提示文字 <公开 属性写 注释 = "用法：设置XUI倒计时按钮的XUI提示文字, 传入新值后立刻生效。 参数：新值=文本。 返回：无。 原方法：XUI倒计时按钮.setHint()">
+    参数 新值 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetCountDownButton ().setHint (@<新值>))
+    }
+
+    方法 XUI最大行数 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI倒计时按钮的XUI最大行数当前值。 参数：无。 返回：整数。 原方法：XUI倒计时按钮.getMaxLines()">
+    {
+        @ @sn<this>.GetCountDownButton ().getMaxLines ()
+    }
+
+    方法 XUI最大行数 <公开 属性写 注释 = "用法：设置XUI倒计时按钮的XUI最大行数, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI倒计时按钮.setMaxLines()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCountDownButton ().setMaxLines (@<新值>))
+    }
+
+    方法 XUI单行 <公开 属性写 注释 = "用法：设置XUI倒计时按钮的XUI单行, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI倒计时按钮.setSingleLine()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetCountDownButton ().setSingleLine (@<新值>))
+    }
+
+    方法 设置启用数量按下 <公开 注释 = "用法：把XUI倒计时按钮的启用数量按下设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI倒计时按钮.setEnableCountDown()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetCountDownButton ().setEnableCountDown (@<值1>))
+    }
+
+    方法 设置数量按下格式化 <公开 注释 = "用法：把XUI倒计时按钮的数量按下格式化设为给定值。 参数：值1=文本。 返回：无。 原方法：XUI倒计时按钮.setCountDownFormat()">
+    参数 值1 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetCountDownButton ().setCountDownFormat (@<值1>))
+    }
+
+    方法 设置数量按下时间 <公开 注释 = "用法：把XUI倒计时按钮的数量按下时间设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI倒计时按钮.setCountDownTime()">
+    参数 值1 <类型 = 长整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCountDownButton ().setCountDownTime (@<值1>))
+    }
+
+    方法 设置间隔 <公开 注释 = "用法：把XUI倒计时按钮的间隔设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI倒计时按钮.setInterval()">
+    参数 值1 <类型 = 长整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCountDownButton ().setInterval (@<值1>))
+    }
+
+    方法 是否数量按下此刻 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断XUI倒计时按钮是否数量按下此刻。 参数：无。 返回：逻辑型。 原方法：XUI倒计时按钮.isCountDownNow()">
+    {
+        @ @sn<this>.GetCountDownButton ().isCountDownNow ()
+    }
+
+    方法 设置数量按下 <公开 注释 = "用法：把XUI倒计时按钮的数量按下设为给定值。 参数：值1=整数、值2=整数、值3=文本。 返回：无。 原方法：XUI倒计时按钮.setCountDown()">
+    参数 值1 <类型 = 长整数>
+    参数 值2 <类型 = 长整数>
+    参数 值3 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetCountDownButton ().setCountDown (@<值1>, @<值2>, @<值3>))
+    }
+
+    方法 取消数量按下 <公开 注释 = "用法：取消XUI倒计时按钮当前动作。 参数：无。 返回：无。 原方法：XUI倒计时按钮.cancelCountDown()">
+    {
+        @ @m<RUN_UI_ACTION> (GetCountDownButton ().cancelCountDown ())
+    }
+
+    方法 设置可用 <公开 注释 = "用法：把XUI倒计时按钮的可用设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI倒计时按钮.setEnabled()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetCountDownButton ().setEnabled (@<值1>))
+    }
+
+}
+
+类 XUI涟漪视图 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.button.RippleView)."
+        @文档 = "category = \"XUI.按钮\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.button.RippleView\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.rv_alpha\n        shown_name = \"水波的透明度\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.rv_frameRate\n        shown_name = \"水波变化的帧率\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.rv_rippleDuration\n        shown_name = \"水波持续的时间\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.rv_color\n        shown_name = \"水波的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.rv_centered\n        shown_name = \"水波是否从控件的中心起\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.rv_type\n        shown_name = \"水波的样式\"\n        data_type = string\n        detail_type = enum\n        item\n        {\n            name = simpleRipple\n            shown_name = \"simpleRipple\"\n        }\n        item\n        {\n            name = doubleRipple\n            shown_name = \"doubleRipple\"\n        }\n        item\n        {\n            name = rectangle\n            shown_name = \"rectangle\"\n        }\n    }\n    attr\n    {\n        name = app.rv_ripplePadding\n        shown_name = \"水波的padding\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.rv_zoom\n        shown_name = \"是否支持缩放动画\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.rv_zoomScale\n        shown_name = \"缩放倍率\"\n        data_type = double\n    }\n    attr\n    {\n        name = app.rv_zoomDuration\n        shown_name = \"缩放动画持续的时间\"\n        data_type = int\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI涟漪视图, RippleView, com.xuexiang.xui.widget.button.RippleView)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetRippleView ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI涟漪视图的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI涟漪视图.getAlpha()">
+    {
+        @ (double)@sn<this>.GetRippleView ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI涟漪视图的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI涟漪视图.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRippleView ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI涟漪视图的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI涟漪视图.isEnabled()">
+    {
+        @ @sn<this>.GetRippleView ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI涟漪视图的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI涟漪视图.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetRippleView ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI涟漪视图的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI涟漪视图.isClickable()">
+    {
+        @ @sn<this>.GetRippleView ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI涟漪视图的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI涟漪视图.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetRippleView ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI涟漪视图的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI涟漪视图.getElevation()">
+    {
+        @ (double)@sn<this>.GetRippleView ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI涟漪视图的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI涟漪视图.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRippleView ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI涟漪视图的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI涟漪视图.getMinimumHeight()">
+    {
+        @ @sn<this>.GetRippleView ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI涟漪视图的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI涟漪视图.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRippleView ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI涟漪视图的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI涟漪视图.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRippleView ().setBackgroundColor (@<新值>))
+    }
+
+    方法 动画水波纹 <公开 注释 = "用法：调用XUI涟漪视图的动画水波纹。 参数：值1=小数、值2=小数。 返回：无。 原方法：XUI涟漪视图.animateRipple()">
+    参数 值1 <类型 = 小数>
+    参数 值2 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRippleView ().animateRipple ((float) @<值1>, (float) @<值2>))
+    }
+
+    方法 设置水波纹颜色 <公开 注释 = "用法：把XUI涟漪视图的水波纹颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI涟漪视图.setRippleColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRippleView ().setRippleColor (@<值1>))
+    }
+
+    方法 取水波纹颜色 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI涟漪视图的水波纹颜色。 参数：无。 返回：整数。 原方法：XUI涟漪视图.getRippleColor()">
+    {
+        @ @sn<this>.GetRippleView ().getRippleColor ()
+    }
+
+    方法 取水波纹内边距 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI涟漪视图的水波纹内边距。 参数：无。 返回：整数。 原方法：XUI涟漪视图.getRipplePadding()">
+    {
+        @ @sn<this>.GetRippleView ().getRipplePadding ()
+    }
+
+    方法 设置水波纹内边距 <公开 注释 = "用法：把XUI涟漪视图的水波纹内边距设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI涟漪视图.setRipplePadding()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRippleView ().setRipplePadding (@<值1>))
+    }
+
+    方法 取缩放缩放 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读出XUI涟漪视图的缩放缩放。 参数：无。 返回：小数。 原方法：XUI涟漪视图.getZoomScale()">
+    {
+        @ (double)@sn<this>.GetRippleView ().getZoomScale ()
+    }
+
+    方法 设置缩放缩放 <公开 注释 = "用法：把XUI涟漪视图的缩放缩放设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI涟漪视图.setZoomScale()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRippleView ().setZoomScale ((float) @<值1>))
+    }
+
+    方法 取缩放时长 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI涟漪视图的缩放时长。 参数：无。 返回：整数。 原方法：XUI涟漪视图.getZoomDuration()">
+    {
+        @ @sn<this>.GetRippleView ().getZoomDuration ()
+    }
+
+    方法 设置缩放时长 <公开 注释 = "用法：把XUI涟漪视图的缩放时长设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI涟漪视图.setZoomDuration()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRippleView ().setZoomDuration (@<值1>))
+    }
+
+    方法 取水波纹时长 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI涟漪视图的水波纹时长。 参数：无。 返回：整数。 原方法：XUI涟漪视图.getRippleDuration()">
+    {
+        @ @sn<this>.GetRippleView ().getRippleDuration ()
+    }
+
+    方法 设置水波纹时长 <公开 注释 = "用法：把XUI涟漪视图的水波纹时长设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI涟漪视图.setRippleDuration()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRippleView ().setRippleDuration (@<值1>))
+    }
+
+    方法 取框架评分 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI涟漪视图的框架评分。 参数：无。 返回：整数。 原方法：XUI涟漪视图.getFrameRate()">
+    {
+        @ @sn<this>.GetRippleView ().getFrameRate ()
+    }
+
+    方法 设置框架评分 <公开 注释 = "用法：把XUI涟漪视图的框架评分设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI涟漪视图.setFrameRate()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRippleView ().setFrameRate (@<值1>))
+    }
+
+    方法 取水波纹透明度 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI涟漪视图的水波纹透明度。 参数：无。 返回：整数。 原方法：XUI涟漪视图.getRippleAlpha()">
+    {
+        @ @sn<this>.GetRippleView ().getRippleAlpha ()
+    }
+
+    方法 设置水波纹透明度 <公开 注释 = "用法：把XUI涟漪视图的水波纹透明度设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI涟漪视图.setRippleAlpha()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRippleView ().setRippleAlpha (@<值1>))
+    }
+
+}
+
+类 XUI平滑复选框 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.button.SmoothCheckBox)."
+        @文档 = "category = \"XUI.按钮\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.button.SmoothCheckBox\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.scb_duration\n        shown_name = \"切换动画的持续时间\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.scb_stroke_width\n        shown_name = \"未选中时边框宽度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.scb_color_tick\n        shown_name = \"对勾颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.scb_color_checked\n        shown_name = \"选中时的填充颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.scb_color_unchecked\n        shown_name = \"未选中时的填充颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.scb_color_unchecked_stroke\n        shown_name = \"未选中时边框颜色\"\n        data_type = string\n        detail_type = color\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI平滑复选框, SmoothCheckBox, com.xuexiang.xui.widget.button.SmoothCheckBox)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetSmoothCheckBox ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI平滑复选框的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI平滑复选框.getAlpha()">
+    {
+        @ (double)@sn<this>.GetSmoothCheckBox ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI平滑复选框的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI平滑复选框.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSmoothCheckBox ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI平滑复选框的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI平滑复选框.isEnabled()">
+    {
+        @ @sn<this>.GetSmoothCheckBox ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI平滑复选框的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI平滑复选框.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetSmoothCheckBox ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI平滑复选框的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI平滑复选框.isClickable()">
+    {
+        @ @sn<this>.GetSmoothCheckBox ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI平滑复选框的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI平滑复选框.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetSmoothCheckBox ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI平滑复选框的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI平滑复选框.getElevation()">
+    {
+        @ (double)@sn<this>.GetSmoothCheckBox ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI平滑复选框的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI平滑复选框.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSmoothCheckBox ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI平滑复选框的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI平滑复选框.getMinimumHeight()">
+    {
+        @ @sn<this>.GetSmoothCheckBox ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI平滑复选框的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI平滑复选框.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSmoothCheckBox ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI平滑复选框的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI平滑复选框.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSmoothCheckBox ().setBackgroundColor (@<新值>))
+    }
+
+    方法 是否已勾选 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断XUI平滑复选框是否已勾选。 参数：无。 返回：逻辑型。 原方法：XUI平滑复选框.isChecked()">
+    {
+        @ @sn<this>.GetSmoothCheckBox ().isChecked ()
+    }
+
+    方法 切换 <公开 注释 = "用法：切换XUI平滑复选框的相关内容状态。 参数：无。 返回：无。 原方法：XUI平滑复选框.toggle()">
+    {
+        @ @m<RUN_UI_ACTION> (GetSmoothCheckBox ().toggle ())
+    }
+
+    方法 设置已勾选 <公开 注释 = "用法：把XUI平滑复选框的已勾选设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI平滑复选框.setChecked()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetSmoothCheckBox ().setChecked (@<值1>))
+    }
+
+    方法 设置已勾选静默 <公开 注释 = "用法：把XUI平滑复选框的已勾选静默设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI平滑复选框.setCheckedSilent()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetSmoothCheckBox ().setCheckedSilent (@<值1>))
+    }
+
+    方法 设置已勾选_2 <公开 注释 = "用法：把XUI平滑复选框的已勾选_2设为给定值。 参数：值1=真/假、值2=真/假。 返回：无。 原方法：XUI平滑复选框.setChecked()">
+    参数 值1 <类型 = 逻辑型>
+    参数 值2 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetSmoothCheckBox ().setChecked (@<值1>, @<值2>))
+    }
+
+}
+
+类 XUI开关图标视图 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.button.SwitchIconView)."
+        @文档 = "category = \"XUI.按钮\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.button.SwitchIconView\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.siv_tint_color\n        shown_name = \"填充颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.siv_animation_duration\n        shown_name = \"动画持续时间\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.siv_disabled_alpha\n        shown_name = \"不可点击时的透明度\"\n        data_type = double\n    }\n    attr\n    {\n        name = app.siv_disabled_color\n        shown_name = \"不可点击时的填充颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.siv_enabled\n        shown_name = \"是否可点击\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.siv_no_dash\n        shown_name = \"不可点击时是否没有斜杠\"\n        data_type = boolean\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI开关图标视图, SwitchIconView, com.xuexiang.xui.widget.button.SwitchIconView)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetSwitchIconView ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI开关图标视图的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI开关图标视图.getAlpha()">
+    {
+        @ (double)@sn<this>.GetSwitchIconView ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI开关图标视图的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI开关图标视图.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSwitchIconView ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI开关图标视图的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI开关图标视图.isEnabled()">
+    {
+        @ @sn<this>.GetSwitchIconView ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI开关图标视图的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI开关图标视图.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetSwitchIconView ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI开关图标视图的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI开关图标视图.isClickable()">
+    {
+        @ @sn<this>.GetSwitchIconView ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI开关图标视图的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI开关图标视图.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetSwitchIconView ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI开关图标视图的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI开关图标视图.getElevation()">
+    {
+        @ (double)@sn<this>.GetSwitchIconView ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI开关图标视图的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI开关图标视图.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSwitchIconView ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI开关图标视图的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI开关图标视图.getMinimumHeight()">
+    {
+        @ @sn<this>.GetSwitchIconView ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI开关图标视图的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI开关图标视图.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSwitchIconView ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI开关图标视图的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI开关图标视图.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSwitchIconView ().setBackgroundColor (@<新值>))
+    }
+
+    方法 XUI图片 <公开 属性写 注释 = "用法：设置XUI开关图标视图的XUI图片, 传入新值后立刻生效。 参数：新值=可绘制对象类。 返回：无。 原方法：XUI开关图标视图.setImageDrawable()">
+    参数 新值 <类型 = 可绘制对象类>
+    {
+        @ @m<RUN_UI_ACTION> (GetSwitchIconView ().setImageDrawable (@<新值>))
+    }
+
+    方法 XUI图片资源 <公开 属性写 注释 = "用法：设置XUI开关图标视图的XUI图片资源, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI开关图标视图.setImageResource()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSwitchIconView ().setImageResource (@<新值>))
+    }
+
+    方法 XUI图片位图 <公开 属性写 注释 = "用法：设置XUI开关图标视图的XUI图片位图, 传入新值后立刻生效。 参数：新值=位图类。 返回：无。 原方法：XUI开关图标视图.setImageBitmap()">
+    参数 新值 <类型 = 位图类>
+    {
+        @ @m<RUN_UI_ACTION> (GetSwitchIconView ().setImageBitmap (@<新值>))
+    }
+
+    方法 取XUI图片 <公开 类型 = 可绘制对象类 @嵌入式方法 = "" 注释 = "java: public Drawable getDrawable()">
+    {
+        @ @sn<this>.GetSwitchIconView ().getDrawable ()
+    }
+
+    方法 设置图标可用 <公开 注释 = "用法：把XUI开关图标视图的图标可用设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI开关图标视图.setIconEnabled()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetSwitchIconView ().setIconEnabled (@<值1>))
+    }
+
+    方法 设置图标可用_2 <公开 注释 = "用法：把XUI开关图标视图的图标可用_2设为给定值。 参数：值1=真/假、值2=真/假。 返回：无。 原方法：XUI开关图标视图.setIconEnabled()">
+    参数 值1 <类型 = 逻辑型>
+    参数 值2 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetSwitchIconView ().setIconEnabled (@<值1>, @<值2>))
+    }
+
+    方法 是否图标可用 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断XUI开关图标视图是否图标可用。 参数：无。 返回：逻辑型。 原方法：XUI开关图标视图.isIconEnabled()">
+    {
+        @ @sn<this>.GetSwitchIconView ().isIconEnabled ()
+    }
+
+    方法 开关状态 <公开 注释 = "用法：调用XUI开关图标视图的开关状态。 参数：无。 返回：无。 原方法：XUI开关图标视图.switchState()">
+    {
+        @ @m<RUN_UI_ACTION> (GetSwitchIconView ().switchState ())
+    }
+
+    方法 开关状态_2 <公开 注释 = "用法：调用XUI开关图标视图的开关状态_2。 参数：值1=真/假。 返回：无。 原方法：XUI开关图标视图.switchState()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetSwitchIconView ().switchState (@<值1>))
+    }
+
+}
+
+类 XUI圆角按钮 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.button.roundbutton.RoundButton)."
+        @文档 = "category = \"XUI.按钮\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.button.roundbutton.RoundButton\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI圆角按钮, RoundButton, com.xuexiang.xui.widget.button.roundbutton.RoundButton)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetRoundButton ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI圆角按钮的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI圆角按钮.getAlpha()">
+    {
+        @ (double)@sn<this>.GetRoundButton ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI圆角按钮的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI圆角按钮.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRoundButton ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI圆角按钮的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI圆角按钮.isEnabled()">
+    {
+        @ @sn<this>.GetRoundButton ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI圆角按钮的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI圆角按钮.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetRoundButton ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI圆角按钮的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI圆角按钮.isClickable()">
+    {
+        @ @sn<this>.GetRoundButton ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI圆角按钮的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI圆角按钮.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetRoundButton ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI圆角按钮的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI圆角按钮.getElevation()">
+    {
+        @ (double)@sn<this>.GetRoundButton ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI圆角按钮的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI圆角按钮.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRoundButton ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI圆角按钮的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI圆角按钮.getMinimumHeight()">
+    {
+        @ @sn<this>.GetRoundButton ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI圆角按钮的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI圆角按钮.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRoundButton ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI圆角按钮的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI圆角按钮.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRoundButton ().setBackgroundColor (@<新值>))
+    }
+
+    方法 XUI文本 <公开 属性读 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读取XUI圆角按钮的XUI文本当前值。 参数：无。 返回：文本型。 原方法：XUI圆角按钮.getText()">
+    {
+        @ java.lang.String.valueOf (@sn<this>.GetRoundButton ().getText ())
+    }
+
+    方法 XUI文本 <公开 属性写 注释 = "用法：设置XUI圆角按钮的XUI文本, 传入新值后立刻生效。 参数：新值=文本。 返回：无。 原方法：XUI圆角按钮.setText()">
+    参数 新值 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetRoundButton ().setText (@<新值>))
+    }
+
+    方法 XUI文字颜色 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI圆角按钮的XUI文字颜色当前值。 参数：无。 返回：整数。 原方法：XUI圆角按钮.getCurrentTextColor()">
+    {
+        @ @sn<this>.GetRoundButton ().getCurrentTextColor ()
+    }
+
+    方法 XUI文字颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI圆角按钮的XUI文字颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI圆角按钮.setTextColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRoundButton ().setTextColor (@<新值>))
+    }
+
+    方法 XUI文字大小 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI圆角按钮的XUI文字大小当前值。 参数：无。 返回：小数。 原方法：XUI圆角按钮.getTextSize()">
+    {
+        @ (double)@sn<this>.GetRoundButton ().getTextSize ()
+    }
+
+    方法 XUI文字大小 <公开 属性写 注释 = "用法：设置XUI圆角按钮的XUI文字大小, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI圆角按钮.setTextSize()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRoundButton ().setTextSize ((float) @<新值>))
+    }
+
+    方法 XUI提示文字 <公开 属性读 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读取XUI圆角按钮的XUI提示文字当前值。 参数：无。 返回：文本型。 原方法：XUI圆角按钮.getHint()">
+    {
+        @ java.lang.String.valueOf (@sn<this>.GetRoundButton ().getHint ())
+    }
+
+    方法 XUI提示文字 <公开 属性写 注释 = "用法：设置XUI圆角按钮的XUI提示文字, 传入新值后立刻生效。 参数：新值=文本。 返回：无。 原方法：XUI圆角按钮.setHint()">
+    参数 新值 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetRoundButton ().setHint (@<新值>))
+    }
+
+    方法 XUI最大行数 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI圆角按钮的XUI最大行数当前值。 参数：无。 返回：整数。 原方法：XUI圆角按钮.getMaxLines()">
+    {
+        @ @sn<this>.GetRoundButton ().getMaxLines ()
+    }
+
+    方法 XUI最大行数 <公开 属性写 注释 = "用法：设置XUI圆角按钮的XUI最大行数, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI圆角按钮.setMaxLines()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRoundButton ().setMaxLines (@<新值>))
+    }
+
+    方法 XUI单行 <公开 属性写 注释 = "用法：设置XUI圆角按钮的XUI单行, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI圆角按钮.setSingleLine()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetRoundButton ().setSingleLine (@<新值>))
+    }
+
+}
+
+类 XUI阴影按钮基础类 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.button.shadowbutton.BaseShadowButton)."
+        @文档 = "category = \"XUI.按钮\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.button.shadowbutton.BaseShadowButton\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.sb_color_pressed\n        shown_name = \"触摸时的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.sb_color_unpressed\n        shown_name = \"未触摸/触摸层的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.sb_ripple_color\n        shown_name = \"波纹的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.sb_ripple_alpha\n        shown_name = \"波纹的透明度\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.sb_alpha_pressed\n        shown_name = \"触摸时的透明度\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.sb_ripple_duration\n        shown_name = \"波纹持续的时间\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.sb_radius\n        shown_name = \"按钮角的弧度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.sb_shape_type\n        shown_name = \"按钮的形状\"\n        data_type = string\n        detail_type = enum\n        item\n        {\n            name = round\n            shown_name = \"round\"\n        }\n        item\n        {\n            name = rectangle\n            shown_name = \"rectangle\"\n        }\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI阴影按钮基础类, BaseShadowButton, com.xuexiang.xui.widget.button.shadowbutton.BaseShadowButton)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetBaseShadowButton ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI阴影按钮基础类的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI阴影按钮基础类.getAlpha()">
+    {
+        @ (double)@sn<this>.GetBaseShadowButton ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI阴影按钮基础类的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI阴影按钮基础类.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetBaseShadowButton ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI阴影按钮基础类的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI阴影按钮基础类.isEnabled()">
+    {
+        @ @sn<this>.GetBaseShadowButton ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI阴影按钮基础类的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI阴影按钮基础类.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetBaseShadowButton ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI阴影按钮基础类的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI阴影按钮基础类.isClickable()">
+    {
+        @ @sn<this>.GetBaseShadowButton ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI阴影按钮基础类的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI阴影按钮基础类.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetBaseShadowButton ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI阴影按钮基础类的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI阴影按钮基础类.getElevation()">
+    {
+        @ (double)@sn<this>.GetBaseShadowButton ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI阴影按钮基础类的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI阴影按钮基础类.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetBaseShadowButton ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI阴影按钮基础类的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI阴影按钮基础类.getMinimumHeight()">
+    {
+        @ @sn<this>.GetBaseShadowButton ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI阴影按钮基础类的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI阴影按钮基础类.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetBaseShadowButton ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI阴影按钮基础类的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI阴影按钮基础类.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetBaseShadowButton ().setBackgroundColor (@<新值>))
+    }
+
+    方法 XUI文本 <公开 属性读 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读取XUI阴影按钮基础类的XUI文本当前值。 参数：无。 返回：文本型。 原方法：XUI阴影按钮基础类.getText()">
+    {
+        @ java.lang.String.valueOf (@sn<this>.GetBaseShadowButton ().getText ())
+    }
+
+    方法 XUI文本 <公开 属性写 注释 = "用法：设置XUI阴影按钮基础类的XUI文本, 传入新值后立刻生效。 参数：新值=文本。 返回：无。 原方法：XUI阴影按钮基础类.setText()">
+    参数 新值 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetBaseShadowButton ().setText (@<新值>))
+    }
+
+    方法 XUI文字颜色 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI阴影按钮基础类的XUI文字颜色当前值。 参数：无。 返回：整数。 原方法：XUI阴影按钮基础类.getCurrentTextColor()">
+    {
+        @ @sn<this>.GetBaseShadowButton ().getCurrentTextColor ()
+    }
+
+    方法 XUI文字颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI阴影按钮基础类的XUI文字颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI阴影按钮基础类.setTextColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetBaseShadowButton ().setTextColor (@<新值>))
+    }
+
+    方法 XUI文字大小 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI阴影按钮基础类的XUI文字大小当前值。 参数：无。 返回：小数。 原方法：XUI阴影按钮基础类.getTextSize()">
+    {
+        @ (double)@sn<this>.GetBaseShadowButton ().getTextSize ()
+    }
+
+    方法 XUI文字大小 <公开 属性写 注释 = "用法：设置XUI阴影按钮基础类的XUI文字大小, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI阴影按钮基础类.setTextSize()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetBaseShadowButton ().setTextSize ((float) @<新值>))
+    }
+
+    方法 XUI提示文字 <公开 属性读 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读取XUI阴影按钮基础类的XUI提示文字当前值。 参数：无。 返回：文本型。 原方法：XUI阴影按钮基础类.getHint()">
+    {
+        @ java.lang.String.valueOf (@sn<this>.GetBaseShadowButton ().getHint ())
+    }
+
+    方法 XUI提示文字 <公开 属性写 注释 = "用法：设置XUI阴影按钮基础类的XUI提示文字, 传入新值后立刻生效。 参数：新值=文本。 返回：无。 原方法：XUI阴影按钮基础类.setHint()">
+    参数 新值 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetBaseShadowButton ().setHint (@<新值>))
+    }
+
+    方法 XUI最大行数 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI阴影按钮基础类的XUI最大行数当前值。 参数：无。 返回：整数。 原方法：XUI阴影按钮基础类.getMaxLines()">
+    {
+        @ @sn<this>.GetBaseShadowButton ().getMaxLines ()
+    }
+
+    方法 XUI最大行数 <公开 属性写 注释 = "用法：设置XUI阴影按钮基础类的XUI最大行数, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI阴影按钮基础类.setMaxLines()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetBaseShadowButton ().setMaxLines (@<新值>))
+    }
+
+    方法 XUI单行 <公开 属性写 注释 = "用法：设置XUI阴影按钮基础类的XUI单行, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI阴影按钮基础类.setSingleLine()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetBaseShadowButton ().setSingleLine (@<新值>))
+    }
+
+    方法 设置未按下颜色 <公开 注释 = "用法：把XUI阴影按钮基础类的未按下颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI阴影按钮基础类.setUnpressedColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetBaseShadowButton ().setUnpressedColor (@<值1>))
+    }
+
+    方法 取形状类型 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI阴影按钮基础类的形状类型。 参数：无。 返回：整数。 原方法：XUI阴影按钮基础类.getShapeType()">
+    {
+        @ @sn<this>.GetBaseShadowButton ().getShapeType ()
+    }
+
+    方法 设置形状类型 <公开 注释 = "用法：把XUI阴影按钮基础类的形状类型设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI阴影按钮基础类.setShapeType()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetBaseShadowButton ().setShapeType (@<值1>))
+    }
+
+    方法 取圆角 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI阴影按钮基础类的圆角。 参数：无。 返回：整数。 原方法：XUI阴影按钮基础类.getRadius()">
+    {
+        @ @sn<this>.GetBaseShadowButton ().getRadius ()
+    }
+
+    方法 设置圆角 <公开 注释 = "用法：把XUI阴影按钮基础类的圆角设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI阴影按钮基础类.setRadius()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetBaseShadowButton ().setRadius (@<值1>))
+    }
+
+}
+
+类 XUI涟漪阴影按钮 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.button.shadowbutton.RippleShadowShadowButton)."
+        @文档 = "category = \"XUI.按钮\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.button.shadowbutton.RippleShadowShadowButton\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.sb_color_pressed\n        shown_name = \"触摸时的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.sb_color_unpressed\n        shown_name = \"未触摸/触摸层的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.sb_ripple_color\n        shown_name = \"波纹的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.sb_ripple_alpha\n        shown_name = \"波纹的透明度\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.sb_alpha_pressed\n        shown_name = \"触摸时的透明度\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.sb_ripple_duration\n        shown_name = \"波纹持续的时间\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.sb_radius\n        shown_name = \"按钮角的弧度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.sb_shape_type\n        shown_name = \"按钮的形状\"\n        data_type = string\n        detail_type = enum\n        item\n        {\n            name = round\n            shown_name = \"round\"\n        }\n        item\n        {\n            name = rectangle\n            shown_name = \"rectangle\"\n        }\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI涟漪阴影按钮, RippleShadowShadowButton, com.xuexiang.xui.widget.button.shadowbutton.RippleShadowShadowButton)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetRippleShadowShadowButton ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI涟漪阴影按钮的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI涟漪阴影按钮.getAlpha()">
+    {
+        @ (double)@sn<this>.GetRippleShadowShadowButton ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI涟漪阴影按钮的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI涟漪阴影按钮.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRippleShadowShadowButton ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI涟漪阴影按钮的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI涟漪阴影按钮.isEnabled()">
+    {
+        @ @sn<this>.GetRippleShadowShadowButton ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI涟漪阴影按钮的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI涟漪阴影按钮.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetRippleShadowShadowButton ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI涟漪阴影按钮的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI涟漪阴影按钮.isClickable()">
+    {
+        @ @sn<this>.GetRippleShadowShadowButton ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI涟漪阴影按钮的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI涟漪阴影按钮.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetRippleShadowShadowButton ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI涟漪阴影按钮的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI涟漪阴影按钮.getElevation()">
+    {
+        @ (double)@sn<this>.GetRippleShadowShadowButton ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI涟漪阴影按钮的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI涟漪阴影按钮.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRippleShadowShadowButton ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI涟漪阴影按钮的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI涟漪阴影按钮.getMinimumHeight()">
+    {
+        @ @sn<this>.GetRippleShadowShadowButton ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI涟漪阴影按钮的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI涟漪阴影按钮.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRippleShadowShadowButton ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI涟漪阴影按钮的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI涟漪阴影按钮.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRippleShadowShadowButton ().setBackgroundColor (@<新值>))
+    }
+
+    方法 XUI文本 <公开 属性读 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读取XUI涟漪阴影按钮的XUI文本当前值。 参数：无。 返回：文本型。 原方法：XUI涟漪阴影按钮.getText()">
+    {
+        @ java.lang.String.valueOf (@sn<this>.GetRippleShadowShadowButton ().getText ())
+    }
+
+    方法 XUI文本 <公开 属性写 注释 = "用法：设置XUI涟漪阴影按钮的XUI文本, 传入新值后立刻生效。 参数：新值=文本。 返回：无。 原方法：XUI涟漪阴影按钮.setText()">
+    参数 新值 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetRippleShadowShadowButton ().setText (@<新值>))
+    }
+
+    方法 XUI文字颜色 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI涟漪阴影按钮的XUI文字颜色当前值。 参数：无。 返回：整数。 原方法：XUI涟漪阴影按钮.getCurrentTextColor()">
+    {
+        @ @sn<this>.GetRippleShadowShadowButton ().getCurrentTextColor ()
+    }
+
+    方法 XUI文字颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI涟漪阴影按钮的XUI文字颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI涟漪阴影按钮.setTextColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRippleShadowShadowButton ().setTextColor (@<新值>))
+    }
+
+    方法 XUI文字大小 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI涟漪阴影按钮的XUI文字大小当前值。 参数：无。 返回：小数。 原方法：XUI涟漪阴影按钮.getTextSize()">
+    {
+        @ (double)@sn<this>.GetRippleShadowShadowButton ().getTextSize ()
+    }
+
+    方法 XUI文字大小 <公开 属性写 注释 = "用法：设置XUI涟漪阴影按钮的XUI文字大小, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI涟漪阴影按钮.setTextSize()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRippleShadowShadowButton ().setTextSize ((float) @<新值>))
+    }
+
+    方法 XUI提示文字 <公开 属性读 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读取XUI涟漪阴影按钮的XUI提示文字当前值。 参数：无。 返回：文本型。 原方法：XUI涟漪阴影按钮.getHint()">
+    {
+        @ java.lang.String.valueOf (@sn<this>.GetRippleShadowShadowButton ().getHint ())
+    }
+
+    方法 XUI提示文字 <公开 属性写 注释 = "用法：设置XUI涟漪阴影按钮的XUI提示文字, 传入新值后立刻生效。 参数：新值=文本。 返回：无。 原方法：XUI涟漪阴影按钮.setHint()">
+    参数 新值 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetRippleShadowShadowButton ().setHint (@<新值>))
+    }
+
+    方法 XUI最大行数 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI涟漪阴影按钮的XUI最大行数当前值。 参数：无。 返回：整数。 原方法：XUI涟漪阴影按钮.getMaxLines()">
+    {
+        @ @sn<this>.GetRippleShadowShadowButton ().getMaxLines ()
+    }
+
+    方法 XUI最大行数 <公开 属性写 注释 = "用法：设置XUI涟漪阴影按钮的XUI最大行数, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI涟漪阴影按钮.setMaxLines()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRippleShadowShadowButton ().setMaxLines (@<新值>))
+    }
+
+    方法 XUI单行 <公开 属性写 注释 = "用法：设置XUI涟漪阴影按钮的XUI单行, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI涟漪阴影按钮.setSingleLine()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetRippleShadowShadowButton ().setSingleLine (@<新值>))
+    }
+
+    方法 取圆形圆角 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI涟漪阴影按钮的圆形圆角。 参数：无。 返回：整数。 原方法：XUI涟漪阴影按钮.getRoundRadius()">
+    {
+        @ @sn<this>.GetRippleShadowShadowButton ().getRoundRadius ()
+    }
+
+    方法 设置圆形圆角 <公开 注释 = "用法：把XUI涟漪阴影按钮的圆形圆角设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI涟漪阴影按钮.setRoundRadius()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRippleShadowShadowButton ().setRoundRadius (@<值1>))
+    }
+
+    方法 取水波纹颜色 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI涟漪阴影按钮的水波纹颜色。 参数：无。 返回：整数。 原方法：XUI涟漪阴影按钮.getRippleColor()">
+    {
+        @ @sn<this>.GetRippleShadowShadowButton ().getRippleColor ()
+    }
+
+    方法 设置水波纹颜色 <公开 注释 = "用法：把XUI涟漪阴影按钮的水波纹颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI涟漪阴影按钮.setRippleColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRippleShadowShadowButton ().setRippleColor (@<值1>))
+    }
+
+    方法 取水波纹时长 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI涟漪阴影按钮的水波纹时长。 参数：无。 返回：整数。 原方法：XUI涟漪阴影按钮.getRippleDuration()">
+    {
+        @ @sn<this>.GetRippleShadowShadowButton ().getRippleDuration ()
+    }
+
+    方法 设置水波纹时长 <公开 注释 = "用法：把XUI涟漪阴影按钮的水波纹时长设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI涟漪阴影按钮.setRippleDuration()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRippleShadowShadowButton ().setRippleDuration (@<值1>))
+    }
+
+    方法 取水波纹圆角 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI涟漪阴影按钮的水波纹圆角。 参数：无。 返回：整数。 原方法：XUI涟漪阴影按钮.getRippleRadius()">
+    {
+        @ @sn<this>.GetRippleShadowShadowButton ().getRippleRadius ()
+    }
+
+    方法 设置水波纹圆角 <公开 注释 = "用法：把XUI涟漪阴影按钮的水波纹圆角设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI涟漪阴影按钮.setRippleRadius()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRippleShadowShadowButton ().setRippleRadius (@<值1>))
+    }
+
+    方法 取水波纹透明度 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI涟漪阴影按钮的水波纹透明度。 参数：无。 返回：整数。 原方法：XUI涟漪阴影按钮.getRippleAlpha()">
+    {
+        @ @sn<this>.GetRippleShadowShadowButton ().getRippleAlpha ()
+    }
+
+    方法 设置水波纹透明度 <公开 注释 = "用法：把XUI涟漪阴影按钮的水波纹透明度设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI涟漪阴影按钮.setRippleAlpha()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetRippleShadowShadowButton ().setRippleAlpha (@<值1>))
+    }
+
+}
+
+类 XUI阴影按钮 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.button.shadowbutton.ShadowButton)."
+        @文档 = "category = \"XUI.按钮\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.button.shadowbutton.ShadowButton\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.sb_color_pressed\n        shown_name = \"触摸时的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.sb_color_unpressed\n        shown_name = \"未触摸/触摸层的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.sb_ripple_color\n        shown_name = \"波纹的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.sb_ripple_alpha\n        shown_name = \"波纹的透明度\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.sb_alpha_pressed\n        shown_name = \"触摸时的透明度\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.sb_ripple_duration\n        shown_name = \"波纹持续的时间\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.sb_radius\n        shown_name = \"按钮角的弧度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.sb_shape_type\n        shown_name = \"按钮的形状\"\n        data_type = string\n        detail_type = enum\n        item\n        {\n            name = round\n            shown_name = \"round\"\n        }\n        item\n        {\n            name = rectangle\n            shown_name = \"rectangle\"\n        }\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI阴影按钮, ShadowButton, com.xuexiang.xui.widget.button.shadowbutton.ShadowButton)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetShadowButton ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI阴影按钮的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI阴影按钮.getAlpha()">
+    {
+        @ (double)@sn<this>.GetShadowButton ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI阴影按钮的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI阴影按钮.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetShadowButton ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI阴影按钮的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI阴影按钮.isEnabled()">
+    {
+        @ @sn<this>.GetShadowButton ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI阴影按钮的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI阴影按钮.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetShadowButton ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI阴影按钮的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI阴影按钮.isClickable()">
+    {
+        @ @sn<this>.GetShadowButton ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI阴影按钮的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI阴影按钮.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetShadowButton ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI阴影按钮的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI阴影按钮.getElevation()">
+    {
+        @ (double)@sn<this>.GetShadowButton ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI阴影按钮的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI阴影按钮.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetShadowButton ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI阴影按钮的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI阴影按钮.getMinimumHeight()">
+    {
+        @ @sn<this>.GetShadowButton ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI阴影按钮的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI阴影按钮.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetShadowButton ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI阴影按钮的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI阴影按钮.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetShadowButton ().setBackgroundColor (@<新值>))
+    }
+
+    方法 XUI文本 <公开 属性读 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读取XUI阴影按钮的XUI文本当前值。 参数：无。 返回：文本型。 原方法：XUI阴影按钮.getText()">
+    {
+        @ java.lang.String.valueOf (@sn<this>.GetShadowButton ().getText ())
+    }
+
+    方法 XUI文本 <公开 属性写 注释 = "用法：设置XUI阴影按钮的XUI文本, 传入新值后立刻生效。 参数：新值=文本。 返回：无。 原方法：XUI阴影按钮.setText()">
+    参数 新值 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetShadowButton ().setText (@<新值>))
+    }
+
+    方法 XUI文字颜色 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI阴影按钮的XUI文字颜色当前值。 参数：无。 返回：整数。 原方法：XUI阴影按钮.getCurrentTextColor()">
+    {
+        @ @sn<this>.GetShadowButton ().getCurrentTextColor ()
+    }
+
+    方法 XUI文字颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI阴影按钮的XUI文字颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI阴影按钮.setTextColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetShadowButton ().setTextColor (@<新值>))
+    }
+
+    方法 XUI文字大小 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI阴影按钮的XUI文字大小当前值。 参数：无。 返回：小数。 原方法：XUI阴影按钮.getTextSize()">
+    {
+        @ (double)@sn<this>.GetShadowButton ().getTextSize ()
+    }
+
+    方法 XUI文字大小 <公开 属性写 注释 = "用法：设置XUI阴影按钮的XUI文字大小, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI阴影按钮.setTextSize()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetShadowButton ().setTextSize ((float) @<新值>))
+    }
+
+    方法 XUI提示文字 <公开 属性读 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读取XUI阴影按钮的XUI提示文字当前值。 参数：无。 返回：文本型。 原方法：XUI阴影按钮.getHint()">
+    {
+        @ java.lang.String.valueOf (@sn<this>.GetShadowButton ().getHint ())
+    }
+
+    方法 XUI提示文字 <公开 属性写 注释 = "用法：设置XUI阴影按钮的XUI提示文字, 传入新值后立刻生效。 参数：新值=文本。 返回：无。 原方法：XUI阴影按钮.setHint()">
+    参数 新值 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetShadowButton ().setHint (@<新值>))
+    }
+
+    方法 XUI最大行数 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI阴影按钮的XUI最大行数当前值。 参数：无。 返回：整数。 原方法：XUI阴影按钮.getMaxLines()">
+    {
+        @ @sn<this>.GetShadowButton ().getMaxLines ()
+    }
+
+    方法 XUI最大行数 <公开 属性写 注释 = "用法：设置XUI阴影按钮的XUI最大行数, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI阴影按钮.setMaxLines()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetShadowButton ().setMaxLines (@<新值>))
+    }
+
+    方法 XUI单行 <公开 属性写 注释 = "用法：设置XUI阴影按钮的XUI单行, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI阴影按钮.setSingleLine()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetShadowButton ().setSingleLine (@<新值>))
+    }
+
+    方法 取已按下颜色 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI阴影按钮的已按下颜色。 参数：无。 返回：整数。 原方法：XUI阴影按钮.getPressedColor()">
+    {
+        @ @sn<this>.GetShadowButton ().getPressedColor ()
+    }
+
+    方法 设置已按下颜色 <公开 注释 = "用法：把XUI阴影按钮的已按下颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI阴影按钮.setPressedColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetShadowButton ().setPressedColor (@<值1>))
+    }
+
+}
+
+类 XUI阴影图片框 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.button.shadowbutton.ShadowImageView)."
+        @文档 = "category = \"XUI.按钮\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.button.shadowbutton.ShadowImageView\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.sb_color_pressed\n        shown_name = \"触摸时的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.sb_color_unpressed\n        shown_name = \"未触摸/触摸层的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.sb_ripple_color\n        shown_name = \"波纹的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.sb_ripple_alpha\n        shown_name = \"波纹的透明度\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.sb_alpha_pressed\n        shown_name = \"触摸时的透明度\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.sb_ripple_duration\n        shown_name = \"波纹持续的时间\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.sb_radius\n        shown_name = \"按钮角的弧度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.sb_shape_type\n        shown_name = \"按钮的形状\"\n        data_type = string\n        detail_type = enum\n        item\n        {\n            name = round\n            shown_name = \"round\"\n        }\n        item\n        {\n            name = rectangle\n            shown_name = \"rectangle\"\n        }\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI阴影图片框, ShadowImageView, com.xuexiang.xui.widget.button.shadowbutton.ShadowImageView)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetShadowImageView ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI阴影图片框的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI阴影图片框.getAlpha()">
+    {
+        @ (double)@sn<this>.GetShadowImageView ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI阴影图片框的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI阴影图片框.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetShadowImageView ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI阴影图片框的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI阴影图片框.isEnabled()">
+    {
+        @ @sn<this>.GetShadowImageView ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI阴影图片框的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI阴影图片框.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetShadowImageView ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI阴影图片框的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI阴影图片框.isClickable()">
+    {
+        @ @sn<this>.GetShadowImageView ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI阴影图片框的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI阴影图片框.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetShadowImageView ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI阴影图片框的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI阴影图片框.getElevation()">
+    {
+        @ (double)@sn<this>.GetShadowImageView ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI阴影图片框的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI阴影图片框.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetShadowImageView ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI阴影图片框的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI阴影图片框.getMinimumHeight()">
+    {
+        @ @sn<this>.GetShadowImageView ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI阴影图片框的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI阴影图片框.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetShadowImageView ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI阴影图片框的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI阴影图片框.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetShadowImageView ().setBackgroundColor (@<新值>))
+    }
+
+    方法 XUI图片 <公开 属性写 注释 = "用法：设置XUI阴影图片框的XUI图片, 传入新值后立刻生效。 参数：新值=可绘制对象类。 返回：无。 原方法：XUI阴影图片框.setImageDrawable()">
+    参数 新值 <类型 = 可绘制对象类>
+    {
+        @ @m<RUN_UI_ACTION> (GetShadowImageView ().setImageDrawable (@<新值>))
+    }
+
+    方法 XUI图片资源 <公开 属性写 注释 = "用法：设置XUI阴影图片框的XUI图片资源, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI阴影图片框.setImageResource()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetShadowImageView ().setImageResource (@<新值>))
+    }
+
+    方法 XUI图片位图 <公开 属性写 注释 = "用法：设置XUI阴影图片框的XUI图片位图, 传入新值后立刻生效。 参数：新值=位图类。 返回：无。 原方法：XUI阴影图片框.setImageBitmap()">
+    参数 新值 <类型 = 位图类>
+    {
+        @ @m<RUN_UI_ACTION> (GetShadowImageView ().setImageBitmap (@<新值>))
+    }
+
+    方法 取XUI图片 <公开 类型 = 可绘制对象类 @嵌入式方法 = "" 注释 = "java: public Drawable getDrawable()">
+    {
+        @ @sn<this>.GetShadowImageView ().getDrawable ()
+    }
+
+    方法 取已按下颜色 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI阴影图片框的已按下颜色。 参数：无。 返回：整数。 原方法：XUI阴影图片框.getPressedColor()">
+    {
+        @ @sn<this>.GetShadowImageView ().getPressedColor ()
+    }
+
+    方法 设置已按下颜色 <公开 注释 = "用法：把XUI阴影图片框的已按下颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI阴影图片框.setPressedColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetShadowImageView ().setPressedColor (@<值1>))
+    }
+
+}
+
+类 XUI波特形状图片框 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.button.shinebutton.PorterShapeImageView)."
+        @文档 = "category = \"XUI.按钮\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.button.shinebutton.PorterShapeImageView\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.sb_icon_image\n        shown_name = \"图标资源\"\n        data_type = string\n        detail_type = drawable_res_file\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI波特形状图片框, PorterShapeImageView, com.xuexiang.xui.widget.button.shinebutton.PorterShapeImageView)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetPorterShapeImageView ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI波特形状图片框的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI波特形状图片框.getAlpha()">
+    {
+        @ (double)@sn<this>.GetPorterShapeImageView ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI波特形状图片框的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI波特形状图片框.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetPorterShapeImageView ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI波特形状图片框的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI波特形状图片框.isEnabled()">
+    {
+        @ @sn<this>.GetPorterShapeImageView ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI波特形状图片框的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI波特形状图片框.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetPorterShapeImageView ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI波特形状图片框的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI波特形状图片框.isClickable()">
+    {
+        @ @sn<this>.GetPorterShapeImageView ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI波特形状图片框的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI波特形状图片框.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetPorterShapeImageView ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI波特形状图片框的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI波特形状图片框.getElevation()">
+    {
+        @ (double)@sn<this>.GetPorterShapeImageView ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI波特形状图片框的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI波特形状图片框.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetPorterShapeImageView ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI波特形状图片框的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI波特形状图片框.getMinimumHeight()">
+    {
+        @ @sn<this>.GetPorterShapeImageView ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI波特形状图片框的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI波特形状图片框.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetPorterShapeImageView ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI波特形状图片框的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI波特形状图片框.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetPorterShapeImageView ().setBackgroundColor (@<新值>))
+    }
+
+    方法 XUI图片 <公开 属性写 注释 = "用法：设置XUI波特形状图片框的XUI图片, 传入新值后立刻生效。 参数：新值=可绘制对象类。 返回：无。 原方法：XUI波特形状图片框.setImageDrawable()">
+    参数 新值 <类型 = 可绘制对象类>
+    {
+        @ @m<RUN_UI_ACTION> (GetPorterShapeImageView ().setImageDrawable (@<新值>))
+    }
+
+    方法 XUI图片资源 <公开 属性写 注释 = "用法：设置XUI波特形状图片框的XUI图片资源, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI波特形状图片框.setImageResource()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetPorterShapeImageView ().setImageResource (@<新值>))
+    }
+
+    方法 XUI图片位图 <公开 属性写 注释 = "用法：设置XUI波特形状图片框的XUI图片位图, 传入新值后立刻生效。 参数：新值=位图类。 返回：无。 原方法：XUI波特形状图片框.setImageBitmap()">
+    参数 新值 <类型 = 位图类>
+    {
+        @ @m<RUN_UI_ACTION> (GetPorterShapeImageView ().setImageBitmap (@<新值>))
+    }
+
+    方法 取XUI图片 <公开 类型 = 可绘制对象类 @嵌入式方法 = "" 注释 = "java: public Drawable getDrawable()">
+    {
+        @ @sn<this>.GetPorterShapeImageView ().getDrawable ()
+    }
+
+    方法 设置图标图形 <公开 注释 = "用法：把XUI波特形状图片框的图标图形设为给定值。 参数：值1=可绘制对象类。 返回：无。 原方法：XUI波特形状图片框.setIconDrawable()">
+    参数 值1 <类型 = 可绘制对象类>
+    {
+        @ @m<RUN_UI_ACTION> (GetPorterShapeImageView ().setIconDrawable (@<值1>))
+    }
+
+}
+
+类 XUI闪耀按钮 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.button.shinebutton.ShineButton)."
+        @文档 = "category = \"XUI.按钮\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.button.shinebutton.ShineButton\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.sb_normal_color\n        shown_name = \"未选中时的填充颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.sb_checked_color\n        shown_name = \"选中时的填充颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.sb_allow_random_color\n        shown_name = \"是否使用随机颜色\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.sb_shine_animation_duration\n        shown_name = \"发散动画持续的时间\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.sb_click_animation_duration\n        shown_name = \"点击动画持续的时间\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.sb_enable_flashing\n        shown_name = \"是否开启闪烁\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.sb_shine_distance_multiple\n        shown_name = \"发散距离的倍数\"\n        data_type = double\n    }\n    attr\n    {\n        name = app.sb_shine_count\n        shown_name = \"发散点的数量\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.sb_shine_size\n        shown_name = \"发散点起始的大小\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.sb_shine_turn_angle\n        shown_name = \"发散点的转角度数\"\n        data_type = double\n    }\n    attr\n    {\n        name = app.sb_small_shine_offset_angle\n        shown_name = \"小发散点的偏移角度\"\n        data_type = double\n    }\n    attr\n    {\n        name = app.sb_small_shine_color\n        shown_name = \"小发散点的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.sb_big_shine_color\n        shown_name = \"大发散点的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.sb_icon_image\n        shown_name = \"图标资源\"\n        data_type = string\n        detail_type = drawable_res_file\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI闪耀按钮, ShineButton, com.xuexiang.xui.widget.button.shinebutton.ShineButton)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetShineButton ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI闪耀按钮的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI闪耀按钮.getAlpha()">
+    {
+        @ (double)@sn<this>.GetShineButton ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI闪耀按钮的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI闪耀按钮.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetShineButton ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI闪耀按钮的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI闪耀按钮.isEnabled()">
+    {
+        @ @sn<this>.GetShineButton ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI闪耀按钮的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI闪耀按钮.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetShineButton ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI闪耀按钮的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI闪耀按钮.isClickable()">
+    {
+        @ @sn<this>.GetShineButton ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI闪耀按钮的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI闪耀按钮.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetShineButton ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI闪耀按钮的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI闪耀按钮.getElevation()">
+    {
+        @ (double)@sn<this>.GetShineButton ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI闪耀按钮的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI闪耀按钮.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetShineButton ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI闪耀按钮的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI闪耀按钮.getMinimumHeight()">
+    {
+        @ @sn<this>.GetShineButton ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI闪耀按钮的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI闪耀按钮.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetShineButton ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI闪耀按钮的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI闪耀按钮.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetShineButton ().setBackgroundColor (@<新值>))
+    }
+
+    方法 XUI图片 <公开 属性写 注释 = "用法：设置XUI闪耀按钮的XUI图片, 传入新值后立刻生效。 参数：新值=可绘制对象类。 返回：无。 原方法：XUI闪耀按钮.setImageDrawable()">
+    参数 新值 <类型 = 可绘制对象类>
+    {
+        @ @m<RUN_UI_ACTION> (GetShineButton ().setImageDrawable (@<新值>))
+    }
+
+    方法 XUI图片资源 <公开 属性写 注释 = "用法：设置XUI闪耀按钮的XUI图片资源, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI闪耀按钮.setImageResource()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetShineButton ().setImageResource (@<新值>))
+    }
+
+    方法 XUI图片位图 <公开 属性写 注释 = "用法：设置XUI闪耀按钮的XUI图片位图, 传入新值后立刻生效。 参数：新值=位图类。 返回：无。 原方法：XUI闪耀按钮.setImageBitmap()">
+    参数 新值 <类型 = 位图类>
+    {
+        @ @m<RUN_UI_ACTION> (GetShineButton ().setImageBitmap (@<新值>))
+    }
+
+    方法 取XUI图片 <公开 类型 = 可绘制对象类 @嵌入式方法 = "" 注释 = "java: public Drawable getDrawable()">
+    {
+        @ @sn<this>.GetShineButton ().getDrawable ()
+    }
+
+    方法 取颜色 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI闪耀按钮的颜色。 参数：无。 返回：整数。 原方法：XUI闪耀按钮.getColor()">
+    {
+        @ @sn<this>.GetShineButton ().getColor ()
+    }
+
+    方法 是否已勾选 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断XUI闪耀按钮是否已勾选。 参数：无。 返回：逻辑型。 原方法：XUI闪耀按钮.isChecked()">
+    {
+        @ @sn<this>.GetShineButton ().isChecked ()
+    }
+
+    方法 切换 <公开 注释 = "用法：切换XUI闪耀按钮的相关内容状态。 参数：无。 返回：无。 原方法：XUI闪耀按钮.toggle()">
+    {
+        @ @m<RUN_UI_ACTION> (GetShineButton ().toggle ())
+    }
+
+    方法 设置常规颜色 <公开 注释 = "用法：把XUI闪耀按钮的常规颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI闪耀按钮.setNormalColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetShineButton ().setNormalColor (@<值1>))
+    }
+
+    方法 设置已勾选颜色 <公开 注释 = "用法：把XUI闪耀按钮的已勾选颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI闪耀按钮.setCheckedColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetShineButton ().setCheckedColor (@<值1>))
+    }
+
+    方法 设置已勾选 <公开 注释 = "用法：把XUI闪耀按钮的已勾选设为给定值。 参数：值1=真/假、值2=真/假。 返回：无。 原方法：XUI闪耀按钮.setChecked()">
+    参数 值1 <类型 = 逻辑型>
+    参数 值2 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetShineButton ().setChecked (@<值1>, @<值2>))
+    }
+
+    方法 设置已勾选_2 <公开 注释 = "用法：把XUI闪耀按钮的已勾选_2设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI闪耀按钮.setChecked()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetShineButton ().setChecked (@<值1>))
+    }
+
+    方法 设置取消 <公开 注释 = "用法：把XUI闪耀按钮的取消设为给定值。 参数：无。 返回：无。 原方法：XUI闪耀按钮.setCancel()">
+    {
+        @ @m<RUN_UI_ACTION> (GetShineButton ().setCancel ())
+    }
+
+    方法 设置允许随机颜色 <公开 注释 = "用法：把XUI闪耀按钮的允许随机颜色设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI闪耀按钮.setAllowRandomColor()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetShineButton ().setAllowRandomColor (@<值1>))
+    }
+
+    方法 设置动画时长 <公开 注释 = "用法：把XUI闪耀按钮的动画时长设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI闪耀按钮.setAnimDuration()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetShineButton ().setAnimDuration (@<值1>))
+    }
+
+    方法 设置大高光颜色 <公开 注释 = "用法：把XUI闪耀按钮的大高光颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI闪耀按钮.setBigShineColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetShineButton ().setBigShineColor (@<值1>))
+    }
+
+    方法 设置点击动画时长 <公开 注释 = "用法：把XUI闪耀按钮的点击动画时长设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI闪耀按钮.setClickAnimDuration()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetShineButton ().setClickAnimDuration (@<值1>))
+    }
+
+    方法 设置高光数量 <公开 注释 = "用法：把XUI闪耀按钮的高光数量设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI闪耀按钮.setShineCount()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetShineButton ().setShineCount (@<值1>))
+    }
+
+    方法 设置高光距离多个 <公开 注释 = "用法：把XUI闪耀按钮的高光距离多个设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI闪耀按钮.setShineDistanceMultiple()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetShineButton ().setShineDistanceMultiple ((float) @<值1>))
+    }
+
+    方法 设置高光圈角度 <公开 注释 = "用法：把XUI闪耀按钮的高光圈角度设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI闪耀按钮.setShineTurnAngle()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetShineButton ().setShineTurnAngle ((float) @<值1>))
+    }
+
+    方法 设置小高光颜色 <公开 注释 = "用法：把XUI闪耀按钮的小高光颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI闪耀按钮.setSmallShineColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetShineButton ().setSmallShineColor (@<值1>))
+    }
+
+    方法 设置小高光关闭角度 <公开 注释 = "用法：把XUI闪耀按钮的小高光关闭角度设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI闪耀按钮.setSmallShineOffAngle()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetShineButton ().setSmallShineOffAngle ((float) @<值1>))
+    }
+
+    方法 设置高光大小 <公开 注释 = "用法：把XUI闪耀按钮的高光大小设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI闪耀按钮.setShineSize()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetShineButton ().setShineSize (@<值1>))
+    }
+
+    方法 显示动画 <公开 注释 = "用法：让XUI闪耀按钮显示出来。 参数：无。 返回：无。 原方法：XUI闪耀按钮.showAnim()">
+    {
+        @ @m<RUN_UI_ACTION> (GetShineButton ().showAnim ())
+    }
+
+    方法 设置图标资源 <公开 注释 = "用法：把XUI闪耀按钮的图标资源设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI闪耀按钮.setIconResource()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetShineButton ().setIconResource (@<值1>))
+    }
+
+}
+
+类 XUI闪耀视图 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.button.shinebutton.ShineView)."
+        @文档 = "category = \"XUI.按钮\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.button.shinebutton.ShineView\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI闪耀视图, ShineView, com.xuexiang.xui.widget.button.shinebutton.ShineView)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetShineView ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI闪耀视图的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI闪耀视图.getAlpha()">
+    {
+        @ (double)@sn<this>.GetShineView ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI闪耀视图的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI闪耀视图.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetShineView ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI闪耀视图的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI闪耀视图.isEnabled()">
+    {
+        @ @sn<this>.GetShineView ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI闪耀视图的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI闪耀视图.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetShineView ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI闪耀视图的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI闪耀视图.isClickable()">
+    {
+        @ @sn<this>.GetShineView ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI闪耀视图的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI闪耀视图.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetShineView ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI闪耀视图的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI闪耀视图.getElevation()">
+    {
+        @ (double)@sn<this>.GetShineView ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI闪耀视图的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI闪耀视图.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetShineView ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI闪耀视图的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI闪耀视图.getMinimumHeight()">
+    {
+        @ @sn<this>.GetShineView ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI闪耀视图的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI闪耀视图.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetShineView ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI闪耀视图的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI闪耀视图.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetShineView ().setBackgroundColor (@<新值>))
+    }
+
+}
+
+类 XUI开关按钮 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.button.switchbutton.SwitchButton)."
+        @文档 = "category = \"XUI.按钮\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.button.switchbutton.SwitchButton\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.swb_thumbDrawable\n        shown_name = \"滑动块的图片资源\"\n        data_type = string\n        detail_type = drawable_res_file\n    }\n    attr\n    {\n        name = app.swb_thumbColor\n        shown_name = \"滑动块的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.swb_thumbMargin\n        shown_name = \"滑动块的Margin\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.swb_thumbMarginTop\n        shown_name = \"thumbMarginTop\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.swb_thumbMarginBottom\n        shown_name = \"thumbMarginBottom\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.swb_thumbMarginLeft\n        shown_name = \"thumbMarginLeft\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.swb_thumbMarginRight\n        shown_name = \"thumbMarginRight\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.swb_thumbWidth\n        shown_name = \"滑动块的宽度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.swb_thumbHeight\n        shown_name = \"滑动块的高度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.swb_thumbRadius\n        shown_name = \"滑动块的边角\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.swb_backRadius\n        shown_name = \"开关背景的边角\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.swb_backDrawable\n        shown_name = \"开关的背景图片资源\"\n        data_type = string\n        detail_type = drawable_res_file\n    }\n    attr\n    {\n        name = app.swb_backColor\n        shown_name = \"开关的背景颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.swb_fadeBack\n        shown_name = \"当开关进行切换的时候\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.swb_thumbRangeRatio\n        shown_name = \"开关和滑动块所占宽度的比例\"\n        data_type = double\n    }\n    attr\n    {\n        name = app.swb_animationDuration\n        shown_name = \"切换时\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.swb_tintColor\n        shown_name = \"提示文字的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.swb_textOn\n        shown_name = \"开关开时的文字\"\n        data_type = string\n    }\n    attr\n    {\n        name = app.swb_textOff\n        shown_name = \"开关关时的文字\"\n        data_type = string\n    }\n    attr\n    {\n        name = app.swb_textThumbInset\n        shown_name = \"textThumbInset\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.swb_textExtra\n        shown_name = \"文字多余的空间\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.swb_textAdjust\n        shown_name = \"textAdjust\"\n        data_type = double\n        detail_type = dim\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI开关按钮, SwitchButton, com.xuexiang.xui.widget.button.switchbutton.SwitchButton)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetSwitchButton ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI开关按钮的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI开关按钮.getAlpha()">
+    {
+        @ (double)@sn<this>.GetSwitchButton ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI开关按钮的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI开关按钮.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSwitchButton ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI开关按钮的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI开关按钮.isEnabled()">
+    {
+        @ @sn<this>.GetSwitchButton ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI开关按钮的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI开关按钮.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetSwitchButton ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI开关按钮的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI开关按钮.isClickable()">
+    {
+        @ @sn<this>.GetSwitchButton ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI开关按钮的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI开关按钮.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetSwitchButton ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI开关按钮的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI开关按钮.getElevation()">
+    {
+        @ (double)@sn<this>.GetSwitchButton ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI开关按钮的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI开关按钮.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSwitchButton ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI开关按钮的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI开关按钮.getMinimumHeight()">
+    {
+        @ @sn<this>.GetSwitchButton ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI开关按钮的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI开关按钮.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSwitchButton ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI开关按钮的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI开关按钮.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSwitchButton ().setBackgroundColor (@<新值>))
+    }
+
+    方法 XUI文本 <公开 属性读 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读取XUI开关按钮的XUI文本当前值。 参数：无。 返回：文本型。 原方法：XUI开关按钮.getText()">
+    {
+        @ java.lang.String.valueOf (@sn<this>.GetSwitchButton ().getText ())
+    }
+
+    方法 XUI文本 <公开 属性写 注释 = "用法：设置XUI开关按钮的XUI文本, 传入新值后立刻生效。 参数：新值=文本。 返回：无。 原方法：XUI开关按钮.setText()">
+    参数 新值 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetSwitchButton ().setText (@<新值>))
+    }
+
+    方法 XUI文字颜色 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI开关按钮的XUI文字颜色当前值。 参数：无。 返回：整数。 原方法：XUI开关按钮.getCurrentTextColor()">
+    {
+        @ @sn<this>.GetSwitchButton ().getCurrentTextColor ()
+    }
+
+    方法 XUI文字颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI开关按钮的XUI文字颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI开关按钮.setTextColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSwitchButton ().setTextColor (@<新值>))
+    }
+
+    方法 XUI文字大小 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI开关按钮的XUI文字大小当前值。 参数：无。 返回：小数。 原方法：XUI开关按钮.getTextSize()">
+    {
+        @ (double)@sn<this>.GetSwitchButton ().getTextSize ()
+    }
+
+    方法 XUI文字大小 <公开 属性写 注释 = "用法：设置XUI开关按钮的XUI文字大小, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI开关按钮.setTextSize()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSwitchButton ().setTextSize ((float) @<新值>))
+    }
+
+    方法 XUI提示文字 <公开 属性读 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读取XUI开关按钮的XUI提示文字当前值。 参数：无。 返回：文本型。 原方法：XUI开关按钮.getHint()">
+    {
+        @ java.lang.String.valueOf (@sn<this>.GetSwitchButton ().getHint ())
+    }
+
+    方法 XUI提示文字 <公开 属性写 注释 = "用法：设置XUI开关按钮的XUI提示文字, 传入新值后立刻生效。 参数：新值=文本。 返回：无。 原方法：XUI开关按钮.setHint()">
+    参数 新值 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetSwitchButton ().setHint (@<新值>))
+    }
+
+    方法 XUI最大行数 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI开关按钮的XUI最大行数当前值。 参数：无。 返回：整数。 原方法：XUI开关按钮.getMaxLines()">
+    {
+        @ @sn<this>.GetSwitchButton ().getMaxLines ()
+    }
+
+    方法 XUI最大行数 <公开 属性写 注释 = "用法：设置XUI开关按钮的XUI最大行数, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI开关按钮.setMaxLines()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSwitchButton ().setMaxLines (@<新值>))
+    }
+
+    方法 XUI单行 <公开 属性写 注释 = "用法：设置XUI开关按钮的XUI单行, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI开关按钮.setSingleLine()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetSwitchButton ().setSingleLine (@<新值>))
+    }
+
+    方法 XUI选中 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI开关按钮的XUI选中当前值。 参数：无。 返回：逻辑型。 原方法：XUI开关按钮.isChecked()">
+    {
+        @ @sn<this>.GetSwitchButton ().isChecked ()
+    }
+
+    方法 XUI选中 <公开 属性写 注释 = "用法：设置XUI开关按钮的XUI选中, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI开关按钮.setChecked()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetSwitchButton ().setChecked (@<新值>))
+    }
+
+    方法 执行点击 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：在XUI开关按钮上执行点击。 参数：无。 返回：逻辑型。 原方法：XUI开关按钮.performClick()">
+    {
+        @ @sn<this>.GetSwitchButton ().performClick ()
+    }
+
+    方法 设置已勾选 <公开 注释 = "用法：把XUI开关按钮的已勾选设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI开关按钮.setChecked()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetSwitchButton ().setChecked (@<值1>))
+    }
+
+    方法 设置已勾选无事件 <公开 注释 = "用法：把XUI开关按钮的已勾选无事件设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI开关按钮.setCheckedNoEvent()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetSwitchButton ().setCheckedNoEvent (@<值1>))
+    }
+
+    方法 设置已勾选立即无事件 <公开 注释 = "用法：把XUI开关按钮的已勾选立即无事件设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI开关按钮.setCheckedImmediatelyNoEvent()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetSwitchButton ().setCheckedImmediatelyNoEvent (@<值1>))
+    }
+
+    方法 切换无事件 <公开 注释 = "用法：切换XUI开关按钮的无事件状态。 参数：无。 返回：无。 原方法：XUI开关按钮.toggleNoEvent()">
+    {
+        @ @m<RUN_UI_ACTION> (GetSwitchButton ().toggleNoEvent ())
+    }
+
+    方法 切换立即无事件 <公开 注释 = "用法：切换XUI开关按钮的立即无事件状态。 参数：无。 返回：无。 原方法：XUI开关按钮.toggleImmediatelyNoEvent()">
+    {
+        @ @m<RUN_UI_ACTION> (GetSwitchButton ().toggleImmediatelyNoEvent ())
+    }
+
+    方法 设置已勾选立即 <公开 注释 = "用法：把XUI开关按钮的已勾选立即设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI开关按钮.setCheckedImmediately()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetSwitchButton ().setCheckedImmediately (@<值1>))
+    }
+
+    方法 切换立即 <公开 注释 = "用法：切换XUI开关按钮的立即状态。 参数：无。 返回：无。 原方法：XUI开关按钮.toggleImmediately()">
+    {
+        @ @m<RUN_UI_ACTION> (GetSwitchButton ().toggleImmediately ())
+    }
+
+    方法 是否绘制调试矩形 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断XUI开关按钮是否绘制调试矩形。 参数：无。 返回：逻辑型。 原方法：XUI开关按钮.isDrawDebugRect()">
+    {
+        @ @sn<this>.GetSwitchButton ().isDrawDebugRect ()
+    }
+
+    方法 设置绘制调试矩形 <公开 注释 = "用法：把XUI开关按钮的绘制调试矩形设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI开关按钮.setDrawDebugRect()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetSwitchButton ().setDrawDebugRect (@<值1>))
+    }
+
+    方法 取动画时长 <公开 类型 = 长整数 @嵌入式方法 = "" 注释 = "用法：读出XUI开关按钮的动画时长。 参数：无。 返回：长整数。 原方法：XUI开关按钮.getAnimationDuration()">
+    {
+        @ @sn<this>.GetSwitchButton ().getAnimationDuration ()
+    }
+
+    方法 设置动画时长 <公开 注释 = "用法：把XUI开关按钮的动画时长设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI开关按钮.setAnimationDuration()">
+    参数 值1 <类型 = 长整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSwitchButton ().setAnimationDuration (@<值1>))
+    }
+
+    方法 取滑块图形 <公开 类型 = 可绘制对象类 @嵌入式方法 = "" 注释 = "用法：读出XUI开关按钮的滑块图形。 参数：无。 返回：可绘制对象类。 原方法：XUI开关按钮.getThumbDrawable()">
+    {
+        @ @sn<this>.GetSwitchButton ().getThumbDrawable ()
+    }
+
+    方法 设置滑块图形 <公开 注释 = "用法：把XUI开关按钮的滑块图形设为给定值。 参数：值1=可绘制对象类。 返回：无。 原方法：XUI开关按钮.setThumbDrawable()">
+    参数 值1 <类型 = 可绘制对象类>
+    {
+        @ @m<RUN_UI_ACTION> (GetSwitchButton ().setThumbDrawable (@<值1>))
+    }
+
+    方法 设置滑块图形资源 <公开 注释 = "用法：把XUI开关按钮的滑块图形资源设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI开关按钮.setThumbDrawableRes()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSwitchButton ().setThumbDrawableRes (@<值1>))
+    }
+
+    方法 取后退图形 <公开 类型 = 可绘制对象类 @嵌入式方法 = "" 注释 = "用法：读出XUI开关按钮的后退图形。 参数：无。 返回：可绘制对象类。 原方法：XUI开关按钮.getBackDrawable()">
+    {
+        @ @sn<this>.GetSwitchButton ().getBackDrawable ()
+    }
+
+    方法 设置后退图形 <公开 注释 = "用法：把XUI开关按钮的后退图形设为给定值。 参数：值1=可绘制对象类。 返回：无。 原方法：XUI开关按钮.setBackDrawable()">
+    参数 值1 <类型 = 可绘制对象类>
+    {
+        @ @m<RUN_UI_ACTION> (GetSwitchButton ().setBackDrawable (@<值1>))
+    }
+
+    方法 设置后退图形资源 <公开 注释 = "用法：把XUI开关按钮的后退图形资源设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI开关按钮.setBackDrawableRes()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSwitchButton ().setBackDrawableRes (@<值1>))
+    }
+
+    方法 设置后退颜色资源 <公开 注释 = "用法：把XUI开关按钮的后退颜色资源设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI开关按钮.setBackColorRes()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSwitchButton ().setBackColorRes (@<值1>))
+    }
+
+    方法 设置滑块颜色资源 <公开 注释 = "用法：把XUI开关按钮的滑块颜色资源设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI开关按钮.setThumbColorRes()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSwitchButton ().setThumbColorRes (@<值1>))
+    }
+
+    方法 取滑块范围比例 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读出XUI开关按钮的滑块范围比例。 参数：无。 返回：小数。 原方法：XUI开关按钮.getThumbRangeRatio()">
+    {
+        @ (double)@sn<this>.GetSwitchButton ().getThumbRangeRatio ()
+    }
+
+    方法 设置滑块范围比例 <公开 注释 = "用法：把XUI开关按钮的滑块范围比例设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI开关按钮.setThumbRangeRatio()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSwitchButton ().setThumbRangeRatio ((float) @<值1>))
+    }
+
+    方法 设置滑块外边距 <公开 注释 = "用法：把XUI开关按钮的滑块外边距设为给定值。 参数：值1=小数、值2=小数、值3=小数、值4=小数。 返回：无。 原方法：XUI开关按钮.setThumbMargin()">
+    参数 值1 <类型 = 小数>
+    参数 值2 <类型 = 小数>
+    参数 值3 <类型 = 小数>
+    参数 值4 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSwitchButton ().setThumbMargin ((float) @<值1>, (float) @<值2>, (float) @<值3>, (float) @<值4>))
+    }
+
+    方法 设置滑块大小 <公开 注释 = "用法：把XUI开关按钮的滑块大小设为给定值。 参数：值1=整数、值2=整数。 返回：无。 原方法：XUI开关按钮.setThumbSize()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSwitchButton ().setThumbSize (@<值1>, @<值2>))
+    }
+
+    方法 取滑块宽度 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读出XUI开关按钮的滑块宽度。 参数：无。 返回：小数。 原方法：XUI开关按钮.getThumbWidth()">
+    {
+        @ (double)@sn<this>.GetSwitchButton ().getThumbWidth ()
+    }
+
+    方法 取滑块高度 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读出XUI开关按钮的滑块高度。 参数：无。 返回：小数。 原方法：XUI开关按钮.getThumbHeight()">
+    {
+        @ (double)@sn<this>.GetSwitchButton ().getThumbHeight ()
+    }
+
+    方法 取滑块圆角 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读出XUI开关按钮的滑块圆角。 参数：无。 返回：小数。 原方法：XUI开关按钮.getThumbRadius()">
+    {
+        @ (double)@sn<this>.GetSwitchButton ().getThumbRadius ()
+    }
+
+    方法 设置滑块圆角 <公开 注释 = "用法：把XUI开关按钮的滑块圆角设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI开关按钮.setThumbRadius()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSwitchButton ().setThumbRadius ((float) @<值1>))
+    }
+
+    方法 取后退圆角 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读出XUI开关按钮的后退圆角。 参数：无。 返回：小数。 原方法：XUI开关按钮.getBackRadius()">
+    {
+        @ (double)@sn<this>.GetSwitchButton ().getBackRadius ()
+    }
+
+    方法 设置后退圆角 <公开 注释 = "用法：把XUI开关按钮的后退圆角设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI开关按钮.setBackRadius()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSwitchButton ().setBackRadius ((float) @<值1>))
+    }
+
+    方法 是否淡变后退 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断XUI开关按钮是否淡变后退。 参数：无。 返回：逻辑型。 原方法：XUI开关按钮.isFadeBack()">
+    {
+        @ @sn<this>.GetSwitchButton ().isFadeBack ()
+    }
+
+    方法 设置淡变后退 <公开 注释 = "用法：把XUI开关按钮的淡变后退设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI开关按钮.setFadeBack()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetSwitchButton ().setFadeBack (@<值1>))
+    }
+
+    方法 取着色颜色 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI开关按钮的着色颜色。 参数：无。 返回：整数。 原方法：XUI开关按钮.getTintColor()">
+    {
+        @ @sn<this>.GetSwitchButton ().getTintColor ()
+    }
+
+    方法 设置着色颜色 <公开 注释 = "用法：把XUI开关按钮的着色颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI开关按钮.setTintColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSwitchButton ().setTintColor (@<值1>))
+    }
+
+    方法 设置文本 <公开 注释 = "用法：把XUI开关按钮的文本设为给定值。 参数：值1=文本、值2=文本。 返回：无。 原方法：XUI开关按钮.setText()">
+    参数 值1 <类型 = 文本型>
+    参数 值2 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetSwitchButton ().setText (@<值1>, @<值2>))
+    }
+
+    方法 取文本响应 <公开 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读出XUI开关按钮的文本响应。 参数：无。 返回：文本型。 原方法：XUI开关按钮.getTextOn()">
+    {
+        @ java.lang.String.valueOf (@sn<this>.GetSwitchButton ().getTextOn ())
+    }
+
+    方法 取文本关闭 <公开 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读出XUI开关按钮的文本关闭。 参数：无。 返回：文本型。 原方法：XUI开关按钮.getTextOff()">
+    {
+        @ java.lang.String.valueOf (@sn<this>.GetSwitchButton ().getTextOff ())
+    }
+
+    方法 设置文本滑块内缩 <公开 注释 = "用法：把XUI开关按钮的文本滑块内缩设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI开关按钮.setTextThumbInset()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSwitchButton ().setTextThumbInset (@<值1>))
+    }
+
+    方法 设置文本额外 <公开 注释 = "用法：把XUI开关按钮的文本额外设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI开关按钮.setTextExtra()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSwitchButton ().setTextExtra (@<值1>))
+    }
+
+    方法 设置文本调整 <公开 注释 = "用法：把XUI开关按钮的文本调整设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI开关按钮.setTextAdjust()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSwitchButton ().setTextAdjust (@<值1>))
+    }
+
+}

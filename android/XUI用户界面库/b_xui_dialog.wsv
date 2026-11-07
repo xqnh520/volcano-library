@@ -1,0 +1,83 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.安卓.XUI <注释 = "XUI 安卓 UI 工具库封装" @文档 = "category = \"XUI\"">
+
+
+类 XUI底部菜单项 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.dialog.bottomsheet.BottomSheetItemView)."
+        @文档 = "category = \"XUI.对话框\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.dialog.bottomsheet.BottomSheetItemView\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI底部菜单项, BottomSheetItemView, com.xuexiang.xui.widget.dialog.bottomsheet.BottomSheetItemView)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetBottomSheetItemView ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI底部菜单项的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI底部菜单项.getAlpha()">
+    {
+        @ (double)@sn<this>.GetBottomSheetItemView ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI底部菜单项的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI底部菜单项.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetBottomSheetItemView ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI底部菜单项的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI底部菜单项.isEnabled()">
+    {
+        @ @sn<this>.GetBottomSheetItemView ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI底部菜单项的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI底部菜单项.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetBottomSheetItemView ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI底部菜单项的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI底部菜单项.isClickable()">
+    {
+        @ @sn<this>.GetBottomSheetItemView ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI底部菜单项的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI底部菜单项.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetBottomSheetItemView ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI底部菜单项的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI底部菜单项.getElevation()">
+    {
+        @ (double)@sn<this>.GetBottomSheetItemView ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI底部菜单项的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI底部菜单项.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetBottomSheetItemView ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI底部菜单项的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI底部菜单项.getMinimumHeight()">
+    {
+        @ @sn<this>.GetBottomSheetItemView ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI底部菜单项的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI底部菜单项.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetBottomSheetItemView ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI底部菜单项的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI底部菜单项.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetBottomSheetItemView ().setBackgroundColor (@<新值>))
+    }
+
+    方法 到字符串 <公开 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：XUI底部菜单项 的 到字符串, 行为与 XUI 底层同名方法一致。 参数：无。 返回：文本型。 原方法：XUI底部菜单项.toString()">
+    {
+        @ @sn<this>.GetBottomSheetItemView ().toString ()
+    }
+
+}

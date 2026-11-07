@@ -1,0 +1,35 @@
+{
+  "Version": "1.0",
+  "Plugins": [
+    {
+      "Name": "Exchange.Xde",
+      "Url": "AnyCAD.Exchange.Xde",
+      "Enabled": true,
+      "Group": "IO"
+    },
+    {
+      "Name": "Exchange.DXF",
+      "Url": "AnyCAD.Exchange.DXF",
+      "Enabled": true,
+      "Group": "IO"
+    },
+    {
+      "Name": "Exchange.Mesh",
+      "Url": "AnyCAD.Exchange.Mesh",
+      "Enabled": true,
+      "Group": "IO"
+    },
+    {
+      "Name": "Exchange.Data",
+      "Url": "AnyCAD.Exchange.Data",
+      "Enabled": true,
+      "Group": "IO"
+    },
+    {
+      "Name": "Exchange.GLTF",
+      "Url": "AnyCAD.Exchange.GLTF",
+      "Enabled": true,
+      "Group": "IO"
+    }
+  ]
+}

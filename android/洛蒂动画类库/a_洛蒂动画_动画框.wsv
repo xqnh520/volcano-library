@@ -1,0 +1,2327 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.安卓.组件.洛蒂动画
+
+类 洛蒂全局 <公开 @别名 = "com.airbnb.lottie.L" @禁止创建对象 = 真 注释 = "★ 封装自 com.airbnb.android:lottie:6.7.1 (档 B 面向用户层).">
+{
+
+    方法 设置跟踪启用 <公开 静态 注释 = "java: public static void setTraceEnabled(boolean)">
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ com.airbnb.lottie.L.setTraceEnabled (@<启用>);
+    }
+
+    方法 是否跟踪启用 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public static boolean isTraceEnabled()">
+    {
+        @ com.airbnb.lottie.L.isTraceEnabled ()
+    }
+
+    方法 设置网络缓存启用 <公开 静态 注释 = "java: public static void setNetworkCacheEnabled(boolean)">
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ com.airbnb.lottie.L.setNetworkCacheEnabled (@<启用>);
+    }
+
+    方法 开始区段 <公开 静态 注释 = "java: public static void beginSection(java.lang.String)">
+    参数 区段 <类型 = 文本型>
+    {
+        @ com.airbnb.lottie.L.beginSection (@<区段>);
+    }
+
+    方法 结束区段 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public static float endSection(java.lang.String)">
+    参数 区段 <类型 = 文本型>
+    {
+        @ com.airbnb.lottie.L.endSection (@<区段>)
+    }
+
+    方法 设置抓取器 <公开 静态 注释 = "java: public static void setFetcher(com.airbnb.lottie.network.LottieNetworkFetcher)">
+    参数 自定义抓取器 <类型 = 洛蒂网络抓取接口>
+    {
+        @ com.airbnb.lottie.L.setFetcher (@<自定义抓取器>);
+    }
+
+    方法 设置缓存提供者 <公开 静态 注释 = "java: public static void setCacheProvider(com.airbnb.lottie.network.LottieNetworkCacheProvider)">
+    参数 自定义提供者 <类型 = 洛蒂网络缓存提供者>
+    {
+        @ com.airbnb.lottie.L.setCacheProvider (@<自定义提供者>);
+    }
+
+    方法 网络抓取器 <公开 静态 类型 = 洛蒂网络抓取器 @嵌入式方法 = "" 注释 = "java: public static com.airbnb.lottie.network.NetworkFetcher networkFetcher(android.content.Context)">
+    参数 上下文 <类型 = 安卓窗口环境>
+    {
+        @ com.airbnb.lottie.L.networkFetcher (@<上下文>)
+    }
+
+    方法 网络缓存 <公开 静态 类型 = 洛蒂网络缓存 @嵌入式方法 = "" 注释 = "java: public static com.airbnb.lottie.network.NetworkCache networkCache(android.content.Context)">
+    参数 上下文 <类型 = 安卓窗口环境>
+    {
+        @ com.airbnb.lottie.L.networkCache (@<上下文>)
+    }
+
+    方法 设置停用路径插值器缓存 <公开 静态 注释 = "java: public static void setDisablePathInterpolatorCache(boolean)">
+    参数 停用路径插值器缓存 <类型 = 逻辑型>
+    {
+        @ com.airbnb.lottie.L.setDisablePathInterpolatorCache (@<停用路径插值器缓存>);
+    }
+
+    方法 取停用路径插值器缓存 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public static boolean getDisablePathInterpolatorCache()">
+    {
+        @ com.airbnb.lottie.L.getDisablePathInterpolatorCache ()
+    }
+
+    方法 设置默认异步更新集 <公开 静态 注释 = "java: public static void setDefaultAsyncUpdates(com.airbnb.lottie.AsyncUpdates)">
+    参数 异步更新集 <类型 = 洛蒂异步更新策略>
+    {
+        @ com.airbnb.lottie.L.setDefaultAsyncUpdates (@<异步更新集>);
+    }
+
+    方法 取默认异步更新集 <公开 静态 类型 = 洛蒂异步更新策略 @嵌入式方法 = "" 注释 = "java: public static com.airbnb.lottie.AsyncUpdates getDefaultAsyncUpdates()">
+    {
+        @ com.airbnb.lottie.L.getDefaultAsyncUpdates ()
+    }
+
+    方法 设置缩减动效选项 <公开 静态 注释 = "java: public static void setReducedMotionOption(com.airbnb.lottie.configurations.reducemotion.ReducedMotionOption)">
+    参数 缩减动效选项 <类型 = 洛蒂缩减动效选项>
+    {
+        @ com.airbnb.lottie.L.setReducedMotionOption (@<缩减动效选项>);
+    }
+
+    方法 取缩减动效选项 <公开 静态 类型 = 洛蒂缩减动效选项 @嵌入式方法 = "" 注释 = "java: public static com.airbnb.lottie.configurations.reducemotion.ReducedMotionOption getReducedMotionOption()">
+    {
+        @ com.airbnb.lottie.L.getReducedMotionOption ()
+    }
+
+    方法 调试标记 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java 字段: public static boolean DBG">
+    {
+        @ com.airbnb.lottie.L.DBG
+    }
+
+    方法 标签 <公开 静态 类型 = 文本型 @嵌入式方法 = "" 注释 = "java 字段: public static final java.lang.String TAG">
+    {
+        @ com.airbnb.lottie.L.TAG
+    }
+
+}
+
+类 洛蒂入口 <公开 @别名 = "com.airbnb.lottie.Lottie" @禁止创建对象 = 真 注释 = "★ 封装自 com.airbnb.android:lottie:6.7.1 (档 B 面向用户层).">
+{
+
+    方法 初始化全局 <公开 静态 注释 = "java: public static void initialize(com.airbnb.lottie.LottieConfig)">
+    参数 洛蒂配置 <类型 = 洛蒂全局配置>
+    {
+        @ com.airbnb.lottie.Lottie.initialize (@<洛蒂配置>);
+    }
+
+}
+
+类 洛蒂动画框 <公开 基础类 = 图片框 注释 = "★ 封装自 com.airbnb.android:lottie:6.7.1 (档 B 面向用户层)."
+        注释 = "档 B 面向用户层: 51 类 / 426 方法 + 43 构造 / 75 字段; 每个成员的 java 原文写在自身 注释 里."
+        @文档 = "category = \"窗口组件\""
+        @强制依赖 = "兼容系列基础类\n高级兼容系列基础类"
+        @安卓.外部库 = "src\\libs\\lottie-6.7.1.aar\nsrc\\libs\\okio-1.17.6.jar"
+        @安卓.Gradle依赖 = "@androidx"
+        @java.导入 = "com.airbnb.lottie.LottieAnimationView"
+        @安卓.编译时系统需求 = 35
+        @安卓.窗口组件.布局配置 = "native_class = com.airbnb.lottie.LottieAnimationView\ncategory = \"洛蒂动画组件\"">
+{
+
+    # @ @m<DEFINE_CONTROL2> (洛蒂动画框, LottieAnimationView, com.airbnb.lottie.LottieAnimationView)
+
+    方法 设置忽略已禁用系统动画 <公开 注释 = "java: public void setIgnoreDisabledSystemAnimations(boolean)">
+    参数 忽略 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().setIgnoreDisabledSystemAnimations (@<忽略>))
+    }
+
+    方法 设置使用合成帧率 <公开 注释 = "java: public void setUseCompositionFrameRate(boolean)">
+    参数 使用合成帧率 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().setUseCompositionFrameRate (@<使用合成帧率>))
+    }
+
+    方法 启用合并路径集对应KitKat与上方 <公开 注释 = "java: public void enableMergePathsForKitKatAndAbove(boolean)">
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().enableMergePathsForKitKatAndAbove (@<启用>))
+    }
+
+    方法 是否合并路径集启用对应KitKat与上方 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isMergePathsEnabledForKitKatAndAbove()">
+    {
+        @ @sn<this>.GetLottieAnimationView ().isMergePathsEnabledForKitKatAndAbove ()
+    }
+
+    方法 启用特性开关 <公开 注释 = "java: public void enableFeatureFlag(com.airbnb.lottie.LottieFeatureFlag, boolean)">
+    参数 开关 <类型 = 洛蒂特性开关>
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().enableFeatureFlag (@<开关>, @<启用>))
+    }
+
+    方法 是否特性开关启用 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isFeatureFlagEnabled(com.airbnb.lottie.LottieFeatureFlag)">
+    参数 开关 <类型 = 洛蒂特性开关>
+    {
+        @ @sn<this>.GetLottieAnimationView ().isFeatureFlagEnabled (@<开关>)
+    }
+
+    方法 设置裁剪至合成边界 <公开 注释 = "java: public void setClipToCompositionBounds(boolean)">
+    参数 裁剪至合成边界 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().setClipToCompositionBounds (@<裁剪至合成边界>))
+    }
+
+    方法 取裁剪至合成边界 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean getClipToCompositionBounds()">
+    {
+        @ @sn<this>.GetLottieAnimationView ().getClipToCompositionBounds ()
+    }
+
+    方法 设置缓存合成 <公开 注释 = "java: public void setCacheComposition(boolean)">
+    参数 缓存合成 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().setCacheComposition (@<缓存合成>))
+    }
+
+    方法 设置轮廓遮罩集与蒙版集 <公开 注释 = "java: public void setOutlineMasksAndMattes(boolean)">
+    参数 轮廓 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().setOutlineMasksAndMattes (@<轮廓>))
+    }
+
+    方法 设置动画 <公开 注释 = "java: public void setAnimation(int)">
+    参数 原始资源 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().setAnimation ((int) @<原始资源>))
+    }
+
+    方法 设置动画_文本 <公开 注释 = "java: public void setAnimation(java.lang.String)">
+    参数 资产名称 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().setAnimation (@<资产名称>))
+    }
+
+    方法 设置动画_输入流_文本 <公开 注释 = "java: public void setAnimation(java.io.InputStream, java.lang.String)">
+    参数 流 <类型 = 洛蒂输入流类>
+    参数 缓存键 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().setAnimation (@<流>, @<缓存键>))
+    }
+
+    方法 设置动画_压缩包输入流_文本 <公开 注释 = "java: public void setAnimation(java.util.zip.ZipInputStream, java.lang.String)">
+    参数 流 <类型 = 洛蒂压缩包输入流类>
+    参数 缓存键 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().setAnimation (@<流>, @<缓存键>))
+    }
+
+    方法 设置动画来自JSON <公开 注释 = "java: public void setAnimationFromJson(java.lang.String)">
+    参数 JSON字符串 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().setAnimationFromJson (@<JSON字符串>))
+    }
+
+    方法 设置动画来自JSON_文本 <公开 注释 = "java: public void setAnimationFromJson(java.lang.String, java.lang.String)">
+    参数 JSON字符串 <类型 = 文本型>
+    参数 缓存键 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().setAnimationFromJson (@<JSON字符串>, @<缓存键>))
+    }
+
+    方法 设置动画来自网址 <公开 注释 = "java: public void setAnimationFromUrl(java.lang.String)">
+    参数 网址 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().setAnimationFromUrl (@<网址>))
+    }
+
+    方法 设置动画来自网址_文本 <公开 注释 = "java: public void setAnimationFromUrl(java.lang.String, java.lang.String)">
+    参数 网址 <类型 = 文本型>
+    参数 缓存键 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().setAnimationFromUrl (@<网址>, @<缓存键>))
+    }
+
+    方法 设置失败监听器 <公开 注释 = "java: public void setFailureListener(com.airbnb.lottie.LottieListener<java.lang.Throwable>)">
+    参数 失败监听器 <类型 = 洛蒂结果监听接口>
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().setFailureListener (@<失败监听器>))
+    }
+
+    方法 设置回退资源 <公开 注释 = "java: public void setFallbackResource(int)">
+    参数 回退资源 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().setFallbackResource ((int) @<回退资源>))
+    }
+
+    方法 设置合成 <公开 注释 = "java: public void setComposition(com.airbnb.lottie.LottieComposition)">
+    参数 合成 <类型 = 洛蒂动画合成>
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().setComposition (@<合成>))
+    }
+
+    方法 取合成 <公开 类型 = 洛蒂动画合成 @嵌入式方法 = "" 注释 = "java: public com.airbnb.lottie.LottieComposition getComposition()">
+    {
+        @ @sn<this>.GetLottieAnimationView ().getComposition ()
+    }
+
+    方法 是否含遮罩集 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean hasMasks()">
+    {
+        @ @sn<this>.GetLottieAnimationView ().hasMasks ()
+    }
+
+    方法 是否含蒙版 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean hasMatte()">
+    {
+        @ @sn<this>.GetLottieAnimationView ().hasMatte ()
+    }
+
+    方法 播放动画 <公开 注释 = "java: public void playAnimation()">
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().playAnimation ())
+    }
+
+    方法 恢复动画 <公开 注释 = "java: public void resumeAnimation()">
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().resumeAnimation ())
+    }
+
+    方法 设置最小帧 <公开 注释 = "java: public void setMinFrame(int)">
+    参数 起始帧 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().setMinFrame ((int) @<起始帧>))
+    }
+
+    方法 设置最小帧_文本 <公开 注释 = "java: public void setMinFrame(java.lang.String)">
+    参数 标记气泡名称 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().setMinFrame (@<标记气泡名称>))
+    }
+
+    方法 取最小帧 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getMinFrame()">
+    {
+        @ (double) @sn<this>.GetLottieAnimationView ().getMinFrame ()
+    }
+
+    方法 设置最小进度 <公开 注释 = "java: public void setMinProgress(float)">
+    参数 起始进度 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().setMinProgress ((float) @<起始进度>))
+    }
+
+    方法 设置最大帧 <公开 注释 = "java: public void setMaxFrame(int)">
+    参数 结束帧 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().setMaxFrame ((int) @<结束帧>))
+    }
+
+    方法 设置最大帧_文本 <公开 注释 = "java: public void setMaxFrame(java.lang.String)">
+    参数 标记气泡名称 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().setMaxFrame (@<标记气泡名称>))
+    }
+
+    方法 取最大帧 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getMaxFrame()">
+    {
+        @ (double) @sn<this>.GetLottieAnimationView ().getMaxFrame ()
+    }
+
+    方法 设置最大进度 <公开 注释 = "java: public void setMaxProgress(float)">
+    参数 结束进度 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().setMaxProgress ((float) @<结束进度>))
+    }
+
+    方法 设置最小与最大帧 <公开 注释 = "java: public void setMinAndMaxFrame(java.lang.String)">
+    参数 标记气泡名称 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().setMinAndMaxFrame (@<标记气泡名称>))
+    }
+
+    方法 设置最小与最大帧_整数_整数 <公开 注释 = "java: public void setMinAndMaxFrame(int, int)">
+    参数 最小帧 <类型 = 整数>
+    参数 最大帧 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().setMinAndMaxFrame ((int) @<最小帧>, (int) @<最大帧>))
+    }
+
+    方法 设置最小与最大帧_文本_开关 <公开 注释 = "java: public void setMinAndMaxFrame(java.lang.String, java.lang.String, boolean)">
+    参数 起始标记气泡名称 <类型 = 文本型>
+    参数 结束标记气泡名称 <类型 = 文本型>
+    参数 播放结束标记气泡起始帧 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().setMinAndMaxFrame (@<起始标记气泡名称>, @<结束标记气泡名称>, @<播放结束标记气泡起始帧>))
+    }
+
+    方法 设置最小与最大进度 <公开 注释 = "java: public void setMinAndMaxProgress(float, float)">
+    参数 最小进度 <类型 = 小数>
+    参数 最大进度 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().setMinAndMaxProgress ((float) @<最小进度>, (float) @<最大进度>))
+    }
+
+    方法 反转动画速度 <公开 注释 = "java: public void reverseAnimationSpeed()">
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().reverseAnimationSpeed ())
+    }
+
+    方法 设置速度 <公开 注释 = "java: public void setSpeed(float)">
+    参数 速度 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().setSpeed ((float) @<速度>))
+    }
+
+    方法 取速度 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getSpeed()">
+    {
+        @ (double) @sn<this>.GetLottieAnimationView ().getSpeed ()
+    }
+
+    方法 添加动画器更新监听器 <公开 注释 = "java: public void addAnimatorUpdateListener(android.animation.ValueAnimator$AnimatorUpdateListener)">
+    参数 参数1 <类型 = 洛蒂动画更新监听类>
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().addAnimatorUpdateListener (@<参数1>))
+    }
+
+    方法 移除更新监听器 <公开 注释 = "java: public void removeUpdateListener(android.animation.ValueAnimator$AnimatorUpdateListener)">
+    参数 参数1 <类型 = 洛蒂动画更新监听类>
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().removeUpdateListener (@<参数1>))
+    }
+
+    方法 移除全部更新监听器集 <公开 注释 = "java: public void removeAllUpdateListeners()">
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().removeAllUpdateListeners ())
+    }
+
+    方法 添加动画器监听器 <公开 注释 = "java: public void addAnimatorListener(android.animation.Animator$AnimatorListener)">
+    参数 参数1 <类型 = 洛蒂动画监听类>
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().addAnimatorListener (@<参数1>))
+    }
+
+    方法 移除动画器监听器 <公开 注释 = "java: public void removeAnimatorListener(android.animation.Animator$AnimatorListener)">
+    参数 参数1 <类型 = 洛蒂动画监听类>
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().removeAnimatorListener (@<参数1>))
+    }
+
+    方法 移除全部动画器监听器集 <公开 注释 = "java: public void removeAllAnimatorListeners()">
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().removeAllAnimatorListeners ())
+    }
+
+    方法 添加动画器暂停监听器 <公开 注释 = "java: public void addAnimatorPauseListener(android.animation.Animator$AnimatorPauseListener)">
+    参数 参数1 <类型 = 洛蒂动画暂停监听类>
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().addAnimatorPauseListener (@<参数1>))
+    }
+
+    方法 移除动画器暂停监听器 <公开 注释 = "java: public void removeAnimatorPauseListener(android.animation.Animator$AnimatorPauseListener)">
+    参数 参数1 <类型 = 洛蒂动画暂停监听类>
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().removeAnimatorPauseListener (@<参数1>))
+    }
+
+    方法 记录循环 <公开 注释 = "java: public void loop(boolean)">
+    参数 记录循环 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().loop (@<记录循环>))
+    }
+
+    方法 设置重复模式 <公开 注释 = "java: public void setRepeatMode(int)">
+    参数 参数1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().setRepeatMode ((int) @<参数1>))
+    }
+
+    方法 取重复模式 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getRepeatMode()">
+    {
+        @ @sn<this>.GetLottieAnimationView ().getRepeatMode ()
+    }
+
+    方法 设置重复数量 <公开 注释 = "java: public void setRepeatCount(int)">
+    参数 数量 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().setRepeatCount ((int) @<数量>))
+    }
+
+    方法 取重复数量 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getRepeatCount()">
+    {
+        @ @sn<this>.GetLottieAnimationView ().getRepeatCount ()
+    }
+
+    方法 是否播放动画 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isAnimating()">
+    {
+        @ @sn<this>.GetLottieAnimationView ().isAnimating ()
+    }
+
+    方法 设置图像资源目录目录 <公开 注释 = "java: public void setImageAssetsFolder(java.lang.String)">
+    参数 图像资源目录目录 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().setImageAssetsFolder (@<图像资源目录目录>))
+    }
+
+    方法 取图像资源目录目录 <公开 类型 = 文本型 @嵌入式方法 = "" 注释 = "java: public java.lang.String getImageAssetsFolder()">
+    {
+        @ @sn<this>.GetLottieAnimationView ().getImageAssetsFolder ()
+    }
+
+    方法 设置保持原图边界 <公开 注释 = "java: public void setMaintainOriginalImageBounds(boolean)">
+    参数 保持原图边界 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().setMaintainOriginalImageBounds (@<保持原图边界>))
+    }
+
+    方法 取保持原图边界 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean getMaintainOriginalImageBounds()">
+    {
+        @ @sn<this>.GetLottieAnimationView ().getMaintainOriginalImageBounds ()
+    }
+
+    方法 更新位图 <公开 类型 = 位图类 @嵌入式方法 = "" 注释 = "java: public android.graphics.Bitmap updateBitmap(java.lang.String, android.graphics.Bitmap)">
+    参数 标识 <类型 = 文本型>
+    参数 位图 <类型 = 位图类>
+    {
+        @ @sn<this>.GetLottieAnimationView ().updateBitmap (@<标识>, @<位图>)
+    }
+
+    方法 设置图像资产代理 <公开 注释 = "java: public void setImageAssetDelegate(com.airbnb.lottie.ImageAssetDelegate)">
+    参数 资产代理 <类型 = 洛蒂图片资产代理>
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().setImageAssetDelegate (@<资产代理>))
+    }
+
+    方法 设置默认字体文件扩展 <公开 注释 = "java: public void setDefaultFontFileExtension(java.lang.String)">
+    参数 扩展 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().setDefaultFontFileExtension (@<扩展>))
+    }
+
+    方法 设置字体资产代理 <公开 注释 = "java: public void setFontAssetDelegate(com.airbnb.lottie.FontAssetDelegate)">
+    参数 资产代理 <类型 = 洛蒂字体资产代理>
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().setFontAssetDelegate (@<资产代理>))
+    }
+
+    方法 设置字体映射 <公开 注释 = "java: public void setFontMap(java.util.Map<java.lang.String, android.graphics.Typeface>)">
+    参数 字体映射 <类型 = 洛蒂键值表类>
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().setFontMap (@<字体映射>))
+    }
+
+    方法 设置文本代理 <公开 注释 = "java: public void setTextDelegate(com.airbnb.lottie.TextDelegate)">
+    参数 文本代理 <类型 = 洛蒂文本代理>
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().setTextDelegate (@<文本代理>))
+    }
+
+    方法 解析键路径 <公开 类型 = 洛蒂列表类 @嵌入式方法 = "" 注释 = "java: public java.util.List<com.airbnb.lottie.model.KeyPath> resolveKeyPath(com.airbnb.lottie.model.KeyPath)">
+    参数 键路径 <类型 = 洛蒂键路径>
+    {
+        @ @sn<this>.GetLottieAnimationView ().resolveKeyPath (@<键路径>)
+    }
+
+    方法 清空取值回调 <公开 注释 = "java: public <T extends java.lang.Object> void clearValueCallback(com.airbnb.lottie.model.KeyPath, T)">
+    参数 键路径 <类型 = 洛蒂键路径>
+    参数 属性 <类型 = 对象类>
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().clearValueCallback (@<键路径>, @<属性>))
+    }
+
+    方法 添加取值回调 <公开 注释 = "java: public <T extends java.lang.Object> void addValueCallback(com.airbnb.lottie.model.KeyPath, T, com.airbnb.lottie.value.LottieValueCallback<T>)">
+    参数 键路径 <类型 = 洛蒂键路径>
+    参数 属性 <类型 = 对象类>
+    参数 回调 <类型 = 洛蒂取值回调>
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().addValueCallback (@<键路径>, @<属性>, @<回调>))
+    }
+
+    方法 添加取值回调_简单取值回调 <公开 注释 = "java: public <T extends java.lang.Object> void addValueCallback(com.airbnb.lottie.model.KeyPath, T, com.airbnb.lottie.value.SimpleLottieValueCallback<T>)">
+    参数 键路径 <类型 = 洛蒂键路径>
+    参数 属性 <类型 = 对象类>
+    参数 回调 <类型 = 洛蒂简单取值回调>
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().addValueCallback (@<键路径>, @<属性>, @<回调>))
+    }
+
+    方法 取消动画 <公开 注释 = "java: public void cancelAnimation()">
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().cancelAnimation ())
+    }
+
+    方法 暂停动画 <公开 注释 = "java: public void pauseAnimation()">
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().pauseAnimation ())
+    }
+
+    方法 设置帧 <公开 注释 = "java: public void setFrame(int)">
+    参数 帧 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().setFrame ((int) @<帧>))
+    }
+
+    方法 取帧 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getFrame()">
+    {
+        @ @sn<this>.GetLottieAnimationView ().getFrame ()
+    }
+
+    方法 设置进度 <公开 注释 = "java: public void setProgress(float)">
+    参数 进度 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().setProgress ((float) @<进度>))
+    }
+
+    方法 取进度 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getProgress()">
+    {
+        @ (double) @sn<this>.GetLottieAnimationView ().getProgress ()
+    }
+
+    方法 取时长 <公开 类型 = 长整数 @嵌入式方法 = "" 注释 = "java: public long getDuration()">
+    {
+        @ @sn<this>.GetLottieAnimationView ().getDuration ()
+    }
+
+    方法 设置性能跟踪启用 <公开 注释 = "java: public void setPerformanceTrackingEnabled(boolean)">
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().setPerformanceTrackingEnabled (@<启用>))
+    }
+
+    方法 取性能跟踪器 <公开 类型 = 洛蒂性能跟踪器 @嵌入式方法 = "" 注释 = "java: public com.airbnb.lottie.PerformanceTracker getPerformanceTracker()">
+    {
+        @ @sn<this>.GetLottieAnimationView ().getPerformanceTracker ()
+    }
+
+    方法 设置安全模式 <公开 注释 = "java: public void setSafeMode(boolean)">
+    参数 安全模式 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().setSafeMode (@<安全模式>))
+    }
+
+    方法 设置渲染模式 <公开 注释 = "java: public void setRenderMode(com.airbnb.lottie.RenderMode)">
+    参数 渲染模式 <类型 = 洛蒂渲染模式>
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().setRenderMode (@<渲染模式>))
+    }
+
+    方法 取渲染模式 <公开 类型 = 洛蒂渲染模式 @嵌入式方法 = "" 注释 = "java: public com.airbnb.lottie.RenderMode getRenderMode()">
+    {
+        @ @sn<this>.GetLottieAnimationView ().getRenderMode ()
+    }
+
+    方法 取异步更新集 <公开 类型 = 洛蒂异步更新策略 @嵌入式方法 = "" 注释 = "java: public com.airbnb.lottie.AsyncUpdates getAsyncUpdates()">
+    {
+        @ @sn<this>.GetLottieAnimationView ().getAsyncUpdates ()
+    }
+
+    方法 取异步更新集启用 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean getAsyncUpdatesEnabled()">
+    {
+        @ @sn<this>.GetLottieAnimationView ().getAsyncUpdatesEnabled ()
+    }
+
+    方法 设置异步更新集 <公开 注释 = "java: public void setAsyncUpdates(com.airbnb.lottie.AsyncUpdates)">
+    参数 异步更新集 <类型 = 洛蒂异步更新策略>
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().setAsyncUpdates (@<异步更新集>))
+    }
+
+    方法 设置施加不透明度至图层集启用 <公开 注释 = "java: public void setApplyingOpacityToLayersEnabled(boolean)">
+    参数 是否施加不透明度至图层集启用 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().setApplyingOpacityToLayersEnabled (@<是否施加不透明度至图层集启用>))
+    }
+
+    方法 设置施加阴影至图层集启用 <公开 注释 = "java: public void setApplyingShadowToLayersEnabled(boolean)">
+    参数 是否施加阴影至图层集启用 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().setApplyingShadowToLayersEnabled (@<是否施加阴影至图层集启用>))
+    }
+
+    方法 取裁剪文本至包围盒 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean getClipTextToBoundingBox()">
+    {
+        @ @sn<this>.GetLottieAnimationView ().getClipTextToBoundingBox ()
+    }
+
+    方法 设置裁剪文本至包围盒 <公开 注释 = "java: public void setClipTextToBoundingBox(boolean)">
+    参数 裁剪文本至包围盒 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().setClipTextToBoundingBox (@<裁剪文本至包围盒>))
+    }
+
+    方法 停用额外比例模式内适配横纵 <公开 注释 = "java: public void disableExtraScaleModeInFitXY()">
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().disableExtraScaleModeInFitXY ())
+    }
+
+    方法 添加洛蒂上合成已载入监听器 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean addLottieOnCompositionLoadedListener(com.airbnb.lottie.LottieOnCompositionLoadedListener)">
+    参数 洛蒂上合成已载入监听器 <类型 = 洛蒂动画合成已载入监听器>
+    {
+        @ @sn<this>.GetLottieAnimationView ().addLottieOnCompositionLoadedListener (@<洛蒂上合成已载入监听器>)
+    }
+
+    方法 移除洛蒂上合成已载入监听器 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean removeLottieOnCompositionLoadedListener(com.airbnb.lottie.LottieOnCompositionLoadedListener)">
+    参数 洛蒂上合成已载入监听器 <类型 = 洛蒂动画合成已载入监听器>
+    {
+        @ @sn<this>.GetLottieAnimationView ().removeLottieOnCompositionLoadedListener (@<洛蒂上合成已载入监听器>)
+    }
+
+    方法 移除全部洛蒂上合成已载入监听器 <公开 注释 = "java: public void removeAllLottieOnCompositionLoadedListener()">
+    {
+        @ @m<RUN_UI_ACTION> (GetLottieAnimationView ().removeAllLottieOnCompositionLoadedListener ())
+    }
+
+}
+
+类 洛蒂动画合成 <公开 @别名 = "com.airbnb.lottie.LottieComposition" @禁止创建对象 = 真 注释 = "★ 封装自 com.airbnb.android:lottie:6.7.1 (档 B 面向用户层).">
+{
+
+    方法 新建动画合成 <公开 静态 类型 = 洛蒂动画合成 @嵌入式方法 = "" 注释 = "java: public com.airbnb.lottie.LottieComposition()">
+    {
+        @ new com.airbnb.lottie.LottieComposition ()
+    }
+
+    方法 初始化 <公开 静态 注释 = "java: public void init(android.graphics.Rect, float, float, float, java.util.List<com.airbnb.lottie.model.layer.Layer>, androidx.collection.LongSparseArray<com.airbnb.lottie.model.layer.Layer>, java.util.Map<java.lang.String, java.util.List<com.airbnb.lottie.model.layer.Layer>>, java.util.Map<java.lang.String, com.airbnb.lottie.LottieImageAsset>, float, androidx.collection.SparseArrayCompat<com.airbnb.lottie.model.FontCharacter>, java.util.Map<java.lang.String, com.airbnb.lottie.model.Font>, java.util.List<com.airbnb.lottie.model.Marker>, int, int)">
+    参数 当前对象 <类型 = 洛蒂动画合成>
+    参数 边界 <类型 = 矩形类>
+    参数 起始帧 <类型 = 小数>
+    参数 结束帧 <类型 = 小数>
+    参数 帧率 <类型 = 小数>
+    参数 图层集 <类型 = 洛蒂列表类>
+    参数 图层映射 <类型 = 洛蒂长稀疏数组类>
+    参数 预合成集 <类型 = 洛蒂键值表类>
+    参数 图片集 <类型 = 洛蒂键值表类>
+    参数 图片集设备独立像素比例 <类型 = 小数>
+    参数 字符集 <类型 = 洛蒂稀疏数组类>
+    参数 字体集 <类型 = 洛蒂键值表类>
+    参数 标记气泡集 <类型 = 洛蒂列表类>
+    参数 未缩放宽度 <类型 = 整数>
+    参数 未缩放高度 <类型 = 整数>
+    {
+        @ @<当前对象>.init (@<边界>, (float) @<起始帧>, (float) @<结束帧>, (float) @<帧率>, @<图层集>, @<图层映射>, @<预合成集>, @<图片集>, (float) @<图片集设备独立像素比例>, @<字符集>, @<字体集>, @<标记气泡集>, (int) @<未缩放宽度>, (int) @<未缩放高度>);
+    }
+
+    方法 添加警告 <公开 静态 注释 = "java: public void addWarning(java.lang.String)">
+    参数 当前对象 <类型 = 洛蒂动画合成>
+    参数 报警告 <类型 = 文本型>
+    {
+        @ @<当前对象>.addWarning (@<报警告>);
+    }
+
+    方法 设置是否有虚线样式 <公开 静态 注释 = "java: public void setHasDashPattern(boolean)">
+    参数 当前对象 <类型 = 洛蒂动画合成>
+    参数 是否含虚线样式 <类型 = 逻辑型>
+    {
+        @ @<当前对象>.setHasDashPattern (@<是否含虚线样式>);
+    }
+
+    方法 递增蒙版或遮罩数量 <公开 静态 注释 = "java: public void incrementMatteOrMaskCount(int)">
+    参数 当前对象 <类型 = 洛蒂动画合成>
+    参数 数量 <类型 = 整数>
+    {
+        @ @<当前对象>.incrementMatteOrMaskCount ((int) @<数量>);
+    }
+
+    方法 是否含虚线样式 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean hasDashPattern()">
+    参数 当前对象 <类型 = 洛蒂动画合成>
+    {
+        @ @<当前对象>.hasDashPattern ()
+    }
+
+    方法 取遮罩与蒙版数量 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getMaskAndMatteCount()">
+    参数 当前对象 <类型 = 洛蒂动画合成>
+    {
+        @ @<当前对象>.getMaskAndMatteCount ()
+    }
+
+    方法 取警告集 <公开 静态 类型 = 洛蒂数组列表类 @嵌入式方法 = "" 注释 = "java: public java.util.ArrayList<java.lang.String> getWarnings()">
+    参数 当前对象 <类型 = 洛蒂动画合成>
+    {
+        @ @<当前对象>.getWarnings ()
+    }
+
+    方法 设置性能跟踪启用 <公开 静态 注释 = "java: public void setPerformanceTrackingEnabled(boolean)">
+    参数 当前对象 <类型 = 洛蒂动画合成>
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @<当前对象>.setPerformanceTrackingEnabled (@<启用>);
+    }
+
+    方法 取性能跟踪器 <公开 静态 类型 = 洛蒂性能跟踪器 @嵌入式方法 = "" 注释 = "java: public com.airbnb.lottie.PerformanceTracker getPerformanceTracker()">
+    参数 当前对象 <类型 = 洛蒂动画合成>
+    {
+        @ @<当前对象>.getPerformanceTracker ()
+    }
+
+    方法 图层模型对应标识 <公开 静态 类型 = 洛蒂图层 @嵌入式方法 = "" 注释 = "java: public com.airbnb.lottie.model.layer.Layer layerModelForId(long)">
+    参数 当前对象 <类型 = 洛蒂动画合成>
+    参数 标识 <类型 = 长整数>
+    {
+        @ @<当前对象>.layerModelForId ((long) @<标识>)
+    }
+
+    方法 取边界 <公开 静态 类型 = 矩形类 @嵌入式方法 = "" 注释 = "java: public android.graphics.Rect getBounds()">
+    参数 当前对象 <类型 = 洛蒂动画合成>
+    {
+        @ @<当前对象>.getBounds ()
+    }
+
+    方法 取时长 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getDuration()">
+    参数 当前对象 <类型 = 洛蒂动画合成>
+    {
+        @ @<当前对象>.getDuration ()
+    }
+
+    方法 取起始帧 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getStartFrame()">
+    参数 当前对象 <类型 = 洛蒂动画合成>
+    {
+        @ @<当前对象>.getStartFrame ()
+    }
+
+    方法 取结束帧 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getEndFrame()">
+    参数 当前对象 <类型 = 洛蒂动画合成>
+    {
+        @ @<当前对象>.getEndFrame ()
+    }
+
+    方法 取帧对应进度 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getFrameForProgress(float)">
+    参数 当前对象 <类型 = 洛蒂动画合成>
+    参数 进度 <类型 = 小数>
+    {
+        @ @<当前对象>.getFrameForProgress ((float) @<进度>)
+    }
+
+    方法 取进度对应帧 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getProgressForFrame(float)">
+    参数 当前对象 <类型 = 洛蒂动画合成>
+    参数 帧 <类型 = 小数>
+    {
+        @ @<当前对象>.getProgressForFrame ((float) @<帧>)
+    }
+
+    方法 取帧率 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getFrameRate()">
+    参数 当前对象 <类型 = 洛蒂动画合成>
+    {
+        @ @<当前对象>.getFrameRate ()
+    }
+
+    方法 取图层集 <公开 静态 类型 = 洛蒂列表类 @嵌入式方法 = "" 注释 = "java: public java.util.List<com.airbnb.lottie.model.layer.Layer> getLayers()">
+    参数 当前对象 <类型 = 洛蒂动画合成>
+    {
+        @ @<当前对象>.getLayers ()
+    }
+
+    方法 取预合成集 <公开 静态 类型 = 洛蒂列表类 @嵌入式方法 = "" 注释 = "java: public java.util.List<com.airbnb.lottie.model.layer.Layer> getPrecomps(java.lang.String)">
+    参数 当前对象 <类型 = 洛蒂动画合成>
+    参数 标识 <类型 = 文本型>
+    {
+        @ @<当前对象>.getPrecomps (@<标识>)
+    }
+
+    方法 取字符集 <公开 静态 类型 = 洛蒂稀疏数组类 @嵌入式方法 = "" 注释 = "java: public androidx.collection.SparseArrayCompat<com.airbnb.lottie.model.FontCharacter> getCharacters()">
+    参数 当前对象 <类型 = 洛蒂动画合成>
+    {
+        @ @<当前对象>.getCharacters ()
+    }
+
+    方法 取字体集 <公开 静态 类型 = 洛蒂键值表类 @嵌入式方法 = "" 注释 = "java: public java.util.Map<java.lang.String, com.airbnb.lottie.model.Font> getFonts()">
+    参数 当前对象 <类型 = 洛蒂动画合成>
+    {
+        @ @<当前对象>.getFonts ()
+    }
+
+    方法 取标记气泡集 <公开 静态 类型 = 洛蒂列表类 @嵌入式方法 = "" 注释 = "java: public java.util.List<com.airbnb.lottie.model.Marker> getMarkers()">
+    参数 当前对象 <类型 = 洛蒂动画合成>
+    {
+        @ @<当前对象>.getMarkers ()
+    }
+
+    方法 取标记气泡 <公开 静态 类型 = 洛蒂标记 @嵌入式方法 = "" 注释 = "java: public com.airbnb.lottie.model.Marker getMarker(java.lang.String)">
+    参数 当前对象 <类型 = 洛蒂动画合成>
+    参数 标记气泡名称 <类型 = 文本型>
+    {
+        @ @<当前对象>.getMarker (@<标记气泡名称>)
+    }
+
+    方法 是否含图片集 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean hasImages()">
+    参数 当前对象 <类型 = 洛蒂动画合成>
+    {
+        @ @<当前对象>.hasImages ()
+    }
+
+    方法 取图片集 <公开 静态 类型 = 洛蒂键值表类 @嵌入式方法 = "" 注释 = "java: public java.util.Map<java.lang.String, com.airbnb.lottie.LottieImageAsset> getImages()">
+    参数 当前对象 <类型 = 洛蒂动画合成>
+    {
+        @ @<当前对象>.getImages ()
+    }
+
+    方法 取时长帧集 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getDurationFrames()">
+    参数 当前对象 <类型 = 洛蒂动画合成>
+    {
+        @ @<当前对象>.getDurationFrames ()
+    }
+
+    方法 取未缩放宽度 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getUnscaledWidth()">
+    参数 当前对象 <类型 = 洛蒂动画合成>
+    {
+        @ @<当前对象>.getUnscaledWidth ()
+    }
+
+    方法 取未缩放高度 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getUnscaledHeight()">
+    参数 当前对象 <类型 = 洛蒂动画合成>
+    {
+        @ @<当前对象>.getUnscaledHeight ()
+    }
+
+    方法 转为字符串 <公开 静态 类型 = 文本型 @嵌入式方法 = "" 注释 = "java: public java.lang.String toString()">
+    参数 当前对象 <类型 = 洛蒂动画合成>
+    {
+        @ @<当前对象>.toString ()
+    }
+
+}
+
+类 洛蒂动画合成工厂 <公开 @别名 = "com.airbnb.lottie.LottieCompositionFactory" @禁止创建对象 = 真 注释 = "★ 封装自 com.airbnb.android:lottie:6.7.1 (档 B 面向用户层).">
+{
+
+    方法 设置最大缓存尺寸 <公开 静态 注释 = "java: public static void setMaxCacheSize(int)">
+    参数 尺寸 <类型 = 整数>
+    {
+        @ com.airbnb.lottie.LottieCompositionFactory.setMaxCacheSize ((int) @<尺寸>);
+    }
+
+    方法 清空缓存 <公开 静态 注释 = "java: public static void clearCache(android.content.Context)">
+    参数 上下文 <类型 = 安卓窗口环境>
+    {
+        @ com.airbnb.lottie.LottieCompositionFactory.clearCache (@<上下文>);
+    }
+
+    方法 清空缓存_开关 <公开 静态 注释 = "java: public static void clearCache(android.content.Context, boolean)">
+    参数 上下文 <类型 = 安卓窗口环境>
+    参数 包含网络 <类型 = 逻辑型>
+    {
+        @ com.airbnb.lottie.LottieCompositionFactory.clearCache (@<上下文>, @<包含网络>);
+    }
+
+    方法 登记洛蒂任务空闲监听器 <公开 静态 注释 = "java: public static void registerLottieTaskIdleListener(com.airbnb.lottie.LottieTaskIdleListener)">
+    参数 监听器 <类型 = 洛蒂任务空闲监听接口>
+    {
+        @ com.airbnb.lottie.LottieCompositionFactory.registerLottieTaskIdleListener (@<监听器>);
+    }
+
+    方法 注销洛蒂任务空闲监听器 <公开 静态 注释 = "java: public static void unregisterLottieTaskIdleListener(com.airbnb.lottie.LottieTaskIdleListener)">
+    参数 监听器 <类型 = 洛蒂任务空闲监听接口>
+    {
+        @ com.airbnb.lottie.LottieCompositionFactory.unregisterLottieTaskIdleListener (@<监听器>);
+    }
+
+    方法 来自网址 <公开 静态 类型 = 洛蒂任务 @嵌入式方法 = "" 注释 = "java: public static com.airbnb.lottie.LottieTask<com.airbnb.lottie.LottieComposition> fromUrl(android.content.Context, java.lang.String)">
+    参数 上下文 <类型 = 安卓窗口环境>
+    参数 网址 <类型 = 文本型>
+    {
+        @ com.airbnb.lottie.LottieCompositionFactory.fromUrl (@<上下文>, @<网址>)
+    }
+
+    方法 来自网址_文本 <公开 静态 类型 = 洛蒂任务 @嵌入式方法 = "" 注释 = "java: public static com.airbnb.lottie.LottieTask<com.airbnb.lottie.LottieComposition> fromUrl(android.content.Context, java.lang.String, java.lang.String)">
+    参数 上下文 <类型 = 安卓窗口环境>
+    参数 网址 <类型 = 文本型>
+    参数 缓存键 <类型 = 文本型>
+    {
+        @ com.airbnb.lottie.LottieCompositionFactory.fromUrl (@<上下文>, @<网址>, @<缓存键>)
+    }
+
+    方法 来自网址同步 <公开 静态 类型 = 洛蒂结果 @嵌入式方法 = "" 注释 = "java: public static com.airbnb.lottie.LottieResult<com.airbnb.lottie.LottieComposition> fromUrlSync(android.content.Context, java.lang.String)">
+    参数 上下文 <类型 = 安卓窗口环境>
+    参数 网址 <类型 = 文本型>
+    {
+        @ com.airbnb.lottie.LottieCompositionFactory.fromUrlSync (@<上下文>, @<网址>)
+    }
+
+    方法 来自网址同步_文本 <公开 静态 类型 = 洛蒂结果 @嵌入式方法 = "" 注释 = "java: public static com.airbnb.lottie.LottieResult<com.airbnb.lottie.LottieComposition> fromUrlSync(android.content.Context, java.lang.String, java.lang.String)">
+    参数 上下文 <类型 = 安卓窗口环境>
+    参数 网址 <类型 = 文本型>
+    参数 缓存键 <类型 = 文本型>
+    {
+        @ com.airbnb.lottie.LottieCompositionFactory.fromUrlSync (@<上下文>, @<网址>, @<缓存键>)
+    }
+
+    方法 来自资产 <公开 静态 类型 = 洛蒂任务 @嵌入式方法 = "" 注释 = "java: public static com.airbnb.lottie.LottieTask<com.airbnb.lottie.LottieComposition> fromAsset(android.content.Context, java.lang.String)">
+    参数 上下文 <类型 = 安卓窗口环境>
+    参数 文件名称 <类型 = 文本型>
+    {
+        @ com.airbnb.lottie.LottieCompositionFactory.fromAsset (@<上下文>, @<文件名称>)
+    }
+
+    方法 来自资产_文本 <公开 静态 类型 = 洛蒂任务 @嵌入式方法 = "" 注释 = "java: public static com.airbnb.lottie.LottieTask<com.airbnb.lottie.LottieComposition> fromAsset(android.content.Context, java.lang.String, java.lang.String)">
+    参数 上下文 <类型 = 安卓窗口环境>
+    参数 文件名称 <类型 = 文本型>
+    参数 缓存键 <类型 = 文本型>
+    {
+        @ com.airbnb.lottie.LottieCompositionFactory.fromAsset (@<上下文>, @<文件名称>, @<缓存键>)
+    }
+
+    方法 来自资产同步 <公开 静态 类型 = 洛蒂结果 @嵌入式方法 = "" 注释 = "java: public static com.airbnb.lottie.LottieResult<com.airbnb.lottie.LottieComposition> fromAssetSync(android.content.Context, java.lang.String)">
+    参数 上下文 <类型 = 安卓窗口环境>
+    参数 文件名称 <类型 = 文本型>
+    {
+        @ com.airbnb.lottie.LottieCompositionFactory.fromAssetSync (@<上下文>, @<文件名称>)
+    }
+
+    方法 来自资产同步_文本 <公开 静态 类型 = 洛蒂结果 @嵌入式方法 = "" 注释 = "java: public static com.airbnb.lottie.LottieResult<com.airbnb.lottie.LottieComposition> fromAssetSync(android.content.Context, java.lang.String, java.lang.String)">
+    参数 上下文 <类型 = 安卓窗口环境>
+    参数 文件名称 <类型 = 文本型>
+    参数 缓存键 <类型 = 文本型>
+    {
+        @ com.airbnb.lottie.LottieCompositionFactory.fromAssetSync (@<上下文>, @<文件名称>, @<缓存键>)
+    }
+
+    方法 来自输入流 <公开 静态 类型 = 洛蒂任务 @嵌入式方法 = "" 注释 = "java: public static com.airbnb.lottie.LottieTask<com.airbnb.lottie.LottieComposition> fromInputStream(android.content.Context, java.io.InputStream, java.lang.String)">
+    参数 上下文 <类型 = 安卓窗口环境>
+    参数 输入流 <类型 = 洛蒂输入流类>
+    参数 缓存键 <类型 = 文本型>
+    {
+        @ com.airbnb.lottie.LottieCompositionFactory.fromInputStream (@<上下文>, @<输入流>, @<缓存键>)
+    }
+
+    方法 来自输入流同步 <公开 静态 类型 = 洛蒂结果 @嵌入式方法 = "" 注释 = "java: public static com.airbnb.lottie.LottieResult<com.airbnb.lottie.LottieComposition> fromInputStreamSync(android.content.Context, java.io.InputStream, java.lang.String)">
+    参数 上下文 <类型 = 安卓窗口环境>
+    参数 输入流 <类型 = 洛蒂输入流类>
+    参数 缓存键 <类型 = 文本型>
+    {
+        @ com.airbnb.lottie.LottieCompositionFactory.fromInputStreamSync (@<上下文>, @<输入流>, @<缓存键>)
+    }
+
+    方法 来自原始资源 <公开 静态 类型 = 洛蒂任务 @嵌入式方法 = "" 注释 = "java: public static com.airbnb.lottie.LottieTask<com.airbnb.lottie.LottieComposition> fromRawRes(android.content.Context, int)">
+    参数 上下文 <类型 = 安卓窗口环境>
+    参数 原始资源 <类型 = 整数>
+    {
+        @ com.airbnb.lottie.LottieCompositionFactory.fromRawRes (@<上下文>, (int) @<原始资源>)
+    }
+
+    方法 来自原始资源_文本 <公开 静态 类型 = 洛蒂任务 @嵌入式方法 = "" 注释 = "java: public static com.airbnb.lottie.LottieTask<com.airbnb.lottie.LottieComposition> fromRawRes(android.content.Context, int, java.lang.String)">
+    参数 上下文 <类型 = 安卓窗口环境>
+    参数 原始资源 <类型 = 整数>
+    参数 缓存键 <类型 = 文本型>
+    {
+        @ com.airbnb.lottie.LottieCompositionFactory.fromRawRes (@<上下文>, (int) @<原始资源>, @<缓存键>)
+    }
+
+    方法 来自原始资源同步 <公开 静态 类型 = 洛蒂结果 @嵌入式方法 = "" 注释 = "java: public static com.airbnb.lottie.LottieResult<com.airbnb.lottie.LottieComposition> fromRawResSync(android.content.Context, int)">
+    参数 上下文 <类型 = 安卓窗口环境>
+    参数 原始资源 <类型 = 整数>
+    {
+        @ com.airbnb.lottie.LottieCompositionFactory.fromRawResSync (@<上下文>, (int) @<原始资源>)
+    }
+
+    方法 来自原始资源同步_文本 <公开 静态 类型 = 洛蒂结果 @嵌入式方法 = "" 注释 = "java: public static com.airbnb.lottie.LottieResult<com.airbnb.lottie.LottieComposition> fromRawResSync(android.content.Context, int, java.lang.String)">
+    参数 上下文 <类型 = 安卓窗口环境>
+    参数 原始资源 <类型 = 整数>
+    参数 缓存键 <类型 = 文本型>
+    {
+        @ com.airbnb.lottie.LottieCompositionFactory.fromRawResSync (@<上下文>, (int) @<原始资源>, @<缓存键>)
+    }
+
+    方法 来自JSON输入流 <公开 静态 类型 = 洛蒂任务 @嵌入式方法 = "" 注释 = "java: public static com.airbnb.lottie.LottieTask<com.airbnb.lottie.LottieComposition> fromJsonInputStream(java.io.InputStream, java.lang.String)">
+    参数 流 <类型 = 洛蒂输入流类>
+    参数 缓存键 <类型 = 文本型>
+    {
+        @ com.airbnb.lottie.LottieCompositionFactory.fromJsonInputStream (@<流>, @<缓存键>)
+    }
+
+    方法 来自JSON输入流_开关 <公开 静态 类型 = 洛蒂任务 @嵌入式方法 = "" 注释 = "java: public static com.airbnb.lottie.LottieTask<com.airbnb.lottie.LottieComposition> fromJsonInputStream(java.io.InputStream, java.lang.String, boolean)">
+    参数 流 <类型 = 洛蒂输入流类>
+    参数 缓存键 <类型 = 文本型>
+    参数 闭合 <类型 = 逻辑型>
+    {
+        @ com.airbnb.lottie.LottieCompositionFactory.fromJsonInputStream (@<流>, @<缓存键>, @<闭合>)
+    }
+
+    方法 来自JSON输入流同步 <公开 静态 类型 = 洛蒂结果 @嵌入式方法 = "" 注释 = "java: public static com.airbnb.lottie.LottieResult<com.airbnb.lottie.LottieComposition> fromJsonInputStreamSync(java.io.InputStream, java.lang.String)">
+    参数 流 <类型 = 洛蒂输入流类>
+    参数 缓存键 <类型 = 文本型>
+    {
+        @ com.airbnb.lottie.LottieCompositionFactory.fromJsonInputStreamSync (@<流>, @<缓存键>)
+    }
+
+    方法 来自JSON输入流同步_开关 <公开 静态 类型 = 洛蒂结果 @嵌入式方法 = "" 注释 = "java: public static com.airbnb.lottie.LottieResult<com.airbnb.lottie.LottieComposition> fromJsonInputStreamSync(java.io.InputStream, java.lang.String, boolean)">
+    参数 流 <类型 = 洛蒂输入流类>
+    参数 缓存键 <类型 = 文本型>
+    参数 闭合 <类型 = 逻辑型>
+    {
+        @ com.airbnb.lottie.LottieCompositionFactory.fromJsonInputStreamSync (@<流>, @<缓存键>, @<闭合>)
+    }
+
+    方法 来自JSON <公开 静态 类型 = 洛蒂任务 @嵌入式方法 = "" 注释 = "java: public static com.airbnb.lottie.LottieTask<com.airbnb.lottie.LottieComposition> fromJson(org.json.JSONObject, java.lang.String)">
+    参数 JSON <类型 = 洛蒂JSON对象类>
+    参数 缓存键 <类型 = 文本型>
+    {
+        @ com.airbnb.lottie.LottieCompositionFactory.fromJson (@<JSON>, @<缓存键>)
+    }
+
+    方法 来自JSON同步 <公开 静态 类型 = 洛蒂结果 @嵌入式方法 = "" 注释 = "java: public static com.airbnb.lottie.LottieResult<com.airbnb.lottie.LottieComposition> fromJsonSync(org.json.JSONObject, java.lang.String)">
+    参数 JSON <类型 = 洛蒂JSON对象类>
+    参数 缓存键 <类型 = 文本型>
+    {
+        @ com.airbnb.lottie.LottieCompositionFactory.fromJsonSync (@<JSON>, @<缓存键>)
+    }
+
+    方法 来自JSON字符串 <公开 静态 类型 = 洛蒂任务 @嵌入式方法 = "" 注释 = "java: public static com.airbnb.lottie.LottieTask<com.airbnb.lottie.LottieComposition> fromJsonString(java.lang.String, java.lang.String)">
+    参数 JSON <类型 = 文本型>
+    参数 缓存键 <类型 = 文本型>
+    {
+        @ com.airbnb.lottie.LottieCompositionFactory.fromJsonString (@<JSON>, @<缓存键>)
+    }
+
+    方法 来自JSON字符串同步 <公开 静态 类型 = 洛蒂结果 @嵌入式方法 = "" 注释 = "java: public static com.airbnb.lottie.LottieResult<com.airbnb.lottie.LottieComposition> fromJsonStringSync(java.lang.String, java.lang.String)">
+    参数 JSON <类型 = 文本型>
+    参数 缓存键 <类型 = 文本型>
+    {
+        @ com.airbnb.lottie.LottieCompositionFactory.fromJsonStringSync (@<JSON>, @<缓存键>)
+    }
+
+    方法 来自JSON源 <公开 静态 类型 = 洛蒂任务 @嵌入式方法 = "" 注释 = "java: public static com.airbnb.lottie.LottieTask<com.airbnb.lottie.LottieComposition> fromJsonSource(okio.Source, java.lang.String)">
+    参数 源 <类型 = 洛蒂字节源类>
+    参数 缓存键 <类型 = 文本型>
+    {
+        @ com.airbnb.lottie.LottieCompositionFactory.fromJsonSource (@<源>, @<缓存键>)
+    }
+
+    方法 来自JSON源同步 <公开 静态 类型 = 洛蒂结果 @嵌入式方法 = "" 注释 = "java: public static com.airbnb.lottie.LottieResult<com.airbnb.lottie.LottieComposition> fromJsonSourceSync(okio.Source, java.lang.String)">
+    参数 源 <类型 = 洛蒂字节源类>
+    参数 缓存键 <类型 = 文本型>
+    {
+        @ com.airbnb.lottie.LottieCompositionFactory.fromJsonSourceSync (@<源>, @<缓存键>)
+    }
+
+    方法 来自JSON源同步_开关 <公开 静态 类型 = 洛蒂结果 @嵌入式方法 = "" 注释 = "java: public static com.airbnb.lottie.LottieResult<com.airbnb.lottie.LottieComposition> fromJsonSourceSync(okio.Source, java.lang.String, boolean)">
+    参数 源 <类型 = 洛蒂字节源类>
+    参数 缓存键 <类型 = 文本型>
+    参数 闭合 <类型 = 逻辑型>
+    {
+        @ com.airbnb.lottie.LottieCompositionFactory.fromJsonSourceSync (@<源>, @<缓存键>, @<闭合>)
+    }
+
+    方法 来自JSON读取器 <公开 静态 类型 = 洛蒂任务 @嵌入式方法 = "" 注释 = "java: public static com.airbnb.lottie.LottieTask<com.airbnb.lottie.LottieComposition> fromJsonReader(com.airbnb.lottie.parser.moshi.JsonReader, java.lang.String)">
+    参数 读取器 <类型 = 洛蒂JSON读取器>
+    参数 缓存键 <类型 = 文本型>
+    {
+        @ com.airbnb.lottie.LottieCompositionFactory.fromJsonReader (@<读取器>, @<缓存键>)
+    }
+
+    方法 来自JSON读取器同步 <公开 静态 类型 = 洛蒂结果 @嵌入式方法 = "" 注释 = "java: public static com.airbnb.lottie.LottieResult<com.airbnb.lottie.LottieComposition> fromJsonReaderSync(com.airbnb.lottie.parser.moshi.JsonReader, java.lang.String)">
+    参数 读取器 <类型 = 洛蒂JSON读取器>
+    参数 缓存键 <类型 = 文本型>
+    {
+        @ com.airbnb.lottie.LottieCompositionFactory.fromJsonReaderSync (@<读取器>, @<缓存键>)
+    }
+
+    方法 来自JSON读取器同步_开关 <公开 静态 类型 = 洛蒂结果 @嵌入式方法 = "" 注释 = "java: public static com.airbnb.lottie.LottieResult<com.airbnb.lottie.LottieComposition> fromJsonReaderSync(com.airbnb.lottie.parser.moshi.JsonReader, java.lang.String, boolean)">
+    参数 读取器 <类型 = 洛蒂JSON读取器>
+    参数 缓存键 <类型 = 文本型>
+    参数 闭合 <类型 = 逻辑型>
+    {
+        @ com.airbnb.lottie.LottieCompositionFactory.fromJsonReaderSync (@<读取器>, @<缓存键>, @<闭合>)
+    }
+
+    方法 来自ZIP流 <公开 静态 类型 = 洛蒂任务 @嵌入式方法 = "" 注释 = "java: public static com.airbnb.lottie.LottieTask<com.airbnb.lottie.LottieComposition> fromZipStream(java.util.zip.ZipInputStream, java.lang.String)">
+    参数 输入流 <类型 = 洛蒂压缩包输入流类>
+    参数 缓存键 <类型 = 文本型>
+    {
+        @ com.airbnb.lottie.LottieCompositionFactory.fromZipStream (@<输入流>, @<缓存键>)
+    }
+
+    方法 来自ZIP流_开关 <公开 静态 类型 = 洛蒂任务 @嵌入式方法 = "" 注释 = "java: public static com.airbnb.lottie.LottieTask<com.airbnb.lottie.LottieComposition> fromZipStream(java.util.zip.ZipInputStream, java.lang.String, boolean)">
+    参数 输入流 <类型 = 洛蒂压缩包输入流类>
+    参数 缓存键 <类型 = 文本型>
+    参数 闭合 <类型 = 逻辑型>
+    {
+        @ com.airbnb.lottie.LottieCompositionFactory.fromZipStream (@<输入流>, @<缓存键>, @<闭合>)
+    }
+
+    方法 来自ZIP流_安卓窗口环境_压缩包输入流_文本 <公开 静态 类型 = 洛蒂任务 @嵌入式方法 = "" 注释 = "java: public static com.airbnb.lottie.LottieTask<com.airbnb.lottie.LottieComposition> fromZipStream(android.content.Context, java.util.zip.ZipInputStream, java.lang.String)">
+    参数 上下文 <类型 = 安卓窗口环境>
+    参数 输入流 <类型 = 洛蒂压缩包输入流类>
+    参数 缓存键 <类型 = 文本型>
+    {
+        @ com.airbnb.lottie.LottieCompositionFactory.fromZipStream (@<上下文>, @<输入流>, @<缓存键>)
+    }
+
+    方法 来自ZIP流_安卓窗口环境_压缩包输入流_文本_开关 <公开 静态 类型 = 洛蒂任务 @嵌入式方法 = "" 注释 = "java: public static com.airbnb.lottie.LottieTask<com.airbnb.lottie.LottieComposition> fromZipStream(android.content.Context, java.util.zip.ZipInputStream, java.lang.String, boolean)">
+    参数 上下文 <类型 = 安卓窗口环境>
+    参数 输入流 <类型 = 洛蒂压缩包输入流类>
+    参数 缓存键 <类型 = 文本型>
+    参数 闭合 <类型 = 逻辑型>
+    {
+        @ com.airbnb.lottie.LottieCompositionFactory.fromZipStream (@<上下文>, @<输入流>, @<缓存键>, @<闭合>)
+    }
+
+    方法 来自ZIP流同步 <公开 静态 类型 = 洛蒂结果 @嵌入式方法 = "" 注释 = "java: public static com.airbnb.lottie.LottieResult<com.airbnb.lottie.LottieComposition> fromZipStreamSync(java.util.zip.ZipInputStream, java.lang.String)">
+    参数 输入流 <类型 = 洛蒂压缩包输入流类>
+    参数 缓存键 <类型 = 文本型>
+    {
+        @ com.airbnb.lottie.LottieCompositionFactory.fromZipStreamSync (@<输入流>, @<缓存键>)
+    }
+
+    方法 来自ZIP流同步_开关 <公开 静态 类型 = 洛蒂结果 @嵌入式方法 = "" 注释 = "java: public static com.airbnb.lottie.LottieResult<com.airbnb.lottie.LottieComposition> fromZipStreamSync(java.util.zip.ZipInputStream, java.lang.String, boolean)">
+    参数 输入流 <类型 = 洛蒂压缩包输入流类>
+    参数 缓存键 <类型 = 文本型>
+    参数 闭合 <类型 = 逻辑型>
+    {
+        @ com.airbnb.lottie.LottieCompositionFactory.fromZipStreamSync (@<输入流>, @<缓存键>, @<闭合>)
+    }
+
+    方法 来自ZIP流同步_安卓窗口环境_压缩包输入流_文本 <公开 静态 类型 = 洛蒂结果 @嵌入式方法 = "" 注释 = "java: public static com.airbnb.lottie.LottieResult<com.airbnb.lottie.LottieComposition> fromZipStreamSync(android.content.Context, java.util.zip.ZipInputStream, java.lang.String)">
+    参数 上下文 <类型 = 安卓窗口环境>
+    参数 输入流 <类型 = 洛蒂压缩包输入流类>
+    参数 缓存键 <类型 = 文本型>
+    {
+        @ com.airbnb.lottie.LottieCompositionFactory.fromZipStreamSync (@<上下文>, @<输入流>, @<缓存键>)
+    }
+
+    方法 来自ZIP流同步_安卓窗口环境_压缩包输入流_文本_开关 <公开 静态 类型 = 洛蒂结果 @嵌入式方法 = "" 注释 = "java: public static com.airbnb.lottie.LottieResult<com.airbnb.lottie.LottieComposition> fromZipStreamSync(android.content.Context, java.util.zip.ZipInputStream, java.lang.String, boolean)">
+    参数 上下文 <类型 = 安卓窗口环境>
+    参数 输入流 <类型 = 洛蒂压缩包输入流类>
+    参数 缓存键 <类型 = 文本型>
+    参数 闭合 <类型 = 逻辑型>
+    {
+        @ com.airbnb.lottie.LottieCompositionFactory.fromZipStreamSync (@<上下文>, @<输入流>, @<缓存键>, @<闭合>)
+    }
+
+}
+
+类 洛蒂全局配置 <公开 @别名 = "com.airbnb.lottie.LottieConfig" @禁止创建对象 = 真 注释 = "★ 封装自 com.airbnb.android:lottie:6.7.1 (档 B 面向用户层).">
+{
+
+}
+
+类 洛蒂动画可绘制对象 <公开 @别名 = "com.airbnb.lottie.LottieDrawable" @禁止创建对象 = 真 注释 = "★ 封装自 com.airbnb.android:lottie:6.7.1 (档 B 面向用户层).">
+{
+
+    方法 新建动画可绘制对象 <公开 静态 类型 = 洛蒂动画可绘制对象 @嵌入式方法 = "" 注释 = "java: public com.airbnb.lottie.LottieDrawable()">
+    {
+        @ new com.airbnb.lottie.LottieDrawable ()
+    }
+
+    方法 是否含遮罩集 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean hasMasks()">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    {
+        @ @<当前对象>.hasMasks ()
+    }
+
+    方法 是否含蒙版 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean hasMatte()">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    {
+        @ @<当前对象>.hasMatte ()
+    }
+
+    方法 启用合并路径集对应KitKat与上方 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean enableMergePathsForKitKatAndAbove()">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    {
+        @ @<当前对象>.enableMergePathsForKitKatAndAbove ()
+    }
+
+    方法 启用合并路径集对应KitKat与上方_开关 <公开 静态 注释 = "java: public void enableMergePathsForKitKatAndAbove(boolean)">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @<当前对象>.enableMergePathsForKitKatAndAbove (@<启用>);
+    }
+
+    方法 是否合并路径集启用对应KitKat与上方 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isMergePathsEnabledForKitKatAndAbove()">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    {
+        @ @<当前对象>.isMergePathsEnabledForKitKatAndAbove ()
+    }
+
+    方法 启用特性开关 <公开 静态 注释 = "java: public void enableFeatureFlag(com.airbnb.lottie.LottieFeatureFlag, boolean)">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    参数 开关 <类型 = 洛蒂特性开关>
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @<当前对象>.enableFeatureFlag (@<开关>, @<启用>);
+    }
+
+    方法 是否特性开关启用 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isFeatureFlagEnabled(com.airbnb.lottie.LottieFeatureFlag)">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    参数 开关 <类型 = 洛蒂特性开关>
+    {
+        @ @<当前对象>.isFeatureFlagEnabled (@<开关>)
+    }
+
+    方法 设置裁剪至合成边界 <公开 静态 注释 = "java: public void setClipToCompositionBounds(boolean)">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    参数 裁剪至合成边界 <类型 = 逻辑型>
+    {
+        @ @<当前对象>.setClipToCompositionBounds (@<裁剪至合成边界>);
+    }
+
+    方法 取裁剪至合成边界 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean getClipToCompositionBounds()">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    {
+        @ @<当前对象>.getClipToCompositionBounds ()
+    }
+
+    方法 设置图片集资源目录目录 <公开 静态 注释 = "java: public void setImagesAssetsFolder(java.lang.String)">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    参数 图像资源目录目录 <类型 = 文本型>
+    {
+        @ @<当前对象>.setImagesAssetsFolder (@<图像资源目录目录>);
+    }
+
+    方法 取图像资源目录目录 <公开 静态 类型 = 文本型 @嵌入式方法 = "" 注释 = "java: public java.lang.String getImageAssetsFolder()">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    {
+        @ @<当前对象>.getImageAssetsFolder ()
+    }
+
+    方法 设置保持原图边界 <公开 静态 注释 = "java: public void setMaintainOriginalImageBounds(boolean)">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    参数 保持原图边界 <类型 = 逻辑型>
+    {
+        @ @<当前对象>.setMaintainOriginalImageBounds (@<保持原图边界>);
+    }
+
+    方法 取保持原图边界 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean getMaintainOriginalImageBounds()">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    {
+        @ @<当前对象>.getMaintainOriginalImageBounds ()
+    }
+
+    方法 设置合成 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean setComposition(com.airbnb.lottie.LottieComposition)">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    参数 合成 <类型 = 洛蒂动画合成>
+    {
+        @ @<当前对象>.setComposition (@<合成>)
+    }
+
+    方法 设置渲染模式 <公开 静态 注释 = "java: public void setRenderMode(com.airbnb.lottie.RenderMode)">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    参数 渲染模式 <类型 = 洛蒂渲染模式>
+    {
+        @ @<当前对象>.setRenderMode (@<渲染模式>);
+    }
+
+    方法 取异步更新集 <公开 静态 类型 = 洛蒂异步更新策略 @嵌入式方法 = "" 注释 = "java: public com.airbnb.lottie.AsyncUpdates getAsyncUpdates()">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    {
+        @ @<当前对象>.getAsyncUpdates ()
+    }
+
+    方法 取异步更新集启用 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean getAsyncUpdatesEnabled()">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    {
+        @ @<当前对象>.getAsyncUpdatesEnabled ()
+    }
+
+    方法 设置异步更新集 <公开 静态 注释 = "java: public void setAsyncUpdates(com.airbnb.lottie.AsyncUpdates)">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    参数 异步更新集 <类型 = 洛蒂异步更新策略>
+    {
+        @ @<当前对象>.setAsyncUpdates (@<异步更新集>);
+    }
+
+    方法 取渲染模式 <公开 静态 类型 = 洛蒂渲染模式 @嵌入式方法 = "" 注释 = "java: public com.airbnb.lottie.RenderMode getRenderMode()">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    {
+        @ @<当前对象>.getRenderMode ()
+    }
+
+    方法 设置性能跟踪启用 <公开 静态 注释 = "java: public void setPerformanceTrackingEnabled(boolean)">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @<当前对象>.setPerformanceTrackingEnabled (@<启用>);
+    }
+
+    方法 设置轮廓遮罩集与蒙版集 <公开 静态 注释 = "java: public void setOutlineMasksAndMattes(boolean)">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    参数 轮廓 <类型 = 逻辑型>
+    {
+        @ @<当前对象>.setOutlineMasksAndMattes (@<轮廓>);
+    }
+
+    方法 取性能跟踪器 <公开 静态 类型 = 洛蒂性能跟踪器 @嵌入式方法 = "" 注释 = "java: public com.airbnb.lottie.PerformanceTracker getPerformanceTracker()">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    {
+        @ @<当前对象>.getPerformanceTracker ()
+    }
+
+    方法 设置施加不透明度至图层集启用 <公开 静态 注释 = "java: public void setApplyingOpacityToLayersEnabled(boolean)">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    参数 是否施加不透明度至图层集启用 <类型 = 逻辑型>
+    {
+        @ @<当前对象>.setApplyingOpacityToLayersEnabled (@<是否施加不透明度至图层集启用>);
+    }
+
+    方法 设置施加阴影至图层集启用 <公开 静态 注释 = "java: public void setApplyingShadowToLayersEnabled(boolean)">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    参数 是否施加阴影集至图层集启用 <类型 = 逻辑型>
+    {
+        @ @<当前对象>.setApplyingShadowToLayersEnabled (@<是否施加阴影集至图层集启用>);
+    }
+
+    方法 停用额外比例模式内适配横纵 <公开 静态 注释 = "java: public void disableExtraScaleModeInFitXY()">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    {
+        @ @<当前对象>.disableExtraScaleModeInFitXY ();
+    }
+
+    方法 是否施加不透明度至图层集启用 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isApplyingOpacityToLayersEnabled()">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    {
+        @ @<当前对象>.isApplyingOpacityToLayersEnabled ()
+    }
+
+    方法 是否施加阴影至图层集启用 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isApplyingShadowToLayersEnabled()">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    {
+        @ @<当前对象>.isApplyingShadowToLayersEnabled ()
+    }
+
+    方法 取裁剪文本至包围盒 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean getClipTextToBoundingBox()">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    {
+        @ @<当前对象>.getClipTextToBoundingBox ()
+    }
+
+    方法 设置裁剪文本至包围盒 <公开 静态 注释 = "java: public void setClipTextToBoundingBox(boolean)">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    参数 裁剪文本至包围盒 <类型 = 逻辑型>
+    {
+        @ @<当前对象>.setClipTextToBoundingBox (@<裁剪文本至包围盒>);
+    }
+
+    方法 清空合成 <公开 静态 注释 = "java: public void clearComposition()">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    {
+        @ @<当前对象>.clearComposition ();
+    }
+
+    方法 设置安全模式 <公开 静态 注释 = "java: public void setSafeMode(boolean)">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    参数 安全模式 <类型 = 逻辑型>
+    {
+        @ @<当前对象>.setSafeMode (@<安全模式>);
+    }
+
+    方法 作废自身 <公开 静态 注释 = "java: public void invalidateSelf()">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    {
+        @ @<当前对象>.invalidateSelf ();
+    }
+
+    方法 设置透明度 <公开 静态 注释 = "java: public void setAlpha(int)">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    参数 透明度 <类型 = 整数>
+    {
+        @ @<当前对象>.setAlpha ((int) @<透明度>);
+    }
+
+    方法 取透明度 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getAlpha()">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    {
+        @ @<当前对象>.getAlpha ()
+    }
+
+    方法 设置颜色滤镜 <公开 静态 注释 = "java: public void setColorFilter(android.graphics.ColorFilter)">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    参数 颜色滤镜 <类型 = 洛蒂颜色过滤器类>
+    {
+        @ @<当前对象>.setColorFilter (@<颜色滤镜>);
+    }
+
+    方法 取不透明度 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getOpacity()">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    {
+        @ @<当前对象>.getOpacity ()
+    }
+
+    方法 绘制 <公开 静态 注释 = "java: public void draw(android.graphics.Canvas)">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    参数 画布 <类型 = 画板类>
+    {
+        @ @<当前对象>.draw (@<画布>);
+    }
+
+    方法 绘制_矩阵 <公开 静态 注释 = "java: public void draw(android.graphics.Canvas, android.graphics.Matrix)">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    参数 画布 <类型 = 画板类>
+    参数 矩阵 <类型 = 矩阵类>
+    {
+        @ @<当前对象>.draw (@<画布>, @<矩阵>);
+    }
+
+    方法 起始 <公开 静态 注释 = "java: public void start()">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    {
+        @ @<当前对象>.start ();
+    }
+
+    方法 停止 <公开 静态 注释 = "java: public void stop()">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    {
+        @ @<当前对象>.stop ();
+    }
+
+    方法 是否运行中 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isRunning()">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    {
+        @ @<当前对象>.isRunning ()
+    }
+
+    方法 播放动画 <公开 静态 注释 = "java: public void playAnimation()">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    {
+        @ @<当前对象>.playAnimation ();
+    }
+
+    方法 取标记气泡对应动画已禁用 <公开 静态 类型 = 洛蒂标记 @嵌入式方法 = "" 注释 = "java: public com.airbnb.lottie.model.Marker getMarkerForAnimationsDisabled()">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    {
+        @ @<当前对象>.getMarkerForAnimationsDisabled ()
+    }
+
+    方法 结束动画 <公开 静态 注释 = "java: public void endAnimation()">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    {
+        @ @<当前对象>.endAnimation ();
+    }
+
+    方法 恢复动画 <公开 静态 注释 = "java: public void resumeAnimation()">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    {
+        @ @<当前对象>.resumeAnimation ();
+    }
+
+    方法 设置最小帧 <公开 静态 注释 = "java: public void setMinFrame(int)">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    参数 最小帧 <类型 = 整数>
+    {
+        @ @<当前对象>.setMinFrame ((int) @<最小帧>);
+    }
+
+    方法 设置最小帧_文本 <公开 静态 注释 = "java: public void setMinFrame(java.lang.String)">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    参数 标记气泡名称 <类型 = 文本型>
+    {
+        @ @<当前对象>.setMinFrame (@<标记气泡名称>);
+    }
+
+    方法 取最小帧 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getMinFrame()">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    {
+        @ @<当前对象>.getMinFrame ()
+    }
+
+    方法 设置最小进度 <公开 静态 注释 = "java: public void setMinProgress(float)">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    参数 最小进度 <类型 = 小数>
+    {
+        @ @<当前对象>.setMinProgress ((float) @<最小进度>);
+    }
+
+    方法 设置最大帧 <公开 静态 注释 = "java: public void setMaxFrame(int)">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    参数 最大帧 <类型 = 整数>
+    {
+        @ @<当前对象>.setMaxFrame ((int) @<最大帧>);
+    }
+
+    方法 设置最大帧_文本 <公开 静态 注释 = "java: public void setMaxFrame(java.lang.String)">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    参数 标记气泡名称 <类型 = 文本型>
+    {
+        @ @<当前对象>.setMaxFrame (@<标记气泡名称>);
+    }
+
+    方法 取最大帧 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getMaxFrame()">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    {
+        @ @<当前对象>.getMaxFrame ()
+    }
+
+    方法 设置最大进度 <公开 静态 注释 = "java: public void setMaxProgress(float)">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    参数 最大进度 <类型 = 小数>
+    {
+        @ @<当前对象>.setMaxProgress ((float) @<最大进度>);
+    }
+
+    方法 设置最小与最大帧 <公开 静态 注释 = "java: public void setMinAndMaxFrame(java.lang.String)">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    参数 标记气泡名称 <类型 = 文本型>
+    {
+        @ @<当前对象>.setMinAndMaxFrame (@<标记气泡名称>);
+    }
+
+    方法 设置最小与最大帧_整数_整数 <公开 静态 注释 = "java: public void setMinAndMaxFrame(int, int)">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    参数 最小帧 <类型 = 整数>
+    参数 最大帧 <类型 = 整数>
+    {
+        @ @<当前对象>.setMinAndMaxFrame ((int) @<最小帧>, (int) @<最大帧>);
+    }
+
+    方法 设置最小与最大帧_文本_开关 <公开 静态 注释 = "java: public void setMinAndMaxFrame(java.lang.String, java.lang.String, boolean)">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    参数 起始标记气泡名称 <类型 = 文本型>
+    参数 结束标记气泡名称 <类型 = 文本型>
+    参数 播放结束标记气泡起始帧 <类型 = 逻辑型>
+    {
+        @ @<当前对象>.setMinAndMaxFrame (@<起始标记气泡名称>, @<结束标记气泡名称>, @<播放结束标记气泡起始帧>);
+    }
+
+    方法 设置最小与最大进度 <公开 静态 注释 = "java: public void setMinAndMaxProgress(float, float)">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    参数 最小进度 <类型 = 小数>
+    参数 最大进度 <类型 = 小数>
+    {
+        @ @<当前对象>.setMinAndMaxProgress ((float) @<最小进度>, (float) @<最大进度>);
+    }
+
+    方法 反转动画速度 <公开 静态 注释 = "java: public void reverseAnimationSpeed()">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    {
+        @ @<当前对象>.reverseAnimationSpeed ();
+    }
+
+    方法 设置速度 <公开 静态 注释 = "java: public void setSpeed(float)">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    参数 速度 <类型 = 小数>
+    {
+        @ @<当前对象>.setSpeed ((float) @<速度>);
+    }
+
+    方法 取速度 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getSpeed()">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    {
+        @ @<当前对象>.getSpeed ()
+    }
+
+    方法 添加动画器更新监听器 <公开 静态 注释 = "java: public void addAnimatorUpdateListener(android.animation.ValueAnimator$AnimatorUpdateListener)">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    参数 参数1 <类型 = 洛蒂动画更新监听类>
+    {
+        @ @<当前对象>.addAnimatorUpdateListener (@<参数1>);
+    }
+
+    方法 移除动画器更新监听器 <公开 静态 注释 = "java: public void removeAnimatorUpdateListener(android.animation.ValueAnimator$AnimatorUpdateListener)">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    参数 参数1 <类型 = 洛蒂动画更新监听类>
+    {
+        @ @<当前对象>.removeAnimatorUpdateListener (@<参数1>);
+    }
+
+    方法 移除全部更新监听器集 <公开 静态 注释 = "java: public void removeAllUpdateListeners()">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    {
+        @ @<当前对象>.removeAllUpdateListeners ();
+    }
+
+    方法 添加动画器监听器 <公开 静态 注释 = "java: public void addAnimatorListener(android.animation.Animator$AnimatorListener)">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    参数 参数1 <类型 = 洛蒂动画监听类>
+    {
+        @ @<当前对象>.addAnimatorListener (@<参数1>);
+    }
+
+    方法 移除动画器监听器 <公开 静态 注释 = "java: public void removeAnimatorListener(android.animation.Animator$AnimatorListener)">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    参数 参数1 <类型 = 洛蒂动画监听类>
+    {
+        @ @<当前对象>.removeAnimatorListener (@<参数1>);
+    }
+
+    方法 移除全部动画器监听器集 <公开 静态 注释 = "java: public void removeAllAnimatorListeners()">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    {
+        @ @<当前对象>.removeAllAnimatorListeners ();
+    }
+
+    方法 添加动画器暂停监听器 <公开 静态 注释 = "java: public void addAnimatorPauseListener(android.animation.Animator$AnimatorPauseListener)">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    参数 参数1 <类型 = 洛蒂动画暂停监听类>
+    {
+        @ @<当前对象>.addAnimatorPauseListener (@<参数1>);
+    }
+
+    方法 移除动画器暂停监听器 <公开 静态 注释 = "java: public void removeAnimatorPauseListener(android.animation.Animator$AnimatorPauseListener)">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    参数 参数1 <类型 = 洛蒂动画暂停监听类>
+    {
+        @ @<当前对象>.removeAnimatorPauseListener (@<参数1>);
+    }
+
+    方法 设置帧 <公开 静态 注释 = "java: public void setFrame(int)">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    参数 帧 <类型 = 整数>
+    {
+        @ @<当前对象>.setFrame ((int) @<帧>);
+    }
+
+    方法 取帧 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getFrame()">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    {
+        @ @<当前对象>.getFrame ()
+    }
+
+    方法 设置进度 <公开 静态 注释 = "java: public void setProgress(float)">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    参数 进度 <类型 = 小数>
+    {
+        @ @<当前对象>.setProgress ((float) @<进度>);
+    }
+
+    方法 记录循环 <公开 静态 注释 = "java: public void loop(boolean)">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    参数 记录循环 <类型 = 逻辑型>
+    {
+        @ @<当前对象>.loop (@<记录循环>);
+    }
+
+    方法 设置重复模式 <公开 静态 注释 = "java: public void setRepeatMode(int)">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    参数 模式 <类型 = 整数>
+    {
+        @ @<当前对象>.setRepeatMode ((int) @<模式>);
+    }
+
+    方法 取重复模式 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getRepeatMode()">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    {
+        @ @<当前对象>.getRepeatMode ()
+    }
+
+    方法 设置重复数量 <公开 静态 注释 = "java: public void setRepeatCount(int)">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    参数 数量 <类型 = 整数>
+    {
+        @ @<当前对象>.setRepeatCount ((int) @<数量>);
+    }
+
+    方法 取重复数量 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getRepeatCount()">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    {
+        @ @<当前对象>.getRepeatCount ()
+    }
+
+    方法 是否循环中 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isLooping()">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    {
+        @ @<当前对象>.isLooping ()
+    }
+
+    方法 是否播放动画 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isAnimating()">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    {
+        @ @<当前对象>.isAnimating ()
+    }
+
+    方法 动画启用 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean animationsEnabled(android.content.Context)">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    参数 上下文 <类型 = 安卓窗口环境>
+    {
+        @ @<当前对象>.animationsEnabled (@<上下文>)
+    }
+
+    方法 设置系统动画已启用 <公开 静态 注释 = "java: public void setSystemAnimationsAreEnabled(java.lang.Boolean)">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    参数 是启用 <类型 = 逻辑型>
+    {
+        @ @<当前对象>.setSystemAnimationsAreEnabled (@<是启用>);
+    }
+
+    方法 设置忽略已禁用系统动画 <公开 静态 注释 = "java: public void setIgnoreDisabledSystemAnimations(boolean)">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    参数 忽略 <类型 = 逻辑型>
+    {
+        @ @<当前对象>.setIgnoreDisabledSystemAnimations (@<忽略>);
+    }
+
+    方法 设置使用合成帧率 <公开 静态 注释 = "java: public void setUseCompositionFrameRate(boolean)">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    参数 使用合成帧率 <类型 = 逻辑型>
+    {
+        @ @<当前对象>.setUseCompositionFrameRate (@<使用合成帧率>);
+    }
+
+    方法 设置图像资产代理 <公开 静态 注释 = "java: public void setImageAssetDelegate(com.airbnb.lottie.ImageAssetDelegate)">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    参数 资产代理 <类型 = 洛蒂图片资产代理>
+    {
+        @ @<当前对象>.setImageAssetDelegate (@<资产代理>);
+    }
+
+    方法 设置字体资产代理 <公开 静态 注释 = "java: public void setFontAssetDelegate(com.airbnb.lottie.FontAssetDelegate)">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    参数 资产代理 <类型 = 洛蒂字体资产代理>
+    {
+        @ @<当前对象>.setFontAssetDelegate (@<资产代理>);
+    }
+
+    方法 设置字体映射 <公开 静态 注释 = "java: public void setFontMap(java.util.Map<java.lang.String, android.graphics.Typeface>)">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    参数 字体映射 <类型 = 洛蒂键值表类>
+    {
+        @ @<当前对象>.setFontMap (@<字体映射>);
+    }
+
+    方法 设置文本代理 <公开 静态 注释 = "java: public void setTextDelegate(com.airbnb.lottie.TextDelegate)">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    参数 文本代理 <类型 = 洛蒂文本代理>
+    {
+        @ @<当前对象>.setTextDelegate (@<文本代理>);
+    }
+
+    方法 取文本代理 <公开 静态 类型 = 洛蒂文本代理 @嵌入式方法 = "" 注释 = "java: public com.airbnb.lottie.TextDelegate getTextDelegate()">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    {
+        @ @<当前对象>.getTextDelegate ()
+    }
+
+    方法 使用文本字形 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean useTextGlyphs()">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    {
+        @ @<当前对象>.useTextGlyphs ()
+    }
+
+    方法 取合成 <公开 静态 类型 = 洛蒂动画合成 @嵌入式方法 = "" 注释 = "java: public com.airbnb.lottie.LottieComposition getComposition()">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    {
+        @ @<当前对象>.getComposition ()
+    }
+
+    方法 取消动画 <公开 静态 注释 = "java: public void cancelAnimation()">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    {
+        @ @<当前对象>.cancelAnimation ();
+    }
+
+    方法 暂停动画 <公开 静态 注释 = "java: public void pauseAnimation()">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    {
+        @ @<当前对象>.pauseAnimation ();
+    }
+
+    方法 取进度 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getProgress()">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    {
+        @ @<当前对象>.getProgress ()
+    }
+
+    方法 取固有宽度 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getIntrinsicWidth()">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    {
+        @ @<当前对象>.getIntrinsicWidth ()
+    }
+
+    方法 取固有高度 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getIntrinsicHeight()">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    {
+        @ @<当前对象>.getIntrinsicHeight ()
+    }
+
+    方法 解析键路径 <公开 静态 类型 = 洛蒂列表类 @嵌入式方法 = "" 注释 = "java: public java.util.List<com.airbnb.lottie.model.KeyPath> resolveKeyPath(com.airbnb.lottie.model.KeyPath)">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    参数 键路径 <类型 = 洛蒂键路径>
+    {
+        @ @<当前对象>.resolveKeyPath (@<键路径>)
+    }
+
+    方法 添加取值回调 <公开 静态 注释 = "java: public <T extends java.lang.Object> void addValueCallback(com.airbnb.lottie.model.KeyPath, T, com.airbnb.lottie.value.LottieValueCallback<T>)">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    参数 键路径 <类型 = 洛蒂键路径>
+    参数 属性 <类型 = 对象类>
+    参数 回调 <类型 = 洛蒂取值回调>
+    {
+        @ @<当前对象>.addValueCallback (@<键路径>, @<属性>, @<回调>);
+    }
+
+    方法 添加取值回调_简单取值回调 <公开 静态 注释 = "java: public <T extends java.lang.Object> void addValueCallback(com.airbnb.lottie.model.KeyPath, T, com.airbnb.lottie.value.SimpleLottieValueCallback<T>)">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    参数 键路径 <类型 = 洛蒂键路径>
+    参数 属性 <类型 = 对象类>
+    参数 回调 <类型 = 洛蒂简单取值回调>
+    {
+        @ @<当前对象>.addValueCallback (@<键路径>, @<属性>, @<回调>);
+    }
+
+    方法 更新位图 <公开 静态 类型 = 位图类 @嵌入式方法 = "" 注释 = "java: public android.graphics.Bitmap updateBitmap(java.lang.String, android.graphics.Bitmap)">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    参数 标识 <类型 = 文本型>
+    参数 位图 <类型 = 位图类>
+    {
+        @ @<当前对象>.updateBitmap (@<标识>, @<位图>)
+    }
+
+    方法 取图像资产 <公开 静态 类型 = 位图类 @嵌入式方法 = "" 注释 = "java: public android.graphics.Bitmap getImageAsset(java.lang.String)">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    参数 标识 <类型 = 文本型>
+    {
+        @ @<当前对象>.getImageAsset (@<标识>)
+    }
+
+    方法 取位图对应标识 <公开 静态 类型 = 位图类 @嵌入式方法 = "" 注释 = "java: public android.graphics.Bitmap getBitmapForId(java.lang.String)">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    参数 标识 <类型 = 文本型>
+    {
+        @ @<当前对象>.getBitmapForId (@<标识>)
+    }
+
+    方法 取洛蒂图像资产对应标识 <公开 静态 类型 = 洛蒂图片资产 @嵌入式方法 = "" 注释 = "java: public com.airbnb.lottie.LottieImageAsset getLottieImageAssetForId(java.lang.String)">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    参数 标识 <类型 = 文本型>
+    {
+        @ @<当前对象>.getLottieImageAssetForId (@<标识>)
+    }
+
+    方法 取字体族 <公开 静态 类型 = 字体类 @嵌入式方法 = "" 注释 = "java: public android.graphics.Typeface getTypeface(com.airbnb.lottie.model.Font)">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    参数 字体 <类型 = 洛蒂字体>
+    {
+        @ @<当前对象>.getTypeface (@<字体>)
+    }
+
+    方法 设置默认字体文件扩展 <公开 静态 注释 = "java: public void setDefaultFontFileExtension(java.lang.String)">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    参数 扩展 <类型 = 文本型>
+    {
+        @ @<当前对象>.setDefaultFontFileExtension (@<扩展>);
+    }
+
+    方法 设置可见 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean setVisible(boolean, boolean)">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    参数 可见 <类型 = 逻辑型>
+    参数 重新开始 <类型 = 逻辑型>
+    {
+        @ @<当前对象>.setVisible (@<可见>, @<重新开始>)
+    }
+
+    方法 作废可绘制对象 <公开 静态 注释 = "java: public void invalidateDrawable(android.graphics.drawable.Drawable)">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    参数 谁 <类型 = 可绘制对象类>
+    {
+        @ @<当前对象>.invalidateDrawable (@<谁>);
+    }
+
+    方法 调度可绘制对象 <公开 静态 注释 = "java: public void scheduleDrawable(android.graphics.drawable.Drawable, java.lang.Runnable, long)">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    参数 谁 <类型 = 可绘制对象类>
+    参数 什么 <类型 = 洛蒂可运行任务类>
+    参数 时 <类型 = 长整数>
+    {
+        @ @<当前对象>.scheduleDrawable (@<谁>, @<什么>, (long) @<时>);
+    }
+
+    方法 撤销调度可绘制对象 <公开 静态 注释 = "java: public void unscheduleDrawable(android.graphics.drawable.Drawable, java.lang.Runnable)">
+    参数 当前对象 <类型 = 洛蒂动画可绘制对象>
+    参数 谁 <类型 = 可绘制对象类>
+    参数 什么 <类型 = 洛蒂可运行任务类>
+    {
+        @ @<当前对象>.unscheduleDrawable (@<谁>, @<什么>);
+    }
+
+    方法 重新开始 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java 字段: public static final int RESTART">
+    {
+        @ com.airbnb.lottie.LottieDrawable.RESTART
+    }
+
+    方法 反转 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java 字段: public static final int REVERSE">
+    {
+        @ com.airbnb.lottie.LottieDrawable.REVERSE
+    }
+
+    方法 无限 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java 字段: public static final int INFINITE">
+    {
+        @ com.airbnb.lottie.LottieDrawable.INFINITE
+    }
+
+}
+
+类 洛蒂特性开关 <公开 @别名 = "com.airbnb.lottie.LottieFeatureFlag" @禁止创建对象 = 真 注释 = "★ 封装自 com.airbnb.android:lottie:6.7.1 (档 B 面向用户层).">
+{
+
+    方法 取枚举集 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "java: public static com.airbnb.lottie.LottieFeatureFlag[] values()">
+    {
+        @ com.airbnb.lottie.LottieFeatureFlag.values ()
+    }
+
+    方法 取枚举值 <公开 静态 类型 = 洛蒂特性开关 @嵌入式方法 = "" 注释 = "java: public static com.airbnb.lottie.LottieFeatureFlag valueOf(java.lang.String)">
+    参数 参数1 <类型 = 文本型>
+    {
+        @ com.airbnb.lottie.LottieFeatureFlag.valueOf (@<参数1>)
+    }
+
+    方法 合并路径集API19 <公开 静态 类型 = 洛蒂特性开关 @嵌入式方法 = "" 注释 = "java 字段: public static final com.airbnb.lottie.LottieFeatureFlag MergePathsApi19">
+    {
+        @ com.airbnb.lottie.LottieFeatureFlag.MergePathsApi19
+    }
+
+    方法 最小必需开发包版本 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java 字段: public final int minRequiredSdkVersion">
+    参数 当前对象 <类型 = 洛蒂特性开关>
+    {
+        @ @<当前对象>.minRequiredSdkVersion
+    }
+
+}
+
+类 洛蒂动态属性 <公开 @别名 = "com.airbnb.lottie.LottieProperty" @禁止创建对象 = 真 注释 = "★ 封装自 com.airbnb.android:lottie:6.7.1 (档 B 面向用户层).">
+{
+
+    方法 颜色 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java 字段: public static final java.lang.Integer COLOR">
+    {
+        @ com.airbnb.lottie.LottieProperty.COLOR
+    }
+
+    方法 描边颜色 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java 字段: public static final java.lang.Integer STROKE_COLOR">
+    {
+        @ com.airbnb.lottie.LottieProperty.STROKE_COLOR
+    }
+
+    方法 变换不透明度 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java 字段: public static final java.lang.Integer TRANSFORM_OPACITY">
+    {
+        @ com.airbnb.lottie.LottieProperty.TRANSFORM_OPACITY
+    }
+
+    方法 不透明度 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java 字段: public static final java.lang.Integer OPACITY">
+    {
+        @ com.airbnb.lottie.LottieProperty.OPACITY
+    }
+
+    方法 投影颜色 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java 字段: public static final java.lang.Integer DROP_SHADOW_COLOR">
+    {
+        @ com.airbnb.lottie.LottieProperty.DROP_SHADOW_COLOR
+    }
+
+    方法 变换锚点点 <公开 静态 类型 = 小数坐标类 @嵌入式方法 = "" 注释 = "java 字段: public static final android.graphics.PointF TRANSFORM_ANCHOR_POINT">
+    {
+        @ com.airbnb.lottie.LottieProperty.TRANSFORM_ANCHOR_POINT
+    }
+
+    方法 变换位置 <公开 静态 类型 = 小数坐标类 @嵌入式方法 = "" 注释 = "java 字段: public static final android.graphics.PointF TRANSFORM_POSITION">
+    {
+        @ com.airbnb.lottie.LottieProperty.TRANSFORM_POSITION
+    }
+
+    方法 变换位置横坐标 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java 字段: public static final java.lang.Float TRANSFORM_POSITION_X">
+    {
+        @ com.airbnb.lottie.LottieProperty.TRANSFORM_POSITION_X
+    }
+
+    方法 变换位置纵坐标 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java 字段: public static final java.lang.Float TRANSFORM_POSITION_Y">
+    {
+        @ com.airbnb.lottie.LottieProperty.TRANSFORM_POSITION_Y
+    }
+
+    方法 模糊半径 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java 字段: public static final java.lang.Float BLUR_RADIUS">
+    {
+        @ com.airbnb.lottie.LottieProperty.BLUR_RADIUS
+    }
+
+    方法 椭圆尺寸 <公开 静态 类型 = 小数坐标类 @嵌入式方法 = "" 注释 = "java 字段: public static final android.graphics.PointF ELLIPSE_SIZE">
+    {
+        @ com.airbnb.lottie.LottieProperty.ELLIPSE_SIZE
+    }
+
+    方法 矩形尺寸 <公开 静态 类型 = 小数坐标类 @嵌入式方法 = "" 注释 = "java 字段: public static final android.graphics.PointF RECTANGLE_SIZE">
+    {
+        @ com.airbnb.lottie.LottieProperty.RECTANGLE_SIZE
+    }
+
+    方法 圆角半径 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java 字段: public static final java.lang.Float CORNER_RADIUS">
+    {
+        @ com.airbnb.lottie.LottieProperty.CORNER_RADIUS
+    }
+
+    方法 位置 <公开 静态 类型 = 小数坐标类 @嵌入式方法 = "" 注释 = "java 字段: public static final android.graphics.PointF POSITION">
+    {
+        @ com.airbnb.lottie.LottieProperty.POSITION
+    }
+
+    方法 变换比例 <公开 静态 类型 = 洛蒂比例横纵 @嵌入式方法 = "" 注释 = "java 字段: public static final com.airbnb.lottie.value.ScaleXY TRANSFORM_SCALE">
+    {
+        @ com.airbnb.lottie.LottieProperty.TRANSFORM_SCALE
+    }
+
+    方法 变换旋转角 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java 字段: public static final java.lang.Float TRANSFORM_ROTATION">
+    {
+        @ com.airbnb.lottie.LottieProperty.TRANSFORM_ROTATION
+    }
+
+    方法 变换旋转角横坐标 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java 字段: public static final java.lang.Float TRANSFORM_ROTATION_X">
+    {
+        @ com.airbnb.lottie.LottieProperty.TRANSFORM_ROTATION_X
+    }
+
+    方法 变换旋转角纵坐标 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java 字段: public static final java.lang.Float TRANSFORM_ROTATION_Y">
+    {
+        @ com.airbnb.lottie.LottieProperty.TRANSFORM_ROTATION_Y
+    }
+
+    方法 变换旋转角Z <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java 字段: public static final java.lang.Float TRANSFORM_ROTATION_Z">
+    {
+        @ com.airbnb.lottie.LottieProperty.TRANSFORM_ROTATION_Z
+    }
+
+    方法 变换倾斜 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java 字段: public static final java.lang.Float TRANSFORM_SKEW">
+    {
+        @ com.airbnb.lottie.LottieProperty.TRANSFORM_SKEW
+    }
+
+    方法 变换倾斜角度 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java 字段: public static final java.lang.Float TRANSFORM_SKEW_ANGLE">
+    {
+        @ com.airbnb.lottie.LottieProperty.TRANSFORM_SKEW_ANGLE
+    }
+
+    方法 描边宽度 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java 字段: public static final java.lang.Float STROKE_WIDTH">
+    {
+        @ com.airbnb.lottie.LottieProperty.STROKE_WIDTH
+    }
+
+    方法 文本跟踪 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java 字段: public static final java.lang.Float TEXT_TRACKING">
+    {
+        @ com.airbnb.lottie.LottieProperty.TEXT_TRACKING
+    }
+
+    方法 重复器副本数 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java 字段: public static final java.lang.Float REPEATER_COPIES">
+    {
+        @ com.airbnb.lottie.LottieProperty.REPEATER_COPIES
+    }
+
+    方法 重复器偏移 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java 字段: public static final java.lang.Float REPEATER_OFFSET">
+    {
+        @ com.airbnb.lottie.LottieProperty.REPEATER_OFFSET
+    }
+
+    方法 多角星点集 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java 字段: public static final java.lang.Float POLYSTAR_POINTS">
+    {
+        @ com.airbnb.lottie.LottieProperty.POLYSTAR_POINTS
+    }
+
+    方法 多角星旋转角 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java 字段: public static final java.lang.Float POLYSTAR_ROTATION">
+    {
+        @ com.airbnb.lottie.LottieProperty.POLYSTAR_ROTATION
+    }
+
+    方法 多角星内半径 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java 字段: public static final java.lang.Float POLYSTAR_INNER_RADIUS">
+    {
+        @ com.airbnb.lottie.LottieProperty.POLYSTAR_INNER_RADIUS
+    }
+
+    方法 多角星外半径 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java 字段: public static final java.lang.Float POLYSTAR_OUTER_RADIUS">
+    {
+        @ com.airbnb.lottie.LottieProperty.POLYSTAR_OUTER_RADIUS
+    }
+
+    方法 多角星内圆度 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java 字段: public static final java.lang.Float POLYSTAR_INNER_ROUNDEDNESS">
+    {
+        @ com.airbnb.lottie.LottieProperty.POLYSTAR_INNER_ROUNDEDNESS
+    }
+
+    方法 多角星外圆度 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java 字段: public static final java.lang.Float POLYSTAR_OUTER_ROUNDEDNESS">
+    {
+        @ com.airbnb.lottie.LottieProperty.POLYSTAR_OUTER_ROUNDEDNESS
+    }
+
+    方法 变换起始不透明度 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java 字段: public static final java.lang.Float TRANSFORM_START_OPACITY">
+    {
+        @ com.airbnb.lottie.LottieProperty.TRANSFORM_START_OPACITY
+    }
+
+    方法 变换结束不透明度 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java 字段: public static final java.lang.Float TRANSFORM_END_OPACITY">
+    {
+        @ com.airbnb.lottie.LottieProperty.TRANSFORM_END_OPACITY
+    }
+
+    方法 时间重映射 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java 字段: public static final java.lang.Float TIME_REMAP">
+    {
+        @ com.airbnb.lottie.LottieProperty.TIME_REMAP
+    }
+
+    方法 文本尺寸 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java 字段: public static final java.lang.Float TEXT_SIZE">
+    {
+        @ com.airbnb.lottie.LottieProperty.TEXT_SIZE
+    }
+
+    方法 投影不透明度 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java 字段: public static final java.lang.Float DROP_SHADOW_OPACITY">
+    {
+        @ com.airbnb.lottie.LottieProperty.DROP_SHADOW_OPACITY
+    }
+
+    方法 投影方向 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java 字段: public static final java.lang.Float DROP_SHADOW_DIRECTION">
+    {
+        @ com.airbnb.lottie.LottieProperty.DROP_SHADOW_DIRECTION
+    }
+
+    方法 投影距离 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java 字段: public static final java.lang.Float DROP_SHADOW_DISTANCE">
+    {
+        @ com.airbnb.lottie.LottieProperty.DROP_SHADOW_DISTANCE
+    }
+
+    方法 投影半径 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java 字段: public static final java.lang.Float DROP_SHADOW_RADIUS">
+    {
+        @ com.airbnb.lottie.LottieProperty.DROP_SHADOW_RADIUS
+    }
+
+    方法 颜色滤镜 <公开 静态 类型 = 洛蒂颜色过滤器类 @嵌入式方法 = "" 注释 = "java 字段: public static final android.graphics.ColorFilter COLOR_FILTER">
+    {
+        @ com.airbnb.lottie.LottieProperty.COLOR_FILTER
+    }
+
+    方法 渐变颜色 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "java 字段: public static final java.lang.Integer[] GRADIENT_COLOR">
+    {
+        @ com.airbnb.lottie.LottieProperty.GRADIENT_COLOR
+    }
+
+    方法 字体族 <公开 静态 类型 = 字体类 @嵌入式方法 = "" 注释 = "java 字段: public static final android.graphics.Typeface TYPEFACE">
+    {
+        @ com.airbnb.lottie.LottieProperty.TYPEFACE
+    }
+
+    方法 图像 <公开 静态 类型 = 位图类 @嵌入式方法 = "" 注释 = "java 字段: public static final android.graphics.Bitmap IMAGE">
+    {
+        @ com.airbnb.lottie.LottieProperty.IMAGE
+    }
+
+    方法 文本 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "java 字段: public static final java.lang.CharSequence TEXT">
+    {
+        @ com.airbnb.lottie.LottieProperty.TEXT
+    }
+
+    方法 路径 <公开 静态 类型 = 绘制路径类 @嵌入式方法 = "" 注释 = "java 字段: public static final android.graphics.Path PATH">
+    {
+        @ com.airbnb.lottie.LottieProperty.PATH
+    }
+
+}
+
+类 洛蒂结果 <公开 @别名 = "com.airbnb.lottie.LottieResult" @禁止创建对象 = 真 注释 = "★ 封装自 com.airbnb.android:lottie:6.7.1 (档 B 面向用户层).">
+{
+
+    方法 新建结果 <公开 静态 类型 = 洛蒂结果 @嵌入式方法 = "" 注释 = "java: public com.airbnb.lottie.LottieResult(V)">
+    参数 数值 <类型 = 对象类>
+    {
+        @ new com.airbnb.lottie.LottieResult (@<数值>)
+    }
+
+    方法 新建结果_可俘获异常 <公开 静态 类型 = 洛蒂结果 @嵌入式方法 = "" 注释 = "java: public com.airbnb.lottie.LottieResult(java.lang.Throwable)">
+    参数 异常 <类型 = 可俘获异常类>
+    {
+        @ new com.airbnb.lottie.LottieResult (@<异常>)
+    }
+
+    方法 取数值 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "java: public V getValue()">
+    参数 当前对象 <类型 = 洛蒂结果>
+    {
+        @ @<当前对象>.getValue ()
+    }
+
+    方法 取异常 <公开 静态 类型 = 可俘获异常类 @嵌入式方法 = "" 注释 = "java: public java.lang.Throwable getException()">
+    参数 当前对象 <类型 = 洛蒂结果>
+    {
+        @ @<当前对象>.getException ()
+    }
+
+    方法 等于 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean equals(java.lang.Object)">
+    参数 当前对象 <类型 = 洛蒂结果>
+    参数 对象 <类型 = 对象类>
+    {
+        @ @<当前对象>.equals (@<对象>)
+    }
+
+    方法 哈希编码 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int hashCode()">
+    参数 当前对象 <类型 = 洛蒂结果>
+    {
+        @ @<当前对象>.hashCode ()
+    }
+
+}
+
+类 洛蒂任务 <公开 @别名 = "com.airbnb.lottie.LottieTask" @禁止创建对象 = 真 注释 = "★ 封装自 com.airbnb.android:lottie:6.7.1 (档 B 面向用户层).">
+{
+
+    方法 新建任务 <公开 静态 类型 = 洛蒂任务 @嵌入式方法 = "" 注释 = "java: public com.airbnb.lottie.LottieTask(java.util.concurrent.Callable<com.airbnb.lottie.LottieResult<T>>)">
+    参数 可运行任务 <类型 = 洛蒂可调用任务接口>
+    {
+        @ new com.airbnb.lottie.LottieTask (@<可运行任务>)
+    }
+
+    方法 新建任务_对象 <公开 静态 类型 = 洛蒂任务 @嵌入式方法 = "" 注释 = "java: public com.airbnb.lottie.LottieTask(T)">
+    参数 结果 <类型 = 对象类>
+    {
+        @ new com.airbnb.lottie.LottieTask (@<结果>)
+    }
+
+    方法 添加监听器 <公开 静态 类型 = 洛蒂任务 @嵌入式方法 = "" 注释 = "java: public synchronized com.airbnb.lottie.LottieTask<T> addListener(com.airbnb.lottie.LottieListener<T>)">
+    参数 当前对象 <类型 = 洛蒂任务>
+    参数 监听器 <类型 = 洛蒂结果监听接口>
+    {
+        @ @<当前对象>.addListener (@<监听器>)
+    }
+
+    方法 移除监听器 <公开 静态 类型 = 洛蒂任务 @嵌入式方法 = "" 注释 = "java: public synchronized com.airbnb.lottie.LottieTask<T> removeListener(com.airbnb.lottie.LottieListener<T>)">
+    参数 当前对象 <类型 = 洛蒂任务>
+    参数 监听器 <类型 = 洛蒂结果监听接口>
+    {
+        @ @<当前对象>.removeListener (@<监听器>)
+    }
+
+    方法 添加失败监听器 <公开 静态 类型 = 洛蒂任务 @嵌入式方法 = "" 注释 = "java: public synchronized com.airbnb.lottie.LottieTask<T> addFailureListener(com.airbnb.lottie.LottieListener<java.lang.Throwable>)">
+    参数 当前对象 <类型 = 洛蒂任务>
+    参数 监听器 <类型 = 洛蒂结果监听接口>
+    {
+        @ @<当前对象>.addFailureListener (@<监听器>)
+    }
+
+    方法 移除失败监听器 <公开 静态 类型 = 洛蒂任务 @嵌入式方法 = "" 注释 = "java: public synchronized com.airbnb.lottie.LottieTask<T> removeFailureListener(com.airbnb.lottie.LottieListener<java.lang.Throwable>)">
+    参数 当前对象 <类型 = 洛蒂任务>
+    参数 监听器 <类型 = 洛蒂结果监听接口>
+    {
+        @ @<当前对象>.removeFailureListener (@<监听器>)
+    }
+
+    方法 取结果 <公开 静态 类型 = 洛蒂结果 @嵌入式方法 = "" 注释 = "java: public com.airbnb.lottie.LottieResult<T> getResult()">
+    参数 当前对象 <类型 = 洛蒂任务>
+    {
+        @ @<当前对象>.getResult ()
+    }
+
+    方法 执行器 <公开 静态 类型 = 洛蒂执行器类 @嵌入式方法 = "" 注释 = "java 字段: public static java.util.concurrent.Executor EXECUTOR">
+    {
+        @ com.airbnb.lottie.LottieTask.EXECUTOR
+    }
+
+}
+
+类 洛蒂渲染模式 <公开 @别名 = "com.airbnb.lottie.RenderMode" @禁止创建对象 = 真 注释 = "★ 封装自 com.airbnb.android:lottie:6.7.1 (档 B 面向用户层).">
+{
+
+    方法 取枚举集 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "java: public static com.airbnb.lottie.RenderMode[] values()">
+    {
+        @ com.airbnb.lottie.RenderMode.values ()
+    }
+
+    方法 取枚举值 <公开 静态 类型 = 洛蒂渲染模式 @嵌入式方法 = "" 注释 = "java: public static com.airbnb.lottie.RenderMode valueOf(java.lang.String)">
+    参数 参数1 <类型 = 文本型>
+    {
+        @ com.airbnb.lottie.RenderMode.valueOf (@<参数1>)
+    }
+
+    方法 使用软件渲染 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean useSoftwareRendering(int, boolean, int)">
+    参数 当前对象 <类型 = 洛蒂渲染模式>
+    参数 开发包整数 <类型 = 整数>
+    参数 是否含虚线样式 <类型 = 逻辑型>
+    参数 数量遮罩集与蒙版集 <类型 = 整数>
+    {
+        @ @<当前对象>.useSoftwareRendering ((int) @<开发包整数>, @<是否含虚线样式>, (int) @<数量遮罩集与蒙版集>)
+    }
+
+    方法 自动 <公开 静态 类型 = 洛蒂渲染模式 @嵌入式方法 = "" 注释 = "java 字段: public static final com.airbnb.lottie.RenderMode AUTOMATIC">
+    {
+        @ com.airbnb.lottie.RenderMode.AUTOMATIC
+    }
+
+    方法 硬件 <公开 静态 类型 = 洛蒂渲染模式 @嵌入式方法 = "" 注释 = "java 字段: public static final com.airbnb.lottie.RenderMode HARDWARE">
+    {
+        @ com.airbnb.lottie.RenderMode.HARDWARE
+    }
+
+    方法 软件 <公开 静态 类型 = 洛蒂渲染模式 @嵌入式方法 = "" 注释 = "java 字段: public static final com.airbnb.lottie.RenderMode SOFTWARE">
+    {
+        @ com.airbnb.lottie.RenderMode.SOFTWARE
+    }
+
+}
+

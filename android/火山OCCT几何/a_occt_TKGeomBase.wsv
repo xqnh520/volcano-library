@@ -1,0 +1,585 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.安卓.OCCT几何 <注释 = "OpenCASCADE 7.8.0 全库封装 (自动生成, 请勿手改). 名称已汉化为中文显示名, 注释内附英文原名. TK 库 libTKGeomBase: 6 个类 / 69 个方法.">
+
+类 包围盒计算 <公开 注释 = "包围盒计算: 原类 BndLib (libTKGeomBase, 头文件 BndLib/BndLib.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: BndLib 包提供把几何基本体加入包围盒的功能. 注意: 这些函数处理 gp 对象, 可选地受参数值限制. 若 gp 包提供的曲线与曲面没有显式参数化, 它们仍具有隐式参数化, 类似于为等价 Geom 或 Geom2d 对象推断的参数化. 补充: 计算二维与三维 gp 基本对象包围盒的包." @禁止创建对象 = 真>
+{
+
+    方法 添加 <公开 静态 注释 = "添加. 原方法: Add. 官方简介: 用于裁剪或非裁剪曲面的包围盒. 把由两个参数值 P1 与 P2 限定的直线 L 的段添加到包围盒 B, 然后用公差值 Tol 扩大 B. Tol 是用于扩大最小与最大尺寸的公差值. P1 与 P2 可以表示无穷值. 异常: 若 P1 与 P2 或者是两个负无穷实数, 或者是两个正无穷实数, 则抛出 Standard_Failure." @嵌入式方法 = "">
+    参数 L <类型 = 长整数>
+    参数 P1 <类型 = 小数>
+    参数 P2 <类型 = 小数>
+    参数 容差 <类型 = 小数>
+    参数 输出B <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.BndLib.Add (@<L>, @<P1>, @<P2>, @<容差>, @<输出B>)
+    }
+
+    方法 添加_2 <公开 静态 注释 = "添加_2. 原方法: Add." @嵌入式方法 = "">
+    参数 L <类型 = 长整数>
+    参数 P1 <类型 = 小数>
+    参数 P2 <类型 = 小数>
+    参数 容差 <类型 = 小数>
+    参数 输出B <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.BndLib.Add_2 (@<L>, @<P1>, @<P2>, @<容差>, @<输出B>)
+    }
+
+    方法 添加_3 <公开 静态 注释 = "添加_3. 原方法: Add." @嵌入式方法 = "">
+    参数 C <类型 = 长整数>
+    参数 容差 <类型 = 小数>
+    参数 输出B <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.BndLib.Add_3 (@<C>, @<容差>, @<输出B>)
+    }
+
+    方法 添加_4 <公开 静态 注释 = "添加_4. 原方法: Add. 官方简介: P2-P1 可以在 [0,2*pi] 内" @嵌入式方法 = "">
+    参数 C <类型 = 长整数>
+    参数 P1 <类型 = 小数>
+    参数 P2 <类型 = 小数>
+    参数 容差 <类型 = 小数>
+    参数 输出B <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.BndLib.Add_4 (@<C>, @<P1>, @<P2>, @<容差>, @<输出B>)
+    }
+
+    方法 添加_5 <公开 静态 注释 = "添加_5. 原方法: Add." @嵌入式方法 = "">
+    参数 C <类型 = 长整数>
+    参数 容差 <类型 = 小数>
+    参数 输出B <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.BndLib.Add_5 (@<C>, @<容差>, @<输出B>)
+    }
+
+    方法 添加_6 <公开 静态 注释 = "添加_6. 原方法: Add. 官方简介: 把圆 C, 或由两个参数值 P1 和 P2 限定的圆 C 的圆弧, 添加到包围盒 B, 然后用容差值 Tol 扩大 B. P2-P1 可在 [0,2*pi] 范围内" @嵌入式方法 = "">
+    参数 C <类型 = 长整数>
+    参数 P1 <类型 = 小数>
+    参数 P2 <类型 = 小数>
+    参数 容差 <类型 = 小数>
+    参数 输出B <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.BndLib.Add_6 (@<C>, @<P1>, @<P2>, @<容差>, @<输出B>)
+    }
+
+    方法 添加_7 <公开 静态 注释 = "添加_7. 原方法: Add." @嵌入式方法 = "">
+    参数 C <类型 = 长整数>
+    参数 容差 <类型 = 小数>
+    参数 输出B <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.BndLib.Add_7 (@<C>, @<容差>, @<输出B>)
+    }
+
+    方法 添加_8 <公开 静态 注释 = "添加_8. 原方法: Add. 官方简介: P2-P1 可以在 [0,2*pi] 内" @嵌入式方法 = "">
+    参数 C <类型 = 长整数>
+    参数 P1 <类型 = 小数>
+    参数 P2 <类型 = 小数>
+    参数 容差 <类型 = 小数>
+    参数 输出B <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.BndLib.Add_8 (@<C>, @<P1>, @<P2>, @<容差>, @<输出B>)
+    }
+
+    方法 添加_9 <公开 静态 注释 = "添加_9. 原方法: Add." @嵌入式方法 = "">
+    参数 C <类型 = 长整数>
+    参数 容差 <类型 = 小数>
+    参数 输出B <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.BndLib.Add_9 (@<C>, @<容差>, @<输出B>)
+    }
+
+    方法 添加_10 <公开 静态 注释 = "添加_10. 原方法: Add. 官方简介: 把椭圆 E, 或由两个参数值 P1 和 P2 限定的椭圆 E 的弧, 添加到包围盒 B, 然后用容差值 Tol 扩大 B. P2-P1 可在 [0,2*pi] 范围内" @嵌入式方法 = "">
+    参数 C <类型 = 长整数>
+    参数 P1 <类型 = 小数>
+    参数 P2 <类型 = 小数>
+    参数 容差 <类型 = 小数>
+    参数 输出B <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.BndLib.Add_10 (@<C>, @<P1>, @<P2>, @<容差>, @<输出B>)
+    }
+
+    方法 添加_11 <公开 静态 注释 = "添加_11. 原方法: Add." @嵌入式方法 = "">
+    参数 P <类型 = 长整数>
+    参数 P1 <类型 = 小数>
+    参数 P2 <类型 = 小数>
+    参数 容差 <类型 = 小数>
+    参数 输出B <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.BndLib.Add_11 (@<P>, @<P1>, @<P2>, @<容差>, @<输出B>)
+    }
+
+    方法 添加_12 <公开 静态 注释 = "添加_12. 原方法: Add. 官方简介: 把由两个参数值 P1 与 P2 限定的抛物线 P 的弧添加到包围盒 B, 然后按公差值 Tol 放大 B. P1 与 P2 可以表示无穷值. 异常: 若 P1 与 P2 是两个负无穷实数, 或两个正无穷实数, 则抛出 Standard_Failure." @嵌入式方法 = "">
+    参数 P <类型 = 长整数>
+    参数 P1 <类型 = 小数>
+    参数 P2 <类型 = 小数>
+    参数 容差 <类型 = 小数>
+    参数 输出B <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.BndLib.Add_12 (@<P>, @<P1>, @<P2>, @<容差>, @<输出B>)
+    }
+
+    方法 添加_13 <公开 静态 注释 = "添加_13. 原方法: Add." @嵌入式方法 = "">
+    参数 H <类型 = 长整数>
+    参数 P1 <类型 = 小数>
+    参数 P2 <类型 = 小数>
+    参数 容差 <类型 = 小数>
+    参数 输出B <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.BndLib.Add_13 (@<H>, @<P1>, @<P2>, @<容差>, @<输出B>)
+    }
+
+    方法 添加_14 <公开 静态 注释 = "添加_14. 原方法: Add. 官方简介: 把由两个参数值 P1 与 P2 限定的双曲线 H 分支的弧添加到包围盒 B, 然后按公差值 Tol 放大 B. P1 与 P2 可以表示无穷值. 异常: 若 P1 与 P2 是两个负无穷实数, 或两个正无穷实数, 则抛出 Standard_Failure." @嵌入式方法 = "">
+    参数 H <类型 = 长整数>
+    参数 P1 <类型 = 小数>
+    参数 P2 <类型 = 小数>
+    参数 容差 <类型 = 小数>
+    参数 输出B <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.BndLib.Add_14 (@<H>, @<P1>, @<P2>, @<容差>, @<输出B>)
+    }
+
+    方法 添加_15 <公开 静态 注释 = "添加_15. 原方法: Add. 官方简介: UMax -UMin 可以在 [0,2*pi] 内" @嵌入式方法 = "">
+    参数 S <类型 = 长整数>
+    参数 UMin <类型 = 小数>
+    参数 UMax <类型 = 小数>
+    参数 VMin <类型 = 小数>
+    参数 VMax <类型 = 小数>
+    参数 容差 <类型 = 小数>
+    参数 输出B <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.BndLib.Add_15 (@<S>, @<UMin>, @<UMax>, @<VMin>, @<VMax>, @<容差>, @<输出B>)
+    }
+
+    方法 添加_16 <公开 静态 注释 = "添加_16. 原方法: Add. 官方简介: 把圆柱 S 的面片添加到包围盒 B: - 在 v 参数方向由两个参数值 VMin 与 VMax 限定 - 以及可选地在 u 参数方向由两个参数值 UMin 与 UMax 限定. 然后用公差值 Tol 扩大 B. VMin 与 VMax 可以表示无穷值. 异常: 若 VMin 与 VMax 或者是两个负无穷实数, 或者是两个正无穷实数, 则抛出 Standard_Failure." @嵌入式方法 = "">
+    参数 S <类型 = 长整数>
+    参数 VMin <类型 = 小数>
+    参数 VMax <类型 = 小数>
+    参数 容差 <类型 = 小数>
+    参数 输出B <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.BndLib.Add_16 (@<S>, @<VMin>, @<VMax>, @<容差>, @<输出B>)
+    }
+
+    方法 添加_17 <公开 静态 注释 = "添加_17. 原方法: Add. 官方简介: UMax-UMin 可以在 [0,2*pi] 内" @嵌入式方法 = "">
+    参数 S <类型 = 长整数>
+    参数 UMin <类型 = 小数>
+    参数 UMax <类型 = 小数>
+    参数 VMin <类型 = 小数>
+    参数 VMax <类型 = 小数>
+    参数 容差 <类型 = 小数>
+    参数 输出B <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.BndLib.Add_17 (@<S>, @<UMin>, @<UMax>, @<VMin>, @<VMax>, @<容差>, @<输出B>)
+    }
+
+    方法 添加_18 <公开 静态 注释 = "添加_18. 原方法: Add. 官方简介: 把圆锥 S 的面片添加到包围盒 B: - 在 v 参数方向由两个参数值 VMin 与 VMax 限定 - 以及可选地在 u 参数方向由两个参数值 UMin 与 UMax 限定, 然后用公差值 Tol 扩大 B. VMin 与 VMax 可以表示无穷值. 异常: 若 VMin 与 VMax 或者是两个负无穷实数, 或者是两个正无穷实数, 则抛出 Standard_Failure." @嵌入式方法 = "">
+    参数 S <类型 = 长整数>
+    参数 VMin <类型 = 小数>
+    参数 VMax <类型 = 小数>
+    参数 容差 <类型 = 小数>
+    参数 输出B <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.BndLib.Add_18 (@<S>, @<VMin>, @<VMax>, @<容差>, @<输出B>)
+    }
+
+    方法 添加_19 <公开 静态 注释 = "添加_19. 原方法: Add." @嵌入式方法 = "">
+    参数 S <类型 = 长整数>
+    参数 容差 <类型 = 小数>
+    参数 输出B <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.BndLib.Add_19 (@<S>, @<容差>, @<输出B>)
+    }
+
+    方法 添加_20 <公开 静态 注释 = "添加_20. 原方法: Add. 官方简介: 把球面 S 添加到包围盒 B, 或 - 把球面 S 的面片在 u 参数方向由两个参数值 UMin 与 UMax 限定、在 v 参数方向由两个参数值 VMin 与 VMax 限定后添加到包围盒 B. B 随后按公差值 Tol 放大. UMax-UMin 可以在 [0,2*pi] 内, VMin,VMax 可以在 [-pi/2,pi/2] 内." @嵌入式方法 = "">
+    参数 S <类型 = 长整数>
+    参数 UMin <类型 = 小数>
+    参数 UMax <类型 = 小数>
+    参数 VMin <类型 = 小数>
+    参数 VMax <类型 = 小数>
+    参数 容差 <类型 = 小数>
+    参数 输出B <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.BndLib.Add_20 (@<S>, @<UMin>, @<UMax>, @<VMin>, @<VMax>, @<容差>, @<输出B>)
+    }
+
+    方法 添加_21 <公开 静态 注释 = "添加_21. 原方法: Add." @嵌入式方法 = "">
+    参数 P <类型 = 长整数>
+    参数 容差 <类型 = 小数>
+    参数 输出B <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.BndLib.Add_21 (@<P>, @<容差>, @<输出B>)
+    }
+
+    方法 添加_22 <公开 静态 注释 = "添加_22. 原方法: Add. 官方简介: 把圆环面 S 添加到包围盒 B, 或 - 把圆环面 S 的面片在 u 参数方向由两个参数值 UMin 与 UMax 限定、在 v 参数方向由两个参数值 VMin 与 VMax 限定后添加到包围盒 B. B 随后按公差值 Tol 放大. UMax-UMin 可以在 [0,2*pi] 内, VMin,VMax 可以在 [-pi/2,pi/2] 内." @嵌入式方法 = "">
+    参数 P <类型 = 长整数>
+    参数 UMin <类型 = 小数>
+    参数 UMax <类型 = 小数>
+    参数 VMin <类型 = 小数>
+    参数 VMax <类型 = 小数>
+    参数 容差 <类型 = 小数>
+    参数 输出B <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.BndLib.Add_22 (@<P>, @<UMin>, @<UMax>, @<VMin>, @<VMax>, @<容差>, @<输出B>)
+    }
+
+}
+
+类 弧长点 <公开 注释 = "弧长点: 原类 GCPnts_AbscissaPoint (libTKGeomBase, 头文件 GCPnts/GCPnts_AbscissaPoint.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 提供计算曲线上距另一曲线点给定距离的点的算法, 距离沿曲线测量(曲线上的弧长横坐标). 该算法也用于计算曲线长度. AbscissaPoint 对象提供以下框架: - 定义待计算的点 - 实现构造算法 - 查询结果." @禁止创建对象 = 真>
+{
+
+    方法 取长度 <公开 静态 类型 = 小数 注释 = "取长度. 原方法: Length. 官方简介: 计算三维曲线的长度." @嵌入式方法 = "">
+    参数 C <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.GCPnts_AbscissaPoint.Length (@<C>)
+    }
+
+    方法 取长度_2 <公开 静态 类型 = 小数 注释 = "取长度_2. 原方法: Length. 官方简介: 计算二维曲线的长度." @嵌入式方法 = "">
+    参数 C <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.GCPnts_AbscissaPoint.Length_2 (@<C>)
+    }
+
+    方法 取长度_3 <公开 静态 类型 = 小数 注释 = "取长度_3. 原方法: Length. 官方简介: 用给定公差计算三维曲线的长度." @嵌入式方法 = "">
+    参数 C <类型 = 长整数>
+    参数 容差 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.GCPnts_AbscissaPoint.Length_3 (@<C>, @<容差>)
+    }
+
+    方法 取长度_4 <公开 静态 类型 = 小数 注释 = "取长度_4. 原方法: Length. 官方简介: 用给定公差计算二维曲线的长度." @嵌入式方法 = "">
+    参数 C <类型 = 长整数>
+    参数 容差 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.GCPnts_AbscissaPoint.Length_4 (@<C>, @<容差>)
+    }
+
+    方法 取长度_5 <公开 静态 类型 = 小数 注释 = "取长度_5. 原方法: Length. 官方简介: 计算三维曲线的长度." @嵌入式方法 = "">
+    参数 C <类型 = 长整数>
+    参数 U1 <类型 = 小数>
+    参数 U2 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.GCPnts_AbscissaPoint.Length_5 (@<C>, @<U1>, @<U2>)
+    }
+
+    方法 取长度_6 <公开 静态 类型 = 小数 注释 = "取长度_6. 原方法: Length. 官方简介: 计算二维曲线的长度." @嵌入式方法 = "">
+    参数 C <类型 = 长整数>
+    参数 U1 <类型 = 小数>
+    参数 U2 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.GCPnts_AbscissaPoint.Length_6 (@<C>, @<U1>, @<U2>)
+    }
+
+    方法 取长度_7 <公开 静态 类型 = 小数 注释 = "取长度_7. 原方法: Length. 官方简介: 用给定公差计算三维曲线的长度." @嵌入式方法 = "">
+    参数 C <类型 = 长整数>
+    参数 U1 <类型 = 小数>
+    参数 U2 <类型 = 小数>
+    参数 容差 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.GCPnts_AbscissaPoint.Length_7 (@<C>, @<U1>, @<U2>, @<容差>)
+    }
+
+    方法 取长度_8 <公开 静态 类型 = 小数 注释 = "取长度_8. 原方法: Length. 官方简介: 用给定公差计算曲线的长度." @嵌入式方法 = "">
+    参数 C <类型 = 长整数>
+    参数 U1 <类型 = 小数>
+    参数 U2 <类型 = 小数>
+    参数 容差 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.GCPnts_AbscissaPoint.Length_8 (@<C>, @<U1>, @<U2>, @<容差>)
+    }
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: GCPnts_AbscissaPoint. 官方简介: 空构造函数." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.GCPnts_AbscissaPoint.构造 ()
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: GCPnts_AbscissaPoint. 官方简介: 该算法计算曲线上距参数 theU0 的点为 theAbscissa 的点." @嵌入式方法 = "">
+    参数 C <类型 = 长整数>
+    参数 弧长 <类型 = 小数>
+    参数 U0 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.GCPnts_AbscissaPoint.构造_2 (@<C>, @<弧长>, @<U0>)
+    }
+
+    方法 创建_3 <公开 静态 类型 = 长整数 注释 = "创建_3. 原构造器: GCPnts_AbscissaPoint. 官方简介: 该算法以给定容差计算曲线上距参数 theU0 的点弧长为 theAbscissa 的点." @嵌入式方法 = "">
+    参数 容差 <类型 = 小数>
+    参数 C <类型 = 长整数>
+    参数 弧长 <类型 = 小数>
+    参数 U0 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.GCPnts_AbscissaPoint.构造_3 (@<容差>, @<C>, @<弧长>, @<U0>)
+    }
+
+    方法 创建_4 <公开 静态 类型 = 长整数 注释 = "创建_4. 原构造器: GCPnts_AbscissaPoint. 官方简介: 该算法以给定容差计算曲线上距参数 theU0 的点弧长为 theAbscissa 的点." @嵌入式方法 = "">
+    参数 容差 <类型 = 小数>
+    参数 C <类型 = 长整数>
+    参数 弧长 <类型 = 小数>
+    参数 U0 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.GCPnts_AbscissaPoint.构造_4 (@<容差>, @<C>, @<弧长>, @<U0>)
+    }
+
+    方法 创建_5 <公开 静态 类型 = 长整数 注释 = "创建_5. 原构造器: GCPnts_AbscissaPoint. 官方简介: 该算法计算曲线上距参数 theU0 的点为 theAbscissa 的点." @嵌入式方法 = "">
+    参数 C <类型 = 长整数>
+    参数 弧长 <类型 = 小数>
+    参数 U0 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.GCPnts_AbscissaPoint.构造_5 (@<C>, @<弧长>, @<U0>)
+    }
+
+    方法 创建_6 <公开 静态 类型 = 长整数 注释 = "创建_6. 原构造器: GCPnts_AbscissaPoint. 官方简介: 该算法以给定容差计算曲线上距参数 theU0 的点弧长为 theAbscissa 的点." @嵌入式方法 = "">
+    参数 C <类型 = 长整数>
+    参数 弧长 <类型 = 小数>
+    参数 U0 <类型 = 小数>
+    参数 Ui <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.GCPnts_AbscissaPoint.构造_6 (@<C>, @<弧长>, @<U0>, @<Ui>)
+    }
+
+    方法 创建_7 <公开 静态 类型 = 长整数 注释 = "创建_7. 原构造器: GCPnts_AbscissaPoint. 官方简介: 该算法以给定容差计算曲线上距参数 theU0 的点弧长为 theAbscissa 的点." @嵌入式方法 = "">
+    参数 C <类型 = 长整数>
+    参数 弧长 <类型 = 小数>
+    参数 U0 <类型 = 小数>
+    参数 Ui <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.GCPnts_AbscissaPoint.构造_7 (@<C>, @<弧长>, @<U0>, @<Ui>)
+    }
+
+    方法 创建_8 <公开 静态 类型 = 长整数 注释 = "创建_8. 原构造器: GCPnts_AbscissaPoint. 官方简介: 该算法计算曲线上距参数 theU0 的点为 theAbscissa 的点. theUi 是迭代求根过程的起始值, 它必须接近最终解" @嵌入式方法 = "">
+    参数 C <类型 = 长整数>
+    参数 弧长 <类型 = 小数>
+    参数 U0 <类型 = 小数>
+    参数 Ui <类型 = 小数>
+    参数 容差 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.GCPnts_AbscissaPoint.构造_8 (@<C>, @<弧长>, @<U0>, @<Ui>, @<容差>)
+    }
+
+    方法 创建_9 <公开 静态 类型 = 长整数 注释 = "创建_9. 原构造器: GCPnts_AbscissaPoint. 官方简介: 该算法计算曲线上距参数 theU0 的点为 theAbscissa 的点. theUi 是迭代求根过程的起始值, 它必须接近最终解" @嵌入式方法 = "">
+    参数 C <类型 = 长整数>
+    参数 弧长 <类型 = 小数>
+    参数 U0 <类型 = 小数>
+    参数 Ui <类型 = 小数>
+    参数 容差 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.GCPnts_AbscissaPoint.构造_9 (@<C>, @<弧长>, @<U0>, @<Ui>, @<容差>)
+    }
+
+    方法 是否完成 <公开 静态 类型 = 逻辑型 注释 = "是否完成. 原方法: IsDone. 官方简介: 若计算成功则为 True, 否则为 False. IsDone 用于防止: - 算法不收敛 - 在计算前查询结果." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.GCPnts_AbscissaPoint.IsDone (@<对象>)
+    }
+
+    方法 参数 <公开 静态 类型 = 小数 注释 = "参数. 原方法: Parameter. 官方简介: 返回该算法解点对应的曲线上的参数. 若计算未成功或未执行, 则抛出 StdFail_NotDone 异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.GCPnts_AbscissaPoint.Parameter (@<对象>)
+    }
+
+}
+
+类 平面几何转换 <公开 注释 = "平面几何转换: 原类 Geom2dConvert (libTKGeomBase, 头文件 Geom2dConvert/Geom2dConvert.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 此包提供在 Geom2d 包等价几何实体间做转换的算法实现. 它提供以下能力: . 获得有界曲线的 B 样条表示. . 按某些连续性约束把一条 B 样条曲线分割为若干 B 样条曲线, . 把一条 B 样条曲线转换为若干 Bezier 曲线或曲面. 本包使用的所有几何实体都是有界的. 参考文献: . Generating the Bezier Points of B-spline curves and surfaces (Wolfgang Bohm) CAGD volume 13 number 6 november 1981 . On NURBS: A Survey (Leslie Piegl) IEEE Computer Graphics and Application January 1991 . Curve and surface construction using rational B-splines (Leslie Piegl and Wayne Tiller) CAD Volume 19 number 9 november 1987 . A survey of curve and surface methods in CAGD (Wolfgang BOHM) CAGD 1 1984" @禁止创建对象 = 真>
+{
+
+    方法 分割B样条曲线 <公开 静态 类型 = 长整数 注释 = "分割B样条曲线. 原方法: SplitBSplineCurve. 官方简介: -- 通过逼近把曲线转换为 BSpline" @嵌入式方法 = "">
+    参数 C <类型 = 长整数>
+    参数 起始K1 <类型 = 整数>
+    参数 终止K2 <类型 = 整数>
+    参数 相同朝向 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.Geom2dConvert.SplitBSplineCurve (@<C>, @<起始K1>, @<终止K2>, @<相同朝向>)
+    }
+
+    方法 分割B样条曲线_2 <公开 静态 类型 = 长整数 注释 = "分割B样条曲线_2. 原方法: SplitBSplineCurve. 官方简介: 该函数计算 B-spline 曲线在参数值 FromU1, ToU2 之间的段. 若 C 是周期的, 则当 SameOrientation = True 时弧与 C 朝向相同. 若 C 不是周期的, 则计算不使用 SameOrientation, 且 C 的朝向为从 FromU1 到 ToU2. 关于 U1 与 U2 两个参数值, 我们约定若 Abs (U1 - U2) <= ParametricTolerance 则 U1 = U2, 且 ParametricTolerance 必须大于或等于 gp 包的 Resolution." @嵌入式方法 = "">
+    参数 C <类型 = 长整数>
+    参数 起始U1 <类型 = 小数>
+    参数 终止U2 <类型 = 小数>
+    参数 参数化容差 <类型 = 小数>
+    参数 相同朝向 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.Geom2dConvert.SplitBSplineCurve_2 (@<C>, @<起始U1>, @<终止U2>, @<参数化容差>, @<相同朝向>)
+    }
+
+    方法 曲线转B样条曲线 <公开 静态 类型 = 长整数 注释 = "曲线转B样条曲线. 原方法: CurveToBSplineCurve. 官方简介: 该函数把 Geom 中的非无限曲线转换为 B-spline 曲线. C 必须是椭圆或圆或裁剪二次曲线或裁剪直线或 Bezier 曲线或裁剪 Bezier 曲线或 BSpline 曲线或裁剪 BSpline 曲线或偏置曲线或裁剪偏置曲线. 返回的 B-spline 不是周期的, 除非 C 是圆或椭圆. ParameterisationType 仅当曲线是圆或椭圆时适用: TgtThetaOver2, TgtThetaOver2_1, TgtThetaOver2_2, TgtThetaOver2_3, TgtThetaOver2_4, 目的: 这是经典的有理参数化 2 1 - t cos(theta) = ------ 2 1 + t" @嵌入式方法 = "">
+    参数 C <类型 = 长整数>
+    参数 参数化 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.Geom2dConvert.CurveToBSplineCurve (@<C>, @<参数化>)
+    }
+
+    方法 C0样条转C1样条曲线 <公开 静态 注释 = "C0样条转C1样条曲线. 原方法: C0BSplineToC1BSplineCurve. 官方简介: 该方法尽可能降低 BSpline BS 的节点重数(保持几何不变). 它返回新的 BSpline, 其可能仍为 C0. tolerance 是几何公差" @嵌入式方法 = "">
+    参数 输出BS <类型 = "长整数 []">
+    参数 容差 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.Geom2dConvert.C0BSplineToC1BSplineCurve (@<输出BS>, @<容差>)
+    }
+
+}
+
+类 几何工具 <公开 注释 = "几何工具: 原类 GeomTools (libTKGeomBase, 头文件 GeomTools/GeomTools.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: GeomTools 包提供几何相关实用工具." @禁止创建对象 = 真>
+{
+
+    方法 转储 <公开 静态 类型 = 文本型 注释 = "转储. 原方法: Dump. 官方简介: 来自 Geom2d 的一组曲线. 把曲面转储到流." @嵌入式方法 = "">
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.GeomTools.Dump (@<S>)
+    }
+
+    方法 写入 <公开 静态 类型 = 文本型 注释 = "写入. 原方法: Write. 官方简介: 把曲面写到流中." @嵌入式方法 = "">
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.GeomTools.Write (@<S>)
+    }
+
+    方法 转储_2 <公开 静态 类型 = 文本型 注释 = "转储_2. 原方法: Dump. 官方简介: 把曲线转储到流中." @嵌入式方法 = "">
+    参数 C <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.GeomTools.Dump_2 (@<C>)
+    }
+
+    方法 写入_2 <公开 静态 类型 = 文本型 注释 = "写入_2. 原方法: Write. 官方简介: 把曲线写到流中." @嵌入式方法 = "">
+    参数 C <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.GeomTools.Write_2 (@<C>)
+    }
+
+    方法 转储_3 <公开 静态 类型 = 文本型 注释 = "转储_3. 原方法: Dump. 官方简介: 把曲线转储到流中." @嵌入式方法 = "">
+    参数 C <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.GeomTools.Dump_3 (@<C>)
+    }
+
+    方法 写入_3 <公开 静态 类型 = 文本型 注释 = "写入_3. 原方法: Write. 官方简介: 把曲线写到流中." @嵌入式方法 = "">
+    参数 C <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.GeomTools.Write_3 (@<C>)
+    }
+
+}
+
+类 平面曲线序列化集 <公开 注释 = "平面曲线序列化集: 原类 GeomTools_Curve2dSet (libTKGeomBase, 头文件 GeomTools/GeomTools_Curve2dSet.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 存储一组 Geom2d 曲线." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: GeomTools_Curve2dSet. 官方简介: 返回一个空的曲线集合." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.GeomTools_Curve2dSet.构造 ()
+    }
+
+    方法 清除 <公开 静态 注释 = "清除. 原方法: Clear. 官方简介: 清除集合的内容." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.GeomTools_Curve2dSet.Clear (@<对象>)
+    }
+
+    方法 添加 <公开 静态 类型 = 整数 注释 = "添加. 原方法: Add. 官方简介: 把一条新曲线加入集合并返回其索引." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 C <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.GeomTools_Curve2dSet.Add (@<对象>, @<C>)
+    }
+
+    方法 二维曲线 <公开 静态 类型 = 长整数 注释 = "二维曲线. 原方法: Curve2d. 官方简介: 返回索引 <I> 处的曲线." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 I <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.GeomTools_Curve2dSet.Curve2d (@<对象>, @<I>)
+    }
+
+    方法 索引 <公开 静态 类型 = 整数 注释 = "索引. 原方法: Index. 官方简介: 返回 <L> 的索引." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 C <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.GeomTools_Curve2dSet.Index (@<对象>, @<C>)
+    }
+
+    方法 转储 <公开 静态 类型 = 文本型 注释 = "转储. 原方法: Dump. 官方简介: 把自身内容转储到流 <OS> 中." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.GeomTools_Curve2dSet.Dump (@<对象>)
+    }
+
+    方法 写入 <公开 静态 注释 = "桩(本地不可用): 参数类型 Standard_OStream& 未支持. 写入. 原方法: Write. 官方简介: 以可被 Read 读回的格式把自身内容写到流 <OS> 上." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 OS <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.GeomTools_Curve2dSet.Write (@<对象>, @<OS>)
+    }
+
+    方法 读取 <公开 静态 注释 = "桩(本地不可用): 参数类型 Standard_IStream& 未支持. 读取. 原方法: Read. 官方简介: 从流 <IS> 读入自身内容. 自身先被清空." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 IS <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.GeomTools_Curve2dSet.Read (@<对象>, @<IS>)
+    }
+
+    方法 二维打印曲线 <公开 静态 类型 = 文本型 注释 = "二维打印曲线. 原方法: PrintCurve2d. 官方简介: 把曲线转储到流, 若 compact 为 True 则使用可读回的紧凑格式." @嵌入式方法 = "">
+    参数 C <类型 = 长整数>
+    参数 紧凑 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.GeomTools_Curve2dSet.PrintCurve2d (@<C>, @<紧凑>)
+    }
+
+}
+
+类 曲线序列化集 <公开 注释 = "曲线序列化集: 原类 GeomTools_CurveSet (libTKGeomBase, 头文件 GeomTools/GeomTools_CurveSet.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 存储一组 Geom 曲线." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: GeomTools_CurveSet. 官方简介: 返回一个空的曲线集合." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.GeomTools_CurveSet.构造 ()
+    }
+
+    方法 清除 <公开 静态 注释 = "清除. 原方法: Clear. 官方简介: 清除集合的内容." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.GeomTools_CurveSet.Clear (@<对象>)
+    }
+
+    方法 添加 <公开 静态 类型 = 整数 注释 = "添加. 原方法: Add. 官方简介: 把一条新曲线加入集合并返回其索引." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 C <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.GeomTools_CurveSet.Add (@<对象>, @<C>)
+    }
+
+    方法 曲线 <公开 静态 类型 = 长整数 注释 = "曲线. 原方法: Curve. 官方简介: 返回索引 <I> 处的曲线." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 I <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.GeomTools_CurveSet.Curve (@<对象>, @<I>)
+    }
+
+    方法 索引 <公开 静态 类型 = 整数 注释 = "索引. 原方法: Index. 官方简介: 返回 <L> 的索引." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 C <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.GeomTools_CurveSet.Index (@<对象>, @<C>)
+    }
+
+    方法 转储 <公开 静态 类型 = 文本型 注释 = "转储. 原方法: Dump. 官方简介: 把自身内容转储到流 <OS> 中." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.GeomTools_CurveSet.Dump (@<对象>)
+    }
+
+    方法 写入 <公开 静态 注释 = "桩(本地不可用): 参数类型 Standard_OStream& 未支持. 写入. 原方法: Write. 官方简介: 以可被 Read 读回的格式把自身内容写到流 <OS> 上." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 OS <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.GeomTools_CurveSet.Write (@<对象>, @<OS>)
+    }
+
+    方法 读取 <公开 静态 注释 = "桩(本地不可用): 参数类型 Standard_IStream& 未支持. 读取. 原方法: Read. 官方简介: 从流 <IS> 读入自身内容. 自身先被清空." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 IS <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.GeomTools_CurveSet.Read (@<对象>, @<IS>)
+    }
+
+    方法 打印曲线 <公开 静态 类型 = 文本型 注释 = "打印曲线. 原方法: PrintCurve. 官方简介: 把曲线转储到流, 若 compact 为 True 则使用可读回的紧凑格式." @嵌入式方法 = "">
+    参数 C <类型 = 长整数>
+    参数 紧凑 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKGeomBase.GeomTools_CurveSet.PrintCurve (@<C>, @<紧凑>)
+    }
+
+}

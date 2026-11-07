@@ -1,0 +1,193 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.安卓.XUI <注释 = "XUI 安卓 UI 工具库封装" @文档 = "category = \"XUI\"">
+
+
+类 XUI滑动返回图标 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.slideback.widget.SlideBackIconView)."
+        @文档 = "category = \"XUI.组件\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.slideback.widget.SlideBackIconView\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI滑动返回图标, SlideBackIconView, com.xuexiang.xui.widget.slideback.widget.SlideBackIconView)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetSlideBackIconView ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI滑动返回图标的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI滑动返回图标.getAlpha()">
+    {
+        @ (double)@sn<this>.GetSlideBackIconView ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI滑动返回图标的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI滑动返回图标.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSlideBackIconView ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI滑动返回图标的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI滑动返回图标.isEnabled()">
+    {
+        @ @sn<this>.GetSlideBackIconView ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI滑动返回图标的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI滑动返回图标.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetSlideBackIconView ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI滑动返回图标的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI滑动返回图标.isClickable()">
+    {
+        @ @sn<this>.GetSlideBackIconView ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI滑动返回图标的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI滑动返回图标.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetSlideBackIconView ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI滑动返回图标的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI滑动返回图标.getElevation()">
+    {
+        @ (double)@sn<this>.GetSlideBackIconView ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI滑动返回图标的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI滑动返回图标.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSlideBackIconView ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI滑动返回图标的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI滑动返回图标.getMinimumHeight()">
+    {
+        @ @sn<this>.GetSlideBackIconView ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI滑动返回图标的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI滑动返回图标.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSlideBackIconView ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI滑动返回图标的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI滑动返回图标.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSlideBackIconView ().setBackgroundColor (@<新值>))
+    }
+
+    方法 更新侧滑长度 <公开 注释 = "用法：用传入值刷新XUI滑动返回图标的侧滑长度。 参数：值1=小数。 返回：无。 原方法：XUI滑动返回图标.updateSlideLength()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSlideBackIconView ().updateSlideLength ((float) @<值1>))
+    }
+
+    方法 设置最大侧滑长度 <公开 注释 = "用法：把XUI滑动返回图标的最大侧滑长度设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI滑动返回图标.setMaxSlideLength()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSlideBackIconView ().setMaxSlideLength ((float) @<值1>))
+    }
+
+    方法 设置箭头大小 <公开 注释 = "用法：把XUI滑动返回图标的箭头大小设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI滑动返回图标.setArrowSize()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSlideBackIconView ().setArrowSize ((float) @<值1>))
+    }
+
+    方法 设置后退视图颜色 <公开 注释 = "用法：把XUI滑动返回图标的后退视图颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI滑动返回图标.setBackViewColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSlideBackIconView ().setBackViewColor (@<值1>))
+    }
+
+    方法 设置后退视图高度 <公开 注释 = "用法：把XUI滑动返回图标的后退视图高度设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI滑动返回图标.setBackViewHeight()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSlideBackIconView ().setBackViewHeight ((float) @<值1>))
+    }
+
+    方法 取后退视图高度 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读出XUI滑动返回图标的后退视图高度。 参数：无。 返回：小数。 原方法：XUI滑动返回图标.getBackViewHeight()">
+    {
+        @ (double)@sn<this>.GetSlideBackIconView ().getBackViewHeight ()
+    }
+
+}
+
+类 XUI滑动返回拦截布局 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.slideback.widget.SlideBackInterceptLayout)."
+        @文档 = "category = \"XUI.组件\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.slideback.widget.SlideBackInterceptLayout\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI滑动返回拦截布局, SlideBackInterceptLayout, com.xuexiang.xui.widget.slideback.widget.SlideBackInterceptLayout)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetSlideBackInterceptLayout ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI滑动返回拦截布局的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI滑动返回拦截布局.getAlpha()">
+    {
+        @ (double)@sn<this>.GetSlideBackInterceptLayout ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI滑动返回拦截布局的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI滑动返回拦截布局.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSlideBackInterceptLayout ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI滑动返回拦截布局的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI滑动返回拦截布局.isEnabled()">
+    {
+        @ @sn<this>.GetSlideBackInterceptLayout ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI滑动返回拦截布局的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI滑动返回拦截布局.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetSlideBackInterceptLayout ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI滑动返回拦截布局的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI滑动返回拦截布局.isClickable()">
+    {
+        @ @sn<this>.GetSlideBackInterceptLayout ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI滑动返回拦截布局的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI滑动返回拦截布局.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetSlideBackInterceptLayout ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI滑动返回拦截布局的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI滑动返回拦截布局.getElevation()">
+    {
+        @ (double)@sn<this>.GetSlideBackInterceptLayout ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI滑动返回拦截布局的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI滑动返回拦截布局.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSlideBackInterceptLayout ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI滑动返回拦截布局的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI滑动返回拦截布局.getMinimumHeight()">
+    {
+        @ @sn<this>.GetSlideBackInterceptLayout ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI滑动返回拦截布局的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI滑动返回拦截布局.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSlideBackInterceptLayout ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI滑动返回拦截布局的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI滑动返回拦截布局.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSlideBackInterceptLayout ().setBackgroundColor (@<新值>))
+    }
+
+    方法 设置侧侧滑长度 <公开 注释 = "用法：把XUI滑动返回拦截布局的侧侧滑长度设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI滑动返回拦截布局.setSideSlideLength()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSlideBackInterceptLayout ().setSideSlideLength ((float) @<值1>))
+    }
+
+}

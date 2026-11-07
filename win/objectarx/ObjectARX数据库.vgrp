@@ -1,0 +1,12 @@
+doc_format_version = 1
+project_identifier = "wutao.vproject.pc.win.1"
+author = "搬码渔"
+name = "ObjectARX数据库"
+version = 1
+unique_mark = objectarx_db
+explain = "ObjectARX 2026 (R25) AcDb 实体读写的火山视窗封装: 块记录/直线/圆/多段线/曲线公共量测/实体生命周期/图层表。桥接实现在随模块发布的 cadarx_test.arx 内, 调用进程必须是 acad.exe 且已 arxload 该 arx, 否则 取最后错误 = 124 eNoDatabase。依赖 ObjectARX几何 的点类型。"
+dependence = "ObjectARX几何.vgrp, *\\sys\\base\\base.vgrp"
+file
+{
+    name = "w_ObjectARX_数据库.wsv"
+}

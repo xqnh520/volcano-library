@@ -1,0 +1,44 @@
+火山OCCT几何 模块 —— 第三方许可与源码获取说明
+================================================
+
+一、本模块包含的第三方二进制
+  libTKernel.so, libTKMath.so, libTKG2d.so, libTKG3d.so, libTKGeomBase.so,
+  libTKBRep.so, libTKGeomAlgo.so, libTKTopAlgo.so, libTKPrim.so, libTKBO.so,
+  libTKBool.so, libTKHLR.so, libTKFillet.so, libTKOffset.so, libTKFeat.so,
+  libTKMesh.so, libTKXMesh.so, libTKShHealing.so
+  以上 18 个动态库均来自 OpenCASCADE (OCCT) 7.8.0，由 Android NDK r27c 交叉编译。
+  libocctjni.so 与 java/OcctJni.java 是本模块自研的 JNI 门面，只做 OCCT 公共 API 的转发。
+  libc++_shared.so 来自 Android NDK r27c 的 C++ 运行时。
+
+二、适用的许可证
+  OCCT 采用 GNU LGPL version 2.1 加上 "OCCT LGPL Exception"（允许把 OCCT 头文件包含进
+  你的编译单元，而不使你的程序因此必须整体开源）。
+  完整许可文本随本模块一起分发，见同目录：
+    LICENSE/LICENSE_LGPL_21.txt
+    LICENSE/OCCT_LGPL_EXCEPTION.txt
+
+三、动态链接形态下的使用者义务（本模块已按此形态封装）
+  火山应用通过 18 个独立 .so 动态链接 OCCT，不修改 OCCT 源码，因此应用自身可以是闭源的；
+  分发 APK 时只需：
+    1) 保留上面的版权声明与许可文本（本目录已经带上，直接随安装包/发布包归档即可）；
+    2) 告知接收方如何获取 OCCT 源码（见第四条）；
+    3) 允许接收方替换或重新链接这批 .so（即不要用加密、签名校验等手段禁止用户更换 OCCT 库）。
+
+四、源码获取方式
+  OCCT 官方源码仓库与发行包：https://git.dev.opencascade.org/repos/occt.git
+  本模块所用版本：OpenCASCADE 7.8.0 发行源码包。
+  交叉编译与链接脚本（本次构建的全部输入）：
+    cmake/build-occt-android.sh   —— NDK 工具链下 configure/build/install OCCT
+    cmake/build-jni.sh            —— 编译本模块自研的 libocctjni.so
+  本机构建副本目录：E:\androidSkill\occt-wrap\occt-src
+
+五、对 OCCT 源码的改动
+  零改动。校验方式：occt-src/src 下 469 个包目录内的全部源文件，时间戳都落在解包后的同一个
+  4.1 秒窗口内（1791991968.02 ~ 1791991972.11），解包之后没有任何文件被写入过，
+  所以发布的是官方原版 7.8.0 源码对应的二进制。
+
+六、版本与验证对应关系
+  实测版本字符串：几何内核.取内核版本() 返回 "7.8.0"（TKernel Standard_Version）。
+  18 个库的运行时装载证据：应用进程 /proc/<pid>/maps 中 20 个 .so 全部映射
+  （out/emu_loaded_libs.txt），且 几何内核.探测本地库 对 18 个库逐一 dlopen 返回 0。
+  42 个封装 API 的数值正确性证据：out/emu_selfcheck_final_x8664.txt，74 项断言 0 失败。

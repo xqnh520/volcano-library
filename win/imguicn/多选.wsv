@@ -1,0 +1,67 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.即时界面 <注释 = "Dear ImGui v1.91.9b-docking 的火山视窗中文封装，全中文类名/方法名/参数名/注释。" @视窗.头文件搜寻目录 = "imgui"
+        @视窗.外部头文件 = "imcn_helper.h, imcn_host.h"
+        @视窗.外部源文件 = "imgui\\imgui.cpp, imgui\\imgui_draw.cpp, imgui\\imgui_tables.cpp, imgui\\imgui_widgets.cpp, imgui\\imgui_demo.cpp, imgui\\misc\\cpp\\imgui_stdlib.cpp, imgui\\backends\\imgui_impl_win32.cpp, imgui\\backends\\imgui_impl_dx11.cpp">
+
+类 界面多选 <公开 注释 = "多选列表支持（ImGui 1.91 多选 API）：用\"开始多选/结束多选\"包住一批可选项，内部自动维护选择集合。每个项目提交前须调用\"置下一项索引\"。" 折叠>
+{
+    方法 开始多选 <公开 静态 注释 = "开始一个多选作用域，需与\"结束多选\"配对。" 折叠 @嵌入式方法 = "">
+    参数 多选标志值 <类型 = 整数 注释 = "多选标志，可用\"多选标志\"类中的常量" @默认值 = 0>
+    参数 项目总数 <类型 = 整数 注释 = "本次多选范围内的项目总数（必填，否则 ImGui 会断言）">
+    {
+        @ ::imcn::MultiSelectBegin((int)@<多选标志值>, (int)@<项目总数>)
+    }
+
+    方法 结束多选 <公开 静态 注释 = "结束多选作用域并应用本帧产生的选择请求。" 折叠 @嵌入式方法 = "">
+    {
+        @ ::imcn::MultiSelectEnd()
+    }
+
+    方法 置下一项索引 <公开 静态 注释 = "为下一个可选项绑定索引，多选逻辑靠它区分项目。" 折叠 @嵌入式方法 = "">
+    参数 项目索引 <类型 = 整数 注释 = "从 0 开始的项目序号">
+    {
+        @ ::imcn::MultiSelectSetIndex((int)@<项目索引>)
+    }
+
+    方法 是否已选中 <公开 静态 类型 = 逻辑型 注释 = "查询指定索引的项目是否在多选集合中。" 返回值注释 = "已选中返回真" 折叠 @嵌入式方法 = "">
+    参数 项目索引 <类型 = 整数 注释 = "从 0 开始的项目序号">
+    {
+        @ ::imcn::MultiSelectContains((int)@<项目索引>)
+    }
+
+    方法 取已选数量 <公开 静态 类型 = 整数 注释 = "取回当前选中的项目数量。" 返回值注释 = "已选数量" 折叠 @嵌入式方法 = "">
+    {
+        @ ::imcn::MultiSelectCount()
+    }
+
+    方法 设置选中 <公开 静态 注释 = "直接设置某个索引的选中状态。" 折叠 @嵌入式方法 = "">
+    参数 项目索引 <类型 = 整数 注释 = "从 0 开始的项目序号">
+    参数 是否选中 <类型 = 逻辑型 注释 = "真表示选中">
+    {
+        @ ::imcn::MultiSelectSetSelected((int)@<项目索引>, (bool)@<是否选中>)
+    }
+
+    方法 清空选择 <公开 静态 注释 = "清空整个选择集合。" 折叠 @嵌入式方法 = "">
+    {
+        @ ::imcn::MultiSelectClear()
+    }
+}
+
+类 多选标志 <公开 注释 = "多选标志，用于界面多选.开始多选" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 无 <公开 类型 = 整数 值 = @ImGuiMultiSelectFlags_None>
+    常量 单选 <公开 类型 = 整数 值 = @ImGuiMultiSelectFlags_SingleSelect>
+    常量 禁止全选 <公开 类型 = 整数 值 = @ImGuiMultiSelectFlags_NoSelectAll>
+    常量 禁止范围选择 <公开 类型 = 整数 值 = @ImGuiMultiSelectFlags_NoRangeSelect>
+    常量 禁止自动选中 <公开 类型 = 整数 值 = @ImGuiMultiSelectFlags_NoAutoSelect>
+    常量 禁止自动清空 <公开 类型 = 整数 值 = @ImGuiMultiSelectFlags_NoAutoClear>
+    常量 重复点击保持选中 <公开 类型 = 整数 值 = @ImGuiMultiSelectFlags_NoAutoClearOnReselect>
+    常量 一维框选 <公开 类型 = 整数 值 = @ImGuiMultiSelectFlags_BoxSelect1d>
+    常量 二维框选 <公开 类型 = 整数 值 = @ImGuiMultiSelectFlags_BoxSelect2d>
+    常量 框选不滚动 <公开 类型 = 整数 值 = @ImGuiMultiSelectFlags_BoxSelectNoScroll>
+    常量 退出键清空 <公开 类型 = 整数 值 = @ImGuiMultiSelectFlags_ClearOnEscape>
+    常量 点击空白清空 <公开 类型 = 整数 值 = @ImGuiMultiSelectFlags_ClearOnClickVoid>
+    常量 点击即选中 <公开 类型 = 整数 值 = @ImGuiMultiSelectFlags_SelectOnClick>
+    常量 松开时选中 <公开 类型 = 整数 值 = @ImGuiMultiSelectFlags_SelectOnClickRelease>
+}

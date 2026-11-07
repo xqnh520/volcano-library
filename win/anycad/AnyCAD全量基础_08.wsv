@@ -1,0 +1,554 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.AnyCAD <注释 = "AnyCAD 全量封装 - 按程序集分域的分片 (自动生成, 请勿手改)。"
+        @视窗.库文件搜寻目录.x64 = "native\\lib"
+        @视窗.外部库.x64 = "AnyCADBridge.lib">
+
+类 AnyCAD基础_枚举曲面构建算法 <公开 注释 = "对应 AnyCAD.Foundation.EnumSurfaceBuildAlgorithm。枚举常量类; 成员均为整数常量。">
+{
+    常量 Constrained填充 <公开 类型 = 整数 值 = 0 注释 = "ConstrainedFilling">
+    常量 Coons样式 <公开 类型 = 整数 值 = 2 注释 = "CoonsStyle">
+    常量 Curved样式 <公开 类型 = 整数 值 = 3 注释 = "CurvedStyle">
+    常量 拉伸样式 <公开 类型 = 整数 值 = 1 注释 = "StretchStyle">
+}
+
+类 AnyCAD基础_枚举曲面类型 <公开 注释 = "对应 AnyCAD.Foundation.EnumSurfaceType。枚举常量类; 成员均为整数常量。">
+{
+    常量 曲面类型样条 <公开 类型 = 整数 值 = 6 注释 = "SurfaceType_BSpline">
+    常量 曲面类型贝塞尔 <公开 类型 = 整数 值 = 5 注释 = "SurfaceType_Bezier">
+    常量 曲面类型圆锥 <公开 类型 = 整数 值 = 2 注释 = "SurfaceType_Cone">
+    常量 曲面类型圆柱 <公开 类型 = 整数 值 = 1 注释 = "SurfaceType_Cylinder">
+    常量 曲面类型Extrusion <公开 类型 = 整数 值 = 8 注释 = "SurfaceType_Extrusion">
+    常量 曲面类型偏移 <公开 类型 = 整数 值 = 9 注释 = "SurfaceType_Offset">
+    常量 曲面类型其它 <公开 类型 = 整数 值 = 10 注释 = "SurfaceType_Other">
+    常量 曲面类型平面 <公开 类型 = 整数 值 = 0 注释 = "SurfaceType_Plane">
+    常量 曲面类型旋转体 <公开 类型 = 整数 值 = 7 注释 = "SurfaceType_Revolution">
+    常量 曲面类型球 <公开 类型 = 整数 值 = 3 注释 = "SurfaceType_Sphere">
+    常量 曲面类型圆环 <公开 类型 = 整数 值 = 4 注释 = "SurfaceType_Torus">
+}
+
+类 AnyCAD基础_枚举更新标志集 <公开 注释 = "对应 AnyCAD.Foundation.EnumUpdateFlags。枚举常量类; 成员均为整数常量。">
+{
+    常量 摄像机 <公开 类型 = 整数 值 = 16 注释 = "Camera">
+    常量 动态 <公开 类型 = 整数 值 = 256 注释 = "Dynamic">
+    常量 材质 <公开 类型 = 整数 值 = 5 注释 = "Material">
+    常量 模型 <公开 类型 = 整数 值 = 1 注释 = "Model">
+    常量 场景 <公开 类型 = 整数 值 = 3 注释 = "Scene">
+    常量 场景2直径 <公开 类型 = 整数 值 = 1280 注释 = "Scene2D">
+    常量 选择集 <公开 类型 = 整数 值 = 768 注释 = "Selection">
+    常量 视口 <公开 类型 = 整数 值 = 48 注释 = "Viewport">
+    常量 零 <公开 类型 = 整数 值 = 0 注释 = "Zero">
+    常量 缩放到拟合 <公开 类型 = 整数 值 = 4096 注释 = "ZoomToFit">
+}
+
+类 AnyCAD基础_枚举极值类型 <公开 注释 = "对应 AnyCAD.Foundation.EnumExtremaType。枚举常量类; 成员均为整数常量。">
+{
+    常量 最大 <公开 类型 = 整数 值 = 1 注释 = "Max">
+    常量 最小 <公开 类型 = 整数 值 = 0 注释 = "Min">
+    常量 最小最大 <公开 类型 = 整数 值 = 2 注释 = "MinMax">
+}
+
+类 AnyCAD基础_枚举标准视图 <公开 注释 = "对应 AnyCAD.Foundation.EnumStandardView。枚举常量类; 成员均为整数常量。">
+{
+    常量 后 <公开 类型 = 整数 值 = 23 注释 = "Back">
+    常量 底 <公开 类型 = 整数 值 = 26 注释 = "Bottom">
+    常量 默认视图 <公开 类型 = 整数 值 = 4 注释 = "DefaultView">
+    常量 边尺寸横法向纵法向竖 <公开 类型 = 整数 值 = 11 注释 = "EdgeDxNyNz">
+    常量 边尺寸横法向纵位置竖 <公开 类型 = 整数 值 = 10 注释 = "EdgeDxNyPz">
+    常量 边尺寸横位置纵法向竖 <公开 类型 = 整数 值 = 12 注释 = "EdgeDxPyNz">
+    常量 边尺寸横位置纵位置竖 <公开 类型 = 整数 值 = 9 注释 = "EdgeDxPyPz">
+    常量 边法向横尺寸纵法向竖 <公开 类型 = 整数 值 = 15 注释 = "EdgeNxDyNz">
+    常量 边法向横尺寸纵位置竖 <公开 类型 = 整数 值 = 14 注释 = "EdgeNxDyPz">
+    常量 边法向横法向纵尺寸竖 <公开 类型 = 整数 值 = 19 注释 = "EdgeNxNyDz">
+    常量 边法向横位置纵尺寸竖 <公开 类型 = 整数 值 = 18 注释 = "EdgeNxPyDz">
+    常量 边位置横尺寸纵法向竖 <公开 类型 = 整数 值 = 16 注释 = "EdgePxDyNz">
+    常量 边位置横尺寸纵位置竖 <公开 类型 = 整数 值 = 13 注释 = "EdgePxDyPz">
+    常量 边位置横法向纵尺寸竖 <公开 类型 = 整数 值 = 20 注释 = "EdgePxNyDz">
+    常量 边位置横位置纵尺寸竖 <公开 类型 = 整数 值 = 17 注释 = "EdgePxPyDz">
+    常量 面法向横 <公开 类型 = 整数 值 = 22 注释 = "FaceNx">
+    常量 面法向纵 <公开 类型 = 整数 值 = 24 注释 = "FaceNy">
+    常量 面法向竖 <公开 类型 = 整数 值 = 26 注释 = "FaceNz">
+    常量 面位置横 <公开 类型 = 整数 值 = 21 注释 = "FacePx">
+    常量 面位置纵 <公开 类型 = 整数 值 = 23 注释 = "FacePy">
+    常量 面位置竖 <公开 类型 = 整数 值 = 25 注释 = "FacePz">
+    常量 前 <公开 类型 = 整数 值 = 24 注释 = "Front">
+    常量 左 <公开 类型 = 整数 值 = 22 注释 = "Left">
+    常量 右 <公开 类型 = 整数 值 = 21 注释 = "Right">
+    常量 顶 <公开 类型 = 整数 值 = 25 注释 = "Top">
+    常量 顶点法向横法向纵法向竖 <公开 类型 = 整数 值 = 6 注释 = "VertexNxNyNz">
+    常量 顶点法向横法向纵位置竖 <公开 类型 = 整数 值 = 2 注释 = "VertexNxNyPz">
+    常量 顶点法向横位置纵法向竖 <公开 类型 = 整数 值 = 5 注释 = "VertexNxPyNz">
+    常量 顶点法向横位置纵位置竖 <公开 类型 = 整数 值 = 1 注释 = "VertexNxPyPz">
+    常量 顶点位置横法向纵法向竖 <公开 类型 = 整数 值 = 7 注释 = "VertexPxNyNz">
+    常量 顶点位置横法向纵位置竖 <公开 类型 = 整数 值 = 3 注释 = "VertexPxNyPz">
+    常量 顶点位置横位置纵法向竖 <公开 类型 = 整数 值 = 8 注释 = "VertexPxPyNz">
+    常量 顶点位置横位置纵位置竖 <公开 类型 = 整数 值 = 4 注释 = "VertexPxPyPz">
+    常量 视图3直径 <公开 类型 = 整数 值 = 3 注释 = "View3D">
+    常量 横坐标负 <公开 类型 = 整数 值 = 22 注释 = "X_Negative">
+    常量 横坐标正 <公开 类型 = 整数 值 = 21 注释 = "X_Positive">
+    常量 纵坐标负 <公开 类型 = 整数 值 = 24 注释 = "Y_Negative">
+    常量 纵坐标正 <公开 类型 = 整数 值 = 23 注释 = "Y_Positive">
+    常量 竖坐标负 <公开 类型 = 整数 值 = 26 注释 = "Z_Negative">
+    常量 竖坐标正 <公开 类型 = 整数 值 = 25 注释 = "Z_Positive">
+}
+
+类 AnyCAD基础_枚举标尺控件类型 <公开 注释 = "对应 AnyCAD.Foundation.EnumRulerWidgetType。枚举常量类; 成员均为整数常量。">
+{
+    常量 默认 <公开 类型 = 整数 值 = 1 注释 = "Default">
+    常量 空 <公开 类型 = 整数 值 = 0 注释 = "Empty">
+}
+
+类 AnyCAD基础_枚举模板缓冲函数 <公开 注释 = "对应 AnyCAD.Foundation.EnumStencilFunction。枚举常量类; 成员均为整数常量。">
+{
+    常量 总是 <公开 类型 = 整数 值 = 519 注释 = "ALWAYS">
+    常量 相等 <公开 类型 = 整数 值 = 514 注释 = "EQUAL">
+    常量 GEQUAL <公开 类型 = 整数 值 = 518 注释 = "GEQUAL">
+    常量 GREATER <公开 类型 = 整数 值 = 516 注释 = "GREATER">
+    常量 LEQUAL <公开 类型 = 整数 值 = 515 注释 = "LEQUAL">
+    常量 LESS <公开 类型 = 整数 值 = 513 注释 = "LESS">
+    常量 从不 <公开 类型 = 整数 值 = 512 注释 = "NEVER">
+    常量 NOTEQUAL <公开 类型 = 整数 值 = 517 注释 = "NOTEQUAL">
+}
+
+类 AnyCAD基础_枚举模板缓冲操作 <公开 注释 = "对应 AnyCAD.Foundation.EnumStencilOp。枚举常量类; 成员均为整数常量。">
+{
+    常量 DECR包裹 <公开 类型 = 整数 值 = 34056 注释 = "DECR_WRAP">
+    常量 Decr <公开 类型 = 整数 值 = 7683 注释 = "Decr">
+    常量 Incr <公开 类型 = 整数 值 = 7682 注释 = "Incr">
+    常量 Incr包裹 <公开 类型 = 整数 值 = 34055 注释 = "IncrWrap">
+    常量 反转 <公开 类型 = 整数 值 = 5386 注释 = "Invert">
+    常量 保留 <公开 类型 = 整数 值 = 7680 注释 = "Keep">
+    常量 替换 <公开 类型 = 整数 值 = 7681 注释 = "Replace">
+    常量 零 <公开 类型 = 整数 值 = 0 注释 = "Zero">
+}
+
+类 AnyCAD基础_枚举步长序号 <公开 注释 = "对应 AnyCAD.Foundation.DistanceMeasureEditor+EnumStepIndex。枚举常量类; 成员均为整数常量。">
+{
+    常量 终点 <公开 类型 = 整数 值 = 1 注释 = "End">
+    常量 起点 <公开 类型 = 整数 值 = 0 注释 = "Start">
+}
+
+类 AnyCAD基础_枚举比较条件 <公开 注释 = "对应 AnyCAD.Foundation.EnumComparisonCondition。枚举常量类; 成员均为整数常量。">
+{
+    常量 之间 <公开 类型 = 整数 值 = 0 注释 = "Between">
+    常量 相等 <公开 类型 = 整数 值 = 5 注释 = "Equal">
+    常量 Greater <公开 类型 = 整数 值 = 1 注释 = "Greater">
+    常量 Greater相等 <公开 类型 = 整数 值 = 2 注释 = "GreaterEqual">
+    常量 Less <公开 类型 = 整数 值 = 3 注释 = "Less">
+    常量 Less相等 <公开 类型 = 整数 值 = 4 注释 = "LessEqual">
+}
+
+类 AnyCAD基础_枚举法向映射类型 <公开 注释 = "对应 AnyCAD.Foundation.EnumNormalMapType。枚举常量类; 成员均为整数常量。">
+{
+    常量 对象空间 <公开 类型 = 整数 值 = 0 注释 = "ObjectSpace">
+    常量 切向空间 <公开 类型 = 整数 值 = 1 注释 = "TangentSpace">
+}
+
+类 AnyCAD基础_枚举注释遮挡模式 <公开 注释 = "对应 AnyCAD.Foundation.EnumAnnotationOcclusionMode。枚举常量类; 成员均为整数常量。">
+{
+    常量 总是可见 <公开 类型 = 整数 值 = 0 注释 = "AlwaysVisible">
+    常量 虚线隐藏线直线 <公开 类型 = 整数 值 = 2 注释 = "DashedHiddenLine">
+    常量 隐藏线 <公开 类型 = 整数 值 = 1 注释 = "Hidden">
+}
+
+类 AnyCAD基础_枚举活动纹理单位 <公开 注释 = "对应 AnyCAD.Foundation.EnumActiveTextureUnit。枚举常量类; 成员均为整数常量。">
+{
+    常量 纹理0 <公开 类型 = 整数 值 = 33984 注释 = "TEXTURE0">
+}
+
+类 AnyCAD基础_枚举深度函数 <公开 注释 = "对应 AnyCAD.Foundation.EnumDepthFunction。枚举常量类; 成员均为整数常量。">
+{
+    常量 总是 <公开 类型 = 整数 值 = 519 注释 = "ALWAYS">
+    常量 相等 <公开 类型 = 整数 值 = 514 注释 = "EQUAL">
+    常量 GEQUAL <公开 类型 = 整数 值 = 518 注释 = "GEQUAL">
+    常量 GREATER <公开 类型 = 整数 值 = 516 注释 = "GREATER">
+    常量 LEQUAL <公开 类型 = 整数 值 = 515 注释 = "LEQUAL">
+    常量 LESS <公开 类型 = 整数 值 = 513 注释 = "LESS">
+    常量 NOTEQUAL <公开 类型 = 整数 值 = 517 注释 = "NOTEQUAL">
+    常量 从不 <公开 类型 = 整数 值 = 512 注释 = "Never">
+}
+
+类 AnyCAD基础_枚举深度装箱 <公开 注释 = "对应 AnyCAD.Foundation.EnumDepthPacking。枚举常量类; 成员均为整数常量。">
+{
+    常量 基本深度装箱 <公开 类型 = 整数 值 = 3200 注释 = "BasicDepthPacking">
+    常量 No装箱 <公开 类型 = 整数 值 = 0 注释 = "NoPacking">
+    常量 红绿蓝透明度深度装箱 <公开 类型 = 整数 值 = 3201 注释 = "RGBADepthPacking">
+}
+
+类 AnyCAD基础_枚举渲染窗口后端 <公开 注释 = "对应 AnyCAD.Foundation.EnumRenderWindowBackend。枚举常量类; 成员均为整数常量。">
+{
+    常量 三阶DGL <公开 类型 = 整数 值 = 1 注释 = "D3DGL">
+    常量 SDLGL <公开 类型 = 整数 值 = 0 注释 = "SDLGL">
+}
+
+类 AnyCAD基础_枚举点样式 <公开 注释 = "对应 AnyCAD.Foundation.EnumPointStyle。枚举常量类; 成员均为整数常量。">
+{
+    常量 箭头 <公开 类型 = 整数 值 = 100 注释 = "Arrow">
+    常量 轴 <公开 类型 = 整数 值 = 101 注释 = "Axis">
+    常量 叉乘 <公开 类型 = 整数 值 = 1 注释 = "Cross">
+    常量 点乘 <公开 类型 = 整数 值 = 2 注释 = "Dot">
+    常量 环 <公开 类型 = 整数 值 = 5 注释 = "Loop">
+    常量 加 <公开 类型 = 整数 值 = 0 注释 = "Plus">
+    常量 矩形 <公开 类型 = 整数 值 = 3 注释 = "Rect">
+    常量 三角形 <公开 类型 = 整数 值 = 4 注释 = "Triangle">
+}
+
+类 AnyCAD基础_枚举特性组件集 <公开 注释 = "对应 AnyCAD.Foundation.EnumAttributeComponents。枚举常量类; 成员均为整数常量。">
+{
+    常量 四 <公开 类型 = 整数 值 = 4 注释 = "Four">
+    常量 One <公开 类型 = 整数 值 = 1 注释 = "One">
+    常量 Sixteen <公开 类型 = 整数 值 = 16 注释 = "Sixteen">
+    常量 三 <公开 类型 = 整数 值 = 3 注释 = "Three">
+    常量 二 <公开 类型 = 整数 值 = 2 注释 = "Two">
+}
+
+类 AnyCAD基础_枚举特性语义 <公开 注释 = "对应 AnyCAD.Foundation.EnumAttributeSemantic。枚举常量类; 成员均为整数常量。">
+{
+    常量 颜色 <公开 类型 = 整数 值 = 3 注释 = "Color">
+    常量 Customized1 <公开 类型 = 整数 值 = 30 注释 = "Customized1">
+    常量 Customized2 <公开 类型 = 整数 值 = 31 注释 = "Customized2">
+    常量 Customized3 <公开 类型 = 整数 值 = 32 注释 = "Customized3">
+    常量 实例颜色 <公开 类型 = 整数 值 = 4 注释 = "InstanceColor">
+    常量 实例颜色终点 <公开 类型 = 整数 值 = 36 注释 = "InstanceColorEnd">
+    常量 实例颜色起点 <公开 类型 = 整数 值 = 35 注释 = "InstanceColorStart">
+    常量 实例距离终点 <公开 类型 = 整数 值 = 38 注释 = "InstanceDistanceEnd">
+    常量 实例距离起点 <公开 类型 = 整数 值 = 37 注释 = "InstanceDistanceStart">
+    常量 实例直线终点 <公开 类型 = 整数 值 = 34 注释 = "InstanceLineEnd">
+    常量 实例直线起点 <公开 类型 = 整数 值 = 33 注释 = "InstanceLineStart">
+    常量 实例矩阵 <公开 类型 = 整数 值 = 5 注释 = "InstanceMatrix">
+    常量 实例Splat中心 <公开 类型 = 整数 值 = 39 注释 = "InstanceSplatCenter">
+    常量 实例Splat颜色 <公开 类型 = 整数 值 = 42 注释 = "InstanceSplatColor">
+    常量 实例SplatCov面积 <公开 类型 = 整数 值 = 40 注释 = "InstanceSplatCovA">
+    常量 实例SplatCov起点 <公开 类型 = 整数 值 = 41 注释 = "InstanceSplatCovB">
+    常量 直线距离 <公开 类型 = 整数 值 = 50 注释 = "LineDistance">
+    常量 变形法向0 <公开 类型 = 整数 值 = 9 注释 = "MorphNormal0">
+    常量 变形法向1 <公开 类型 = 整数 值 = 10 注释 = "MorphNormal1">
+    常量 变形法向2 <公开 类型 = 整数 值 = 11 注释 = "MorphNormal2">
+    常量 变形法向3 <公开 类型 = 整数 值 = 12 注释 = "MorphNormal3">
+    常量 变形目标0 <公开 类型 = 整数 值 = 5 注释 = "MorphTarget0">
+    常量 变形目标1 <公开 类型 = 整数 值 = 6 注释 = "MorphTarget1">
+    常量 变形目标2 <公开 类型 = 整数 值 = 7 注释 = "MorphTarget2">
+    常量 变形目标3 <公开 类型 = 整数 值 = 8 注释 = "MorphTarget3">
+    常量 变形目标4 <公开 类型 = 整数 值 = 9 注释 = "MorphTarget4">
+    常量 变形目标5 <公开 类型 = 整数 值 = 10 注释 = "MorphTarget5">
+    常量 变形目标6 <公开 类型 = 整数 值 = 11 注释 = "MorphTarget6">
+    常量 变形目标7 <公开 类型 = 整数 值 = 12 注释 = "MorphTarget7">
+    常量 法向 <公开 类型 = 整数 值 = 1 注释 = "Normal">
+    常量 位置 <公开 类型 = 整数 值 = 0 注释 = "Position">
+    常量 Skin序号 <公开 类型 = 整数 值 = 13 注释 = "SkinIndex">
+    常量 Skin权重 <公开 类型 = 整数 值 = 14 注释 = "SkinWeight">
+    常量 切向 <公开 类型 = 整数 值 = 6 注释 = "Tangent">
+    常量 纹理坐标 <公开 类型 = 整数 值 = 2 注释 = "TextureCoord">
+    常量 纹理坐标2 <公开 类型 = 整数 值 = 4 注释 = "TextureCoord2">
+    常量 Unknown <公开 类型 = 整数 值 = 100 注释 = "Unknown">
+}
+
+类 AnyCAD基础_枚举环境过渡模式 <公开 注释 = "对应 AnyCAD.Foundation.EnumEnvBlendingMode。枚举常量类; 成员均为整数常量。">
+{
+    常量 添加工序 <公开 类型 = 整数 值 = 3 注释 = "AddOperation">
+    常量 混合工序 <公开 类型 = 整数 值 = 2 注释 = "MixOperation">
+    常量 相乘工序 <公开 类型 = 整数 值 = 1 注释 = "MultiplyOperation">
+    常量 No过渡 <公开 类型 = 整数 值 = 0 注释 = "NoBlend">
+}
+
+类 AnyCAD基础_枚举盒范围 <公开 注释 = "对应 AnyCAD.Foundation.EnumBoxExtent。枚举常量类; 成员均为整数常量。">
+{
+    常量 范围有限 <公开 类型 = 整数 值 = 1 注释 = "EXTENT_FINITE">
+    常量 范围无穷 <公开 类型 = 整数 值 = 2 注释 = "EXTENT_INFINITE">
+    常量 范围空 <公开 类型 = 整数 值 = 0 注释 = "EXTENT_NULL">
+}
+
+类 AnyCAD基础_枚举盒角点 <公开 注释 = "对应 AnyCAD.Foundation.AABox+EnumBoxCorner。枚举常量类; 成员均为整数常量。">
+{
+    常量 远左底 <公开 类型 = 整数 值 = 0 注释 = "FAR_LEFT_BOTTOM">
+    常量 远左顶 <公开 类型 = 整数 值 = 1 注释 = "FAR_LEFT_TOP">
+    常量 远右底 <公开 类型 = 整数 值 = 3 注释 = "FAR_RIGHT_BOTTOM">
+    常量 远右顶 <公开 类型 = 整数 值 = 2 注释 = "FAR_RIGHT_TOP">
+    常量 近左底 <公开 类型 = 整数 值 = 6 注释 = "NEAR_LEFT_BOTTOM">
+    常量 近左顶 <公开 类型 = 整数 值 = 5 注释 = "NEAR_LEFT_TOP">
+    常量 近右底 <公开 类型 = 整数 值 = 7 注释 = "NEAR_RIGHT_BOTTOM">
+    常量 近右顶 <公开 类型 = 整数 值 = 4 注释 = "NEAR_RIGHT_TOP">
+}
+
+类 AnyCAD基础_枚举着色器类型 <公开 注释 = "对应 AnyCAD.Foundation.EnumShaderType。枚举常量类; 成员均为整数常量。">
+{
+    常量 片段着色器 <公开 类型 = 整数 值 = 35632 注释 = "FRAGMENT_SHADER">
+    常量 顶点着色器 <公开 类型 = 整数 值 = 35633 注释 = "VERTEX_SHADER">
+}
+
+类 AnyCAD基础_枚举着色器运行时 <公开 注释 = "对应 AnyCAD.Foundation.EnumShaderRuntime。枚举常量类; 成员均为整数常量。">
+{
+    常量 EGL <公开 类型 = 整数 值 = 1 注释 = "EGL">
+    常量 打开GL <公开 类型 = 整数 值 = 0 注释 = "OpenGL">
+}
+
+类 AnyCAD基础_枚举碰撞状态 <公开 注释 = "对应 AnyCAD.Foundation.EnumCollisionState。枚举常量类; 成员均为整数常量。">
+{
+    常量 进入 <公开 类型 = 整数 值 = 0 注释 = "In">
+    常量 在 <公开 类型 = 整数 值 = 2 注释 = "On">
+    常量 输出 <公开 类型 = 整数 值 = 1 注释 = "Out">
+    常量 Unknown <公开 类型 = 整数 值 = 3 注释 = "Unknown">
+}
+
+类 AnyCAD基础_枚举纹理内部格式 <公开 注释 = "对应 AnyCAD.Foundation.EnumTextureInternalFormat。枚举常量类; 成员均为整数常量。">
+{
+    常量 深度24模板缓冲8 <公开 类型 = 整数 值 = 35056 注释 = "DEPTH24_STENCIL8">
+    常量 深度32面模板缓冲8 <公开 类型 = 整数 值 = 36013 注释 = "DEPTH32F_STENCIL8">
+    常量 深度组件 <公开 类型 = 整数 值 = 6402 注释 = "DEPTH_COMPONENT">
+    常量 深度组件16 <公开 类型 = 整数 值 = 33189 注释 = "DEPTH_COMPONENT16">
+    常量 深度组件24 <公开 类型 = 整数 值 = 33190 注释 = "DEPTH_COMPONENT24">
+    常量 深度组件32面 <公开 类型 = 整数 值 = 36012 注释 = "DEPTH_COMPONENT32F">
+    常量 半径16面 <公开 类型 = 整数 值 = 33325 注释 = "R16F">
+    常量 半径32面 <公开 类型 = 整数 值 = 33326 注释 = "R32F">
+    常量 半径8 <公开 类型 = 整数 值 = 33321 注释 = "R8">
+    常量 半径8SNORM <公开 类型 = 整数 值 = 36756 注释 = "R8_SNORM">
+    常量 RG16面 <公开 类型 = 整数 值 = 33327 注释 = "RG16F">
+    常量 RG32面 <公开 类型 = 整数 值 = 33328 注释 = "RG32F">
+    常量 RG8 <公开 类型 = 整数 值 = 33323 注释 = "RG8">
+    常量 RG8SNORM <公开 类型 = 整数 值 = 36757 注释 = "RG8_SNORM">
+    常量 红绿蓝16面 <公开 类型 = 整数 值 = 34843 注释 = "RGB16F">
+    常量 红绿蓝32面 <公开 类型 = 整数 值 = 34837 注释 = "RGB32F">
+    常量 红绿蓝8 <公开 类型 = 整数 值 = 32849 注释 = "RGB8">
+    常量 红绿蓝透明度16面 <公开 类型 = 整数 值 = 34842 注释 = "RGBA16F">
+    常量 红绿蓝透明度32面 <公开 类型 = 整数 值 = 34836 注释 = "RGBA32F">
+    常量 红绿蓝透明度8 <公开 类型 = 整数 值 = 32856 注释 = "RGBA8">
+}
+
+类 AnyCAD基础_枚举纹理包裹方式类型 <公开 注释 = "对应 AnyCAD.Foundation.EnumTextureWrappingType。枚举常量类; 成员均为整数常量。">
+{
+    常量 夹紧到边框 <公开 类型 = 整数 值 = 33069 注释 = "CLAMP_TO_BORDER">
+    常量 夹紧到边 <公开 类型 = 整数 值 = 33071 注释 = "CLAMP_TO_EDGE">
+    常量 已镜像重复 <公开 类型 = 整数 值 = 33648 注释 = "MIRRORED_REPEAT">
+    常量 重复 <公开 类型 = 整数 值 = 10497 注释 = "REPEAT">
+}
+
+类 AnyCAD基础_枚举纹理单位 <公开 注释 = "对应 AnyCAD.Foundation.EnumTextureUnit。枚举常量类; 成员均为整数常量。">
+{
+    常量 空 <公开 类型 = 整数 值 = -1 注释 = "Null">
+    常量 TU0 <公开 类型 = 整数 值 = 0 注释 = "TU0">
+    常量 TU1 <公开 类型 = 整数 值 = 1 注释 = "TU1">
+    常量 TU2 <公开 类型 = 整数 值 = 2 注释 = "TU2">
+    常量 TU3 <公开 类型 = 整数 值 = 3 注释 = "TU3">
+    常量 TU4 <公开 类型 = 整数 值 = 4 注释 = "TU4">
+    常量 TU5 <公开 类型 = 整数 值 = 5 注释 = "TU5">
+    常量 TU6 <公开 类型 = 整数 值 = 6 注释 = "TU6">
+    常量 TU7 <公开 类型 = 整数 值 = 7 注释 = "TU7">
+    常量 TU8 <公开 类型 = 整数 值 = 8 注释 = "TU8">
+}
+
+类 AnyCAD基础_枚举纹理参数 <公开 注释 = "对应 AnyCAD.Foundation.EnumTextureParameter。枚举常量类; 成员均为整数常量。">
+{
+    常量 纹理比较函数 <公开 类型 = 整数 值 = 34893 注释 = "TEXTURE_COMPARE_FUNC">
+    常量 纹理比较模式 <公开 类型 = 整数 值 = 34892 注释 = "TEXTURE_COMPARE_MODE">
+    常量 纹理倍数过滤 <公开 类型 = 整数 值 = 10240 注释 = "TEXTURE_MAG_FILTER">
+    常量 纹理最小过滤 <公开 类型 = 整数 值 = 10241 注释 = "TEXTURE_MIN_FILTER">
+    常量 纹理包裹半径 <公开 类型 = 整数 值 = 32882 注释 = "TEXTURE_WRAP_R">
+    常量 纹理包裹比例 <公开 类型 = 整数 值 = 10242 注释 = "TEXTURE_WRAP_S">
+    常量 纹理包裹参数 <公开 类型 = 整数 值 = 10243 注释 = "TEXTURE_WRAP_T">
+}
+
+类 AnyCAD基础_枚举纹理格式 <公开 注释 = "对应 AnyCAD.Foundation.EnumTextureFormat。枚举常量类; 成员均为整数常量。">
+{
+    常量 透明度 <公开 类型 = 整数 值 = 6406 注释 = "ALPHA">
+    常量 深度组件 <公开 类型 = 整数 值 = 6402 注释 = "DEPTH_COMPONENT">
+    常量 深度模板缓冲 <公开 类型 = 整数 值 = 34041 注释 = "DEPTH_STENCIL">
+    常量 LUMINANCE <公开 类型 = 整数 值 = 6409 注释 = "LUMINANCE">
+    常量 LUMINANCE透明度 <公开 类型 = 整数 值 = 6410 注释 = "LUMINANCE_ALPHA">
+    常量 NOT已使用 <公开 类型 = 整数 值 = 0 注释 = "NOT_USED">
+    常量 红色 <公开 类型 = 整数 值 = 6403 注释 = "RED">
+    常量 红色整数 <公开 类型 = 整数 值 = 36244 注释 = "RED_INTEGER">
+    常量 RG <公开 类型 = 整数 值 = 33319 注释 = "RG">
+    常量 红绿蓝 <公开 类型 = 整数 值 = 6407 注释 = "RGB">
+    常量 红绿蓝透明度 <公开 类型 = 整数 值 = 6408 注释 = "RGBA">
+    常量 RG整数 <公开 类型 = 整数 值 = 33320 注释 = "RG_INTEGER">
+}
+
+类 AnyCAD基础_枚举纹理比较函数 <公开 注释 = "对应 AnyCAD.Foundation.EnumTextureCompareFunc。枚举常量类; 成员均为整数常量。">
+{
+    常量 LEQUAL <公开 类型 = 整数 值 = 515 注释 = "LEQUAL">
+}
+
+类 AnyCAD基础_枚举纹理比较模式 <公开 注释 = "对应 AnyCAD.Foundation.EnumTextureCompareMode。枚举常量类; 成员均为整数常量。">
+{
+    常量 比较引用到纹理 <公开 类型 = 整数 值 = 34894 注释 = "COMPARE_REF_TO_TEXTURE">
+    常量 无 <公开 类型 = 整数 值 = 0 注释 = "NONE">
+}
+
+类 AnyCAD基础_枚举纹理目标 <公开 注释 = "对应 AnyCAD.Foundation.EnumTextureTarget。枚举常量类; 成员均为整数常量。">
+{
+    常量 纹理2直径 <公开 类型 = 整数 值 = 3553 注释 = "TEXTURE_2D">
+    常量 纹理2直径数组 <公开 类型 = 整数 值 = 35866 注释 = "TEXTURE_2D_ARRAY">
+    常量 纹理3直径 <公开 类型 = 整数 值 = 32879 注释 = "TEXTURE_3D">
+    常量 纹理立方体映射 <公开 类型 = 整数 值 = 34067 注释 = "TEXTURE_CUBE_MAP">
+    常量 纹理立方体映射负横坐标 <公开 类型 = 整数 值 = 34070 注释 = "TEXTURE_CUBE_MAP_NEGATIVE_X">
+    常量 纹理立方体映射负纵坐标 <公开 类型 = 整数 值 = 34072 注释 = "TEXTURE_CUBE_MAP_NEGATIVE_Y">
+    常量 纹理立方体映射负竖坐标 <公开 类型 = 整数 值 = 34074 注释 = "TEXTURE_CUBE_MAP_NEGATIVE_Z">
+    常量 纹理立方体映射正横坐标 <公开 类型 = 整数 值 = 34069 注释 = "TEXTURE_CUBE_MAP_POSITIVE_X">
+    常量 纹理立方体映射正纵坐标 <公开 类型 = 整数 值 = 34071 注释 = "TEXTURE_CUBE_MAP_POSITIVE_Y">
+    常量 纹理立方体映射正竖坐标 <公开 类型 = 整数 值 = 34073 注释 = "TEXTURE_CUBE_MAP_POSITIVE_Z">
+}
+
+类 AnyCAD基础_枚举纹理过滤类型 <公开 注释 = "对应 AnyCAD.Foundation.EnumTextureFilterType。枚举常量类; 成员均为整数常量。">
+{
+    常量 线性 <公开 类型 = 整数 值 = 9729 注释 = "LINEAR">
+    常量 线性MIP贴图线性 <公开 类型 = 整数 值 = 9987 注释 = "LINEAR_MIPMAP_LINEAR">
+    常量 线性MIP贴图NEARES <公开 类型 = 整数 值 = 9985 注释 = "LINEAR_MIPMAP_NEARES">
+    常量 最近 <公开 类型 = 整数 值 = 9728 注释 = "NEAREST">
+    常量 最近MIP贴图线性 <公开 类型 = 整数 值 = 9986 注释 = "NEAREST_MIPMAP_LINEAR">
+    常量 最近MIP贴图最近 <公开 类型 = 整数 值 = 9984 注释 = "NEAREST_MIPMAP_NEAREST">
+}
+
+类 AnyCAD基础_枚举线型组件类型 <公开 注释 = "对应 AnyCAD.Foundation.EnumLineStyleComponentType。枚举常量类; 成员均为整数常量。">
+{
+    常量 虚线 <公开 类型 = 整数 值 = 1 注释 = "DASH">
+    常量 点乘 <公开 类型 = 整数 值 = 3 注释 = "DOT">
+    常量 PATTERN <公开 类型 = 整数 值 = 4 注释 = "PATTERN">
+    常量 空间 <公开 类型 = 整数 值 = 2 注释 = "SPACE">
+    常量 UNKNOWN <公开 类型 = 整数 值 = 0 注释 = "UNKNOWN">
+}
+
+类 AnyCAD基础_枚举组件标志集 <公开 注释 = "对应 AnyCAD.Foundation.EnumComponentFlags。枚举常量类; 成员均为整数常量。">
+{
+    常量 自动克隆 <公开 类型 = 整数 值 = 1 注释 = "AutoClone">
+    常量 无 <公开 类型 = 整数 值 = 0 注释 = "None">
+}
+
+类 AnyCAD基础_枚举缓冲区位 <公开 注释 = "对应 AnyCAD.Foundation.EnumBufferBit。枚举常量类; 成员均为整数常量。">
+{
+    常量 颜色缓冲区位 <公开 类型 = 整数 值 = 16384 注释 = "COLOR_BUFFER_BIT">
+    常量 颜色深度BITS <公开 类型 = 整数 值 = 16640 注释 = "COLOR_DEPTH_BITS">
+    常量 颜色深度模板缓冲BITS <公开 类型 = 整数 值 = 17664 注释 = "COLOR_DEPTH_STENCIL_BITS">
+    常量 颜色模板缓冲BITS <公开 类型 = 整数 值 = 17408 注释 = "COLOR_STENCIL_BITS">
+    常量 深度缓冲区位 <公开 类型 = 整数 值 = 256 注释 = "DEPTH_BUFFER_BIT">
+    常量 深度模板缓冲BITS <公开 类型 = 整数 值 = 1280 注释 = "DEPTH_STENCIL_BITS">
+    常量 模板缓冲缓冲区位 <公开 类型 = 整数 值 = 1024 注释 = "STENCIL_BUFFER_BIT">
+}
+
+类 AnyCAD基础_枚举缓冲区数据用法 <公开 注释 = "对应 AnyCAD.Foundation.EnumBufferDataUsage。枚举常量类; 成员均为整数常量。">
+{
+    常量 动态复制 <公开 类型 = 整数 值 = 35050 注释 = "DYNAMIC_COPY">
+    常量 动态绘制 <公开 类型 = 整数 值 = 35048 注释 = "DYNAMIC_DRAW">
+    常量 动态读取 <公开 类型 = 整数 值 = 35049 注释 = "DYNAMIC_READ">
+    常量 静态复制 <公开 类型 = 整数 值 = 35046 注释 = "STATIC_COPY">
+    常量 静态绘制 <公开 类型 = 整数 值 = 35044 注释 = "STATIC_DRAW">
+    常量 静态读取 <公开 类型 = 整数 值 = 35045 注释 = "STATIC_READ">
+    常量 STREAM复制 <公开 类型 = 整数 值 = 35042 注释 = "STREAM_COPY">
+    常量 STREAM绘制 <公开 类型 = 整数 值 = 35040 注释 = "STREAM_DRAW">
+    常量 STREAM读取 <公开 类型 = 整数 值 = 35041 注释 = "STREAM_READ">
+}
+
+类 AnyCAD基础_枚举缓冲区类型 <公开 注释 = "对应 AnyCAD.Foundation.EnumBufferType。枚举常量类; 成员均为整数常量。">
+{
+    常量 数组缓冲区 <公开 类型 = 整数 值 = 34962 注释 = "ARRAY_BUFFER">
+    常量 复制读取缓冲区 <公开 类型 = 整数 值 = 36662 注释 = "COPY_READ_BUFFER">
+    常量 复制写缓冲区 <公开 类型 = 整数 值 = 36663 注释 = "COPY_WRITE_BUFFER">
+    常量 元素数组缓冲区 <公开 类型 = 整数 值 = 34963 注释 = "ELEMENT_ARRAY_BUFFER">
+    常量 像素打包缓冲区 <公开 类型 = 整数 值 = 35051 注释 = "PIXEL_PACK_BUFFER">
+    常量 像素UNPACK缓冲区 <公开 类型 = 整数 值 = 35052 注释 = "PIXEL_UNPACK_BUFFER">
+    常量 RENDERBUFFER <公开 类型 = 整数 值 = 36161 注释 = "RENDERBUFFER">
+    常量 变换反馈缓冲区 <公开 类型 = 整数 值 = 35982 注释 = "TRANSFORM_FEEDBACK_BUFFER">
+    常量 均匀缓冲区 <公开 类型 = 整数 值 = 35345 注释 = "UNIFORM_BUFFER">
+}
+
+类 AnyCAD基础_枚举编码 <公开 注释 = "对应 AnyCAD.Foundation.EnumEncoding。枚举常量类; 成员均为整数常量。">
+{
+    常量 伽马编码 <公开 类型 = 整数 值 = 3007 注释 = "GammaEncoding">
+    常量 线性编码 <公开 类型 = 整数 值 = 3000 注释 = "LinearEncoding">
+    常量 日志Luv编码 <公开 类型 = 整数 值 = 3003 注释 = "LogLuvEncoding">
+    常量 RGBD编码 <公开 类型 = 整数 值 = 3006 注释 = "RGBDEncoding">
+    常量 RGBE编码 <公开 类型 = 整数 值 = 3002 注释 = "RGBEEncoding">
+    常量 RGBM16编码 <公开 类型 = 整数 值 = 3005 注释 = "RGBM16Encoding">
+    常量 RGBM7编码 <公开 类型 = 整数 值 = 3004 注释 = "RGBM7Encoding">
+    常量 红绿蓝编码 <公开 类型 = 整数 值 = 3001 注释 = "sRGBEncoding">
+}
+
+类 AnyCAD基础_枚举编辑器代码 <公开 注释 = "对应 AnyCAD.Foundation.EnumEditorCode。枚举常量类; 成员均为整数常量。">
+{
+    常量 退出 <公开 类型 = 整数 值 = 3 注释 = "Exit">
+    常量 已失败 <公开 类型 = 整数 值 = 2 注释 = "Failed">
+    常量 Ignored <公开 类型 = 整数 值 = 0 注释 = "Ignored">
+    常量 Processed <公开 类型 = 整数 值 = 1 注释 = "Processed">
+    常量 Sucessed <公开 类型 = 整数 值 = 1 注释 = "Sucessed">
+}
+
+类 AnyCAD基础_枚举编辑器触发 <公开 注释 = "对应 AnyCAD.Foundation.EnumEditorTrigger。枚举常量类; 成员均为整数常量。">
+{
+    常量 命令 <公开 类型 = 整数 值 = 0 注释 = "Command">
+    常量 鼠标单击 <公开 类型 = 整数 值 = 1 注释 = "MouseClick">
+}
+
+类 AnyCAD基础_枚举背景主题 <公开 注释 = "对应 AnyCAD.Foundation.EnumBackgroundTheme。枚举常量类; 成员均为整数常量。">
+{
+    常量 深色蓝色 <公开 类型 = 整数 值 = 0 注释 = "DarkBlue">
+    常量 灯光蓝色 <公开 类型 = 整数 值 = 1 注释 = "LightBlue">
+    常量 灯光灰色 <公开 类型 = 整数 值 = 2 注释 = "LightGray">
+}
+
+类 AnyCAD基础_枚举背景类型 <公开 注释 = "对应 AnyCAD.Foundation.EnumBackgroundType。枚举常量类; 成员均为整数常量。">
+{
+    常量 颜色 <公开 类型 = 整数 值 = 0 注释 = "Color">
+    常量 梯度颜色 <公开 类型 = 整数 值 = 1 注释 = "GradientColor">
+    常量 图像 <公开 类型 = 整数 值 = 2 注释 = "Image">
+    常量 天空盒 <公开 类型 = 整数 值 = 3 注释 = "SkyBox">
+}
+
+类 AnyCAD基础_枚举色调映射 <公开 注释 = "对应 AnyCAD.Foundation.EnumToneMapping。枚举常量类; 成员均为整数常量。">
+{
+    常量 ACESFilmic色调映射 <公开 类型 = 整数 值 = 5 注释 = "ACESFilmicToneMapping">
+    常量 Cineon色调映射 <公开 类型 = 整数 值 = 4 注释 = "CineonToneMapping">
+    常量 线性色调映射 <公开 类型 = 整数 值 = 1 注释 = "LinearToneMapping">
+    常量 Neutral色调映射 <公开 类型 = 整数 值 = 6 注释 = "NeutralToneMapping">
+    常量 No色调映射 <公开 类型 = 整数 值 = 0 注释 = "NoToneMapping">
+    常量 Reinhard色调映射 <公开 类型 = 整数 值 = 2 注释 = "ReinhardToneMapping">
+    常量 Uncharted2色调映射 <公开 类型 = 整数 值 = 3 注释 = "Uncharted2ToneMapping">
+}
+
+类 AnyCAD基础_枚举视口类型 <公开 注释 = "对应 AnyCAD.Foundation.EnumViewportType。枚举常量类; 成员均为整数常量。">
+{
+    常量 默认 <公开 类型 = 整数 值 = 0 注释 = "Default">
+    常量 Nested <公开 类型 = 整数 值 = 2 注释 = "Nested">
+    常量 视口 <公开 类型 = 整数 值 = 1 注释 = "Viewport">
+}
+
+类 AnyCAD基础_枚举视图坐标类型 <公开 注释 = "对应 AnyCAD.Foundation.EnumViewCoordinateType。枚举常量类; 成员均为整数常量。">
+{
+    常量 轴 <公开 类型 = 整数 值 = 1 注释 = "Axis">
+    常量 轴和立方体 <公开 类型 = 整数 值 = 3 注释 = "AxisAndCube">
+    常量 轴和球 <公开 类型 = 整数 值 = 5 注释 = "AxisAndSphere">
+    常量 立方体 <公开 类型 = 整数 值 = 2 注释 = "Cube">
+    常量 空 <公开 类型 = 整数 值 = 0 注释 = "Empty">
+    常量 球 <公开 类型 = 整数 值 = 4 注释 = "Sphere">
+}
+
+类 AnyCAD基础_枚举记录层级 <公开 注释 = "对应 AnyCAD.Foundation.EnumLoggingLevel。枚举常量类; 成员均为整数常量。">
+{
+    常量 调试 <公开 类型 = 整数 值 = 1 注释 = "Debug">
+    常量 错误 <公开 类型 = 整数 值 = 4 注释 = "Error">
+    常量 Fatal <公开 类型 = 整数 值 = 5 注释 = "Fatal">
+    常量 信息 <公开 类型 = 整数 值 = 2 注释 = "Info">
+    常量 关闭 <公开 类型 = 整数 值 = 6 注释 = "Off">
+    常量 追踪 <公开 类型 = 整数 值 = 0 注释 = "Trace">
+    常量 Warn <公开 类型 = 整数 值 = 3 注释 = "Warn">
+}
+
+类 AnyCAD基础_枚举转换参数化类型 <公开 注释 = "对应 AnyCAD.Foundation.EnumConvertParameterisationType。枚举常量类; 成员均为整数常量。">
+{
+    常量 Polynomial <公开 类型 = 整数 值 = 7 注释 = "Polynomial">
+    常量 Quasi角度 <公开 类型 = 整数 值 = 5 注释 = "QuasiAngular">
+    常量 有理周长1 <公开 类型 = 整数 值 = 6 注释 = "RationalC1">
+    常量 Tgt角度上方2 <公开 类型 = 整数 值 = 0 注释 = "TgtThetaOver2">
+    常量 Tgt角度上方21 <公开 类型 = 整数 值 = 1 注释 = "TgtThetaOver2_1">
+    常量 Tgt角度上方22 <公开 类型 = 整数 值 = 2 注释 = "TgtThetaOver2_2">
+    常量 Tgt角度上方23 <公开 类型 = 整数 值 = 3 注释 = "TgtThetaOver2_3">
+    常量 Tgt角度上方24 <公开 类型 = 整数 值 = 4 注释 = "TgtThetaOver2_4">
+}
+
+类 AnyCAD基础_枚举过渡方程 <公开 注释 = "对应 AnyCAD.Foundation.EnumBlendEquation。枚举常量类; 成员均为整数常量。">
+{
+    常量 函数添加 <公开 类型 = 整数 值 = 32774 注释 = "FUNC_ADD">
+    常量 函数反转相减 <公开 类型 = 整数 值 = 32779 注释 = "FUNC_REVERSE_SUBTRACT">
+    常量 函数相减 <公开 类型 = 整数 值 = 32778 注释 = "FUNC_SUBTRACT">
+    常量 最大 <公开 类型 = 整数 值 = 32776 注释 = "MAX">
+    常量 最小 <公开 类型 = 整数 值 = 32775 注释 = "MIN">
+}
+

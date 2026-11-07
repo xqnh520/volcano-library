@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--炫彩界面库-窗口布局文件-->
+<head>
+	<bindJsFile value="" />
+</head>
+<windowUI bkInfoM="{sizeT:500,500;99:1.9.9;98:4(0)8(0)16(1)32(2);5:2(15)20(1)21(4)26(1)24(2,0.00,-12001,0,-29621,100);5:2(15)20(1)21(3)26(1)22(-77536)23(255);5:2(15)20(1)21(3)26(1)22(-29621)23(255);}" border="3,32,3,3" center="true" content="炫彩菜单设计器-免费版" dragBorder="false" name="主窗口" rect="20,20,698,510" showT="true" windowStyle="1237">
+	<listBoxUI bkInfoM="{99:1.9.9;5:2(15)20(1)21(3)26(1)22(-65536)23(255);}" name="列表框_菜单" rect="7,37,264,466" showT="true" expandT="true" />
+	<shapeGroupBox borderColor="#FFC0C0C0" content="当前菜单项" rect="276,67,414,206" showT="true" expandT="true" />
+	<buttonUI content="左移(L)" name="按钮_左移" rect="276,282,49,28" showT="true" expandT="true" />
+	<buttonUI content="上移(U)" name="按钮_上移" rect="384,282,49,28" showT="true" expandT="true" />
+	<buttonUI content="向前插入(I)" name="按钮_向前插入" rect="490,282,69,28" showT="true" expandT="true" />
+	<buttonUI content="向后插入(N)" name="按钮_向后插入" rect="564,282,72,28" showT="true" expandT="true" />
+	<buttonUI content="下移(D)" name="按钮_下移" rect="437,282,49,28" showT="true" expandT="true" />
+	<buttonUI content="右移(R)" name="按钮_右移" rect="331,282,49,28" showT="true" expandT="true" />
+	<buttonUI content="删除(T)" name="按钮_删除" rect="641,282,49,28" showT="true" expandT="true" />
+	<buttonUI content="确定(O)" name="按钮_确定" rect="496,464,74,31" showT="true" expandT="true" />
+	<buttonUI content="取消(C)" name="按钮_取消" rect="614,464,74,31" showT="true" expandT="true" />
+	<shapeText content="标题:" layout.height="20" layout.width="auto" rect="290,93,32,20" showT="true" expandT="true" />
+	<shapeText content="引用常量名:" layout.height="20" layout.width="auto" rect="290,130,68,20" showT="true" expandT="true" />
+	<shapeText content="提示:" layout.height="20" layout.width="auto" rect="290,167,32,20" showT="true" expandT="true" />
+	<shapeText content="快捷键:" layout.height="20" layout.width="auto" rect="290,204,44,20" showT="true" expandT="true" />
+	<shapeText content="状态:" layout.height="20" layout.width="auto" rect="290,241,32,20" showT="true" expandT="true" />
+	<buttonUI buttonType="check" content="横向分割线" name="选择框_分割线" rect="372,241,89,23" showT="true" style="check" textAlign="DT_LEFT | DT_VCENTER | DT_SINGLELINE" transparent="true" expandT="true" />
+	<buttonUI buttonType="check" content="选中" name="选择框_选中" rect="487,241,57,23" showT="true" style="check" textAlign="DT_LEFT | DT_VCENTER | DT_SINGLELINE" transparent="true" expandT="true" />
+	<buttonUI buttonType="check" content="禁用" name="选择框_禁用" rect="567,241,57,23" showT="true" style="check" textAlign="DT_LEFT | DT_VCENTER | DT_SINGLELINE" transparent="true" expandT="true" />
+	<comboBoxUI rect="375,204,117,23" showT="true" expandT="true" />
+	<buttonUI buttonType="check" content="Ctrl键" rect="509,204,67,23" showT="true" style="check" textAlign="DT_LEFT | DT_VCENTER | DT_SINGLELINE" transparent="true" expandT="true" />
+	<buttonUI buttonType="check" content="Shift键" rect="582,204,67,23" showT="true" style="check" textAlign="DT_LEFT | DT_VCENTER | DT_SINGLELINE" transparent="true" expandT="true" />
+	<editUI name="编辑框_提示" rect="375,167,306,23" showT="true" expandT="true" />
+	<editUI name="编辑框_常量名" rect="375,130,100,23" showT="true" expandT="true" />
+	<editUI name="编辑框_常量ID" rect="581,130,100,23" showT="true" expandT="true" />
+	<shapeText content="引用常量ID:" layout.height="20" layout.width="auto" rect="495,130,69,20" showT="true" expandT="true" />
+	<editUI name="编辑框_标题" rect="375,93,306,23" showT="true" expandT="true" />
+	<shapeText content="说明：&#10;     1.如需对菜单项进行操作，必须先选中某一项，在进行相关的操作。否则操作失败。&#10;     2.目前仅支持弹出菜单的简单设计。&#10;     3.可以进行快捷键功能操作(如：Ctrl+L=左移)等。" layout.height="100" layout.width="416" rect="276,319,416,100" showT="true" textAlign="DT_LEFT,DT_TOP" expandT="true" />
+	<editUI content="弹出菜单" name="变量名" nameTable="编辑框" rect="375,37,315,23" showT="true" expandT="true" />
+	<shapeText content="菜单变量名:" layout.height="20" layout.width="auto" rect="276,38,68,20" showT="true" expandT="true" />
+</windowUI>

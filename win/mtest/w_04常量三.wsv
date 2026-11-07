@@ -1,0 +1,282 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.即时界面
+
+类 数据类别 <公开 注释 = "数值数据类别" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 8位整数 <公开 类型 = 整数 值 = @ImGuiDataType_S8>
+    常量 8位无符号整数 <公开 类型 = 整数 值 = @ImGuiDataType_U8>
+    常量 16位整数 <公开 类型 = 整数 值 = @ImGuiDataType_S16>
+    常量 16位无符号整数 <公开 类型 = 整数 值 = @ImGuiDataType_U16>
+    常量 32位整数 <公开 类型 = 整数 值 = @ImGuiDataType_S32>
+    常量 32位无符号整数 <公开 类型 = 整数 值 = @ImGuiDataType_U32>
+    常量 64位整数 <公开 类型 = 整数 值 = @ImGuiDataType_S64>
+    常量 64位无符号整数 <公开 类型 = 整数 值 = @ImGuiDataType_U64>
+    常量 单精度小数 <公开 类型 = 整数 值 = @ImGuiDataType_Float>
+    常量 双精度小数 <公开 类型 = 整数 值 = @ImGuiDataType_Double>
+    常量 逻辑值 <公开 类型 = 整数 值 = @ImGuiDataType_Bool>
+    常量 字符串 <公开 类型 = 整数 值 = @ImGuiDataType_String>
+}
+类 方向 <公开 注释 = "方向" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 无 <公开 类型 = 整数 值 = @ImGuiDir_None>
+    常量 左 <公开 类型 = 整数 值 = @ImGuiDir_Left>
+    常量 右 <公开 类型 = 整数 值 = @ImGuiDir_Right>
+    常量 上 <公开 类型 = 整数 值 = @ImGuiDir_Up>
+    常量 下 <公开 类型 = 整数 值 = @ImGuiDir_Down>
+}
+类 排序方向 <公开 注释 = "排序方向" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 无 <公开 类型 = 整数 值 = @ImGuiSortDirection_None>
+    常量 升序 <公开 类型 = 整数 值 = @ImGuiSortDirection_Ascending>
+    常量 降序 <公开 类型 = 整数 值 = @ImGuiSortDirection_Descending>
+}
+类 执行条件 <公开 注释 = "执行条件" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 始终 <公开 类型 = 整数 值 = @ImGuiCond_None>
+    常量 始终设置 <公开 类型 = 整数 值 = @ImGuiCond_Always>
+    常量 仅首次 <公开 类型 = 整数 值 = @ImGuiCond_Once>
+    常量 首次使用时 <公开 类型 = 整数 值 = @ImGuiCond_FirstUseEver>
+    常量 窗口出现时 <公开 类型 = 整数 值 = @ImGuiCond_Appearing>
+}
+类 鼠标按钮 <公开 注释 = "鼠标按钮" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 左键 <公开 类型 = 整数 值 = @ImGuiMouseButton_Left>
+    常量 右键 <公开 类型 = 整数 值 = @ImGuiMouseButton_Right>
+    常量 中键 <公开 类型 = 整数 值 = @ImGuiMouseButton_Middle>
+}
+类 鼠标光标 <公开 注释 = "鼠标光标形状" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 无 <公开 类型 = 整数 值 = @ImGuiMouseCursor_None>
+    常量 箭头 <公开 类型 = 整数 值 = @ImGuiMouseCursor_Arrow>
+    常量 文本输入 <公开 类型 = 整数 值 = @ImGuiMouseCursor_TextInput>
+    常量 全向调整 <公开 类型 = 整数 值 = @ImGuiMouseCursor_ResizeAll>
+    常量 垂直调整 <公开 类型 = 整数 值 = @ImGuiMouseCursor_ResizeNS>
+    常量 水平调整 <公开 类型 = 整数 值 = @ImGuiMouseCursor_ResizeEW>
+    常量 东北西南调整 <公开 类型 = 整数 值 = @ImGuiMouseCursor_ResizeNESW>
+    常量 西北东南调整 <公开 类型 = 整数 值 = @ImGuiMouseCursor_ResizeNWSE>
+    常量 手型 <公开 类型 = 整数 值 = @ImGuiMouseCursor_Hand>
+    常量 等待 <公开 类型 = 整数 值 = @ImGuiMouseCursor_Wait>
+    常量 进度 <公开 类型 = 整数 值 = @ImGuiMouseCursor_Progress>
+    常量 禁止 <公开 类型 = 整数 值 = @ImGuiMouseCursor_NotAllowed>
+}
+类 鼠标来源 <公开 注释 = "鼠标输入来源" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 鼠标 <公开 类型 = 整数 值 = @ImGuiMouseSource_Mouse>
+    常量 触摸屏 <公开 类型 = 整数 值 = @ImGuiMouseSource_TouchScreen>
+    常量 手写笔 <公开 类型 = 整数 值 = @ImGuiMouseSource_Pen>
+}
+类 颜色标识 <公开 注释 = "样式颜色标识" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 文本 <公开 类型 = 整数 值 = @ImGuiCol_Text>
+    常量 禁用文本 <公开 类型 = 整数 值 = @ImGuiCol_TextDisabled>
+    常量 窗口背景 <公开 类型 = 整数 值 = @ImGuiCol_WindowBg>
+    常量 子窗口背景 <公开 类型 = 整数 值 = @ImGuiCol_ChildBg>
+    常量 弹出窗口背景 <公开 类型 = 整数 值 = @ImGuiCol_PopupBg>
+    常量 边框 <公开 类型 = 整数 值 = @ImGuiCol_Border>
+    常量 边框阴影 <公开 类型 = 整数 值 = @ImGuiCol_BorderShadow>
+    常量 控件背景 <公开 类型 = 整数 值 = @ImGuiCol_FrameBg>
+    常量 控件背景悬停 <公开 类型 = 整数 值 = @ImGuiCol_FrameBgHovered>
+    常量 控件背景激活 <公开 类型 = 整数 值 = @ImGuiCol_FrameBgActive>
+    常量 标题栏背景 <公开 类型 = 整数 值 = @ImGuiCol_TitleBg>
+    常量 标题栏背景激活 <公开 类型 = 整数 值 = @ImGuiCol_TitleBgActive>
+    常量 标题栏折叠背景 <公开 类型 = 整数 值 = @ImGuiCol_TitleBgCollapsed>
+    常量 菜单栏背景 <公开 类型 = 整数 值 = @ImGuiCol_MenuBarBg>
+    常量 滚动条背景 <公开 类型 = 整数 值 = @ImGuiCol_ScrollbarBg>
+    常量 滚动条滑块 <公开 类型 = 整数 值 = @ImGuiCol_ScrollbarGrab>
+    常量 滚动条滑块悬停 <公开 类型 = 整数 值 = @ImGuiCol_ScrollbarGrabHovered>
+    常量 滚动条滑块激活 <公开 类型 = 整数 值 = @ImGuiCol_ScrollbarGrabActive>
+    常量 复选标记 <公开 类型 = 整数 值 = @ImGuiCol_CheckMark>
+    常量 滑块把手 <公开 类型 = 整数 值 = @ImGuiCol_SliderGrab>
+    常量 滑块把手激活 <公开 类型 = 整数 值 = @ImGuiCol_SliderGrabActive>
+    常量 按钮 <公开 类型 = 整数 值 = @ImGuiCol_Button>
+    常量 按钮悬停 <公开 类型 = 整数 值 = @ImGuiCol_ButtonHovered>
+    常量 按钮按下 <公开 类型 = 整数 值 = @ImGuiCol_ButtonActive>
+    常量 标题头 <公开 类型 = 整数 值 = @ImGuiCol_Header>
+    常量 标题头悬停 <公开 类型 = 整数 值 = @ImGuiCol_HeaderHovered>
+    常量 标题头激活 <公开 类型 = 整数 值 = @ImGuiCol_HeaderActive>
+    常量 分隔线 <公开 类型 = 整数 值 = @ImGuiCol_Separator>
+    常量 分隔线悬停 <公开 类型 = 整数 值 = @ImGuiCol_SeparatorHovered>
+    常量 分隔线激活 <公开 类型 = 整数 值 = @ImGuiCol_SeparatorActive>
+    常量 调整手柄 <公开 类型 = 整数 值 = @ImGuiCol_ResizeGrip>
+    常量 调整手柄悬停 <公开 类型 = 整数 值 = @ImGuiCol_ResizeGripHovered>
+    常量 调整手柄激活 <公开 类型 = 整数 值 = @ImGuiCol_ResizeGripActive>
+    常量 选项卡悬停 <公开 类型 = 整数 值 = @ImGuiCol_TabHovered>
+    常量 选项卡 <公开 类型 = 整数 值 = @ImGuiCol_Tab>
+    常量 选项卡选中 <公开 类型 = 整数 值 = @ImGuiCol_TabSelected>
+    常量 选项卡选中顶线 <公开 类型 = 整数 值 = @ImGuiCol_TabSelectedOverline>
+    常量 选项卡暗淡 <公开 类型 = 整数 值 = @ImGuiCol_TabDimmed>
+    常量 暗淡选项卡选中 <公开 类型 = 整数 值 = @ImGuiCol_TabDimmedSelected>
+    常量 暗淡选项卡选中顶线 <公开 类型 = 整数 值 = @ImGuiCol_TabDimmedSelectedOverline>
+    常量 停靠预览 <公开 类型 = 整数 值 = @ImGuiCol_DockingPreview>
+    常量 停靠空白背景 <公开 类型 = 整数 值 = @ImGuiCol_DockingEmptyBg>
+    常量 曲线图线条 <公开 类型 = 整数 值 = @ImGuiCol_PlotLines>
+    常量 曲线图线条悬停 <公开 类型 = 整数 值 = @ImGuiCol_PlotLinesHovered>
+    常量 柱状图 <公开 类型 = 整数 值 = @ImGuiCol_PlotHistogram>
+    常量 柱状图悬停 <公开 类型 = 整数 值 = @ImGuiCol_PlotHistogramHovered>
+    常量 表头背景 <公开 类型 = 整数 值 = @ImGuiCol_TableHeaderBg>
+    常量 表格强边框 <公开 类型 = 整数 值 = @ImGuiCol_TableBorderStrong>
+    常量 表格弱边框 <公开 类型 = 整数 值 = @ImGuiCol_TableBorderLight>
+    常量 表格行背景 <公开 类型 = 整数 值 = @ImGuiCol_TableRowBg>
+    常量 表格交替行背景 <公开 类型 = 整数 值 = @ImGuiCol_TableRowBgAlt>
+    常量 文本链接 <公开 类型 = 整数 值 = @ImGuiCol_TextLink>
+    常量 文本选中背景 <公开 类型 = 整数 值 = @ImGuiCol_TextSelectedBg>
+    常量 拖放目标 <公开 类型 = 整数 值 = @ImGuiCol_DragDropTarget>
+    常量 导航光标 <公开 类型 = 整数 值 = @ImGuiCol_NavCursor>
+    常量 窗口导航高亮 <公开 类型 = 整数 值 = @ImGuiCol_NavWindowingHighlight>
+    常量 窗口导航暗背景 <公开 类型 = 整数 值 = @ImGuiCol_NavWindowingDimBg>
+    常量 模态窗口暗背景 <公开 类型 = 整数 值 = @ImGuiCol_ModalWindowDimBg>
+    常量 选项卡激活 <公开 类型 = 整数 值 = @ImGuiCol_TabActive>
+    常量 选项卡未聚焦 <公开 类型 = 整数 值 = @ImGuiCol_TabUnfocused>
+    常量 未聚焦选项卡激活 <公开 类型 = 整数 值 = @ImGuiCol_TabUnfocusedActive>
+}
+类 样式标识 <公开 注释 = "样式变量标识" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 透明系数 <公开 类型 = 整数 值 = @ImGuiStyleVar_Alpha>
+    常量 禁用透明系数 <公开 类型 = 整数 值 = @ImGuiStyleVar_DisabledAlpha>
+    常量 窗口内边距 <公开 类型 = 整数 值 = @ImGuiStyleVar_WindowPadding>
+    常量 窗口圆角 <公开 类型 = 整数 值 = @ImGuiStyleVar_WindowRounding>
+    常量 窗口边框宽度 <公开 类型 = 整数 值 = @ImGuiStyleVar_WindowBorderSize>
+    常量 窗口最小尺寸 <公开 类型 = 整数 值 = @ImGuiStyleVar_WindowMinSize>
+    常量 窗口标题对齐 <公开 类型 = 整数 值 = @ImGuiStyleVar_WindowTitleAlign>
+    常量 子窗口圆角 <公开 类型 = 整数 值 = @ImGuiStyleVar_ChildRounding>
+    常量 子窗口边框宽度 <公开 类型 = 整数 值 = @ImGuiStyleVar_ChildBorderSize>
+    常量 弹出窗口圆角 <公开 类型 = 整数 值 = @ImGuiStyleVar_PopupRounding>
+    常量 弹出窗口边框宽度 <公开 类型 = 整数 值 = @ImGuiStyleVar_PopupBorderSize>
+    常量 控件内边距 <公开 类型 = 整数 值 = @ImGuiStyleVar_FramePadding>
+    常量 控件圆角 <公开 类型 = 整数 值 = @ImGuiStyleVar_FrameRounding>
+    常量 控件边框宽度 <公开 类型 = 整数 值 = @ImGuiStyleVar_FrameBorderSize>
+    常量 项目间距 <公开 类型 = 整数 值 = @ImGuiStyleVar_ItemSpacing>
+    常量 项目内部间距 <公开 类型 = 整数 值 = @ImGuiStyleVar_ItemInnerSpacing>
+    常量 缩进间距 <公开 类型 = 整数 值 = @ImGuiStyleVar_IndentSpacing>
+    常量 单元格内边距 <公开 类型 = 整数 值 = @ImGuiStyleVar_CellPadding>
+    常量 滚动条宽度 <公开 类型 = 整数 值 = @ImGuiStyleVar_ScrollbarSize>
+    常量 滚动条圆角 <公开 类型 = 整数 值 = @ImGuiStyleVar_ScrollbarRounding>
+    常量 把手最小尺寸 <公开 类型 = 整数 值 = @ImGuiStyleVar_GrabMinSize>
+    常量 把手圆角 <公开 类型 = 整数 值 = @ImGuiStyleVar_GrabRounding>
+    常量 图像边框宽度 <公开 类型 = 整数 值 = @ImGuiStyleVar_ImageBorderSize>
+    常量 选项卡圆角 <公开 类型 = 整数 值 = @ImGuiStyleVar_TabRounding>
+    常量 选项卡边框宽度 <公开 类型 = 整数 值 = @ImGuiStyleVar_TabBorderSize>
+    常量 选项卡栏边框宽度 <公开 类型 = 整数 值 = @ImGuiStyleVar_TabBarBorderSize>
+    常量 选项卡栏顶线宽度 <公开 类型 = 整数 值 = @ImGuiStyleVar_TabBarOverlineSize>
+    常量 表格倾斜表头角度 <公开 类型 = 整数 值 = @ImGuiStyleVar_TableAngledHeadersAngle>
+    常量 表格倾斜表头文本对齐 <公开 类型 = 整数 值 = @ImGuiStyleVar_TableAngledHeadersTextAlign>
+    常量 按钮文本对齐 <公开 类型 = 整数 值 = @ImGuiStyleVar_ButtonTextAlign>
+    常量 可选项文本对齐 <公开 类型 = 整数 值 = @ImGuiStyleVar_SelectableTextAlign>
+    常量 分隔文本边框宽度 <公开 类型 = 整数 值 = @ImGuiStyleVar_SeparatorTextBorderSize>
+    常量 分隔文本对齐 <公开 类型 = 整数 值 = @ImGuiStyleVar_SeparatorTextAlign>
+    常量 分隔文本内边距 <公开 类型 = 整数 值 = @ImGuiStyleVar_SeparatorTextPadding>
+    常量 停靠分隔条宽度 <公开 类型 = 整数 值 = @ImGuiStyleVar_DockingSeparatorSize>
+}
+类 按键 <公开 注释 = "按键码" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 无 <公开 类型 = 整数 值 = @ImGuiKey_None>
+    常量 制表键 <公开 类型 = 整数 值 = @ImGuiKey_Tab>
+    常量 左方向键 <公开 类型 = 整数 值 = @ImGuiKey_LeftArrow>
+    常量 右方向键 <公开 类型 = 整数 值 = @ImGuiKey_RightArrow>
+    常量 上方向键 <公开 类型 = 整数 值 = @ImGuiKey_UpArrow>
+    常量 下方向键 <公开 类型 = 整数 值 = @ImGuiKey_DownArrow>
+    常量 上翻页 <公开 类型 = 整数 值 = @ImGuiKey_PageUp>
+    常量 下翻页 <公开 类型 = 整数 值 = @ImGuiKey_PageDown>
+    常量 行首键 <公开 类型 = 整数 值 = @ImGuiKey_Home>
+    常量 行尾键 <公开 类型 = 整数 值 = @ImGuiKey_End>
+    常量 插入键 <公开 类型 = 整数 值 = @ImGuiKey_Insert>
+    常量 删除键 <公开 类型 = 整数 值 = @ImGuiKey_Delete>
+    常量 退格键 <公开 类型 = 整数 值 = @ImGuiKey_Backspace>
+    常量 空格键 <公开 类型 = 整数 值 = @ImGuiKey_Space>
+    常量 回车键 <公开 类型 = 整数 值 = @ImGuiKey_Enter>
+    常量 退出键 <公开 类型 = 整数 值 = @ImGuiKey_Escape>
+    常量 左Ctrl <公开 类型 = 整数 值 = @ImGuiKey_LeftCtrl>
+    常量 右Ctrl <公开 类型 = 整数 值 = @ImGuiKey_RightCtrl>
+    常量 菜单键 <公开 类型 = 整数 值 = @ImGuiKey_Menu>
+    常量 数字0 <公开 类型 = 整数 值 = @ImGuiKey_0>
+    常量 字母A <公开 类型 = 整数 值 = @ImGuiKey_A>
+    常量 字母K <公开 类型 = 整数 值 = @ImGuiKey_K>
+    常量 字母U <公开 类型 = 整数 值 = @ImGuiKey_U>
+    常量 F1 <公开 类型 = 整数 值 = @ImGuiKey_F1>
+    常量 F7 <公开 类型 = 整数 值 = @ImGuiKey_F7>
+    常量 F13 <公开 类型 = 整数 值 = @ImGuiKey_F13>
+    常量 F19 <公开 类型 = 整数 值 = @ImGuiKey_F19>
+    常量 单引号键 <公开 类型 = 整数 值 = @ImGuiKey_Apostrophe>
+    常量 逗号键 <公开 类型 = 整数 值 = @ImGuiKey_Comma>
+    常量 减号键 <公开 类型 = 整数 值 = @ImGuiKey_Minus>
+    常量 句点键 <公开 类型 = 整数 值 = @ImGuiKey_Period>
+    常量 斜杠键 <公开 类型 = 整数 值 = @ImGuiKey_Slash>
+    常量 分号键 <公开 类型 = 整数 值 = @ImGuiKey_Semicolon>
+    常量 等号键 <公开 类型 = 整数 值 = @ImGuiKey_Equal>
+    常量 左方括号键 <公开 类型 = 整数 值 = @ImGuiKey_LeftBracket>
+    常量 反斜杠键 <公开 类型 = 整数 值 = @ImGuiKey_Backslash>
+    常量 右方括号键 <公开 类型 = 整数 值 = @ImGuiKey_RightBracket>
+    常量 反引号键 <公开 类型 = 整数 值 = @ImGuiKey_GraveAccent>
+    常量 大写锁定 <公开 类型 = 整数 值 = @ImGuiKey_CapsLock>
+    常量 滚动锁定 <公开 类型 = 整数 值 = @ImGuiKey_ScrollLock>
+    常量 数字锁定 <公开 类型 = 整数 值 = @ImGuiKey_NumLock>
+    常量 打印屏幕 <公开 类型 = 整数 值 = @ImGuiKey_PrintScreen>
+    常量 暂停键 <公开 类型 = 整数 值 = @ImGuiKey_Pause>
+    常量 小键盘0 <公开 类型 = 整数 值 = @ImGuiKey_Keypad0>
+    常量 小键盘5 <公开 类型 = 整数 值 = @ImGuiKey_Keypad5>
+    常量 小键盘小数点 <公开 类型 = 整数 值 = @ImGuiKey_KeypadDecimal>
+    常量 小键盘除号 <公开 类型 = 整数 值 = @ImGuiKey_KeypadDivide>
+    常量 小键盘乘号 <公开 类型 = 整数 值 = @ImGuiKey_KeypadMultiply>
+    常量 小键盘减号 <公开 类型 = 整数 值 = @ImGuiKey_KeypadSubtract>
+    常量 小键盘加号 <公开 类型 = 整数 值 = @ImGuiKey_KeypadAdd>
+    常量 小键盘回车 <公开 类型 = 整数 值 = @ImGuiKey_KeypadEnter>
+    常量 小键盘等号 <公开 类型 = 整数 值 = @ImGuiKey_KeypadEqual>
+    常量 应用后退 <公开 类型 = 整数 值 = @ImGuiKey_AppBack>
+    常量 应用前进 <公开 类型 = 整数 值 = @ImGuiKey_AppForward>
+    常量 欧式反斜杠键 <公开 类型 = 整数 值 = @ImGuiKey_Oem102>
+    常量 手柄开始 <公开 类型 = 整数 值 = @ImGuiKey_GamepadStart>
+    常量 手柄返回 <公开 类型 = 整数 值 = @ImGuiKey_GamepadBack>
+    常量 手柄左面键 <公开 类型 = 整数 值 = @ImGuiKey_GamepadFaceLeft>
+    常量 手柄右面键 <公开 类型 = 整数 值 = @ImGuiKey_GamepadFaceRight>
+    常量 手柄上面键 <公开 类型 = 整数 值 = @ImGuiKey_GamepadFaceUp>
+    常量 手柄下面键 <公开 类型 = 整数 值 = @ImGuiKey_GamepadFaceDown>
+    常量 手柄十字左 <公开 类型 = 整数 值 = @ImGuiKey_GamepadDpadLeft>
+    常量 手柄十字右 <公开 类型 = 整数 值 = @ImGuiKey_GamepadDpadRight>
+    常量 手柄十字上 <公开 类型 = 整数 值 = @ImGuiKey_GamepadDpadUp>
+    常量 手柄十字下 <公开 类型 = 整数 值 = @ImGuiKey_GamepadDpadDown>
+    常量 手柄L1 <公开 类型 = 整数 值 = @ImGuiKey_GamepadL1>
+    常量 手柄R1 <公开 类型 = 整数 值 = @ImGuiKey_GamepadR1>
+    常量 手柄L2 <公开 类型 = 整数 值 = @ImGuiKey_GamepadL2>
+    常量 手柄R2 <公开 类型 = 整数 值 = @ImGuiKey_GamepadR2>
+    常量 手柄L3 <公开 类型 = 整数 值 = @ImGuiKey_GamepadL3>
+    常量 手柄R3 <公开 类型 = 整数 值 = @ImGuiKey_GamepadR3>
+    常量 手柄左摇杆左 <公开 类型 = 整数 值 = @ImGuiKey_GamepadLStickLeft>
+    常量 手柄左摇杆右 <公开 类型 = 整数 值 = @ImGuiKey_GamepadLStickRight>
+    常量 手柄左摇杆上 <公开 类型 = 整数 值 = @ImGuiKey_GamepadLStickUp>
+    常量 手柄左摇杆下 <公开 类型 = 整数 值 = @ImGuiKey_GamepadLStickDown>
+    常量 手柄右摇杆左 <公开 类型 = 整数 值 = @ImGuiKey_GamepadRStickLeft>
+    常量 手柄右摇杆右 <公开 类型 = 整数 值 = @ImGuiKey_GamepadRStickRight>
+    常量 手柄右摇杆上 <公开 类型 = 整数 值 = @ImGuiKey_GamepadRStickUp>
+    常量 手柄右摇杆下 <公开 类型 = 整数 值 = @ImGuiKey_GamepadRStickDown>
+    常量 鼠标左键按键 <公开 类型 = 整数 值 = @ImGuiKey_MouseLeft>
+    常量 Ctrl修饰键 <公开 类型 = 整数 值 = @ImGuiMod_Ctrl>
+    常量 Shift修饰键 <公开 类型 = 整数 值 = @ImGuiMod_Shift>
+    常量 Alt修饰键 <公开 类型 = 整数 值 = @ImGuiMod_Alt>
+    常量 Win修饰键 <公开 类型 = 整数 值 = @ImGuiMod_Super>
+    常量 快捷键修饰键 <公开 类型 = 整数 值 = @ImGuiMod_Shortcut>
+}
+类 输入标志 <公开 注释 = "快捷键输入标志" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 无 <公开 类型 = 整数 值 = @ImGuiInputFlags_None>
+    常量 允许重复 <公开 类型 = 整数 值 = @ImGuiInputFlags_Repeat>
+    常量 路由到活动项目 <公开 类型 = 整数 值 = @ImGuiInputFlags_RouteActive>
+    常量 路由到焦点窗口 <公开 类型 = 整数 值 = @ImGuiInputFlags_RouteFocused>
+    常量 全局路由 <公开 类型 = 整数 值 = @ImGuiInputFlags_RouteGlobal>
+    常量 始终路由 <公开 类型 = 整数 值 = @ImGuiInputFlags_RouteAlways>
+    常量 覆盖焦点路由 <公开 类型 = 整数 值 = @ImGuiInputFlags_RouteOverFocused>
+    常量 覆盖活动路由 <公开 类型 = 整数 值 = @ImGuiInputFlags_RouteOverActive>
+    常量 背景未聚焦时路由 <公开 类型 = 整数 值 = @ImGuiInputFlags_RouteUnlessBgFocused>
+    常量 从根窗口路由 <公开 类型 = 整数 值 = @ImGuiInputFlags_RouteFromRootWindow>
+    常量 用于提示框 <公开 类型 = 整数 值 = @ImGuiInputFlags_Tooltip>
+}
+类 项目标志 <公开 注释 = "项目标志" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 无 <公开 类型 = 整数 值 = @ImGuiItemFlags_None>
+    常量 不参与Tab停靠 <公开 类型 = 整数 值 = @ImGuiItemFlags_NoTabStop>
+    常量 禁止导航 <公开 类型 = 整数 值 = @ImGuiItemFlags_NoNav>
+    常量 非默认导航焦点 <公开 类型 = 整数 值 = @ImGuiItemFlags_NoNavDefaultFocus>
+    常量 按钮重复触发 <公开 类型 = 整数 值 = @ImGuiItemFlags_ButtonRepeat>
+    常量 自动关闭弹出窗口 <公开 类型 = 整数 值 = @ImGuiItemFlags_AutoClosePopups>
+    常量 允许重复ID <公开 类型 = 整数 值 = @ImGuiItemFlags_AllowDuplicateId>
+}

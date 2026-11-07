@@ -1,0 +1,323 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.安卓.OCCT几何 <注释 = "OpenCASCADE 7.8.0 全库封装 (自动生成, 请勿手改). 名称已汉化为中文显示名, 注释内附英文原名. TK 库 libTKBool: 4 个类 / 44 个方法.">
+
+类 祖先后代映射 <公开 注释 = "祖先后代映射: 原类 BRepAlgo_AsDes (libTKBool, 头文件 BRepAlgo/BRepAlgo_AsDes.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 用于存储形状的后代与祖先的 SD." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: BRepAlgo_AsDes. 官方简介: 创建空 AsDes." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKBool.BRepAlgo_AsDes.构造 ()
+    }
+
+    方法 清除 <公开 静态 注释 = "清除. 原方法: Clear." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBool.BRepAlgo_AsDes.Clear (@<对象>)
+    }
+
+    方法 添加 <公开 静态 注释 = "添加. 原方法: Add. 官方简介: 把 <SS> 存储为 <S> 的将来子形状." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    参数 SS <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBool.BRepAlgo_AsDes.Add (@<对象>, @<S>, @<SS>)
+    }
+
+    方法 是否有祖先 <公开 静态 类型 = 逻辑型 注释 = "是否有祖先. 原方法: HasAscendant." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBool.BRepAlgo_AsDes.HasAscendant (@<对象>, @<S>)
+    }
+
+    方法 是否有后代 <公开 静态 类型 = 逻辑型 注释 = "是否有后代. 原方法: HasDescendant." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBool.BRepAlgo_AsDes.HasDescendant (@<对象>, @<S>)
+    }
+
+    方法 替换 <公开 静态 注释 = "替换. 原方法: Replace. 官方简介: 用 theNewS 替换 theOldS. theOldS 从该对象中消失." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 旧S <类型 = 长整数>
+    参数 新S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBool.BRepAlgo_AsDes.Replace (@<对象>, @<旧S>, @<新S>)
+    }
+
+    方法 移除 <公开 静态 注释 = "移除. 原方法: Remove. 官方简介: 从自身移除 theS." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBool.BRepAlgo_AsDes.Remove (@<对象>, @<S>)
+    }
+
+}
+
+类 形状映像表 <公开 注释 = "形状映像表: 原类 BRepAlgo_Image (libTKBool, 头文件 BRepAlgo/BRepAlgo_Image.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 存储形状 <S> 与由 <S> 得到的形状 <NewS> 之间的关联. <NewS> 是 <S> 的映像." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: BRepAlgo_Image." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKBool.BRepAlgo_Image.构造 ()
+    }
+
+    方法 设置根 <公开 静态 注释 = "设置根. 原方法: SetRoot." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBool.BRepAlgo_Image.SetRoot (@<对象>, @<S>)
+    }
+
+    方法 绑定 <公开 静态 注释 = "绑定. 原方法: Bind. 官方简介: 把 <NewS> 链接为 <OldS> 的映像." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 旧S <类型 = 长整数>
+    参数 新S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBool.BRepAlgo_Image.Bind (@<对象>, @<旧S>, @<新S>)
+    }
+
+    方法 添加 <公开 静态 注释 = "添加. 原方法: Add. 官方简介: 把 <NewS> 添加到 <OldS> 的映像中." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 旧S <类型 = 长整数>
+    参数 新S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBool.BRepAlgo_Image.Add (@<对象>, @<旧S>, @<新S>)
+    }
+
+    方法 清除 <公开 静态 注释 = "清除. 原方法: Clear." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBool.BRepAlgo_Image.Clear (@<对象>)
+    }
+
+    方法 移除 <公开 静态 注释 = "移除. 原方法: Remove. 官方简介: 从映像集合中移除 <S>." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBool.BRepAlgo_Image.Remove (@<对象>, @<S>)
+    }
+
+    方法 移除根 <公开 静态 注释 = "移除根. 原方法: RemoveRoot. 官方简介: 从根列表及上下映射中删除根 <theRoot>." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 根 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBool.BRepAlgo_Image.RemoveRoot (@<对象>, @<根>)
+    }
+
+    方法 替换根 <公开 静态 注释 = "替换根. 原方法: ReplaceRoot. 官方简介: 用 <NewRoot> 替换 <OldRoot>, 于是 <OldRoot> 的所有映像成为 <NewRoot> 的映像. <OldRoot> 被移除." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 旧根 <类型 = 长整数>
+    参数 新根 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBool.BRepAlgo_Image.ReplaceRoot (@<对象>, @<旧根>, @<新根>)
+    }
+
+    方法 是否映像 <公开 静态 类型 = 逻辑型 注释 = "是否映像. 原方法: IsImage." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBool.BRepAlgo_Image.IsImage (@<对象>, @<S>)
+    }
+
+    方法 映像起始 <公开 静态 类型 = 长整数 注释 = "映像起始. 原方法: ImageFrom. 官方简介: 返回 <S> 的生成元" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBool.BRepAlgo_Image.ImageFrom (@<对象>, @<S>)
+    }
+
+    方法 根 <公开 静态 类型 = 长整数 注释 = "根. 原方法: Root. 官方简介: 返回 <S> 的上生成线" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBool.BRepAlgo_Image.Root (@<对象>, @<S>)
+    }
+
+    方法 是否有映像 <公开 静态 类型 = 逻辑型 注释 = "是否有映像. 原方法: HasImage." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBool.BRepAlgo_Image.HasImage (@<对象>, @<S>)
+    }
+
+    方法 紧凑 <公开 静态 注释 = "紧凑. 原方法: Compact. 官方简介: 只保留根与最后映像之间的链接." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBool.BRepAlgo_Image.Compact (@<对象>)
+    }
+
+    方法 过滤器 <公开 静态 注释 = "过滤器. 原方法: Filter. 官方简介: 在映像中删除不在 <S> 中的 <ShapeType> 类型的形状. 警告: 必须先调用 Compact()." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    参数 形状类型 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKBool.BRepAlgo_Image.Filter (@<对象>, @<S>, @<形状类型>)
+    }
+
+}
+
+类 法向投影 <公开 注释 = "法向投影: 原类 BRepAlgo_NormalProjection (libTKBool, 头文件 BRepAlgo/BRepAlgo_NormalProjection.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 此类把线框投影到形状上." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: BRepAlgo_NormalProjection." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKBool.BRepAlgo_NormalProjection.构造 ()
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: BRepAlgo_NormalProjection." @嵌入式方法 = "">
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBool.BRepAlgo_NormalProjection.构造_2 (@<S>)
+    }
+
+    方法 初始化 <公开 静态 注释 = "初始化. 原方法: Init." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBool.BRepAlgo_NormalProjection.Init (@<对象>, @<S>)
+    }
+
+    方法 添加 <公开 静态 注释 = "添加. 原方法: Add. 官方简介: 把边或线框添加到要投影的形状列表" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 待投影形状 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBool.BRepAlgo_NormalProjection.Add (@<对象>, @<待投影形状>)
+    }
+
+    方法 设置参数 <公开 静态 注释 = "设置参数. 原方法: SetParams. 官方简介: 设置用于计算的参数. Tol3d 是 3d 投影曲线与其 2d 表示之间所需的公差. InternalContinuity 是用于逼近的约束阶数. MaxDeg 与 MaxSeg 是逼近所得 BSpline 的最大次数与最大段数." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 三维容差 <类型 = 小数>
+    参数 二维容差 <类型 = 小数>
+    参数 内部连续性 <类型 = 整数>
+    参数 最大阶次 <类型 = 整数>
+    参数 最多段数 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKBool.BRepAlgo_NormalProjection.SetParams (@<对象>, @<三维容差>, @<二维容差>, @<内部连续性>, @<最大阶次>, @<最多段数>)
+    }
+
+    方法 设置默认参数 <公开 静态 注释 = "设置默认参数. 原方法: SetDefaultParams. 官方简介: 把用于计算的参数设为其默认值" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBool.BRepAlgo_NormalProjection.SetDefaultParams (@<对象>)
+    }
+
+    方法 设置最大距离 <公开 静态 注释 = "设置最大距离. 原方法: SetMaxDistance. 官方简介: 设置目标形状与要投影形状之间的最大距离. 若不满足该条件则丢弃解中对应部分. 若 MaxDist < 0 则该方法不影响算法" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 最大距离 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKBool.BRepAlgo_NormalProjection.SetMaxDistance (@<对象>, @<最大距离>)
+    }
+
+    方法 三维计算 <公开 静态 注释 = "三维计算. 原方法: Compute3d. 官方简介: 若 With3d = Standard_False, 则不计算 3D 曲线, 保留初始 3D 曲线以构建结果边." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 三维带 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKBool.BRepAlgo_NormalProjection.Compute3d (@<对象>, @<三维带>)
+    }
+
+    方法 设置限制 <公开 静态 注释 = "设置限制. 原方法: SetLimit. 官方简介: 管理投影边的限制." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 面边界 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKBool.BRepAlgo_NormalProjection.SetLimit (@<对象>, @<面边界>)
+    }
+
+    方法 构建 <公开 静态 注释 = "构建. 原方法: Build. 官方简介: 把结果构建为复合体." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBool.BRepAlgo_NormalProjection.Build (@<对象>)
+    }
+
+    方法 是否完成 <公开 静态 类型 = 逻辑型 注释 = "是否完成. 原方法: IsDone." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBool.BRepAlgo_NormalProjection.IsDone (@<对象>)
+    }
+
+    方法 投影 <公开 静态 类型 = 长整数 注释 = "投影. 原方法: Projection. 官方简介: 返回结果" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBool.BRepAlgo_NormalProjection.Projection (@<对象>)
+    }
+
+    方法 祖先 <公开 静态 类型 = 长整数 注释 = "祖先. 原方法: Ancestor. 官方简介: 对于结果边, 返回对应的初始边." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 E <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBool.BRepAlgo_NormalProjection.Ancestor (@<对象>, @<E>)
+    }
+
+    方法 取配对 <公开 静态 类型 = 长整数 注释 = "取配对. 原方法: Couple. 官方简介: 对于投影边, 返回对应的初始面." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 E <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBool.BRepAlgo_NormalProjection.Couple (@<对象>, @<E>)
+    }
+
+    方法 是否初等 <公开 静态 类型 = 逻辑型 注释 = "是否初等. 原方法: IsElementary." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 C <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBool.BRepAlgo_NormalProjection.IsElementary (@<对象>, @<C>)
+    }
+
+}
+
+类 曲线投影 <公开 注释 = "曲线投影: 原类 BRepProj_Projection (libTKBool, 头文件 BRepProj/BRepProj_Projection.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: Projection 类提供把 TopoDS 的边或线框以圆锥, 圆柱方式投影到形状上, 结果将是 TopoDS 的边或线框." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: BRepProj_Projection. 官方简介: 对形状上的线框做圆柱投影" @嵌入式方法 = "">
+    参数 线框 <类型 = 长整数>
+    参数 形状 <类型 = 长整数>
+    参数 D <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBool.BRepProj_Projection.构造 (@<线框>, @<形状>, @<D>)
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: BRepProj_Projection. 官方简介: 对形状上的线框做圆锥投影" @嵌入式方法 = "">
+    参数 线框 <类型 = 长整数>
+    参数 形状 <类型 = 长整数>
+    参数 P <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBool.BRepProj_Projection.构造_2 (@<线框>, @<形状>, @<P>)
+    }
+
+    方法 是否完成 <公开 静态 类型 = 逻辑型 注释 = "是否完成. 原方法: IsDone. 官方简介: 若截面失败则返回 False" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBool.BRepProj_Projection.IsDone (@<对象>)
+    }
+
+    方法 初始化 <公开 静态 注释 = "初始化. 原方法: Init. 官方简介: 按结果线框重置迭代器." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBool.BRepProj_Projection.Init (@<对象>)
+    }
+
+    方法 是否还有 <公开 静态 类型 = 逻辑型 注释 = "是否还有. 原方法: More. 官方简介: 若存在当前结果线框则返回 True" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBool.BRepProj_Projection.More (@<对象>)
+    }
+
+    方法 下一个 <公开 静态 注释 = "下一个. 原方法: Next. 官方简介: 移动到下一个结果线框." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBool.BRepProj_Projection.Next (@<对象>)
+    }
+
+    方法 当前 <公开 静态 类型 = 长整数 注释 = "当前. 原方法: Current. 官方简介: 返回当前结果线框." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBool.BRepProj_Projection.Current (@<对象>)
+    }
+
+    方法 形状 <公开 静态 类型 = 长整数 注释 = "形状. 原方法: Shape. 官方简介: 以线框复合体形式返回完整结果." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKBool.BRepProj_Projection.Shape (@<对象>)
+    }
+
+}

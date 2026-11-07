@@ -1,0 +1,652 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.安卓.OCCT几何 <注释 = "OpenCASCADE 7.8.0 全库封装 (自动生成, 请勿手改). 名称已汉化为中文显示名, 注释内附英文原名. TK 库 libTKHLR: 5 个类 / 93 个方法.">
+
+类 消隐投影器 <公开 注释 = "消隐投影器: 原类 HLRAlgo_Projector (libTKHLR, 头文件 HLRAlgo/HLRAlgo_Projector.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 实现投影器对象. 用于变换并投影点与平面. 该对象设计用于消隐线移除, 由函数 Prs3d_Projector::Projector 返回. 通过调用以下函数之一为所选形状定义投影: - HLRBRep_Algo::Projector, 或 - HLRBRep_PolyAlgo::Projector. 选择取决于所用的算法. 视图参数在构造 Prs3d_Projector 对象时定义." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: HLRAlgo_Projector." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRAlgo_Projector.构造 ()
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: HLRAlgo_Projector. 官方简介: 创建轴测投影器. <CS> 是观察坐标系." @嵌入式方法 = "">
+    参数 CS <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRAlgo_Projector.构造_2 (@<CS>)
+    }
+
+    方法 创建_3 <公开 静态 类型 = 长整数 注释 = "创建_3. 原构造器: HLRAlgo_Projector. 官方简介: 创建透视投影器. <CS> 是观察坐标系." @嵌入式方法 = "">
+    参数 CS <类型 = 长整数>
+    参数 焦点 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRAlgo_Projector.构造_3 (@<CS>, @<焦点>)
+    }
+
+    方法 创建_4 <公开 静态 类型 = 长整数 注释 = "创建_4. 原构造器: HLRAlgo_Projector. 官方简介: 构造具有自动最小最大方向的投影器." @嵌入式方法 = "">
+    参数 T <类型 = 长整数>
+    参数 透视 <类型 = 逻辑型>
+    参数 焦点 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRAlgo_Projector.构造_4 (@<T>, @<透视>, @<焦点>)
+    }
+
+    方法 创建_5 <公开 静态 类型 = 长整数 注释 = "创建_5. 原构造器: HLRAlgo_Projector. 官方简介: 用给定的最小/最大方向构建投影器." @嵌入式方法 = "">
+    参数 T <类型 = 长整数>
+    参数 透视 <类型 = 逻辑型>
+    参数 焦点 <类型 = 小数>
+    参数 v1 <类型 = 长整数>
+    参数 v2 <类型 = 长整数>
+    参数 v3 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRAlgo_Projector.构造_5 (@<T>, @<透视>, @<焦点>, @<v1>, @<v2>, @<v3>)
+    }
+
+    方法 设置 <公开 静态 注释 = "设置. 原方法: Set." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 T <类型 = 长整数>
+    参数 透视 <类型 = 逻辑型>
+    参数 焦点 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRAlgo_Projector.Set (@<对象>, @<T>, @<透视>, @<焦点>)
+    }
+
+    方法 方向 <公开 静态 注释 = "方向. 原方法: Directions." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 输出D1 <类型 = 长整数>
+    参数 输出D2 <类型 = 长整数>
+    参数 输出D3 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRAlgo_Projector.Directions (@<对象>, @<输出D1>, @<输出D2>, @<输出D3>)
+    }
+
+    方法 缩放副本 <公开 静态 注释 = "缩放副本. 原方法: Scaled. 官方简介: 用给定的缩放与平移进行计算." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 在 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRAlgo_Projector.Scaled (@<对象>, @<在>)
+    }
+
+    方法 透视 <公开 静态 类型 = 逻辑型 注释 = "透视. 原方法: Perspective. 官方简介: 若存在透视变换则返回 True." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRAlgo_Projector.Perspective (@<对象>)
+    }
+
+    方法 变换 <公开 静态 类型 = 长整数 注释 = "变换. 原方法: Transformation. 官方简介: 返回活动变换." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRAlgo_Projector.Transformation (@<对象>)
+    }
+
+    方法 反向变换 <公开 静态 类型 = 长整数 注释 = "反向变换. 原方法: InvertedTransformation. 官方简介: 返回活动的逆变换." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRAlgo_Projector.InvertedTransformation (@<对象>)
+    }
+
+    方法 完整变换 <公开 静态 类型 = 长整数 注释 = "完整变换. 原方法: FullTransformation. 官方简介: 返回原始变换." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRAlgo_Projector.FullTransformation (@<对象>)
+    }
+
+    方法 焦点 <公开 静态 类型 = 小数 注释 = "焦点. 原方法: Focus. 官方简介: 返回焦距." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRAlgo_Projector.Focus (@<对象>)
+    }
+
+    方法 变换_2 <公开 静态 注释 = "变换_2. 原方法: Transform." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 输出D <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRAlgo_Projector.Transform (@<对象>, @<输出D>)
+    }
+
+    方法 变换_3 <公开 静态 注释 = "变换_3. 原方法: Transform." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 输出点 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRAlgo_Projector.Transform_2 (@<对象>, @<输出点>)
+    }
+
+    方法 投影 <公开 静态 注释 = "投影. 原方法: Project. 官方简介: 变换并在需要时应用透视." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 P <类型 = 长整数>
+    参数 输出P <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRAlgo_Projector.Project (@<对象>, @<P>, @<输出P>)
+    }
+
+    方法 投影_2 <公开 静态 注释 = "投影_2. 原方法: Project. 官方简介: 变换并在需要时应用透视." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 P <类型 = 长整数>
+    参数 输出X <类型 = "小数 []">
+    参数 输出Y <类型 = "小数 []">
+    参数 输出Z <类型 = "小数 []">
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRAlgo_Projector.Project_2 (@<对象>, @<P>, @<输出X>, @<输出Y>, @<输出Z>)
+    }
+
+    方法 投影_3 <公开 静态 注释 = "投影_3. 原方法: Project. 官方简介: 变换并在需要时应用透视." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 P <类型 = 长整数>
+    参数 D1 <类型 = 长整数>
+    参数 输出P <类型 = 长整数>
+    参数 输出D1 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRAlgo_Projector.Project_3 (@<对象>, @<P>, @<D1>, @<输出P>, @<输出D1>)
+    }
+
+    方法 取视线 <公开 静态 类型 = 长整数 注释 = "取视线. 原方法: Shoot. 官方简介: 返回从视点穿过二维点 <X,Y> 的直线." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 X <类型 = 小数>
+    参数 Y <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRAlgo_Projector.Shoot (@<对象>, @<X>, @<Y>)
+    }
+
+}
+
+类 消隐算法 <公开 注释 = "消隐算法: 原类 HLRBRep_Algo (libTKHLR, 头文件 HLRBRep/HLRBRep_Algo.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 继承自 InternalAlgo, 提供使用 TopoDS 中 Shape 的方法. 用于计算形状在投影平面中外观的框架. 这通过计算形状的可见部分与隐藏部分完成. HLRBRep_Algo 处理三种类型的实体: - 要可视化的形状 - 这些形状中的边(这些边是可视化或隐藏的基本实体), 以及 - 这些形状中遮挡边的面. HLRBRep_Algo 基于把要可视化形状的每条边与其每个面比较, 并计算每条边的可见部分与隐藏部分的原理. 对于给定投影, HLRBRep_Algo 计算一组刻画所表示对象的线. 它还与 HLRBRep_HLRToShape 提取工具配合使用, 该工具根据计算结果的选择重建新的简化形状. 该新形状由边组成, 表示投影中可视化的形状. HLRBRep_Algo 考虑形状本身, 而 HLRBRep_PolyAlgo 处理形状的多面体简化. 使用 HLRBRep_Algo 时, 你获得精确结果; 而使用 HLRBRep_PolyAlgo 时, 你减少计算时间但获得多边形段. 对于复杂形状, HLRBRep_Algo 可能很耗时. HLRBRep_Algo 对象提供以下框架: - 定义视点 - 标识要可视化的形状 - 计算轮廓 - 计算形状的可见线与隐藏线. 警告: - 该算法不消除重叠线. - 你想要可视化的形状内部不得有未完成的对象. - 不处理点. - 注意, 这不是生成着色所用的那类算法, 后者通过把要可视化形状中的每个面与同一形状中的其他每个面比较, 计算每个面的可见部分与隐藏部分." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: HLRBRep_Algo. 官方简介: 构造框架, 用于计算形状在投影中的可见线与隐藏线. 使用函数: - Projector 定义视点 - Add 选择要可视化的形状 - Update 计算形状的轮廓线, 以及 - Hide 计算形状的可见线与隐藏线." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_Algo.构造 ()
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: HLRBRep_Algo." @嵌入式方法 = "">
+    参数 A <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_Algo.构造_2 (@<A>)
+    }
+
+    方法 添加 <公开 静态 注释 = "添加. 原方法: Add. 官方简介: 添加形状 <S>." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    参数 S数据 <类型 = 长整数>
+    参数 等参线数 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_Algo.Add (@<对象>, @<S>, @<S数据>, @<等参线数>)
+    }
+
+    方法 添加_2 <公开 静态 注释 = "添加_2. 原方法: Add. 官方简介: 向该框架添加形状 S, 并指定可视化 S 时所需的等参数个数 nbiso. 可按需添加任意多个形状. 每个形状使用一次 Add 函数." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    参数 等参线数 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_Algo.Add_2 (@<对象>, @<S>, @<等参线数>)
+    }
+
+    方法 索引 <公开 静态 类型 = 整数 注释 = "索引. 原方法: Index. 官方简介: 返回形状 <S> 的索引, 若未找到形状 <S> 则返回 0." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_Algo.Index (@<对象>, @<S>)
+    }
+
+    方法 输出线化形状置空 <公开 静态 注释 = "输出线化形状置空. 原方法: OutLinedShapeNullify. 官方简介: 清空 HLRTopoBRep 中 OutLiner 的所有结果." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_Algo.OutLinedShapeNullify (@<对象>)
+    }
+
+}
+
+类 消隐结果提取 <公开 注释 = "消隐结果提取: 原类 HLRBRep_HLRToShape (libTKHLR, 头文件 HLRBRep/HLRBRep_HLRToShape.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 用于按提取方式过滤 HLRBRep_Algo 算法计算结果的框架. 依据算法在形状上计算出的结果, 过滤器返回你要识别的边类型. 你可以选择以下任意输出类型: - 可见锐边 - 隐藏锐边 - 可见光滑边 - 隐藏光滑边 - 可见缝合边 - 隐藏缝合边 - 可见轮廓边 - 隐藏轮廓边. - 可见等参数线 以及 - 隐藏等参数线. 锐边呈现 C0 连续性(非 G1). 光滑边呈现 G1 连续性(非 G2). 缝合边呈现 C2 连续性. 结果由算法所处理的视图投影平面中的二维边组成. 这些二维边不包含在可视化形状的数据结构中. 为获得完整图像, 你必须组合每个所选过滤器给出的形状. 形状的构造不会重新调用算法计算, 只读取其内部结果. 该形状的方法与 HLRBrep_PolyHLRToShape 类的方法几乎相同." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: HLRBRep_HLRToShape. 官方简介: 构造用于过滤 HLRBRep_Algo 算法 A 结果的框架. 使用提取过滤器获得 A 的所需结果." @嵌入式方法 = "">
+    参数 A <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_HLRToShape.构造 (@<A>)
+    }
+
+    方法 可见锐边 <公开 静态 类型 = 长整数 注释 = "可见锐边. 原方法: VCompound." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_HLRToShape.VCompound (@<对象>)
+    }
+
+    方法 可见锐边_2 <公开 静态 类型 = 长整数 注释 = "可见锐边_2. 原方法: VCompound." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_HLRToShape.VCompound_2 (@<对象>, @<S>)
+    }
+
+    方法 可见平滑边 <公开 静态 类型 = 长整数 注释 = "可见平滑边. 原方法: Rg1LineVCompound." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_HLRToShape.Rg1LineVCompound (@<对象>)
+    }
+
+    方法 可见平滑边_2 <公开 静态 类型 = 长整数 注释 = "可见平滑边_2. 原方法: Rg1LineVCompound." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_HLRToShape.Rg1LineVCompound_2 (@<对象>, @<S>)
+    }
+
+    方法 可见缝合边 <公开 静态 类型 = 长整数 注释 = "可见缝合边. 原方法: RgNLineVCompound." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_HLRToShape.RgNLineVCompound (@<对象>)
+    }
+
+    方法 可见缝合边_2 <公开 静态 类型 = 长整数 注释 = "可见缝合边_2. 原方法: RgNLineVCompound." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_HLRToShape.RgNLineVCompound_2 (@<对象>, @<S>)
+    }
+
+    方法 可见轮廓边 <公开 静态 类型 = 长整数 注释 = "可见轮廓边. 原方法: OutLineVCompound." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_HLRToShape.OutLineVCompound (@<对象>)
+    }
+
+    方法 三维可见轮廓边 <公开 静态 类型 = 长整数 注释 = "三维可见轮廓边. 原方法: OutLineVCompound3d." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_HLRToShape.OutLineVCompound3d (@<对象>)
+    }
+
+    方法 可见轮廓边_2 <公开 静态 类型 = 长整数 注释 = "可见轮廓边_2. 原方法: OutLineVCompound." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_HLRToShape.OutLineVCompound_2 (@<对象>, @<S>)
+    }
+
+    方法 可见等参线 <公开 静态 类型 = 长整数 注释 = "可见等参线. 原方法: IsoLineVCompound." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_HLRToShape.IsoLineVCompound (@<对象>)
+    }
+
+    方法 可见等参线_2 <公开 静态 类型 = 长整数 注释 = "可见等参线_2. 原方法: IsoLineVCompound." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_HLRToShape.IsoLineVCompound_2 (@<对象>, @<S>)
+    }
+
+    方法 隐藏锐边 <公开 静态 类型 = 长整数 注释 = "隐藏锐边. 原方法: HCompound." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_HLRToShape.HCompound (@<对象>)
+    }
+
+    方法 隐藏锐边_2 <公开 静态 类型 = 长整数 注释 = "隐藏锐边_2. 原方法: HCompound." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_HLRToShape.HCompound_2 (@<对象>, @<S>)
+    }
+
+    方法 隐藏平滑边 <公开 静态 类型 = 长整数 注释 = "隐藏平滑边. 原方法: Rg1LineHCompound." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_HLRToShape.Rg1LineHCompound (@<对象>)
+    }
+
+    方法 隐藏平滑边_2 <公开 静态 类型 = 长整数 注释 = "隐藏平滑边_2. 原方法: Rg1LineHCompound." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_HLRToShape.Rg1LineHCompound_2 (@<对象>, @<S>)
+    }
+
+    方法 隐藏缝合边 <公开 静态 类型 = 长整数 注释 = "隐藏缝合边. 原方法: RgNLineHCompound." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_HLRToShape.RgNLineHCompound (@<对象>)
+    }
+
+    方法 隐藏缝合边_2 <公开 静态 类型 = 长整数 注释 = "隐藏缝合边_2. 原方法: RgNLineHCompound." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_HLRToShape.RgNLineHCompound_2 (@<对象>, @<S>)
+    }
+
+    方法 隐藏轮廓边 <公开 静态 类型 = 长整数 注释 = "隐藏轮廓边. 原方法: OutLineHCompound." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_HLRToShape.OutLineHCompound (@<对象>)
+    }
+
+    方法 隐藏轮廓边_2 <公开 静态 类型 = 长整数 注释 = "隐藏轮廓边_2. 原方法: OutLineHCompound." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_HLRToShape.OutLineHCompound_2 (@<对象>, @<S>)
+    }
+
+    方法 隐藏等参线 <公开 静态 类型 = 长整数 注释 = "隐藏等参线. 原方法: IsoLineHCompound." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_HLRToShape.IsoLineHCompound (@<对象>)
+    }
+
+    方法 隐藏等参线_2 <公开 静态 类型 = 长整数 注释 = "隐藏等参线_2. 原方法: IsoLineHCompound." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_HLRToShape.IsoLineHCompound_2 (@<对象>, @<S>)
+    }
+
+    方法 取边复合体 <公开 静态 类型 = 长整数 注释 = "取边复合体. 原方法: CompoundOfEdges. 官方简介: 返回所需类型与可见性的结果边组成的复合体, 考虑空间的种类(2D 或 3D)" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 类型 <类型 = 整数>
+    参数 可见 <类型 = 逻辑型>
+    参数 三维在 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_HLRToShape.CompoundOfEdges (@<对象>, @<类型>, @<可见>, @<三维在>)
+    }
+
+    方法 取边复合体_2 <公开 静态 类型 = 长整数 注释 = "取边复合体_2. 原方法: CompoundOfEdges. 官方简介: 对于指定形状, 返回所需类型与可见性的结果边组成的复合体, 考虑空间的种类(2D 或 3D)" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    参数 类型 <类型 = 整数>
+    参数 可见 <类型 = 逻辑型>
+    参数 三维在 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_HLRToShape.CompoundOfEdges_2 (@<对象>, @<S>, @<类型>, @<可见>, @<三维在>)
+    }
+
+}
+
+类 网格消隐算法 <公开 注释 = "网格消隐算法: 原类 HLRBRep_PolyAlgo (libTKHLR, 头文件 HLRBRep/HLRBRep_PolyAlgo.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 用于在带三角剖分的形状上移除隐藏线. 用于计算形状在投影平面中外观的框架. 这通过计算形状的可见部分与隐藏部分完成. HLRBRep_PolyAlgo 处理三种类型的实体: - 要可视化的形状(这些形状必须已经被三角剖分.) - 这些形状中的边(这些边定义为形状三角剖分上的多边形线, 是可视化或隐藏的基本实体), 以及 - 这些形状中遮挡边的三角形. HLRBRep_PolyAlgo 基于把要可视化形状的每条边与形状三角剖分产生的每个三角形比较, 并计算每条边的可见部分与隐藏部分的原理. 对于给定投影, HLRBRep_PolyAlgo 计算一组刻画所表示对象的线. 它还与 HLRBRep_PolyHLRToShape 提取工具配合使用, 该工具根据计算结果的选择重建新的简化形状. 该新形状由边组成, 表示投影中可视化的形状. HLRBRep_PolyAlgo 处理形状的多面体简化, 而 HLRBRep_Algo 考虑形状本身. 使用 HLRBRep_Algo 时, 你获得精确结果; 而使用 HLRBRep_PolyAlgo 时, 你减少计算时间但获得多边形段. HLRBRep_PolyAlgo 对象提供以下框架: - 定义视点 - 标识要可视化的形状 - 计算轮廓 - 计算形状的可见线与隐藏线. 警告: - 该算法不消除重叠线. - 你想要可视化的形状内部不得有未完成的对象. - 不处理点. - 注意, 这不是生成着色所用的那类算法, 后者通过把要可视化形状中的每个面与同一形状中的其他每个面比较, 计算每个面的可见部分与隐藏部分." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: HLRBRep_PolyAlgo. 官方简介: 构造框架, 用于计算形状在投影中的可见线与隐藏线. 使用函数: - Projector 定义视点 - Load 选择要可视化的形状 - Update 计算形状的可见线与隐藏线. 警告: 要可视化的形状必须已经被三角剖分." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_PolyAlgo.构造 ()
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: HLRBRep_PolyAlgo." @嵌入式方法 = "">
+    参数 A <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_PolyAlgo.构造_2 (@<A>)
+    }
+
+    方法 创建_3 <公开 静态 类型 = 长整数 注释 = "创建_3. 原构造器: HLRBRep_PolyAlgo." @嵌入式方法 = "">
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_PolyAlgo.构造_3 (@<S>)
+    }
+
+    方法 形状数 <公开 静态 类型 = 整数 注释 = "形状数. 原方法: NbShapes." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_PolyAlgo.NbShapes (@<对象>)
+    }
+
+    方法 形状 <公开 静态 类型 = 长整数 注释 = "形状. 原方法: Shape." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 I <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_PolyAlgo.Shape (@<对象>, @<I>)
+    }
+
+    方法 移除 <公开 静态 注释 = "移除. 原方法: Remove. 官方简介: 移除索引 <I> 的形状." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 I <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_PolyAlgo.Remove (@<对象>, @<I>)
+    }
+
+    方法 索引 <公开 静态 类型 = 整数 注释 = "索引. 原方法: Index. 官方简介: 返回形状 <S> 的索引, 若未找到形状 <S> 则返回 0." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_PolyAlgo.Index (@<对象>, @<S>)
+    }
+
+    方法 加载 <公开 静态 注释 = "加载. 原方法: Load. 官方简介: 把形状 S 加载到该框架中. 警告: S 必须已被三角剖分." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 形状 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_PolyAlgo.Load (@<对象>, @<形状>)
+    }
+
+    方法 投影器 <公开 静态 类型 = 长整数 注释 = "投影器. 原方法: Projector. 官方简介: 设置该框架的视图参数. 这些参数由 HLRAlgo_Projector 对象定义, 该对象由 Prs3d_Projector 对象上的 Projector 函数返回." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_PolyAlgo.Projector (@<对象>)
+    }
+
+    方法 投影器_2 <公开 静态 注释 = "投影器_2. 原方法: Projector." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 投影 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_PolyAlgo.Projector_2 (@<对象>, @<投影>)
+    }
+
+    方法 角度容差 <公开 静态 类型 = 小数 注释 = "角度容差. 原方法: TolAngular." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_PolyAlgo.TolAngular (@<对象>)
+    }
+
+    方法 角度容差_2 <公开 静态 注释 = "角度容差_2. 原方法: TolAngular." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 容差 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_PolyAlgo.TolAngular_2 (@<对象>, @<容差>)
+    }
+
+    方法 系数容差 <公开 静态 类型 = 小数 注释 = "系数容差. 原方法: TolCoef." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_PolyAlgo.TolCoef (@<对象>)
+    }
+
+    方法 系数容差_2 <公开 静态 注释 = "系数容差_2. 原方法: TolCoef." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 容差 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_PolyAlgo.TolCoef_2 (@<对象>, @<容差>)
+    }
+
+    方法 更新 <公开 静态 注释 = "更新. 原方法: Update. 官方简介: 启动对本框架所可视化形状的轮廓线计算. 在设置视点并定义要可视化的形状之后使用." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_PolyAlgo.Update (@<对象>)
+    }
+
+    方法 初始化隐藏 <公开 静态 注释 = "初始化隐藏. 原方法: InitHide." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_PolyAlgo.InitHide (@<对象>)
+    }
+
+    方法 还有隐藏 <公开 静态 类型 = 逻辑型 注释 = "还有隐藏. 原方法: MoreHide." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_PolyAlgo.MoreHide (@<对象>)
+    }
+
+    方法 下一个隐藏 <公开 静态 注释 = "下一个隐藏. 原方法: NextHide." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_PolyAlgo.NextHide (@<对象>)
+    }
+
+    方法 初始化显示 <公开 静态 注释 = "初始化显示. 原方法: InitShow." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_PolyAlgo.InitShow (@<对象>)
+    }
+
+    方法 还有显示 <公开 静态 类型 = 逻辑型 注释 = "还有显示. 原方法: MoreShow." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_PolyAlgo.MoreShow (@<对象>)
+    }
+
+    方法 下一个显示 <公开 静态 注释 = "下一个显示. 原方法: NextShow." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_PolyAlgo.NextShow (@<对象>)
+    }
+
+    方法 输出线化形状 <公开 静态 类型 = 长整数 注释 = "输出线化形状. 原方法: OutLinedShape. 官方简介: 构造包含每个面内部轮廓的形状." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_PolyAlgo.OutLinedShape (@<对象>, @<S>)
+    }
+
+    方法 调试 <公开 静态 类型 = 逻辑型 注释 = "调试. 原方法: Debug." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_PolyAlgo.Debug (@<对象>)
+    }
+
+    方法 调试_2 <公开 静态 注释 = "调试_2. 原方法: Debug." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 调试 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_PolyAlgo.Debug_2 (@<对象>, @<调试>)
+    }
+
+}
+
+类 网格消隐结果提取 <公开 注释 = "网格消隐结果提取: 原类 HLRBRep_PolyHLRToShape (libTKHLR, 头文件 HLRBRep/HLRBRep_PolyHLRToShape.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 对 HLRBRep_Algo 算法计算结果按提取方式过滤的框架. 从算法对形状计算的结果中, 过滤器返回你想要识别的边类型. 可以选择以下任一输出类型: - 可见尖锐边 - 隐藏尖锐边 - 可见光顺边 - 隐藏光顺边 - 可见缝合边 - 隐藏缝合边 - 可见外轮廓边 - 隐藏外轮廓边. - 可见等参数线, 以及 - 隐藏等参数线. 尖锐边呈 C0 连续(非 G1). 光顺边呈 G1 连续(非 G2). 缝合边呈 C2 连续. 结果由算法所处理视图投影平面中的二维边组成. 这些二维边不包含在可视化形状的数据结构中. 要获得完整图像, 必须合并各所选过滤器给出的形状. 形状的构建不调用算法的新计算, 只读取其内部结果." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: HLRBRep_PolyHLRToShape. 官方简介: 构造用于过滤 HLRBRep_Algo 算法 A 结果的框架. 使用提取过滤器获得 A 的所需结果." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_PolyHLRToShape.构造 ()
+    }
+
+    方法 更新 <公开 静态 注释 = "更新. 原方法: Update." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 A <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_PolyHLRToShape.Update (@<对象>, @<A>)
+    }
+
+    方法 显示 <公开 静态 注释 = "显示. 原方法: Show." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_PolyHLRToShape.Show (@<对象>)
+    }
+
+    方法 隐藏 <公开 静态 注释 = "隐藏. 原方法: Hide." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_PolyHLRToShape.Hide (@<对象>)
+    }
+
+    方法 可见锐边 <公开 静态 类型 = 长整数 注释 = "可见锐边. 原方法: VCompound." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_PolyHLRToShape.VCompound (@<对象>)
+    }
+
+    方法 可见锐边_2 <公开 静态 类型 = 长整数 注释 = "可见锐边_2. 原方法: VCompound." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_PolyHLRToShape.VCompound_2 (@<对象>, @<S>)
+    }
+
+    方法 可见平滑边 <公开 静态 类型 = 长整数 注释 = "可见平滑边. 原方法: Rg1LineVCompound. 官方简介: 设置可见平滑边的提取过滤器." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_PolyHLRToShape.Rg1LineVCompound (@<对象>)
+    }
+
+    方法 可见平滑边_2 <公开 静态 类型 = 长整数 注释 = "可见平滑边_2. 原方法: Rg1LineVCompound." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_PolyHLRToShape.Rg1LineVCompound_2 (@<对象>, @<S>)
+    }
+
+    方法 可见缝合边 <公开 静态 类型 = 长整数 注释 = "可见缝合边. 原方法: RgNLineVCompound. 官方简介: 设置可见缝合边的提取过滤器." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_PolyHLRToShape.RgNLineVCompound (@<对象>)
+    }
+
+    方法 可见缝合边_2 <公开 静态 类型 = 长整数 注释 = "可见缝合边_2. 原方法: RgNLineVCompound." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_PolyHLRToShape.RgNLineVCompound_2 (@<对象>, @<S>)
+    }
+
+    方法 可见轮廓边 <公开 静态 类型 = 长整数 注释 = "可见轮廓边. 原方法: OutLineVCompound." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_PolyHLRToShape.OutLineVCompound (@<对象>)
+    }
+
+    方法 可见轮廓边_2 <公开 静态 类型 = 长整数 注释 = "可见轮廓边_2. 原方法: OutLineVCompound. 官方简介: 设置可见轮廓边的提取过滤器." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_PolyHLRToShape.OutLineVCompound_2 (@<对象>, @<S>)
+    }
+
+    方法 隐藏锐边 <公开 静态 类型 = 长整数 注释 = "隐藏锐边. 原方法: HCompound." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_PolyHLRToShape.HCompound (@<对象>)
+    }
+
+    方法 隐藏锐边_2 <公开 静态 类型 = 长整数 注释 = "隐藏锐边_2. 原方法: HCompound." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_PolyHLRToShape.HCompound_2 (@<对象>, @<S>)
+    }
+
+    方法 隐藏平滑边 <公开 静态 类型 = 长整数 注释 = "隐藏平滑边. 原方法: Rg1LineHCompound." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_PolyHLRToShape.Rg1LineHCompound (@<对象>)
+    }
+
+    方法 隐藏平滑边_2 <公开 静态 类型 = 长整数 注释 = "隐藏平滑边_2. 原方法: Rg1LineHCompound. 官方简介: 设置隐藏平滑边的提取过滤器." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_PolyHLRToShape.Rg1LineHCompound_2 (@<对象>, @<S>)
+    }
+
+    方法 隐藏缝合边 <公开 静态 类型 = 长整数 注释 = "隐藏缝合边. 原方法: RgNLineHCompound." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_PolyHLRToShape.RgNLineHCompound (@<对象>)
+    }
+
+    方法 隐藏缝合边_2 <公开 静态 类型 = 长整数 注释 = "隐藏缝合边_2. 原方法: RgNLineHCompound. 官方简介: 设置隐藏缝合边的提取过滤器." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_PolyHLRToShape.RgNLineHCompound_2 (@<对象>, @<S>)
+    }
+
+    方法 隐藏轮廓边 <公开 静态 类型 = 长整数 注释 = "隐藏轮廓边. 原方法: OutLineHCompound." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_PolyHLRToShape.OutLineHCompound (@<对象>)
+    }
+
+    方法 隐藏轮廓边_2 <公开 静态 类型 = 长整数 注释 = "隐藏轮廓边_2. 原方法: OutLineHCompound. 官方简介: 设置隐藏轮廓线的提取过滤器. 隐藏轮廓线例如出现在圆环面中. 此时, 从侧面观察圆环面时的内部轮廓线是隐藏的." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKHLR.HLRBRep_PolyHLRToShape.OutLineHCompound_2 (@<对象>, @<S>)
+    }
+
+}

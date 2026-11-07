@@ -1,0 +1,175 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.Box2D <注释 = "标识与小结构：6 个标识类型、容量、过滤、材质、质量数据、计数器 · Box2D 3.2.0 单精度" @视窗.头文件搜寻目录 = "include"
+        @视窗.外部头文件 = "b2vol.h" @视窗.库文件搜寻目录 = "lib/x64"
+        @视窗.外部库 = "box2d$(d).lib">
+
+类 B2世界标识 <公开 注释 = "世界标识 · b2WorldId" @别名 = "b2WorldId" @别名类型 = 本地结构>
+{
+    变量 索引值 <公开 类型 = 短整数 注释 = "索引值 · b2WorldId.index1" @输出名 = "index1">
+    变量 代数 <公开 类型 = 短整数 注释 = "代数 · b2WorldId.generation" @输出名 = "generation">
+}
+
+类 B2刚体标识 <公开 注释 = "刚体标识 · b2BodyId" @别名 = "b2BodyId" @别名类型 = 本地结构>
+{
+    变量 索引值 <公开 类型 = 整数 注释 = "索引值 · b2BodyId.index1" @输出名 = "index1">
+    变量 世界序号 <公开 类型 = 短整数 注释 = "世界序号 · b2BodyId.world0" @输出名 = "world0">
+    变量 代数 <公开 类型 = 短整数 注释 = "代数 · b2BodyId.generation" @输出名 = "generation">
+}
+
+类 B2形状标识 <公开 注释 = "形状标识 · b2ShapeId" @别名 = "b2ShapeId" @别名类型 = 本地结构>
+{
+    变量 索引值 <公开 类型 = 整数 注释 = "索引值 · b2ShapeId.index1" @输出名 = "index1">
+    变量 世界序号 <公开 类型 = 短整数 注释 = "世界序号 · b2ShapeId.world0" @输出名 = "world0">
+    变量 代数 <公开 类型 = 短整数 注释 = "代数 · b2ShapeId.generation" @输出名 = "generation">
+}
+
+类 B2链条标识 <公开 注释 = "链条标识 · b2ChainId" @别名 = "b2ChainId" @别名类型 = 本地结构>
+{
+    变量 索引值 <公开 类型 = 整数 注释 = "索引值 · b2ChainId.index1" @输出名 = "index1">
+    变量 世界序号 <公开 类型 = 短整数 注释 = "世界序号 · b2ChainId.world0" @输出名 = "world0">
+    变量 代数 <公开 类型 = 短整数 注释 = "代数 · b2ChainId.generation" @输出名 = "generation">
+}
+
+类 B2关节标识 <公开 注释 = "关节标识 · b2JointId" @别名 = "b2JointId" @别名类型 = 本地结构>
+{
+    变量 索引值 <公开 类型 = 整数 注释 = "索引值 · b2JointId.index1" @输出名 = "index1">
+    变量 世界序号 <公开 类型 = 短整数 注释 = "世界序号 · b2JointId.world0" @输出名 = "world0">
+    变量 代数 <公开 类型 = 短整数 注释 = "代数 · b2JointId.generation" @输出名 = "generation">
+}
+
+类 B2接触标识 <公开 注释 = "接触标识 · b2ContactId" @别名 = "b2ContactId" @别名类型 = 本地结构>
+{
+    变量 索引值 <公开 类型 = 整数 注释 = "索引值 · b2ContactId.index1" @输出名 = "index1">
+    变量 世界序号 <公开 类型 = 短整数 注释 = "世界序号 · b2ContactId.world0" @输出名 = "world0">
+    变量 填充 <公开 类型 = 短整数 注释 = "填充 · b2ContactId.padding" @输出名 = "padding">
+    变量 代数 <公开 类型 = 整数 注释 = "代数 · b2ContactId.generation" @输出名 = "generation">
+}
+
+类 B2容量 <公开 注释 = "容量 · b2Capacity" @别名 = "b2Capacity" @别名类型 = 本地结构>
+{
+    变量 静态形状数量 <公开 类型 = 整数 注释 = "预期的静态形状数量 · b2Capacity.staticShapeCount" @输出名 = "staticShapeCount">
+    变量 动态形状数量 <公开 类型 = 整数 注释 = "预期的动态与运动学形状数量 · b2Capacity.dynamicShapeCount" @输出名 = "dynamicShapeCount">
+    变量 静态刚体数量 <公开 类型 = 整数 注释 = "预期的静态刚体数量 · b2Capacity.staticBodyCount" @输出名 = "staticBodyCount">
+    变量 动态刚体数量 <公开 类型 = 整数 注释 = "预期的动态与运动学刚体数量 · b2Capacity.dynamicBodyCount" @输出名 = "dynamicBodyCount">
+    变量 接触数量 <公开 类型 = 整数 注释 = "预期的接触数量 · b2Capacity.contactCount" @输出名 = "contactCount">
+    变量 内存池字节数量 <公开 类型 = 整数 注释 = "预留的竞技场分配器空间，用于临时分配 · b2Capacity.arenaByteCount" @输出名 = "arenaByteCount">
+}
+
+类 B2运动锁定 <公开 注释 = "运动锁定 · b2MotionLocks" @别名 = "b2MotionLocks" @别名类型 = 本地结构>
+{
+    变量 锁定横轴 <公开 类型 = 逻辑型 注释 = "禁止沿 x 轴平移 · b2MotionLocks.linearX" @输出名 = "linearX">
+    变量 锁定纵轴 <公开 类型 = 逻辑型 注释 = "禁止沿 y 轴平移 · b2MotionLocks.linearY" @输出名 = "linearY">
+    变量 锁定旋转 <公开 类型 = 逻辑型 注释 = "禁止绕 z 轴旋转 · b2MotionLocks.angularZ" @输出名 = "angularZ">
+}
+
+类 B2过滤 <公开 注释 = "过滤 · b2Filter" @别名 = "b2Filter" @别名类型 = 本地结构>
+{
+    变量 类别位 <公开 类型 = 长整数 注释 = "碰撞类别位 · b2Filter.categoryBits" @输出名 = "categoryBits">
+    变量 掩码位 <公开 类型 = 长整数 注释 = "碰撞掩码位 · b2Filter.maskBits" @输出名 = "maskBits">
+    变量 分组索引 <公开 类型 = 整数 注释 = "碰撞组：负数组内永不相撞，正数组内总是相撞 · b2Filter.groupIndex" @输出名 = "groupIndex">
+    方法 取默认定义 <公开 静态 类型 = B2过滤 注释 = "用此函数初始化过滤数据 · b2DefaultFilter" @嵌入式方法 = "">
+    {
+        @ b2DefaultFilter()
+    }
+
+}
+
+类 B2查询过滤 <公开 注释 = "查询过滤 · b2QueryFilter" @别名 = "b2QueryFilter" @别名类型 = 本地结构>
+{
+    变量 类别位 <公开 类型 = 长整数 注释 = "本次查询的碰撞类别位 · b2QueryFilter.categoryBits" @输出名 = "categoryBits">
+    变量 掩码位 <公开 类型 = 长整数 注释 = "碰撞掩码位 · b2QueryFilter.maskBits" @输出名 = "maskBits">
+    方法 取默认定义 <公开 静态 类型 = B2查询过滤 注释 = "用此函数初始化查询过滤数据 · b2DefaultQueryFilter" @嵌入式方法 = "">
+    {
+        @ b2DefaultQueryFilter()
+    }
+
+}
+
+类 B2表面材质 <公开 注释 = "表面材质 · b2SurfaceMaterial" @别名 = "b2SurfaceMaterial" @别名类型 = 本地结构>
+{
+    变量 摩擦系数 <公开 类型 = 单精度小数 注释 = "库仑干摩擦系数，通常在 0 到 1 之间 · b2SurfaceMaterial.friction" @输出名 = "friction">
+    变量 恢复系数 <公开 类型 = 单精度小数 注释 = "恢复系数（弹性），通常在 0 到 1 之间 · b2SurfaceMaterial.restitution" @输出名 = "restitution">
+    变量 滚动阻力 <公开 类型 = 单精度小数 注释 = "滚动阻力，通常在 0 到 1 之间 · b2SurfaceMaterial.rollingResistance" @输出名 = "rollingResistance">
+    变量 切向速度 <公开 类型 = 单精度小数 注释 = "传送带所用的切向速度 · b2SurfaceMaterial.tangentSpeed" @输出名 = "tangentSpeed">
+    变量 用户材质标识 <公开 类型 = 长整数 注释 = "用户材质标识 · b2SurfaceMaterial.userMaterialId" @输出名 = "userMaterialId">
+    变量 自定义颜色 <公开 类型 = 整数 注释 = "自定义调试绘制颜色 · b2SurfaceMaterial.customColor" @输出名 = "customColor">
+    方法 取默认定义 <公开 静态 类型 = B2表面材质 注释 = "用此函数初始化表面材质 · b2DefaultSurfaceMaterial" @嵌入式方法 = "">
+    {
+        @ b2DefaultSurfaceMaterial()
+    }
+
+}
+
+类 B2质量数据 <公开 注释 = "质量数据 · b2MassData" @别名 = "b2MassData" @别名类型 = 本地结构>
+{
+    变量 质量 <公开 类型 = 单精度小数 注释 = "形状的质量，通常以千克计 · b2MassData.mass" @输出名 = "mass">
+    变量 质心 <公开 类型 = B2向量 注释 = "形状质心相对形状原点的位置 · b2MassData.center" @输出名 = "center">
+    变量 转动惯量 <公开 类型 = 单精度小数 注释 = "形状绕其质心的转动惯量 · b2MassData.rotationalInertia" @输出名 = "rotationalInertia">
+}
+
+类 B2性能剖析 <公开 注释 = "性能剖析 · b2Profile" @别名 = "b2Profile" @别名类型 = 本地结构>
+{
+    变量 步进耗时 <公开 类型 = 单精度小数 注释 = "步进耗时 · b2Profile.step" @输出名 = "step">
+    变量 配对耗时 <公开 类型 = 单精度小数 注释 = "配对耗时 · b2Profile.pairs" @输出名 = "pairs">
+    变量 碰撞耗时 <公开 类型 = 单精度小数 注释 = "碰撞耗时 · b2Profile.collide" @输出名 = "collide">
+    变量 求解耗时 <公开 类型 = 单精度小数 注释 = "求解耗时 · b2Profile.solve" @输出名 = "solve">
+    变量 求解器准备耗时 <公开 类型 = 单精度小数 注释 = "求解器准备耗时 · b2Profile.solverSetup" @输出名 = "solverSetup">
+    变量 约束耗时 <公开 类型 = 单精度小数 注释 = "约束耗时 · b2Profile.constraints" @输出名 = "constraints">
+    变量 约束准备耗时 <公开 类型 = 单精度小数 注释 = "约束准备耗时 · b2Profile.prepareConstraints" @输出名 = "prepareConstraints">
+    变量 速度积分耗时 <公开 类型 = 单精度小数 注释 = "速度积分耗时 · b2Profile.integrateVelocities" @输出名 = "integrateVelocities">
+    变量 热启动耗时 <公开 类型 = 单精度小数 注释 = "热启动耗时 · b2Profile.warmStart" @输出名 = "warmStart">
+    变量 求解冲量耗时 <公开 类型 = 单精度小数 注释 = "求解冲量耗时 · b2Profile.solveImpulses" @输出名 = "solveImpulses">
+    变量 位置积分耗时 <公开 类型 = 单精度小数 注释 = "位置积分耗时 · b2Profile.integratePositions" @输出名 = "integratePositions">
+    变量 松弛冲量耗时 <公开 类型 = 单精度小数 注释 = "松弛冲量耗时 · b2Profile.relaxImpulses" @输出名 = "relaxImpulses">
+    变量 恢复系数 <公开 类型 = 单精度小数 注释 = "恢复系数 · b2Profile.restitution" @输出名 = "restitution">
+    变量 存储冲量耗时 <公开 类型 = 单精度小数 注释 = "存储冲量耗时 · b2Profile.storeImpulses" @输出名 = "storeImpulses">
+    变量 划分岛屿耗时 <公开 类型 = 单精度小数 注释 = "划分岛屿耗时 · b2Profile.splitIslands" @输出名 = "splitIslands">
+    变量 变换耗时 <公开 类型 = 单精度小数 注释 = "变换耗时 · b2Profile.transforms" @输出名 = "transforms">
+    变量 传感器命中耗时 <公开 类型 = 单精度小数 注释 = "传感器命中耗时 · b2Profile.sensorHits" @输出名 = "sensorHits">
+    变量 关节事件耗时 <公开 类型 = 单精度小数 注释 = "关节事件耗时 · b2Profile.jointEvents" @输出名 = "jointEvents">
+    变量 撞击事件耗时 <公开 类型 = 单精度小数 注释 = "撞击事件耗时 · b2Profile.hitEvents" @输出名 = "hitEvents">
+    变量 重建耗时 <公开 类型 = 单精度小数 注释 = "重建耗时 · b2Profile.refit" @输出名 = "refit">
+    变量 子弹耗时 <公开 类型 = 单精度小数 注释 = "子弹耗时 · b2Profile.bullets" @输出名 = "bullets">
+    变量 休眠岛屿耗时 <公开 类型 = 单精度小数 注释 = "休眠岛屿耗时 · b2Profile.sleepIslands" @输出名 = "sleepIslands">
+    变量 传感器耗时 <公开 类型 = 单精度小数 注释 = "传感器耗时 · b2Profile.sensors" @输出名 = "sensors">
+}
+
+类 B2计数器 <公开 注释 = "计数器 · b2Counters" @别名 = "b2Counters" @别名类型 = 本地结构>
+{
+    变量 字节数量 <公开 类型 = 长整数 注释 = "字节数量 · b2Counters.byteCount" @输出名 = "byteCount">
+    变量 刚体数量 <公开 类型 = 整数 注释 = "刚体数量 · b2Counters.bodyCount" @输出名 = "bodyCount">
+    变量 形状数量 <公开 类型 = 整数 注释 = "形状数量 · b2Counters.shapeCount" @输出名 = "shapeCount">
+    变量 接触数量 <公开 类型 = 整数 注释 = "接触数量 · b2Counters.contactCount" @输出名 = "contactCount">
+    变量 关节数量 <公开 类型 = 整数 注释 = "关节数量 · b2Counters.jointCount" @输出名 = "jointCount">
+    变量 岛屿数量 <公开 类型 = 整数 注释 = "岛屿数量 · b2Counters.islandCount" @输出名 = "islandCount">
+    变量 栈使用量 <公开 类型 = 整数 注释 = "栈使用量 · b2Counters.stackUsed" @输出名 = "stackUsed">
+    变量 静态树高度 <公开 类型 = 整数 注释 = "静态树高度 · b2Counters.staticTreeHeight" @输出名 = "staticTreeHeight">
+    变量 树高度 <公开 类型 = 整数 注释 = "树高度 · b2Counters.treeHeight" @输出名 = "treeHeight">
+    变量 任务数量 <公开 类型 = 整数 注释 = "任务数量 · b2Counters.taskCount" @输出名 = "taskCount">
+    变量 唤醒接触数量 <公开 类型 = 整数 注释 = "本次碰撞处理触及的接触数量 · b2Counters.awakeContactCount" @输出名 = "awakeContactCount">
+    变量 回收接触数量 <公开 类型 = 整数 注释 = "最近一步中回收的接触数量 · b2Counters.recycledContactCount" @输出名 = "recycledContactCount">
+
+    方法 取颜色计数 <公开 静态 类型 = 整数 注释 = "读取颜色计数数组字段的一个元素 · b2vol_counters_getColorCount" @嵌入式方法 = "">
+    参数 定义 <类型 = B2计数器>
+    参数 序号 <类型 = 整数>
+    {
+        @ b2vol_counters_getColorCount(&@<定义>, @<序号>)
+    }
+
+    方法 置颜色计数 <公开 静态 注释 = "写入颜色计数数组字段的一个元素 · b2vol_counters_setColorCount" @嵌入式方法 = "">
+    参数 定义 <类型 = B2计数器>
+    参数 序号 <类型 = 整数>
+    参数 新值 <类型 = 整数>
+    {
+        @ b2vol_counters_setColorCount(&@<定义>, @<序号>, @<新值>)
+    }
+
+}
+
+类 B2树统计 <公开 注释 = "树统计 · b2TreeStats" @别名 = "b2TreeStats" @别名类型 = 本地结构>
+{
+    变量 节点访问数 <公开 类型 = 整数 注释 = "查询期间访问的内部节点数量 · b2TreeStats.nodeVisits" @输出名 = "nodeVisits">
+    变量 叶子访问数 <公开 类型 = 整数 注释 = "查询期间访问的叶节点数量 · b2TreeStats.leafVisits" @输出名 = "leafVisits">
+}
+

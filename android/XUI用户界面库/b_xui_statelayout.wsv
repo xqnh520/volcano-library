@@ -1,0 +1,249 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.安卓.XUI <注释 = "XUI 安卓 UI 工具库封装" @文档 = "category = \"XUI\"">
+
+
+类 XUI多状态视图 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.statelayout.MultipleStatusView)."
+        @文档 = "category = \"XUI.状态\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.statelayout.MultipleStatusView\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI多状态视图, MultipleStatusView, com.xuexiang.xui.widget.statelayout.MultipleStatusView)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetMultipleStatusView ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI多状态视图的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI多状态视图.getAlpha()">
+    {
+        @ (double)@sn<this>.GetMultipleStatusView ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI多状态视图的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI多状态视图.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMultipleStatusView ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI多状态视图的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI多状态视图.isEnabled()">
+    {
+        @ @sn<this>.GetMultipleStatusView ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI多状态视图的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI多状态视图.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetMultipleStatusView ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI多状态视图的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI多状态视图.isClickable()">
+    {
+        @ @sn<this>.GetMultipleStatusView ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI多状态视图的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI多状态视图.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetMultipleStatusView ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI多状态视图的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI多状态视图.getElevation()">
+    {
+        @ (double)@sn<this>.GetMultipleStatusView ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI多状态视图的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI多状态视图.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMultipleStatusView ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI多状态视图的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI多状态视图.getMinimumHeight()">
+    {
+        @ @sn<this>.GetMultipleStatusView ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI多状态视图的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI多状态视图.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMultipleStatusView ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI多状态视图的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI多状态视图.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMultipleStatusView ().setBackgroundColor (@<新值>))
+    }
+
+    方法 取视图状态 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI多状态视图的视图状态。 参数：无。 返回：整数。 原方法：XUI多状态视图.getViewStatus()">
+    {
+        @ @sn<this>.GetMultipleStatusView ().getViewStatus ()
+    }
+
+    方法 显示空 <公开 注释 = "用法：让XUI多状态视图显示出来。 参数：无。 返回：无。 原方法：XUI多状态视图.showEmpty()">
+    {
+        @ @m<RUN_UI_ACTION> (GetMultipleStatusView ().showEmpty ())
+    }
+
+    方法 显示错误 <公开 注释 = "用法：让XUI多状态视图显示出来。 参数：无。 返回：无。 原方法：XUI多状态视图.showError()">
+    {
+        @ @m<RUN_UI_ACTION> (GetMultipleStatusView ().showError ())
+    }
+
+    方法 显示加载中 <公开 注释 = "用法：让XUI多状态视图显示出来。 参数：无。 返回：无。 原方法：XUI多状态视图.showLoading()">
+    {
+        @ @m<RUN_UI_ACTION> (GetMultipleStatusView ().showLoading ())
+    }
+
+    方法 显示无网络 <公开 注释 = "用法：让XUI多状态视图显示出来。 参数：无。 返回：无。 原方法：XUI多状态视图.showNoNetwork()">
+    {
+        @ @m<RUN_UI_ACTION> (GetMultipleStatusView ().showNoNetwork ())
+    }
+
+    方法 显示内容 <公开 注释 = "用法：让XUI多状态视图显示出来。 参数：无。 返回：无。 原方法：XUI多状态视图.showContent()">
+    {
+        @ @m<RUN_UI_ACTION> (GetMultipleStatusView ().showContent ())
+    }
+
+}
+
+类 XUI状态布局 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.statelayout.StatefulLayout)."
+        @文档 = "category = \"XUI.状态\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.statelayout.StatefulLayout\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.stf_animationEnabled\n        shown_name = \"是否启用切换动画\"\n        data_type = boolean\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI状态布局, StatefulLayout, com.xuexiang.xui.widget.statelayout.StatefulLayout)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetStatefulLayout ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI状态布局的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI状态布局.getAlpha()">
+    {
+        @ (double)@sn<this>.GetStatefulLayout ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI状态布局的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI状态布局.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetStatefulLayout ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI状态布局的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI状态布局.isEnabled()">
+    {
+        @ @sn<this>.GetStatefulLayout ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI状态布局的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI状态布局.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetStatefulLayout ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI状态布局的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI状态布局.isClickable()">
+    {
+        @ @sn<this>.GetStatefulLayout ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI状态布局的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI状态布局.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetStatefulLayout ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI状态布局的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI状态布局.getElevation()">
+    {
+        @ (double)@sn<this>.GetStatefulLayout ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI状态布局的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI状态布局.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetStatefulLayout ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI状态布局的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI状态布局.getMinimumHeight()">
+    {
+        @ @sn<this>.GetStatefulLayout ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI状态布局的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI状态布局.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetStatefulLayout ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI状态布局的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI状态布局.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetStatefulLayout ().setBackgroundColor (@<新值>))
+    }
+
+    方法 是否动画可用 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断XUI状态布局是否动画可用。 参数：无。 返回：逻辑型。 原方法：XUI状态布局.isAnimationEnabled()">
+    {
+        @ @sn<this>.GetStatefulLayout ().isAnimationEnabled ()
+    }
+
+    方法 设置动画可用 <公开 注释 = "用法：把XUI状态布局的动画可用设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI状态布局.setAnimationEnabled()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetStatefulLayout ().setAnimationEnabled (@<值1>))
+    }
+
+    方法 设置内动画 <公开 注释 = "用法：把XUI状态布局的内动画设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI状态布局.setInAnimation()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetStatefulLayout ().setInAnimation (@<值1>))
+    }
+
+    方法 设置外动画 <公开 注释 = "用法：把XUI状态布局的外动画设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI状态布局.setOutAnimation()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetStatefulLayout ().setOutAnimation (@<值1>))
+    }
+
+    方法 附加模板 <公开 注释 = "用法：把模板附加到XUI状态布局。 参数：无。 返回：无。 原方法：XUI状态布局.attachTemplate()">
+    {
+        @ @m<RUN_UI_ACTION> (GetStatefulLayout ().attachTemplate ())
+    }
+
+    方法 显示内容 <公开 注释 = "用法：让XUI状态布局显示出来。 参数：无。 返回：无。 原方法：XUI状态布局.showContent()">
+    {
+        @ @m<RUN_UI_ACTION> (GetStatefulLayout ().showContent ())
+    }
+
+    方法 显示加载中 <公开 注释 = "用法：让XUI状态布局显示出来。 参数：无。 返回：无。 原方法：XUI状态布局.showLoading()">
+    {
+        @ @m<RUN_UI_ACTION> (GetStatefulLayout ().showLoading ())
+    }
+
+    方法 显示加载中_2 <公开 注释 = "用法：让XUI状态布局显示出来。 参数：值1=整数。 返回：无。 原方法：XUI状态布局.showLoading()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetStatefulLayout ().showLoading (@<值1>))
+    }
+
+    方法 显示加载中_3 <公开 注释 = "用法：让XUI状态布局显示出来。 参数：值1=文本。 返回：无。 原方法：XUI状态布局.showLoading()">
+    参数 值1 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetStatefulLayout ().showLoading (@<值1>))
+    }
+
+    方法 显示空 <公开 注释 = "用法：让XUI状态布局显示出来。 参数：无。 返回：无。 原方法：XUI状态布局.showEmpty()">
+    {
+        @ @m<RUN_UI_ACTION> (GetStatefulLayout ().showEmpty ())
+    }
+
+    方法 显示空_2 <公开 注释 = "用法：让XUI状态布局显示出来。 参数：值1=整数。 返回：无。 原方法：XUI状态布局.showEmpty()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetStatefulLayout ().showEmpty (@<值1>))
+    }
+
+    方法 显示空_3 <公开 注释 = "用法：让XUI状态布局显示出来。 参数：值1=文本。 返回：无。 原方法：XUI状态布局.showEmpty()">
+    参数 值1 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetStatefulLayout ().showEmpty (@<值1>))
+    }
+
+}

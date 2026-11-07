@@ -1,0 +1,69 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.即时界面 <注释 = "Dear ImGui v1.91.9b-docking 的火山视窗中文封装，全中文类名/方法名/参数名/注释。" @视窗.头文件搜寻目录 = "imgui"
+        @视窗.外部头文件 = "imcn_helper.h, imcn_host.h, imcn_host_dx9.h, imcn_host_dx12.h, imcn_host_gl3.h"
+        @视窗.外部源文件 = "imgui\\imgui.cpp, imgui\\imgui_draw.cpp, imgui\\imgui_tables.cpp, imgui\\imgui_widgets.cpp, imgui\\imgui_demo.cpp, imgui\\misc\\cpp\\imgui_stdlib.cpp, imgui\\backends\\imgui_impl_win32.cpp, imgui\\backends\\imgui_impl_dx11.cpp, imgui\\backends\\imgui_impl_dx9.cpp, imgui\\backends\\imgui_impl_dx12.cpp, imgui\\backends\\imgui_impl_opengl3.cpp">
+
+类 界面后端DX12 <公开 注释 = "Windows + Direct3D 12 图形后端：显式命令队列与描述符堆，适合与新式引擎共存。使用顺序与\"界面后端\"完全一致，内部已处理围栏同步与后台缓冲切换。" 折叠>
+{
+    方法 创建窗口 <公开 静态 类型 = 变整数 注释 = "创建一个 Win32 窗口 + D3D12 设备与交换链，并初始化 ImGui 后端与上下文。返回值即宿主句柄。" 返回值注释 = "宿主句柄，失败返回 0" 折叠 @嵌入式方法 = "">
+    参数 窗口标题 <类型 = 文本型 注释 = "窗口标题">
+    参数 窗口宽度 <类型 = 整数 注释 = "窗口客户区宽度">
+    参数 窗口高度 <类型 = 整数 注释 = "窗口客户区高度">
+    {
+        @ (intptr_t)::imcn::CreateHostW12(::imcn::ToW(IMCN_U8(@<窗口标题>)).c_str(), (int)@<窗口宽度>, (int)@<窗口高度>)
+    }
+
+    方法 处理消息 <公开 静态 类型 = 逻辑型 注释 = "处理窗口消息队列，返回假表示窗口已被关闭、应结束循环。" 返回值注释 = "继续运行返回真" 折叠 @嵌入式方法 = "">
+    参数 宿主 <类型 = 变整数 注释 = "由\"创建窗口\"返回的宿主句柄">
+    {
+        @ ::imcn::PumpHostW12((::imcn::HostW12*)(intptr_t)@<宿主>)
+    }
+
+    方法 开始帧 <公开 静态 注释 = "通知后端开始新的一帧，需在\"即时界面.开始新帧\"之前调用。" 折叠 @嵌入式方法 = "">
+    参数 宿主 <类型 = 变整数 注释 = "宿主句柄">
+    {
+        @ ((::imcn::HostW12*)(intptr_t)@<宿主>)->BeginFrame()
+    }
+
+    方法 呈现 <公开 静态 注释 = "录制命令列表、绘制 ImGui 绘制数据并呈现，需在\"即时界面.渲染\"之后调用。" 折叠 @嵌入式方法 = "">
+    参数 宿主 <类型 = 变整数 注释 = "宿主句柄">
+    {
+        @ ((::imcn::HostW12*)(intptr_t)@<宿主>)->EndFrame()
+    }
+
+    方法 销毁窗口 <公开 静态 注释 = "等待 GPU、销毁窗口与设备并释放 ImGui 上下文。" 折叠 @嵌入式方法 = "">
+    参数 宿主 <类型 = 变整数 注释 = "宿主句柄">
+    {
+        @ ::imcn::DestroyHostW12((::imcn::HostW12*)(intptr_t)@<宿主>)
+    }
+
+    方法 取窗口句柄 <公开 静态 类型 = 变整数 注释 = "取回底层 Win32 窗口句柄（HWND）。" 折叠 @嵌入式方法 = "">
+    参数 宿主 <类型 = 变整数 注释 = "宿主句柄">
+    {
+        @ (intptr_t)(((::imcn::HostW12*)(intptr_t)@<宿主>)->Handle)
+    }
+
+    方法 取设备对象 <公开 静态 类型 = 变整数 注释 = "取回底层 D3D12 设备指针（ID3D12Device*）。" 折叠 @嵌入式方法 = "">
+    参数 宿主 <类型 = 变整数 注释 = "宿主句柄">
+    {
+        @ (intptr_t)(((::imcn::HostW12*)(intptr_t)@<宿主>)->Device)
+    }
+
+    方法 取命令队列 <公开 静态 类型 = 变整数 注释 = "取回底层 D3D12 命令队列指针（ID3D12CommandQueue*）。" 折叠 @嵌入式方法 = "">
+    参数 宿主 <类型 = 变整数 注释 = "宿主句柄">
+    {
+        @ (intptr_t)(((::imcn::HostW12*)(intptr_t)@<宿主>)->Queue)
+    }
+
+    方法 等待图形完成 <公开 静态 注释 = "阻塞直到 GPU 完成已提交的全部命令，自己要在队列上插入额外工作时用。" 折叠 @嵌入式方法 = "">
+    参数 宿主 <类型 = 变整数 注释 = "宿主句柄">
+    {
+        @ ((::imcn::HostW12*)(intptr_t)@<宿主>)->WaitForGpu()
+    }
+
+    方法 取帧间隔 <公开 静态 类型 = 单精度小数 注释 = "取回本帧与上帧的时间间隔（秒）。" 折叠 @嵌入式方法 = "">
+    {
+        @ ImGui::GetIO().DeltaTime
+    }
+}

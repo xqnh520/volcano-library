@@ -1,0 +1,580 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.Box2D <注释 = "刚体定义与 73 个刚体接口 · Box2D 3.2.0 单精度" @视窗.头文件搜寻目录 = "include"
+        @视窗.外部头文件 = "b2vol.h" @视窗.库文件搜寻目录 = "lib/x64"
+        @视窗.外部库 = "box2d$(d).lib">
+
+类 B2刚体定义 <公开 注释 = "刚体定义 · b2BodyDef" @别名 = "b2BodyDef" @别名类型 = 本地结构>
+{
+    变量 位置 <公开 类型 = B2向量 注释 = "刚体的初始世界坐标位置 · b2BodyDef.position" @输出名 = "position">
+    变量 旋转 <公开 类型 = B2旋转 注释 = "刚体的初始世界旋转 · b2BodyDef.rotation" @输出名 = "rotation">
+    变量 线速度 <公开 类型 = B2向量 注释 = "刚体原点的初始线速度 · b2BodyDef.linearVelocity" @输出名 = "linearVelocity">
+    变量 角速度 <公开 类型 = 单精度小数 注释 = "刚体的初始角速度 · b2BodyDef.angularVelocity" @输出名 = "angularVelocity">
+    变量 线阻尼 <公开 类型 = 单精度小数 注释 = "线性阻尼，用于衰减线速度 · b2BodyDef.linearDamping" @输出名 = "linearDamping">
+    变量 角阻尼 <公开 类型 = 单精度小数 注释 = "角阻尼，用于衰减角速度 · b2BodyDef.angularDamping" @输出名 = "angularDamping">
+    变量 重力倍率 <公开 类型 = 单精度小数 注释 = "该刚体所受重力的缩放系数 · b2BodyDef.gravityScale" @输出名 = "gravityScale">
+    变量 休眠阈值 <公开 类型 = 单精度小数 注释 = "休眠速度阈值，默认每秒 0.05 米 · b2BodyDef.sleepThreshold" @输出名 = "sleepThreshold">
+    变量 安全系数 <公开 类型 = 单精度小数 注释 = "连续碰撞检测的安全系数 · b2BodyDef.safetyFactor" @输出名 = "safetyFactor">
+    变量 运动锁定 <公开 类型 = B2运动锁定 注释 = "运动锁定，限制线位移与旋转 · b2BodyDef.motionLocks" @输出名 = "motionLocks">
+    变量 启用休眠 <公开 类型 = 逻辑型 注释 = "置为假则该刚体永不进入休眠 · b2BodyDef.enableSleep" @输出名 = "enableSleep">
+    变量 是否唤醒 <公开 类型 = 逻辑型 注释 = "刚体初始是否处于唤醒状态 · b2BodyDef.isAwake" @输出名 = "isAwake">
+    变量 是否子弹 <公开 类型 = 逻辑型 注释 = "把动态刚体当作高速物体做连续碰撞检测，对其他子弹刚体不生效 · b2BodyDef.isBullet" @输出名 = "isBullet">
+    变量 是否启用 <公开 类型 = 逻辑型 注释 = "用于禁用该刚体 · b2BodyDef.isEnabled" @输出名 = "isEnabled">
+    变量 允许快速旋转 <公开 类型 = 逻辑型 注释 = "允许该刚体绕过旋转速度上限 · b2BodyDef.allowFastRotation" @输出名 = "allowFastRotation">
+    变量 启用接触回收 <公开 类型 = 逻辑型 注释 = "启用接触回收 · b2BodyDef.enableContactRecycling" @输出名 = "enableContactRecycling">
+    变量 内部值 <公开 类型 = 整数 注释 = "内部用，检测定义是否有效 · b2BodyDef.internalValue" @输出名 = "internalValue">
+
+    方法 取类型 <公开 静态 类型 = 整数 注释 = "读取类型字段 · b2vol_bodyDef_getType" @嵌入式方法 = "">
+    参数 定义 <类型 = B2刚体定义>
+    {
+        @ b2vol_bodyDef_getType(&@<定义>)
+    }
+
+    方法 置类型 <公开 静态 注释 = "写入类型字段 · b2vol_bodyDef_setType" @嵌入式方法 = "">
+    参数 定义 <类型 = B2刚体定义>
+    参数 新值 <类型 = 整数>
+    {
+        @ b2vol_bodyDef_setType(&@<定义>, @<新值>)
+    }
+
+    方法 置名称 <公开 静态 注释 = "写入名称字段文本（复制到原生静态缓冲） · b2vol_bodyDef_setName" @嵌入式方法 = "req_str_param_text_pointer_u8 = true">
+    参数 定义 <类型 = B2刚体定义>
+    参数 新名 <类型 = 文本型>
+    {
+        @ b2vol_bodyDef_setName(&@<定义>, @<新名>)
+    }
+
+    方法 取名称指针 <公开 静态 类型 = 变整数 注释 = "读取名称字段指针 · b2vol_bodyDef_getName" @嵌入式方法 = "">
+    参数 定义 <类型 = B2刚体定义>
+    {
+        @ (intptr_t)b2vol_bodyDef_getName(&@<定义>)
+    }
+
+    方法 取用户数据指针 <公开 静态 类型 = 变整数 注释 = "读取用户数据字段指针 · b2vol_bodyDef_getUserData" @嵌入式方法 = "">
+    参数 定义 <类型 = B2刚体定义>
+    {
+        @ (intptr_t)b2vol_bodyDef_getUserData(&@<定义>)
+    }
+
+    方法 置用户数据指针 <公开 静态 注释 = "写入用户数据字段指针 · b2vol_bodyDef_setUserData" @嵌入式方法 = "">
+    参数 定义 <类型 = B2刚体定义>
+    参数 新值 <类型 = 变整数>
+    {
+        @ b2vol_bodyDef_setUserData(&@<定义>, (void*)@<新值>)
+    }
+
+    方法 取默认定义 <公开 静态 类型 = B2刚体定义 注释 = "用此函数初始化刚体定义 · b2DefaultBodyDef" @嵌入式方法 = "">
+    {
+        @ b2DefaultBodyDef()
+    }
+
+}
+
+类 B2刚体 <公开 注释 = "刚体 · 接口包装类">
+{
+    方法 创建刚体 <公开 静态 类型 = B2刚体标识 注释 = "按给定的定义创建刚体 · b2CreateBody" @嵌入式方法 = "">
+    参数 世界标识 <类型 = B2世界标识>
+    参数 定义 <类型 = B2刚体定义>
+    {
+        @ b2CreateBody(@<世界标识>, &@<定义>)
+    }
+
+    方法 销毁刚体 <公开 静态 注释 = "按标识销毁刚体 · b2DestroyBody" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    {
+        @ b2DestroyBody(@<刚体标识>)
+    }
+
+    方法 是否有效 <公开 静态 类型 = 逻辑型 注释 = "校验刚体标识是否有效 · b2Body_IsValid" @嵌入式方法 = "">
+    参数 标识 <类型 = B2刚体标识>
+    {
+        @ (b2Body_IsValid(@<标识>) != 0)
+    }
+
+    方法 取类型 <公开 静态 类型 = 整数 注释 = "取刚体类型：静态、运动学或动态 · b2Body_GetType" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    {
+        @ (int)b2Body_GetType(@<刚体标识>)
+    }
+
+    方法 置类型 <公开 静态 注释 = "改变刚体类型 · b2Body_SetType" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    参数 类型值 <类型 = 整数>
+    {
+        @ b2Body_SetType(@<刚体标识>, (b2BodyType)@<类型值>)
+    }
+
+    方法 置名称 <公开 静态 注释 = "设置刚体名称 · b2Body_SetName" @嵌入式方法 = "req_str_param_text_pointer_u8 = true">
+    参数 刚体标识 <类型 = B2刚体标识>
+    参数 值乙 <类型 = 文本型>
+    {
+        @ b2Body_SetName(@<刚体标识>, @<值乙>)
+    }
+
+    方法 取名称文本 <公开 静态 类型 = 文本型 注释 = "取刚体名称 · b2Body_GetName">
+    参数 刚体标识 <类型 = B2刚体标识>
+    {
+        变量 结果文本 <类型 = 文本型>
+        @ wchar_t __b2vol_text[512] = {0};
+        @ int __b2vol_len = b2vol_utf8_to_wchar(b2Body_GetName(@<刚体标识>), __b2vol_text, 511);
+        @ @<结果文本> = @an<CVolString>(__b2vol_text, __b2vol_len);
+        返回 (结果文本)
+    }
+
+    方法 置用户数据 <公开 静态 注释 = "设置刚体的用户数据 · b2Body_SetUserData" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    参数 用户数据 <类型 = 变整数>
+    {
+        @ b2Body_SetUserData(@<刚体标识>, (void*)@<用户数据>)
+    }
+
+    方法 取用户数据 <公开 静态 类型 = 变整数 注释 = "取存放在刚体中的用户数据 · b2Body_GetUserData" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    {
+        @ (intptr_t)b2Body_GetUserData(@<刚体标识>)
+    }
+
+    方法 取位置 <公开 静态 类型 = B2向量 注释 = "取刚体的世界坐标位置 · b2Body_GetPosition" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    {
+        @ b2Body_GetPosition(@<刚体标识>)
+    }
+
+    方法 取旋转 <公开 静态 类型 = B2旋转 注释 = "取刚体的世界旋转，以余弦正弦对表示 · b2Body_GetRotation" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    {
+        @ b2Body_GetRotation(@<刚体标识>)
+    }
+
+    方法 取变换 <公开 静态 类型 = B2变换 注释 = "取刚体的世界变换 · b2Body_GetTransform" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    {
+        @ b2Body_GetTransform(@<刚体标识>)
+    }
+
+    方法 置变换 <公开 静态 注释 = "设置刚体的世界变换 · b2Body_SetTransform" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    参数 位置 <类型 = B2向量>
+    参数 旋转 <类型 = B2旋转>
+    {
+        @ b2Body_SetTransform(@<刚体标识>, @<位置>, @<旋转>)
+    }
+
+    方法 取局部点 <公开 静态 类型 = B2向量 注释 = "由世界坐标点取刚体上的局部坐标点 · b2Body_GetLocalPoint" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    参数 世界点 <类型 = B2向量>
+    {
+        @ b2Body_GetLocalPoint(@<刚体标识>, @<世界点>)
+    }
+
+    方法 取世界点 <公开 静态 类型 = B2向量 注释 = "由局部坐标点取刚体上的世界坐标点 · b2Body_GetWorldPoint" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    参数 局部点 <类型 = B2向量>
+    {
+        @ b2Body_GetWorldPoint(@<刚体标识>, @<局部点>)
+    }
+
+    方法 取局部向量 <公开 静态 类型 = B2向量 注释 = "由世界向量取刚体上的局部向量 · b2Body_GetLocalVector" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    参数 世界向量 <类型 = B2向量>
+    {
+        @ b2Body_GetLocalVector(@<刚体标识>, @<世界向量>)
+    }
+
+    方法 取世界向量 <公开 静态 类型 = B2向量 注释 = "由局部向量取刚体上的世界向量 · b2Body_GetWorldVector" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    参数 局部向量 <类型 = B2向量>
+    {
+        @ b2Body_GetWorldVector(@<刚体标识>, @<局部向量>)
+    }
+
+    方法 取线性速度 <公开 静态 类型 = B2向量 注释 = "取刚体质心的线速度 · b2Body_GetLinearVelocity" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    {
+        @ b2Body_GetLinearVelocity(@<刚体标识>)
+    }
+
+    方法 取角度速度 <公开 静态 类型 = 小数 注释 = "取刚体角速度，单位为弧度每秒 · b2Body_GetAngularVelocity" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    {
+        @ b2Body_GetAngularVelocity(@<刚体标识>)
+    }
+
+    方法 置线性速度 <公开 静态 注释 = "设置刚体线速度 · b2Body_SetLinearVelocity" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    参数 线速度 <类型 = B2向量>
+    {
+        @ b2Body_SetLinearVelocity(@<刚体标识>, @<线速度>)
+    }
+
+    方法 置角度速度 <公开 静态 注释 = "设置刚体角速度，单位为弧度每秒 · b2Body_SetAngularVelocity" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    参数 角速度 <类型 = 单精度小数>
+    {
+        @ b2Body_SetAngularVelocity(@<刚体标识>, (float)@<角速度>)
+    }
+
+    方法 置目标变换 <公开 静态 注释 = "设置速度，使刚体在给定时长后到达目标变换 · b2Body_SetTargetTransform" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    参数 目标 <类型 = B2变换>
+    参数 时间步 <类型 = 单精度小数>
+    参数 唤醒标志 <类型 = 逻辑型>
+    {
+        @ b2Body_SetTargetTransform(@<刚体标识>, @<目标>, (float)@<时间步>, (@<唤醒标志> != 0))
+    }
+
+    方法 取局部点速度 <公开 静态 类型 = B2向量 注释 = "取刚体上某局部点的线速度 · b2Body_GetLocalPointVelocity" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    参数 局部点 <类型 = B2向量>
+    {
+        @ b2Body_GetLocalPointVelocity(@<刚体标识>, @<局部点>)
+    }
+
+    方法 取世界点速度 <公开 静态 类型 = B2向量 注释 = "取刚体上某世界点的线速度 · b2Body_GetWorldPointVelocity" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    参数 世界点 <类型 = B2向量>
+    {
+        @ b2Body_GetWorldPointVelocity(@<刚体标识>, @<世界点>)
+    }
+
+    方法 施加力 <公开 静态 注释 = "在世界坐标的某一点上施加作用力 · b2Body_ApplyForce" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    参数 力值 <类型 = B2向量>
+    参数 点 <类型 = B2向量>
+    参数 唤醒标志 <类型 = 逻辑型>
+    {
+        @ b2Body_ApplyForce(@<刚体标识>, @<力值>, @<点>, (@<唤醒标志> != 0))
+    }
+
+    方法 施加力转中心 <公开 静态 注释 = "在质心处施加作用力 · b2Body_ApplyForceToCenter" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    参数 力值 <类型 = B2向量>
+    参数 唤醒标志 <类型 = 逻辑型>
+    {
+        @ b2Body_ApplyForceToCenter(@<刚体标识>, @<力值>, (@<唤醒标志> != 0))
+    }
+
+    方法 施加扭矩 <公开 静态 注释 = "施加一个扭矩 · b2Body_ApplyTorque" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    参数 扭矩值 <类型 = 单精度小数>
+    参数 唤醒标志 <类型 = 逻辑型>
+    {
+        @ b2Body_ApplyTorque(@<刚体标识>, (float)@<扭矩值>, (@<唤醒标志> != 0))
+    }
+
+    方法 清除力 <公开 静态 注释 = "清除该刚体上的作用力与扭矩 · b2Body_ClearForces" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    {
+        @ b2Body_ClearForces(@<刚体标识>)
+    }
+
+    方法 施加线性冲量 <公开 静态 注释 = "在指定点施加线冲量 · b2Body_ApplyLinearImpulse" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    参数 冲量 <类型 = B2向量>
+    参数 点 <类型 = B2向量>
+    参数 唤醒标志 <类型 = 逻辑型>
+    {
+        @ b2Body_ApplyLinearImpulse(@<刚体标识>, @<冲量>, @<点>, (@<唤醒标志> != 0))
+    }
+
+    方法 施加线性冲量转中心 <公开 静态 注释 = "在质心处施加线冲量 · b2Body_ApplyLinearImpulseToCenter" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    参数 冲量 <类型 = B2向量>
+    参数 唤醒标志 <类型 = 逻辑型>
+    {
+        @ b2Body_ApplyLinearImpulseToCenter(@<刚体标识>, @<冲量>, (@<唤醒标志> != 0))
+    }
+
+    方法 施加角度冲量 <公开 静态 注释 = "施加一个角冲量 · b2Body_ApplyAngularImpulse" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    参数 冲量 <类型 = 单精度小数>
+    参数 唤醒标志 <类型 = 逻辑型>
+    {
+        @ b2Body_ApplyAngularImpulse(@<刚体标识>, (float)@<冲量>, (@<唤醒标志> != 0))
+    }
+
+    方法 取质量 <公开 静态 类型 = 小数 注释 = "取刚体质量，通常以千克计 · b2Body_GetMass" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    {
+        @ b2Body_GetMass(@<刚体标识>)
+    }
+
+    方法 取转动惯量 <公开 静态 类型 = 小数 注释 = "取刚体转动惯量，通常以千克平方米计 · b2Body_GetRotationalInertia" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    {
+        @ b2Body_GetRotationalInertia(@<刚体标识>)
+    }
+
+    方法 取局部中心 <公开 静态 类型 = B2向量 注释 = "取刚体质心在局部坐标系中的位置 · b2Body_GetLocalCenter" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    {
+        @ b2Body_GetLocalCenter(@<刚体标识>)
+    }
+
+    方法 取世界中心 <公开 静态 类型 = B2向量 注释 = "取刚体质心在世界坐标系中的位置 · b2Body_GetWorldCenter" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    {
+        @ b2Body_GetWorldCenter(@<刚体标识>)
+    }
+
+    方法 置质量数据 <公开 静态 注释 = "覆盖刚体的质量属性 · b2Body_SetMassData" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    参数 质量数据 <类型 = B2质量数据>
+    {
+        @ b2Body_SetMassData(@<刚体标识>, @<质量数据>)
+    }
+
+    方法 取质量数据 <公开 静态 类型 = B2质量数据 注释 = "取刚体的质量数据 · b2Body_GetMassData" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    {
+        @ b2Body_GetMassData(@<刚体标识>)
+    }
+
+    方法 更新质量从形状 <公开 静态 注释 = "把质量属性更新为各形状质量属性之和 · b2Body_UpdateMassFromShapes" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    {
+        @ b2Body_UpdateMassFromShapes(@<刚体标识>)
+    }
+
+    方法 置线性阻尼 <公开 静态 注释 = "调整线性阻尼 · b2Body_SetLinearDamping" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    参数 线阻尼 <类型 = 单精度小数>
+    {
+        @ b2Body_SetLinearDamping(@<刚体标识>, (float)@<线阻尼>)
+    }
+
+    方法 取线性阻尼 <公开 静态 类型 = 小数 注释 = "取当前线性阻尼 · b2Body_GetLinearDamping" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    {
+        @ b2Body_GetLinearDamping(@<刚体标识>)
+    }
+
+    方法 置角度阻尼 <公开 静态 注释 = "调整角阻尼 · b2Body_SetAngularDamping" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    参数 角阻尼 <类型 = 单精度小数>
+    {
+        @ b2Body_SetAngularDamping(@<刚体标识>, (float)@<角阻尼>)
+    }
+
+    方法 取角度阻尼 <公开 静态 类型 = 小数 注释 = "取当前角阻尼 · b2Body_GetAngularDamping" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    {
+        @ b2Body_GetAngularDamping(@<刚体标识>)
+    }
+
+    方法 置重力倍率 <公开 静态 注释 = "调整重力缩放系数 · b2Body_SetGravityScale" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    参数 重力倍率 <类型 = 单精度小数>
+    {
+        @ b2Body_SetGravityScale(@<刚体标识>, (float)@<重力倍率>)
+    }
+
+    方法 取重力倍率 <公开 静态 类型 = 小数 注释 = "取当前重力缩放系数 · b2Body_GetGravityScale" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    {
+        @ b2Body_GetGravityScale(@<刚体标识>)
+    }
+
+    方法 是否唤醒 <公开 静态 类型 = 逻辑型 注释 = "该刚体是否处于唤醒状态 · b2Body_IsAwake" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    {
+        @ (b2Body_IsAwake(@<刚体标识>) != 0)
+    }
+
+    方法 置唤醒 <公开 静态 注释 = "把刚体从休眠中唤醒 · b2Body_SetAwake" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    参数 唤醒值 <类型 = 逻辑型>
+    {
+        @ b2Body_SetAwake(@<刚体标识>, (@<唤醒值> != 0))
+    }
+
+    方法 唤醒接触 <公开 静态 注释 = "唤醒与该刚体接触的其它刚体 · b2Body_WakeTouching" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    {
+        @ b2Body_WakeTouching(@<刚体标识>)
+    }
+
+    方法 启用休眠 <公开 静态 注释 = "启用或禁用该刚体的休眠 · b2Body_EnableSleeping" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    参数 启用休眠 <类型 = 逻辑型>
+    {
+        @ b2Body_EnableSleeping(@<刚体标识>, (@<启用休眠> != 0))
+    }
+
+    方法 是否休眠已启用 <公开 静态 类型 = 逻辑型 注释 = "该刚体是否允许休眠 · b2Body_IsSleepingEnabled" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    {
+        @ (b2Body_IsSleepingEnabled(@<刚体标识>) != 0)
+    }
+
+    方法 置休眠阈值 <公开 静态 注释 = "设置休眠阈值，通常以米每秒计 · b2Body_SetSleepThreshold" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    参数 休眠阈值 <类型 = 单精度小数>
+    {
+        @ b2Body_SetSleepThreshold(@<刚体标识>, (float)@<休眠阈值>)
+    }
+
+    方法 取休眠阈值 <公开 静态 类型 = 小数 注释 = "取休眠阈值，通常以米每秒计 · b2Body_GetSleepThreshold" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    {
+        @ b2Body_GetSleepThreshold(@<刚体标识>)
+    }
+
+    方法 置安全系数 <公开 静态 注释 = "设置连续碰撞安全系数 · b2Body_SetSafetyFactor" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    参数 安全系数 <类型 = 单精度小数>
+    {
+        @ b2Body_SetSafetyFactor(@<刚体标识>, (float)@<安全系数>)
+    }
+
+    方法 取安全系数 <公开 静态 类型 = 小数 注释 = "取连续碰撞安全系数 · b2Body_GetSafetyFactor" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    {
+        @ b2Body_GetSafetyFactor(@<刚体标识>)
+    }
+
+    方法 是否已启用 <公开 静态 类型 = 逻辑型 注释 = "该刚体是否已启用 · b2Body_IsEnabled" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    {
+        @ (b2Body_IsEnabled(@<刚体标识>) != 0)
+    }
+
+    方法 禁用 <公开 静态 注释 = "把刚体从仿真中完全移除来禁用它 · b2Body_Disable" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    {
+        @ b2Body_Disable(@<刚体标识>)
+    }
+
+    方法 启用 <公开 静态 注释 = "把刚体加入仿真来启用它 · b2Body_Enable" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    {
+        @ b2Body_Enable(@<刚体标识>)
+    }
+
+    方法 置运动锁定 <公开 静态 注释 = "设置该刚体的运动锁定 · b2Body_SetMotionLocks" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    参数 锁定 <类型 = B2运动锁定>
+    {
+        @ b2Body_SetMotionLocks(@<刚体标识>, @<锁定>)
+    }
+
+    方法 取运动锁定 <公开 静态 类型 = B2运动锁定 注释 = "取该刚体的运动锁定 · b2Body_GetMotionLocks" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    {
+        @ b2Body_GetMotionLocks(@<刚体标识>)
+    }
+
+    方法 置子弹 <公开 静态 注释 = "把该刚体设为子弹体 · b2Body_SetBullet" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    参数 开关 <类型 = 逻辑型>
+    {
+        @ b2Body_SetBullet(@<刚体标识>, (@<开关> != 0))
+    }
+
+    方法 是否子弹 <公开 静态 类型 = 逻辑型 注释 = "该刚体是否为子弹体 · b2Body_IsBullet" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    {
+        @ (b2Body_IsBullet(@<刚体标识>) != 0)
+    }
+
+    方法 启用接触回收 <公开 静态 注释 = "启用或禁用该刚体的接触回收 · b2Body_EnableContactRecycling" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    参数 开关 <类型 = 逻辑型>
+    {
+        @ b2Body_EnableContactRecycling(@<刚体标识>, (@<开关> != 0))
+    }
+
+    方法 是否接触回收已启用 <公开 静态 类型 = 逻辑型 注释 = "该刚体是否启用了接触回收 · b2Body_IsContactRecyclingEnabled" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    {
+        @ (b2Body_IsContactRecyclingEnabled(@<刚体标识>) != 0)
+    }
+
+    方法 启用接触事件集 <公开 静态 注释 = "在该刚体所有形状上启用或禁用接触事件 · b2Body_EnableContactEvents" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    参数 开关 <类型 = 逻辑型>
+    {
+        @ b2Body_EnableContactEvents(@<刚体标识>, (@<开关> != 0))
+    }
+
+    方法 启用撞击事件集 <公开 静态 注释 = "在该刚体所有形状上启用或禁用撞击事件 · b2Body_EnableHitEvents" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    参数 开关 <类型 = 逻辑型>
+    {
+        @ b2Body_EnableHitEvents(@<刚体标识>, (@<开关> != 0))
+    }
+
+    方法 取世界 <公开 静态 类型 = B2世界标识 注释 = "取拥有该刚体的世界 · b2Body_GetWorld" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    {
+        @ b2Body_GetWorld(@<刚体标识>)
+    }
+
+    方法 取形状数量 <公开 静态 类型 = 整数 注释 = "取该刚体上的形状数量 · b2Body_GetShapeCount" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    {
+        @ b2Body_GetShapeCount(@<刚体标识>)
+    }
+
+    方法 取形状 <公开 静态 类型 = 整数 注释 = "把该刚体全部形状标识填入用户数组，返回写入的数量 · b2Body_GetShapes" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    参数 值乙 <类型 = 变整数>
+    参数 容量 <类型 = 整数>
+    {
+        @ b2Body_GetShapes(@<刚体标识>, (b2ShapeId*)@<值乙>, @<容量>)
+    }
+
+    方法 取关节数量 <公开 静态 类型 = 整数 注释 = "取该刚体上的关节数量 · b2Body_GetJointCount" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    {
+        @ b2Body_GetJointCount(@<刚体标识>)
+    }
+
+    方法 取关节 <公开 静态 类型 = 整数 注释 = "把该刚体全部关节标识填入用户数组，返回写入的数量 · b2Body_GetJoints" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    参数 值乙 <类型 = 变整数>
+    参数 容量 <类型 = 整数>
+    {
+        @ b2Body_GetJoints(@<刚体标识>, (b2JointId*)@<值乙>, @<容量>)
+    }
+
+    方法 取接触容量 <公开 静态 类型 = 整数 注释 = "取获取该刚体全部接触所需的最大容量 · b2Body_GetContactCapacity" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    {
+        @ b2Body_GetContactCapacity(@<刚体标识>)
+    }
+
+    方法 取接触数据 <公开 静态 类型 = 整数 注释 = "取该刚体正在接触的接触数据 · b2Body_GetContactData" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    参数 值乙 <类型 = 变整数>
+    参数 容量 <类型 = 整数>
+    {
+        @ b2Body_GetContactData(@<刚体标识>, (b2ContactData*)@<值乙>, @<容量>)
+    }
+
+    方法 计算包围盒 <公开 静态 类型 = B2包围盒 注释 = "取包含该刚体全部形状的当前世界包围盒 · b2Body_ComputeBounds" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    {
+        @ b2Body_ComputeBounds(@<刚体标识>)
+    }
+
+    方法 取最小范围 <公开 静态 类型 = 小数 注释 = "刚体形状上任意点到质心的最小距离 · b2Body_GetMinExtent" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    {
+        @ b2Body_GetMinExtent(@<刚体标识>)
+    }
+
+    方法 取最大范围 <公开 静态 类型 = 小数 注释 = "刚体形状上任意点到质心的最大距离 · b2Body_GetMaxExtent" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    {
+        @ b2Body_GetMaxExtent(@<刚体标识>)
+    }
+
+    方法 取最大范围从原点 <公开 静态 类型 = 小数 注释 = "刚体形状上任意点到刚体原点的最大距离 · b2Body_GetMaxExtentFromOrigin" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    {
+        @ b2Body_GetMaxExtentFromOrigin(@<刚体标识>)
+    }
+
+}
+

@@ -1,0 +1,32 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.即时界面 <注释 = "Dear ImGui v1.91.9b-docking 的火山视窗中文封装，全中文类名/方法名/参数名/注释。" @视窗.头文件搜寻目录 = "imgui"
+        @视窗.外部头文件 = "imcn_helper.h, imcn_host.h"
+        @视窗.外部源文件 = "imgui\\imgui.cpp, imgui\\imgui_draw.cpp, imgui\\imgui_tables.cpp, imgui\\imgui_widgets.cpp, imgui\\imgui_demo.cpp, imgui\\misc\\cpp\\imgui_stdlib.cpp, imgui\\backends\\imgui_impl_win32.cpp, imgui\\backends\\imgui_impl_dx11.cpp">
+
+类 选项卡栏标志 <公开 注释 = "选项卡栏标志，用于即时界面.开始选项卡栏" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 无 <公开 类型 = 整数 值 = @ImGuiTabBarFlags_None>
+    常量 允许拖动重排 <公开 类型 = 整数 值 = @ImGuiTabBarFlags_Reorderable>
+    常量 自动选中新选项卡 <公开 类型 = 整数 值 = @ImGuiTabBarFlags_AutoSelectNewTabs>
+    常量 显示选项卡列表按钮 <公开 类型 = 整数 值 = @ImGuiTabBarFlags_TabListPopupButton>
+    常量 中键不关闭 <公开 类型 = 整数 值 = @ImGuiTabBarFlags_NoCloseWithMiddleMouseButton>
+    常量 禁止滚动按钮 <公开 类型 = 整数 值 = @ImGuiTabBarFlags_NoTabListScrollingButtons>
+    常量 禁止提示 <公开 类型 = 整数 值 = @ImGuiTabBarFlags_NoTooltip>
+    常量 绘制选中顶线 <公开 类型 = 整数 值 = @ImGuiTabBarFlags_DrawSelectedOverline>
+    常量 缩小宽度策略 <公开 类型 = 整数 值 = @ImGuiTabBarFlags_FittingPolicyResizeDown>
+    常量 滚动宽度策略 <公开 类型 = 整数 值 = @ImGuiTabBarFlags_FittingPolicyScroll>
+}
+类 选项卡项标志 <公开 注释 = "选项卡项标志，用于即时界面.开始选项卡项" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 无 <公开 类型 = 整数 值 = @ImGuiTabItemFlags_None>
+    常量 未保存文档标记 <公开 类型 = 整数 值 = @ImGuiTabItemFlags_UnsavedDocument>
+    常量 强制选中 <公开 类型 = 整数 值 = @ImGuiTabItemFlags_SetSelected>
+    常量 中键不关闭 <公开 类型 = 整数 值 = @ImGuiTabItemFlags_NoCloseWithMiddleMouseButton>
+    常量 不压入ID <公开 类型 = 整数 值 = @ImGuiTabItemFlags_NoPushId>
+    常量 禁止提示 <公开 类型 = 整数 值 = @ImGuiTabItemFlags_NoTooltip>
+    常量 禁止重排 <公开 类型 = 整数 值 = @ImGuiTabItemFlags_NoReorder>
+    常量 置于前部 <公开 类型 = 整数 值 = @ImGuiTabItemFlags_Leading>
+    常量 置于尾部 <公开 类型 = 整数 值 = @ImGuiTabItemFlags_Trailing>
+    常量 不假定关闭 <公开 类型 = 整数 值 = @ImGuiTabItemFlags_NoAssumedClosure>
+}

@@ -1,0 +1,274 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.安卓.XUI <注释 = "XUI 安卓 UI 工具库封装" @文档 = "category = \"XUI\"">
+
+
+类 XUI投影按钮 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.shadow.ShadowButton)."
+        @文档 = "category = \"XUI.阴影\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.shadow.ShadowButton\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI投影按钮, ShadowButton, com.xuexiang.xui.widget.shadow.ShadowButton)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetShadowButton ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI投影按钮的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI投影按钮.getAlpha()">
+    {
+        @ (double)@sn<this>.GetShadowButton ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI投影按钮的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI投影按钮.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetShadowButton ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI投影按钮的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI投影按钮.isEnabled()">
+    {
+        @ @sn<this>.GetShadowButton ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI投影按钮的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI投影按钮.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetShadowButton ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI投影按钮的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI投影按钮.isClickable()">
+    {
+        @ @sn<this>.GetShadowButton ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI投影按钮的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI投影按钮.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetShadowButton ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI投影按钮的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI投影按钮.getElevation()">
+    {
+        @ (double)@sn<this>.GetShadowButton ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI投影按钮的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI投影按钮.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetShadowButton ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI投影按钮的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI投影按钮.getMinimumHeight()">
+    {
+        @ @sn<this>.GetShadowButton ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI投影按钮的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI投影按钮.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetShadowButton ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI投影按钮的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI投影按钮.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetShadowButton ().setBackgroundColor (@<新值>))
+    }
+
+    方法 XUI文本 <公开 属性读 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读取XUI投影按钮的XUI文本当前值。 参数：无。 返回：文本型。 原方法：XUI投影按钮.getText()">
+    {
+        @ java.lang.String.valueOf (@sn<this>.GetShadowButton ().getText ())
+    }
+
+    方法 XUI文本 <公开 属性写 注释 = "用法：设置XUI投影按钮的XUI文本, 传入新值后立刻生效。 参数：新值=文本。 返回：无。 原方法：XUI投影按钮.setText()">
+    参数 新值 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetShadowButton ().setText (@<新值>))
+    }
+
+    方法 XUI文字颜色 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI投影按钮的XUI文字颜色当前值。 参数：无。 返回：整数。 原方法：XUI投影按钮.getCurrentTextColor()">
+    {
+        @ @sn<this>.GetShadowButton ().getCurrentTextColor ()
+    }
+
+    方法 XUI文字颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI投影按钮的XUI文字颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI投影按钮.setTextColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetShadowButton ().setTextColor (@<新值>))
+    }
+
+    方法 XUI文字大小 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI投影按钮的XUI文字大小当前值。 参数：无。 返回：小数。 原方法：XUI投影按钮.getTextSize()">
+    {
+        @ (double)@sn<this>.GetShadowButton ().getTextSize ()
+    }
+
+    方法 XUI文字大小 <公开 属性写 注释 = "用法：设置XUI投影按钮的XUI文字大小, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI投影按钮.setTextSize()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetShadowButton ().setTextSize ((float) @<新值>))
+    }
+
+    方法 XUI提示文字 <公开 属性读 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读取XUI投影按钮的XUI提示文字当前值。 参数：无。 返回：文本型。 原方法：XUI投影按钮.getHint()">
+    {
+        @ java.lang.String.valueOf (@sn<this>.GetShadowButton ().getHint ())
+    }
+
+    方法 XUI提示文字 <公开 属性写 注释 = "用法：设置XUI投影按钮的XUI提示文字, 传入新值后立刻生效。 参数：新值=文本。 返回：无。 原方法：XUI投影按钮.setHint()">
+    参数 新值 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetShadowButton ().setHint (@<新值>))
+    }
+
+    方法 XUI最大行数 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI投影按钮的XUI最大行数当前值。 参数：无。 返回：整数。 原方法：XUI投影按钮.getMaxLines()">
+    {
+        @ @sn<this>.GetShadowButton ().getMaxLines ()
+    }
+
+    方法 XUI最大行数 <公开 属性写 注释 = "用法：设置XUI投影按钮的XUI最大行数, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI投影按钮.setMaxLines()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetShadowButton ().setMaxLines (@<新值>))
+    }
+
+    方法 XUI单行 <公开 属性写 注释 = "用法：设置XUI投影按钮的XUI单行, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI投影按钮.setSingleLine()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetShadowButton ().setSingleLine (@<新值>))
+    }
+
+}
+
+类 XUI投影文本框 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.shadow.ShadowTextView)."
+        @文档 = "category = \"XUI.阴影\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.shadow.ShadowTextView\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI投影文本框, ShadowTextView, com.xuexiang.xui.widget.shadow.ShadowTextView)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetShadowTextView ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI投影文本框的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI投影文本框.getAlpha()">
+    {
+        @ (double)@sn<this>.GetShadowTextView ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI投影文本框的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI投影文本框.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetShadowTextView ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI投影文本框的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI投影文本框.isEnabled()">
+    {
+        @ @sn<this>.GetShadowTextView ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI投影文本框的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI投影文本框.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetShadowTextView ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI投影文本框的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI投影文本框.isClickable()">
+    {
+        @ @sn<this>.GetShadowTextView ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI投影文本框的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI投影文本框.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetShadowTextView ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI投影文本框的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI投影文本框.getElevation()">
+    {
+        @ (double)@sn<this>.GetShadowTextView ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI投影文本框的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI投影文本框.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetShadowTextView ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI投影文本框的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI投影文本框.getMinimumHeight()">
+    {
+        @ @sn<this>.GetShadowTextView ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI投影文本框的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI投影文本框.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetShadowTextView ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI投影文本框的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI投影文本框.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetShadowTextView ().setBackgroundColor (@<新值>))
+    }
+
+    方法 XUI文本 <公开 属性读 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读取XUI投影文本框的XUI文本当前值。 参数：无。 返回：文本型。 原方法：XUI投影文本框.getText()">
+    {
+        @ java.lang.String.valueOf (@sn<this>.GetShadowTextView ().getText ())
+    }
+
+    方法 XUI文本 <公开 属性写 注释 = "用法：设置XUI投影文本框的XUI文本, 传入新值后立刻生效。 参数：新值=文本。 返回：无。 原方法：XUI投影文本框.setText()">
+    参数 新值 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetShadowTextView ().setText (@<新值>))
+    }
+
+    方法 XUI文字颜色 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI投影文本框的XUI文字颜色当前值。 参数：无。 返回：整数。 原方法：XUI投影文本框.getCurrentTextColor()">
+    {
+        @ @sn<this>.GetShadowTextView ().getCurrentTextColor ()
+    }
+
+    方法 XUI文字颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI投影文本框的XUI文字颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI投影文本框.setTextColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetShadowTextView ().setTextColor (@<新值>))
+    }
+
+    方法 XUI文字大小 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI投影文本框的XUI文字大小当前值。 参数：无。 返回：小数。 原方法：XUI投影文本框.getTextSize()">
+    {
+        @ (double)@sn<this>.GetShadowTextView ().getTextSize ()
+    }
+
+    方法 XUI文字大小 <公开 属性写 注释 = "用法：设置XUI投影文本框的XUI文字大小, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI投影文本框.setTextSize()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetShadowTextView ().setTextSize ((float) @<新值>))
+    }
+
+    方法 XUI提示文字 <公开 属性读 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读取XUI投影文本框的XUI提示文字当前值。 参数：无。 返回：文本型。 原方法：XUI投影文本框.getHint()">
+    {
+        @ java.lang.String.valueOf (@sn<this>.GetShadowTextView ().getHint ())
+    }
+
+    方法 XUI提示文字 <公开 属性写 注释 = "用法：设置XUI投影文本框的XUI提示文字, 传入新值后立刻生效。 参数：新值=文本。 返回：无。 原方法：XUI投影文本框.setHint()">
+    参数 新值 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetShadowTextView ().setHint (@<新值>))
+    }
+
+    方法 XUI最大行数 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI投影文本框的XUI最大行数当前值。 参数：无。 返回：整数。 原方法：XUI投影文本框.getMaxLines()">
+    {
+        @ @sn<this>.GetShadowTextView ().getMaxLines ()
+    }
+
+    方法 XUI最大行数 <公开 属性写 注释 = "用法：设置XUI投影文本框的XUI最大行数, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI投影文本框.setMaxLines()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetShadowTextView ().setMaxLines (@<新值>))
+    }
+
+    方法 XUI单行 <公开 属性写 注释 = "用法：设置XUI投影文本框的XUI单行, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI投影文本框.setSingleLine()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetShadowTextView ().setSingleLine (@<新值>))
+    }
+
+}

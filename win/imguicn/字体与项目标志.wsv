@@ -1,0 +1,23 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.即时界面 <注释 = "Dear ImGui v1.91.9b-docking 的火山视窗中文封装，全中文类名/方法名/参数名/注释。" @视窗.头文件搜寻目录 = "imgui"
+        @视窗.外部头文件 = "imcn_helper.h, imcn_host.h"
+        @视窗.外部源文件 = "imgui\\imgui.cpp, imgui\\imgui_draw.cpp, imgui\\imgui_tables.cpp, imgui\\imgui_widgets.cpp, imgui\\imgui_demo.cpp, imgui\\misc\\cpp\\imgui_stdlib.cpp, imgui\\backends\\imgui_impl_win32.cpp, imgui\\backends\\imgui_impl_dx11.cpp">
+
+类 字体图集标志 <公开 注释 = "字体图集标志" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 无 <公开 类型 = 整数 值 = @ImFontAtlasFlags_None>
+    常量 高度不取2的幂 <公开 类型 = 整数 值 = @ImFontAtlasFlags_NoPowerOfTwoHeight>
+    常量 不生成鼠标光标 <公开 类型 = 整数 值 = @ImFontAtlasFlags_NoMouseCursors>
+    常量 不烘焙线条 <公开 类型 = 整数 值 = @ImFontAtlasFlags_NoBakedLines>
+}
+类 项目标志 <公开 注释 = "项目标志" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 无 <公开 类型 = 整数 值 = @ImGuiItemFlags_None>
+    常量 不参与Tab停靠 <公开 类型 = 整数 值 = @ImGuiItemFlags_NoTabStop>
+    常量 禁止导航 <公开 类型 = 整数 值 = @ImGuiItemFlags_NoNav>
+    常量 非默认导航焦点 <公开 类型 = 整数 值 = @ImGuiItemFlags_NoNavDefaultFocus>
+    常量 按钮重复触发 <公开 类型 = 整数 值 = @ImGuiItemFlags_ButtonRepeat>
+    常量 自动关闭弹出窗口 <公开 类型 = 整数 值 = @ImGuiItemFlags_AutoClosePopups>
+    常量 允许重复ID <公开 类型 = 整数 值 = @ImGuiItemFlags_AllowDuplicateId>
+}

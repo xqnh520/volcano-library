@@ -1,0 +1,7 @@
+{
+    "name":  "mtest",
+    "version":  "1.0.0",
+    "desc":  "mtest 类库",
+    "author":  "xqnh520",
+    "entry":  "mtest.vgrp"
+}

@@ -1,0 +1,333 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.安卓.OCCT几何 <注释 = "OpenCASCADE 7.8.0 几何内核安卓封装" 注释 = "由 NDK r27c 交叉编译, 经 JNI 门面 com.volcano.occt.OcctJni 接入." @文档 = "category = \"扩展库.几何建模\"">
+
+类 几何内核 <公开 注释 = "★ 封装 OpenCASCADE 几何内核 (仅几何算法, 不含 OCCT 可视化层, 网格需自行绘制)."
+        注释 = "本类返回的 长整数 即形状句柄, 0 表示失败; 句柄用完必须调用 释放形状, 否则本地内存泄漏."
+        注释 = "失败原因用 取错误文本 读取, 空文本表示上次调用没有出错."
+        注释 = "覆盖 18 个 libTK*.so: 每个库都至少被下面一个 静态 方法直接调用 (实测见 out/tk_direct_coverage.txt)."
+        @禁止创建对象 = 真
+        @java.外部源文件 = "java\\OcctJni.java"
+        @安卓.外部库 = "libs\\arm64-v8a\\libocctjni.so,libs\\arm64-v8a\\libc++_shared.so,libs\\arm64-v8a\\libTKernel.so,libs\\arm64-v8a\\libTKMath.so,libs\\arm64-v8a\\libTKG2d.so,libs\\arm64-v8a\\libTKG3d.so,libs\\arm64-v8a\\libTKGeomBase.so,libs\\arm64-v8a\\libTKBRep.so,libs\\arm64-v8a\\libTKGeomAlgo.so,libs\\arm64-v8a\\libTKTopAlgo.so,libs\\arm64-v8a\\libTKPrim.so,libs\\arm64-v8a\\libTKBO.so,libs\\arm64-v8a\\libTKBool.so,libs\\arm64-v8a\\libTKHLR.so,libs\\arm64-v8a\\libTKFillet.so,libs\\arm64-v8a\\libTKOffset.so,libs\\arm64-v8a\\libTKFeat.so,libs\\arm64-v8a\\libTKMesh.so,libs\\arm64-v8a\\libTKXMesh.so,libs\\arm64-v8a\\libTKShHealing.so">
+{
+    // ------------------------------------------------ 诊断 / 内核 (TKernel)
+
+    方法 取内核版本 <公开 静态 类型 = 文本型 注释 = "返回 OCCT 内核版本号字符串 (TKernel Standard_Version)." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.OcctJni.kernelInfo ()
+    }
+
+    方法 格式化数值 <公开 静态 类型 = 文本型 注释 = "用 TCollection_AsciiString 输出定宽居中文本, 演示 TKernel 字符串设施." @嵌入式方法 = "">
+    参数 数值 <类型 = 小数>
+    参数 总宽度 <类型 = 整数>
+    {
+        @ com.volcano.occt.OcctJni.formatNumber (@<数值>, @<总宽度>)
+    }
+
+    方法 探测本地库 <公开 静态 类型 = 整数 注释 = "dlopen + dlsym 探测: 0=库已加载且符号可解析, 1=dlopen 失败, 2=符号未找到, 3=其它. 用于证明某个 libTK*.so 真的进了 APK 并能被加载." @嵌入式方法 = "">
+    参数 库名 <类型 = 文本型 注释 = "如 libTKBO.so.">
+    参数 符号名 <类型 = 文本型 注释 = "C++ 修饰符号名, 传空文本表示只验证库能否打开.">
+    {
+        @ com.volcano.occt.OcctJni.probeLibrary (@<库名>, @<符号名>)
+    }
+
+    // ------------------------------------------------------ 初等体 (TKPrim)
+
+    方法 建长方体 <公开 静态 类型 = 长整数 注释 = "创建长方体, 返回形状句柄." @嵌入式方法 = "">
+    参数 参_长 <类型 = 小数 注释 = "X 向尺寸.">
+    参数 参_宽 <类型 = 小数 注释 = "Y 向尺寸.">
+    参数 参_高 <类型 = 小数 注释 = "Z 向尺寸.">
+    {
+        @ com.volcano.occt.OcctJni.makeBox (@<参_长>, @<参_宽>, @<参_高>)
+    }
+
+    方法 建圆柱 <公开 静态 类型 = 长整数 注释 = "创建圆柱, 返回形状句柄." @嵌入式方法 = "">
+    参数 参_半径 <类型 = 小数>
+    参数 参_高度 <类型 = 小数>
+    {
+        @ com.volcano.occt.OcctJni.makeCylinder (@<参_半径>, @<参_高度>)
+    }
+
+    方法 建球体 <公开 静态 类型 = 长整数 注释 = "创建球体 (BRepPrimAPI_MakeSphere)." @嵌入式方法 = "">
+    参数 半径 <类型 = 小数>
+    {
+        @ com.volcano.occt.OcctJni.makeSphere (@<半径>)
+    }
+
+    方法 建圆锥 <公开 静态 类型 = 长整数 注释 = "创建圆锥/圆台, 半径1=0 时为尖锥." @嵌入式方法 = "">
+    参数 半径1 <类型 = 小数 注释 = "底面半径.">
+    参数 半径2 <类型 = 小数 注释 = "顶面半径.">
+    参数 高度 <类型 = 小数>
+    {
+        @ com.volcano.occt.OcctJni.makeCone (@<半径1>, @<半径2>, @<高度>)
+    }
+
+    方法 建圆环 <公开 静态 类型 = 长整数 注释 = "创建圆环面实体 (BRepPrimAPI_MakeTorus)." @嵌入式方法 = "">
+    参数 主半径 <类型 = 小数 注释 = "环中心到管中心的距离.">
+    参数 次半径 <类型 = 小数 注释 = "管半径.">
+    {
+        @ com.volcano.occt.OcctJni.makeTorus (@<主半径>, @<次半径>)
+    }
+
+    方法 建楔体 <公开 静态 类型 = 长整数 注释 = "创建楔体 (BRepPrimAPI_MakeWedge): 底面是 (0,0)-(长,高) 的矩形, y=宽 处的截面是 (截面X底,截面Z底)-(截面X顶,截面Z顶) 的矩形." 注释 = "截面参数传 0,0,长,高 时退化为长方体; 注意官方形参顺序是 xmin,zmin,xmax,zmax." @嵌入式方法 = "">
+    参数 长 <类型 = 小数>
+    参数 宽 <类型 = 小数>
+    参数 高 <类型 = 小数>
+    参数 截面X底 <类型 = 小数>
+    参数 截面Z底 <类型 = 小数>
+    参数 截面X顶 <类型 = 小数>
+    参数 截面Z顶 <类型 = 小数>
+    {
+        @ com.volcano.occt.OcctJni.makeWedge (@<长>, @<宽>, @<高>, @<截面X底>, @<截面Z底>, @<截面X顶>, @<截面Z顶>)
+    }
+
+    方法 拉伸成形 <公开 静态 类型 = 长整数 注释 = "把面/线框沿向量拉伸成实体 (BRepPrimAPI_MakePrism); 入参句柄仍需释放." @嵌入式方法 = "">
+    参数 形状句柄 <类型 = 长整数>
+    参数 X向量 <类型 = 小数>
+    参数 Y向量 <类型 = 小数>
+    参数 Z向量 <类型 = 小数>
+    {
+        @ com.volcano.occt.OcctJni.extrude (@<形状句柄>, @<X向量>, @<Y向量>, @<Z向量>)
+    }
+
+    方法 回转成形 <公开 静态 类型 = 长整数 注释 = "绕 Z 轴回转成实体 (BRepPrimAPI_MakeRevol), 角度为弧度." @嵌入式方法 = "">
+    参数 形状句柄 <类型 = 长整数>
+    参数 角度弧度 <类型 = 小数 注释 = "2*PI 为整圈.">
+    {
+        @ com.volcano.occt.OcctJni.revolve (@<形状句柄>, @<角度弧度>)
+    }
+
+    // ------------------------------------------ 布尔运算 (TKBO / TKBool)
+
+    方法 布尔减 <公开 静态 类型 = 长整数 注释 = "从 被减数 中减去 减去数, 返回新形状句柄; 两个入参句柄仍需各自释放." @嵌入式方法 = "">
+    参数 被减数 <类型 = 长整数>
+    参数 减去数 <类型 = 长整数>
+    {
+        @ com.volcano.occt.OcctJni.cut (@<被减数>, @<减去数>)
+    }
+
+    方法 布尔并 <公开 静态 类型 = 长整数 注释 = "两个形状求并集 (BRepAlgoAPI_Fuse, TKBO)." @嵌入式方法 = "">
+    参数 形状甲 <类型 = 长整数>
+    参数 形状乙 <类型 = 长整数>
+    {
+        @ com.volcano.occt.OcctJni.fuse (@<形状甲>, @<形状乙>)
+    }
+
+    方法 布尔交 <公开 静态 类型 = 长整数 注释 = "两个形状求交集 (BRepAlgoAPI_Common, TKBO)." @嵌入式方法 = "">
+    参数 形状甲 <类型 = 长整数>
+    参数 形状乙 <类型 = 长整数>
+    {
+        @ com.volcano.occt.OcctJni.common (@<形状甲>, @<形状乙>)
+    }
+
+    方法 求交边数 <公开 静态 类型 = 整数 注释 = "两形状交线的边数 (BRepAlgoAPI_Section); 失败返回 -1." @嵌入式方法 = "">
+    参数 形状甲 <类型 = 长整数>
+    参数 形状乙 <类型 = 长整数>
+    {
+        @ com.volcano.occt.OcctJni.sectionEdgeCount (@<形状甲>, @<形状乙>)
+    }
+
+    方法 变换形状 <公开 静态 类型 = 长整数 注释 = "先绕 Z 轴旋转 角度弧度 再平移 (gp_Trsf 在 TKMath, BRepBuilderAPI_Transform 在 TKTopAlgo)." @嵌入式方法 = "">
+    参数 形状句柄 <类型 = 长整数>
+    参数 X平移 <类型 = 小数>
+    参数 Y平移 <类型 = 小数>
+    参数 Z平移 <类型 = 小数>
+    参数 角度弧度 <类型 = 小数>
+    {
+        @ com.volcano.occt.OcctJni.transformShape (@<形状句柄>, @<X平移>, @<Y平移>, @<Z平移>, @<角度弧度>)
+    }
+
+    // ------------------------------------------ 测量与检查 (TKTopAlgo / TKBRep)
+
+    方法 取体积 <公开 静态 类型 = 小数 注释 = "按精确几何计算体积 (BRepGProp 体积积分)." @嵌入式方法 = "">
+    参数 形状句柄 <类型 = 长整数>
+    {
+        @ com.volcano.occt.OcctJni.getVolume (@<形状句柄>)
+    }
+
+    方法 取面积 <公开 静态 类型 = 小数 注释 = "表面积 (BRepGProp::SurfaceProperties)." @嵌入式方法 = "">
+    参数 形状句柄 <类型 = 长整数>
+    {
+        @ com.volcano.occt.OcctJni.getArea (@<形状句柄>)
+    }
+
+    方法 取线长度 <公开 静态 类型 = 小数 注释 = "边集合总长 (BRepGProp::LinearProperties, SkipShared=真: 实体里被多个面共享的棱只计一次, 长方体 10mm 得到 120 而非 240)." @嵌入式方法 = "">
+    参数 形状句柄 <类型 = 长整数>
+    {
+        @ com.volcano.occt.OcctJni.getLinearLength (@<形状句柄>)
+    }
+
+    方法 取质心 <公开 静态 类型 = "小数 []" 注释 = "形体质心 [x,y,z]." @嵌入式方法 = "">
+    参数 形状句柄 <类型 = 长整数>
+    {
+        @ com.volcano.occt.OcctJni.getCenterOfMass (@<形状句柄>)
+    }
+
+    方法 取拓扑统计 <公开 静态 类型 = "整数 []" 注释 = "[顶点, 边, 线框, 面, 壳, 实体] 六项数量." @嵌入式方法 = "">
+    参数 形状句柄 <类型 = 长整数>
+    {
+        @ com.volcano.occt.OcctJni.getTopologyCounts (@<形状句柄>)
+    }
+
+    方法 取包围盒 <公开 静态 类型 = "小数 []" 注释 = "轴对齐包围盒 [xmin,ymin,zmin,xmax,ymax,zmax]; 失败返回空数组." @嵌入式方法 = "">
+    参数 形状句柄 <类型 = 长整数>
+    {
+        @ com.volcano.occt.OcctJni.getBoundingBox (@<形状句柄>)
+    }
+
+    方法 形状有效 <公开 静态 类型 = 整数 注释 = "BRepCheck_Analyzer 几何拓扑校验: 1=有效, 0=无效, -1=出错." @嵌入式方法 = "">
+    参数 形状句柄 <类型 = 长整数>
+    {
+        @ com.volcano.occt.OcctJni.isValidShape (@<形状句柄>)
+    }
+
+    方法 写BREP <公开 静态 类型 = 整数 注释 = "形状以 BREP 文本写出到给定绝对路径, 1=成功 (BRepTools 在 TKBRep)." @嵌入式方法 = "">
+    参数 形状句柄 <类型 = 长整数>
+    参数 文件路径 <类型 = 文本型>
+    {
+        @ com.volcano.occt.OcctJni.writeBRep (@<形状句柄>, @<文件路径>)
+    }
+
+    方法 读BREP <公开 静态 类型 = 长整数 注释 = "从 BREP 文件读回形状句柄, 0=失败." @嵌入式方法 = "">
+    参数 文件路径 <类型 = 文本型>
+    {
+        @ com.volcano.occt.OcctJni.readBRep (@<文件路径>)
+    }
+
+    // ------------------- 构造 (TKTopAlgo / TKG3d / TKG2d / TKGeomAlgo / TKGeomBase)
+
+    方法 建线段 <公开 静态 类型 = 长整数 注释 = "由两点建一条边 (BRepBuilderAPI_MakeEdge 在 TKBRep), 返回边句柄." 注释 = "投影到形状 要求被投影的形状是边或线框, 面不行, 所以投影自检用本方法." @嵌入式方法 = "">
+    参数 X1 <类型 = 小数>
+    参数 Y1 <类型 = 小数>
+    参数 Z1 <类型 = 小数>
+    参数 X2 <类型 = 小数>
+    参数 Y2 <类型 = 小数>
+    参数 Z2 <类型 = 小数>
+    {
+        @ com.volcano.occt.OcctJni.makeSegment (@<X1>, @<Y1>, @<Z1>, @<X2>, @<Y2>, @<Z2>)
+    }
+
+    方法 建四边形面 <公开 静态 类型 = 长整数 注释 = "由 12 个 double (4 个 xyz 顶点) 围成平面, 返回面句柄; 供 缝合为实体 使用." @嵌入式方法 = "">
+    参数 顶点坐标 <类型 = "小数 []">
+    {
+        @ com.volcano.occt.OcctJni.makeFaceFromQuad (@<顶点坐标>)
+    }
+
+    方法 取圆周长 <公开 静态 类型 = 小数 注释 = "整圆周长: Geom_Circle (TKG3d) + GCPnts 弧长积分 (TKGeomBase)." @嵌入式方法 = "">
+    参数 半径 <类型 = 小数>
+    {
+        @ com.volcano.occt.OcctJni.circleLength (@<半径>)
+    }
+
+    方法 取插值曲线长 <公开 静态 类型 = 小数 注释 = "3D 点列样条插值后的曲线长度 (GeomAPI_Interpolate 在 TKGeomAlgo); 点为 xyz 连续排布." @嵌入式方法 = "">
+    参数 顶点坐标 <类型 = "小数 []">
+    {
+        @ com.volcano.occt.OcctJni.interpolateCurveLength (@<顶点坐标>)
+    }
+
+    方法 二维圆求交 <公开 静态 类型 = "小数 []" 注释 = "二维圆求交 (Geom2d_Circle 在 TKG2d, Geom2dAPI_InterCurveCurve 在 TKGeomAlgo): 圆心分别在 (0,0) 与 (圆心距,0), 返回 [交点数, x1, y1, x2, y2]." @嵌入式方法 = "">
+    参数 半径1 <类型 = 小数>
+    参数 半径2 <类型 = 小数>
+    参数 圆心距 <类型 = 小数>
+    {
+        @ com.volcano.occt.OcctJni.intersectCircles2d (@<半径1>, @<半径2>, @<圆心距>)
+    }
+
+    // --------------------------------------- 特征 (TKFillet / TKOffset / TKFeat / TKBool)
+
+    方法 倒角所有边 <公开 静态 类型 = 长整数 注释 = "对所有棱边倒直角 (BRepFilletAPI_MakeChamfer, TKFillet)." 注释 = "10mm 长方体全边倒角 1mm 实测体积 945.3333: 理想的等边距平面切角按容斥应为 946 (蒙特卡洛验证), OCCT 在 8 个角部另做三面相交处理, 少 2/3." @嵌入式方法 = "">
+    参数 形状句柄 <类型 = 长整数>
+    参数 倒角距离 <类型 = 小数>
+    {
+        @ com.volcano.occt.OcctJni.chamferAllEdges (@<形状句柄>, @<倒角距离>)
+    }
+
+    方法 圆角所有边 <公开 静态 类型 = 长整数 注释 = "对所有棱边倒圆角 (BRepFilletAPI_MakeFillet, TKFillet)." @嵌入式方法 = "">
+    参数 形状句柄 <类型 = 长整数>
+    参数 圆角半径 <类型 = 小数>
+    {
+        @ com.volcano.occt.OcctJni.filletAllEdges (@<形状句柄>, @<圆角半径>)
+    }
+
+    方法 整体偏移 <公开 静态 类型 = 长整数 注释 = "形状整体偏移 (BRepOffsetAPI_MakeOffsetShape, TKOffset); 负值向内, 可用于抽壳." @嵌入式方法 = "">
+    参数 形状句柄 <类型 = 长整数>
+    参数 偏移量 <类型 = 小数>
+    {
+        @ com.volcano.occt.OcctJni.offsetShape (@<形状句柄>, @<偏移量>)
+    }
+
+    方法 钻通孔 <公开 静态 类型 = 长整数 注释 = "沿过 (孔心X,孔心Y) 的 Z 轴钻圆柱通孔 (BRepFeat_MakeCylindricalHole, TKFeat)." @嵌入式方法 = "">
+    参数 形状句柄 <类型 = 长整数>
+    参数 孔心X <类型 = 小数>
+    参数 孔心Y <类型 = 小数>
+    参数 孔半径 <类型 = 小数>
+    {
+        @ com.volcano.occt.OcctJni.drillHole (@<形状句柄>, @<孔心X>, @<孔心Y>, @<孔半径>)
+    }
+
+    方法 投影到形状 <公开 静态 类型 = 长整数 注释 = "把 投影源 沿 (X,Y,Z) 方向投影到 目标形状 表面, 返回投影线框复合体 (BRepProj_Projection, TKBool)." 注释 = "投影源必须是 建线段 得到的边或线框: OCCT 源码里 ShapeType 不是 EDGE/WIRE 会直接抛异常, 传面会得到 0 句柄." @嵌入式方法 = "">
+    参数 目标形状 <类型 = 长整数>
+    参数 投影源 <类型 = 长整数>
+    参数 X方向 <类型 = 小数>
+    参数 Y方向 <类型 = 小数>
+    参数 Z方向 <类型 = 小数>
+    {
+        @ com.volcano.occt.OcctJni.projectOntoShape (@<目标形状>, @<投影源>, @<X方向>, @<Y方向>, @<Z方向>)
+    }
+
+    // -------------------------------------- 修复与缝合 (TKShHealing / TKTopAlgo)
+
+    方法 缝合为实体 <公开 静态 类型 = 长整数 注释 = "把若干面句柄缝合成闭合实体: BRepBuilderAPI_Sewing (TKTopAlgo) + ShapeFix_Shell (TKShHealing) + BRepBuilderAPI_MakeSolid (TKBRep)." 注释 = "ShapeFix_Shell 只保证面彼此一致而不保证朝外, 本方法会在体积为负时翻转实体, 使 取体积 恒为正." @嵌入式方法 = "">
+    参数 面句柄组 <类型 = "长整数 []">
+    参数 缝合容差 <类型 = 小数 注释 = "面间隙允许的最大距离." @默认值 = 0.01>
+    {
+        @ com.volcano.occt.OcctJni.sewToSolid (@<面句柄组>, @<缝合容差>)
+    }
+
+    方法 合并同域面 <公开 静态 类型 = 长整数 注释 = "共面/同域的小面合并成大面 (ShapeUpgrade_UnifySameDomain, TKShHealing)." @嵌入式方法 = "">
+    参数 形状句柄 <类型 = 长整数>
+    {
+        @ com.volcano.occt.OcctJni.unifySameDomain (@<形状句柄>)
+    }
+
+    // ---------------------------------------------- 网格 (TKMesh / TKXMesh)
+
+    方法 取三角形 <公开 静态 类型 = "单精度小数 []" 注释 = "网格化后返回非索引三角形顶点, 每 3 个元素一个顶点 (xyz 连续), 空数组表示失败." @嵌入式方法 = "">
+    参数 形状句柄 <类型 = 长整数>
+    参数 线性偏差 <类型 = 小数 注释 = "网格线性偏差, 越小越密; 0.5 量级适合演示." @默认值 = 0.5>
+    {
+        @ com.volcano.occt.OcctJni.tessellate (@<形状句柄>, @<线性偏差>)
+    }
+
+    方法 网格三角形数 <公开 静态 类型 = 整数 注释 = "走 XBRepMesh 插件入口 (TKXMesh) 网格化后的三角形总数; 失败返回 -1." @嵌入式方法 = "">
+    参数 形状句柄 <类型 = 长整数>
+    参数 线性偏差 <类型 = 小数 注释 = "网格线性偏差." @默认值 = 0.5>
+    {
+        @ com.volcano.occt.OcctJni.xmeshTriangleCount (@<形状句柄>, @<线性偏差>)
+    }
+
+    // --------------------------------------------------- 隐藏线去除 (TKHLR)
+
+    方法 可见边数 <公开 静态 类型 = 整数 注释 = "指定观察方向下的可见边数 (HLRBRep_PolyAlgo + HLRBRep_PolyHLRToShape, TKHLR); 失败返回 -1." 注释 = "走的是三角网格 HLR: 返回的是网格化后的可见线段数, 由三角网格决定 (实测同一圆柱俯视在 线性偏差 0.5 与 2.0 下都得到 72 段), 不是解析意义上的棱边条数; 光滑无棱边的形状 (球) 返回 0." @嵌入式方法 = "">
+    参数 形状句柄 <类型 = 长整数>
+    参数 X方向 <类型 = 小数>
+    参数 Y方向 <类型 = 小数>
+    参数 Z方向 <类型 = 小数>
+    参数 线性偏差 <类型 = 小数 注释 = "网格线性偏差." @默认值 = 0.5>
+    {
+        @ com.volcano.occt.OcctJni.hlrVisibleEdgeCount (@<形状句柄>, @<X方向>, @<Y方向>, @<Z方向>, @<线性偏差>)
+    }
+
+    // ------------------------------------------------------------ 收尾
+
+    方法 释放形状 <公开 静态 注释 = "释放 建长方体 / 建圆柱 / 布尔减 返回的句柄." @嵌入式方法 = "">
+    参数 形状句柄 <类型 = 长整数>
+    {
+        @ com.volcano.occt.OcctJni.release (@<形状句柄>)
+    }
+
+    方法 取错误文本 <公开 静态 类型 = 文本型 注释 = "读取上一次失败的本地错误信息; 空文本表示没有错误." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.OcctJni.lastError ()
+    }
+}

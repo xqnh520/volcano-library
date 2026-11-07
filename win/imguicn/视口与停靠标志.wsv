@@ -1,0 +1,38 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.即时界面 <注释 = "Dear ImGui v1.91.9b-docking 的火山视窗中文封装，全中文类名/方法名/参数名/注释。" @视窗.头文件搜寻目录 = "imgui"
+        @视窗.外部头文件 = "imcn_helper.h, imcn_host.h"
+        @视窗.外部源文件 = "imgui\\imgui.cpp, imgui\\imgui_draw.cpp, imgui\\imgui_tables.cpp, imgui\\imgui_widgets.cpp, imgui\\imgui_demo.cpp, imgui\\misc\\cpp\\imgui_stdlib.cpp, imgui\\backends\\imgui_impl_win32.cpp, imgui\\backends\\imgui_impl_dx11.cpp">
+
+类 视口标志 <公开 注释 = "视口标志" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 无 <公开 类型 = 整数 值 = @ImGuiViewportFlags_None>
+    常量 平台窗口 <公开 类型 = 整数 值 = @ImGuiViewportFlags_IsPlatformWindow>
+    常量 平台显示器 <公开 类型 = 整数 值 = @ImGuiViewportFlags_IsPlatformMonitor>
+    常量 由应用拥有 <公开 类型 = 整数 值 = @ImGuiViewportFlags_OwnedByApp>
+    常量 无装饰 <公开 类型 = 整数 值 = @ImGuiViewportFlags_NoDecoration>
+    常量 无任务栏图标 <公开 类型 = 整数 值 = @ImGuiViewportFlags_NoTaskBarIcon>
+    常量 显示时不获得焦点 <公开 类型 = 整数 值 = @ImGuiViewportFlags_NoFocusOnAppearing>
+    常量 单击不获得焦点 <公开 类型 = 整数 值 = @ImGuiViewportFlags_NoFocusOnClick>
+    常量 禁止输入 <公开 类型 = 整数 值 = @ImGuiViewportFlags_NoInputs>
+    常量 渲染器不清屏 <公开 类型 = 整数 值 = @ImGuiViewportFlags_NoRendererClear>
+    常量 禁止自动合并 <公开 类型 = 整数 值 = @ImGuiViewportFlags_NoAutoMerge>
+    常量 置于顶层 <公开 类型 = 整数 值 = @ImGuiViewportFlags_TopMost>
+    常量 可承载其它窗口 <公开 类型 = 整数 值 = @ImGuiViewportFlags_CanHostOtherWindows>
+    常量 已最小化 <公开 类型 = 整数 值 = @ImGuiViewportFlags_IsMinimized>
+    常量 已获得焦点 <公开 类型 = 整数 值 = @ImGuiViewportFlags_IsFocused>
+}
+类 停靠节点标志 <公开 注释 = "停靠节点标志" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 无 <公开 类型 = 整数 值 = @ImGuiDockNodeFlags_None>
+    常量 停靠区 <公开 类型 = 整数 值 = @ImGuiDockNodeFlags_DockSpace>
+    常量 仅保持存活 <公开 类型 = 整数 值 = @ImGuiDockNodeFlags_KeepAliveOnly>
+    常量 中央节点禁止停靠 <公开 类型 = 整数 值 = @ImGuiDockNodeFlags_NoDockingOverCentralNode>
+    常量 中央节点穿透 <公开 类型 = 整数 值 = @ImGuiDockNodeFlags_PassthruCentralNode>
+    常量 禁止拆分停靠 <公开 类型 = 整数 值 = @ImGuiDockNodeFlags_NoDockingSplit>
+    常量 禁止调整大小 <公开 类型 = 整数 值 = @ImGuiDockNodeFlags_NoResize>
+    常量 自动隐藏选项卡栏 <公开 类型 = 整数 值 = @ImGuiDockNodeFlags_AutoHideTabBar>
+    常量 禁止脱离停靠 <公开 类型 = 整数 值 = @ImGuiDockNodeFlags_NoUndocking>
+    常量 禁止拆分 <公开 类型 = 整数 值 = @ImGuiDockNodeFlags_NoSplit>
+    常量 中央节点内禁止停靠 <公开 类型 = 整数 值 = @ImGuiDockNodeFlags_NoDockingInCentralNode>
+}

@@ -1,0 +1,7 @@
+{
+    "name":  "d2d_drawing_engine",
+    "version":  "1.0.0",
+    "desc":  "d2d_drawing_engine 类库",
+    "author":  "xqnh520",
+    "entry":  "D2D绘制引擎.vgrp"
+}

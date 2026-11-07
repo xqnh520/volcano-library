@@ -1,0 +1,48 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.即时界面 <注释 = "Dear ImGui v1.91.9b-docking 的火山视窗中文封装，全中文类名/方法名/参数名/注释。" @视窗.头文件搜寻目录 = "imgui"
+        @视窗.外部头文件 = "imcn_helper.h, imcn_host.h"
+        @视窗.外部源文件 = "imgui\\imgui.cpp, imgui\\imgui_draw.cpp, imgui\\imgui_tables.cpp, imgui\\imgui_widgets.cpp, imgui\\imgui_demo.cpp, imgui\\misc\\cpp\\imgui_stdlib.cpp, imgui\\backends\\imgui_impl_win32.cpp, imgui\\backends\\imgui_impl_dx11.cpp">
+
+类 样式数据 <公开 注释 = "对应 ImGuiStyle*，保存全部外观参数。" 折叠 折叠2
+        @文档 = "category = \"指针类型\"" @别名 = "ImGuiStyle*" @别名类型 = 本地整数基本类型 @有效值范围 = "0,9223372036854775807">
+{
+}
+类 样式标识 <公开 注释 = "样式变量标识" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 透明系数 <公开 类型 = 整数 值 = @ImGuiStyleVar_Alpha>
+    常量 禁用透明系数 <公开 类型 = 整数 值 = @ImGuiStyleVar_DisabledAlpha>
+    常量 窗口内边距 <公开 类型 = 整数 值 = @ImGuiStyleVar_WindowPadding>
+    常量 窗口圆角 <公开 类型 = 整数 值 = @ImGuiStyleVar_WindowRounding>
+    常量 窗口边框宽度 <公开 类型 = 整数 值 = @ImGuiStyleVar_WindowBorderSize>
+    常量 窗口最小尺寸 <公开 类型 = 整数 值 = @ImGuiStyleVar_WindowMinSize>
+    常量 窗口标题对齐 <公开 类型 = 整数 值 = @ImGuiStyleVar_WindowTitleAlign>
+    常量 子窗口圆角 <公开 类型 = 整数 值 = @ImGuiStyleVar_ChildRounding>
+    常量 子窗口边框宽度 <公开 类型 = 整数 值 = @ImGuiStyleVar_ChildBorderSize>
+    常量 弹出窗口圆角 <公开 类型 = 整数 值 = @ImGuiStyleVar_PopupRounding>
+    常量 弹出窗口边框宽度 <公开 类型 = 整数 值 = @ImGuiStyleVar_PopupBorderSize>
+    常量 控件内边距 <公开 类型 = 整数 值 = @ImGuiStyleVar_FramePadding>
+    常量 控件圆角 <公开 类型 = 整数 值 = @ImGuiStyleVar_FrameRounding>
+    常量 控件边框宽度 <公开 类型 = 整数 值 = @ImGuiStyleVar_FrameBorderSize>
+    常量 项目间距 <公开 类型 = 整数 值 = @ImGuiStyleVar_ItemSpacing>
+    常量 项目内部间距 <公开 类型 = 整数 值 = @ImGuiStyleVar_ItemInnerSpacing>
+    常量 缩进间距 <公开 类型 = 整数 值 = @ImGuiStyleVar_IndentSpacing>
+    常量 单元格内边距 <公开 类型 = 整数 值 = @ImGuiStyleVar_CellPadding>
+    常量 滚动条宽度 <公开 类型 = 整数 值 = @ImGuiStyleVar_ScrollbarSize>
+    常量 滚动条圆角 <公开 类型 = 整数 值 = @ImGuiStyleVar_ScrollbarRounding>
+    常量 把手最小尺寸 <公开 类型 = 整数 值 = @ImGuiStyleVar_GrabMinSize>
+    常量 把手圆角 <公开 类型 = 整数 值 = @ImGuiStyleVar_GrabRounding>
+    常量 图像边框宽度 <公开 类型 = 整数 值 = @ImGuiStyleVar_ImageBorderSize>
+    常量 选项卡圆角 <公开 类型 = 整数 值 = @ImGuiStyleVar_TabRounding>
+    常量 选项卡边框宽度 <公开 类型 = 整数 值 = @ImGuiStyleVar_TabBorderSize>
+    常量 选项卡栏边框宽度 <公开 类型 = 整数 值 = @ImGuiStyleVar_TabBarBorderSize>
+    常量 选项卡栏顶线宽度 <公开 类型 = 整数 值 = @ImGuiStyleVar_TabBarOverlineSize>
+    常量 表格倾斜表头角度 <公开 类型 = 整数 值 = @ImGuiStyleVar_TableAngledHeadersAngle>
+    常量 表格倾斜表头文本对齐 <公开 类型 = 整数 值 = @ImGuiStyleVar_TableAngledHeadersTextAlign>
+    常量 按钮文本对齐 <公开 类型 = 整数 值 = @ImGuiStyleVar_ButtonTextAlign>
+    常量 可选项文本对齐 <公开 类型 = 整数 值 = @ImGuiStyleVar_SelectableTextAlign>
+    常量 分隔文本边框宽度 <公开 类型 = 整数 值 = @ImGuiStyleVar_SeparatorTextBorderSize>
+    常量 分隔文本对齐 <公开 类型 = 整数 值 = @ImGuiStyleVar_SeparatorTextAlign>
+    常量 分隔文本内边距 <公开 类型 = 整数 值 = @ImGuiStyleVar_SeparatorTextPadding>
+    常量 停靠分隔条宽度 <公开 类型 = 整数 值 = @ImGuiStyleVar_DockingSeparatorSize>
+}

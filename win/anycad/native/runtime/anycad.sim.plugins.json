@@ -1,0 +1,18 @@
+{
+  "Version": "1.0",
+  "Plugins": [
+    {
+      "Name": "Simulate.Physics",
+      "Url": "AnyCAD.Simulate.Physics",
+      "Enabled": true,
+      "Group": "SIM"
+    },
+    {
+      "Name": "Simulate.FCL",
+      "Url": "AnyCAD.Simulate.FCL",
+      "Enabled": true,
+      "Group": "SIM"
+    }
+
+  ]
+}

@@ -1,0 +1,105 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.安卓.XUI <注释 = "XUI 安卓 UI 工具库封装" @文档 = "category = \"XUI\"">
+
+类 XUI轮播项列表 <公开 @别名 = "java.util.ArrayList<com.xuexiang.xui.widget.banner.widget.banner.BannerItem>" @禁止创建对象 = 真 注释 = "★ XUI图片横幅的数据源集合（ArrayList&lt;BannerItem&gt;）。" @文档 = "category = \"XUI.横幅\"">
+{
+    方法 创建 <公开 静态 类型 = XUI轮播项列表 @嵌入式方法 = "" 注释 = "用法：创建并返回一个XUI轮播项列表, 尚未显示到界面。 参数：无。 返回：XUI轮播项列表, 可继续链式调用。">
+    {
+        @ new java.util.ArrayList<com.xuexiang.xui.widget.banner.widget.banner.BannerItem> ()
+    }
+
+    方法 添加 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean add(E e)">
+    参数 当前对象 <类型 = XUI轮播项列表>
+    参数 轮播项 <类型 = XUI轮播项>
+    {
+        @ @<当前对象>.add (@<轮播项>)
+    }
+
+    方法 数量 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int size()">
+    参数 当前对象 <类型 = XUI轮播项列表>
+    {
+        @ @<当前对象>.size ()
+    }
+
+    方法 取项 <公开 静态 类型 = XUI轮播项 @嵌入式方法 = "" 注释 = "java: public E get(int index)">
+    参数 当前对象 <类型 = XUI轮播项列表>
+    参数 位置 <类型 = 整数>
+    {
+        @ @<当前对象>.get (@<位置>)
+    }
+
+    方法 清空 <公开 静态 @嵌入式方法 = "" 注释 = "java: public void clear()">
+    参数 当前对象 <类型 = XUI轮播项列表>
+    {
+        @ @<当前对象>.clear ();
+    }
+}
+
+类 XUI文本列表 <公开 @别名 = "java.util.ArrayList<java.lang.String>" @禁止创建对象 = 真 注释 = "★ XUI文字横幅的数据源集合（ArrayList&lt;String&gt;）。" @文档 = "category = \"XUI.横幅\"">
+{
+    方法 创建 <公开 静态 类型 = XUI文本列表 @嵌入式方法 = "" 注释 = "用法：创建并返回一个XUI文本列表, 尚未显示到界面。 参数：无。 返回：XUI文本列表, 可继续链式调用。">
+    {
+        @ new java.util.ArrayList<java.lang.String> ()
+    }
+
+    方法 添加 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean add(E e)">
+    参数 当前对象 <类型 = XUI文本列表>
+    参数 文本 <类型 = 文本型>
+    {
+        @ @<当前对象>.add (@<文本>)
+    }
+
+    方法 数量 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int size()">
+    参数 当前对象 <类型 = XUI文本列表>
+    {
+        @ @<当前对象>.size ()
+    }
+
+    方法 取项 <公开 静态 类型 = 文本型 @嵌入式方法 = "" 注释 = "java: public E get(int index)">
+    参数 当前对象 <类型 = XUI文本列表>
+    参数 位置 <类型 = 整数>
+    {
+        @ @<当前对象>.get (@<位置>)
+    }
+
+    方法 清空 <公开 静态 @嵌入式方法 = "" 注释 = "java: public void clear()">
+    参数 当前对象 <类型 = XUI文本列表>
+    {
+        @ @<当前对象>.clear ();
+    }
+}
+
+类 XUI对象列表 <公开 @别名 = "java.util.ArrayList<java.lang.Object>" @禁止创建对象 = 真 注释 = "★ XUI引导横幅的数据源集合（ArrayList&lt;Object&gt;）。" @文档 = "category = \"XUI.横幅\"">
+{
+    方法 创建 <公开 静态 类型 = XUI对象列表 @嵌入式方法 = "" 注释 = "用法：创建并返回一个XUI对象列表, 尚未显示到界面。 参数：无。 返回：XUI对象列表, 可继续链式调用。">
+    {
+        @ new java.util.ArrayList<java.lang.Object> ()
+    }
+
+    方法 添加 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean add(E e)">
+    参数 当前对象 <类型 = XUI对象列表>
+    参数 项目 <类型 = 对象类>
+    {
+        @ @<当前对象>.add (@<项目>)
+    }
+
+    方法 数量 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int size()">
+    参数 当前对象 <类型 = XUI对象列表>
+    {
+        @ @<当前对象>.size ()
+    }
+
+    方法 取项 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "java: public E get(int index)">
+    参数 当前对象 <类型 = XUI对象列表>
+    参数 位置 <类型 = 整数>
+    {
+        @ @<当前对象>.get (@<位置>)
+    }
+
+    方法 清空 <公开 静态 @嵌入式方法 = "" 注释 = "java: public void clear()">
+    参数 当前对象 <类型 = XUI对象列表>
+    {
+        @ @<当前对象>.clear ();
+    }
+}

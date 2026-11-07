@@ -1,0 +1,12 @@
+doc_format_version = 1
+project_identifier = "wutao.vproject.pc.win.1"
+author = "搬码渔"
+name = "ObjectARX几何"
+version = 1
+unique_mark = objectarx_ge
+explain = "ObjectARX 2026 (R25) AcGe 几何库的火山视窗封装: 点/向量/矩阵/直线/线段/平面/有界平面/圆弧/椭圆弧/射线/点实体/容差/区间, 全部数值由 Autodesk AcGe25 实现计算。链接 acge25.lib, 运行时需 AutoCAD 2026 目录下的 acge25.dll 及其同级运行库。"
+dependence = "*\\sys\\base\\base.vgrp"
+file
+{
+    name = "w_ObjectARX_几何.wsv"
+}

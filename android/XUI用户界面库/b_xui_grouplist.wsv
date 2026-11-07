@@ -1,0 +1,329 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.安卓.XUI <注释 = "XUI 安卓 UI 工具库封装" @文档 = "category = \"XUI\"">
+
+
+类 XUI通用列表项 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.grouplist.XUICommonListItemView)."
+        @文档 = "category = \"XUI.分组列表\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.grouplist.XUICommonListItemView\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.xui_orientation\n        shown_name = \"orientation\"\n        data_type = string\n        detail_type = enum\n        item\n        {\n            name = vertical\n            shown_name = \"vertical\"\n        }\n        item\n        {\n            name = horizontal\n            shown_name = \"horizontal\"\n        }\n    }\n    attr\n    {\n        name = app.xui_accessory_type\n        shown_name = \"accessory_type\"\n        data_type = string\n        detail_type = enum\n        item\n        {\n            name = none\n            shown_name = \"none\"\n        }\n        item\n        {\n            name = chevron\n            shown_name = \"chevron\"\n        }\n        item\n        {\n            name = switcher\n            shown_name = \"switcher\"\n        }\n        item\n        {\n            name = custom\n            shown_name = \"custom\"\n        }\n    }\n    attr\n    {\n        name = app.xui_commonList_titleColor\n        shown_name = \"commonList_titleCo\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.xui_commonList_detailColor\n        shown_name = \"commonList_detailC\"\n        data_type = string\n        detail_type = color\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI通用列表项, XUICommonListItemView, com.xuexiang.xui.widget.grouplist.XUICommonListItemView)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetXUICommonListItemView ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI通用列表项的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI通用列表项.getAlpha()">
+    {
+        @ (double)@sn<this>.GetXUICommonListItemView ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI通用列表项的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI通用列表项.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUICommonListItemView ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI通用列表项的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI通用列表项.isEnabled()">
+    {
+        @ @sn<this>.GetXUICommonListItemView ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI通用列表项的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI通用列表项.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUICommonListItemView ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI通用列表项的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI通用列表项.isClickable()">
+    {
+        @ @sn<this>.GetXUICommonListItemView ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI通用列表项的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI通用列表项.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUICommonListItemView ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI通用列表项的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI通用列表项.getElevation()">
+    {
+        @ (double)@sn<this>.GetXUICommonListItemView ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI通用列表项的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI通用列表项.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUICommonListItemView ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI通用列表项的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI通用列表项.getMinimumHeight()">
+    {
+        @ @sn<this>.GetXUICommonListItemView ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI通用列表项的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI通用列表项.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUICommonListItemView ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI通用列表项的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI通用列表项.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUICommonListItemView ().setBackgroundColor (@<新值>))
+    }
+
+    方法 设置图片图形 <公开 注释 = "用法：把XUI通用列表项的图片图形设为给定值。 参数：值1=可绘制对象类。 返回：无。 原方法：XUI通用列表项.setImageDrawable()">
+    参数 值1 <类型 = 可绘制对象类>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUICommonListItemView ().setImageDrawable (@<值1>))
+    }
+
+    方法 设置红圆点位置 <公开 注释 = "用法：把XUI通用列表项的红圆点位置设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI通用列表项.setRedDotPosition()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUICommonListItemView ().setRedDotPosition (@<值1>))
+    }
+
+    方法 取文本 <公开 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读出XUI通用列表项的文本。 参数：无。 返回：文本型。 原方法：XUI通用列表项.getText()">
+    {
+        @ java.lang.String.valueOf (@sn<this>.GetXUICommonListItemView ().getText ())
+    }
+
+    方法 设置文本 <公开 注释 = "用法：把XUI通用列表项的文本设为给定值。 参数：值1=文本。 返回：无。 原方法：XUI通用列表项.setText()">
+    参数 值1 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUICommonListItemView ().setText (@<值1>))
+    }
+
+    方法 显示红圆点 <公开 注释 = "用法：让XUI通用列表项显示出来。 参数：值1=真/假。 返回：无。 原方法：XUI通用列表项.showRedDot()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUICommonListItemView ().showRedDot (@<值1>))
+    }
+
+    方法 显示红圆点_2 <公开 注释 = "用法：让XUI通用列表项显示出来。 参数：值1=真/假、值2=真/假。 返回：无。 原方法：XUI通用列表项.showRedDot()">
+    参数 值1 <类型 = 逻辑型>
+    参数 值2 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUICommonListItemView ().showRedDot (@<值1>, @<值2>))
+    }
+
+    方法 显示新建提示 <公开 注释 = "用法：让XUI通用列表项显示出来。 参数：值1=真/假。 返回：无。 原方法：XUI通用列表项.showNewTip()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUICommonListItemView ().showNewTip (@<值1>))
+    }
+
+    方法 取明细文本 <公开 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读出XUI通用列表项的明细文本。 参数：无。 返回：文本型。 原方法：XUI通用列表项.getDetailText()">
+    {
+        @ java.lang.String.valueOf (@sn<this>.GetXUICommonListItemView ().getDetailText ())
+    }
+
+    方法 设置明细文本 <公开 注释 = "用法：把XUI通用列表项的明细文本设为给定值。 参数：值1=文本。 返回：无。 原方法：XUI通用列表项.setDetailText()">
+    参数 值1 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUICommonListItemView ().setDetailText (@<值1>))
+    }
+
+    方法 取方位 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI通用列表项的方位。 参数：无。 返回：整数。 原方法：XUI通用列表项.getOrientation()">
+    {
+        @ @sn<this>.GetXUICommonListItemView ().getOrientation ()
+    }
+
+    方法 设置方位 <公开 注释 = "用法：把XUI通用列表项的方位设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI通用列表项.setOrientation()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUICommonListItemView ().setOrientation (@<值1>))
+    }
+
+    方法 取附属件类型 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI通用列表项的附属件类型。 参数：无。 返回：整数。 原方法：XUI通用列表项.getAccessoryType()">
+    {
+        @ @sn<this>.GetXUICommonListItemView ().getAccessoryType ()
+    }
+
+    方法 设置附属件类型 <公开 注释 = "用法：把XUI通用列表项的附属件类型设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI通用列表项.setAccessoryType()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUICommonListItemView ().setAccessoryType (@<值1>))
+    }
+
+}
+
+类 XUI分组列表分节视图 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.grouplist.XUIGroupListSectionHeaderFooterView)."
+        @文档 = "category = \"XUI.分组列表\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.grouplist.XUIGroupListSectionHeaderFooterView\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI分组列表分节视图, XUIGroupListSectionHeaderFooterView, com.xuexiang.xui.widget.grouplist.XUIGroupListSectionHeaderFooterView)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetXUIGroupListSectionHeaderFooterView ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI分组列表分节视图的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI分组列表分节视图.getAlpha()">
+    {
+        @ (double)@sn<this>.GetXUIGroupListSectionHeaderFooterView ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI分组列表分节视图的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI分组列表分节视图.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIGroupListSectionHeaderFooterView ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI分组列表分节视图的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI分组列表分节视图.isEnabled()">
+    {
+        @ @sn<this>.GetXUIGroupListSectionHeaderFooterView ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI分组列表分节视图的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI分组列表分节视图.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIGroupListSectionHeaderFooterView ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI分组列表分节视图的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI分组列表分节视图.isClickable()">
+    {
+        @ @sn<this>.GetXUIGroupListSectionHeaderFooterView ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI分组列表分节视图的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI分组列表分节视图.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIGroupListSectionHeaderFooterView ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI分组列表分节视图的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI分组列表分节视图.getElevation()">
+    {
+        @ (double)@sn<this>.GetXUIGroupListSectionHeaderFooterView ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI分组列表分节视图的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI分组列表分节视图.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIGroupListSectionHeaderFooterView ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI分组列表分节视图的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI分组列表分节视图.getMinimumHeight()">
+    {
+        @ @sn<this>.GetXUIGroupListSectionHeaderFooterView ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI分组列表分节视图的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI分组列表分节视图.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIGroupListSectionHeaderFooterView ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI分组列表分节视图的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI分组列表分节视图.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIGroupListSectionHeaderFooterView ().setBackgroundColor (@<新值>))
+    }
+
+    方法 设置文本 <公开 注释 = "用法：把XUI分组列表分节视图的文本设为给定值。 参数：值1=文本。 返回：无。 原方法：XUI分组列表分节视图.setText()">
+    参数 值1 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIGroupListSectionHeaderFooterView ().setText (@<值1>))
+    }
+
+    方法 设置文本对齐方式 <公开 注释 = "用法：把XUI分组列表分节视图的文本对齐方式设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI分组列表分节视图.setTextGravity()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIGroupListSectionHeaderFooterView ().setTextGravity (@<值1>))
+    }
+
+}
+
+类 XUI分组列表 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.grouplist.XUIGroupListView)."
+        @文档 = "category = \"XUI.分组列表\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.grouplist.XUIGroupListView\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.xui_separatorStyle\n        shown_name = \"separatorStyle\"\n        data_type = string\n        detail_type = enum\n        item\n        {\n            name = normal\n            shown_name = \"normal\"\n        }\n        item\n        {\n            name = none\n            shown_name = \"none\"\n        }\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI分组列表, XUIGroupListView, com.xuexiang.xui.widget.grouplist.XUIGroupListView)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetXUIGroupListView ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI分组列表的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI分组列表.getAlpha()">
+    {
+        @ (double)@sn<this>.GetXUIGroupListView ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI分组列表的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI分组列表.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIGroupListView ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI分组列表的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI分组列表.isEnabled()">
+    {
+        @ @sn<this>.GetXUIGroupListView ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI分组列表的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI分组列表.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIGroupListView ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI分组列表的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI分组列表.isClickable()">
+    {
+        @ @sn<this>.GetXUIGroupListView ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI分组列表的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI分组列表.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIGroupListView ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI分组列表的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI分组列表.getElevation()">
+    {
+        @ (double)@sn<this>.GetXUIGroupListView ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI分组列表的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI分组列表.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIGroupListView ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI分组列表的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI分组列表.getMinimumHeight()">
+    {
+        @ @sn<this>.GetXUIGroupListView ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI分组列表的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI分组列表.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIGroupListView ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI分组列表的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI分组列表.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIGroupListView ().setBackgroundColor (@<新值>))
+    }
+
+    方法 取分隔符样式 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI分组列表的分隔符样式。 参数：无。 返回：整数。 原方法：XUI分组列表.getSeparatorStyle()">
+    {
+        @ @sn<this>.GetXUIGroupListView ().getSeparatorStyle ()
+    }
+
+    方法 设置分隔符样式 <公开 注释 = "用法：把XUI分组列表的分隔符样式设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI分组列表.setSeparatorStyle()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIGroupListView ().setSeparatorStyle (@<值1>))
+    }
+
+    方法 取分节数量 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI分组列表的分节数量。 参数：无。 返回：整数。 原方法：XUI分组列表.getSectionCount()">
+    {
+        @ @sn<this>.GetXUIGroupListView ().getSectionCount ()
+    }
+
+}

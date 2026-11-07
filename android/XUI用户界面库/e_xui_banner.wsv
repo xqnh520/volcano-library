@@ -1,0 +1,409 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.安卓.XUI <注释 = "XUI 安卓 UI 工具库封装" @文档 = "category = \"XUI\"">
+
+类 XUI图片横幅 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.banner.widget.banner.SimpleImageBanner)."
+        @文档 = "category = \"XUI.组件\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.banner.widget.banner.SimpleImageBanner\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI图片横幅, SimpleImageBanner, com.xuexiang.xui.widget.banner.widget.banner.SimpleImageBanner)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetSimpleImageBanner ()
+    }
+
+    方法 设置来源 <公开 注释 = "用法：把XUI图片横幅的来源设为给定值。 参数：值1=XUI轮播项列表。 返回：无。 原方法：XUI图片横幅.setSource()">
+    参数 值1 <类型 = XUI轮播项列表>
+    {
+        @ @m<RUN_UI_ACTION> (GetSimpleImageBanner ().setSource (@<值1>))
+    }
+
+    方法 设置延时 <公开 注释 = "用法：把XUI图片横幅的延时设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI图片横幅.setDelay()">
+    参数 值1 <类型 = 长整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSimpleImageBanner ().setDelay (@<值1>))
+    }
+
+    方法 设置周期 <公开 注释 = "用法：把XUI图片横幅的周期设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI图片横幅.setPeriod()">
+    参数 值1 <类型 = 长整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSimpleImageBanner ().setPeriod (@<值1>))
+    }
+
+    方法 设置自动滚动启用 <公开 注释 = "用法：把XUI图片横幅的自动滚动启用设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI图片横幅.setAutoScrollEnable()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetSimpleImageBanner ().setAutoScrollEnable (@<值1>))
+    }
+
+    方法 设置标题显示 <公开 注释 = "用法：把XUI图片横幅的标题显示设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI图片横幅.setTitleShow()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetSimpleImageBanner ().setTitleShow (@<值1>))
+    }
+
+    方法 设置指示器显示 <公开 注释 = "用法：把XUI图片横幅的指示器显示设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI图片横幅.setIndicatorShow()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetSimpleImageBanner ().setIndicatorShow (@<值1>))
+    }
+
+    方法 设置条颜色 <公开 注释 = "用法：把XUI图片横幅的条颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI图片横幅.setBarColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSimpleImageBanner ().setBarColor (@<值1>))
+    }
+
+    方法 设置文本颜色 <公开 注释 = "用法：把XUI图片横幅的文本颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI图片横幅.setTextColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSimpleImageBanner ().setTextColor (@<值1>))
+    }
+
+    方法 设置文本大小 <公开 注释 = "用法：把XUI图片横幅的文本大小设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI图片横幅.setTextSize()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSimpleImageBanner ().setTextSize ((float) @<值1>))
+    }
+
+    方法 设置容器缩放 <公开 注释 = "用法：把XUI图片横幅的容器缩放设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI图片横幅.setContainerScale()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSimpleImageBanner ().setContainerScale ((float) @<值1>))
+    }
+
+    方法 设置指示器样式 <公开 注释 = "用法：把XUI图片横幅的指示器样式设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI图片横幅.setIndicatorStyle()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSimpleImageBanner ().setIndicatorStyle (@<值1>))
+    }
+
+    方法 设置指示器宽度 <公开 注释 = "用法：把XUI图片横幅的指示器宽度设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI图片横幅.setIndicatorWidth()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSimpleImageBanner ().setIndicatorWidth ((float) @<值1>))
+    }
+
+    方法 设置指示器高度 <公开 注释 = "用法：把XUI图片横幅的指示器高度设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI图片横幅.setIndicatorHeight()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSimpleImageBanner ().setIndicatorHeight ((float) @<值1>))
+    }
+
+    方法 设置指示器间隙 <公开 注释 = "用法：把XUI图片横幅的指示器间隙设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI图片横幅.setIndicatorGap()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSimpleImageBanner ().setIndicatorGap ((float) @<值1>))
+    }
+
+    方法 设置指示器选择颜色 <公开 注释 = "用法：把XUI图片横幅的指示器选择颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI图片横幅.setIndicatorSelectColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSimpleImageBanner ().setIndicatorSelectColor (@<值1>))
+    }
+
+    方法 设置指示器取消选择颜色 <公开 注释 = "用法：把XUI图片横幅的指示器取消选择颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI图片横幅.setIndicatorUnselectColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSimpleImageBanner ().setIndicatorUnselectColor (@<值1>))
+    }
+
+    方法 设置指示器角圆角 <公开 注释 = "用法：把XUI图片横幅的指示器角圆角设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI图片横幅.setIndicatorCornerRadius()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSimpleImageBanner ().setIndicatorCornerRadius ((float) @<值1>))
+    }
+
+    方法 启用缓存 <公开 注释 = "用法：启用XUI图片横幅的缓存。 参数：值1=真/假。 返回：无。 原方法：XUI图片横幅.enableCache()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetSimpleImageBanner ().enableCache (@<值1>))
+    }
+
+    方法 取启用缓存 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读出XUI图片横幅的启用缓存。 参数：无。 返回：逻辑型。 原方法：XUI图片横幅.getEnableCache()">
+    {
+        @ @sn<this>.GetSimpleImageBanner ().getEnableCache ()
+    }
+
+    方法 设置缩放 <公开 注释 = "用法：把XUI图片横幅的缩放设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI图片横幅.setScale()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSimpleImageBanner ().setScale (@<值1>))
+    }
+
+    方法 取缩放 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读出XUI图片横幅的缩放。 参数：无。 返回：小数。 原方法：XUI图片横幅.getScale()">
+    {
+        @ @sn<this>.GetSimpleImageBanner ().getScale ()
+    }
+
+    方法 开始滚动 <公开 注释 = "用法：让XUI图片横幅开始滚动。 参数：无。 返回：无。 原方法：XUI图片横幅.startScroll()">
+    {
+        @ @m<RUN_UI_ACTION> (GetSimpleImageBanner ().startScroll ())
+    }
+
+    方法 前往响应滚动 <公开 注释 = "用法：调用XUI图片横幅的前往响应滚动。 参数：无。 返回：无。 原方法：XUI图片横幅.goOnScroll()">
+    {
+        @ @m<RUN_UI_ACTION> (GetSimpleImageBanner ().goOnScroll ())
+    }
+
+    方法 暂停滚动 <公开 注释 = "用法：暂停XUI图片横幅的进行。 参数：无。 返回：无。 原方法：XUI图片横幅.pauseScroll()">
+    {
+        @ @m<RUN_UI_ACTION> (GetSimpleImageBanner ().pauseScroll ())
+    }
+
+    方法 大小 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：XUI图片横幅 的 大小, 行为与 XUI 底层同名方法一致。 参数：无。 返回：整数。 原方法：XUI图片横幅.size()">
+    {
+        @ @sn<this>.GetSimpleImageBanner ().size ()
+    }
+
+    方法 取项高度 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI图片横幅的项高度。 参数：无。 返回：整数。 原方法：XUI图片横幅.getItemHeight()">
+    {
+        @ @sn<this>.GetSimpleImageBanner ().getItemHeight ()
+    }
+
+    方法 取项宽度 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI图片横幅的项宽度。 参数：无。 返回：整数。 原方法：XUI图片横幅.getItemWidth()">
+    {
+        @ @sn<this>.GetSimpleImageBanner ().getItemWidth ()
+    }
+
+    方法 回收 <公开 注释 = "用法：回收XUI图片横幅占用的资源。 参数：无。 返回：无。 原方法：XUI图片横幅.recycle()">
+    {
+        @ @m<RUN_UI_ACTION> (GetSimpleImageBanner ().recycle ())
+    }
+}
+
+类 XUI文字横幅 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.banner.widget.banner.SimpleTextBanner)."
+        @文档 = "category = \"XUI.组件\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.banner.widget.banner.SimpleTextBanner\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI文字横幅, SimpleTextBanner, com.xuexiang.xui.widget.banner.widget.banner.SimpleTextBanner)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetSimpleTextBanner ()
+    }
+
+    方法 设置来源 <公开 注释 = "用法：把XUI文字横幅的来源设为给定值。 参数：值1=XUI文本列表。 返回：无。 原方法：XUI文字横幅.setSource()">
+    参数 值1 <类型 = XUI文本列表>
+    {
+        @ @m<RUN_UI_ACTION> (GetSimpleTextBanner ().setSource (@<值1>))
+    }
+
+    方法 设置延时 <公开 注释 = "用法：把XUI文字横幅的延时设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI文字横幅.setDelay()">
+    参数 值1 <类型 = 长整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSimpleTextBanner ().setDelay (@<值1>))
+    }
+
+    方法 设置周期 <公开 注释 = "用法：把XUI文字横幅的周期设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI文字横幅.setPeriod()">
+    参数 值1 <类型 = 长整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSimpleTextBanner ().setPeriod (@<值1>))
+    }
+
+    方法 设置自动滚动启用 <公开 注释 = "用法：把XUI文字横幅的自动滚动启用设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI文字横幅.setAutoScrollEnable()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetSimpleTextBanner ().setAutoScrollEnable (@<值1>))
+    }
+
+    方法 设置标题显示 <公开 注释 = "用法：把XUI文字横幅的标题显示设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI文字横幅.setTitleShow()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetSimpleTextBanner ().setTitleShow (@<值1>))
+    }
+
+    方法 设置指示器显示 <公开 注释 = "用法：把XUI文字横幅的指示器显示设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI文字横幅.setIndicatorShow()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetSimpleTextBanner ().setIndicatorShow (@<值1>))
+    }
+
+    方法 设置条颜色 <公开 注释 = "用法：把XUI文字横幅的条颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI文字横幅.setBarColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSimpleTextBanner ().setBarColor (@<值1>))
+    }
+
+    方法 设置文本颜色 <公开 注释 = "用法：把XUI文字横幅的文本颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI文字横幅.setTextColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSimpleTextBanner ().setTextColor (@<值1>))
+    }
+
+    方法 设置文本大小 <公开 注释 = "用法：把XUI文字横幅的文本大小设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI文字横幅.setTextSize()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSimpleTextBanner ().setTextSize ((float) @<值1>))
+    }
+
+    方法 设置容器缩放 <公开 注释 = "用法：把XUI文字横幅的容器缩放设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI文字横幅.setContainerScale()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSimpleTextBanner ().setContainerScale ((float) @<值1>))
+    }
+
+    方法 设置指示器样式 <公开 注释 = "用法：把XUI文字横幅的指示器样式设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI文字横幅.setIndicatorStyle()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSimpleTextBanner ().setIndicatorStyle (@<值1>))
+    }
+
+    方法 设置指示器宽度 <公开 注释 = "用法：把XUI文字横幅的指示器宽度设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI文字横幅.setIndicatorWidth()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSimpleTextBanner ().setIndicatorWidth ((float) @<值1>))
+    }
+
+    方法 设置指示器高度 <公开 注释 = "用法：把XUI文字横幅的指示器高度设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI文字横幅.setIndicatorHeight()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSimpleTextBanner ().setIndicatorHeight ((float) @<值1>))
+    }
+
+    方法 设置指示器间隙 <公开 注释 = "用法：把XUI文字横幅的指示器间隙设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI文字横幅.setIndicatorGap()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSimpleTextBanner ().setIndicatorGap ((float) @<值1>))
+    }
+
+    方法 设置指示器选择颜色 <公开 注释 = "用法：把XUI文字横幅的指示器选择颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI文字横幅.setIndicatorSelectColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSimpleTextBanner ().setIndicatorSelectColor (@<值1>))
+    }
+
+    方法 设置指示器取消选择颜色 <公开 注释 = "用法：把XUI文字横幅的指示器取消选择颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI文字横幅.setIndicatorUnselectColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSimpleTextBanner ().setIndicatorUnselectColor (@<值1>))
+    }
+
+    方法 设置指示器角圆角 <公开 注释 = "用法：把XUI文字横幅的指示器角圆角设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI文字横幅.setIndicatorCornerRadius()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSimpleTextBanner ().setIndicatorCornerRadius ((float) @<值1>))
+    }
+
+    方法 开始滚动 <公开 注释 = "用法：让XUI文字横幅开始滚动。 参数：无。 返回：无。 原方法：XUI文字横幅.startScroll()">
+    {
+        @ @m<RUN_UI_ACTION> (GetSimpleTextBanner ().startScroll ())
+    }
+
+    方法 前往响应滚动 <公开 注释 = "用法：调用XUI文字横幅的前往响应滚动。 参数：无。 返回：无。 原方法：XUI文字横幅.goOnScroll()">
+    {
+        @ @m<RUN_UI_ACTION> (GetSimpleTextBanner ().goOnScroll ())
+    }
+
+    方法 暂停滚动 <公开 注释 = "用法：暂停XUI文字横幅的进行。 参数：无。 返回：无。 原方法：XUI文字横幅.pauseScroll()">
+    {
+        @ @m<RUN_UI_ACTION> (GetSimpleTextBanner ().pauseScroll ())
+    }
+
+    方法 大小 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：XUI文字横幅 的 大小, 行为与 XUI 底层同名方法一致。 参数：无。 返回：整数。 原方法：XUI文字横幅.size()">
+    {
+        @ @sn<this>.GetSimpleTextBanner ().size ()
+    }
+
+    方法 取项高度 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI文字横幅的项高度。 参数：无。 返回：整数。 原方法：XUI文字横幅.getItemHeight()">
+    {
+        @ @sn<this>.GetSimpleTextBanner ().getItemHeight ()
+    }
+
+    方法 取项宽度 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI文字横幅的项宽度。 参数：无。 返回：整数。 原方法：XUI文字横幅.getItemWidth()">
+    {
+        @ @sn<this>.GetSimpleTextBanner ().getItemWidth ()
+    }
+
+    方法 回收 <公开 注释 = "用法：回收XUI文字横幅占用的资源。 参数：无。 返回：无。 原方法：XUI文字横幅.recycle()">
+    {
+        @ @m<RUN_UI_ACTION> (GetSimpleTextBanner ().recycle ())
+    }
+}
+
+类 XUI引导横幅 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.banner.widget.banner.SimpleGuideBanner)."
+        @文档 = "category = \"XUI.组件\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.banner.widget.banner.SimpleGuideBanner\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI引导横幅, SimpleGuideBanner, com.xuexiang.xui.widget.banner.widget.banner.SimpleGuideBanner)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetSimpleGuideBanner ()
+    }
+
+    方法 设置来源 <公开 注释 = "用法：把XUI引导横幅的来源设为给定值。 参数：值1=XUI对象列表。 返回：无。 原方法：XUI引导横幅.setSource()">
+    参数 值1 <类型 = XUI对象列表>
+    {
+        @ @m<RUN_UI_ACTION> (GetSimpleGuideBanner ().setSource (@<值1>))
+    }
+
+    方法 设置延时 <公开 注释 = "用法：把XUI引导横幅的延时设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI引导横幅.setDelay()">
+    参数 值1 <类型 = 长整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSimpleGuideBanner ().setDelay (@<值1>))
+    }
+
+    方法 设置周期 <公开 注释 = "用法：把XUI引导横幅的周期设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI引导横幅.setPeriod()">
+    参数 值1 <类型 = 长整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSimpleGuideBanner ().setPeriod (@<值1>))
+    }
+
+    方法 设置自动滚动启用 <公开 注释 = "用法：把XUI引导横幅的自动滚动启用设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI引导横幅.setAutoScrollEnable()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetSimpleGuideBanner ().setAutoScrollEnable (@<值1>))
+    }
+
+    方法 设置指示器显示 <公开 注释 = "用法：把XUI引导横幅的指示器显示设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI引导横幅.setIndicatorShow()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetSimpleGuideBanner ().setIndicatorShow (@<值1>))
+    }
+
+    方法 设置文本颜色 <公开 注释 = "用法：把XUI引导横幅的文本颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI引导横幅.setTextColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSimpleGuideBanner ().setTextColor (@<值1>))
+    }
+
+    方法 设置文本大小 <公开 注释 = "用法：把XUI引导横幅的文本大小设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI引导横幅.setTextSize()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSimpleGuideBanner ().setTextSize ((float) @<值1>))
+    }
+
+    方法 设置指示器样式 <公开 注释 = "用法：把XUI引导横幅的指示器样式设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI引导横幅.setIndicatorStyle()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSimpleGuideBanner ().setIndicatorStyle (@<值1>))
+    }
+
+    方法 设置指示器间隙 <公开 注释 = "用法：把XUI引导横幅的指示器间隙设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI引导横幅.setIndicatorGap()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSimpleGuideBanner ().setIndicatorGap ((float) @<值1>))
+    }
+
+    方法 开始滚动 <公开 注释 = "用法：让XUI引导横幅开始滚动。 参数：无。 返回：无。 原方法：XUI引导横幅.startScroll()">
+    {
+        @ @m<RUN_UI_ACTION> (GetSimpleGuideBanner ().startScroll ())
+    }
+
+    方法 暂停滚动 <公开 注释 = "用法：暂停XUI引导横幅的进行。 参数：无。 返回：无。 原方法：XUI引导横幅.pauseScroll()">
+    {
+        @ @m<RUN_UI_ACTION> (GetSimpleGuideBanner ().pauseScroll ())
+    }
+
+    方法 大小 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：XUI引导横幅 的 大小, 行为与 XUI 底层同名方法一致。 参数：无。 返回：整数。 原方法：XUI引导横幅.size()">
+    {
+        @ @sn<this>.GetSimpleGuideBanner ().size ()
+    }
+
+    方法 回收 <公开 注释 = "用法：回收XUI引导横幅占用的资源。 参数：无。 返回：无。 原方法：XUI引导横幅.recycle()">
+    {
+        @ @m<RUN_UI_ACTION> (GetSimpleGuideBanner ().recycle ())
+    }
+}

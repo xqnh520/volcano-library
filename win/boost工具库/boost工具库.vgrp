@@ -1,0 +1,19 @@
+doc_format_version = 1
+project_identifier = "wutao.vproject.pc.win.1"
+author = "WorkBuddy"
+name ="Boost工具库"
+version = 1
+unique_mark = volcano_boost_win
+explain = "把 boost 1.86.0 的工具能力封装为火山视窗类库：文字算法、通配符匹配、进制转换、按显示宽度补齐、分词、文字截取、词法转换、格式化、正则、日期、时间、CRC32、UUID、数列统计、任意精度大整数、高精度小数、随机数、JSON、XML、INI 配置、双向映射表、文件与目录、文本文件读写（GBK/UTF-8/UTF-16 自动判定）、Base64 与十六进制编码、URL 编码、CSV 表格文档、SHA1/MD5 哈希、位集。所有类名、方法名、参数名与注释均为中文。"
+dependence = "*\sys\base\base.vgrp"
+file
+{
+    name = "w_boost_文字.wsv"
+    name = "w_boost_时间.wsv"
+    name = "w_boost_数据.wsv"
+    name = "w_boost_配置.wsv"
+    name = "w_boost_数值扩展.wsv"
+    name = "w_boost_文件.wsv"
+    name = "w_boost_表格与哈希.wsv"
+    name = "w_boost_位集.wsv"
+}

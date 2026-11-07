@@ -1,0 +1,14 @@
+doc_format_version = 1
+project_identifier = "wutao.vproject.pc.win.1"
+name = "OCCT二维CAD"
+author = "Codex"
+version = 8
+explain = "OpenCASCADE 8.0 二维CAD封装，包含 gp、Geom2d、Geom2dAPI、BRepBuilderAPI_MakeEdge2d/MakeWire、V3d_View/WNT_Window/OpenGl_GraphicDriver 低层模块、V3d/AIS 专用子窗口渲染、背景色、闭合图形填充、坐标显示辅助，以及基础 DXF/BREP 文件读写；运行时依赖采用目录附属文件方式。"
+unique_mark = "codex.occt.2d.volcano.8.0"
+dependence = "*\\sys\\base\\base.vgrp"
+
+file
+{
+    filter = "OCCT二维"
+    name = "src\\occt_2d.wsv"
+}

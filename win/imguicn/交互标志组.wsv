@@ -1,0 +1,25 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.即时界面 <注释 = "Dear ImGui v1.91.9b-docking 的火山视窗中文封装，全中文类名/方法名/参数名/注释。" @视窗.头文件搜寻目录 = "imgui"
+        @视窗.外部头文件 = "imcn_helper.h, imcn_host.h"
+        @视窗.外部源文件 = "imgui\\imgui.cpp, imgui\\imgui_draw.cpp, imgui\\imgui_tables.cpp, imgui\\imgui_widgets.cpp, imgui\\imgui_demo.cpp, imgui\\misc\\cpp\\imgui_stdlib.cpp, imgui\\backends\\imgui_impl_win32.cpp, imgui\\backends\\imgui_impl_dx11.cpp">
+
+类 按钮标志 <公开 注释 = "按钮标志，用于即时界面.隐身按钮" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 无 <公开 类型 = 整数 值 = @ImGuiButtonFlags_None>
+    常量 响应鼠标左键 <公开 类型 = 整数 值 = @ImGuiButtonFlags_MouseButtonLeft>
+    常量 响应鼠标右键 <公开 类型 = 整数 值 = @ImGuiButtonFlags_MouseButtonRight>
+    常量 响应鼠标中键 <公开 类型 = 整数 值 = @ImGuiButtonFlags_MouseButtonMiddle>
+    常量 启用导航响应 <公开 类型 = 整数 值 = @ImGuiButtonFlags_EnableNav>
+}
+类 可选项标志 <公开 注释 = "可选项标志，用于即时界面.可选项" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 无 <公开 类型 = 整数 值 = @ImGuiSelectableFlags_None>
+    常量 不自动关闭弹出窗口 <公开 类型 = 整数 值 = @ImGuiSelectableFlags_NoAutoClosePopups>
+    常量 跨全部列 <公开 类型 = 整数 值 = @ImGuiSelectableFlags_SpanAllColumns>
+    常量 允许双击 <公开 类型 = 整数 值 = @ImGuiSelectableFlags_AllowDoubleClick>
+    常量 禁用 <公开 类型 = 整数 值 = @ImGuiSelectableFlags_Disabled>
+    常量 允许重叠 <公开 类型 = 整数 值 = @ImGuiSelectableFlags_AllowOverlap>
+    常量 高亮显示 <公开 类型 = 整数 值 = @ImGuiSelectableFlags_Highlight>
+    常量 不关闭弹出窗口 <公开 类型 = 整数 值 = @ImGuiSelectableFlags_DontClosePopups>
+}

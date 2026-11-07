@@ -1,0 +1,143 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.安卓.XUI <注释 = "XUI 安卓 UI 工具库封装" @文档 = "category = \"XUI\"">
+
+类 XUI超级文本框 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.textview.supertextview.SuperTextView)." 注释 = "支持左中右三列、每列上中下三段文字与图标的组合行组件。"
+        @文档 = "category = \"XUI.文本\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.textview.supertextview.SuperTextView\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.sLeftTextString\n        shown_name = \"左侧文字\"\n        data_type = string\n    }\n    attr\n    {\n        name = app.sCenterTextString\n        shown_name = \"中间文字\"\n        data_type = string\n    }\n    attr\n    {\n        name = app.sRightTextString\n        shown_name = \"右侧文字\"\n        data_type = string\n    }\n    attr\n    {\n        name = app.sLeftTextColor\n        shown_name = \"左侧文字颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.sCenterTextColor\n        shown_name = \"中间文字颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.sRightTextColor\n        shown_name = \"右侧文字颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.sLeftTextSize\n        shown_name = \"左侧文字大小\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.sDividerLineColor\n        shown_name = \"分割线颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.sDividerLineHeight\n        shown_name = \"分割线高度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.sUseRipple\n        shown_name = \"启用涟漪效果\"\n        data_type = boolean\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI超级文本框, XUISuperTextView, com.xuexiang.xui.widget.textview.supertextview.SuperTextView)
+
+    # 属性 ---
+
+    方法 左边文字 <公开 属性读 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读取XUI超级文本框的左边文字当前值。 参数：无。 返回：文本型。 原方法：XUI超级文本框.getLeftString()">
+    {
+        @ @sn<this>.GetXUISuperTextView ().getLeftString ()
+    }
+
+    方法 左边文字 <公开 属性写 注释 = "用法：设置XUI超级文本框的左边文字, 传入新值后立刻生效。 参数：新文字=文本。 返回：无。 原方法：XUI超级文本框.setLeftString()">
+    参数 新文字 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUISuperTextView ().setLeftString (@<新文字>))
+    }
+
+    方法 中间文字 <公开 属性读 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读取XUI超级文本框的中间文字当前值。 参数：无。 返回：文本型。 原方法：XUI超级文本框.getCenterString()">
+    {
+        @ @sn<this>.GetXUISuperTextView ().getCenterString ()
+    }
+
+    方法 中间文字 <公开 属性写 注释 = "用法：设置XUI超级文本框的中间文字, 传入新值后立刻生效。 参数：新文字=文本。 返回：无。 原方法：XUI超级文本框.setCenterString()">
+    参数 新文字 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUISuperTextView ().setCenterString (@<新文字>))
+    }
+
+    方法 右边文字 <公开 属性读 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读取XUI超级文本框的右边文字当前值。 参数：无。 返回：文本型。 原方法：XUI超级文本框.getRightString()">
+    {
+        @ @sn<this>.GetXUISuperTextView ().getRightString ()
+    }
+
+    方法 右边文字 <公开 属性写 注释 = "用法：设置XUI超级文本框的右边文字, 传入新值后立刻生效。 参数：新文字=文本。 返回：无。 原方法：XUI超级文本框.setRightString()">
+    参数 新文字 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUISuperTextView ().setRightString (@<新文字>))
+    }
+
+    方法 左上文字 <公开 属性写 注释 = "设置左上角文字。">
+    参数 新文字 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUISuperTextView ().setLeftTopString (@<新文字>))
+    }
+
+    方法 左下文字 <公开 属性写 注释 = "设置左下角文字。">
+    参数 新文字 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUISuperTextView ().setLeftBottomString (@<新文字>))
+    }
+
+    方法 中上文字 <公开 属性写 注释 = "设置中间上方文字。">
+    参数 新文字 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUISuperTextView ().setCenterTopString (@<新文字>))
+    }
+
+    方法 中下文字 <公开 属性写 注释 = "设置中间下方文字。">
+    参数 新文字 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUISuperTextView ().setCenterBottomString (@<新文字>))
+    }
+
+    方法 右上文字 <公开 属性写 注释 = "设置右上角文字。">
+    参数 新文字 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUISuperTextView ().setRightTopString (@<新文字>))
+    }
+
+    方法 右下文字 <公开 属性写 注释 = "设置右下角文字。">
+    参数 新文字 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUISuperTextView ().setRightBottomString (@<新文字>))
+    }
+
+    方法 左侧文字颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI超级文本框的左侧文字颜色, 传入新值后立刻生效。 参数：新颜色=整数。 返回：无。 原方法：XUI超级文本框.setLeftTextColor()">
+    参数 新颜色 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUISuperTextView ().setLeftTextColor (@<新颜色>))
+    }
+
+    方法 中间文字颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI超级文本框的中间文字颜色, 传入新值后立刻生效。 参数：新颜色=整数。 返回：无。 原方法：XUI超级文本框.setCenterTextColor()">
+    参数 新颜色 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUISuperTextView ().setCenterTextColor (@<新颜色>))
+    }
+
+    方法 右侧文字颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI超级文本框的右侧文字颜色, 传入新值后立刻生效。 参数：新颜色=整数。 返回：无。 原方法：XUI超级文本框.setRightTextColor()">
+    参数 新颜色 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUISuperTextView ().setRightTextColor (@<新颜色>))
+    }
+
+    方法 左侧图标 <公开 属性写 注释 = "设置左侧图标（资源 ID）。">
+    参数 图标资源 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUISuperTextView ().setLeftIcon (@<图标资源>))
+    }
+
+    方法 右侧图标 <公开 属性写 注释 = "设置右侧图标（资源 ID）。">
+    参数 图标资源 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUISuperTextView ().setRightIcon (@<图标资源>))
+    }
+
+    方法 取中间编辑框内容 <公开 类型 = 文本型 注释 = "返回中间编辑框中的内容。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetXUISuperTextView ().getCenterEditValue ()
+    }
+
+    方法 选中状态 <公开 属性读 类型 = 逻辑型 注释 = "返回右侧复选框是否选中。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetXUISuperTextView ().getCheckBoxIsChecked ()
+    }
+
+    方法 选中状态 <公开 属性写 注释 = "设置右侧复选框选中状态。">
+    参数 新状态 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUISuperTextView ().setCheckBoxChecked (@<新状态>))
+    }
+
+    方法 开关状态 <公开 属性读 类型 = 逻辑型 注释 = "返回右侧开关是否打开。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetXUISuperTextView ().getSwitchIsChecked ()
+    }
+
+    方法 开关状态 <公开 属性写 注释 = "设置右侧开关状态。">
+    参数 新状态 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUISuperTextView ().setSwitchIsChecked (@<新状态>))
+    }
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层 SuperTextView 原生对象，供嵌入行调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetXUISuperTextView ()
+    }
+}

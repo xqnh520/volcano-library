@@ -1,0 +1,7 @@
+{
+    "name":  "火山OCCT几何",
+    "version":  "1.0.0",
+    "desc":  "火山OCCT几何 类库",
+    "author":  "xqnh520",
+    "entry":  "火山OCCT几何.vgrp"
+}

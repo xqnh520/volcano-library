@@ -1,0 +1,34 @@
+
+opened_files
+{
+    file1
+    {
+        inside_project = D2D绘制引擎类库
+        name = "..\\D2D绘制引擎.wsv"
+        pos = 1
+    }
+
+    file2
+    {
+        inside_project = D2D绘制引擎类库
+        name = "..\\D2D内存画板.wsv"
+        pos = 272
+    }
+
+    file3
+    {
+        inside_project = D2D绘制引擎类库
+        name = "示例_窗口绘制.wsv"
+        pos = 539
+    }
+
+    file4
+    {
+        active = true
+        inside_project = D2D绘制引擎类库
+        name = "..\\D2D绘制组件.wsv"
+        pos = 28
+    }
+
+    num_files = 4
+}

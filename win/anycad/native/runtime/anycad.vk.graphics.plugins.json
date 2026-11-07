@@ -1,0 +1,11 @@
+{
+  "Version": "1.0",
+  "Plugins": [
+    {
+      "Name": "Graphics.GuiVulkan",
+      "Url": "AnyCAD.Graphics.Gui.Vulkan",
+      "Enabled": true,
+      "Group": "Graphics"
+    }
+  ]
+}

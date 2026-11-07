@@ -1,0 +1,12 @@
+doc_format_version = 1
+project_identifier = "wutao.vproject.pc.win.1"
+author = "bmy"
+name = "WinAPI封装类"
+version = 1
+unique_mark = windows_api
+explain = "[WinAPI封装类]模块: 除视窗基本类外不依赖任何其他模块, 提供常用 Win32 API 的火山封装(窗口/显示器/进程/文件/剪贴板/注册表/外壳/托盘/定时器/钩子等)."
+dependence = "*\\sys\\base\\base.vgrp"
+file
+{
+    name = "w_winapi_窗口.wsv"
+}

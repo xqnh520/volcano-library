@@ -1,0 +1,27 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.即时界面 <注释 = "Dear ImGui v1.91.9b-docking 的火山视窗中文封装，全中文类名/方法名/参数名/注释。" @视窗.头文件搜寻目录 = "imgui"
+        @视窗.外部头文件 = "imcn_helper.h, imcn_host.h"
+        @视窗.外部源文件 = "imgui\\imgui.cpp, imgui\\imgui_draw.cpp, imgui\\imgui_tables.cpp, imgui\\imgui_widgets.cpp, imgui\\imgui_demo.cpp, imgui\\misc\\cpp\\imgui_stdlib.cpp, imgui\\backends\\imgui_impl_win32.cpp, imgui\\backends\\imgui_impl_dx11.cpp">
+
+类 鼠标光标 <公开 注释 = "鼠标光标形状" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 无 <公开 类型 = 整数 值 = @ImGuiMouseCursor_None>
+    常量 箭头 <公开 类型 = 整数 值 = @ImGuiMouseCursor_Arrow>
+    常量 文本输入 <公开 类型 = 整数 值 = @ImGuiMouseCursor_TextInput>
+    常量 全向调整 <公开 类型 = 整数 值 = @ImGuiMouseCursor_ResizeAll>
+    常量 垂直调整 <公开 类型 = 整数 值 = @ImGuiMouseCursor_ResizeNS>
+    常量 水平调整 <公开 类型 = 整数 值 = @ImGuiMouseCursor_ResizeEW>
+    常量 东北西南调整 <公开 类型 = 整数 值 = @ImGuiMouseCursor_ResizeNESW>
+    常量 西北东南调整 <公开 类型 = 整数 值 = @ImGuiMouseCursor_ResizeNWSE>
+    常量 手型 <公开 类型 = 整数 值 = @ImGuiMouseCursor_Hand>
+    常量 等待 <公开 类型 = 整数 值 = @ImGuiMouseCursor_Wait>
+    常量 进度 <公开 类型 = 整数 值 = @ImGuiMouseCursor_Progress>
+    常量 禁止 <公开 类型 = 整数 值 = @ImGuiMouseCursor_NotAllowed>
+}
+类 鼠标来源 <公开 注释 = "鼠标输入来源" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 鼠标 <公开 类型 = 整数 值 = @ImGuiMouseSource_Mouse>
+    常量 触摸屏 <公开 类型 = 整数 值 = @ImGuiMouseSource_TouchScreen>
+    常量 手写笔 <公开 类型 = 整数 值 = @ImGuiMouseSource_Pen>
+}

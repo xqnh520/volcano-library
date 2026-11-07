@@ -1,0 +1,13 @@
+doc_format_version = 1
+project_identifier = "wutao.vproject.pc.win.1"
+author = "T01 P13 P14 probe"
+name = "AC根类探针"
+version = 1
+unique_mark = 
+explain = "P13: subclass inherits parent static methods"
+dependence = "*\sys\base\base.vgrp"
+file
+{
+    name = "b1_root.wsv"
+    name = "b2_child.wsv"
+}

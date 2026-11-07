@@ -1,0 +1,13 @@
+doc_format_version = 1
+project_identifier = "wutao.vproject.pc.win.1"
+author = "enum form probe"
+name = "AC枚举探针"
+version = 1
+unique_mark = 
+explain = "verify volcano accepts 常量 enum classes"
+dependence = "*\sys\base\base.vgrp"
+file
+{
+    name = "e1a_proper.wsv"
+    name = "e1c_chinese.wsv"
+}

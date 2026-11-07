@@ -1,0 +1,628 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.Box2D <注释 = "调试绘制：绘制设置结构与 10 个绘制回调 · Box2D 3.2.0 单精度" @视窗.头文件搜寻目录 = "include"
+        @视窗.外部头文件 = "b2vol.h" @视窗.库文件搜寻目录 = "lib/x64"
+        @视窗.外部库 = "box2d$(d).lib">
+
+类 B2多边形绘制回调 <公开 注释 = "多边形绘制回调 · b2volDrawPolygonFcn" @别名 = "b2volDrawPolygonFcn" @别名类型 = 本地整数基本类型 @有效值范围 = "">
+{
+    常量 空指针 <公开 类型 = B2多边形绘制回调 注释 = "空指针 · @nullptr" 值 = @nullptr>
+
+    方法 回调模板 <公开 静态 注释 = "绘制闭合多边形 · b2volDrawPolygonFcn">
+    参数 变换横 <类型 = 单精度小数>
+    参数 变换纵 <类型 = 单精度小数>
+    参数 旋转余弦 <类型 = 单精度小数>
+    参数 旋转正弦 <类型 = 单精度小数>
+    参数 顶点指针 <类型 = 变整数>
+    参数 顶点数量 <类型 = 整数>
+    参数 颜色 <类型 = 整数>
+    参数 上下文 <类型 = 变整数>
+    {
+    }
+
+    方法 创建 <公开 静态 类型 = B2多边形绘制回调 注释 = "创建回调值 · b2volDrawPolygonFcn" @嵌入式方法 = "">
+    参数 回调函数 <@匹配方法 = "回调模板">
+    {
+        @ (b2volDrawPolygonFcn)&@<回调函数>
+    }
+
+}
+
+类 B2实心多边形绘制回调 <公开 注释 = "实心多边形绘制回调 · b2volDrawSolidPolygonFcn" @别名 = "b2volDrawSolidPolygonFcn" @别名类型 = 本地整数基本类型 @有效值范围 = "">
+{
+    常量 空指针 <公开 类型 = B2实心多边形绘制回调 注释 = "空指针 · @nullptr" 值 = @nullptr>
+
+    方法 回调模板 <公开 静态 注释 = "绘制实心多边形 · b2volDrawSolidPolygonFcn">
+    参数 变换横 <类型 = 单精度小数>
+    参数 变换纵 <类型 = 单精度小数>
+    参数 旋转余弦 <类型 = 单精度小数>
+    参数 旋转正弦 <类型 = 单精度小数>
+    参数 顶点指针 <类型 = 变整数>
+    参数 顶点数量 <类型 = 整数>
+    参数 半径 <类型 = 单精度小数>
+    参数 颜色 <类型 = 整数>
+    参数 上下文 <类型 = 变整数>
+    {
+    }
+
+    方法 创建 <公开 静态 类型 = B2实心多边形绘制回调 注释 = "创建回调值 · b2volDrawSolidPolygonFcn" @嵌入式方法 = "">
+    参数 回调函数 <@匹配方法 = "回调模板">
+    {
+        @ (b2volDrawSolidPolygonFcn)&@<回调函数>
+    }
+
+}
+
+类 B2圆绘制回调 <公开 注释 = "圆绘制回调 · b2volDrawCircleFcn" @别名 = "b2volDrawCircleFcn" @别名类型 = 本地整数基本类型 @有效值范围 = "">
+{
+    常量 空指针 <公开 类型 = B2圆绘制回调 注释 = "空指针 · @nullptr" 值 = @nullptr>
+
+    方法 回调模板 <公开 静态 注释 = "绘制圆 · b2volDrawCircleFcn">
+    参数 中心横 <类型 = 单精度小数>
+    参数 中心纵 <类型 = 单精度小数>
+    参数 半径 <类型 = 单精度小数>
+    参数 颜色 <类型 = 整数>
+    参数 上下文 <类型 = 变整数>
+    {
+    }
+
+    方法 创建 <公开 静态 类型 = B2圆绘制回调 注释 = "创建回调值 · b2volDrawCircleFcn" @嵌入式方法 = "">
+    参数 回调函数 <@匹配方法 = "回调模板">
+    {
+        @ (b2volDrawCircleFcn)&@<回调函数>
+    }
+
+}
+
+类 B2实心圆绘制回调 <公开 注释 = "实心圆绘制回调 · b2volDrawSolidCircleFcn" @别名 = "b2volDrawSolidCircleFcn" @别名类型 = 本地整数基本类型 @有效值范围 = "">
+{
+    常量 空指针 <公开 类型 = B2实心圆绘制回调 注释 = "空指针 · @nullptr" 值 = @nullptr>
+
+    方法 回调模板 <公开 静态 注释 = "绘制实心圆 · b2volDrawSolidCircleFcn">
+    参数 变换横 <类型 = 单精度小数>
+    参数 变换纵 <类型 = 单精度小数>
+    参数 旋转余弦 <类型 = 单精度小数>
+    参数 旋转正弦 <类型 = 单精度小数>
+    参数 中心横 <类型 = 单精度小数>
+    参数 中心纵 <类型 = 单精度小数>
+    参数 半径 <类型 = 单精度小数>
+    参数 颜色 <类型 = 整数>
+    参数 上下文 <类型 = 变整数>
+    {
+    }
+
+    方法 创建 <公开 静态 类型 = B2实心圆绘制回调 注释 = "创建回调值 · b2volDrawSolidCircleFcn" @嵌入式方法 = "">
+    参数 回调函数 <@匹配方法 = "回调模板">
+    {
+        @ (b2volDrawSolidCircleFcn)&@<回调函数>
+    }
+
+}
+
+类 B2实心胶囊绘制回调 <公开 注释 = "实心胶囊绘制回调 · b2volDrawSolidCapsuleFcn" @别名 = "b2volDrawSolidCapsuleFcn" @别名类型 = 本地整数基本类型 @有效值范围 = "">
+{
+    常量 空指针 <公开 类型 = B2实心胶囊绘制回调 注释 = "空指针 · @nullptr" 值 = @nullptr>
+
+    方法 回调模板 <公开 静态 注释 = "绘制实心胶囊 · b2volDrawSolidCapsuleFcn">
+    参数 点甲横 <类型 = 单精度小数>
+    参数 点甲纵 <类型 = 单精度小数>
+    参数 点乙横 <类型 = 单精度小数>
+    参数 点乙纵 <类型 = 单精度小数>
+    参数 半径 <类型 = 单精度小数>
+    参数 颜色 <类型 = 整数>
+    参数 上下文 <类型 = 变整数>
+    {
+    }
+
+    方法 创建 <公开 静态 类型 = B2实心胶囊绘制回调 注释 = "创建回调值 · b2volDrawSolidCapsuleFcn" @嵌入式方法 = "">
+    参数 回调函数 <@匹配方法 = "回调模板">
+    {
+        @ (b2volDrawSolidCapsuleFcn)&@<回调函数>
+    }
+
+}
+
+类 B2线段绘制回调 <公开 注释 = "线段绘制回调 · b2volDrawLineFcn" @别名 = "b2volDrawLineFcn" @别名类型 = 本地整数基本类型 @有效值范围 = "">
+{
+    常量 空指针 <公开 类型 = B2线段绘制回调 注释 = "空指针 · @nullptr" 值 = @nullptr>
+
+    方法 回调模板 <公开 静态 注释 = "绘制线段 · b2volDrawLineFcn">
+    参数 点甲横 <类型 = 单精度小数>
+    参数 点甲纵 <类型 = 单精度小数>
+    参数 点乙横 <类型 = 单精度小数>
+    参数 点乙纵 <类型 = 单精度小数>
+    参数 颜色 <类型 = 整数>
+    参数 上下文 <类型 = 变整数>
+    {
+    }
+
+    方法 创建 <公开 静态 类型 = B2线段绘制回调 注释 = "创建回调值 · b2volDrawLineFcn" @嵌入式方法 = "">
+    参数 回调函数 <@匹配方法 = "回调模板">
+    {
+        @ (b2volDrawLineFcn)&@<回调函数>
+    }
+
+}
+
+类 B2变换绘制回调 <公开 注释 = "变换绘制回调 · b2volDrawTransformFcn" @别名 = "b2volDrawTransformFcn" @别名类型 = 本地整数基本类型 @有效值范围 = "">
+{
+    常量 空指针 <公开 类型 = B2变换绘制回调 注释 = "空指针 · @nullptr" 值 = @nullptr>
+
+    方法 回调模板 <公开 静态 注释 = "绘制坐标系 · b2volDrawTransformFcn">
+    参数 变换横 <类型 = 单精度小数>
+    参数 变换纵 <类型 = 单精度小数>
+    参数 旋转余弦 <类型 = 单精度小数>
+    参数 旋转正弦 <类型 = 单精度小数>
+    参数 上下文 <类型 = 变整数>
+    {
+    }
+
+    方法 创建 <公开 静态 类型 = B2变换绘制回调 注释 = "创建回调值 · b2volDrawTransformFcn" @嵌入式方法 = "">
+    参数 回调函数 <@匹配方法 = "回调模板">
+    {
+        @ (b2volDrawTransformFcn)&@<回调函数>
+    }
+
+}
+
+类 B2点绘制回调 <公开 注释 = "点绘制回调 · b2volDrawPointFcn" @别名 = "b2volDrawPointFcn" @别名类型 = 本地整数基本类型 @有效值范围 = "">
+{
+    常量 空指针 <公开 类型 = B2点绘制回调 注释 = "空指针 · @nullptr" 值 = @nullptr>
+
+    方法 回调模板 <公开 静态 注释 = "绘制点 · b2volDrawPointFcn">
+    参数 点横 <类型 = 单精度小数>
+    参数 点纵 <类型 = 单精度小数>
+    参数 尺寸 <类型 = 单精度小数>
+    参数 颜色 <类型 = 整数>
+    参数 上下文 <类型 = 变整数>
+    {
+    }
+
+    方法 创建 <公开 静态 类型 = B2点绘制回调 注释 = "创建回调值 · b2volDrawPointFcn" @嵌入式方法 = "">
+    参数 回调函数 <@匹配方法 = "回调模板">
+    {
+        @ (b2volDrawPointFcn)&@<回调函数>
+    }
+
+}
+
+类 B2文本绘制回调 <公开 注释 = "文本绘制回调 · b2volDrawStringFcn" @别名 = "b2volDrawStringFcn" @别名类型 = 本地整数基本类型 @有效值范围 = "">
+{
+    常量 空指针 <公开 类型 = B2文本绘制回调 注释 = "空指针 · @nullptr" 值 = @nullptr>
+
+    方法 回调模板 <公开 静态 注释 = "绘制世界空间文本 · b2volDrawStringFcn">
+    参数 点横 <类型 = 单精度小数>
+    参数 点纵 <类型 = 单精度小数>
+    参数 文本指针 <类型 = 变整数>
+    参数 颜色 <类型 = 整数>
+    参数 上下文 <类型 = 变整数>
+    {
+    }
+
+    方法 创建 <公开 静态 类型 = B2文本绘制回调 注释 = "创建回调值 · b2volDrawStringFcn" @嵌入式方法 = "">
+    参数 回调函数 <@匹配方法 = "回调模板">
+    {
+        @ (b2volDrawStringFcn)&@<回调函数>
+    }
+
+}
+
+类 B2包围盒绘制回调 <公开 注释 = "包围盒绘制回调 · b2volDrawBoundsFcn" @别名 = "b2volDrawBoundsFcn" @别名类型 = 本地整数基本类型 @有效值范围 = "">
+{
+    常量 空指针 <公开 类型 = B2包围盒绘制回调 注释 = "空指针 · @nullptr" 值 = @nullptr>
+
+    方法 回调模板 <公开 静态 注释 = "绘制包围盒 · b2volDrawBoundsFcn">
+    参数 下界横 <类型 = 单精度小数>
+    参数 下界纵 <类型 = 单精度小数>
+    参数 上界横 <类型 = 单精度小数>
+    参数 上界纵 <类型 = 单精度小数>
+    参数 颜色 <类型 = 整数>
+    参数 上下文 <类型 = 变整数>
+    {
+    }
+
+    方法 创建 <公开 静态 类型 = B2包围盒绘制回调 注释 = "创建回调值 · b2volDrawBoundsFcn" @嵌入式方法 = "">
+    参数 回调函数 <@匹配方法 = "回调模板">
+    {
+        @ (b2volDrawBoundsFcn)&@<回调函数>
+    }
+
+}
+
+类 B2摩擦回调 <公开 注释 = "摩擦回调 · b2FrictionCallbackFcn" @别名 = "b2FrictionCallbackFcn*" @别名类型 = 本地整数基本类型 @有效值范围 = "">
+{
+    常量 空指针 <公开 类型 = B2摩擦回调 注释 = "空指针 · @nullptr" 值 = @nullptr>
+
+    方法 回调模板 <公开 静态 类型 = 单精度小数 注释 = "摩擦混合函数 · b2FrictionCallbackFcn">
+    参数 摩擦甲 <类型 = 单精度小数>
+    参数 材质号甲 <类型 = 长整数>
+    参数 摩擦乙 <类型 = 单精度小数>
+    参数 材质号乙 <类型 = 长整数>
+    {
+        返回 (0.0)
+    }
+
+    方法 创建 <公开 静态 类型 = B2摩擦回调 注释 = "创建回调值 · b2FrictionCallbackFcn*" @嵌入式方法 = "">
+    参数 回调函数 <@匹配方法 = "回调模板">
+    {
+        @ (b2FrictionCallbackFcn*)&@<回调函数>
+    }
+
+}
+
+类 B2恢复系数回调 <公开 注释 = "恢复系数回调 · b2RestitutionCallbackFcn" @别名 = "b2RestitutionCallbackFcn*" @别名类型 = 本地整数基本类型 @有效值范围 = "">
+{
+    常量 空指针 <公开 类型 = B2恢复系数回调 注释 = "空指针 · @nullptr" 值 = @nullptr>
+
+    方法 回调模板 <公开 静态 类型 = 单精度小数 注释 = "恢复系数混合函数 · b2RestitutionCallbackFcn">
+    参数 恢复甲 <类型 = 单精度小数>
+    参数 材质号甲 <类型 = 长整数>
+    参数 恢复乙 <类型 = 单精度小数>
+    参数 材质号乙 <类型 = 长整数>
+    {
+        返回 (0.0)
+    }
+
+    方法 创建 <公开 静态 类型 = B2恢复系数回调 注释 = "创建回调值 · b2RestitutionCallbackFcn*" @嵌入式方法 = "">
+    参数 回调函数 <@匹配方法 = "回调模板">
+    {
+        @ (b2RestitutionCallbackFcn*)&@<回调函数>
+    }
+
+}
+
+类 B2入队任务回调 <公开 注释 = "入队任务回调 · b2EnqueueTaskCallbackFcn" @别名 = "b2EnqueueTaskCallbackFcn*" @别名类型 = 本地整数基本类型 @有效值范围 = "">
+{
+    常量 空指针 <公开 类型 = B2入队任务回调 注释 = "空指针 · @nullptr" 值 = @nullptr>
+
+    方法 回调模板 <公开 静态 类型 = 变整数 注释 = "任务入队函数 · b2EnqueueTaskCallbackFcn">
+    参数 任务 <类型 = 变整数>
+    参数 任务上下文 <类型 = 变整数>
+    参数 用户上下文 <类型 = 变整数>
+    {
+        返回 (0)
+    }
+
+    方法 创建 <公开 静态 类型 = B2入队任务回调 注释 = "创建回调值 · b2EnqueueTaskCallbackFcn*" @嵌入式方法 = "">
+    参数 回调函数 <@匹配方法 = "回调模板">
+    {
+        @ (b2EnqueueTaskCallbackFcn*)&@<回调函数>
+    }
+
+}
+
+类 B2完成任务回调 <公开 注释 = "完成任务回调 · b2FinishTaskCallbackFcn" @别名 = "b2FinishTaskCallbackFcn*" @别名类型 = 本地整数基本类型 @有效值范围 = "">
+{
+    常量 空指针 <公开 类型 = B2完成任务回调 注释 = "空指针 · @nullptr" 值 = @nullptr>
+
+    方法 回调模板 <公开 静态 注释 = "任务收尾函数 · b2FinishTaskCallbackFcn">
+    参数 用户任务 <类型 = 变整数>
+    参数 用户上下文 <类型 = 变整数>
+    {
+    }
+
+    方法 创建 <公开 静态 类型 = B2完成任务回调 注释 = "创建回调值 · b2FinishTaskCallbackFcn*" @嵌入式方法 = "">
+    参数 回调函数 <@匹配方法 = "回调模板">
+    {
+        @ (b2FinishTaskCallbackFcn*)&@<回调函数>
+    }
+
+}
+
+类 B2重叠结果回调 <公开 注释 = "重叠结果回调 · b2OverlapResultCallbackFcn" @别名 = "b2volOverlapResultFcn" @别名类型 = 本地整数基本类型 @有效值范围 = "">
+{
+    常量 空指针 <公开 类型 = B2重叠结果回调 注释 = "空指针 · @nullptr" 值 = @nullptr>
+
+    方法 回调模板 <公开 静态 类型 = 逻辑型 注释 = "重叠查询结果函数（原生扁平化转调） · b2OverlapResultCallbackFcn">
+    参数 标识索引 <类型 = 整数>
+    参数 标识世界代数 <类型 = 整数>
+    参数 上下文 <类型 = 变整数>
+    {
+        返回 (真)
+    }
+
+    方法 创建 <公开 静态 类型 = B2重叠结果回调 注释 = "创建回调值 · b2volOverlapResultFcn" @嵌入式方法 = "">
+    参数 回调函数 <@匹配方法 = "回调模板">
+    {
+        @ (b2volOverlapResultFcn)&@<回调函数>
+    }
+
+}
+
+类 B2投射结果回调 <公开 注释 = "投射结果回调 · b2CastResultCallbackFcn" @别名 = "b2volCastResultFcn" @别名类型 = 本地整数基本类型 @有效值范围 = "">
+{
+    常量 空指针 <公开 类型 = B2投射结果回调 注释 = "空指针 · @nullptr" 值 = @nullptr>
+
+    方法 回调模板 <公开 静态 类型 = 单精度小数 注释 = "投射结果函数（原生扁平化转调） · b2CastResultCallbackFcn">
+    参数 标识索引 <类型 = 整数>
+    参数 标识世界代数 <类型 = 整数>
+    参数 点横 <类型 = 单精度小数>
+    参数 点纵 <类型 = 单精度小数>
+    参数 法线横 <类型 = 单精度小数>
+    参数 法线纵 <类型 = 单精度小数>
+    参数 比例 <类型 = 单精度小数>
+    参数 上下文 <类型 = 变整数>
+    {
+        返回 (0.0)
+    }
+
+    方法 创建 <公开 静态 类型 = B2投射结果回调 注释 = "创建回调值 · b2volCastResultFcn" @嵌入式方法 = "">
+    参数 回调函数 <@匹配方法 = "回调模板">
+    {
+        @ (b2volCastResultFcn)&@<回调函数>
+    }
+
+}
+
+类 B2平面结果回调 <公开 注释 = "平面结果回调 · b2PlaneResultCallbackFcn" @别名 = "b2volPlaneResultFcn" @别名类型 = 本地整数基本类型 @有效值范围 = "">
+{
+    常量 空指针 <公开 类型 = B2平面结果回调 注释 = "空指针 · @nullptr" 值 = @nullptr>
+
+    方法 回调模板 <公开 静态 类型 = 逻辑型 注释 = "平面结果函数（原生扁平化转调） · b2PlaneResultCallbackFcn">
+    参数 标识索引 <类型 = 整数>
+    参数 标识世界代数 <类型 = 整数>
+    参数 平面结果 <类型 = 变整数>
+    参数 上下文 <类型 = 变整数>
+    {
+        返回 (真)
+    }
+
+    方法 创建 <公开 静态 类型 = B2平面结果回调 注释 = "创建回调值 · b2volPlaneResultFcn" @嵌入式方法 = "">
+    参数 回调函数 <@匹配方法 = "回调模板">
+    {
+        @ (b2volPlaneResultFcn)&@<回调函数>
+    }
+
+}
+
+类 B2自定义过滤回调 <公开 注释 = "自定义过滤回调 · b2CustomFilterCallbackFcn" @别名 = "b2volCustomFilterFcn" @别名类型 = 本地整数基本类型 @有效值范围 = "">
+{
+    常量 空指针 <公开 类型 = B2自定义过滤回调 注释 = "空指针 · @nullptr" 值 = @nullptr>
+
+    方法 回调模板 <公开 静态 类型 = 逻辑型 注释 = "自定义过滤函数（原生扁平化转调） · b2CustomFilterCallbackFcn">
+    参数 甲索引 <类型 = 整数>
+    参数 甲世界代数 <类型 = 整数>
+    参数 乙索引 <类型 = 整数>
+    参数 乙世界代数 <类型 = 整数>
+    参数 上下文 <类型 = 变整数>
+    {
+        返回 (真)
+    }
+
+    方法 创建 <公开 静态 类型 = B2自定义过滤回调 注释 = "创建回调值 · b2volCustomFilterFcn" @嵌入式方法 = "">
+    参数 回调函数 <@匹配方法 = "回调模板">
+    {
+        @ (b2volCustomFilterFcn)&@<回调函数>
+    }
+
+}
+
+类 B2接触前求解回调 <公开 注释 = "接触前求解回调 · b2PreSolveCallbackFcn" @别名 = "b2volPreSolveFcn" @别名类型 = 本地整数基本类型 @有效值范围 = "">
+{
+    常量 空指针 <公开 类型 = B2接触前求解回调 注释 = "空指针 · @nullptr" 值 = @nullptr>
+
+    方法 回调模板 <公开 静态 注释 = "接触前求解函数（原生扁平化转调） · b2PreSolveCallbackFcn">
+    参数 甲索引 <类型 = 整数>
+    参数 甲世界代数 <类型 = 整数>
+    参数 乙索引 <类型 = 整数>
+    参数 乙世界代数 <类型 = 整数>
+    参数 流形 <类型 = 变整数>
+    参数 上下文 <类型 = 变整数>
+    {
+    }
+
+    方法 创建 <公开 静态 类型 = B2接触前求解回调 注释 = "创建回调值 · b2volPreSolveFcn" @嵌入式方法 = "">
+    参数 回调函数 <@匹配方法 = "回调模板">
+    {
+        @ (b2volPreSolveFcn)&@<回调函数>
+    }
+
+}
+
+类 B2连续碰撞前回调 <公开 注释 = "连续碰撞前回调 · b2PreContinuousCallbackFcn" @别名 = "b2volPreContinuousFcn" @别名类型 = 本地整数基本类型 @有效值范围 = "">
+{
+    常量 空指针 <公开 类型 = B2连续碰撞前回调 注释 = "空指针 · @nullptr" 值 = @nullptr>
+
+    方法 回调模板 <公开 静态 类型 = 逻辑型 注释 = "连续碰撞前函数（原生扁平化转调） · b2PreContinuousCallbackFcn">
+    参数 甲索引 <类型 = 整数>
+    参数 甲世界代数 <类型 = 整数>
+    参数 乙索引 <类型 = 整数>
+    参数 乙世界代数 <类型 = 整数>
+    参数 点横 <类型 = 单精度小数>
+    参数 点纵 <类型 = 单精度小数>
+    参数 法线横 <类型 = 单精度小数>
+    参数 法线纵 <类型 = 单精度小数>
+    参数 上下文 <类型 = 变整数>
+    {
+        返回 (真)
+    }
+
+    方法 创建 <公开 静态 类型 = B2连续碰撞前回调 注释 = "创建回调值 · b2volPreContinuousFcn" @嵌入式方法 = "">
+    参数 回调函数 <@匹配方法 = "回调模板">
+    {
+        @ (b2volPreContinuousFcn)&@<回调函数>
+    }
+
+}
+
+类 B2调试绘制 <公开 注释 = "调试绘制 · b2DebugDraw" @别名 = "b2DebugDraw" @别名类型 = 本地结构>
+{
+    变量 绘制范围包围盒 <公开 类型 = B2包围盒 注释 = "调试绘制使用的世界范围 · b2DebugDraw.drawingBounds" @输出名 = "drawingBounds">
+    变量 力倍率 <公开 类型 = 单精度小数 注释 = "绘制力时的缩放系数 · b2DebugDraw.forceScale" @输出名 = "forceScale">
+    变量 关节倍率 <公开 类型 = 单精度小数 注释 = "关节绘制的全局缩放 · b2DebugDraw.jointScale" @输出名 = "jointScale">
+    变量 绘制接触 <公开 类型 = 逻辑型 注释 = "是否绘制接触点 · b2DebugDraw.drawContacts" @输出名 = "drawContacts">
+    变量 绘制锚点甲 <公开 类型 = 逻辑型 注释 = "接触点是否绘制锚点甲而非锚点乙 · b2DebugDraw.drawAnchorA" @输出名 = "drawAnchorA">
+    变量 绘制形状 <公开 类型 = 逻辑型 注释 = "是否绘制形状 · b2DebugDraw.drawShapes" @输出名 = "drawShapes">
+    变量 绘制链条法线 <公开 类型 = 逻辑型 注释 = "是否绘制链条形状法线 · b2DebugDraw.drawChainNormals" @输出名 = "drawChainNormals">
+    变量 绘制关节 <公开 类型 = 逻辑型 注释 = "是否绘制关节 · b2DebugDraw.drawJoints" @输出名 = "drawJoints">
+    变量 绘制关节附加 <公开 类型 = 逻辑型 注释 = "是否绘制关节附加信息 · b2DebugDraw.drawJointExtras" @输出名 = "drawJointExtras">
+    变量 绘制包围盒 <公开 类型 = 逻辑型 注释 = "是否绘制形状包围盒 · b2DebugDraw.drawBounds" @输出名 = "drawBounds">
+    变量 绘制质量 <公开 类型 = 逻辑型 注释 = "是否绘制动态刚体的质量与质心 · b2DebugDraw.drawMass" @输出名 = "drawMass">
+    变量 绘制刚体名称 <公开 类型 = 逻辑型 注释 = "是否绘制刚体名称 · b2DebugDraw.drawBodyNames" @输出名 = "drawBodyNames">
+    变量 绘制图颜色 <公开 类型 = 逻辑型 注释 = "是否用图着色可视化接触与关节 · b2DebugDraw.drawGraphColors" @输出名 = "drawGraphColors">
+    变量 绘制接触特征 <公开 类型 = 逻辑型 注释 = "是否绘制接触特征标识 · b2DebugDraw.drawContactFeatures" @输出名 = "drawContactFeatures">
+    变量 绘制接触法线 <公开 类型 = 逻辑型 注释 = "是否绘制接触法线 · b2DebugDraw.drawContactNormals" @输出名 = "drawContactNormals">
+    变量 绘制接触力 <公开 类型 = 逻辑型 注释 = "是否绘制接触法向力 · b2DebugDraw.drawContactForces" @输出名 = "drawContactForces">
+    变量 绘制摩擦力 <公开 类型 = 逻辑型 注释 = "是否绘制接触摩擦力 · b2DebugDraw.drawFrictionForces" @输出名 = "drawFrictionForces">
+    变量 绘制岛屿 <公开 类型 = 逻辑型 注释 = "是否用包围盒绘制岛屿 · b2DebugDraw.drawIslands" @输出名 = "drawIslands">
+
+    方法 取上下文指针 <公开 静态 类型 = 变整数 注释 = "读取上下文字段指针 · b2vol_debugDraw_getContext" @嵌入式方法 = "">
+    参数 定义 <类型 = B2调试绘制>
+    {
+        @ (intptr_t)b2vol_debugDraw_getContext(&@<定义>)
+    }
+
+    方法 置上下文指针 <公开 静态 注释 = "写入上下文字段指针 · b2vol_debugDraw_setContext" @嵌入式方法 = "">
+    参数 定义 <类型 = B2调试绘制>
+    参数 新值 <类型 = 变整数>
+    {
+        @ b2vol_debugDraw_setContext(&@<定义>, (void*)@<新值>)
+    }
+
+    方法 置多边形绘制回调 <公开 静态 注释 = "写入多边形绘制回调字段 · b2vol_debugDraw_setDrawPolygonFcn" @嵌入式方法 = "">
+    参数 定义 <类型 = B2调试绘制>
+    参数 回调 <类型 = B2多边形绘制回调>
+    {
+        @ b2vol_debugDraw_setDrawPolygonFcn(&@<定义>, @<回调>)
+    }
+
+    方法 取多边形绘制回调 <公开 静态 类型 = B2多边形绘制回调 注释 = "读取多边形绘制回调字段 · b2vol_debugDraw_getDrawPolygonFcn" @嵌入式方法 = "">
+    参数 定义 <类型 = B2调试绘制>
+    {
+        @ b2vol_debugDraw_getDrawPolygonFcn(&@<定义>)
+    }
+
+    方法 置实心多边形绘制回调 <公开 静态 注释 = "写入实心多边形绘制回调字段 · b2vol_debugDraw_setDrawSolidPolygonFcn" @嵌入式方法 = "">
+    参数 定义 <类型 = B2调试绘制>
+    参数 回调 <类型 = B2实心多边形绘制回调>
+    {
+        @ b2vol_debugDraw_setDrawSolidPolygonFcn(&@<定义>, @<回调>)
+    }
+
+    方法 取实心多边形绘制回调 <公开 静态 类型 = B2实心多边形绘制回调 注释 = "读取实心多边形绘制回调字段 · b2vol_debugDraw_getDrawSolidPolygonFcn" @嵌入式方法 = "">
+    参数 定义 <类型 = B2调试绘制>
+    {
+        @ b2vol_debugDraw_getDrawSolidPolygonFcn(&@<定义>)
+    }
+
+    方法 置圆绘制回调 <公开 静态 注释 = "写入圆绘制回调字段 · b2vol_debugDraw_setDrawCircleFcn" @嵌入式方法 = "">
+    参数 定义 <类型 = B2调试绘制>
+    参数 回调 <类型 = B2圆绘制回调>
+    {
+        @ b2vol_debugDraw_setDrawCircleFcn(&@<定义>, @<回调>)
+    }
+
+    方法 取圆绘制回调 <公开 静态 类型 = B2圆绘制回调 注释 = "读取圆绘制回调字段 · b2vol_debugDraw_getDrawCircleFcn" @嵌入式方法 = "">
+    参数 定义 <类型 = B2调试绘制>
+    {
+        @ b2vol_debugDraw_getDrawCircleFcn(&@<定义>)
+    }
+
+    方法 置实心圆绘制回调 <公开 静态 注释 = "写入实心圆绘制回调字段 · b2vol_debugDraw_setDrawSolidCircleFcn" @嵌入式方法 = "">
+    参数 定义 <类型 = B2调试绘制>
+    参数 回调 <类型 = B2实心圆绘制回调>
+    {
+        @ b2vol_debugDraw_setDrawSolidCircleFcn(&@<定义>, @<回调>)
+    }
+
+    方法 取实心圆绘制回调 <公开 静态 类型 = B2实心圆绘制回调 注释 = "读取实心圆绘制回调字段 · b2vol_debugDraw_getDrawSolidCircleFcn" @嵌入式方法 = "">
+    参数 定义 <类型 = B2调试绘制>
+    {
+        @ b2vol_debugDraw_getDrawSolidCircleFcn(&@<定义>)
+    }
+
+    方法 置实心胶囊绘制回调 <公开 静态 注释 = "写入实心胶囊绘制回调字段 · b2vol_debugDraw_setDrawSolidCapsuleFcn" @嵌入式方法 = "">
+    参数 定义 <类型 = B2调试绘制>
+    参数 回调 <类型 = B2实心胶囊绘制回调>
+    {
+        @ b2vol_debugDraw_setDrawSolidCapsuleFcn(&@<定义>, @<回调>)
+    }
+
+    方法 取实心胶囊绘制回调 <公开 静态 类型 = B2实心胶囊绘制回调 注释 = "读取实心胶囊绘制回调字段 · b2vol_debugDraw_getDrawSolidCapsuleFcn" @嵌入式方法 = "">
+    参数 定义 <类型 = B2调试绘制>
+    {
+        @ b2vol_debugDraw_getDrawSolidCapsuleFcn(&@<定义>)
+    }
+
+    方法 置线段绘制回调 <公开 静态 注释 = "写入线段绘制回调字段 · b2vol_debugDraw_setDrawLineFcn" @嵌入式方法 = "">
+    参数 定义 <类型 = B2调试绘制>
+    参数 回调 <类型 = B2线段绘制回调>
+    {
+        @ b2vol_debugDraw_setDrawLineFcn(&@<定义>, @<回调>)
+    }
+
+    方法 取线段绘制回调 <公开 静态 类型 = B2线段绘制回调 注释 = "读取线段绘制回调字段 · b2vol_debugDraw_getDrawLineFcn" @嵌入式方法 = "">
+    参数 定义 <类型 = B2调试绘制>
+    {
+        @ b2vol_debugDraw_getDrawLineFcn(&@<定义>)
+    }
+
+    方法 置变换绘制回调 <公开 静态 注释 = "写入变换绘制回调字段 · b2vol_debugDraw_setDrawTransformFcn" @嵌入式方法 = "">
+    参数 定义 <类型 = B2调试绘制>
+    参数 回调 <类型 = B2变换绘制回调>
+    {
+        @ b2vol_debugDraw_setDrawTransformFcn(&@<定义>, @<回调>)
+    }
+
+    方法 取变换绘制回调 <公开 静态 类型 = B2变换绘制回调 注释 = "读取变换绘制回调字段 · b2vol_debugDraw_getDrawTransformFcn" @嵌入式方法 = "">
+    参数 定义 <类型 = B2调试绘制>
+    {
+        @ b2vol_debugDraw_getDrawTransformFcn(&@<定义>)
+    }
+
+    方法 置点绘制回调 <公开 静态 注释 = "写入点绘制回调字段 · b2vol_debugDraw_setDrawPointFcn" @嵌入式方法 = "">
+    参数 定义 <类型 = B2调试绘制>
+    参数 回调 <类型 = B2点绘制回调>
+    {
+        @ b2vol_debugDraw_setDrawPointFcn(&@<定义>, @<回调>)
+    }
+
+    方法 取点绘制回调 <公开 静态 类型 = B2点绘制回调 注释 = "读取点绘制回调字段 · b2vol_debugDraw_getDrawPointFcn" @嵌入式方法 = "">
+    参数 定义 <类型 = B2调试绘制>
+    {
+        @ b2vol_debugDraw_getDrawPointFcn(&@<定义>)
+    }
+
+    方法 置文本绘制回调 <公开 静态 注释 = "写入文本绘制回调字段 · b2vol_debugDraw_setDrawStringFcn" @嵌入式方法 = "">
+    参数 定义 <类型 = B2调试绘制>
+    参数 回调 <类型 = B2文本绘制回调>
+    {
+        @ b2vol_debugDraw_setDrawStringFcn(&@<定义>, @<回调>)
+    }
+
+    方法 取文本绘制回调 <公开 静态 类型 = B2文本绘制回调 注释 = "读取文本绘制回调字段 · b2vol_debugDraw_getDrawStringFcn" @嵌入式方法 = "">
+    参数 定义 <类型 = B2调试绘制>
+    {
+        @ b2vol_debugDraw_getDrawStringFcn(&@<定义>)
+    }
+
+    方法 置包围盒绘制回调 <公开 静态 注释 = "写入包围盒绘制回调字段 · b2vol_debugDraw_setDrawBoundsFcn" @嵌入式方法 = "">
+    参数 定义 <类型 = B2调试绘制>
+    参数 回调 <类型 = B2包围盒绘制回调>
+    {
+        @ b2vol_debugDraw_setDrawBoundsFcn(&@<定义>, @<回调>)
+    }
+
+    方法 取包围盒绘制回调 <公开 静态 类型 = B2包围盒绘制回调 注释 = "读取包围盒绘制回调字段 · b2vol_debugDraw_getDrawBoundsFcn" @嵌入式方法 = "">
+    参数 定义 <类型 = B2调试绘制>
+    {
+        @ b2vol_debugDraw_getDrawBoundsFcn(&@<定义>)
+    }
+
+    方法 取默认定义 <公开 静态 类型 = B2调试绘制 注释 = "用此函数初始化调试绘制接口 · b2DefaultDebugDraw" @嵌入式方法 = "">
+    {
+        @ b2DefaultDebugDraw()
+    }
+
+}
+
+类 B2调试 <公开 注释 = "调试 · 接口包装类">
+{
+    方法 取图颜色 <公开 静态 类型 = 整数 注释 = "取分配给某个约束图着色槽的可视化颜色 · b2GetGraphColor" @嵌入式方法 = "">
+    参数 序号 <类型 = 整数>
+    {
+        @ (int)b2GetGraphColor(@<序号>)
+    }
+
+}
+

@@ -1,0 +1,21 @@
+doc_format_version = 1
+name = ThorVGUI演示
+property.settings.active_project_name = ThorVGUI演示
+
+root_filter
+{
+    child_filter
+    {
+        filter1
+        {
+            build_order = 0
+            project_file_name = "ThorVGUI演示\\ThorVGUI演示.vprj"
+            projects_dependent
+            type = project
+        }
+
+        num_child_filters = 1
+    }
+
+    name = root
+}

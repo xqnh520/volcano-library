@@ -1,0 +1,12 @@
+doc_format_version = 1
+project_identifier = "wutao.vproject.pc.win.1"
+author = "袁水淼"
+name = "D2D绘制组件"
+version = 1
+unique_mark = d2d_drawing_components
+explain = "基于 D2D绘制引擎 的火山视窗 D2D 组件封装。组件层依赖绘制层，绘制层不反向依赖组件层。"
+dependence = "D2D绘制引擎.vgrp, *\\sys\\mfc_ui_base\\mfc_ui_base.vgrp"
+file
+{
+    name = "D2D绘制组件.wsv"
+}

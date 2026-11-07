@@ -1,0 +1,193 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.即时界面
+
+类 焦点标志 <公开 注释 = "焦点判定标志" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 无 <公开 类型 = 整数 值 = @ImGuiFocusedFlags_None>
+    常量 包含子窗口 <公开 类型 = 整数 值 = @ImGuiFocusedFlags_ChildWindows>
+    常量 根窗口 <公开 类型 = 整数 值 = @ImGuiFocusedFlags_RootWindow>
+    常量 任意窗口 <公开 类型 = 整数 值 = @ImGuiFocusedFlags_AnyWindow>
+    常量 忽略弹出层级 <公开 类型 = 整数 值 = @ImGuiFocusedFlags_NoPopupHierarchy>
+    常量 包含停靠层级 <公开 类型 = 整数 值 = @ImGuiFocusedFlags_DockHierarchy>
+    常量 根窗口与子窗口 <公开 类型 = 整数 值 = @ImGuiFocusedFlags_RootAndChildWindows>
+}
+类 悬停标志 <公开 注释 = "悬停判定标志" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 无 <公开 类型 = 整数 值 = @ImGuiHoveredFlags_None>
+    常量 包含子窗口 <公开 类型 = 整数 值 = @ImGuiHoveredFlags_ChildWindows>
+    常量 根窗口 <公开 类型 = 整数 值 = @ImGuiHoveredFlags_RootWindow>
+    常量 任意窗口 <公开 类型 = 整数 值 = @ImGuiHoveredFlags_AnyWindow>
+    常量 忽略弹出层级 <公开 类型 = 整数 值 = @ImGuiHoveredFlags_NoPopupHierarchy>
+    常量 包含停靠层级 <公开 类型 = 整数 值 = @ImGuiHoveredFlags_DockHierarchy>
+    常量 弹出窗口阻挡仍算 <公开 类型 = 整数 值 = @ImGuiHoveredFlags_AllowWhenBlockedByPopup>
+    常量 项目激活阻挡仍算 <公开 类型 = 整数 值 = @ImGuiHoveredFlags_AllowWhenBlockedByActiveItem>
+    常量 项目重叠仍算 <公开 类型 = 整数 值 = @ImGuiHoveredFlags_AllowWhenOverlappedByItem>
+    常量 窗口重叠仍算 <公开 类型 = 整数 值 = @ImGuiHoveredFlags_AllowWhenOverlappedByWindow>
+    常量 禁用状态仍算 <公开 类型 = 整数 值 = @ImGuiHoveredFlags_AllowWhenDisabled>
+    常量 不采用导航覆盖 <公开 类型 = 整数 值 = @ImGuiHoveredFlags_NoNavOverride>
+    常量 重叠仍算 <公开 类型 = 整数 值 = @ImGuiHoveredFlags_AllowWhenOverlapped>
+    常量 仅矩形判定 <公开 类型 = 整数 值 = @ImGuiHoveredFlags_RectOnly>
+    常量 根窗口与子窗口 <公开 类型 = 整数 值 = @ImGuiHoveredFlags_RootAndChildWindows>
+    常量 用于提示框判定 <公开 类型 = 整数 值 = @ImGuiHoveredFlags_ForTooltip>
+    常量 需鼠标静止 <公开 类型 = 整数 值 = @ImGuiHoveredFlags_Stationary>
+    常量 无延迟 <公开 类型 = 整数 值 = @ImGuiHoveredFlags_DelayNone>
+    常量 短延迟 <公开 类型 = 整数 值 = @ImGuiHoveredFlags_DelayShort>
+    常量 常规延迟 <公开 类型 = 整数 值 = @ImGuiHoveredFlags_DelayNormal>
+    常量 不共享延迟 <公开 类型 = 整数 值 = @ImGuiHoveredFlags_NoSharedDelay>
+}
+类 停靠节点标志 <公开 注释 = "停靠节点标志" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 无 <公开 类型 = 整数 值 = @ImGuiDockNodeFlags_None>
+    常量 仅保持存活 <公开 类型 = 整数 值 = @ImGuiDockNodeFlags_KeepAliveOnly>
+    常量 中央节点禁止停靠 <公开 类型 = 整数 值 = @ImGuiDockNodeFlags_NoDockingOverCentralNode>
+    常量 中央节点穿透 <公开 类型 = 整数 值 = @ImGuiDockNodeFlags_PassthruCentralNode>
+    常量 禁止拆分停靠 <公开 类型 = 整数 值 = @ImGuiDockNodeFlags_NoDockingSplit>
+    常量 禁止调整大小 <公开 类型 = 整数 值 = @ImGuiDockNodeFlags_NoResize>
+    常量 自动隐藏选项卡栏 <公开 类型 = 整数 值 = @ImGuiDockNodeFlags_AutoHideTabBar>
+    常量 禁止脱离停靠 <公开 类型 = 整数 值 = @ImGuiDockNodeFlags_NoUndocking>
+    常量 禁止拆分 <公开 类型 = 整数 值 = @ImGuiDockNodeFlags_NoSplit>
+    常量 中央节点内禁止停靠 <公开 类型 = 整数 值 = @ImGuiDockNodeFlags_NoDockingInCentralNode>
+}
+类 拖放标志 <公开 注释 = "拖放标志" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 无 <公开 类型 = 整数 值 = @ImGuiDragDropFlags_None>
+    常量 源不显示预览提示 <公开 类型 = 整数 值 = @ImGuiDragDropFlags_SourceNoPreviewTooltip>
+    常量 源不禁用悬停 <公开 类型 = 整数 值 = @ImGuiDragDropFlags_SourceNoDisableHover>
+    常量 源不用长按展开其它 <公开 类型 = 整数 值 = @ImGuiDragDropFlags_SourceNoHoldToOpenOthers>
+    常量 源允许空ID <公开 类型 = 整数 值 = @ImGuiDragDropFlags_SourceAllowNullID>
+    常量 源为外部来源 <公开 类型 = 整数 值 = @ImGuiDragDropFlags_SourceExtern>
+    常量 载荷自动过期 <公开 类型 = 整数 值 = @ImGuiDragDropFlags_PayloadAutoExpire>
+    常量 载荷不跨上下文 <公开 类型 = 整数 值 = @ImGuiDragDropFlags_PayloadNoCrossContext>
+    常量 载荷不跨进程 <公开 类型 = 整数 值 = @ImGuiDragDropFlags_PayloadNoCrossProcess>
+    常量 投递前即接受 <公开 类型 = 整数 值 = @ImGuiDragDropFlags_AcceptBeforeDelivery>
+    常量 接受时不画默认矩形 <公开 类型 = 整数 值 = @ImGuiDragDropFlags_AcceptNoDrawDefaultRect>
+    常量 接受时不显示预览提示 <公开 类型 = 整数 值 = @ImGuiDragDropFlags_AcceptNoPreviewTooltip>
+    常量 仅查看 <公开 类型 = 整数 值 = @ImGuiDragDropFlags_AcceptPeekOnly>
+    常量 源自动过期载荷 <公开 类型 = 整数 值 = @ImGuiDragDropFlags_SourceAutoExpirePayload>
+}
+类 配置标志 <公开 注释 = "IO配置标志" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 无 <公开 类型 = 整数 值 = @ImGuiConfigFlags_None>
+    常量 启用键盘导航 <公开 类型 = 整数 值 = @ImGuiConfigFlags_NavEnableKeyboard>
+    常量 启用手柄导航 <公开 类型 = 整数 值 = @ImGuiConfigFlags_NavEnableGamepad>
+    常量 禁止鼠标 <公开 类型 = 整数 值 = @ImGuiConfigFlags_NoMouse>
+    常量 不改变鼠标光标 <公开 类型 = 整数 值 = @ImGuiConfigFlags_NoMouseCursorChange>
+    常量 禁止键盘 <公开 类型 = 整数 值 = @ImGuiConfigFlags_NoKeyboard>
+    常量 启用停靠 <公开 类型 = 整数 值 = @ImGuiConfigFlags_DockingEnable>
+    常量 启用多视口 <公开 类型 = 整数 值 = @ImGuiConfigFlags_ViewportsEnable>
+    常量 DPI缩放视口 <公开 类型 = 整数 值 = @ImGuiConfigFlags_DpiEnableScaleViewports>
+    常量 DPI缩放字体 <公开 类型 = 整数 值 = @ImGuiConfigFlags_DpiEnableScaleFonts>
+    常量 sRGB模式 <公开 类型 = 整数 值 = @ImGuiConfigFlags_IsSRGB>
+    常量 触摸屏模式 <公开 类型 = 整数 值 = @ImGuiConfigFlags_IsTouchScreen>
+    常量 导航设置鼠标位置 <公开 类型 = 整数 值 = @ImGuiConfigFlags_NavEnableSetMousePos>
+    常量 导航不捕获键盘 <公开 类型 = 整数 值 = @ImGuiConfigFlags_NavNoCaptureKeyboard>
+}
+类 后端标志 <公开 注释 = "后端能力标志" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 无 <公开 类型 = 整数 值 = @ImGuiBackendFlags_None>
+    常量 支持手柄 <公开 类型 = 整数 值 = @ImGuiBackendFlags_HasGamepad>
+    常量 支持鼠标光标 <公开 类型 = 整数 值 = @ImGuiBackendFlags_HasMouseCursors>
+    常量 支持设置鼠标位置 <公开 类型 = 整数 值 = @ImGuiBackendFlags_HasSetMousePos>
+    常量 渲染器支持顶点偏移 <公开 类型 = 整数 值 = @ImGuiBackendFlags_RendererHasVtxOffset>
+    常量 平台支持多视口 <公开 类型 = 整数 值 = @ImGuiBackendFlags_PlatformHasViewports>
+    常量 支持悬停视口 <公开 类型 = 整数 值 = @ImGuiBackendFlags_HasMouseHoveredViewport>
+    常量 渲染器支持多视口 <公开 类型 = 整数 值 = @ImGuiBackendFlags_RendererHasViewports>
+}
+类 按钮标志 <公开 注释 = "按钮标志，用于即时界面.隐身按钮" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 无 <公开 类型 = 整数 值 = @ImGuiButtonFlags_None>
+    常量 响应鼠标左键 <公开 类型 = 整数 值 = @ImGuiButtonFlags_MouseButtonLeft>
+    常量 响应鼠标右键 <公开 类型 = 整数 值 = @ImGuiButtonFlags_MouseButtonRight>
+    常量 响应鼠标中键 <公开 类型 = 整数 值 = @ImGuiButtonFlags_MouseButtonMiddle>
+    常量 启用导航响应 <公开 类型 = 整数 值 = @ImGuiButtonFlags_EnableNav>
+}
+类 颜色编辑标志 <公开 注释 = "颜色编辑标志" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 无 <公开 类型 = 整数 值 = @ImGuiColorEditFlags_None>
+    常量 无透明度 <公开 类型 = 整数 值 = @ImGuiColorEditFlags_NoAlpha>
+    常量 无拾色器 <公开 类型 = 整数 值 = @ImGuiColorEditFlags_NoPicker>
+    常量 无选项菜单 <公开 类型 = 整数 值 = @ImGuiColorEditFlags_NoOptions>
+    常量 无小预览块 <公开 类型 = 整数 值 = @ImGuiColorEditFlags_NoSmallPreview>
+    常量 无输入框 <公开 类型 = 整数 值 = @ImGuiColorEditFlags_NoInputs>
+    常量 无提示 <公开 类型 = 整数 值 = @ImGuiColorEditFlags_NoTooltip>
+    常量 无标签 <公开 类型 = 整数 值 = @ImGuiColorEditFlags_NoLabel>
+    常量 无侧边预览 <公开 类型 = 整数 值 = @ImGuiColorEditFlags_NoSidePreview>
+    常量 禁止拖放 <公开 类型 = 整数 值 = @ImGuiColorEditFlags_NoDragDrop>
+    常量 无边框 <公开 类型 = 整数 值 = @ImGuiColorEditFlags_NoBorder>
+    常量 透明度不透明 <公开 类型 = 整数 值 = @ImGuiColorEditFlags_AlphaOpaque>
+    常量 透明度无背景 <公开 类型 = 整数 值 = @ImGuiColorEditFlags_AlphaNoBg>
+    常量 半透明度预览 <公开 类型 = 整数 值 = @ImGuiColorEditFlags_AlphaPreviewHalf>
+    常量 显示透明度条 <公开 类型 = 整数 值 = @ImGuiColorEditFlags_AlphaBar>
+    常量 允许HDR数值 <公开 类型 = 整数 值 = @ImGuiColorEditFlags_HDR>
+    常量 显示RGB <公开 类型 = 整数 值 = @ImGuiColorEditFlags_DisplayRGB>
+    常量 显示HSV <公开 类型 = 整数 值 = @ImGuiColorEditFlags_DisplayHSV>
+    常量 显示十六进制 <公开 类型 = 整数 值 = @ImGuiColorEditFlags_DisplayHex>
+    常量 使用8位整数 <公开 类型 = 整数 值 = @ImGuiColorEditFlags_Uint8>
+    常量 使用浮点数 <公开 类型 = 整数 值 = @ImGuiColorEditFlags_Float>
+    常量 色相条拾色器 <公开 类型 = 整数 值 = @ImGuiColorEditFlags_PickerHueBar>
+    常量 色相环拾色器 <公开 类型 = 整数 值 = @ImGuiColorEditFlags_PickerHueWheel>
+    常量 输入RGB <公开 类型 = 整数 值 = @ImGuiColorEditFlags_InputRGB>
+    常量 输入HSV <公开 类型 = 整数 值 = @ImGuiColorEditFlags_InputHSV>
+    常量 透明度预览 <公开 类型 = 整数 值 = @ImGuiColorEditFlags_AlphaPreview>
+}
+类 滑块标志 <公开 注释 = "滑块/拖动框标志" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 无 <公开 类型 = 整数 值 = @ImGuiSliderFlags_None>
+    常量 对数刻度 <公开 类型 = 整数 值 = @ImGuiSliderFlags_Logarithmic>
+    常量 不按格式取整 <公开 类型 = 整数 值 = @ImGuiSliderFlags_NoRoundToFormat>
+    常量 禁止直接输入 <公开 类型 = 整数 值 = @ImGuiSliderFlags_NoInput>
+    常量 循环取值 <公开 类型 = 整数 值 = @ImGuiSliderFlags_WrapAround>
+    常量 输入时钳制 <公开 类型 = 整数 值 = @ImGuiSliderFlags_ClampOnInput>
+    常量 零范围钳制 <公开 类型 = 整数 值 = @ImGuiSliderFlags_ClampZeroRange>
+    常量 不调整拖动速度 <公开 类型 = 整数 值 = @ImGuiSliderFlags_NoSpeedTweaks>
+    常量 始终钳制 <公开 类型 = 整数 值 = @ImGuiSliderFlags_AlwaysClamp>
+}
+类 视口标志 <公开 注释 = "视口标志" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 无 <公开 类型 = 整数 值 = @ImGuiViewportFlags_None>
+    常量 平台窗口 <公开 类型 = 整数 值 = @ImGuiViewportFlags_IsPlatformWindow>
+    常量 平台显示器 <公开 类型 = 整数 值 = @ImGuiViewportFlags_IsPlatformMonitor>
+    常量 由应用拥有 <公开 类型 = 整数 值 = @ImGuiViewportFlags_OwnedByApp>
+    常量 无装饰 <公开 类型 = 整数 值 = @ImGuiViewportFlags_NoDecoration>
+    常量 无任务栏图标 <公开 类型 = 整数 值 = @ImGuiViewportFlags_NoTaskBarIcon>
+    常量 显示时不获得焦点 <公开 类型 = 整数 值 = @ImGuiViewportFlags_NoFocusOnAppearing>
+    常量 单击不获得焦点 <公开 类型 = 整数 值 = @ImGuiViewportFlags_NoFocusOnClick>
+    常量 禁止输入 <公开 类型 = 整数 值 = @ImGuiViewportFlags_NoInputs>
+    常量 渲染器不清屏 <公开 类型 = 整数 值 = @ImGuiViewportFlags_NoRendererClear>
+    常量 禁止自动合并 <公开 类型 = 整数 值 = @ImGuiViewportFlags_NoAutoMerge>
+    常量 置于顶层 <公开 类型 = 整数 值 = @ImGuiViewportFlags_TopMost>
+    常量 可承载其它窗口 <公开 类型 = 整数 值 = @ImGuiViewportFlags_CanHostOtherWindows>
+    常量 已最小化 <公开 类型 = 整数 值 = @ImGuiViewportFlags_IsMinimized>
+    常量 已获得焦点 <公开 类型 = 整数 值 = @ImGuiViewportFlags_IsFocused>
+}
+类 绘制标志 <公开 注释 = "绘制标志，用于绘制列表" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 无 <公开 类型 = 整数 值 = @ImDrawFlags_None>
+    常量 闭合路径 <公开 类型 = 整数 值 = @ImDrawFlags_Closed>
+    常量 左上圆角 <公开 类型 = 整数 值 = @ImDrawFlags_RoundCornersTopLeft>
+    常量 右上圆角 <公开 类型 = 整数 值 = @ImDrawFlags_RoundCornersTopRight>
+    常量 左下圆角 <公开 类型 = 整数 值 = @ImDrawFlags_RoundCornersBottomLeft>
+    常量 右下圆角 <公开 类型 = 整数 值 = @ImDrawFlags_RoundCornersBottomRight>
+    常量 无圆角 <公开 类型 = 整数 值 = @ImDrawFlags_RoundCornersNone>
+    常量 顶部圆角 <公开 类型 = 整数 值 = @ImDrawFlags_RoundCornersTop>
+    常量 底部圆角 <公开 类型 = 整数 值 = @ImDrawFlags_RoundCornersBottom>
+    常量 左侧圆角 <公开 类型 = 整数 值 = @ImDrawFlags_RoundCornersLeft>
+    常量 右侧圆角 <公开 类型 = 整数 值 = @ImDrawFlags_RoundCornersRight>
+    常量 全部圆角 <公开 类型 = 整数 值 = @ImDrawFlags_RoundCornersAll>
+}
+类 绘制列表标志 <公开 注释 = "绘制列表标志" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 无 <公开 类型 = 整数 值 = @ImDrawListFlags_None>
+    常量 抗锯齿线 <公开 类型 = 整数 值 = @ImDrawListFlags_AntiAliasedLines>
+    常量 抗锯齿线使用纹理 <公开 类型 = 整数 值 = @ImDrawListFlags_AntiAliasedLinesUseTex>
+    常量 抗锯齿填充 <公开 类型 = 整数 值 = @ImDrawListFlags_AntiAliasedFill>
+    常量 允许顶点偏移 <公开 类型 = 整数 值 = @ImDrawListFlags_AllowVtxOffset>
+}
+类 字体图集标志 <公开 注释 = "字体图集标志" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 无 <公开 类型 = 整数 值 = @ImFontAtlasFlags_None>
+    常量 高度不取2的幂 <公开 类型 = 整数 值 = @ImFontAtlasFlags_NoPowerOfTwoHeight>
+    常量 不生成鼠标光标 <公开 类型 = 整数 值 = @ImFontAtlasFlags_NoMouseCursors>
+    常量 不烘焙线条 <公开 类型 = 整数 值 = @ImFontAtlasFlags_NoBakedLines>
+}

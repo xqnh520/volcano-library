@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  font-family: "Microsoft YaHei", "Segoe UI", Arial, sans-serif;
+  color: #1f2937;
+  background: #eef2f7;
+}
+
+.app-shell {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  width: 100%;
+  height: 100%;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px;
+  background: #f8fafc;
+  border-right: 1px solid #cbd5e1;
+}
+
+.panel-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+label {
+  display: grid;
+  gap: 5px;
+  font-size: 13px;
+}
+
+select,
+input,
+button,
+textarea {
+  font: inherit;
+}
+
+select,
+input {
+  width: 100%;
+  height: 32px;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  padding: 4px 8px;
+  background: #fff;
+}
+
+input[type="color"] {
+  padding: 2px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+button {
+  height: 34px;
+  border: 1px solid #2563eb;
+  border-radius: 4px;
+  color: #fff;
+  background: #2563eb;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+#eventLog {
+  flex: 1;
+  min-height: 180px;
+  resize: none;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  padding: 8px;
+  color: #334155;
+  background: #fff;
+}
+
+.canvas-wrap {
+  min-width: 0;
+  min-height: 0;
+  padding: 12px;
+}
+
+#container {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #94a3b8;
+  background:
+    linear-gradient(90deg, rgba(148, 163, 184, 0.18) 1px, transparent 1px),
+    linear-gradient(rgba(148, 163, 184, 0.18) 1px, transparent 1px),
+    #ffffff;
+  background-size: 20px 20px;
+}

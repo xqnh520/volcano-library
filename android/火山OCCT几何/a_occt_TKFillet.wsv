@@ -1,0 +1,761 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.安卓.OCCT几何 <注释 = "OpenCASCADE 7.8.0 全库封装 (自动生成, 请勿手改). 名称已汉化为中文显示名, 注释内附英文原名. TK 库 libTKFillet: 4 个类 / 99 个方法.">
+
+类 局部操作基类 <公开 注释 = "局部操作基类: 原类 BRepFilletAPI_LocalOperation (libTKFillet, 头文件 BRepFilletAPI/BRepFilletAPI_LocalOperation.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 在壳的边上构建圆角." @禁止创建对象 = 真>
+{
+
+}
+
+类 倒角构造器 <公开 注释 = "倒角构造器: 原类 BRepFilletAPI_MakeChamfer (libTKFillet, 头文件 BRepFilletAPI/BRepFilletAPI_MakeChamfer.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 描述在壳或实体的边上构建倒角的功能. 壳或实体的倒角边. MakeChamfer 对象提供以下框架: - 用给定形状初始化构造算法 - 获取刻画倒角的数据 - 构建倒角并构造结果形状 - 查询结果." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: BRepFilletAPI_MakeChamfer. 官方简介: 初始化算法以在形状 S 上计算倒角. 构建倒角的边通过函数 Add 定义." @嵌入式方法 = "">
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeChamfer.构造 (@<S>)
+    }
+
+    方法 添加 <公开 静态 注释 = "添加. 原方法: Add. 官方简介: 添加边 E 到该算法用于构建倒角所用的边表中, 其中倒角的参数必须在此之后设置" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 E <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeChamfer.Add (@<对象>, @<E>)
+    }
+
+    方法 添加_2 <公开 静态 注释 = "添加_2. 原方法: Add. 官方简介: 把边 E 添加到该算法用于构建倒角的边表, 其中倒角的参数由距离 Dis 给出(对称倒角). Add 函数导致从边 E 传播构建轮廓(即轮廓至少包含该边). 该轮廓由形状中相互相切、并界定两系列相切面的边组成, 每系列面位于轮廓的一侧. 警告 若边 E 或面 F 不属于初始形状则不做任何事." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 距离 <类型 = 小数>
+    参数 E <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeChamfer.Add_2 (@<对象>, @<距离>, @<E>)
+    }
+
+    方法 设置距离 <公开 静态 注释 = "设置距离. 原方法: SetDist. 官方简介: 设置距离 Dis1 与 Dis2, 它们给出该算法内部数据结构中由 Add 函数生成的索引 IC 轮廓沿线的倒角参数. 面 F 标识测量 Dis1 的一侧. 警告 若边 E 或面 F 不属于初始形状, 则不执行任何操作." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 距离 <类型 = 小数>
+    参数 IC <类型 = 整数>
+    参数 F <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeChamfer.SetDist (@<对象>, @<距离>, @<IC>, @<F>)
+    }
+
+    方法 取距离 <公开 静态 注释 = "取距离. 原方法: GetDist." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 IC <类型 = 整数>
+    参数 输出距离 <类型 = "小数 []">
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeChamfer.GetDist (@<对象>, @<IC>, @<输出距离>)
+    }
+
+    方法 添加_3 <公开 静态 注释 = "添加_3. 原方法: Add. 官方简介: 把边 E 添加到该算法用于构建倒角的边表, 其中倒角的参数由两个距离 Dis1 与 Dis2 给出; 面 F 确定测量 Dis1 的一侧. Add 函数导致从边 E 传播构建轮廓(即轮廓至少包含该边). 该轮廓由形状中相互相切、并界定两系列相切面的边组成, 每系列面位于轮廓的一侧. 警告 若边 E 或面 F 不属于初始形状则不做任何事." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 距离1 <类型 = 小数>
+    参数 距离2 <类型 = 小数>
+    参数 E <类型 = 长整数>
+    参数 F <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeChamfer.Add_3 (@<对象>, @<距离1>, @<距离2>, @<E>, @<F>)
+    }
+
+    方法 设置距离_2 <公开 静态 注释 = "设置距离_2. 原方法: SetDists. 官方简介: 设置距离 Dis1 与 Dis2, 它们给出该算法内部数据结构中由 Add 函数生成的索引 IC 轮廓沿线的倒角参数. 面 F 标识测量 Dis1 的一侧. 警告 若边 E 或面 F 不属于初始形状, 则不执行任何操作." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 距离1 <类型 = 小数>
+    参数 距离2 <类型 = 小数>
+    参数 IC <类型 = 整数>
+    参数 F <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeChamfer.SetDists (@<对象>, @<距离1>, @<距离2>, @<IC>, @<F>)
+    }
+
+    方法 距离 <公开 静态 注释 = "距离. 原方法: Dists. 官方简介: 返回距离 Dis1 和 Dis2, 它们给出该算法内部数据结构中索引为 IC 的轮廓上的倒角参数. 警告: 若 IC 超出轮廓表的范围则返回 -1." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 IC <类型 = 整数>
+    参数 输出距离1 <类型 = "小数 []">
+    参数 输出距离2 <类型 = "小数 []">
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeChamfer.Dists (@<对象>, @<IC>, @<输出距离1>, @<输出距离2>)
+    }
+
+    方法 添加距离角度倒角 <公开 静态 注释 = "添加距离角度倒角. 原方法: AddDA. 官方简介: 在构建器中添加一条圆角轮廓(构造与 <E> 相切的边的轮廓, 并设置距离 <Dis1> 和角度 <Angle>(倒角参数))." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 距离 <类型 = 小数>
+    参数 角度 <类型 = 小数>
+    参数 E <类型 = 长整数>
+    参数 F <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeChamfer.AddDA (@<对象>, @<距离>, @<角度>, @<E>, @<F>)
+    }
+
+    方法 设置距离角度 <公开 静态 注释 = "设置距离角度. 原方法: SetDistAngle. 官方简介: 设置 DS 中索引 <IC> 的圆角轮廓的距离 <Dis> 和角度 <Angle>, 其中 <Dis> 位于 <F> 上. 若面 <F> 不是轮廓 <IC> 的某条边的一个公共面" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 距离 <类型 = 小数>
+    参数 角度 <类型 = 小数>
+    参数 IC <类型 = 整数>
+    参数 F <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeChamfer.SetDistAngle (@<对象>, @<距离>, @<角度>, @<IC>, @<F>)
+    }
+
+    方法 取距离角度 <公开 静态 注释 = "取距离角度. 原方法: GetDistAngle. 官方简介: 给出 DS 中索引为 <IC> 的圆角轮廓的距离 <Dis> 与角度 <Angle>" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 IC <类型 = 整数>
+    参数 输出距离 <类型 = "小数 []">
+    参数 输出角度 <类型 = "小数 []">
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeChamfer.GetDistAngle (@<对象>, @<IC>, @<输出距离>, @<输出角度>)
+    }
+
+    方法 设置模式 <公开 静态 注释 = "设置模式. 原方法: SetMode. 官方简介: 设置倒角模式" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 模式 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeChamfer.SetMode (@<对象>, @<模式>)
+    }
+
+    方法 是否对称 <公开 静态 类型 = 逻辑型 注释 = "是否对称. 原方法: IsSymetric. 官方简介: 若倒角是对称的则返回 True, 否则返回 false." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 IC <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeChamfer.IsSymetric (@<对象>, @<IC>)
+    }
+
+    方法 是否两距离 <公开 静态 类型 = 逻辑型 注释 = "是否两距离. 原方法: IsTwoDistances. 官方简介: 若倒角由两个距离构建则返回 True, 否则返回 false." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 IC <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeChamfer.IsTwoDistances (@<对象>, @<IC>)
+    }
+
+    方法 是否距离角度 <公开 静态 类型 = 逻辑型 注释 = "是否距离角度. 原方法: IsDistanceAngle. 官方简介: 若倒角由距离与角度构建则返回 True, 否则返回 false." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 IC <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeChamfer.IsDistanceAngle (@<对象>, @<IC>)
+    }
+
+    方法 重置轮廓 <公开 静态 注释 = "重置轮廓. 原方法: ResetContour. 官方简介: 擦除该算法内部数据结构中索引为 IC 的轮廓上的倒角参数. 使用 SetDists 函数重置该数据. 警告: 若 IC 超出轮廓表的范围则不执行任何操作." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 IC <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeChamfer.ResetContour (@<对象>, @<IC>)
+    }
+
+    方法 轮廓数 <公开 静态 类型 = 整数 注释 = "轮廓数. 原方法: NbContours. 官方简介: 返回该算法内部数据结构中由 Add 函数生成的轮廓数量." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeChamfer.NbContours (@<对象>)
+    }
+
+    方法 轮廓 <公开 静态 类型 = 整数 注释 = "轮廓. 原方法: Contour. 官方简介: 返回该算法内部数据结构中包含形状的边 E 的轮廓的索引. 若边 E 不属于任何轮廓, 该函数返回 0. 警告: 若使用函数 Remove 从该算法内部数据结构中移除某个轮廓, 该索引可能改变." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 E <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeChamfer.Contour (@<对象>, @<E>)
+    }
+
+    方法 边数 <公开 静态 类型 = 整数 注释 = "边数. 原方法: NbEdges. 官方简介: 返回该算法内部数据结构中索引 I 轮廓的边数. 警告 若 I 超出轮廓表范围则返回 0." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 I <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeChamfer.NbEdges (@<对象>, @<I>)
+    }
+
+    方法 边 <公开 静态 类型 = 长整数 注释 = "边. 原方法: Edge. 官方简介: 返回该算法内部数据结构中索引 I 的轮廓中索引 J 的边. 警告: 在以下情况下返回空形状: - I 超出轮廓表的边界, 或 - J 超出索引 I 轮廓的边表的边界." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 I <类型 = 整数>
+    参数 J <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeChamfer.Edge (@<对象>, @<I>, @<J>)
+    }
+
+    方法 移除 <公开 静态 注释 = "移除. 原方法: Remove. 官方简介: 移除该算法内部数据结构中包含形状边 E 的轮廓. 警告 若边 E 不属于该算法内部数据结构中的轮廓, 则不执行任何操作." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 E <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeChamfer.Remove (@<对象>, @<E>)
+    }
+
+    方法 取长度 <公开 静态 类型 = 小数 注释 = "取长度. 原方法: Length. 官方简介: 返回该算法内部数据结构中索引 IC 轮廓的长度. 警告 若 IC 超出轮廓表范围则返回 -1." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 IC <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeChamfer.Length (@<对象>, @<IC>)
+    }
+
+    方法 首个顶点 <公开 静态 类型 = 长整数 注释 = "首个顶点. 原方法: FirstVertex. 官方简介: 返回该算法内部数据结构中索引 IC 轮廓的第一个顶点. 警告 若 IC 超出轮廓表范围则返回空形状." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 IC <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeChamfer.FirstVertex (@<对象>, @<IC>)
+    }
+
+    方法 末个顶点 <公开 静态 类型 = 长整数 注释 = "末个顶点. 原方法: LastVertex. 官方简介: 返回该算法内部数据结构中索引 IC 轮廓的最后一个顶点. 警告 若 IC 超出轮廓表范围则返回空形状." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 IC <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeChamfer.LastVertex (@<对象>, @<IC>)
+    }
+
+    方法 弧长 <公开 静态 类型 = 小数 注释 = "弧长. 原方法: Abscissa. 官方简介: 返回该算法内部数据结构中索引 IC 轮廓上顶点 V 的曲线横坐标. 警告 在以下情况返回 -1.: - IC 超出轮廓表范围, 或 - V 不在索引 IC 的轮廓上." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 IC <类型 = 整数>
+    参数 V <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeChamfer.Abscissa (@<对象>, @<IC>, @<V>)
+    }
+
+    方法 相对弧长 <公开 静态 类型 = 小数 注释 = "相对弧长. 原方法: RelativeAbscissa. 官方简介: 返回该算法内部数据结构中索引 IC 轮廓上顶点 V 的相对曲线横坐标(即 0 与 1 之间). 警告 在以下情况返回 -1.: - IC 超出轮廓表范围, 或 - V 不在索引 IC 的轮廓上." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 IC <类型 = 整数>
+    参数 V <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeChamfer.RelativeAbscissa (@<对象>, @<IC>, @<V>)
+    }
+
+    方法 闭合与切线 <公开 静态 类型 = 逻辑型 注释 = "闭合与切线. 原方法: ClosedAndTangent. 官方简介: 若该算法内部数据结构中索引为 IC 的轮廓闭合且在闭合点处相切则返回 true. 警告: 若 IC 超出轮廓表的范围则返回 false." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 IC <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeChamfer.ClosedAndTangent (@<对象>, @<IC>)
+    }
+
+    方法 闭合 <公开 静态 类型 = 逻辑型 注释 = "闭合. 原方法: Closed. 官方简介: 返回该算法内部数据结构中索引 IC 的轮廓是否闭合. 警告 若 IC 超出轮廓表范围则返回 false." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 IC <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeChamfer.Closed (@<对象>, @<IC>)
+    }
+
+    方法 构建 <公开 静态 注释 = "构建. 原方法: Build. 官方简介: 在该算法的内部数据结构中对所有轮廓构建倒角并构造结果形状. 使用函数 IsDone 验证倒角形状是否被构建. 使用函数 Shape 取回倒角形状. 警告 倒角的构建实现高度复杂的构造算法. 因此可能存在算法失败的实例, 例如若定义倒角参数的数据与初始形状的几何不兼容. 没有初始的错误分析, 这些只在构造阶段才显现. 此外, 在当前软件版本中, 以下情形不被处理: - 轮廓的终点是形状 4 条或更多条边的交点, 或 - 倒角与限制轮廓的面的交不完全包含在该面内." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeChamfer.Build (@<对象>)
+    }
+
+    方法 重置 <公开 静态 注释 = "重置. 原方法: Reset. 官方简介: 重新初始化该算法, 从而取消 Build 函数的效果. 该函数允许修改轮廓和倒角参数以重建形状." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeChamfer.Reset (@<对象>)
+    }
+
+    方法 是否已删除 <公开 静态 类型 = 逻辑型 注释 = "是否已删除. 原方法: IsDeleted." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 F <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeChamfer.IsDeleted (@<对象>, @<F>)
+    }
+
+    方法 模拟 <公开 静态 注释 = "模拟. 原方法: Simulate." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 IC <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeChamfer.Simulate (@<对象>, @<IC>)
+    }
+
+    方法 曲面数 <公开 静态 类型 = 整数 注释 = "曲面数. 原方法: NbSurf." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 IC <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeChamfer.NbSurf (@<对象>, @<IC>)
+    }
+
+}
+
+类 圆角构造器 <公开 注释 = "圆角构造器: 原类 BRepFilletAPI_MakeFillet (libTKFillet, 头文件 BRepFilletAPI/BRepFilletAPI_MakeFillet.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 描述在壳或实体的折断边上构建圆角的功能. MakeFillet 对象提供以下框架: - 用给定形状初始化构造算法 - 获取刻画圆角的数据 - 构建圆角并构造结果形状 - 查询结果." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: BRepFilletAPI_MakeFillet. 官方简介: 初始化圆角的计算. <FShape> 设置圆角曲面的类型. 默认值是 ChFi3d_Rational(圆的经典 nurbs 表示). ChFi3d_QuasiAngular 对应参数化与圆本身匹配的圆的 nurbs 表示. ChFi3d_Polynomial 对应圆的多项式表示." @嵌入式方法 = "">
+    参数 S <类型 = 长整数>
+    参数 F形状 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet.构造 (@<S>, @<F形状>)
+    }
+
+    方法 设置参数 <公开 静态 注释 = "设置参数. 原方法: SetParams." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 角度容差 <类型 = 小数>
+    参数 间距容差 <类型 = 小数>
+    参数 二维容差 <类型 = 小数>
+    参数 三维逼近容差 <类型 = 小数>
+    参数 二维逼近容差 <类型 = 小数>
+    参数 挠度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet.SetParams (@<对象>, @<角度容差>, @<间距容差>, @<二维容差>, @<三维逼近容差>, @<二维逼近容差>, @<挠度>)
+    }
+
+    方法 设置连续性 <公开 静态 注释 = "设置连续性. 原方法: SetContinuity. 官方简介: 更改连续性参数 InternalContinuity, 以生成具有 Ci 连续性(i=0,1 或 2)的圆角面. 默认 InternalContinuity = GeomAbs_C1. AngularTolerance 是圆角面与支撑面之间的 G1 公差." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 内部连续性 <类型 = 整数>
+    参数 角度容差 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet.SetContinuity (@<对象>, @<内部连续性>, @<角度容差>)
+    }
+
+    方法 添加 <公开 静态 注释 = "添加. 原方法: Add. 官方简介: 在构建器中添加圆角轮廓(构建相切边轮廓). 半径必须在之后设置." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 E <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet.Add (@<对象>, @<E>)
+    }
+
+    方法 添加_2 <公开 静态 注释 = "添加_2. 原方法: Add. 官方简介: 在构建器中添加圆角描述 - 构建相切边轮廓, - 设置半径." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 半径 <类型 = 小数>
+    参数 E <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet.Add_2 (@<对象>, @<半径>, @<E>)
+    }
+
+    方法 添加_3 <公开 静态 注释 = "添加_3. 原方法: Add. 官方简介: 在构建器中添加一条圆角描述 - 构造一条相切边轮廓, - 设置脊柱第一个与最后一个顶点之间的线性半径变化规律." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 R1 <类型 = 小数>
+    参数 R2 <类型 = 小数>
+    参数 E <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet.Add_3 (@<对象>, @<R1>, @<R2>, @<E>)
+    }
+
+    方法 设置半径 <公开 静态 注释 = "设置半径. 原方法: SetRadius. 官方简介: 设置由 Add 函数生成的序号为 IC 的轮廓上的圆角参数, 存入此算法的内部数据结构, 其中 Radius 是圆角半径." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 半径 <类型 = 小数>
+    参数 IC <类型 = 整数>
+    参数 轮廓内边序号 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet.SetRadius (@<对象>, @<半径>, @<IC>, @<轮廓内边序号>)
+    }
+
+    方法 设置半径_2 <公开 静态 注释 = "设置半径_2. 原方法: SetRadius. 官方简介: 设置该算法内部数据结构中由 Add 函数生成的索引 IC 的轮廓上的圆角参数, 其中圆角半径按照从 R1 到 R2 定义的线性演化律, 在索引 IC 轮廓的第一个与最后一个顶点之间变化." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 R1 <类型 = 小数>
+    参数 R2 <类型 = 小数>
+    参数 IC <类型 = 整数>
+    参数 轮廓内边序号 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet.SetRadius_2 (@<对象>, @<R1>, @<R2>, @<IC>, @<轮廓内边序号>)
+    }
+
+    方法 重置轮廓 <公开 静态 注释 = "重置轮廓. 原方法: ResetContour. 官方简介: 擦除该算法内部数据结构中索引为 IC 的轮廓上的半径信息. 使用 SetRadius 函数重置该数据. 警告: 若 IC 超出轮廓表的范围则不执行任何操作." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 IC <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet.ResetContour (@<对象>, @<IC>)
+    }
+
+    方法 是否常量 <公开 静态 类型 = 逻辑型 注释 = "是否常量. 原方法: IsConstant. 官方简介: 若该算法内部数据结构中索引 IC 的轮廓上的圆角半径恒定则返回 true. 警告: 若 IC 超出轮廓表的边界, 或 E 不属于索引 IC 的轮廓, 则返回 False." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 IC <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet.IsConstant (@<对象>, @<IC>)
+    }
+
+    方法 半径 <公开 静态 类型 = 小数 注释 = "半径. 原方法: Radius. 官方简介: 返回该算法内部数据结构中索引 IC 的轮廓上的圆角半径. 警告 - 仅当半径恒定时使用该函数. - 若 IC 超出轮廓表的边界, 或 E 不属于索引 IC 的轮廓, 则返回 -1." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 IC <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet.Radius (@<对象>, @<IC>)
+    }
+
+    方法 是否常量_2 <公开 静态 类型 = 逻辑型 注释 = "是否常量_2. 原方法: IsConstant. 官方简介: 若该算法内部数据结构中索引 IC 的轮廓的边 E 上的圆角半径恒定则返回 true. 警告: 若 IC 超出轮廓表的边界, 或 E 不属于索引 IC 的轮廓, 则返回 False." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 IC <类型 = 整数>
+    参数 E <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet.IsConstant_2 (@<对象>, @<IC>, @<E>)
+    }
+
+    方法 半径_2 <公开 静态 类型 = 小数 注释 = "半径_2. 原方法: Radius. 官方简介: 返回该算法内部数据结构中索引 IC 的轮廓的边 E 上的圆角半径. 警告 - 仅当半径恒定时使用该函数. - 若 IC 超出轮廓表的边界, 或 E 不属于索引 IC 的轮廓, 则返回 -1." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 IC <类型 = 整数>
+    参数 E <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet.Radius_2 (@<对象>, @<IC>, @<E>)
+    }
+
+    方法 设置半径_3 <公开 静态 注释 = "设置半径_3. 原方法: SetRadius. 官方简介: 设置由 Add 函数生成的序号为 IC 的轮廓上的圆角参数, 存入此算法的内部数据结构, 其中 Radius 是圆角半径." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 半径 <类型 = 小数>
+    参数 IC <类型 = 整数>
+    参数 E <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet.SetRadius_3 (@<对象>, @<半径>, @<IC>, @<E>)
+    }
+
+    方法 设置半径_4 <公开 静态 注释 = "设置半径_4. 原方法: SetRadius. 官方简介: 设置由 Add 函数生成的序号为 IC 的轮廓上的圆角参数, 存入此算法的内部数据结构, 其中 Radius 是圆角半径." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 半径 <类型 = 小数>
+    参数 IC <类型 = 整数>
+    参数 V <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet.SetRadius_4 (@<对象>, @<半径>, @<IC>, @<V>)
+    }
+
+    方法 取边界 <公开 静态 类型 = 逻辑型 注释 = "取边界. 原方法: GetBounds." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 IC <类型 = 整数>
+    参数 E <类型 = 长整数>
+    参数 输出F <类型 = "小数 []">
+    参数 输出L <类型 = "小数 []">
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet.GetBounds (@<对象>, @<IC>, @<E>, @<输出F>, @<输出L>)
+    }
+
+    方法 设置圆角形状 <公开 静态 注释 = "设置圆角形状. 原方法: SetFilletShape. 官方简介: 把 FShape 赋为该算法构建的圆角形状类型." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 F形状 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet.SetFilletShape (@<对象>, @<F形状>)
+    }
+
+    方法 取圆角形状 <公开 静态 类型 = 整数 注释 = "取圆角形状. 原方法: GetFilletShape. 官方简介: 返回该算法构建的圆角形状类型." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet.GetFilletShape (@<对象>)
+    }
+
+    方法 轮廓数 <公开 静态 类型 = 整数 注释 = "轮廓数. 原方法: NbContours. 官方简介: 返回该算法内部数据结构中由 Add 函数生成的轮廓数量." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet.NbContours (@<对象>)
+    }
+
+    方法 轮廓 <公开 静态 类型 = 整数 注释 = "轮廓. 原方法: Contour. 官方简介: 返回该算法内部数据结构中包含形状的边 E 的轮廓的索引. 若边 E 不属于任何轮廓, 该函数返回 0. 警告: 若使用函数 Remove 从该算法内部数据结构中移除某个轮廓, 该索引可能改变." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 E <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet.Contour (@<对象>, @<E>)
+    }
+
+    方法 边数 <公开 静态 类型 = 整数 注释 = "边数. 原方法: NbEdges. 官方简介: 返回该算法内部数据结构中索引 I 轮廓的边数. 警告 若 I 超出轮廓表范围则返回 0." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 I <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet.NbEdges (@<对象>, @<I>)
+    }
+
+    方法 边 <公开 静态 类型 = 长整数 注释 = "边. 原方法: Edge. 官方简介: 返回该算法内部数据结构中索引 I 的轮廓中索引 J 的边. 警告: 在以下情况下返回空形状: - I 超出轮廓表的边界, 或 - J 超出索引 I 轮廓的边表的边界." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 I <类型 = 整数>
+    参数 J <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet.Edge (@<对象>, @<I>, @<J>)
+    }
+
+    方法 移除 <公开 静态 注释 = "移除. 原方法: Remove. 官方简介: 移除该算法内部数据结构中包含形状边 E 的轮廓. 警告 若边 E 不属于该算法内部数据结构中的轮廓, 则不执行任何操作." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 E <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet.Remove (@<对象>, @<E>)
+    }
+
+    方法 取长度 <公开 静态 类型 = 小数 注释 = "取长度. 原方法: Length. 官方简介: 返回该算法内部数据结构中索引 IC 轮廓的长度. 警告 若 IC 超出轮廓表范围则返回 -1." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 IC <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet.Length (@<对象>, @<IC>)
+    }
+
+    方法 首个顶点 <公开 静态 类型 = 长整数 注释 = "首个顶点. 原方法: FirstVertex. 官方简介: 返回该算法内部数据结构中索引 IC 轮廓的第一个顶点. 警告 若 IC 超出轮廓表范围则返回空形状." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 IC <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet.FirstVertex (@<对象>, @<IC>)
+    }
+
+    方法 末个顶点 <公开 静态 类型 = 长整数 注释 = "末个顶点. 原方法: LastVertex. 官方简介: 返回该算法内部数据结构中索引 IC 轮廓的最后一个顶点. 警告 若 IC 超出轮廓表范围则返回空形状." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 IC <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet.LastVertex (@<对象>, @<IC>)
+    }
+
+    方法 弧长 <公开 静态 类型 = 小数 注释 = "弧长. 原方法: Abscissa. 官方简介: 返回该算法内部数据结构中索引 IC 轮廓上顶点 V 的曲线横坐标. 警告 在以下情况返回 -1.: - IC 超出轮廓表范围, 或 - V 不在索引 IC 的轮廓上." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 IC <类型 = 整数>
+    参数 V <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet.Abscissa (@<对象>, @<IC>, @<V>)
+    }
+
+    方法 相对弧长 <公开 静态 类型 = 小数 注释 = "相对弧长. 原方法: RelativeAbscissa. 官方简介: 返回该算法内部数据结构中索引 IC 轮廓上顶点 V 的相对曲线横坐标(即 0 与 1 之间). 警告 在以下情况返回 -1.: - IC 超出轮廓表范围, 或 - V 不在索引 IC 的轮廓上." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 IC <类型 = 整数>
+    参数 V <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet.RelativeAbscissa (@<对象>, @<IC>, @<V>)
+    }
+
+    方法 闭合与切线 <公开 静态 类型 = 逻辑型 注释 = "闭合与切线. 原方法: ClosedAndTangent. 官方简介: 若该算法内部数据结构中索引为 IC 的轮廓闭合且在闭合点处相切则返回 true. 警告: 若 IC 超出轮廓表的范围则返回 false." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 IC <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet.ClosedAndTangent (@<对象>, @<IC>)
+    }
+
+    方法 闭合 <公开 静态 类型 = 逻辑型 注释 = "闭合. 原方法: Closed. 官方简介: 返回该算法内部数据结构中索引 IC 的轮廓是否闭合. 警告 若 IC 超出轮廓表范围则返回 false." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 IC <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet.Closed (@<对象>, @<IC>)
+    }
+
+    方法 构建 <公开 静态 注释 = "构建. 原方法: Build. 官方简介: 在该算法的内部数据结构中对所有轮廓构建圆角并构造结果形状. 使用函数 IsDone 验证圆角形状是否被构建. 使用函数 Shape 取回圆角形状. 警告 圆角的构建实现高度复杂的构造算法. 因此可能存在算法失败的实例, 例如若定义圆角半径的数据与初始形状的几何不兼容. 没有初始的错误分析, 它们只在构造阶段才显现. 此外, 在当前软件版本中, 以下情形不被处理: - 轮廓的终点是形状 4 条或更多条边的交点, 或 - 圆角与限制轮廓的面的交不完全包含在该面内." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet.Build (@<对象>)
+    }
+
+    方法 重置 <公开 静态 注释 = "重置. 原方法: Reset. 官方简介: 重新初始化该算法, 从而取消 Build 函数的效果. 该函数允许修改轮廓和圆角参数以重建形状." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet.Reset (@<对象>)
+    }
+
+    方法 是否已删除 <公开 静态 类型 = 逻辑型 注释 = "是否已删除. 原方法: IsDeleted." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 F <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet.IsDeleted (@<对象>, @<F>)
+    }
+
+    方法 曲面数 <公开 静态 类型 = 整数 注释 = "曲面数. 原方法: NbSurfaces. 官方简介: 返回形状创建后的曲面数量." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet.NbSurfaces (@<对象>)
+    }
+
+    方法 模拟 <公开 静态 注释 = "模拟. 原方法: Simulate." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 IC <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet.Simulate (@<对象>, @<IC>)
+    }
+
+    方法 曲面数_2 <公开 静态 类型 = 整数 注释 = "曲面数_2. 原方法: NbSurf." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 IC <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet.NbSurf (@<对象>, @<IC>)
+    }
+
+    方法 错误轮廓数 <公开 静态 类型 = 整数 注释 = "错误轮廓数. 原方法: NbFaultyContours. 官方简介: 返回圆角计算失败的轮廓数量" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet.NbFaultyContours (@<对象>)
+    }
+
+    方法 错误轮廓 <公开 静态 类型 = 整数 注释 = "错误轮廓. 原方法: FaultyContour. 官方简介: 对于 [1.. NbFaultyContours] 中的每个 I, 返回圆角计算失败的轮廓的索引 IC. 方法 NbEdges(IC) 给出轮廓 IC 中边的数量. 方法 Edge(IC,ie) 给出轮廓 IC 的边编号 ie." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 I <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet.FaultyContour (@<对象>, @<I>)
+    }
+
+    方法 已计算曲面数 <公开 静态 类型 = 整数 注释 = "已计算曲面数. 原方法: NbComputedSurfaces. 官方简介: 返回在轮廓 IC 上已计算的曲面数量" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 IC <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet.NbComputedSurfaces (@<对象>, @<IC>)
+    }
+
+    方法 已计算曲面 <公开 静态 类型 = 长整数 注释 = "已计算曲面. 原方法: ComputedSurface. 官方简介: 返回轮廓 IC 相关的曲面编号 IS" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 IC <类型 = 整数>
+    参数 IS <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet.ComputedSurface (@<对象>, @<IC>, @<IS>)
+    }
+
+    方法 错误顶点数 <公开 静态 类型 = 整数 注释 = "错误顶点数. 原方法: NbFaultyVertices. 官方简介: 返回计算失败的顶点数量" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet.NbFaultyVertices (@<对象>)
+    }
+
+    方法 错误顶点 <公开 静态 类型 = 长整数 注释 = "错误顶点. 原方法: FaultyVertex. 官方简介: 返回计算失败的顶点" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 IV <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet.FaultyVertex (@<对象>, @<IV>)
+    }
+
+    方法 是否有结果 <公开 静态 类型 = 逻辑型 注释 = "是否有结果. 原方法: HasResult. 官方简介: 若结果的一部分已计算则返回 true. 若角点填充失败, 则返回带孔的形状" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet.HasResult (@<对象>)
+    }
+
+    方法 坏形状 <公开 静态 类型 = 长整数 注释 = "坏形状. 原方法: BadShape. 官方简介: 若 (HasResult()) 则返回部分结果" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet.BadShape (@<对象>)
+    }
+
+    方法 轮廓状态 <公开 静态 类型 = 整数 注释 = "轮廓状态. 原方法: StripeStatus. 官方简介: 在出错时返回关于轮廓 IC 的状态. ChFiDS_Ok : 计算正常 ChFiDS_StartsolFailure : 计算无法启动, 可能半径太大 ChFiDS_TwistedSurface : 由于曲面扭曲导致计算失败 ChFiDS_WalkingFailure : walking 过程中存在问题 ChFiDS_Error: 其他不同于以上的错误" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 IC <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet.StripeStatus (@<对象>, @<IC>)
+    }
+
+}
+
+类 平面圆角构造器 <公开 注释 = "平面圆角构造器: 原类 BRepFilletAPI_MakeFillet2d (libTKFillet, 头文件 BRepFilletAPI/BRepFilletAPI_MakeFillet2d.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 描述在平面面的顶点上构建圆角与倒角的功能. 平面面顶点上的圆角与倒角. MakeFillet2d 对象提供以下框架: - 用给定面初始化构造算法 - 获取刻画圆角与倒角的数据 - 构建圆角与倒角并构造结果形状 - 查询结果. 警告: 仅处理直线段与圆弧. 不处理 B 样条." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: BRepFilletAPI_MakeFillet2d. 官方简介: 初始化用于计算圆角与倒角的空算法. 构建圆角与倒角的面用 Init 函数定义. 构建圆角或倒角的顶点用 AddFillet 或 AddChamfer 函数定义. 警告 由 Status 函数给出的初始化状态可以是以下之一: - 若初始化正确则为 ChFi2d_Ready, - 若 F 不是平面的则为 ChFi2d_NotPlanar, - 若 F 为空面则为 ChFi2d_NoFace." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet2d.构造 ()
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: BRepFilletAPI_MakeFillet2d. 官方简介: 初始化在面 F 上计算圆角与倒角的算法. 构建圆角或倒角的顶点用 AddFillet 或 AddChamfer 函数定义. 警告: 由 Status 函数给出的初始化状态可以是以下之一: - 若初始化正确则为 ChFi2d_Ready, - 若 F 不是平面的则为 ChFi2d_NotPlanar, - 若 F 为空面则为 ChFi2d_NoFace." @嵌入式方法 = "">
+    参数 F <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet2d.构造_2 (@<F>)
+    }
+
+    方法 初始化 <公开 静态 注释 = "初始化. 原方法: Init. 官方简介: 用面 F 初始化该算法以构建圆角或倒角. 警告: 由 Status 函数给出的初始化状态可以是以下之一: - 若初始化正确则为 ChFi2d_Ready, - 若 F 不是平面的则为 ChFi2d_NotPlanar, - 若 F 是空面则为 ChFi2d_NoFace." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 F <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet2d.Init (@<对象>, @<F>)
+    }
+
+    方法 初始化_2 <公开 静态 注释 = "初始化_2. 原方法: Init. 官方简介: 该初始化方法允许从面 RefFace 和派生自 RefFace 的另一个面 ModFace 初始化构建器. 这对于修改已在 ModFace 上创建的圆角或倒角很有用." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 参考面 <类型 = 长整数>
+    参数 模式面 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet2d.Init_2 (@<对象>, @<参考面>, @<模式面>)
+    }
+
+    方法 添加圆角 <公开 静态 类型 = 长整数 注释 = "添加圆角. 原方法: AddFillet. 官方简介: 在由该算法修改的面上、与顶点 V 相邻的两条边之间添加半径为 Radius 的圆角. 这两条边不需要是直线的. 该函数返回圆角并构建结果面. 警告 由 Status 函数给出的构造状态可以是以下之一: - 若圆角被构建则为 ChFi2d_IsDone, - 若 V 不属于初始面则为 ChFi2d_ConnexionError, - 若 Radius 太大而无法在两条相邻边之间构建圆角则为 ChFi2d_ComputationError, - ChFi2d_NotAuthorized - 若连接到 V 的两条边之一是圆角或倒角, 或 - 若 E, E1 或 E2 使用了除直线或圆弧以外的曲线. 若构造状态不是 ChFi2d_IsDone, 不要使用返回的圆角. 异常: 若 Radius 小于或等于零则抛出 Standard_NegativeValue." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 V <类型 = 长整数>
+    参数 半径 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet2d.AddFillet (@<对象>, @<V>, @<半径>)
+    }
+
+    方法 修改圆角 <公开 静态 类型 = 长整数 注释 = "修改圆角. 原方法: ModifyFillet. 官方简介: 把半径 Radius 赋给已在该算法修改的面上构建的圆角 Fillet. 该函数返回新圆角并修改现有面. 警告 由 Status 函数给出的构造状态可以是以下之一: - 若新圆角被构建则为 ChFi2d_IsDone, - 若 Fillet 不属于现有面则为 ChFi2d_ConnexionError, - 若 Radius 太大而无法在两个相邻边之间构建圆角则为 ChFi2d_ComputationError. 若构造状态不是 ChFi2d_IsDone, 不要使用返回的圆角. 异常: 若 Radius 小于或等于零则抛出 Standard_NegativeValue." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 圆角 <类型 = 长整数>
+    参数 半径 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet2d.ModifyFillet (@<对象>, @<圆角>, @<半径>)
+    }
+
+    方法 移除圆角 <公开 静态 类型 = 长整数 注释 = "移除圆角. 原方法: RemoveFillet. 官方简介: 移除已在该算法修改后的面上构建的圆角 Fillet. 该函数返回连接 Fillet 两条相邻边的顶点并修改现有面. 警告 - 仅当 Status 函数返回 ChFi2d_IsDone 时, 返回的顶点才有效. - 若边 Fillet 不属于初始面, 则返回空顶点." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 圆角 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet2d.RemoveFillet (@<对象>, @<圆角>)
+    }
+
+    方法 添加倒角 <公开 静态 类型 = 长整数 注释 = "添加倒角. 原方法: AddChamfer. 官方简介: 在该算法修改的面上、相邻两边 E1 与 E2 之间添加倒角, 倒角的两端分别位于 E1 与 E2 上距离 D1 与 D2 处. 在边不是直线的情况下, 距离用边的曲线横坐标测量, 角度相对于相应点处的切线测量. 角度 Ang 以弧度给出. 该函数返回倒角并构造结果面." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 E1 <类型 = 长整数>
+    参数 E2 <类型 = 长整数>
+    参数 D1 <类型 = 小数>
+    参数 D2 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet2d.AddChamfer (@<对象>, @<E1>, @<E2>, @<D1>, @<D2>)
+    }
+
+    方法 添加倒角_2 <公开 静态 类型 = 长整数 注释 = "添加倒角_2. 原方法: AddChamfer. 官方简介: 在该算法修改的面上、相邻两边 E1 与 E2 之间添加倒角, 倒角的两端分别位于 E1 与 E2 上距离 D1 与 D2 处. 在边不是直线的情况下, 距离用边的曲线横坐标测量, 角度相对于相应点处的切线测量. 角度 Ang 以弧度给出. 该函数返回倒角并构造结果面." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 E <类型 = 长整数>
+    参数 V <类型 = 长整数>
+    参数 D <类型 = 小数>
+    参数 角度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet2d.AddChamfer_2 (@<对象>, @<E>, @<V>, @<D>, @<角度>)
+    }
+
+    方法 修改倒角 <公开 静态 类型 = 长整数 注释 = "修改倒角. 原方法: ModifyChamfer. 官方简介: 修改该算法修改后的面上的倒角 Chamfer, 其中: E1 与 E2 是已构建了 Chamfer 的两条相邻边; 新倒角的端点分别在 E1 与 E2 上, 距离分别为 D1 与 D2." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 倒角 <类型 = 长整数>
+    参数 E1 <类型 = 长整数>
+    参数 E2 <类型 = 长整数>
+    参数 D1 <类型 = 小数>
+    参数 D2 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet2d.ModifyChamfer (@<对象>, @<倒角>, @<E1>, @<E2>, @<D1>, @<D2>)
+    }
+
+    方法 修改倒角_2 <公开 静态 类型 = 长整数 注释 = "修改倒角_2. 原方法: ModifyChamfer. 官方简介: 修改由该算法修改的面上的倒角 Chamfer, 其中: E 是其上已构建 Chamfer 的两条相邻边之一; 新倒角与 E 成角度 Ang, 且其一个端点位于 E 上距构建倒角的顶点距离 D 处. 在边不是直线的场合, 距离使用边的曲线横坐标测量, 角度相对于相应点处的切线测量. 角度 Ang 以弧度给出. 该函数返回新倒角并修改现有面. 警告 由 Status 函数给出的构造状态可以是以下之一: - 若倒角被构建则为 ChFi2d_IsDone, - 若 D1, D2, D 或 Ang 小于或等于零则为 ChFi2d_ParametersError, - ChFi2d_ConnexionError 若: - 边 E, E1, E2 或 Chamfer 不属于现有面, 或 - 边 E1 与 E2 不相邻, - 若倒角的参数太大而无法在两条相邻边之间构建倒角则为 ChFi2d_ComputationError, - 若 E1 或 E2 是圆角或倒角则为 ChFi2d_NotAuthorized. 若构造状态不是 ChFi2d_IsDone, 不要使用返回的倒角." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 倒角 <类型 = 长整数>
+    参数 E <类型 = 长整数>
+    参数 D <类型 = 小数>
+    参数 角度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet2d.ModifyChamfer_2 (@<对象>, @<倒角>, @<E>, @<D>, @<角度>)
+    }
+
+    方法 移除倒角 <公开 静态 类型 = 长整数 注释 = "移除倒角. 原方法: RemoveChamfer. 官方简介: 移除已在该算法修改后的面上构建的倒角 Chamfer. 该函数返回连接 Chamfer 两条相邻边的顶点并修改现有面. 警告 - 仅当 Status 函数返回 ChFi2d_IsDone 时, 返回的顶点才有效. - 若边 Chamfer 不属于初始面, 则返回空顶点." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 倒角 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet2d.RemoveChamfer (@<对象>, @<倒角>)
+    }
+
+    方法 是否已修改 <公开 静态 类型 = 逻辑型 注释 = "是否已修改. 原方法: IsModified. 官方简介: 若该算法修改的面上的边 E 被倒角或圆角则返回 true. 警告: 若 E 不属于该算法修改的面则返回 false." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 E <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet2d.IsModified (@<对象>, @<E>)
+    }
+
+    方法 圆角数 <公开 静态 类型 = 整数 注释 = "圆角数. 原方法: NbFillet. 官方简介: 返回该算法修改的面上圆角数量." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet2d.NbFillet (@<对象>)
+    }
+
+    方法 倒角数 <公开 静态 类型 = 整数 注释 = "倒角数. 原方法: NbChamfer. 官方简介: 返回该算法修改的面上倒角数量." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet2d.NbChamfer (@<对象>)
+    }
+
+    方法 曲线数 <公开 静态 类型 = 整数 注释 = "曲线数. 原方法: NbCurves. 官方简介: 返回形状创建后的新曲线数量." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet2d.NbCurves (@<对象>)
+    }
+
+    方法 是否有后代 <公开 静态 类型 = 逻辑型 注释 = "是否有后代. 原方法: HasDescendant." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 E <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet2d.HasDescendant (@<对象>, @<E>)
+    }
+
+    方法 后代边 <公开 静态 类型 = 长整数 注释 = "后代边. 原方法: DescendantEdge. 官方简介: 返回在该算法修改后的面上由边 E 构建的倒角或圆角边. 若 E 未被修改, 则该函数返回 E. 异常: 若边 E 不属于初始面则抛出 Standard_NoSuchObject." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 E <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet2d.DescendantEdge (@<对象>, @<E>)
+    }
+
+    方法 基边 <公开 静态 类型 = 长整数 注释 = "基边. 原方法: BasisEdge. 官方简介: 返回在该算法修改后的面上构建了倒角或圆角边 E 的基础边. 若 E 未被修改, 则该函数返回 E. 警告: 若 E 不属于初始面则返回 E." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 E <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet2d.BasisEdge (@<对象>, @<E>)
+    }
+
+    方法 状态 <公开 静态 类型 = 整数 注释 = "状态. 原方法: Status." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet2d.Status (@<对象>)
+    }
+
+    方法 构建 <公开 静态 注释 = "构建. 原方法: Build. 官方简介: 更新结果并设置 Done 标志" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKFillet.BRepFilletAPI_MakeFillet2d.Build (@<对象>)
+    }
+
+}

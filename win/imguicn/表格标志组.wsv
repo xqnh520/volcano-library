@@ -1,0 +1,72 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.即时界面 <注释 = "Dear ImGui v1.91.9b-docking 的火山视窗中文封装，全中文类名/方法名/参数名/注释。" @视窗.头文件搜寻目录 = "imgui"
+        @视窗.外部头文件 = "imcn_helper.h, imcn_host.h"
+        @视窗.外部源文件 = "imgui\\imgui.cpp, imgui\\imgui_draw.cpp, imgui\\imgui_tables.cpp, imgui\\imgui_widgets.cpp, imgui\\imgui_demo.cpp, imgui\\misc\\cpp\\imgui_stdlib.cpp, imgui\\backends\\imgui_impl_win32.cpp, imgui\\backends\\imgui_impl_dx11.cpp">
+
+类 表格标志 <公开 注释 = "表格标志，用于界面表格.开始表格" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 无 <公开 类型 = 整数 值 = @ImGuiTableFlags_None>
+    常量 允许调整列宽 <公开 类型 = 整数 值 = @ImGuiTableFlags_Resizable>
+    常量 允许重排列 <公开 类型 = 整数 值 = @ImGuiTableFlags_Reorderable>
+    常量 允许隐藏列 <公开 类型 = 整数 值 = @ImGuiTableFlags_Hideable>
+    常量 允许排序 <公开 类型 = 整数 值 = @ImGuiTableFlags_Sortable>
+    常量 禁止保存配置 <公开 类型 = 整数 值 = @ImGuiTableFlags_NoSavedSettings>
+    常量 表体内右键菜单 <公开 类型 = 整数 值 = @ImGuiTableFlags_ContextMenuInBody>
+    常量 行背景交替色 <公开 类型 = 整数 值 = @ImGuiTableFlags_RowBg>
+    常量 内部水平边框 <公开 类型 = 整数 值 = @ImGuiTableFlags_BordersInnerH>
+    常量 外部水平边框 <公开 类型 = 整数 值 = @ImGuiTableFlags_BordersOuterH>
+    常量 内部垂直边框 <公开 类型 = 整数 值 = @ImGuiTableFlags_BordersInnerV>
+    常量 外部垂直边框 <公开 类型 = 整数 值 = @ImGuiTableFlags_BordersOuterV>
+    常量 水平边框 <公开 类型 = 整数 值 = @ImGuiTableFlags_BordersH>
+    常量 垂直边框 <公开 类型 = 整数 值 = @ImGuiTableFlags_BordersV>
+    常量 内部边框 <公开 类型 = 整数 值 = @ImGuiTableFlags_BordersInner>
+    常量 外部边框 <公开 类型 = 整数 值 = @ImGuiTableFlags_BordersOuter>
+    常量 全部边框 <公开 类型 = 整数 值 = @ImGuiTableFlags_Borders>
+    常量 表体无边框 <公开 类型 = 整数 值 = @ImGuiTableFlags_NoBordersInBody>
+    常量 调整大小前表体无边框 <公开 类型 = 整数 值 = @ImGuiTableFlags_NoBordersInBodyUntilResize>
+    常量 固定适应宽度 <公开 类型 = 整数 值 = @ImGuiTableFlags_SizingFixedFit>
+    常量 固定相同宽度 <公开 类型 = 整数 值 = @ImGuiTableFlags_SizingFixedSame>
+    常量 按比例拉伸 <公开 类型 = 整数 值 = @ImGuiTableFlags_SizingStretchProp>
+    常量 相同拉伸 <公开 类型 = 整数 值 = @ImGuiTableFlags_SizingStretchSame>
+    常量 不横向扩展 <公开 类型 = 整数 值 = @ImGuiTableFlags_NoHostExtendX>
+    常量 不纵向扩展 <公开 类型 = 整数 值 = @ImGuiTableFlags_NoHostExtendY>
+    常量 不保持列可见 <公开 类型 = 整数 值 = @ImGuiTableFlags_NoKeepColumnsVisible>
+    常量 精确宽度 <公开 类型 = 整数 值 = @ImGuiTableFlags_PreciseWidths>
+    常量 禁止裁剪 <公开 类型 = 整数 值 = @ImGuiTableFlags_NoClip>
+    常量 外部水平内边距 <公开 类型 = 整数 值 = @ImGuiTableFlags_PadOuterX>
+    常量 无外部水平内边距 <公开 类型 = 整数 值 = @ImGuiTableFlags_NoPadOuterX>
+    常量 无内部水平内边距 <公开 类型 = 整数 值 = @ImGuiTableFlags_NoPadInnerX>
+    常量 水平滚动 <公开 类型 = 整数 值 = @ImGuiTableFlags_ScrollX>
+    常量 垂直滚动 <公开 类型 = 整数 值 = @ImGuiTableFlags_ScrollY>
+    常量 多列排序 <公开 类型 = 整数 值 = @ImGuiTableFlags_SortMulti>
+    常量 三态排序 <公开 类型 = 整数 值 = @ImGuiTableFlags_SortTristate>
+    常量 高亮悬停列 <公开 类型 = 整数 值 = @ImGuiTableFlags_HighlightHoveredColumn>
+}
+类 表格列标志 <公开 注释 = "表格列标志，用于界面表格.设置列" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 无 <公开 类型 = 整数 值 = @ImGuiTableColumnFlags_None>
+    常量 禁用 <公开 类型 = 整数 值 = @ImGuiTableColumnFlags_Disabled>
+    常量 默认隐藏 <公开 类型 = 整数 值 = @ImGuiTableColumnFlags_DefaultHide>
+    常量 默认排序列 <公开 类型 = 整数 值 = @ImGuiTableColumnFlags_DefaultSort>
+    常量 宽度拉伸 <公开 类型 = 整数 值 = @ImGuiTableColumnFlags_WidthStretch>
+    常量 宽度固定 <公开 类型 = 整数 值 = @ImGuiTableColumnFlags_WidthFixed>
+    常量 禁止调整宽度 <公开 类型 = 整数 值 = @ImGuiTableColumnFlags_NoResize>
+    常量 禁止重排 <公开 类型 = 整数 值 = @ImGuiTableColumnFlags_NoReorder>
+    常量 禁止隐藏 <公开 类型 = 整数 值 = @ImGuiTableColumnFlags_NoHide>
+    常量 禁止裁剪 <公开 类型 = 整数 值 = @ImGuiTableColumnFlags_NoClip>
+    常量 禁止排序 <公开 类型 = 整数 值 = @ImGuiTableColumnFlags_NoSort>
+    常量 禁止升序 <公开 类型 = 整数 值 = @ImGuiTableColumnFlags_NoSortAscending>
+    常量 禁止降序 <公开 类型 = 整数 值 = @ImGuiTableColumnFlags_NoSortDescending>
+    常量 无表头文本 <公开 类型 = 整数 值 = @ImGuiTableColumnFlags_NoHeaderLabel>
+    常量 无表头宽度 <公开 类型 = 整数 值 = @ImGuiTableColumnFlags_NoHeaderWidth>
+    常量 优先升序 <公开 类型 = 整数 值 = @ImGuiTableColumnFlags_PreferSortAscending>
+    常量 优先降序 <公开 类型 = 整数 值 = @ImGuiTableColumnFlags_PreferSortDescending>
+    常量 启用缩进 <公开 类型 = 整数 值 = @ImGuiTableColumnFlags_IndentEnable>
+    常量 禁止缩进 <公开 类型 = 整数 值 = @ImGuiTableColumnFlags_IndentDisable>
+    常量 倾斜表头 <公开 类型 = 整数 值 = @ImGuiTableColumnFlags_AngledHeader>
+    常量 已启用 <公开 类型 = 整数 值 = @ImGuiTableColumnFlags_IsEnabled>
+    常量 已显示 <公开 类型 = 整数 值 = @ImGuiTableColumnFlags_IsVisible>
+    常量 已排序 <公开 类型 = 整数 值 = @ImGuiTableColumnFlags_IsSorted>
+    常量 已悬停 <公开 类型 = 整数 值 = @ImGuiTableColumnFlags_IsHovered>
+}

@@ -1,0 +1,38 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.即时界面 <注释 = "Dear ImGui v1.91.9b-docking 的火山视窗中文封装，全中文类名/方法名/参数名/注释。" @视窗.头文件搜寻目录 = "imgui"
+        @视窗.外部头文件 = "imcn_helper.h, imcn_host.h"
+        @视窗.外部源文件 = "imgui\\imgui.cpp, imgui\\imgui_draw.cpp, imgui\\imgui_tables.cpp, imgui\\imgui_widgets.cpp, imgui\\imgui_demo.cpp, imgui\\misc\\cpp\\imgui_stdlib.cpp, imgui\\backends\\imgui_impl_win32.cpp, imgui\\backends\\imgui_impl_dx11.cpp">
+
+类 树节点标志 <公开 注释 = "树节点标志，用于即时界面.树节点" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 无 <公开 类型 = 整数 值 = @ImGuiTreeNodeFlags_None>
+    常量 已选中 <公开 类型 = 整数 值 = @ImGuiTreeNodeFlags_Selected>
+    常量 带边框 <公开 类型 = 整数 值 = @ImGuiTreeNodeFlags_Framed>
+    常量 允许重叠 <公开 类型 = 整数 值 = @ImGuiTreeNodeFlags_AllowOverlap>
+    常量 展开时不压栈 <公开 类型 = 整数 值 = @ImGuiTreeNodeFlags_NoTreePushOnOpen>
+    常量 日志不自动展开 <公开 类型 = 整数 值 = @ImGuiTreeNodeFlags_NoAutoOpenOnLog>
+    常量 默认展开 <公开 类型 = 整数 值 = @ImGuiTreeNodeFlags_DefaultOpen>
+    常量 双击展开 <公开 类型 = 整数 值 = @ImGuiTreeNodeFlags_OpenOnDoubleClick>
+    常量 仅箭头展开 <公开 类型 = 整数 值 = @ImGuiTreeNodeFlags_OpenOnArrow>
+    常量 叶子节点 <公开 类型 = 整数 值 = @ImGuiTreeNodeFlags_Leaf>
+    常量 显示圆点 <公开 类型 = 整数 值 = @ImGuiTreeNodeFlags_Bullet>
+    常量 使用框架内边距 <公开 类型 = 整数 值 = @ImGuiTreeNodeFlags_FramePadding>
+    常量 占满可用宽度 <公开 类型 = 整数 值 = @ImGuiTreeNodeFlags_SpanAvailWidth>
+    常量 占满整行宽度 <公开 类型 = 整数 值 = @ImGuiTreeNodeFlags_SpanFullWidth>
+    常量 跨全部列 <公开 类型 = 整数 值 = @ImGuiTreeNodeFlags_SpanAllColumns>
+    常量 左导航键跳回 <公开 类型 = 整数 值 = @ImGuiTreeNodeFlags_NavLeftJumpsBackHere>
+    常量 折叠标题栏 <公开 类型 = 整数 值 = @ImGuiTreeNodeFlags_CollapsingHeader>
+}
+类 组合框标志 <公开 注释 = "组合框标志，用于即时界面.开始组合框" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 无 <公开 类型 = 整数 值 = @ImGuiComboFlags_None>
+    常量 弹出框左对齐 <公开 类型 = 整数 值 = @ImGuiComboFlags_PopupAlignLeft>
+    常量 小高度 <公开 类型 = 整数 值 = @ImGuiComboFlags_HeightSmall>
+    常量 常规高度 <公开 类型 = 整数 值 = @ImGuiComboFlags_HeightRegular>
+    常量 大高度 <公开 类型 = 整数 值 = @ImGuiComboFlags_HeightLarge>
+    常量 最大高度 <公开 类型 = 整数 值 = @ImGuiComboFlags_HeightLargest>
+    常量 禁止箭头按钮 <公开 类型 = 整数 值 = @ImGuiComboFlags_NoArrowButton>
+    常量 禁止预览区 <公开 类型 = 整数 值 = @ImGuiComboFlags_NoPreview>
+    常量 宽度适应预览 <公开 类型 = 整数 值 = @ImGuiComboFlags_WidthFitPreview>
+}

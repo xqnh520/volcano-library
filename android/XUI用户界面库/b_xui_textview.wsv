@@ -1,0 +1,3008 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.安卓.XUI <注释 = "XUI 安卓 UI 工具库封装" @文档 = "category = \"XUI\"">
+
+
+类 XUI自动移动文本框 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.textview.AutoMoveTextView)."
+        @文档 = "category = \"XUI.文本\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.textview.AutoMoveTextView\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI自动移动文本框, AutoMoveTextView, com.xuexiang.xui.widget.textview.AutoMoveTextView)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetAutoMoveTextView ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI自动移动文本框的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI自动移动文本框.getAlpha()">
+    {
+        @ (double)@sn<this>.GetAutoMoveTextView ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI自动移动文本框的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI自动移动文本框.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetAutoMoveTextView ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI自动移动文本框的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI自动移动文本框.isEnabled()">
+    {
+        @ @sn<this>.GetAutoMoveTextView ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI自动移动文本框的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI自动移动文本框.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetAutoMoveTextView ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI自动移动文本框的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI自动移动文本框.isClickable()">
+    {
+        @ @sn<this>.GetAutoMoveTextView ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI自动移动文本框的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI自动移动文本框.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetAutoMoveTextView ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI自动移动文本框的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI自动移动文本框.getElevation()">
+    {
+        @ (double)@sn<this>.GetAutoMoveTextView ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI自动移动文本框的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI自动移动文本框.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetAutoMoveTextView ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI自动移动文本框的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI自动移动文本框.getMinimumHeight()">
+    {
+        @ @sn<this>.GetAutoMoveTextView ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI自动移动文本框的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI自动移动文本框.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetAutoMoveTextView ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI自动移动文本框的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI自动移动文本框.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetAutoMoveTextView ().setBackgroundColor (@<新值>))
+    }
+
+    方法 XUI文本 <公开 属性读 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读取XUI自动移动文本框的XUI文本当前值。 参数：无。 返回：文本型。 原方法：XUI自动移动文本框.getText()">
+    {
+        @ java.lang.String.valueOf (@sn<this>.GetAutoMoveTextView ().getText ())
+    }
+
+    方法 XUI文本 <公开 属性写 注释 = "用法：设置XUI自动移动文本框的XUI文本, 传入新值后立刻生效。 参数：新值=文本。 返回：无。 原方法：XUI自动移动文本框.setText()">
+    参数 新值 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetAutoMoveTextView ().setText (@<新值>))
+    }
+
+    方法 XUI文字颜色 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI自动移动文本框的XUI文字颜色当前值。 参数：无。 返回：整数。 原方法：XUI自动移动文本框.getCurrentTextColor()">
+    {
+        @ @sn<this>.GetAutoMoveTextView ().getCurrentTextColor ()
+    }
+
+    方法 XUI文字颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI自动移动文本框的XUI文字颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI自动移动文本框.setTextColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetAutoMoveTextView ().setTextColor (@<新值>))
+    }
+
+    方法 XUI文字大小 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI自动移动文本框的XUI文字大小当前值。 参数：无。 返回：小数。 原方法：XUI自动移动文本框.getTextSize()">
+    {
+        @ (double)@sn<this>.GetAutoMoveTextView ().getTextSize ()
+    }
+
+    方法 XUI文字大小 <公开 属性写 注释 = "用法：设置XUI自动移动文本框的XUI文字大小, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI自动移动文本框.setTextSize()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetAutoMoveTextView ().setTextSize ((float) @<新值>))
+    }
+
+    方法 XUI提示文字 <公开 属性读 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读取XUI自动移动文本框的XUI提示文字当前值。 参数：无。 返回：文本型。 原方法：XUI自动移动文本框.getHint()">
+    {
+        @ java.lang.String.valueOf (@sn<this>.GetAutoMoveTextView ().getHint ())
+    }
+
+    方法 XUI提示文字 <公开 属性写 注释 = "用法：设置XUI自动移动文本框的XUI提示文字, 传入新值后立刻生效。 参数：新值=文本。 返回：无。 原方法：XUI自动移动文本框.setHint()">
+    参数 新值 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetAutoMoveTextView ().setHint (@<新值>))
+    }
+
+    方法 XUI最大行数 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI自动移动文本框的XUI最大行数当前值。 参数：无。 返回：整数。 原方法：XUI自动移动文本框.getMaxLines()">
+    {
+        @ @sn<this>.GetAutoMoveTextView ().getMaxLines ()
+    }
+
+    方法 XUI最大行数 <公开 属性写 注释 = "用法：设置XUI自动移动文本框的XUI最大行数, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI自动移动文本框.setMaxLines()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetAutoMoveTextView ().setMaxLines (@<新值>))
+    }
+
+    方法 XUI单行 <公开 属性写 注释 = "用法：设置XUI自动移动文本框的XUI单行, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI自动移动文本框.setSingleLine()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetAutoMoveTextView ().setSingleLine (@<新值>))
+    }
+
+    方法 是否聚焦 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断XUI自动移动文本框是否聚焦。 参数：无。 返回：逻辑型。 原方法：XUI自动移动文本框.isFocused()">
+    {
+        @ @sn<this>.GetAutoMoveTextView ().isFocused ()
+    }
+
+}
+
+类 XUI徽章视图 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.textview.BadgeView)."
+        @文档 = "category = \"XUI.文本\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.textview.BadgeView\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI徽章视图, BadgeView, com.xuexiang.xui.widget.textview.BadgeView)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetBadgeView ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI徽章视图的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI徽章视图.getAlpha()">
+    {
+        @ (double)@sn<this>.GetBadgeView ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI徽章视图的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI徽章视图.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetBadgeView ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI徽章视图的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI徽章视图.isEnabled()">
+    {
+        @ @sn<this>.GetBadgeView ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI徽章视图的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI徽章视图.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetBadgeView ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI徽章视图的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI徽章视图.isClickable()">
+    {
+        @ @sn<this>.GetBadgeView ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI徽章视图的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI徽章视图.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetBadgeView ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI徽章视图的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI徽章视图.getElevation()">
+    {
+        @ (double)@sn<this>.GetBadgeView ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI徽章视图的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI徽章视图.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetBadgeView ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI徽章视图的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI徽章视图.getMinimumHeight()">
+    {
+        @ @sn<this>.GetBadgeView ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI徽章视图的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI徽章视图.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetBadgeView ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI徽章视图的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI徽章视图.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetBadgeView ().setBackgroundColor (@<新值>))
+    }
+
+    方法 XUI文本 <公开 属性读 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读取XUI徽章视图的XUI文本当前值。 参数：无。 返回：文本型。 原方法：XUI徽章视图.getText()">
+    {
+        @ java.lang.String.valueOf (@sn<this>.GetBadgeView ().getText ())
+    }
+
+    方法 XUI文本 <公开 属性写 注释 = "用法：设置XUI徽章视图的XUI文本, 传入新值后立刻生效。 参数：新值=文本。 返回：无。 原方法：XUI徽章视图.setText()">
+    参数 新值 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetBadgeView ().setText (@<新值>))
+    }
+
+    方法 XUI文字颜色 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI徽章视图的XUI文字颜色当前值。 参数：无。 返回：整数。 原方法：XUI徽章视图.getCurrentTextColor()">
+    {
+        @ @sn<this>.GetBadgeView ().getCurrentTextColor ()
+    }
+
+    方法 XUI文字颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI徽章视图的XUI文字颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI徽章视图.setTextColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetBadgeView ().setTextColor (@<新值>))
+    }
+
+    方法 XUI文字大小 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI徽章视图的XUI文字大小当前值。 参数：无。 返回：小数。 原方法：XUI徽章视图.getTextSize()">
+    {
+        @ (double)@sn<this>.GetBadgeView ().getTextSize ()
+    }
+
+    方法 XUI文字大小 <公开 属性写 注释 = "用法：设置XUI徽章视图的XUI文字大小, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI徽章视图.setTextSize()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetBadgeView ().setTextSize ((float) @<新值>))
+    }
+
+    方法 XUI提示文字 <公开 属性读 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读取XUI徽章视图的XUI提示文字当前值。 参数：无。 返回：文本型。 原方法：XUI徽章视图.getHint()">
+    {
+        @ java.lang.String.valueOf (@sn<this>.GetBadgeView ().getHint ())
+    }
+
+    方法 XUI提示文字 <公开 属性写 注释 = "用法：设置XUI徽章视图的XUI提示文字, 传入新值后立刻生效。 参数：新值=文本。 返回：无。 原方法：XUI徽章视图.setHint()">
+    参数 新值 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetBadgeView ().setHint (@<新值>))
+    }
+
+    方法 XUI最大行数 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI徽章视图的XUI最大行数当前值。 参数：无。 返回：整数。 原方法：XUI徽章视图.getMaxLines()">
+    {
+        @ @sn<this>.GetBadgeView ().getMaxLines ()
+    }
+
+    方法 XUI最大行数 <公开 属性写 注释 = "用法：设置XUI徽章视图的XUI最大行数, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI徽章视图.setMaxLines()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetBadgeView ().setMaxLines (@<新值>))
+    }
+
+    方法 XUI单行 <公开 属性写 注释 = "用法：设置XUI徽章视图的XUI单行, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI徽章视图.setSingleLine()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetBadgeView ().setSingleLine (@<新值>))
+    }
+
+    方法 设置背景 <公开 注释 = "用法：把XUI徽章视图的背景设为给定值。 参数：值1=整数、值2=整数。 返回：无。 原方法：XUI徽章视图.setBackground()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetBadgeView ().setBackground (@<值1>, @<值2>))
+    }
+
+    方法 是否隐藏响应空 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断XUI徽章视图是否隐藏响应空。 参数：无。 返回：逻辑型。 原方法：XUI徽章视图.isHideOnNull()">
+    {
+        @ @sn<this>.GetBadgeView ().isHideOnNull ()
+    }
+
+    方法 设置隐藏响应空 <公开 注释 = "用法：把XUI徽章视图的隐藏响应空设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI徽章视图.setHideOnNull()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetBadgeView ().setHideOnNull (@<值1>))
+    }
+
+    方法 设置角标数量 <公开 注释 = "用法：把XUI徽章视图的角标数量设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI徽章视图.setBadgeCount()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetBadgeView ().setBadgeCount (@<值1>))
+    }
+
+    方法 设置角标对齐方式 <公开 注释 = "用法：把XUI徽章视图的角标对齐方式设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI徽章视图.setBadgeGravity()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetBadgeView ().setBadgeGravity (@<值1>))
+    }
+
+    方法 取角标对齐方式 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI徽章视图的角标对齐方式。 参数：无。 返回：整数。 原方法：XUI徽章视图.getBadgeGravity()">
+    {
+        @ @sn<this>.GetBadgeView ().getBadgeGravity ()
+    }
+
+    方法 设置角标外边距 <公开 注释 = "用法：把XUI徽章视图的角标外边距设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI徽章视图.setBadgeMargin()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetBadgeView ().setBadgeMargin (@<值1>))
+    }
+
+    方法 设置角标外边距_2 <公开 注释 = "用法：把XUI徽章视图的角标外边距_2设为给定值。 参数：值1=整数、值2=整数、值3=整数、值4=整数。 返回：无。 原方法：XUI徽章视图.setBadgeMargin()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetBadgeView ().setBadgeMargin (@<值1>, @<值2>, @<值3>, @<值4>))
+    }
+
+    方法 取角标外边距 <公开 类型 = "整数 []" @嵌入式方法 = "" 注释 = "用法：读出XUI徽章视图的角标外边距。 参数：无。 返回：无。 原方法：XUI徽章视图.getBadgeMargin()">
+    {
+        @ @sn<this>.GetBadgeView ().getBadgeMargin ()
+    }
+
+    方法 增量角标数量 <公开 注释 = "用法：调用XUI徽章视图的增量角标数量。 参数：值1=整数。 返回：无。 原方法：XUI徽章视图.incrementBadgeCount()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetBadgeView ().incrementBadgeCount (@<值1>))
+    }
+
+    方法 减量角标数量 <公开 注释 = "用法：调用XUI徽章视图的减量角标数量。 参数：值1=整数。 返回：无。 原方法：XUI徽章视图.decrementBadgeCount()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetBadgeView ().decrementBadgeCount (@<值1>))
+    }
+
+    方法 隐藏 <公开 注释 = "用法：让XUI徽章视图不再显示。 参数：无。 返回：无。 原方法：XUI徽章视图.hide()">
+    {
+        @ @m<RUN_UI_ACTION> (GetBadgeView ().hide ())
+    }
+
+    方法 显示 <公开 注释 = "用法：让XUI徽章视图显示出来。 参数：无。 返回：无。 原方法：XUI徽章视图.show()">
+    {
+        @ @m<RUN_UI_ACTION> (GetBadgeView ().show ())
+    }
+
+    方法 设置目标视图 <公开 注释 = "用法：把XUI徽章视图的目标视图设为给定值。 参数：目标视图=窗口组件。 返回：无。 原方法：@<目标视图>.GetView()">
+    参数 目标视图 <类型 = 窗口组件>
+    {
+        @ @m<RUN_UI_ACTION> (GetBadgeView ().setTargetView ((android.view.View) @<目标视图>.GetView ()))
+    }
+
+}
+
+类 XUI可展开文本框 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.textview.ExpandableTextView)."
+        @文档 = "category = \"XUI.文本\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.textview.ExpandableTextView\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.etv_maxCollapsedLines\n        shown_name = \"最大收缩展示的行数\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.etv_animDuration\n        shown_name = \"动画持续的间隔\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.etv_animAlphaStart\n        shown_name = \"动画开始时的透明度\"\n        data_type = double\n    }\n    attr\n    {\n        name = app.etv_expandDrawable\n        shown_name = \"伸展箭头的资源\"\n        data_type = string\n        detail_type = drawable_res_file\n    }\n    attr\n    {\n        name = app.etv_collapseDrawable\n        shown_name = \"收缩箭头的资源\"\n        data_type = string\n        detail_type = drawable_res_file\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI可展开文本框, ExpandableTextView, com.xuexiang.xui.widget.textview.ExpandableTextView)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetExpandableTextView ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI可展开文本框的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI可展开文本框.getAlpha()">
+    {
+        @ (double)@sn<this>.GetExpandableTextView ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI可展开文本框的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI可展开文本框.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetExpandableTextView ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI可展开文本框的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI可展开文本框.isEnabled()">
+    {
+        @ @sn<this>.GetExpandableTextView ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI可展开文本框的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI可展开文本框.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetExpandableTextView ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI可展开文本框的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI可展开文本框.isClickable()">
+    {
+        @ @sn<this>.GetExpandableTextView ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI可展开文本框的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI可展开文本框.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetExpandableTextView ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI可展开文本框的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI可展开文本框.getElevation()">
+    {
+        @ (double)@sn<this>.GetExpandableTextView ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI可展开文本框的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI可展开文本框.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetExpandableTextView ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI可展开文本框的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI可展开文本框.getMinimumHeight()">
+    {
+        @ @sn<this>.GetExpandableTextView ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI可展开文本框的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI可展开文本框.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetExpandableTextView ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI可展开文本框的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI可展开文本框.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetExpandableTextView ().setBackgroundColor (@<新值>))
+    }
+
+    方法 设置方位 <公开 注释 = "用法：把XUI可展开文本框的方位设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI可展开文本框.setOrientation()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetExpandableTextView ().setOrientation (@<值1>))
+    }
+
+    方法 设置文本 <公开 注释 = "用法：把XUI可展开文本框的文本设为给定值。 参数：值1=文本。 返回：无。 原方法：XUI可展开文本框.setText()">
+    参数 值1 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetExpandableTextView ().setText (@<值1>))
+    }
+
+    方法 取文本 <公开 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读出XUI可展开文本框的文本。 参数：无。 返回：文本型。 原方法：XUI可展开文本框.getText()">
+    {
+        @ java.lang.String.valueOf (@sn<this>.GetExpandableTextView ().getText ())
+    }
+
+}
+
+类 XUI日志文本框 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.textview.LoggerTextView)."
+        @文档 = "category = \"XUI.文本\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.textview.LoggerTextView\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI日志文本框, LoggerTextView, com.xuexiang.xui.widget.textview.LoggerTextView)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetLoggerTextView ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI日志文本框的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI日志文本框.getAlpha()">
+    {
+        @ (double)@sn<this>.GetLoggerTextView ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI日志文本框的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI日志文本框.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLoggerTextView ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI日志文本框的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI日志文本框.isEnabled()">
+    {
+        @ @sn<this>.GetLoggerTextView ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI日志文本框的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI日志文本框.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLoggerTextView ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI日志文本框的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI日志文本框.isClickable()">
+    {
+        @ @sn<this>.GetLoggerTextView ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI日志文本框的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI日志文本框.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLoggerTextView ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI日志文本框的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI日志文本框.getElevation()">
+    {
+        @ (double)@sn<this>.GetLoggerTextView ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI日志文本框的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI日志文本框.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLoggerTextView ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI日志文本框的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI日志文本框.getMinimumHeight()">
+    {
+        @ @sn<this>.GetLoggerTextView ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI日志文本框的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI日志文本框.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLoggerTextView ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI日志文本框的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI日志文本框.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLoggerTextView ().setBackgroundColor (@<新值>))
+    }
+
+    方法 XUI文本 <公开 属性读 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读取XUI日志文本框的XUI文本当前值。 参数：无。 返回：文本型。 原方法：XUI日志文本框.getText()">
+    {
+        @ java.lang.String.valueOf (@sn<this>.GetLoggerTextView ().getText ())
+    }
+
+    方法 XUI文本 <公开 属性写 注释 = "用法：设置XUI日志文本框的XUI文本, 传入新值后立刻生效。 参数：新值=文本。 返回：无。 原方法：XUI日志文本框.setText()">
+    参数 新值 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLoggerTextView ().setText (@<新值>))
+    }
+
+    方法 XUI文字颜色 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI日志文本框的XUI文字颜色当前值。 参数：无。 返回：整数。 原方法：XUI日志文本框.getCurrentTextColor()">
+    {
+        @ @sn<this>.GetLoggerTextView ().getCurrentTextColor ()
+    }
+
+    方法 XUI文字颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI日志文本框的XUI文字颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI日志文本框.setTextColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLoggerTextView ().setTextColor (@<新值>))
+    }
+
+    方法 XUI文字大小 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI日志文本框的XUI文字大小当前值。 参数：无。 返回：小数。 原方法：XUI日志文本框.getTextSize()">
+    {
+        @ (double)@sn<this>.GetLoggerTextView ().getTextSize ()
+    }
+
+    方法 XUI文字大小 <公开 属性写 注释 = "用法：设置XUI日志文本框的XUI文字大小, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI日志文本框.setTextSize()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLoggerTextView ().setTextSize ((float) @<新值>))
+    }
+
+    方法 XUI提示文字 <公开 属性读 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读取XUI日志文本框的XUI提示文字当前值。 参数：无。 返回：文本型。 原方法：XUI日志文本框.getHint()">
+    {
+        @ java.lang.String.valueOf (@sn<this>.GetLoggerTextView ().getHint ())
+    }
+
+    方法 XUI提示文字 <公开 属性写 注释 = "用法：设置XUI日志文本框的XUI提示文字, 传入新值后立刻生效。 参数：新值=文本。 返回：无。 原方法：XUI日志文本框.setHint()">
+    参数 新值 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLoggerTextView ().setHint (@<新值>))
+    }
+
+    方法 XUI最大行数 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI日志文本框的XUI最大行数当前值。 参数：无。 返回：整数。 原方法：XUI日志文本框.getMaxLines()">
+    {
+        @ @sn<this>.GetLoggerTextView ().getMaxLines ()
+    }
+
+    方法 XUI最大行数 <公开 属性写 注释 = "用法：设置XUI日志文本框的XUI最大行数, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI日志文本框.setMaxLines()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLoggerTextView ().setMaxLines (@<新值>))
+    }
+
+    方法 XUI单行 <公开 属性写 注释 = "用法：设置XUI日志文本框的XUI单行, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI日志文本框.setSingleLine()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLoggerTextView ().setSingleLine (@<新值>))
+    }
+
+    方法 日志常规 <公开 注释 = "用法：调用XUI日志文本框的日志常规。 参数：值1=文本。 返回：无。 原方法：XUI日志文本框.logNormal()">
+    参数 值1 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLoggerTextView ().logNormal (@<值1>))
+    }
+
+    方法 日志成功 <公开 注释 = "用法：调用XUI日志文本框的日志成功。 参数：值1=文本。 返回：无。 原方法：XUI日志文本框.logSuccess()">
+    参数 值1 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLoggerTextView ().logSuccess (@<值1>))
+    }
+
+    方法 日志错误 <公开 注释 = "用法：调用XUI日志文本框的日志错误。 参数：值1=文本。 返回：无。 原方法：XUI日志文本框.logError()">
+    参数 值1 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLoggerTextView ().logError (@<值1>))
+    }
+
+    方法 日志警告 <公开 注释 = "用法：调用XUI日志文本框的日志警告。 参数：值1=文本。 返回：无。 原方法：XUI日志文本框.logWarning()">
+    参数 值1 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLoggerTextView ().logWarning (@<值1>))
+    }
+
+    方法 日志自定义 <公开 注释 = "用法：调用XUI日志文本框的日志自定义。 参数：值1=文本。 返回：无。 原方法：XUI日志文本框.logCustom()">
+    参数 值1 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLoggerTextView ().logCustom (@<值1>))
+    }
+
+    方法 清空日志 <公开 注释 = "用法：清空XUI日志文本框的日志。 参数：无。 返回：无。 原方法：XUI日志文本框.clearLog()">
+    {
+        @ @m<RUN_UI_ACTION> (GetLoggerTextView ().clearLog ())
+    }
+
+}
+
+类 XUI跑马灯文本框 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.textview.MarqueeTextView)."
+        @文档 = "category = \"XUI.文本\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.textview.MarqueeTextView\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.mtv_isAutoFit\n        shown_name = \"尺寸是否自适应\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.mtv_isAutoDisplay\n        shown_name = \"控件是否自动显示与隐藏\"\n        data_type = boolean\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI跑马灯文本框, MarqueeTextView, com.xuexiang.xui.widget.textview.MarqueeTextView)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetMarqueeTextView ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI跑马灯文本框的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI跑马灯文本框.getAlpha()">
+    {
+        @ (double)@sn<this>.GetMarqueeTextView ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI跑马灯文本框的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI跑马灯文本框.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMarqueeTextView ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI跑马灯文本框的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI跑马灯文本框.isEnabled()">
+    {
+        @ @sn<this>.GetMarqueeTextView ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI跑马灯文本框的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI跑马灯文本框.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetMarqueeTextView ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI跑马灯文本框的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI跑马灯文本框.isClickable()">
+    {
+        @ @sn<this>.GetMarqueeTextView ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI跑马灯文本框的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI跑马灯文本框.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetMarqueeTextView ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI跑马灯文本框的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI跑马灯文本框.getElevation()">
+    {
+        @ (double)@sn<this>.GetMarqueeTextView ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI跑马灯文本框的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI跑马灯文本框.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMarqueeTextView ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI跑马灯文本框的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI跑马灯文本框.getMinimumHeight()">
+    {
+        @ @sn<this>.GetMarqueeTextView ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI跑马灯文本框的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI跑马灯文本框.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMarqueeTextView ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI跑马灯文本框的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI跑马灯文本框.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMarqueeTextView ().setBackgroundColor (@<新值>))
+    }
+
+    方法 XUI文本 <公开 属性读 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读取XUI跑马灯文本框的XUI文本当前值。 参数：无。 返回：文本型。 原方法：XUI跑马灯文本框.getText()">
+    {
+        @ java.lang.String.valueOf (@sn<this>.GetMarqueeTextView ().getText ())
+    }
+
+    方法 XUI文本 <公开 属性写 注释 = "用法：设置XUI跑马灯文本框的XUI文本, 传入新值后立刻生效。 参数：新值=文本。 返回：无。 原方法：XUI跑马灯文本框.setText()">
+    参数 新值 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetMarqueeTextView ().setText (@<新值>))
+    }
+
+    方法 XUI文字颜色 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI跑马灯文本框的XUI文字颜色当前值。 参数：无。 返回：整数。 原方法：XUI跑马灯文本框.getCurrentTextColor()">
+    {
+        @ @sn<this>.GetMarqueeTextView ().getCurrentTextColor ()
+    }
+
+    方法 XUI文字颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI跑马灯文本框的XUI文字颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI跑马灯文本框.setTextColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMarqueeTextView ().setTextColor (@<新值>))
+    }
+
+    方法 XUI文字大小 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI跑马灯文本框的XUI文字大小当前值。 参数：无。 返回：小数。 原方法：XUI跑马灯文本框.getTextSize()">
+    {
+        @ (double)@sn<this>.GetMarqueeTextView ().getTextSize ()
+    }
+
+    方法 XUI文字大小 <公开 属性写 注释 = "用法：设置XUI跑马灯文本框的XUI文字大小, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI跑马灯文本框.setTextSize()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMarqueeTextView ().setTextSize ((float) @<新值>))
+    }
+
+    方法 XUI提示文字 <公开 属性读 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读取XUI跑马灯文本框的XUI提示文字当前值。 参数：无。 返回：文本型。 原方法：XUI跑马灯文本框.getHint()">
+    {
+        @ java.lang.String.valueOf (@sn<this>.GetMarqueeTextView ().getHint ())
+    }
+
+    方法 XUI提示文字 <公开 属性写 注释 = "用法：设置XUI跑马灯文本框的XUI提示文字, 传入新值后立刻生效。 参数：新值=文本。 返回：无。 原方法：XUI跑马灯文本框.setHint()">
+    参数 新值 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetMarqueeTextView ().setHint (@<新值>))
+    }
+
+    方法 XUI最大行数 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI跑马灯文本框的XUI最大行数当前值。 参数：无。 返回：整数。 原方法：XUI跑马灯文本框.getMaxLines()">
+    {
+        @ @sn<this>.GetMarqueeTextView ().getMaxLines ()
+    }
+
+    方法 XUI最大行数 <公开 属性写 注释 = "用法：设置XUI跑马灯文本框的XUI最大行数, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI跑马灯文本框.setMaxLines()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMarqueeTextView ().setMaxLines (@<新值>))
+    }
+
+    方法 XUI单行 <公开 属性写 注释 = "用法：设置XUI跑马灯文本框的XUI单行, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI跑马灯文本框.setSingleLine()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetMarqueeTextView ().setSingleLine (@<新值>))
+    }
+
+    方法 添加展示字符串 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：向XUI跑马灯文本框添加展示字符串。 参数：值1=文本。 返回：逻辑型。 原方法：XUI跑马灯文本框.addDisplayString()">
+    参数 值1 <类型 = 文本型>
+    {
+        @ @sn<this>.GetMarqueeTextView ().addDisplayString (@<值1>)
+    }
+
+    方法 移除展示字符串 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：从XUI跑马灯文本框移除展示字符串。 参数：值1=文本。 返回：逻辑型。 原方法：XUI跑马灯文本框.removeDisplayString()">
+    参数 值1 <类型 = 文本型>
+    {
+        @ @sn<this>.GetMarqueeTextView ().removeDisplayString (@<值1>)
+    }
+
+    方法 设置视图宽度 <公开 注释 = "用法：把XUI跑马灯文本框的视图宽度设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI跑马灯文本框.setViewWidth()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMarqueeTextView ().setViewWidth (@<值1>))
+    }
+
+    方法 取当前位置 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读出XUI跑马灯文本框的当前位置。 参数：无。 返回：小数。 原方法：XUI跑马灯文本框.getCurrentPosition()">
+    {
+        @ (double)@sn<this>.GetMarqueeTextView ().getCurrentPosition ()
+    }
+
+    方法 设置当前位置 <公开 注释 = "用法：把XUI跑马灯文本框的当前位置设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI跑马灯文本框.setCurrentPosition()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMarqueeTextView ().setCurrentPosition ((float) @<值1>))
+    }
+
+    方法 取滚动宽度 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI跑马灯文本框的滚动宽度。 参数：无。 返回：整数。 原方法：XUI跑马灯文本框.getScrollWidth()">
+    {
+        @ @sn<this>.GetMarqueeTextView ().getScrollWidth ()
+    }
+
+    方法 设置滚动宽度 <公开 注释 = "用法：把XUI跑马灯文本框的滚动宽度设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI跑马灯文本框.setScrollWidth()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMarqueeTextView ().setScrollWidth (@<值1>))
+    }
+
+    方法 取速度 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI跑马灯文本框的速度。 参数：无。 返回：整数。 原方法：XUI跑马灯文本框.getSpeed()">
+    {
+        @ @sn<this>.GetMarqueeTextView ().getSpeed ()
+    }
+
+    方法 设置速度 <公开 注释 = "用法：把XUI跑马灯文本框的速度设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI跑马灯文本框.setSpeed()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMarqueeTextView ().setSpeed (@<值1>))
+    }
+
+    方法 是否滚动中 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断XUI跑马灯文本框是否滚动中。 参数：无。 返回：逻辑型。 原方法：XUI跑马灯文本框.isRolling()">
+    {
+        @ @sn<this>.GetMarqueeTextView ().isRolling ()
+    }
+
+    方法 取当前索引 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI跑马灯文本框的当前索引。 参数：无。 返回：整数。 原方法：XUI跑马灯文本框.getCurrentIndex()">
+    {
+        @ @sn<this>.GetMarqueeTextView ().getCurrentIndex ()
+    }
+
+    方法 取展示大小 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI跑马灯文本框的展示大小。 参数：无。 返回：整数。 原方法：XUI跑马灯文本框.getDisplaySize()">
+    {
+        @ @sn<this>.GetMarqueeTextView ().getDisplaySize ()
+    }
+
+    方法 是否含展示消息 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断XUI跑马灯文本框是否含有展示消息。 参数：无。 返回：逻辑型。 原方法：XUI跑马灯文本框.hasDisplayMessage()">
+    {
+        @ @sn<this>.GetMarqueeTextView ().hasDisplayMessage ()
+    }
+
+    方法 清空 <公开 注释 = "用法：清空XUI跑马灯文本框的相关内容。 参数：无。 返回：无。 原方法：XUI跑马灯文本框.clear()">
+    {
+        @ @m<RUN_UI_ACTION> (GetMarqueeTextView ().clear ())
+    }
+
+}
+
+类 XUI展开更多文本框 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.textview.ReadMoreTextView)."
+        @文档 = "category = \"XUI.文本\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.textview.ReadMoreTextView\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.rmtv_trimExpandedText\n        shown_name = \"展开显示的文字\"\n        data_type = string\n    }\n    attr\n    {\n        name = app.rmtv_trimCollapsedText\n        shown_name = \"折叠显示的文字\"\n        data_type = string\n    }\n    attr\n    {\n        name = app.rmtv_ellipsize\n        shown_name = \"文字过长显示符号\"\n        data_type = string\n    }\n    attr\n    {\n        name = app.rmtv_showTrimExpandedText\n        shown_name = \"是否显示展开的文字\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.rmtv_colorClickableText\n        shown_name = \"折叠/展开按钮文字颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.rmtv_trimLines\n        shown_name = \"最多显示的行数\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.rmtv_trimLength\n        shown_name = \"最多显示的字符串长度\"\n        data_type = int\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI展开更多文本框, ReadMoreTextView, com.xuexiang.xui.widget.textview.ReadMoreTextView)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetReadMoreTextView ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI展开更多文本框的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI展开更多文本框.getAlpha()">
+    {
+        @ (double)@sn<this>.GetReadMoreTextView ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI展开更多文本框的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI展开更多文本框.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetReadMoreTextView ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI展开更多文本框的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI展开更多文本框.isEnabled()">
+    {
+        @ @sn<this>.GetReadMoreTextView ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI展开更多文本框的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI展开更多文本框.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetReadMoreTextView ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI展开更多文本框的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI展开更多文本框.isClickable()">
+    {
+        @ @sn<this>.GetReadMoreTextView ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI展开更多文本框的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI展开更多文本框.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetReadMoreTextView ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI展开更多文本框的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI展开更多文本框.getElevation()">
+    {
+        @ (double)@sn<this>.GetReadMoreTextView ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI展开更多文本框的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI展开更多文本框.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetReadMoreTextView ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI展开更多文本框的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI展开更多文本框.getMinimumHeight()">
+    {
+        @ @sn<this>.GetReadMoreTextView ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI展开更多文本框的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI展开更多文本框.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetReadMoreTextView ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI展开更多文本框的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI展开更多文本框.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetReadMoreTextView ().setBackgroundColor (@<新值>))
+    }
+
+    方法 XUI文本 <公开 属性读 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读取XUI展开更多文本框的XUI文本当前值。 参数：无。 返回：文本型。 原方法：XUI展开更多文本框.getText()">
+    {
+        @ java.lang.String.valueOf (@sn<this>.GetReadMoreTextView ().getText ())
+    }
+
+    方法 XUI文本 <公开 属性写 注释 = "用法：设置XUI展开更多文本框的XUI文本, 传入新值后立刻生效。 参数：新值=文本。 返回：无。 原方法：XUI展开更多文本框.setText()">
+    参数 新值 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetReadMoreTextView ().setText (@<新值>))
+    }
+
+    方法 XUI文字颜色 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI展开更多文本框的XUI文字颜色当前值。 参数：无。 返回：整数。 原方法：XUI展开更多文本框.getCurrentTextColor()">
+    {
+        @ @sn<this>.GetReadMoreTextView ().getCurrentTextColor ()
+    }
+
+    方法 XUI文字颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI展开更多文本框的XUI文字颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI展开更多文本框.setTextColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetReadMoreTextView ().setTextColor (@<新值>))
+    }
+
+    方法 XUI文字大小 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI展开更多文本框的XUI文字大小当前值。 参数：无。 返回：小数。 原方法：XUI展开更多文本框.getTextSize()">
+    {
+        @ (double)@sn<this>.GetReadMoreTextView ().getTextSize ()
+    }
+
+    方法 XUI文字大小 <公开 属性写 注释 = "用法：设置XUI展开更多文本框的XUI文字大小, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI展开更多文本框.setTextSize()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetReadMoreTextView ().setTextSize ((float) @<新值>))
+    }
+
+    方法 XUI提示文字 <公开 属性读 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读取XUI展开更多文本框的XUI提示文字当前值。 参数：无。 返回：文本型。 原方法：XUI展开更多文本框.getHint()">
+    {
+        @ java.lang.String.valueOf (@sn<this>.GetReadMoreTextView ().getHint ())
+    }
+
+    方法 XUI提示文字 <公开 属性写 注释 = "用法：设置XUI展开更多文本框的XUI提示文字, 传入新值后立刻生效。 参数：新值=文本。 返回：无。 原方法：XUI展开更多文本框.setHint()">
+    参数 新值 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetReadMoreTextView ().setHint (@<新值>))
+    }
+
+    方法 XUI最大行数 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI展开更多文本框的XUI最大行数当前值。 参数：无。 返回：整数。 原方法：XUI展开更多文本框.getMaxLines()">
+    {
+        @ @sn<this>.GetReadMoreTextView ().getMaxLines ()
+    }
+
+    方法 XUI最大行数 <公开 属性写 注释 = "用法：设置XUI展开更多文本框的XUI最大行数, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI展开更多文本框.setMaxLines()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetReadMoreTextView ().setMaxLines (@<新值>))
+    }
+
+    方法 XUI单行 <公开 属性写 注释 = "用法：设置XUI展开更多文本框的XUI单行, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI展开更多文本框.setSingleLine()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetReadMoreTextView ().setSingleLine (@<新值>))
+    }
+
+    方法 设置裁边长度 <公开 注释 = "用法：把XUI展开更多文本框的裁边长度设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI展开更多文本框.setTrimLength()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetReadMoreTextView ().setTrimLength (@<值1>))
+    }
+
+    方法 设置颜色可点击文本 <公开 注释 = "用法：把XUI展开更多文本框的颜色可点击文本设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI展开更多文本框.setColorClickableText()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetReadMoreTextView ().setColorClickableText (@<值1>))
+    }
+
+    方法 设置裁边已折叠文本 <公开 注释 = "用法：把XUI展开更多文本框的裁边已折叠文本设为给定值。 参数：值1=文本。 返回：无。 原方法：XUI展开更多文本框.setTrimCollapsedText()">
+    参数 值1 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetReadMoreTextView ().setTrimCollapsedText (@<值1>))
+    }
+
+    方法 设置裁边已展开文本 <公开 注释 = "用法：把XUI展开更多文本框的裁边已展开文本设为给定值。 参数：值1=文本。 返回：无。 原方法：XUI展开更多文本框.setTrimExpandedText()">
+    参数 值1 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetReadMoreTextView ().setTrimExpandedText (@<值1>))
+    }
+
+    方法 设置裁边模式 <公开 注释 = "用法：把XUI展开更多文本框的裁边模式设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI展开更多文本框.setTrimMode()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetReadMoreTextView ().setTrimMode (@<值1>))
+    }
+
+    方法 设置裁边行数 <公开 注释 = "用法：把XUI展开更多文本框的裁边行数设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI展开更多文本框.setTrimLines()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetReadMoreTextView ().setTrimLines (@<值1>))
+    }
+
+}
+
+类 XUI自适应布局 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.textview.autofit.AutoFitLayout)."
+        @文档 = "category = \"XUI.文本\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.textview.autofit.AutoFitLayout\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.aftv_enable\n        shown_name = \"自动字体大小适应功能是否开启\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.aftv_minTextSize\n        shown_name = \"调整的最小的字体大小\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.aftv_precision\n        shown_name = \"调整的精度\"\n        data_type = double\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI自适应布局, AutoFitLayout, com.xuexiang.xui.widget.textview.autofit.AutoFitLayout)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetAutoFitLayout ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI自适应布局的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI自适应布局.getAlpha()">
+    {
+        @ (double)@sn<this>.GetAutoFitLayout ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI自适应布局的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI自适应布局.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetAutoFitLayout ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI自适应布局的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI自适应布局.isEnabled()">
+    {
+        @ @sn<this>.GetAutoFitLayout ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI自适应布局的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI自适应布局.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetAutoFitLayout ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI自适应布局的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI自适应布局.isClickable()">
+    {
+        @ @sn<this>.GetAutoFitLayout ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI自适应布局的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI自适应布局.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetAutoFitLayout ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI自适应布局的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI自适应布局.getElevation()">
+    {
+        @ (double)@sn<this>.GetAutoFitLayout ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI自适应布局的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI自适应布局.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetAutoFitLayout ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI自适应布局的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI自适应布局.getMinimumHeight()">
+    {
+        @ @sn<this>.GetAutoFitLayout ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI自适应布局的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI自适应布局.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetAutoFitLayout ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI自适应布局的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI自适应布局.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetAutoFitLayout ().setBackgroundColor (@<新值>))
+    }
+
+}
+
+类 XUI自适应文本框 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.textview.autofit.AutoFitTextView)."
+        @文档 = "category = \"XUI.文本\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.textview.autofit.AutoFitTextView\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI自适应文本框, AutoFitTextView, com.xuexiang.xui.widget.textview.autofit.AutoFitTextView)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetAutoFitTextView ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI自适应文本框的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI自适应文本框.getAlpha()">
+    {
+        @ (double)@sn<this>.GetAutoFitTextView ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI自适应文本框的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI自适应文本框.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetAutoFitTextView ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI自适应文本框的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI自适应文本框.isEnabled()">
+    {
+        @ @sn<this>.GetAutoFitTextView ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI自适应文本框的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI自适应文本框.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetAutoFitTextView ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI自适应文本框的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI自适应文本框.isClickable()">
+    {
+        @ @sn<this>.GetAutoFitTextView ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI自适应文本框的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI自适应文本框.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetAutoFitTextView ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI自适应文本框的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI自适应文本框.getElevation()">
+    {
+        @ (double)@sn<this>.GetAutoFitTextView ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI自适应文本框的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI自适应文本框.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetAutoFitTextView ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI自适应文本框的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI自适应文本框.getMinimumHeight()">
+    {
+        @ @sn<this>.GetAutoFitTextView ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI自适应文本框的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI自适应文本框.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetAutoFitTextView ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI自适应文本框的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI自适应文本框.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetAutoFitTextView ().setBackgroundColor (@<新值>))
+    }
+
+    方法 XUI文本 <公开 属性读 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读取XUI自适应文本框的XUI文本当前值。 参数：无。 返回：文本型。 原方法：XUI自适应文本框.getText()">
+    {
+        @ java.lang.String.valueOf (@sn<this>.GetAutoFitTextView ().getText ())
+    }
+
+    方法 XUI文本 <公开 属性写 注释 = "用法：设置XUI自适应文本框的XUI文本, 传入新值后立刻生效。 参数：新值=文本。 返回：无。 原方法：XUI自适应文本框.setText()">
+    参数 新值 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetAutoFitTextView ().setText (@<新值>))
+    }
+
+    方法 XUI文字颜色 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI自适应文本框的XUI文字颜色当前值。 参数：无。 返回：整数。 原方法：XUI自适应文本框.getCurrentTextColor()">
+    {
+        @ @sn<this>.GetAutoFitTextView ().getCurrentTextColor ()
+    }
+
+    方法 XUI文字颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI自适应文本框的XUI文字颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI自适应文本框.setTextColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetAutoFitTextView ().setTextColor (@<新值>))
+    }
+
+    方法 XUI文字大小 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI自适应文本框的XUI文字大小当前值。 参数：无。 返回：小数。 原方法：XUI自适应文本框.getTextSize()">
+    {
+        @ (double)@sn<this>.GetAutoFitTextView ().getTextSize ()
+    }
+
+    方法 XUI文字大小 <公开 属性写 注释 = "用法：设置XUI自适应文本框的XUI文字大小, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI自适应文本框.setTextSize()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetAutoFitTextView ().setTextSize ((float) @<新值>))
+    }
+
+    方法 XUI提示文字 <公开 属性读 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读取XUI自适应文本框的XUI提示文字当前值。 参数：无。 返回：文本型。 原方法：XUI自适应文本框.getHint()">
+    {
+        @ java.lang.String.valueOf (@sn<this>.GetAutoFitTextView ().getHint ())
+    }
+
+    方法 XUI提示文字 <公开 属性写 注释 = "用法：设置XUI自适应文本框的XUI提示文字, 传入新值后立刻生效。 参数：新值=文本。 返回：无。 原方法：XUI自适应文本框.setHint()">
+    参数 新值 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetAutoFitTextView ().setHint (@<新值>))
+    }
+
+    方法 XUI最大行数 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI自适应文本框的XUI最大行数当前值。 参数：无。 返回：整数。 原方法：XUI自适应文本框.getMaxLines()">
+    {
+        @ @sn<this>.GetAutoFitTextView ().getMaxLines ()
+    }
+
+    方法 XUI最大行数 <公开 属性写 注释 = "用法：设置XUI自适应文本框的XUI最大行数, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI自适应文本框.setMaxLines()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetAutoFitTextView ().setMaxLines (@<新值>))
+    }
+
+    方法 XUI单行 <公开 属性写 注释 = "用法：设置XUI自适应文本框的XUI单行, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI自适应文本框.setSingleLine()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetAutoFitTextView ().setSingleLine (@<新值>))
+    }
+
+    方法 设置文本大小 <公开 注释 = "用法：把XUI自适应文本框的文本大小设为给定值。 参数：值1=整数、值2=小数。 返回：无。 原方法：XUI自适应文本框.setTextSize()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetAutoFitTextView ().setTextSize (@<值1>, (float) @<值2>))
+    }
+
+    方法 设置行数 <公开 注释 = "用法：把XUI自适应文本框的行数设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI自适应文本框.setLines()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetAutoFitTextView ().setLines (@<值1>))
+    }
+
+    方法 设置最大行数 <公开 注释 = "用法：把XUI自适应文本框的最大行数设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI自适应文本框.setMaxLines()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetAutoFitTextView ().setMaxLines (@<值1>))
+    }
+
+    方法 是否启用适配 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断XUI自适应文本框是否启用适配。 参数：无。 返回：逻辑型。 原方法：XUI自适应文本框.isEnableFit()">
+    {
+        @ @sn<this>.GetAutoFitTextView ().isEnableFit ()
+    }
+
+    方法 启用适配 <公开 注释 = "用法：启用XUI自适应文本框的适配。 参数：无。 返回：无。 原方法：XUI自适应文本框.enableFit()">
+    {
+        @ @m<RUN_UI_ACTION> (GetAutoFitTextView ().enableFit ())
+    }
+
+    方法 设置启用适配 <公开 注释 = "用法：把XUI自适应文本框的启用适配设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI自适应文本框.setEnableFit()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetAutoFitTextView ().setEnableFit (@<值1>))
+    }
+
+    方法 取最大文本大小 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读出XUI自适应文本框的最大文本大小。 参数：无。 返回：小数。 原方法：XUI自适应文本框.getMaxTextSize()">
+    {
+        @ (double)@sn<this>.GetAutoFitTextView ().getMaxTextSize ()
+    }
+
+    方法 设置最大文本大小 <公开 注释 = "用法：把XUI自适应文本框的最大文本大小设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI自适应文本框.setMaxTextSize()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetAutoFitTextView ().setMaxTextSize ((float) @<值1>))
+    }
+
+    方法 设置最大文本大小_2 <公开 注释 = "用法：把XUI自适应文本框的最大文本大小_2设为给定值。 参数：值1=整数、值2=小数。 返回：无。 原方法：XUI自适应文本框.setMaxTextSize()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetAutoFitTextView ().setMaxTextSize (@<值1>, (float) @<值2>))
+    }
+
+    方法 取最小文本大小 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读出XUI自适应文本框的最小文本大小。 参数：无。 返回：小数。 原方法：XUI自适应文本框.getMinTextSize()">
+    {
+        @ (double)@sn<this>.GetAutoFitTextView ().getMinTextSize ()
+    }
+
+    方法 设置最小文本大小 <公开 注释 = "用法：把XUI自适应文本框的最小文本大小设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI自适应文本框.setMinTextSize()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetAutoFitTextView ().setMinTextSize (@<值1>))
+    }
+
+    方法 设置最小文本大小_2 <公开 注释 = "用法：把XUI自适应文本框的最小文本大小_2设为给定值。 参数：值1=整数、值2=小数。 返回：无。 原方法：XUI自适应文本框.setMinTextSize()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetAutoFitTextView ().setMinTextSize (@<值1>, (float) @<值2>))
+    }
+
+    方法 取精度 <公开 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读出XUI自适应文本框的精度。 参数：无。 返回：小数。 原方法：XUI自适应文本框.getPrecision()">
+    {
+        @ (double)@sn<this>.GetAutoFitTextView ().getPrecision ()
+    }
+
+    方法 设置精度 <公开 注释 = "用法：把XUI自适应文本框的精度设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI自适应文本框.setPrecision()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetAutoFitTextView ().setPrecision ((float) @<值1>))
+    }
+
+    方法 响应文本大小改变 <公开 注释 = "用法：XUI自适应文本框在文本大小改变时被 XUI 回调, 通常配合 挂接事件 使用。 参数：值1=小数、值2=小数。 返回：无。 原方法：XUI自适应文本框.onTextSizeChange()">
+    参数 值1 <类型 = 小数>
+    参数 值2 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetAutoFitTextView ().onTextSizeChange ((float) @<值1>, (float) @<值2>))
+    }
+
+}
+
+类 XUI标签按钮 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.textview.label.LabelButtonView)."
+        @文档 = "category = \"XUI.文本\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.textview.label.LabelButtonView\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI标签按钮, LabelButtonView, com.xuexiang.xui.widget.textview.label.LabelButtonView)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetLabelButtonView ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI标签按钮的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI标签按钮.getAlpha()">
+    {
+        @ (double)@sn<this>.GetLabelButtonView ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI标签按钮的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI标签按钮.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelButtonView ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI标签按钮的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI标签按钮.isEnabled()">
+    {
+        @ @sn<this>.GetLabelButtonView ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI标签按钮的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI标签按钮.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelButtonView ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI标签按钮的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI标签按钮.isClickable()">
+    {
+        @ @sn<this>.GetLabelButtonView ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI标签按钮的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI标签按钮.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelButtonView ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI标签按钮的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI标签按钮.getElevation()">
+    {
+        @ (double)@sn<this>.GetLabelButtonView ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI标签按钮的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI标签按钮.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelButtonView ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI标签按钮的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI标签按钮.getMinimumHeight()">
+    {
+        @ @sn<this>.GetLabelButtonView ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI标签按钮的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI标签按钮.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelButtonView ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI标签按钮的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI标签按钮.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelButtonView ().setBackgroundColor (@<新值>))
+    }
+
+    方法 XUI文本 <公开 属性读 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读取XUI标签按钮的XUI文本当前值。 参数：无。 返回：文本型。 原方法：XUI标签按钮.getText()">
+    {
+        @ java.lang.String.valueOf (@sn<this>.GetLabelButtonView ().getText ())
+    }
+
+    方法 XUI文本 <公开 属性写 注释 = "用法：设置XUI标签按钮的XUI文本, 传入新值后立刻生效。 参数：新值=文本。 返回：无。 原方法：XUI标签按钮.setText()">
+    参数 新值 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelButtonView ().setText (@<新值>))
+    }
+
+    方法 XUI文字颜色 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI标签按钮的XUI文字颜色当前值。 参数：无。 返回：整数。 原方法：XUI标签按钮.getCurrentTextColor()">
+    {
+        @ @sn<this>.GetLabelButtonView ().getCurrentTextColor ()
+    }
+
+    方法 XUI文字颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI标签按钮的XUI文字颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI标签按钮.setTextColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelButtonView ().setTextColor (@<新值>))
+    }
+
+    方法 XUI文字大小 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI标签按钮的XUI文字大小当前值。 参数：无。 返回：小数。 原方法：XUI标签按钮.getTextSize()">
+    {
+        @ (double)@sn<this>.GetLabelButtonView ().getTextSize ()
+    }
+
+    方法 XUI文字大小 <公开 属性写 注释 = "用法：设置XUI标签按钮的XUI文字大小, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI标签按钮.setTextSize()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelButtonView ().setTextSize ((float) @<新值>))
+    }
+
+    方法 XUI提示文字 <公开 属性读 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读取XUI标签按钮的XUI提示文字当前值。 参数：无。 返回：文本型。 原方法：XUI标签按钮.getHint()">
+    {
+        @ java.lang.String.valueOf (@sn<this>.GetLabelButtonView ().getHint ())
+    }
+
+    方法 XUI提示文字 <公开 属性写 注释 = "用法：设置XUI标签按钮的XUI提示文字, 传入新值后立刻生效。 参数：新值=文本。 返回：无。 原方法：XUI标签按钮.setHint()">
+    参数 新值 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelButtonView ().setHint (@<新值>))
+    }
+
+    方法 XUI最大行数 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI标签按钮的XUI最大行数当前值。 参数：无。 返回：整数。 原方法：XUI标签按钮.getMaxLines()">
+    {
+        @ @sn<this>.GetLabelButtonView ().getMaxLines ()
+    }
+
+    方法 XUI最大行数 <公开 属性写 注释 = "用法：设置XUI标签按钮的XUI最大行数, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI标签按钮.setMaxLines()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelButtonView ().setMaxLines (@<新值>))
+    }
+
+    方法 XUI单行 <公开 属性写 注释 = "用法：设置XUI标签按钮的XUI单行, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI标签按钮.setSingleLine()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelButtonView ().setSingleLine (@<新值>))
+    }
+
+    方法 设置标签高度 <公开 注释 = "用法：把XUI标签按钮的标签高度设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI标签按钮.setLabelHeight()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelButtonView ().setLabelHeight (@<值1>))
+    }
+
+    方法 取标签高度 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI标签按钮的标签高度。 参数：无。 返回：整数。 原方法：XUI标签按钮.getLabelHeight()">
+    {
+        @ @sn<this>.GetLabelButtonView ().getLabelHeight ()
+    }
+
+    方法 设置标签距离 <公开 注释 = "用法：把XUI标签按钮的标签距离设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI标签按钮.setLabelDistance()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelButtonView ().setLabelDistance (@<值1>))
+    }
+
+    方法 取标签距离 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI标签按钮的标签距离。 参数：无。 返回：整数。 原方法：XUI标签按钮.getLabelDistance()">
+    {
+        @ @sn<this>.GetLabelButtonView ().getLabelDistance ()
+    }
+
+    方法 是否标签视觉 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断XUI标签按钮是否标签视觉。 参数：无。 返回：逻辑型。 原方法：XUI标签按钮.isLabelVisual()">
+    {
+        @ @sn<this>.GetLabelButtonView ().isLabelVisual ()
+    }
+
+    方法 设置标签视觉 <公开 注释 = "用法：把XUI标签按钮的标签视觉设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI标签按钮.setLabelVisual()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelButtonView ().setLabelVisual (@<值1>))
+    }
+
+    方法 取标签方位 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI标签按钮的标签方位。 参数：无。 返回：整数。 原方法：XUI标签按钮.getLabelOrientation()">
+    {
+        @ @sn<this>.GetLabelButtonView ().getLabelOrientation ()
+    }
+
+    方法 设置标签方位 <公开 注释 = "用法：把XUI标签按钮的标签方位设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI标签按钮.setLabelOrientation()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelButtonView ().setLabelOrientation (@<值1>))
+    }
+
+    方法 取标签文本颜色 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI标签按钮的标签文本颜色。 参数：无。 返回：整数。 原方法：XUI标签按钮.getLabelTextColor()">
+    {
+        @ @sn<this>.GetLabelButtonView ().getLabelTextColor ()
+    }
+
+    方法 设置标签文本颜色 <公开 注释 = "用法：把XUI标签按钮的标签文本颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI标签按钮.setLabelTextColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelButtonView ().setLabelTextColor (@<值1>))
+    }
+
+    方法 取标签背景颜色 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI标签按钮的标签背景颜色。 参数：无。 返回：整数。 原方法：XUI标签按钮.getLabelBackgroundColor()">
+    {
+        @ @sn<this>.GetLabelButtonView ().getLabelBackgroundColor ()
+    }
+
+    方法 设置标签背景颜色 <公开 注释 = "用法：把XUI标签按钮的标签背景颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI标签按钮.setLabelBackgroundColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelButtonView ().setLabelBackgroundColor (@<值1>))
+    }
+
+    方法 取标签文本 <公开 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读出XUI标签按钮的标签文本。 参数：无。 返回：文本型。 原方法：XUI标签按钮.getLabelText()">
+    {
+        @ @sn<this>.GetLabelButtonView ().getLabelText ()
+    }
+
+    方法 设置标签文本 <公开 注释 = "用法：把XUI标签按钮的标签文本设为给定值。 参数：值1=文本。 返回：无。 原方法：XUI标签按钮.setLabelText()">
+    参数 值1 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelButtonView ().setLabelText (@<值1>))
+    }
+
+    方法 取标签文本大小 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI标签按钮的标签文本大小。 参数：无。 返回：整数。 原方法：XUI标签按钮.getLabelTextSize()">
+    {
+        @ @sn<this>.GetLabelButtonView ().getLabelTextSize ()
+    }
+
+    方法 设置标签文本大小 <公开 注释 = "用法：把XUI标签按钮的标签文本大小设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI标签按钮.setLabelTextSize()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelButtonView ().setLabelTextSize (@<值1>))
+    }
+
+    方法 取标签文本样式 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI标签按钮的标签文本样式。 参数：无。 返回：整数。 原方法：XUI标签按钮.getLabelTextStyle()">
+    {
+        @ @sn<this>.GetLabelButtonView ().getLabelTextStyle ()
+    }
+
+    方法 设置标签文本样式 <公开 注释 = "用法：把XUI标签按钮的标签文本样式设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI标签按钮.setLabelTextStyle()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelButtonView ().setLabelTextStyle (@<值1>))
+    }
+
+    方法 取标签文本字体 <公开 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读出XUI标签按钮的标签文本字体。 参数：无。 返回：文本型。 原方法：XUI标签按钮.getLabelTextFont()">
+    {
+        @ @sn<this>.GetLabelButtonView ().getLabelTextFont ()
+    }
+
+    方法 设置标签文本字体 <公开 注释 = "用法：把XUI标签按钮的标签文本字体设为给定值。 参数：值1=文本。 返回：无。 原方法：XUI标签按钮.setLabelTextFont()">
+    参数 值1 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelButtonView ().setLabelTextFont (@<值1>))
+    }
+
+}
+
+类 XUI标签图片框 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.textview.label.LabelImageView)."
+        @文档 = "category = \"XUI.文本\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.textview.label.LabelImageView\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI标签图片框, LabelImageView, com.xuexiang.xui.widget.textview.label.LabelImageView)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetLabelImageView ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI标签图片框的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI标签图片框.getAlpha()">
+    {
+        @ (double)@sn<this>.GetLabelImageView ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI标签图片框的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI标签图片框.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelImageView ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI标签图片框的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI标签图片框.isEnabled()">
+    {
+        @ @sn<this>.GetLabelImageView ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI标签图片框的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI标签图片框.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelImageView ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI标签图片框的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI标签图片框.isClickable()">
+    {
+        @ @sn<this>.GetLabelImageView ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI标签图片框的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI标签图片框.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelImageView ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI标签图片框的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI标签图片框.getElevation()">
+    {
+        @ (double)@sn<this>.GetLabelImageView ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI标签图片框的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI标签图片框.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelImageView ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI标签图片框的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI标签图片框.getMinimumHeight()">
+    {
+        @ @sn<this>.GetLabelImageView ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI标签图片框的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI标签图片框.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelImageView ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI标签图片框的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI标签图片框.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelImageView ().setBackgroundColor (@<新值>))
+    }
+
+    方法 XUI图片 <公开 属性写 注释 = "用法：设置XUI标签图片框的XUI图片, 传入新值后立刻生效。 参数：新值=可绘制对象类。 返回：无。 原方法：XUI标签图片框.setImageDrawable()">
+    参数 新值 <类型 = 可绘制对象类>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelImageView ().setImageDrawable (@<新值>))
+    }
+
+    方法 XUI图片资源 <公开 属性写 注释 = "用法：设置XUI标签图片框的XUI图片资源, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI标签图片框.setImageResource()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelImageView ().setImageResource (@<新值>))
+    }
+
+    方法 XUI图片位图 <公开 属性写 注释 = "用法：设置XUI标签图片框的XUI图片位图, 传入新值后立刻生效。 参数：新值=位图类。 返回：无。 原方法：XUI标签图片框.setImageBitmap()">
+    参数 新值 <类型 = 位图类>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelImageView ().setImageBitmap (@<新值>))
+    }
+
+    方法 取XUI图片 <公开 类型 = 可绘制对象类 @嵌入式方法 = "" 注释 = "java: public Drawable getDrawable()">
+    {
+        @ @sn<this>.GetLabelImageView ().getDrawable ()
+    }
+
+    方法 设置标签高度 <公开 注释 = "用法：把XUI标签图片框的标签高度设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI标签图片框.setLabelHeight()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelImageView ().setLabelHeight (@<值1>))
+    }
+
+    方法 取标签高度 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI标签图片框的标签高度。 参数：无。 返回：整数。 原方法：XUI标签图片框.getLabelHeight()">
+    {
+        @ @sn<this>.GetLabelImageView ().getLabelHeight ()
+    }
+
+    方法 设置标签距离 <公开 注释 = "用法：把XUI标签图片框的标签距离设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI标签图片框.setLabelDistance()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelImageView ().setLabelDistance (@<值1>))
+    }
+
+    方法 取标签距离 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI标签图片框的标签距离。 参数：无。 返回：整数。 原方法：XUI标签图片框.getLabelDistance()">
+    {
+        @ @sn<this>.GetLabelImageView ().getLabelDistance ()
+    }
+
+    方法 是否标签视觉 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断XUI标签图片框是否标签视觉。 参数：无。 返回：逻辑型。 原方法：XUI标签图片框.isLabelVisual()">
+    {
+        @ @sn<this>.GetLabelImageView ().isLabelVisual ()
+    }
+
+    方法 设置标签视觉 <公开 注释 = "用法：把XUI标签图片框的标签视觉设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI标签图片框.setLabelVisual()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelImageView ().setLabelVisual (@<值1>))
+    }
+
+    方法 取标签方位 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI标签图片框的标签方位。 参数：无。 返回：整数。 原方法：XUI标签图片框.getLabelOrientation()">
+    {
+        @ @sn<this>.GetLabelImageView ().getLabelOrientation ()
+    }
+
+    方法 设置标签方位 <公开 注释 = "用法：把XUI标签图片框的标签方位设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI标签图片框.setLabelOrientation()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelImageView ().setLabelOrientation (@<值1>))
+    }
+
+    方法 取标签文本颜色 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI标签图片框的标签文本颜色。 参数：无。 返回：整数。 原方法：XUI标签图片框.getLabelTextColor()">
+    {
+        @ @sn<this>.GetLabelImageView ().getLabelTextColor ()
+    }
+
+    方法 设置标签文本颜色 <公开 注释 = "用法：把XUI标签图片框的标签文本颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI标签图片框.setLabelTextColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelImageView ().setLabelTextColor (@<值1>))
+    }
+
+    方法 取标签背景颜色 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI标签图片框的标签背景颜色。 参数：无。 返回：整数。 原方法：XUI标签图片框.getLabelBackgroundColor()">
+    {
+        @ @sn<this>.GetLabelImageView ().getLabelBackgroundColor ()
+    }
+
+    方法 设置标签背景颜色 <公开 注释 = "用法：把XUI标签图片框的标签背景颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI标签图片框.setLabelBackgroundColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelImageView ().setLabelBackgroundColor (@<值1>))
+    }
+
+    方法 设置标签背景透明度 <公开 注释 = "用法：把XUI标签图片框的标签背景透明度设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI标签图片框.setLabelBackgroundAlpha()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelImageView ().setLabelBackgroundAlpha (@<值1>))
+    }
+
+    方法 取标签文本 <公开 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读出XUI标签图片框的标签文本。 参数：无。 返回：文本型。 原方法：XUI标签图片框.getLabelText()">
+    {
+        @ @sn<this>.GetLabelImageView ().getLabelText ()
+    }
+
+    方法 设置标签文本 <公开 注释 = "用法：把XUI标签图片框的标签文本设为给定值。 参数：值1=文本。 返回：无。 原方法：XUI标签图片框.setLabelText()">
+    参数 值1 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelImageView ().setLabelText (@<值1>))
+    }
+
+    方法 取标签文本大小 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI标签图片框的标签文本大小。 参数：无。 返回：整数。 原方法：XUI标签图片框.getLabelTextSize()">
+    {
+        @ @sn<this>.GetLabelImageView ().getLabelTextSize ()
+    }
+
+    方法 设置标签文本大小 <公开 注释 = "用法：把XUI标签图片框的标签文本大小设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI标签图片框.setLabelTextSize()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelImageView ().setLabelTextSize (@<值1>))
+    }
+
+    方法 取标签文本样式 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI标签图片框的标签文本样式。 参数：无。 返回：整数。 原方法：XUI标签图片框.getLabelTextStyle()">
+    {
+        @ @sn<this>.GetLabelImageView ().getLabelTextStyle ()
+    }
+
+    方法 设置标签文本样式 <公开 注释 = "用法：把XUI标签图片框的标签文本样式设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI标签图片框.setLabelTextStyle()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelImageView ().setLabelTextStyle (@<值1>))
+    }
+
+    方法 取标签文本字体 <公开 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读出XUI标签图片框的标签文本字体。 参数：无。 返回：文本型。 原方法：XUI标签图片框.getLabelTextFont()">
+    {
+        @ @sn<this>.GetLabelImageView ().getLabelTextFont ()
+    }
+
+    方法 设置标签文本字体 <公开 注释 = "用法：把XUI标签图片框的标签文本字体设为给定值。 参数：值1=文本。 返回：无。 原方法：XUI标签图片框.setLabelTextFont()">
+    参数 值1 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelImageView ().setLabelTextFont (@<值1>))
+    }
+
+}
+
+类 XUI标签文本框 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.textview.label.LabelTextView)."
+        @文档 = "category = \"XUI.文本\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.textview.label.LabelTextView\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI标签文本框, LabelTextView, com.xuexiang.xui.widget.textview.label.LabelTextView)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetLabelTextView ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI标签文本框的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI标签文本框.getAlpha()">
+    {
+        @ (double)@sn<this>.GetLabelTextView ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI标签文本框的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI标签文本框.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelTextView ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI标签文本框的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI标签文本框.isEnabled()">
+    {
+        @ @sn<this>.GetLabelTextView ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI标签文本框的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI标签文本框.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelTextView ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI标签文本框的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI标签文本框.isClickable()">
+    {
+        @ @sn<this>.GetLabelTextView ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI标签文本框的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI标签文本框.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelTextView ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI标签文本框的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI标签文本框.getElevation()">
+    {
+        @ (double)@sn<this>.GetLabelTextView ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI标签文本框的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI标签文本框.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelTextView ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI标签文本框的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI标签文本框.getMinimumHeight()">
+    {
+        @ @sn<this>.GetLabelTextView ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI标签文本框的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI标签文本框.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelTextView ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI标签文本框的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI标签文本框.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelTextView ().setBackgroundColor (@<新值>))
+    }
+
+    方法 XUI文本 <公开 属性读 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读取XUI标签文本框的XUI文本当前值。 参数：无。 返回：文本型。 原方法：XUI标签文本框.getText()">
+    {
+        @ java.lang.String.valueOf (@sn<this>.GetLabelTextView ().getText ())
+    }
+
+    方法 XUI文本 <公开 属性写 注释 = "用法：设置XUI标签文本框的XUI文本, 传入新值后立刻生效。 参数：新值=文本。 返回：无。 原方法：XUI标签文本框.setText()">
+    参数 新值 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelTextView ().setText (@<新值>))
+    }
+
+    方法 XUI文字颜色 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI标签文本框的XUI文字颜色当前值。 参数：无。 返回：整数。 原方法：XUI标签文本框.getCurrentTextColor()">
+    {
+        @ @sn<this>.GetLabelTextView ().getCurrentTextColor ()
+    }
+
+    方法 XUI文字颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI标签文本框的XUI文字颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI标签文本框.setTextColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelTextView ().setTextColor (@<新值>))
+    }
+
+    方法 XUI文字大小 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI标签文本框的XUI文字大小当前值。 参数：无。 返回：小数。 原方法：XUI标签文本框.getTextSize()">
+    {
+        @ (double)@sn<this>.GetLabelTextView ().getTextSize ()
+    }
+
+    方法 XUI文字大小 <公开 属性写 注释 = "用法：设置XUI标签文本框的XUI文字大小, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI标签文本框.setTextSize()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelTextView ().setTextSize ((float) @<新值>))
+    }
+
+    方法 XUI提示文字 <公开 属性读 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读取XUI标签文本框的XUI提示文字当前值。 参数：无。 返回：文本型。 原方法：XUI标签文本框.getHint()">
+    {
+        @ java.lang.String.valueOf (@sn<this>.GetLabelTextView ().getHint ())
+    }
+
+    方法 XUI提示文字 <公开 属性写 注释 = "用法：设置XUI标签文本框的XUI提示文字, 传入新值后立刻生效。 参数：新值=文本。 返回：无。 原方法：XUI标签文本框.setHint()">
+    参数 新值 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelTextView ().setHint (@<新值>))
+    }
+
+    方法 XUI最大行数 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI标签文本框的XUI最大行数当前值。 参数：无。 返回：整数。 原方法：XUI标签文本框.getMaxLines()">
+    {
+        @ @sn<this>.GetLabelTextView ().getMaxLines ()
+    }
+
+    方法 XUI最大行数 <公开 属性写 注释 = "用法：设置XUI标签文本框的XUI最大行数, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI标签文本框.setMaxLines()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelTextView ().setMaxLines (@<新值>))
+    }
+
+    方法 XUI单行 <公开 属性写 注释 = "用法：设置XUI标签文本框的XUI单行, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI标签文本框.setSingleLine()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelTextView ().setSingleLine (@<新值>))
+    }
+
+    方法 设置标签高度 <公开 注释 = "用法：把XUI标签文本框的标签高度设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI标签文本框.setLabelHeight()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelTextView ().setLabelHeight (@<值1>))
+    }
+
+    方法 取标签高度 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI标签文本框的标签高度。 参数：无。 返回：整数。 原方法：XUI标签文本框.getLabelHeight()">
+    {
+        @ @sn<this>.GetLabelTextView ().getLabelHeight ()
+    }
+
+    方法 设置标签距离 <公开 注释 = "用法：把XUI标签文本框的标签距离设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI标签文本框.setLabelDistance()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelTextView ().setLabelDistance (@<值1>))
+    }
+
+    方法 取标签距离 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI标签文本框的标签距离。 参数：无。 返回：整数。 原方法：XUI标签文本框.getLabelDistance()">
+    {
+        @ @sn<this>.GetLabelTextView ().getLabelDistance ()
+    }
+
+    方法 是否标签启用 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断XUI标签文本框是否标签启用。 参数：无。 返回：逻辑型。 原方法：XUI标签文本框.isLabelEnable()">
+    {
+        @ @sn<this>.GetLabelTextView ().isLabelEnable ()
+    }
+
+    方法 设置标签启用 <公开 注释 = "用法：把XUI标签文本框的标签启用设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI标签文本框.setLabelEnable()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelTextView ().setLabelEnable (@<值1>))
+    }
+
+    方法 取标签方位 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI标签文本框的标签方位。 参数：无。 返回：整数。 原方法：XUI标签文本框.getLabelOrientation()">
+    {
+        @ @sn<this>.GetLabelTextView ().getLabelOrientation ()
+    }
+
+    方法 设置标签方位 <公开 注释 = "用法：把XUI标签文本框的标签方位设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI标签文本框.setLabelOrientation()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelTextView ().setLabelOrientation (@<值1>))
+    }
+
+    方法 取标签文本颜色 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI标签文本框的标签文本颜色。 参数：无。 返回：整数。 原方法：XUI标签文本框.getLabelTextColor()">
+    {
+        @ @sn<this>.GetLabelTextView ().getLabelTextColor ()
+    }
+
+    方法 设置标签文本颜色 <公开 注释 = "用法：把XUI标签文本框的标签文本颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI标签文本框.setLabelTextColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelTextView ().setLabelTextColor (@<值1>))
+    }
+
+    方法 取标签背景颜色 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI标签文本框的标签背景颜色。 参数：无。 返回：整数。 原方法：XUI标签文本框.getLabelBackgroundColor()">
+    {
+        @ @sn<this>.GetLabelTextView ().getLabelBackgroundColor ()
+    }
+
+    方法 设置标签背景颜色 <公开 注释 = "用法：把XUI标签文本框的标签背景颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI标签文本框.setLabelBackgroundColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelTextView ().setLabelBackgroundColor (@<值1>))
+    }
+
+    方法 取标签文本 <公开 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读出XUI标签文本框的标签文本。 参数：无。 返回：文本型。 原方法：XUI标签文本框.getLabelText()">
+    {
+        @ @sn<this>.GetLabelTextView ().getLabelText ()
+    }
+
+    方法 设置标签文本 <公开 注释 = "用法：把XUI标签文本框的标签文本设为给定值。 参数：值1=文本。 返回：无。 原方法：XUI标签文本框.setLabelText()">
+    参数 值1 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelTextView ().setLabelText (@<值1>))
+    }
+
+    方法 取标签文本大小 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI标签文本框的标签文本大小。 参数：无。 返回：整数。 原方法：XUI标签文本框.getLabelTextSize()">
+    {
+        @ @sn<this>.GetLabelTextView ().getLabelTextSize ()
+    }
+
+    方法 设置标签文本大小 <公开 注释 = "用法：把XUI标签文本框的标签文本大小设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI标签文本框.setLabelTextSize()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelTextView ().setLabelTextSize (@<值1>))
+    }
+
+    方法 取标签文本样式 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI标签文本框的标签文本样式。 参数：无。 返回：整数。 原方法：XUI标签文本框.getLabelTextStyle()">
+    {
+        @ @sn<this>.GetLabelTextView ().getLabelTextStyle ()
+    }
+
+    方法 设置标签文本样式 <公开 注释 = "用法：把XUI标签文本框的标签文本样式设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI标签文本框.setLabelTextStyle()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelTextView ().setLabelTextStyle (@<值1>))
+    }
+
+    方法 取标签文本字体 <公开 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读出XUI标签文本框的标签文本字体。 参数：无。 返回：文本型。 原方法：XUI标签文本框.getLabelTextFont()">
+    {
+        @ @sn<this>.GetLabelTextView ().getLabelTextFont ()
+    }
+
+    方法 设置标签文本字体 <公开 注释 = "用法：把XUI标签文本框的标签文本字体设为给定值。 参数：值1=文本。 返回：无。 原方法：XUI标签文本框.setLabelTextFont()">
+    参数 值1 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelTextView ().setLabelTextFont (@<值1>))
+    }
+
+}
+
+类 XUI标签视图 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.textview.label.LabelView)."
+        @文档 = "category = \"XUI.文本\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.textview.label.LabelView\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI标签视图, LabelView, com.xuexiang.xui.widget.textview.label.LabelView)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetLabelView ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI标签视图的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI标签视图.getAlpha()">
+    {
+        @ (double)@sn<this>.GetLabelView ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI标签视图的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI标签视图.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelView ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI标签视图的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI标签视图.isEnabled()">
+    {
+        @ @sn<this>.GetLabelView ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI标签视图的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI标签视图.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelView ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI标签视图的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI标签视图.isClickable()">
+    {
+        @ @sn<this>.GetLabelView ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI标签视图的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI标签视图.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelView ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI标签视图的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI标签视图.getElevation()">
+    {
+        @ (double)@sn<this>.GetLabelView ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI标签视图的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI标签视图.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelView ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI标签视图的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI标签视图.getMinimumHeight()">
+    {
+        @ @sn<this>.GetLabelView ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI标签视图的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI标签视图.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelView ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI标签视图的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI标签视图.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelView ().setBackgroundColor (@<新值>))
+    }
+
+    方法 XUI文本 <公开 属性读 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读取XUI标签视图的XUI文本当前值。 参数：无。 返回：文本型。 原方法：XUI标签视图.getText()">
+    {
+        @ java.lang.String.valueOf (@sn<this>.GetLabelView ().getText ())
+    }
+
+    方法 XUI文本 <公开 属性写 注释 = "用法：设置XUI标签视图的XUI文本, 传入新值后立刻生效。 参数：新值=文本。 返回：无。 原方法：XUI标签视图.setText()">
+    参数 新值 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelView ().setText (@<新值>))
+    }
+
+    方法 XUI文字颜色 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI标签视图的XUI文字颜色当前值。 参数：无。 返回：整数。 原方法：XUI标签视图.getCurrentTextColor()">
+    {
+        @ @sn<this>.GetLabelView ().getCurrentTextColor ()
+    }
+
+    方法 XUI文字颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI标签视图的XUI文字颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI标签视图.setTextColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelView ().setTextColor (@<新值>))
+    }
+
+    方法 XUI文字大小 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI标签视图的XUI文字大小当前值。 参数：无。 返回：小数。 原方法：XUI标签视图.getTextSize()">
+    {
+        @ (double)@sn<this>.GetLabelView ().getTextSize ()
+    }
+
+    方法 XUI文字大小 <公开 属性写 注释 = "用法：设置XUI标签视图的XUI文字大小, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI标签视图.setTextSize()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelView ().setTextSize ((float) @<新值>))
+    }
+
+    方法 XUI提示文字 <公开 属性读 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读取XUI标签视图的XUI提示文字当前值。 参数：无。 返回：文本型。 原方法：XUI标签视图.getHint()">
+    {
+        @ java.lang.String.valueOf (@sn<this>.GetLabelView ().getHint ())
+    }
+
+    方法 XUI提示文字 <公开 属性写 注释 = "用法：设置XUI标签视图的XUI提示文字, 传入新值后立刻生效。 参数：新值=文本。 返回：无。 原方法：XUI标签视图.setHint()">
+    参数 新值 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelView ().setHint (@<新值>))
+    }
+
+    方法 XUI最大行数 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI标签视图的XUI最大行数当前值。 参数：无。 返回：整数。 原方法：XUI标签视图.getMaxLines()">
+    {
+        @ @sn<this>.GetLabelView ().getMaxLines ()
+    }
+
+    方法 XUI最大行数 <公开 属性写 注释 = "用法：设置XUI标签视图的XUI最大行数, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI标签视图.setMaxLines()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelView ().setMaxLines (@<新值>))
+    }
+
+    方法 XUI单行 <公开 属性写 注释 = "用法：设置XUI标签视图的XUI单行, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI标签视图.setSingleLine()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelView ().setSingleLine (@<新值>))
+    }
+
+    方法 移除 <公开 注释 = "用法：从XUI标签视图移除相关内容。 参数：无。 返回：无。 原方法：XUI标签视图.remove()">
+    {
+        @ @m<RUN_UI_ACTION> (GetLabelView ().remove ())
+    }
+
+    方法 生成视图标识 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：XUI标签视图 的 生成视图标识, 行为与 XUI 底层同名方法一致。 参数：无。 返回：整数。 原方法：XUI标签视图.generateViewId()">
+    {
+        @ @sn<this>.GetLabelView ().generateViewId ()
+    }
+
+}
+
+类 XUI跑马灯视图 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.textview.marqueen.MarqueeView)."
+        @文档 = "category = \"XUI.文本\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.textview.marqueen.MarqueeView\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.mq_interval\n        shown_name = \"翻页的间隔\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.mq_animDuration\n        shown_name = \"动画的间隔\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.mq_animIn\n        shown_name = \"动画的样式资源\"\n        data_type = string\n        detail_type = drawable_res_file\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI跑马灯视图, MarqueeView, com.xuexiang.xui.widget.textview.marqueen.MarqueeView)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetMarqueeView ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI跑马灯视图的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI跑马灯视图.getAlpha()">
+    {
+        @ (double)@sn<this>.GetMarqueeView ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI跑马灯视图的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI跑马灯视图.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMarqueeView ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI跑马灯视图的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI跑马灯视图.isEnabled()">
+    {
+        @ @sn<this>.GetMarqueeView ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI跑马灯视图的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI跑马灯视图.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetMarqueeView ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI跑马灯视图的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI跑马灯视图.isClickable()">
+    {
+        @ @sn<this>.GetMarqueeView ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI跑马灯视图的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI跑马灯视图.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetMarqueeView ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI跑马灯视图的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI跑马灯视图.getElevation()">
+    {
+        @ (double)@sn<this>.GetMarqueeView ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI跑马灯视图的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI跑马灯视图.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMarqueeView ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI跑马灯视图的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI跑马灯视图.getMinimumHeight()">
+    {
+        @ @sn<this>.GetMarqueeView ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI跑马灯视图的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI跑马灯视图.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMarqueeView ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI跑马灯视图的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI跑马灯视图.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMarqueeView ().setBackgroundColor (@<新值>))
+    }
+
+    方法 设置间隔 <公开 注释 = "用法：把XUI跑马灯视图的间隔设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI跑马灯视图.setInterval()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMarqueeView ().setInterval (@<值1>))
+    }
+
+    方法 设置动画时长 <公开 注释 = "用法：把XUI跑马灯视图的动画时长设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI跑马灯视图.setAnimDuration()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMarqueeView ().setAnimDuration (@<值1>))
+    }
+
+    方法 设置动画内与外 <公开 注释 = "用法：把XUI跑马灯视图的动画内与外设为给定值。 参数：值1=整数、值2=整数。 返回：无。 原方法：XUI跑马灯视图.setAnimInAndOut()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMarqueeView ().setAnimInAndOut (@<值1>, @<值2>))
+    }
+
+}
+
+类 XUI基础文本框 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.textview.supertextview.BaseTextView)."
+        @文档 = "category = \"XUI.文本\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.textview.supertextview.BaseTextView\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI基础文本框, BaseTextView, com.xuexiang.xui.widget.textview.supertextview.BaseTextView)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetBaseTextView ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI基础文本框的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI基础文本框.getAlpha()">
+    {
+        @ (double)@sn<this>.GetBaseTextView ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI基础文本框的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI基础文本框.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetBaseTextView ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI基础文本框的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI基础文本框.isEnabled()">
+    {
+        @ @sn<this>.GetBaseTextView ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI基础文本框的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI基础文本框.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetBaseTextView ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI基础文本框的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI基础文本框.isClickable()">
+    {
+        @ @sn<this>.GetBaseTextView ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI基础文本框的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI基础文本框.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetBaseTextView ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI基础文本框的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI基础文本框.getElevation()">
+    {
+        @ (double)@sn<this>.GetBaseTextView ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI基础文本框的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI基础文本框.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetBaseTextView ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI基础文本框的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI基础文本框.getMinimumHeight()">
+    {
+        @ @sn<this>.GetBaseTextView ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI基础文本框的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI基础文本框.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetBaseTextView ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI基础文本框的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI基础文本框.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetBaseTextView ().setBackgroundColor (@<新值>))
+    }
+
+    方法 设置上文本字符串 <公开 注释 = "用法：把XUI基础文本框的上文本字符串设为给定值。 参数：值1=文本。 返回：无。 原方法：XUI基础文本框.setTopTextString()">
+    参数 值1 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetBaseTextView ().setTopTextString (@<值1>))
+    }
+
+    方法 设置居中文本字符串 <公开 注释 = "用法：把XUI基础文本框的居中文本字符串设为给定值。 参数：值1=文本。 返回：无。 原方法：XUI基础文本框.setCenterTextString()">
+    参数 值1 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetBaseTextView ().setCenterTextString (@<值1>))
+    }
+
+    方法 设置下文本字符串 <公开 注释 = "用法：把XUI基础文本框的下文本字符串设为给定值。 参数：值1=文本。 返回：无。 原方法：XUI基础文本框.setBottomTextString()">
+    参数 值1 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetBaseTextView ().setBottomTextString (@<值1>))
+    }
+
+    方法 设置最大EM宽度 <公开 注释 = "用法：把XUI基础文本框的最大EM宽度设为给定值。 参数：值1=整数、值2=整数、值3=整数。 返回：无。 原方法：XUI基础文本框.setMaxEms()">
+    参数 值1 <类型 = 整数>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetBaseTextView ().setMaxEms (@<值1>, @<值2>, @<值3>))
+    }
+
+    方法 设置居中间距高度 <公开 注释 = "用法：把XUI基础文本框的居中间距高度设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI基础文本框.setCenterSpaceHeight()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetBaseTextView ().setCenterSpaceHeight (@<值1>))
+    }
+
+    方法 设置字体 <公开 注释 = "用法：把XUI基础文本框的字体设为给定值。 参数：值1=字体类。 返回：无。 原方法：XUI基础文本框.setTypeface()">
+    参数 值1 <类型 = 字体类>
+    {
+        @ @m<RUN_UI_ACTION> (GetBaseTextView ().setTypeface (@<值1>))
+    }
+
+}
+
+类 XUI通用文本框 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.textview.supertextview.CommonTextView)."
+        @文档 = "category = \"XUI.文本\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.textview.supertextview.CommonTextView\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.cLeftIconResForDrawableLeft\n        shown_name = \"cLeftIconResForDra\"\n        data_type = string\n        detail_type = drawable_res_file\n    }\n    attr\n    {\n        name = app.cLeftIconResForDrawableTop\n        shown_name = \"cLeftIconResForDra（2）\"\n        data_type = string\n        detail_type = drawable_res_file\n    }\n    attr\n    {\n        name = app.cLeftIconResForDrawableRight\n        shown_name = \"cLeftIconResForDra（3）\"\n        data_type = string\n        detail_type = drawable_res_file\n    }\n    attr\n    {\n        name = app.cLeftIconResForDrawableBottom\n        shown_name = \"cLeftIconResForDra（4）\"\n        data_type = string\n        detail_type = drawable_res_file\n    }\n    attr\n    {\n        name = app.cCenterIconResForDrawableLeft\n        shown_name = \"cCenterIconResForD\"\n        data_type = string\n        detail_type = drawable_res_file\n    }\n    attr\n    {\n        name = app.cCenterIconResForDrawableTop\n        shown_name = \"cCenterIconResForD（2）\"\n        data_type = string\n        detail_type = drawable_res_file\n    }\n    attr\n    {\n        name = app.cCenterIconResForDrawableRight\n        shown_name = \"cCenterIconResForD（3）\"\n        data_type = string\n        detail_type = drawable_res_file\n    }\n    attr\n    {\n        name = app.cCenterIconResForDrawableBottom\n        shown_name = \"cCenterIconResForD（4）\"\n        data_type = string\n        detail_type = drawable_res_file\n    }\n    attr\n    {\n        name = app.cRightIconResForDrawableLeft\n        shown_name = \"cRightIconResForDr\"\n        data_type = string\n        detail_type = drawable_res_file\n    }\n    attr\n    {\n        name = app.cRightIconResForDrawableTop\n        shown_name = \"cRightIconResForDr（2）\"\n        data_type = string\n        detail_type = drawable_res_file\n    }\n    attr\n    {\n        name = app.cRightIconResForDrawableRight\n        shown_name = \"cRightIconResForDr（3）\"\n        data_type = string\n        detail_type = drawable_res_file\n    }\n    attr\n    {\n        name = app.cRightIconResForDrawableBottom\n        shown_name = \"cRightIconResForDr（4）\"\n        data_type = string\n        detail_type = drawable_res_file\n    }\n    attr\n    {\n        name = app.cLeftImageViewDrawableRes\n        shown_name = \"cLeftImageViewDraw\"\n        data_type = string\n        detail_type = drawable_res_file\n    }\n    attr\n    {\n        name = app.cRightImageViewDrawableRes\n        shown_name = \"cRightImageViewDra\"\n        data_type = string\n        detail_type = drawable_res_file\n    }\n    attr\n    {\n        name = app.cLeftTextString\n        shown_name = \"<attr name=\\\"cRight\"\n        data_type = string\n    }\n    attr\n    {\n        name = app.cLeftTopTextString\n        shown_name = \"cLeftTopTextString\"\n        data_type = string\n    }\n    attr\n    {\n        name = app.cLeftBottomTextString\n        shown_name = \"cLeftBottomTextStr\"\n        data_type = string\n    }\n    attr\n    {\n        name = app.cCenterTextString\n        shown_name = \"cCenterTextString\"\n        data_type = string\n    }\n    attr\n    {\n        name = app.cCenterTopTextString\n        shown_name = \"cCenterTopTextStri\"\n        data_type = string\n    }\n    attr\n    {\n        name = app.cCenterBottomTextString\n        shown_name = \"cCenterBottomTextS\"\n        data_type = string\n    }\n    attr\n    {\n        name = app.cRightTextString\n        shown_name = \"cRightTextString\"\n        data_type = string\n    }\n    attr\n    {\n        name = app.cRightTopTextString\n        shown_name = \"cRightTopTextStrin\"\n        data_type = string\n    }\n    attr\n    {\n        name = app.cRightBottomTextString\n        shown_name = \"cRightBottomTextSt\"\n        data_type = string\n    }\n    attr\n    {\n        name = app.cLeftTextSize\n        shown_name = \"cLeftTextSize\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.cLeftTopTextSize\n        shown_name = \"cLeftTopTextSize\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.cLeftBottomTextSize\n        shown_name = \"cLeftBottomTextSiz\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.cCenterTextSize\n        shown_name = \"cCenterTextSize\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.cCenterTopTextSize\n        shown_name = \"cCenterTopTextSize\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.cCenterBottomTextSize\n        shown_name = \"cCenterBottomTextS（2）\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.cRightTextSize\n        shown_name = \"cRightTextSize\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.cRightTopTextSize\n        shown_name = \"cRightTopTextSize\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.cRightBottomTextSize\n        shown_name = \"cRightBottomTextSi\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.cLeftTextColor\n        shown_name = \"cLeftTextColor\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.cLeftTopTextColor\n        shown_name = \"cLeftTopTextColor\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.cLeftBottomTextColor\n        shown_name = \"cLeftBottomTextCol\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.cCenterTextColor\n        shown_name = \"cCenterTextColor\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.cCenterTopTextColor\n        shown_name = \"cCenterTopTextColo\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.cCenterBottomTextColor\n        shown_name = \"cCenterBottomTextC\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.cRightTextColor\n        shown_name = \"cRightTextColor\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.cRightTopTextColor\n        shown_name = \"cRightTopTextColor\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.cRightBottomTextColor\n        shown_name = \"cRightBottomTextCo\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.cLeftIconDrawablePadding\n        shown_name = \"cLeftIconDrawableP\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.cCenterIconDrawablePadding\n        shown_name = \"cCenterIconDrawabl\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.cRightIconDrawablePadding\n        shown_name = \"cRightIconDrawable\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.cLeftViewPaddingLeft\n        shown_name = \"cLeftViewPaddingLe\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.cLeftViewPaddingRight\n        shown_name = \"cLeftViewPaddingRi\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.cCenterViewPaddingLeft\n        shown_name = \"cCenterViewPadding\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.cCenterViewPaddingRight\n        shown_name = \"cCenterViewPadding（2）\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.cRightViewPaddingLeft\n        shown_name = \"cRightViewPaddingL\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.cRightViewPaddingRight\n        shown_name = \"cRightViewPaddingR\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.cTopDividerLineMarginLR\n        shown_name = \"cTopDividerLineMar\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.cTopDividerLineMarginLeft\n        shown_name = \"cTopDividerLineMar（2）\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.cTopDividerLineMarginRight\n        shown_name = \"cTopDividerLineMar（3）\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.cBottomDividerLineMarginLR\n        shown_name = \"cBottomDividerLine\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.cBottomDividerLineMarginLeft\n        shown_name = \"cBottomDividerLine（2）\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.cBottomDividerLineMarginRight\n        shown_name = \"cBottomDividerLine（3）\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.cBothDividerLineMarginLeft\n        shown_name = \"cBothDividerLineMa\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.cBothDividerLineMarginRight\n        shown_name = \"cBothDividerLineMa（2）\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.cLeftTextViewLineSpacingExtra\n        shown_name = \"cLeftTextViewLineS\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.cCenterTextViewLineSpacingExtra\n        shown_name = \"cCenterTextViewLin\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.cRightTextViewLineSpacingExtra\n        shown_name = \"cRightTextViewLine\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.cCenterSpaceHeight\n        shown_name = \"cCenterSpaceHeight\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.cLeftImageViewMarginLeft\n        shown_name = \"cLeftImageViewMarg\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.cRightImageViewMarginRight\n        shown_name = \"cRightImageViewMar\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.cDividerLineColor\n        shown_name = \"<attr name=\\\"cRight（2）\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.cDividerLineHeight\n        shown_name = \"cDividerLineHeight\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.cShowDividerLineType\n        shown_name = \"cShowDividerLineTy\"\n        data_type = string\n        detail_type = enum\n        item\n        {\n            name = none\n            shown_name = \"none\"\n        }\n        item\n        {\n            name = top\n            shown_name = \"top\"\n        }\n        item\n        {\n            name = bottom\n            shown_name = \"bottom\"\n        }\n        item\n        {\n            name = both\n            shown_name = \"both\"\n        }\n    }\n    attr\n    {\n        name = app.cUseRipple\n        shown_name = \"cUseRipple\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.cBackgroundColor\n        shown_name = \"cBackgroundColor\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.cSetSingleLine\n        shown_name = \"cSetSingleLine\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.cSetMaxEms\n        shown_name = \"cSetMaxEms\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.cSetLines\n        shown_name = \"cSetLines\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.cLeftTextViewGravity\n        shown_name = \"cLeftTextViewGravi\"\n        data_type = string\n        detail_type = enum\n        item\n        {\n            name = left_center\n            shown_name = \"left_center\"\n        }\n        item\n        {\n            name = center\n            shown_name = \"center\"\n        }\n        item\n        {\n            name = right_center\n            shown_name = \"right_center\"\n        }\n    }\n    attr\n    {\n        name = app.cCenterTextViewGravity\n        shown_name = \"cCenterTextViewGra\"\n        data_type = string\n        detail_type = enum\n        item\n        {\n            name = left_center\n            shown_name = \"left_center\"\n        }\n        item\n        {\n            name = center\n            shown_name = \"center\"\n        }\n        item\n        {\n            name = right_center\n            shown_name = \"right_center\"\n        }\n    }\n    attr\n    {\n        name = app.cRightTextViewGravity\n        shown_name = \"cRightTextViewGrav\"\n        data_type = string\n        detail_type = enum\n        item\n        {\n            name = left_center\n            shown_name = \"left_center\"\n        }\n        item\n        {\n            name = center\n            shown_name = \"center\"\n        }\n        item\n        {\n            name = right_center\n            shown_name = \"right_center\"\n        }\n    }\n    attr\n    {\n        name = app.cLeftViewIsClickable\n        shown_name = \"cLeftViewIsClickab\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.cCenterViewIsClickable\n        shown_name = \"cCenterViewIsClick\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.cRightViewIsClickable\n        shown_name = \"cRightViewIsClicka\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.cBackgroundDrawableRes\n        shown_name = \"cBackgroundDrawabl\"\n        data_type = string\n        detail_type = drawable_res_file\n    }\n    attr\n    {\n        name = app.cIsCenterAlignLeft\n        shown_name = \"cIsCenterAlignLeft\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.cCenterViewMarginLeft\n        shown_name = \"cCenterViewMarginL\"\n        data_type = double\n        detail_type = dim\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI通用文本框, CommonTextView, com.xuexiang.xui.widget.textview.supertextview.CommonTextView)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetCommonTextView ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI通用文本框的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI通用文本框.getAlpha()">
+    {
+        @ (double)@sn<this>.GetCommonTextView ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI通用文本框的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI通用文本框.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCommonTextView ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI通用文本框的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI通用文本框.isEnabled()">
+    {
+        @ @sn<this>.GetCommonTextView ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI通用文本框的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI通用文本框.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetCommonTextView ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI通用文本框的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI通用文本框.isClickable()">
+    {
+        @ @sn<this>.GetCommonTextView ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI通用文本框的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI通用文本框.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetCommonTextView ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI通用文本框的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI通用文本框.getElevation()">
+    {
+        @ (double)@sn<this>.GetCommonTextView ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI通用文本框的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI通用文本框.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCommonTextView ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI通用文本框的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI通用文本框.getMinimumHeight()">
+    {
+        @ @sn<this>.GetCommonTextView ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI通用文本框的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI通用文本框.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCommonTextView ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI通用文本框的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI通用文本框.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCommonTextView ().setBackgroundColor (@<新值>))
+    }
+
+    方法 设置左文本字符串 <公开 注释 = "用法：把XUI通用文本框的左文本字符串设为给定值。 参数：值1=文本。 返回：无。 原方法：XUI通用文本框.setLeftTextString()">
+    参数 值1 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetCommonTextView ().setLeftTextString (@<值1>))
+    }
+
+    方法 设置左上文本字符串 <公开 注释 = "用法：把XUI通用文本框的左上文本字符串设为给定值。 参数：值1=文本。 返回：无。 原方法：XUI通用文本框.setLeftTopTextString()">
+    参数 值1 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetCommonTextView ().setLeftTopTextString (@<值1>))
+    }
+
+    方法 设置左下文本字符串 <公开 注释 = "用法：把XUI通用文本框的左下文本字符串设为给定值。 参数：值1=文本。 返回：无。 原方法：XUI通用文本框.setLeftBottomTextString()">
+    参数 值1 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetCommonTextView ().setLeftBottomTextString (@<值1>))
+    }
+
+    方法 设置左文本大小 <公开 注释 = "用法：把XUI通用文本框的左文本大小设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI通用文本框.setLeftTextSize()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCommonTextView ().setLeftTextSize ((float) @<值1>))
+    }
+
+    方法 设置左文本颜色 <公开 注释 = "用法：把XUI通用文本框的左文本颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI通用文本框.setLeftTextColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCommonTextView ().setLeftTextColor (@<值1>))
+    }
+
+    方法 设置居中文本字符串 <公开 注释 = "用法：把XUI通用文本框的居中文本字符串设为给定值。 参数：值1=文本。 返回：无。 原方法：XUI通用文本框.setCenterTextString()">
+    参数 值1 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetCommonTextView ().setCenterTextString (@<值1>))
+    }
+
+    方法 设置居中上文本字符串 <公开 注释 = "用法：把XUI通用文本框的居中上文本字符串设为给定值。 参数：值1=文本。 返回：无。 原方法：XUI通用文本框.setCenterTopTextString()">
+    参数 值1 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetCommonTextView ().setCenterTopTextString (@<值1>))
+    }
+
+    方法 设置居中下文本字符串 <公开 注释 = "用法：把XUI通用文本框的居中下文本字符串设为给定值。 参数：值1=文本。 返回：无。 原方法：XUI通用文本框.setCenterBottomTextString()">
+    参数 值1 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetCommonTextView ().setCenterBottomTextString (@<值1>))
+    }
+
+    方法 设置居中文本大小 <公开 注释 = "用法：把XUI通用文本框的居中文本大小设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI通用文本框.setCenterTextSize()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCommonTextView ().setCenterTextSize ((float) @<值1>))
+    }
+
+    方法 设置居中文本颜色 <公开 注释 = "用法：把XUI通用文本框的居中文本颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI通用文本框.setCenterTextColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCommonTextView ().setCenterTextColor (@<值1>))
+    }
+
+    方法 设置右文本字符串 <公开 注释 = "用法：把XUI通用文本框的右文本字符串设为给定值。 参数：值1=文本。 返回：无。 原方法：XUI通用文本框.setRightTextString()">
+    参数 值1 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetCommonTextView ().setRightTextString (@<值1>))
+    }
+
+    方法 设置右上文本字符串 <公开 注释 = "用法：把XUI通用文本框的右上文本字符串设为给定值。 参数：值1=文本。 返回：无。 原方法：XUI通用文本框.setRightTopTextString()">
+    参数 值1 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetCommonTextView ().setRightTopTextString (@<值1>))
+    }
+
+    方法 设置右下文本字符串 <公开 注释 = "用法：把XUI通用文本框的右下文本字符串设为给定值。 参数：值1=文本。 返回：无。 原方法：XUI通用文本框.setRightBottomTextString()">
+    参数 值1 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetCommonTextView ().setRightBottomTextString (@<值1>))
+    }
+
+    方法 设置右文本大小 <公开 注释 = "用法：把XUI通用文本框的右文本大小设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI通用文本框.setRightTextSize()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCommonTextView ().setRightTextSize ((float) @<值1>))
+    }
+
+    方法 设置右文本颜色 <公开 注释 = "用法：把XUI通用文本框的右文本颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI通用文本框.setRightTextColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetCommonTextView ().setRightTextColor (@<值1>))
+    }
+
+    方法 设置左图形左 <公开 注释 = "用法：把XUI通用文本框的左图形左设为给定值。 参数：值1=可绘制对象类。 返回：无。 原方法：XUI通用文本框.setLeftDrawableLeft()">
+    参数 值1 <类型 = 可绘制对象类>
+    {
+        @ @m<RUN_UI_ACTION> (GetCommonTextView ().setLeftDrawableLeft (@<值1>))
+    }
+
+    方法 设置左图形上 <公开 注释 = "用法：把XUI通用文本框的左图形上设为给定值。 参数：值1=可绘制对象类。 返回：无。 原方法：XUI通用文本框.setLeftDrawableTop()">
+    参数 值1 <类型 = 可绘制对象类>
+    {
+        @ @m<RUN_UI_ACTION> (GetCommonTextView ().setLeftDrawableTop (@<值1>))
+    }
+
+    方法 设置左图形右 <公开 注释 = "用法：把XUI通用文本框的左图形右设为给定值。 参数：值1=可绘制对象类。 返回：无。 原方法：XUI通用文本框.setLeftDrawableRight()">
+    参数 值1 <类型 = 可绘制对象类>
+    {
+        @ @m<RUN_UI_ACTION> (GetCommonTextView ().setLeftDrawableRight (@<值1>))
+    }
+
+    方法 设置左图形下 <公开 注释 = "用法：把XUI通用文本框的左图形下设为给定值。 参数：值1=可绘制对象类。 返回：无。 原方法：XUI通用文本框.setLeftDrawableBottom()">
+    参数 值1 <类型 = 可绘制对象类>
+    {
+        @ @m<RUN_UI_ACTION> (GetCommonTextView ().setLeftDrawableBottom (@<值1>))
+    }
+
+    方法 设置居中图形左 <公开 注释 = "用法：把XUI通用文本框的居中图形左设为给定值。 参数：值1=可绘制对象类。 返回：无。 原方法：XUI通用文本框.setCenterDrawableLeft()">
+    参数 值1 <类型 = 可绘制对象类>
+    {
+        @ @m<RUN_UI_ACTION> (GetCommonTextView ().setCenterDrawableLeft (@<值1>))
+    }
+
+    方法 设置居中图形上 <公开 注释 = "用法：把XUI通用文本框的居中图形上设为给定值。 参数：值1=可绘制对象类。 返回：无。 原方法：XUI通用文本框.setCenterDrawableTop()">
+    参数 值1 <类型 = 可绘制对象类>
+    {
+        @ @m<RUN_UI_ACTION> (GetCommonTextView ().setCenterDrawableTop (@<值1>))
+    }
+
+    方法 设置居中图形右 <公开 注释 = "用法：把XUI通用文本框的居中图形右设为给定值。 参数：值1=可绘制对象类。 返回：无。 原方法：XUI通用文本框.setCenterDrawableRight()">
+    参数 值1 <类型 = 可绘制对象类>
+    {
+        @ @m<RUN_UI_ACTION> (GetCommonTextView ().setCenterDrawableRight (@<值1>))
+    }
+
+    方法 设置居中图形下 <公开 注释 = "用法：把XUI通用文本框的居中图形下设为给定值。 参数：值1=可绘制对象类。 返回：无。 原方法：XUI通用文本框.setCenterDrawableBottom()">
+    参数 值1 <类型 = 可绘制对象类>
+    {
+        @ @m<RUN_UI_ACTION> (GetCommonTextView ().setCenterDrawableBottom (@<值1>))
+    }
+
+    方法 设置右图形左 <公开 注释 = "用法：把XUI通用文本框的右图形左设为给定值。 参数：值1=可绘制对象类。 返回：无。 原方法：XUI通用文本框.setRightDrawableLeft()">
+    参数 值1 <类型 = 可绘制对象类>
+    {
+        @ @m<RUN_UI_ACTION> (GetCommonTextView ().setRightDrawableLeft (@<值1>))
+    }
+
+    方法 设置右图形上 <公开 注释 = "用法：把XUI通用文本框的右图形上设为给定值。 参数：值1=可绘制对象类。 返回：无。 原方法：XUI通用文本框.setRightDrawableTop()">
+    参数 值1 <类型 = 可绘制对象类>
+    {
+        @ @m<RUN_UI_ACTION> (GetCommonTextView ().setRightDrawableTop (@<值1>))
+    }
+
+    方法 设置右图形右 <公开 注释 = "用法：把XUI通用文本框的右图形右设为给定值。 参数：值1=可绘制对象类。 返回：无。 原方法：XUI通用文本框.setRightDrawableRight()">
+    参数 值1 <类型 = 可绘制对象类>
+    {
+        @ @m<RUN_UI_ACTION> (GetCommonTextView ().setRightDrawableRight (@<值1>))
+    }
+
+    方法 设置右图形下 <公开 注释 = "用法：把XUI通用文本框的右图形下设为给定值。 参数：值1=可绘制对象类。 返回：无。 原方法：XUI通用文本框.setRightDrawableBottom()">
+    参数 值1 <类型 = 可绘制对象类>
+    {
+        @ @m<RUN_UI_ACTION> (GetCommonTextView ().setRightDrawableBottom (@<值1>))
+    }
+
+    方法 取左文本字符串 <公开 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读出XUI通用文本框的左文本字符串。 参数：无。 返回：文本型。 原方法：XUI通用文本框.getLeftTextString()">
+    {
+        @ java.lang.String.valueOf (@sn<this>.GetCommonTextView ().getLeftTextString ())
+    }
+
+    方法 取左上文本字符串 <公开 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读出XUI通用文本框的左上文本字符串。 参数：无。 返回：文本型。 原方法：XUI通用文本框.getLeftTopTextString()">
+    {
+        @ java.lang.String.valueOf (@sn<this>.GetCommonTextView ().getLeftTopTextString ())
+    }
+
+    方法 取左下文本字符串 <公开 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读出XUI通用文本框的左下文本字符串。 参数：无。 返回：文本型。 原方法：XUI通用文本框.getLeftBottomTextString()">
+    {
+        @ java.lang.String.valueOf (@sn<this>.GetCommonTextView ().getLeftBottomTextString ())
+    }
+
+    方法 取居中文本字符串 <公开 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读出XUI通用文本框的居中文本字符串。 参数：无。 返回：文本型。 原方法：XUI通用文本框.getCenterTextString()">
+    {
+        @ java.lang.String.valueOf (@sn<this>.GetCommonTextView ().getCenterTextString ())
+    }
+
+    方法 取居中上文本字符串 <公开 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读出XUI通用文本框的居中上文本字符串。 参数：无。 返回：文本型。 原方法：XUI通用文本框.getCenterTopTextString()">
+    {
+        @ java.lang.String.valueOf (@sn<this>.GetCommonTextView ().getCenterTopTextString ())
+    }
+
+    方法 取居中下文本字符串 <公开 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读出XUI通用文本框的居中下文本字符串。 参数：无。 返回：文本型。 原方法：XUI通用文本框.getCenterBottomTextString()">
+    {
+        @ java.lang.String.valueOf (@sn<this>.GetCommonTextView ().getCenterBottomTextString ())
+    }
+
+    方法 取右文本字符串 <公开 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读出XUI通用文本框的右文本字符串。 参数：无。 返回：文本型。 原方法：XUI通用文本框.getRightTextString()">
+    {
+        @ java.lang.String.valueOf (@sn<this>.GetCommonTextView ().getRightTextString ())
+    }
+
+    方法 取右上文本字符串 <公开 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读出XUI通用文本框的右上文本字符串。 参数：无。 返回：文本型。 原方法：XUI通用文本框.getRightTopTextString()">
+    {
+        @ java.lang.String.valueOf (@sn<this>.GetCommonTextView ().getRightTopTextString ())
+    }
+
+    方法 取右下文本字符串 <公开 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读出XUI通用文本框的右下文本字符串。 参数：无。 返回：文本型。 原方法：XUI通用文本框.getRightBottomTextString()">
+    {
+        @ java.lang.String.valueOf (@sn<this>.GetCommonTextView ().getRightBottomTextString ())
+    }
+
+    方法 设置字体 <公开 注释 = "用法：把XUI通用文本框的字体设为给定值。 参数：值1=字体类。 返回：无。 原方法：XUI通用文本框.setTypeface()">
+    参数 值1 <类型 = 字体类>
+    {
+        @ @m<RUN_UI_ACTION> (GetCommonTextView ().setTypeface (@<值1>))
+    }
+
+    方法 设置左视图是否可点击 <公开 注释 = "用法：把XUI通用文本框的左视图是否可点击设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI通用文本框.setLeftViewIsClickable()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetCommonTextView ().setLeftViewIsClickable (@<值1>))
+    }
+
+    方法 设置居中视图是否可点击 <公开 注释 = "用法：把XUI通用文本框的居中视图是否可点击设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI通用文本框.setCenterViewIsClickable()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetCommonTextView ().setCenterViewIsClickable (@<值1>))
+    }
+
+    方法 设置右视图是否可点击 <公开 注释 = "用法：把XUI通用文本框的右视图是否可点击设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI通用文本框.setRightViewIsClickable()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetCommonTextView ().setRightViewIsClickable (@<值1>))
+    }
+
+    方法 DIP转PX <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：XUI通用文本框 的 DIP转PX, 行为与 XUI 底层同名方法一致。 参数：值1=安卓环境、值2=小数。 返回：整数。 原方法：XUI通用文本框.dip2px()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 小数>
+    {
+        @ @sn<this>.GetCommonTextView ().dip2px (@<值1>, (float) @<值2>)
+    }
+
+    方法 PX转DIP <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：XUI通用文本框 的 PX转DIP, 行为与 XUI 底层同名方法一致。 参数：值1=安卓环境、值2=小数。 返回：整数。 原方法：XUI通用文本框.px2dip()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 小数>
+    {
+        @ @sn<this>.GetCommonTextView ().px2dip (@<值1>, (float) @<值2>)
+    }
+
+    方法 SP转PX <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：XUI通用文本框 的 SP转PX, 行为与 XUI 底层同名方法一致。 参数：值1=安卓环境、值2=小数。 返回：整数。 原方法：XUI通用文本框.sp2px()">
+    参数 值1 <类型 = 安卓环境>
+    参数 值2 <类型 = 小数>
+    {
+        @ @sn<this>.GetCommonTextView ().sp2px (@<值1>, (float) @<值2>)
+    }
+
+}
+
+类 XUI超级按钮 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.textview.supertextview.SuperButton)."
+        @文档 = "category = \"XUI.文本\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.textview.supertextview.SuperButton\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.sGravity\n        shown_name = \"sGravity\"\n        data_type = string\n        detail_type = enum\n        item\n        {\n            name = center\n            shown_name = \"center\"\n        }\n        item\n        {\n            name = left\n            shown_name = \"left\"\n        }\n        item\n        {\n            name = right\n            shown_name = \"right\"\n        }\n        item\n        {\n            name = top\n            shown_name = \"top\"\n        }\n        item\n        {\n            name = bottom\n            shown_name = \"bottom\"\n        }\n    }\n    attr\n    {\n        name = app.sShapeType\n        shown_name = \"sShapeType\"\n        data_type = string\n        detail_type = enum\n        item\n        {\n            name = rectangle\n            shown_name = \"rectangle\"\n        }\n        item\n        {\n            name = oval\n            shown_name = \"oval\"\n        }\n        item\n        {\n            name = line\n            shown_name = \"line\"\n        }\n        item\n        {\n            name = ring\n            shown_name = \"ring\"\n        }\n    }\n    attr\n    {\n        name = app.sSolidColor\n        shown_name = \"sSolidColor\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.sSelectorPressedColor\n        shown_name = \"sSelectorPressedCo\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.sSelectorDisableColor\n        shown_name = \"sSelectorDisableCo\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.sSelectorNormalColor\n        shown_name = \"sSelectorNormalCol\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.sCornersRadius\n        shown_name = \"sCornersRadius\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.sCornersTopLeftRadius\n        shown_name = \"sCornersTopLeftRad\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.sCornersTopRightRadius\n        shown_name = \"sCornersTopRightRa\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.sCornersBottomLeftRadius\n        shown_name = \"sCornersBottomLeft\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.sCornersBottomRightRadius\n        shown_name = \"sCornersBottomRigh\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.sStrokeWidth\n        shown_name = \"sStrokeWidth\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.sStrokeDashWidth\n        shown_name = \"sStrokeDashWidth\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.sStrokeDashGap\n        shown_name = \"sStrokeDashGap\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.sStrokeColor\n        shown_name = \"sStrokeColor\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.sSizeWidth\n        shown_name = \"sSizeWidth\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.sSizeHeight\n        shown_name = \"sSizeHeight\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.sGradientOrientation\n        shown_name = \"sGradientOrientati\"\n        data_type = string\n        detail_type = enum\n        item\n        {\n            name = TOP_BOTTOM\n            shown_name = \"TOP_BOTTOM\"\n        }\n        item\n        {\n            name = TR_BL\n            shown_name = \"TR_BL\"\n        }\n        item\n        {\n            name = RIGHT_LEFT\n            shown_name = \"RIGHT_LEFT\"\n        }\n        item\n        {\n            name = BR_TL\n            shown_name = \"BR_TL\"\n        }\n        item\n        {\n            name = BOTTOM_TOP\n            shown_name = \"BOTTOM_TOP\"\n        }\n        item\n        {\n            name = BL_TR\n            shown_name = \"BL_TR\"\n        }\n        item\n        {\n            name = LEFT_RIGHT\n            shown_name = \"LEFT_RIGHT\"\n        }\n        item\n        {\n            name = TL_BR\n            shown_name = \"TL_BR\"\n        }\n    }\n    attr\n    {\n        name = app.sGradientCenterX\n        shown_name = \"sGradientCenterX\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.sGradientCenterY\n        shown_name = \"sGradientCenterY\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.sGradientGradientRadius\n        shown_name = \"sGradientGradientR\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.sGradientStartColor\n        shown_name = \"sGradientStartColo\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.sGradientCenterColor\n        shown_name = \"sGradientCenterCol\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.sGradientEndColor\n        shown_name = \"sGradientEndColor\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.sGradientUseLevel\n        shown_name = \"sGradientUseLevel\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.sUseSelector\n        shown_name = \"sUseSelector\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.sGradientType\n        shown_name = \"sGradientType\"\n        data_type = string\n        detail_type = enum\n        item\n        {\n            name = linear\n            shown_name = \"linear\"\n        }\n        item\n        {\n            name = radial\n            shown_name = \"radial\"\n        }\n        item\n        {\n            name = sweep\n            shown_name = \"sweep\"\n        }\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI超级按钮, SuperButton, com.xuexiang.xui.widget.textview.supertextview.SuperButton)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetSuperButton ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI超级按钮的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI超级按钮.getAlpha()">
+    {
+        @ (double)@sn<this>.GetSuperButton ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI超级按钮的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI超级按钮.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSuperButton ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI超级按钮的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI超级按钮.isEnabled()">
+    {
+        @ @sn<this>.GetSuperButton ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI超级按钮的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI超级按钮.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetSuperButton ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI超级按钮的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI超级按钮.isClickable()">
+    {
+        @ @sn<this>.GetSuperButton ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI超级按钮的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI超级按钮.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetSuperButton ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI超级按钮的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI超级按钮.getElevation()">
+    {
+        @ (double)@sn<this>.GetSuperButton ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI超级按钮的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI超级按钮.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSuperButton ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI超级按钮的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI超级按钮.getMinimumHeight()">
+    {
+        @ @sn<this>.GetSuperButton ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI超级按钮的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI超级按钮.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSuperButton ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI超级按钮的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI超级按钮.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSuperButton ().setBackgroundColor (@<新值>))
+    }
+
+    方法 XUI文本 <公开 属性读 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读取XUI超级按钮的XUI文本当前值。 参数：无。 返回：文本型。 原方法：XUI超级按钮.getText()">
+    {
+        @ java.lang.String.valueOf (@sn<this>.GetSuperButton ().getText ())
+    }
+
+    方法 XUI文本 <公开 属性写 注释 = "用法：设置XUI超级按钮的XUI文本, 传入新值后立刻生效。 参数：新值=文本。 返回：无。 原方法：XUI超级按钮.setText()">
+    参数 新值 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetSuperButton ().setText (@<新值>))
+    }
+
+    方法 XUI文字颜色 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI超级按钮的XUI文字颜色当前值。 参数：无。 返回：整数。 原方法：XUI超级按钮.getCurrentTextColor()">
+    {
+        @ @sn<this>.GetSuperButton ().getCurrentTextColor ()
+    }
+
+    方法 XUI文字颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI超级按钮的XUI文字颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI超级按钮.setTextColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSuperButton ().setTextColor (@<新值>))
+    }
+
+    方法 XUI文字大小 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI超级按钮的XUI文字大小当前值。 参数：无。 返回：小数。 原方法：XUI超级按钮.getTextSize()">
+    {
+        @ (double)@sn<this>.GetSuperButton ().getTextSize ()
+    }
+
+    方法 XUI文字大小 <公开 属性写 注释 = "用法：设置XUI超级按钮的XUI文字大小, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI超级按钮.setTextSize()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSuperButton ().setTextSize ((float) @<新值>))
+    }
+
+    方法 XUI提示文字 <公开 属性读 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读取XUI超级按钮的XUI提示文字当前值。 参数：无。 返回：文本型。 原方法：XUI超级按钮.getHint()">
+    {
+        @ java.lang.String.valueOf (@sn<this>.GetSuperButton ().getHint ())
+    }
+
+    方法 XUI提示文字 <公开 属性写 注释 = "用法：设置XUI超级按钮的XUI提示文字, 传入新值后立刻生效。 参数：新值=文本。 返回：无。 原方法：XUI超级按钮.setHint()">
+    参数 新值 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetSuperButton ().setHint (@<新值>))
+    }
+
+    方法 XUI最大行数 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI超级按钮的XUI最大行数当前值。 参数：无。 返回：整数。 原方法：XUI超级按钮.getMaxLines()">
+    {
+        @ @sn<this>.GetSuperButton ().getMaxLines ()
+    }
+
+    方法 XUI最大行数 <公开 属性写 注释 = "用法：设置XUI超级按钮的XUI最大行数, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI超级按钮.setMaxLines()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSuperButton ().setMaxLines (@<新值>))
+    }
+
+    方法 XUI单行 <公开 属性写 注释 = "用法：设置XUI超级按钮的XUI单行, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI超级按钮.setSingleLine()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetSuperButton ().setSingleLine (@<新值>))
+    }
+
+    方法 设置形状类型 <公开 注释 = "用法：把XUI超级按钮的形状类型设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI超级按钮.setShapeType()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSuperButton ().setShapeType (@<值1>))
+    }
+
+    方法 设置文本对齐方式 <公开 注释 = "用法：把XUI超级按钮的文本对齐方式设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI超级按钮.setTextGravity()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSuperButton ().setTextGravity (@<值1>))
+    }
+
+    方法 设置形状选择器已按下颜色 <公开 注释 = "用法：把XUI超级按钮的形状选择器已按下颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI超级按钮.setShapeSelectorPressedColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSuperButton ().setShapeSelectorPressedColor (@<值1>))
+    }
+
+    方法 设置形状选择器常规颜色 <公开 注释 = "用法：把XUI超级按钮的形状选择器常规颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI超级按钮.setShapeSelectorNormalColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSuperButton ().setShapeSelectorNormalColor (@<值1>))
+    }
+
+    方法 设置形状选择器禁用颜色 <公开 注释 = "用法：把XUI超级按钮的形状选择器禁用颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI超级按钮.setShapeSelectorDisableColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSuperButton ().setShapeSelectorDisableColor (@<值1>))
+    }
+
+    方法 设置形状实心颜色 <公开 注释 = "用法：把XUI超级按钮的形状实心颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI超级按钮.setShapeSolidColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSuperButton ().setShapeSolidColor (@<值1>))
+    }
+
+    方法 设置形状描边宽度 <公开 注释 = "用法：把XUI超级按钮的形状描边宽度设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI超级按钮.setShapeStrokeWidth()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSuperButton ().setShapeStrokeWidth (@<值1>))
+    }
+
+    方法 设置形状描边颜色 <公开 注释 = "用法：把XUI超级按钮的形状描边颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI超级按钮.setShapeStrokeColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSuperButton ().setShapeStrokeColor (@<值1>))
+    }
+
+    方法 设置形状描边虚线宽度 <公开 注释 = "用法：把XUI超级按钮的形状描边虚线宽度设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI超级按钮.setShapeStrokeDashWidth()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSuperButton ().setShapeStrokeDashWidth ((float) @<值1>))
+    }
+
+    方法 设置形状描边虚线间隙 <公开 注释 = "用法：把XUI超级按钮的形状描边虚线间隙设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI超级按钮.setShapeStrokeDashGap()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSuperButton ().setShapeStrokeDashGap ((float) @<值1>))
+    }
+
+    方法 设置形状四角圆角 <公开 注释 = "用法：把XUI超级按钮的形状四角圆角设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI超级按钮.setShapeCornersRadius()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSuperButton ().setShapeCornersRadius ((float) @<值1>))
+    }
+
+    方法 设置形状四角上左圆角 <公开 注释 = "用法：把XUI超级按钮的形状四角上左圆角设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI超级按钮.setShapeCornersTopLeftRadius()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSuperButton ().setShapeCornersTopLeftRadius ((float) @<值1>))
+    }
+
+    方法 设置形状四角上右圆角 <公开 注释 = "用法：把XUI超级按钮的形状四角上右圆角设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI超级按钮.setShapeCornersTopRightRadius()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSuperButton ().setShapeCornersTopRightRadius ((float) @<值1>))
+    }
+
+    方法 设置形状四角下左圆角 <公开 注释 = "用法：把XUI超级按钮的形状四角下左圆角设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI超级按钮.setShapeCornersBottomLeftRadius()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSuperButton ().setShapeCornersBottomLeftRadius ((float) @<值1>))
+    }
+
+    方法 设置形状四角下右圆角 <公开 注释 = "用法：把XUI超级按钮的形状四角下右圆角设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI超级按钮.setShapeCornersBottomRightRadius()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSuperButton ().setShapeCornersBottomRightRadius ((float) @<值1>))
+    }
+
+    方法 设置形状大小宽度 <公开 注释 = "用法：把XUI超级按钮的形状大小宽度设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI超级按钮.setShapeSizeWidth()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSuperButton ().setShapeSizeWidth (@<值1>))
+    }
+
+    方法 设置形状大小高度 <公开 注释 = "用法：把XUI超级按钮的形状大小高度设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI超级按钮.setShapeSizeHeight()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSuperButton ().setShapeSizeHeight (@<值1>))
+    }
+
+    方法 设置形状渐变方位 <公开 注释 = "用法：把XUI超级按钮的形状渐变方位设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI超级按钮.setShapeGradientOrientation()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSuperButton ().setShapeGradientOrientation (@<值1>))
+    }
+
+    方法 设置形状渐变居中X <公开 注释 = "用法：把XUI超级按钮的形状渐变居中X设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI超级按钮.setShapeGradientCenterX()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSuperButton ().setShapeGradientCenterX (@<值1>))
+    }
+
+    方法 设置形状渐变居中Y <公开 注释 = "用法：把XUI超级按钮的形状渐变居中Y设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI超级按钮.setShapeGradientCenterY()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSuperButton ().setShapeGradientCenterY (@<值1>))
+    }
+
+    方法 设置形状渐变渐变圆角 <公开 注释 = "用法：把XUI超级按钮的形状渐变渐变圆角设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI超级按钮.setShapeGradientGradientRadius()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSuperButton ().setShapeGradientGradientRadius (@<值1>))
+    }
+
+    方法 设置形状渐变开始颜色 <公开 注释 = "用法：把XUI超级按钮的形状渐变开始颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI超级按钮.setShapeGradientStartColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSuperButton ().setShapeGradientStartColor (@<值1>))
+    }
+
+    方法 设置形状渐变居中颜色 <公开 注释 = "用法：把XUI超级按钮的形状渐变居中颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI超级按钮.setShapeGradientCenterColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSuperButton ().setShapeGradientCenterColor (@<值1>))
+    }
+
+    方法 设置形状渐变结束颜色 <公开 注释 = "用法：把XUI超级按钮的形状渐变结束颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI超级按钮.setShapeGradientEndColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSuperButton ().setShapeGradientEndColor (@<值1>))
+    }
+
+    方法 设置形状渐变类型 <公开 注释 = "用法：把XUI超级按钮的形状渐变类型设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI超级按钮.setShapeGradientType()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetSuperButton ().setShapeGradientType (@<值1>))
+    }
+
+    方法 设置形状渐变使用等级 <公开 注释 = "用法：把XUI超级按钮的形状渐变使用等级设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI超级按钮.setShapeGradientUseLevel()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetSuperButton ().setShapeGradientUseLevel (@<值1>))
+    }
+
+    方法 设置形状使用选择器 <公开 注释 = "用法：把XUI超级按钮的形状使用选择器设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI超级按钮.setShapeUseSelector()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetSuperButton ().setShapeUseSelector (@<值1>))
+    }
+
+    方法 设置使用形状 <公开 注释 = "用法：把XUI超级按钮的使用形状设为给定值。 参数：无。 返回：无。 原方法：XUI超级按钮.setUseShape()">
+    {
+        @ @m<RUN_UI_ACTION> (GetSuperButton ().setUseShape ())
+    }
+
+    方法 设置已按下 <公开 注释 = "用法：把XUI超级按钮的已按下设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI超级按钮.setPressed()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetSuperButton ().setPressed (@<值1>))
+    }
+
+    方法 设置可用 <公开 注释 = "用法：把XUI超级按钮的可用设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI超级按钮.setEnabled()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetSuperButton ().setEnabled (@<值1>))
+    }
+
+    方法 设置改变透明度时机按压 <公开 注释 = "用法：把XUI超级按钮的改变透明度时机按压设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI超级按钮.setChangeAlphaWhenPress()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetSuperButton ().setChangeAlphaWhenPress (@<值1>))
+    }
+
+    方法 设置改变透明度时机禁用 <公开 注释 = "用法：把XUI超级按钮的改变透明度时机禁用设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI超级按钮.setChangeAlphaWhenDisable()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetSuperButton ().setChangeAlphaWhenDisable (@<值1>))
+    }
+
+}

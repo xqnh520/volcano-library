@@ -1,0 +1,531 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.Box2D <注释 = "形状与链条定义及 55 个形状接口 · Box2D 3.2.0 单精度" @视窗.头文件搜寻目录 = "include"
+        @视窗.外部头文件 = "b2vol.h" @视窗.库文件搜寻目录 = "lib/x64"
+        @视窗.外部库 = "box2d$(d).lib">
+
+类 B2形状定义 <公开 注释 = "形状定义 · b2ShapeDef" @别名 = "b2ShapeDef" @别名类型 = 本地结构>
+{
+    变量 材质 <公开 类型 = B2表面材质 注释 = "该形状的表面材质 · b2ShapeDef.material" @输出名 = "material">
+    变量 密度 <公开 类型 = 单精度小数 注释 = "密度，通常以千克每平方米计 · b2ShapeDef.density" @输出名 = "density">
+    变量 过滤器 <公开 类型 = B2过滤 注释 = "碰撞过滤数据 · b2ShapeDef.filter" @输出名 = "filter">
+    变量 启用自定义过滤 <公开 类型 = 逻辑型 注释 = "启用自定义过滤 · b2ShapeDef.enableCustomFiltering" @输出名 = "enableCustomFiltering">
+    变量 是否传感器 <公开 类型 = 逻辑型 注释 = "传感器形状只产生重叠事件，不产生碰撞响应 · b2ShapeDef.isSensor" @输出名 = "isSensor">
+    变量 启用传感器事件 <公开 类型 = 逻辑型 注释 = "为该形状启用传感器事件 · b2ShapeDef.enableSensorEvents" @输出名 = "enableSensorEvents">
+    变量 启用接触事件 <公开 类型 = 逻辑型 注释 = "为该形状启用接触事件 · b2ShapeDef.enableContactEvents" @输出名 = "enableContactEvents">
+    变量 启用撞击事件 <公开 类型 = 逻辑型 注释 = "为该形状启用撞击事件 · b2ShapeDef.enableHitEvents" @输出名 = "enableHitEvents">
+    变量 启用预求解事件 <公开 类型 = 逻辑型 注释 = "为该形状启用求解前接触事件 · b2ShapeDef.enablePreSolveEvents" @输出名 = "enablePreSolveEvents">
+    变量 调用接触创建 <公开 类型 = 逻辑型 注释 = "形状创建后下一时间步即扫描环境查找碰撞 · b2ShapeDef.invokeContactCreation" @输出名 = "invokeContactCreation">
+    变量 更新刚体质量 <公开 类型 = 逻辑型 注释 = "创建该形状时是否让刚体重算质量属性 · b2ShapeDef.updateBodyMass" @输出名 = "updateBodyMass">
+    变量 内部值 <公开 类型 = 整数 注释 = "内部用，检测定义是否有效 · b2ShapeDef.internalValue" @输出名 = "internalValue">
+
+    方法 取用户数据指针 <公开 静态 类型 = 变整数 注释 = "读取用户数据字段指针 · b2vol_shapeDef_getUserData" @嵌入式方法 = "">
+    参数 定义 <类型 = B2形状定义>
+    {
+        @ (intptr_t)b2vol_shapeDef_getUserData(&@<定义>)
+    }
+
+    方法 置用户数据指针 <公开 静态 注释 = "写入用户数据字段指针 · b2vol_shapeDef_setUserData" @嵌入式方法 = "">
+    参数 定义 <类型 = B2形状定义>
+    参数 新值 <类型 = 变整数>
+    {
+        @ b2vol_shapeDef_setUserData(&@<定义>, (void*)@<新值>)
+    }
+
+    方法 取默认定义 <公开 静态 类型 = B2形状定义 注释 = "用此函数初始化形状定义 · b2DefaultShapeDef" @嵌入式方法 = "">
+    {
+        @ b2DefaultShapeDef()
+    }
+
+}
+
+类 B2链条定义 <公开 注释 = "链条定义 · b2ChainDef" @别名 = "b2ChainDef" @别名类型 = 本地结构>
+{
+    变量 点数量 <公开 类型 = 整数 注释 = "点数量 · b2ChainDef.pointCount" @输出名 = "pointCount">
+    变量 虚拟点甲 <公开 类型 = B2向量 注释 = "开放链条首端的幽灵点 · b2ChainDef.ghost1" @输出名 = "ghost1">
+    变量 虚拟点乙 <公开 类型 = B2向量 注释 = "开放链条末端的幽灵点 · b2ChainDef.ghost2" @输出名 = "ghost2">
+    变量 材质数量 <公开 类型 = 整数 注释 = "材质数量 · b2ChainDef.materialCount" @输出名 = "materialCount">
+    变量 过滤器 <公开 类型 = B2过滤 注释 = "接触过滤数据 · b2ChainDef.filter" @输出名 = "filter">
+    变量 是否闭合 <公开 类型 = 逻辑型 注释 = "首尾点相连构成闭环链条 · b2ChainDef.isLoop" @输出名 = "isLoop">
+    变量 启用传感器事件 <公开 类型 = 逻辑型 注释 = "允许传感器检测该链条 · b2ChainDef.enableSensorEvents" @输出名 = "enableSensorEvents">
+    变量 内部值 <公开 类型 = 整数 注释 = "内部用，检测定义是否有效 · b2ChainDef.internalValue" @输出名 = "internalValue">
+
+    方法 取用户数据指针 <公开 静态 类型 = 变整数 注释 = "读取用户数据字段指针 · b2vol_chainDef_getUserData" @嵌入式方法 = "">
+    参数 定义 <类型 = B2链条定义>
+    {
+        @ (intptr_t)b2vol_chainDef_getUserData(&@<定义>)
+    }
+
+    方法 置用户数据指针 <公开 静态 注释 = "写入用户数据字段指针 · b2vol_chainDef_setUserData" @嵌入式方法 = "">
+    参数 定义 <类型 = B2链条定义>
+    参数 新值 <类型 = 变整数>
+    {
+        @ b2vol_chainDef_setUserData(&@<定义>, (void*)@<新值>)
+    }
+
+    方法 取点数组指针 <公开 静态 类型 = 变整数 注释 = "读取点数组字段指针 · b2vol_chainDef_getPoints" @嵌入式方法 = "">
+    参数 定义 <类型 = B2链条定义>
+    {
+        @ (intptr_t)b2vol_chainDef_getPoints(&@<定义>)
+    }
+
+    方法 置点数组指针 <公开 静态 注释 = "写入点数组字段指针 · b2vol_chainDef_setPoints" @嵌入式方法 = "">
+    参数 定义 <类型 = B2链条定义>
+    参数 新值 <类型 = 变整数>
+    {
+        @ b2vol_chainDef_setPoints(&@<定义>, (void*)@<新值>)
+    }
+
+    方法 取材质数组指针 <公开 静态 类型 = 变整数 注释 = "读取材质数组字段指针 · b2vol_chainDef_getMaterials" @嵌入式方法 = "">
+    参数 定义 <类型 = B2链条定义>
+    {
+        @ (intptr_t)b2vol_chainDef_getMaterials(&@<定义>)
+    }
+
+    方法 置材质数组指针 <公开 静态 注释 = "写入材质数组字段指针 · b2vol_chainDef_setMaterials" @嵌入式方法 = "">
+    参数 定义 <类型 = B2链条定义>
+    参数 新值 <类型 = 变整数>
+    {
+        @ b2vol_chainDef_setMaterials(&@<定义>, (void*)@<新值>)
+    }
+
+    方法 取默认定义 <公开 静态 类型 = B2链条定义 注释 = "用此函数初始化链条定义 · b2DefaultChainDef" @嵌入式方法 = "">
+    {
+        @ b2DefaultChainDef()
+    }
+
+}
+
+类 B2形状 <公开 注释 = "形状 · 接口包装类">
+{
+    方法 创建圆形状 <公开 静态 类型 = B2形状标识 注释 = "创建圆形形状并挂到刚体上 · b2CreateCircleShape" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    参数 定义 <类型 = B2形状定义>
+    参数 圆 <类型 = B2圆>
+    {
+        @ b2CreateCircleShape(@<刚体标识>, &@<定义>, &@<圆>)
+    }
+
+    方法 创建片段形状 <公开 静态 类型 = B2形状标识 注释 = "创建线段形状并挂到刚体上 · b2CreateSegmentShape" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    参数 定义 <类型 = B2形状定义>
+    参数 线段 <类型 = B2线段>
+    {
+        @ b2CreateSegmentShape(@<刚体标识>, &@<定义>, &@<线段>)
+    }
+
+    方法 创建链条片段形状 <公开 静态 类型 = B2形状标识 注释 = "创建链条线段形状并挂到刚体上 · b2CreateChainSegmentShape" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    参数 定义 <类型 = B2形状定义>
+    参数 链条段 <类型 = B2链条段>
+    {
+        @ b2CreateChainSegmentShape(@<刚体标识>, &@<定义>, &@<链条段>)
+    }
+
+    方法 创建胶囊形状 <公开 静态 类型 = B2形状标识 注释 = "创建胶囊形状并挂到刚体上 · b2CreateCapsuleShape" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    参数 定义 <类型 = B2形状定义>
+    参数 胶囊 <类型 = B2胶囊>
+    {
+        @ b2CreateCapsuleShape(@<刚体标识>, &@<定义>, &@<胶囊>)
+    }
+
+    方法 创建多边形形状 <公开 静态 类型 = B2形状标识 注释 = "创建多边形形状并挂到刚体上 · b2CreatePolygonShape" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    参数 定义 <类型 = B2形状定义>
+    参数 多边形 <类型 = B2多边形>
+    {
+        @ b2CreatePolygonShape(@<刚体标识>, &@<定义>, &@<多边形>)
+    }
+
+    方法 销毁形状 <公开 静态 注释 = "销毁形状 · b2DestroyShape" @嵌入式方法 = "">
+    参数 形状标识 <类型 = B2形状标识>
+    参数 更新质量 <类型 = 逻辑型>
+    {
+        @ b2DestroyShape(@<形状标识>, (@<更新质量> != 0))
+    }
+
+    方法 是否有效 <公开 静态 类型 = 逻辑型 注释 = "校验形状标识是否有效 · b2Shape_IsValid" @嵌入式方法 = "">
+    参数 标识 <类型 = B2形状标识>
+    {
+        @ (b2Shape_IsValid(@<标识>) != 0)
+    }
+
+    方法 取类型 <公开 静态 类型 = 整数 注释 = "取形状类型 · b2Shape_GetType" @嵌入式方法 = "">
+    参数 形状标识 <类型 = B2形状标识>
+    {
+        @ (int)b2Shape_GetType(@<形状标识>)
+    }
+
+    方法 取刚体 <公开 静态 类型 = B2刚体标识 注释 = "取形状所挂刚体的标识 · b2Shape_GetBody" @嵌入式方法 = "">
+    参数 形状标识 <类型 = B2形状标识>
+    {
+        @ b2Shape_GetBody(@<形状标识>)
+    }
+
+    方法 取世界 <公开 静态 类型 = B2世界标识 注释 = "取拥有该形状的世界 · b2Shape_GetWorld" @嵌入式方法 = "">
+    参数 形状标识 <类型 = B2形状标识>
+    {
+        @ b2Shape_GetWorld(@<形状标识>)
+    }
+
+    方法 是否传感器 <公开 静态 类型 = 逻辑型 注释 = "该形状是否为传感器 · b2Shape_IsSensor" @嵌入式方法 = "">
+    参数 形状标识 <类型 = B2形状标识>
+    {
+        @ (b2Shape_IsSensor(@<形状标识>) != 0)
+    }
+
+    方法 置用户数据 <公开 静态 注释 = "设置形状的用户数据 · b2Shape_SetUserData" @嵌入式方法 = "">
+    参数 形状标识 <类型 = B2形状标识>
+    参数 用户数据 <类型 = 变整数>
+    {
+        @ b2Shape_SetUserData(@<形状标识>, (void*)@<用户数据>)
+    }
+
+    方法 取用户数据 <公开 静态 类型 = 变整数 注释 = "取形状的用户数据 · b2Shape_GetUserData" @嵌入式方法 = "">
+    参数 形状标识 <类型 = B2形状标识>
+    {
+        @ (intptr_t)b2Shape_GetUserData(@<形状标识>)
+    }
+
+    方法 置密度 <公开 静态 注释 = "设置形状的质量密度，通常以千克每平方米计 · b2Shape_SetDensity" @嵌入式方法 = "">
+    参数 形状标识 <类型 = B2形状标识>
+    参数 密度 <类型 = 单精度小数>
+    参数 更新质量 <类型 = 逻辑型>
+    {
+        @ b2Shape_SetDensity(@<形状标识>, (float)@<密度>, (@<更新质量> != 0))
+    }
+
+    方法 取密度 <公开 静态 类型 = 小数 注释 = "取形状密度，通常以千克每平方米计 · b2Shape_GetDensity" @嵌入式方法 = "">
+    参数 形状标识 <类型 = B2形状标识>
+    {
+        @ b2Shape_GetDensity(@<形状标识>)
+    }
+
+    方法 置摩擦 <公开 静态 注释 = "设置形状摩擦系数 · b2Shape_SetFriction" @嵌入式方法 = "">
+    参数 形状标识 <类型 = B2形状标识>
+    参数 摩擦系数 <类型 = 单精度小数>
+    {
+        @ b2Shape_SetFriction(@<形状标识>, (float)@<摩擦系数>)
+    }
+
+    方法 取摩擦 <公开 静态 类型 = 小数 注释 = "取形状摩擦系数 · b2Shape_GetFriction" @嵌入式方法 = "">
+    参数 形状标识 <类型 = B2形状标识>
+    {
+        @ b2Shape_GetFriction(@<形状标识>)
+    }
+
+    方法 置恢复系数 <公开 静态 注释 = "设置形状恢复系数（弹性） · b2Shape_SetRestitution" @嵌入式方法 = "">
+    参数 形状标识 <类型 = B2形状标识>
+    参数 恢复系数 <类型 = 单精度小数>
+    {
+        @ b2Shape_SetRestitution(@<形状标识>, (float)@<恢复系数>)
+    }
+
+    方法 取恢复系数 <公开 静态 类型 = 小数 注释 = "取形状恢复系数 · b2Shape_GetRestitution" @嵌入式方法 = "">
+    参数 形状标识 <类型 = B2形状标识>
+    {
+        @ b2Shape_GetRestitution(@<形状标识>)
+    }
+
+    方法 置用户材质 <公开 静态 注释 = "设置用户材质标识 · b2Shape_SetUserMaterial" @嵌入式方法 = "">
+    参数 形状标识 <类型 = B2形状标识>
+    参数 材质 <类型 = 长整数>
+    {
+        @ b2Shape_SetUserMaterial(@<形状标识>, @<材质>)
+    }
+
+    方法 取用户材质 <公开 静态 类型 = 长整数 注释 = "取用户材质标识 · b2Shape_GetUserMaterial" @嵌入式方法 = "">
+    参数 形状标识 <类型 = B2形状标识>
+    {
+        @ (int64_t)b2Shape_GetUserMaterial(@<形状标识>)
+    }
+
+    方法 置表面材质 <公开 静态 注释 = "设置形状表面材质 · b2Shape_SetSurfaceMaterial" @嵌入式方法 = "">
+    参数 形状标识 <类型 = B2形状标识>
+    参数 值乙 <类型 = B2表面材质>
+    {
+        @ b2Shape_SetSurfaceMaterial(@<形状标识>, &@<值乙>)
+    }
+
+    方法 取表面材质 <公开 静态 类型 = B2表面材质 注释 = "取形状表面材质 · b2Shape_GetSurfaceMaterial" @嵌入式方法 = "">
+    参数 形状标识 <类型 = B2形状标识>
+    {
+        @ b2Shape_GetSurfaceMaterial(@<形状标识>)
+    }
+
+    方法 取过滤器 <公开 静态 类型 = B2过滤 注释 = "取形状的过滤数据 · b2Shape_GetFilter" @嵌入式方法 = "">
+    参数 形状标识 <类型 = B2形状标识>
+    {
+        @ b2Shape_GetFilter(@<形状标识>)
+    }
+
+    方法 置过滤器 <公开 静态 注释 = "设置当前过滤数据 · b2Shape_SetFilter" @嵌入式方法 = "">
+    参数 形状标识 <类型 = B2形状标识>
+    参数 过滤器 <类型 = B2过滤>
+    {
+        @ b2Shape_SetFilter(@<形状标识>, @<过滤器>)
+    }
+
+    方法 启用传感器事件集 <公开 静态 注释 = "为该形状启用传感器事件 · b2Shape_EnableSensorEvents" @嵌入式方法 = "">
+    参数 形状标识 <类型 = B2形状标识>
+    参数 开关 <类型 = 逻辑型>
+    {
+        @ b2Shape_EnableSensorEvents(@<形状标识>, (@<开关> != 0))
+    }
+
+    方法 是否传感器事件集已启用 <公开 静态 类型 = 逻辑型 注释 = "该形状是否启用了传感器事件 · b2Shape_AreSensorEventsEnabled" @嵌入式方法 = "">
+    参数 形状标识 <类型 = B2形状标识>
+    {
+        @ (b2Shape_AreSensorEventsEnabled(@<形状标识>) != 0)
+    }
+
+    方法 启用接触事件集 <公开 静态 注释 = "为该形状启用接触事件 · b2Shape_EnableContactEvents" @嵌入式方法 = "">
+    参数 形状标识 <类型 = B2形状标识>
+    参数 开关 <类型 = 逻辑型>
+    {
+        @ b2Shape_EnableContactEvents(@<形状标识>, (@<开关> != 0))
+    }
+
+    方法 是否接触事件集已启用 <公开 静态 类型 = 逻辑型 注释 = "该形状是否启用了接触事件 · b2Shape_AreContactEventsEnabled" @嵌入式方法 = "">
+    参数 形状标识 <类型 = B2形状标识>
+    {
+        @ (b2Shape_AreContactEventsEnabled(@<形状标识>) != 0)
+    }
+
+    方法 启用预求解事件集 <公开 静态 注释 = "为该形状启用求解前接触事件 · b2Shape_EnablePreSolveEvents" @嵌入式方法 = "">
+    参数 形状标识 <类型 = B2形状标识>
+    参数 开关 <类型 = 逻辑型>
+    {
+        @ b2Shape_EnablePreSolveEvents(@<形状标识>, (@<开关> != 0))
+    }
+
+    方法 是否预求解事件集已启用 <公开 静态 类型 = 逻辑型 注释 = "该形状是否启用了求解前事件 · b2Shape_ArePreSolveEventsEnabled" @嵌入式方法 = "">
+    参数 形状标识 <类型 = B2形状标识>
+    {
+        @ (b2Shape_ArePreSolveEventsEnabled(@<形状标识>) != 0)
+    }
+
+    方法 启用撞击事件集 <公开 静态 注释 = "为该形状启用接触撞击事件 · b2Shape_EnableHitEvents" @嵌入式方法 = "">
+    参数 形状标识 <类型 = B2形状标识>
+    参数 开关 <类型 = 逻辑型>
+    {
+        @ b2Shape_EnableHitEvents(@<形状标识>, (@<开关> != 0))
+    }
+
+    方法 是否撞击事件集已启用 <公开 静态 类型 = 逻辑型 注释 = "该形状是否启用了撞击事件 · b2Shape_AreHitEventsEnabled" @嵌入式方法 = "">
+    参数 形状标识 <类型 = B2形状标识>
+    {
+        @ (b2Shape_AreHitEventsEnabled(@<形状标识>) != 0)
+    }
+
+    方法 测试点 <公开 静态 类型 = 逻辑型 注释 = "检测某个世界坐标点与形状是否重叠 · b2Shape_TestPoint" @嵌入式方法 = "">
+    参数 形状标识 <类型 = B2形状标识>
+    参数 点 <类型 = B2向量>
+    {
+        @ (b2Shape_TestPoint(@<形状标识>, @<点>) != 0)
+    }
+
+    方法 投射射线 <公开 静态 类型 = B2投射输出 注释 = "对单个形状做射线投射 · b2Shape_CastRay" @嵌入式方法 = "">
+    参数 形状标识 <类型 = B2形状标识>
+    参数 原点 <类型 = B2向量>
+    参数 平移 <类型 = B2向量>
+    {
+        @ b2Shape_CastRay(@<形状标识>, @<原点>, @<平移>)
+    }
+
+    方法 取圆 <公开 静态 类型 = B2圆 注释 = "取该形状圆形数据的一份拷贝 · b2Shape_GetCircle" @嵌入式方法 = "">
+    参数 形状标识 <类型 = B2形状标识>
+    {
+        @ b2Shape_GetCircle(@<形状标识>)
+    }
+
+    方法 取片段 <公开 静态 类型 = B2线段 注释 = "取该形状线段数据的一份拷贝 · b2Shape_GetSegment" @嵌入式方法 = "">
+    参数 形状标识 <类型 = B2形状标识>
+    {
+        @ b2Shape_GetSegment(@<形状标识>)
+    }
+
+    方法 取链条片段 <公开 静态 类型 = B2链条段 注释 = "取该形状链条线段数据的一份拷贝 · b2Shape_GetChainSegment" @嵌入式方法 = "">
+    参数 形状标识 <类型 = B2形状标识>
+    {
+        @ b2Shape_GetChainSegment(@<形状标识>)
+    }
+
+    方法 取胶囊 <公开 静态 类型 = B2胶囊 注释 = "取该形状胶囊数据的一份拷贝 · b2Shape_GetCapsule" @嵌入式方法 = "">
+    参数 形状标识 <类型 = B2形状标识>
+    {
+        @ b2Shape_GetCapsule(@<形状标识>)
+    }
+
+    方法 取多边形 <公开 静态 类型 = B2多边形 注释 = "取该形状凸多边形数据的一份拷贝 · b2Shape_GetPolygon" @嵌入式方法 = "">
+    参数 形状标识 <类型 = B2形状标识>
+    {
+        @ b2Shape_GetPolygon(@<形状标识>)
+    }
+
+    方法 置圆 <公开 静态 注释 = "把形状改为圆形，或更新当前圆形数据 · b2Shape_SetCircle" @嵌入式方法 = "">
+    参数 形状标识 <类型 = B2形状标识>
+    参数 圆 <类型 = B2圆>
+    {
+        @ b2Shape_SetCircle(@<形状标识>, &@<圆>)
+    }
+
+    方法 置胶囊 <公开 静态 注释 = "把形状改为胶囊，或更新当前胶囊数据 · b2Shape_SetCapsule" @嵌入式方法 = "">
+    参数 形状标识 <类型 = B2形状标识>
+    参数 胶囊 <类型 = B2胶囊>
+    {
+        @ b2Shape_SetCapsule(@<形状标识>, &@<胶囊>)
+    }
+
+    方法 置片段 <公开 静态 注释 = "把形状改为线段，或更新当前线段数据 · b2Shape_SetSegment" @嵌入式方法 = "">
+    参数 形状标识 <类型 = B2形状标识>
+    参数 线段 <类型 = B2线段>
+    {
+        @ b2Shape_SetSegment(@<形状标识>, &@<线段>)
+    }
+
+    方法 置多边形 <公开 静态 注释 = "把形状改为多边形，或更新当前多边形数据 · b2Shape_SetPolygon" @嵌入式方法 = "">
+    参数 形状标识 <类型 = B2形状标识>
+    参数 多边形 <类型 = B2多边形>
+    {
+        @ b2Shape_SetPolygon(@<形状标识>, &@<多边形>)
+    }
+
+    方法 置链条片段 <公开 静态 注释 = "把形状改为松散链条线段，或更新当前线段数据 · b2Shape_SetChainSegment" @嵌入式方法 = "">
+    参数 形状标识 <类型 = B2形状标识>
+    参数 链条段 <类型 = B2链条段>
+    {
+        @ b2Shape_SetChainSegment(@<形状标识>, &@<链条段>)
+    }
+
+    方法 取父级链条 <公开 静态 类型 = B2链条标识 注释 = "若形状是链条线段则取所属链条标识，否则返回空链条标识 · b2Shape_GetParentChain" @嵌入式方法 = "">
+    参数 形状标识 <类型 = B2形状标识>
+    {
+        @ b2Shape_GetParentChain(@<形状标识>)
+    }
+
+    方法 取接触容量 <公开 静态 类型 = 整数 注释 = "取获取该形状全部接触所需的最大容量 · b2Shape_GetContactCapacity" @嵌入式方法 = "">
+    参数 形状标识 <类型 = B2形状标识>
+    {
+        @ b2Shape_GetContactCapacity(@<形状标识>)
+    }
+
+    方法 取接触数据 <公开 静态 类型 = 整数 注释 = "取该形状正在接触的接触数据 · b2Shape_GetContactData" @嵌入式方法 = "">
+    参数 形状标识 <类型 = B2形状标识>
+    参数 值乙 <类型 = 变整数>
+    参数 容量 <类型 = 整数>
+    {
+        @ b2Shape_GetContactData(@<形状标识>, (b2ContactData*)@<值乙>, @<容量>)
+    }
+
+    方法 取传感器容量 <公开 静态 类型 = 整数 注释 = "取获取传感器形状全部重叠对象所需的最大容量 · b2Shape_GetSensorCapacity" @嵌入式方法 = "">
+    参数 形状标识 <类型 = B2形状标识>
+    {
+        @ b2Shape_GetSensorCapacity(@<形状标识>)
+    }
+
+    方法 取传感器数据 <公开 静态 类型 = 整数 注释 = "取上一世界步中算出的传感器重叠数据 · b2Shape_GetSensorData" @嵌入式方法 = "">
+    参数 形状标识 <类型 = B2形状标识>
+    参数 值乙 <类型 = 变整数>
+    参数 容量 <类型 = 整数>
+    {
+        @ b2Shape_GetSensorData(@<形状标识>, (b2ShapeId*)@<值乙>, @<容量>)
+    }
+
+    方法 取包围盒 <公开 静态 类型 = B2包围盒 注释 = "取当前世界包围盒 · b2Shape_GetBounds" @嵌入式方法 = "">
+    参数 形状标识 <类型 = B2形状标识>
+    {
+        @ b2Shape_GetBounds(@<形状标识>)
+    }
+
+    方法 计算质量数据 <公开 静态 类型 = B2质量数据 注释 = "计算某个形状的质量数据 · b2Shape_ComputeMassData" @嵌入式方法 = "">
+    参数 形状标识 <类型 = B2形状标识>
+    {
+        @ b2Shape_ComputeMassData(@<形状标识>)
+    }
+
+    方法 取最近点 <公开 静态 类型 = B2向量 注释 = "取形状上距目标点最近的点 · b2Shape_GetClosestPoint" @嵌入式方法 = "">
+    参数 形状标识 <类型 = B2形状标识>
+    参数 目标 <类型 = B2向量>
+    {
+        @ b2Shape_GetClosestPoint(@<形状标识>, @<目标>)
+    }
+
+    方法 施加风 <公开 静态 注释 = "按空气密度对该形状所属刚体施加风力 · b2Shape_ApplyWind" @嵌入式方法 = "">
+    参数 形状标识 <类型 = B2形状标识>
+    参数 风 <类型 = B2向量>
+    参数 阻力 <类型 = 单精度小数>
+    参数 升力 <类型 = 单精度小数>
+    参数 唤醒标志 <类型 = 逻辑型>
+    {
+        @ b2Shape_ApplyWind(@<形状标识>, @<风>, (float)@<阻力>, (float)@<升力>, (@<唤醒标志> != 0))
+    }
+
+}
+
+类 B2链条 <公开 注释 = "链条 · 接口包装类">
+{
+    方法 创建链条 <公开 静态 类型 = B2链条标识 注释 = "创建链条形状 · b2CreateChain" @嵌入式方法 = "">
+    参数 刚体标识 <类型 = B2刚体标识>
+    参数 定义 <类型 = B2链条定义>
+    {
+        @ b2CreateChain(@<刚体标识>, &@<定义>)
+    }
+
+    方法 销毁链条 <公开 静态 注释 = "销毁链条形状 · b2DestroyChain" @嵌入式方法 = "">
+    参数 链条标识 <类型 = B2链条标识>
+    {
+        @ b2DestroyChain(@<链条标识>)
+    }
+
+    方法 取世界 <公开 静态 类型 = B2世界标识 注释 = "取拥有该链条形状的世界 · b2Chain_GetWorld" @嵌入式方法 = "">
+    参数 链条标识 <类型 = B2链条标识>
+    {
+        @ b2Chain_GetWorld(@<链条标识>)
+    }
+
+    方法 取片段数量 <公开 静态 类型 = 整数 注释 = "取该链条的线段数量 · b2Chain_GetSegmentCount" @嵌入式方法 = "">
+    参数 链条标识 <类型 = B2链条标识>
+    {
+        @ b2Chain_GetSegmentCount(@<链条标识>)
+    }
+
+    方法 取片段 <公开 静态 类型 = 整数 注释 = "把链条线段形状标识按容量填入用户数组 · b2Chain_GetSegments" @嵌入式方法 = "">
+    参数 链条标识 <类型 = B2链条标识>
+    参数 值乙 <类型 = 变整数>
+    参数 容量 <类型 = 整数>
+    {
+        @ b2Chain_GetSegments(@<链条标识>, (b2ShapeId*)@<值乙>, @<容量>)
+    }
+
+    方法 置全部表面材质 <公开 静态 注释 = "设置所有线段的链条材质 · b2Chain_SetAllSurfaceMaterials" @嵌入式方法 = "">
+    参数 链条标识 <类型 = B2链条标识>
+    参数 材质 <类型 = B2表面材质>
+    {
+        @ b2Chain_SetAllSurfaceMaterials(@<链条标识>, &@<材质>)
+    }
+
+    方法 置表面材质 <公开 静态 注释 = "按线段序号设置链条材质 · b2Chain_SetSurfaceMaterial" @嵌入式方法 = "">
+    参数 链条标识 <类型 = B2链条标识>
+    参数 材质 <类型 = B2表面材质>
+    参数 片段序号 <类型 = 整数>
+    {
+        @ b2Chain_SetSurfaceMaterial(@<链条标识>, &@<材质>, @<片段序号>)
+    }
+
+    方法 取表面材质 <公开 静态 类型 = B2表面材质 注释 = "按线段序号取链条材质 · b2Chain_GetSurfaceMaterial" @嵌入式方法 = "">
+    参数 链条标识 <类型 = B2链条标识>
+    参数 片段序号 <类型 = 整数>
+    {
+        @ b2Chain_GetSurfaceMaterial(@<链条标识>, @<片段序号>)
+    }
+
+    方法 是否有效 <公开 静态 类型 = 逻辑型 注释 = "校验链条标识是否有效 · b2Chain_IsValid" @嵌入式方法 = "">
+    参数 标识 <类型 = B2链条标识>
+    {
+        @ (b2Chain_IsValid(@<标识>) != 0)
+    }
+
+}
+

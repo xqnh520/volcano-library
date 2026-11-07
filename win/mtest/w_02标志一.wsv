@@ -1,0 +1,240 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.即时界面
+
+类 窗口标志 <公开 注释 = "窗口标志，用于即时界面.开始窗口" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 无 <公开 类型 = 整数 值 = @ImGuiWindowFlags_None>
+    常量 禁止标题栏 <公开 类型 = 整数 值 = @ImGuiWindowFlags_NoTitleBar>
+    常量 禁止调整大小 <公开 类型 = 整数 值 = @ImGuiWindowFlags_NoResize>
+    常量 禁止移动 <公开 类型 = 整数 值 = @ImGuiWindowFlags_NoMove>
+    常量 禁止滚动条 <公开 类型 = 整数 值 = @ImGuiWindowFlags_NoScrollbar>
+    常量 禁止鼠标滚动 <公开 类型 = 整数 值 = @ImGuiWindowFlags_NoScrollWithMouse>
+    常量 禁止折叠 <公开 类型 = 整数 值 = @ImGuiWindowFlags_NoCollapse>
+    常量 始终自动调整大小 <公开 类型 = 整数 值 = @ImGuiWindowFlags_AlwaysAutoResize>
+    常量 禁止背景 <公开 类型 = 整数 值 = @ImGuiWindowFlags_NoBackground>
+    常量 禁止保存配置 <公开 类型 = 整数 值 = @ImGuiWindowFlags_NoSavedSettings>
+    常量 禁止鼠标输入 <公开 类型 = 整数 值 = @ImGuiWindowFlags_NoMouseInputs>
+    常量 菜单栏 <公开 类型 = 整数 值 = @ImGuiWindowFlags_MenuBar>
+    常量 水平滚动条 <公开 类型 = 整数 值 = @ImGuiWindowFlags_HorizontalScrollbar>
+    常量 显示时不获得焦点 <公开 类型 = 整数 值 = @ImGuiWindowFlags_NoFocusOnAppearing>
+    常量 获得焦点时不置于顶层 <公开 类型 = 整数 值 = @ImGuiWindowFlags_NoBringToFrontOnFocus>
+    常量 始终显示垂直滚动条 <公开 类型 = 整数 值 = @ImGuiWindowFlags_AlwaysVerticalScrollbar>
+    常量 始终显示水平滚动条 <公开 类型 = 整数 值 = @ImGuiWindowFlags_AlwaysHorizontalScrollbar>
+    常量 禁止导航输入 <公开 类型 = 整数 值 = @ImGuiWindowFlags_NoNavInputs>
+    常量 禁止导航焦点 <公开 类型 = 整数 值 = @ImGuiWindowFlags_NoNavFocus>
+    常量 未保存文档标记 <公开 类型 = 整数 值 = @ImGuiWindowFlags_UnsavedDocument>
+    常量 禁止停靠 <公开 类型 = 整数 值 = @ImGuiWindowFlags_NoDocking>
+    常量 禁止导航 <公开 类型 = 整数 值 = @ImGuiWindowFlags_NoNav>
+    常量 禁止窗口装饰 <公开 类型 = 整数 值 = @ImGuiWindowFlags_NoDecoration>
+    常量 禁止全部输入 <公开 类型 = 整数 值 = @ImGuiWindowFlags_NoInputs>
+    常量 停靠节点宿主 <公开 类型 = 整数 值 = @ImGuiWindowFlags_DockNodeHost>
+    常量 子窗口 <公开 类型 = 整数 值 = @ImGuiWindowFlags_ChildWindow>
+    常量 提示窗口 <公开 类型 = 整数 值 = @ImGuiWindowFlags_Tooltip>
+    常量 弹出窗口 <公开 类型 = 整数 值 = @ImGuiWindowFlags_Popup>
+    常量 模态窗口 <公开 类型 = 整数 值 = @ImGuiWindowFlags_Modal>
+    常量 子菜单 <公开 类型 = 整数 值 = @ImGuiWindowFlags_ChildMenu>
+    常量 平铺导航 <公开 类型 = 整数 值 = @ImGuiWindowFlags_NavFlattened>
+    常量 始终使用窗口内边距 <公开 类型 = 整数 值 = @ImGuiWindowFlags_AlwaysUseWindowPadding>
+}
+类 子窗口标志 <公开 注释 = "子窗口标志，用于即时界面.开始子窗口" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 无 <公开 类型 = 整数 值 = @ImGuiChildFlags_None>
+    常量 显示外边框 <公开 类型 = 整数 值 = @ImGuiChildFlags_Borders>
+    常量 始终启用窗口内边距 <公开 类型 = 整数 值 = @ImGuiChildFlags_AlwaysUseWindowPadding>
+    常量 允许调整水平大小 <公开 类型 = 整数 值 = @ImGuiChildFlags_ResizeX>
+    常量 允许调整垂直大小 <公开 类型 = 整数 值 = @ImGuiChildFlags_ResizeY>
+    常量 自动调整水平大小 <公开 类型 = 整数 值 = @ImGuiChildFlags_AutoResizeX>
+    常量 自动调整垂直大小 <公开 类型 = 整数 值 = @ImGuiChildFlags_AutoResizeY>
+    常量 始终自动调整大小 <公开 类型 = 整数 值 = @ImGuiChildFlags_AlwaysAutoResize>
+    常量 使用控件外框样式 <公开 类型 = 整数 值 = @ImGuiChildFlags_FrameStyle>
+    常量 平铺导航 <公开 类型 = 整数 值 = @ImGuiChildFlags_NavFlattened>
+}
+类 输入框标志 <公开 注释 = "输入框标志，用于即时界面.输入文本" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 无 <公开 类型 = 整数 值 = @ImGuiInputTextFlags_None>
+    常量 仅允许十进制数字 <公开 类型 = 整数 值 = @ImGuiInputTextFlags_CharsDecimal>
+    常量 仅允许十六进制字符 <公开 类型 = 整数 值 = @ImGuiInputTextFlags_CharsHexadecimal>
+    常量 仅允许科学计数法字符 <公开 类型 = 整数 值 = @ImGuiInputTextFlags_CharsScientific>
+    常量 自动转大写 <公开 类型 = 整数 值 = @ImGuiInputTextFlags_CharsUppercase>
+    常量 禁止空格 <公开 类型 = 整数 值 = @ImGuiInputTextFlags_CharsNoBlank>
+    常量 允许制表符输入 <公开 类型 = 整数 值 = @ImGuiInputTextFlags_AllowTabInput>
+    常量 回车时返回真 <公开 类型 = 整数 值 = @ImGuiInputTextFlags_EnterReturnsTrue>
+    常量 Esc清空内容 <公开 类型 = 整数 值 = @ImGuiInputTextFlags_EscapeClearsAll>
+    常量 Ctrl+回车换行 <公开 类型 = 整数 值 = @ImGuiInputTextFlags_CtrlEnterForNewLine>
+    常量 只读 <公开 类型 = 整数 值 = @ImGuiInputTextFlags_ReadOnly>
+    常量 密码模式 <公开 类型 = 整数 值 = @ImGuiInputTextFlags_Password>
+    常量 始终覆盖模式 <公开 类型 = 整数 值 = @ImGuiInputTextFlags_AlwaysOverwrite>
+    常量 自动全选 <公开 类型 = 整数 值 = @ImGuiInputTextFlags_AutoSelectAll>
+    常量 空值解析为0 <公开 类型 = 整数 值 = @ImGuiInputTextFlags_ParseEmptyRefVal>
+    常量 空值显示为空 <公开 类型 = 整数 值 = @ImGuiInputTextFlags_DisplayEmptyRefVal>
+    常量 禁止水平滚动 <公开 类型 = 整数 值 = @ImGuiInputTextFlags_NoHorizontalScroll>
+    常量 禁止撤销重做 <公开 类型 = 整数 值 = @ImGuiInputTextFlags_NoUndoRedo>
+    常量 左侧省略 <公开 类型 = 整数 值 = @ImGuiInputTextFlags_ElideLeft>
+    常量 回调补全 <公开 类型 = 整数 值 = @ImGuiInputTextFlags_CallbackCompletion>
+    常量 回调历史 <公开 类型 = 整数 值 = @ImGuiInputTextFlags_CallbackHistory>
+    常量 回调每帧 <公开 类型 = 整数 值 = @ImGuiInputTextFlags_CallbackAlways>
+    常量 回调字符过滤 <公开 类型 = 整数 值 = @ImGuiInputTextFlags_CallbackCharFilter>
+    常量 回调调整大小 <公开 类型 = 整数 值 = @ImGuiInputTextFlags_CallbackResize>
+    常量 回调编辑 <公开 类型 = 整数 值 = @ImGuiInputTextFlags_CallbackEdit>
+}
+类 树节点标志 <公开 注释 = "树节点标志，用于即时界面.树节点" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 无 <公开 类型 = 整数 值 = @ImGuiTreeNodeFlags_None>
+    常量 已选中 <公开 类型 = 整数 值 = @ImGuiTreeNodeFlags_Selected>
+    常量 带边框 <公开 类型 = 整数 值 = @ImGuiTreeNodeFlags_Framed>
+    常量 允许重叠 <公开 类型 = 整数 值 = @ImGuiTreeNodeFlags_AllowOverlap>
+    常量 展开时不压栈 <公开 类型 = 整数 值 = @ImGuiTreeNodeFlags_NoTreePushOnOpen>
+    常量 日志不自动展开 <公开 类型 = 整数 值 = @ImGuiTreeNodeFlags_NoAutoOpenOnLog>
+    常量 默认展开 <公开 类型 = 整数 值 = @ImGuiTreeNodeFlags_DefaultOpen>
+    常量 双击展开 <公开 类型 = 整数 值 = @ImGuiTreeNodeFlags_OpenOnDoubleClick>
+    常量 仅箭头展开 <公开 类型 = 整数 值 = @ImGuiTreeNodeFlags_OpenOnArrow>
+    常量 叶子节点 <公开 类型 = 整数 值 = @ImGuiTreeNodeFlags_Leaf>
+    常量 显示圆点 <公开 类型 = 整数 值 = @ImGuiTreeNodeFlags_Bullet>
+    常量 使用框架内边距 <公开 类型 = 整数 值 = @ImGuiTreeNodeFlags_FramePadding>
+    常量 占满可用宽度 <公开 类型 = 整数 值 = @ImGuiTreeNodeFlags_SpanAvailWidth>
+    常量 占满整行宽度 <公开 类型 = 整数 值 = @ImGuiTreeNodeFlags_SpanFullWidth>
+    常量 跨全部列 <公开 类型 = 整数 值 = @ImGuiTreeNodeFlags_SpanAllColumns>
+    常量 左导航键跳回 <公开 类型 = 整数 值 = @ImGuiTreeNodeFlags_NavLeftJumpsBackHere>
+    常量 折叠标题栏 <公开 类型 = 整数 值 = @ImGuiTreeNodeFlags_CollapsingHeader>
+}
+类 弹出标志 <公开 注释 = "弹出窗口标志" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 无 <公开 类型 = 整数 值 = @ImGuiPopupFlags_None>
+    常量 鼠标左键 <公开 类型 = 整数 值 = @ImGuiPopupFlags_MouseButtonLeft>
+    常量 鼠标右键 <公开 类型 = 整数 值 = @ImGuiPopupFlags_MouseButtonRight>
+    常量 鼠标中键 <公开 类型 = 整数 值 = @ImGuiPopupFlags_MouseButtonMiddle>
+    常量 禁止重复打开 <公开 类型 = 整数 值 = @ImGuiPopupFlags_NoReopen>
+    常量 已有弹出时不打开 <公开 类型 = 整数 值 = @ImGuiPopupFlags_NoOpenOverExistingPopup>
+    常量 不覆盖项目打开 <公开 类型 = 整数 值 = @ImGuiPopupFlags_NoOpenOverItems>
+    常量 任意弹出ID <公开 类型 = 整数 值 = @ImGuiPopupFlags_AnyPopupId>
+    常量 任意弹出层级 <公开 类型 = 整数 值 = @ImGuiPopupFlags_AnyPopupLevel>
+    常量 任意弹出窗口 <公开 类型 = 整数 值 = @ImGuiPopupFlags_AnyPopup>
+}
+类 可选项标志 <公开 注释 = "可选项标志，用于即时界面.可选项" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 无 <公开 类型 = 整数 值 = @ImGuiSelectableFlags_None>
+    常量 不自动关闭弹出窗口 <公开 类型 = 整数 值 = @ImGuiSelectableFlags_NoAutoClosePopups>
+    常量 跨全部列 <公开 类型 = 整数 值 = @ImGuiSelectableFlags_SpanAllColumns>
+    常量 允许双击 <公开 类型 = 整数 值 = @ImGuiSelectableFlags_AllowDoubleClick>
+    常量 禁用 <公开 类型 = 整数 值 = @ImGuiSelectableFlags_Disabled>
+    常量 允许重叠 <公开 类型 = 整数 值 = @ImGuiSelectableFlags_AllowOverlap>
+    常量 高亮显示 <公开 类型 = 整数 值 = @ImGuiSelectableFlags_Highlight>
+    常量 不关闭弹出窗口 <公开 类型 = 整数 值 = @ImGuiSelectableFlags_DontClosePopups>
+}
+类 组合框标志 <公开 注释 = "组合框标志，用于即时界面.开始组合框" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 无 <公开 类型 = 整数 值 = @ImGuiComboFlags_None>
+    常量 弹出框左对齐 <公开 类型 = 整数 值 = @ImGuiComboFlags_PopupAlignLeft>
+    常量 小高度 <公开 类型 = 整数 值 = @ImGuiComboFlags_HeightSmall>
+    常量 常规高度 <公开 类型 = 整数 值 = @ImGuiComboFlags_HeightRegular>
+    常量 大高度 <公开 类型 = 整数 值 = @ImGuiComboFlags_HeightLarge>
+    常量 最大高度 <公开 类型 = 整数 值 = @ImGuiComboFlags_HeightLargest>
+    常量 禁止箭头按钮 <公开 类型 = 整数 值 = @ImGuiComboFlags_NoArrowButton>
+    常量 禁止预览区 <公开 类型 = 整数 值 = @ImGuiComboFlags_NoPreview>
+    常量 宽度适应预览 <公开 类型 = 整数 值 = @ImGuiComboFlags_WidthFitPreview>
+}
+类 选项卡栏标志 <公开 注释 = "选项卡栏标志，用于即时界面.开始选项卡栏" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 无 <公开 类型 = 整数 值 = @ImGuiTabBarFlags_None>
+    常量 允许拖动重排 <公开 类型 = 整数 值 = @ImGuiTabBarFlags_Reorderable>
+    常量 自动选中新选项卡 <公开 类型 = 整数 值 = @ImGuiTabBarFlags_AutoSelectNewTabs>
+    常量 显示选项卡列表按钮 <公开 类型 = 整数 值 = @ImGuiTabBarFlags_TabListPopupButton>
+    常量 中键不关闭 <公开 类型 = 整数 值 = @ImGuiTabBarFlags_NoCloseWithMiddleMouseButton>
+    常量 禁止滚动按钮 <公开 类型 = 整数 值 = @ImGuiTabBarFlags_NoTabListScrollingButtons>
+    常量 禁止提示 <公开 类型 = 整数 值 = @ImGuiTabBarFlags_NoTooltip>
+    常量 绘制选中顶线 <公开 类型 = 整数 值 = @ImGuiTabBarFlags_DrawSelectedOverline>
+    常量 缩小宽度策略 <公开 类型 = 整数 值 = @ImGuiTabBarFlags_FittingPolicyResizeDown>
+    常量 滚动宽度策略 <公开 类型 = 整数 值 = @ImGuiTabBarFlags_FittingPolicyScroll>
+}
+类 选项卡项标志 <公开 注释 = "选项卡项标志，用于即时界面.开始选项卡项" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 无 <公开 类型 = 整数 值 = @ImGuiTabItemFlags_None>
+    常量 未保存文档标记 <公开 类型 = 整数 值 = @ImGuiTabItemFlags_UnsavedDocument>
+    常量 强制选中 <公开 类型 = 整数 值 = @ImGuiTabItemFlags_SetSelected>
+    常量 中键不关闭 <公开 类型 = 整数 值 = @ImGuiTabItemFlags_NoCloseWithMiddleMouseButton>
+    常量 不压入ID <公开 类型 = 整数 值 = @ImGuiTabItemFlags_NoPushId>
+    常量 禁止提示 <公开 类型 = 整数 值 = @ImGuiTabItemFlags_NoTooltip>
+    常量 禁止重排 <公开 类型 = 整数 值 = @ImGuiTabItemFlags_NoReorder>
+    常量 置于前部 <公开 类型 = 整数 值 = @ImGuiTabItemFlags_Leading>
+    常量 置于尾部 <公开 类型 = 整数 值 = @ImGuiTabItemFlags_Trailing>
+    常量 不假定关闭 <公开 类型 = 整数 值 = @ImGuiTabItemFlags_NoAssumedClosure>
+}
+类 表格标志 <公开 注释 = "表格标志，用于界面表格.开始表格" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 无 <公开 类型 = 整数 值 = @ImGuiTableFlags_None>
+    常量 允许调整列宽 <公开 类型 = 整数 值 = @ImGuiTableFlags_Resizable>
+    常量 允许重排列 <公开 类型 = 整数 值 = @ImGuiTableFlags_Reorderable>
+    常量 允许隐藏列 <公开 类型 = 整数 值 = @ImGuiTableFlags_Hideable>
+    常量 允许排序 <公开 类型 = 整数 值 = @ImGuiTableFlags_Sortable>
+    常量 禁止保存配置 <公开 类型 = 整数 值 = @ImGuiTableFlags_NoSavedSettings>
+    常量 表体内右键菜单 <公开 类型 = 整数 值 = @ImGuiTableFlags_ContextMenuInBody>
+    常量 行背景交替色 <公开 类型 = 整数 值 = @ImGuiTableFlags_RowBg>
+    常量 内部水平边框 <公开 类型 = 整数 值 = @ImGuiTableFlags_BordersInnerH>
+    常量 外部水平边框 <公开 类型 = 整数 值 = @ImGuiTableFlags_BordersOuterH>
+    常量 内部垂直边框 <公开 类型 = 整数 值 = @ImGuiTableFlags_BordersInnerV>
+    常量 外部垂直边框 <公开 类型 = 整数 值 = @ImGuiTableFlags_BordersOuterV>
+    常量 水平边框 <公开 类型 = 整数 值 = @ImGuiTableFlags_BordersH>
+    常量 垂直边框 <公开 类型 = 整数 值 = @ImGuiTableFlags_BordersV>
+    常量 内部边框 <公开 类型 = 整数 值 = @ImGuiTableFlags_BordersInner>
+    常量 外部边框 <公开 类型 = 整数 值 = @ImGuiTableFlags_BordersOuter>
+    常量 全部边框 <公开 类型 = 整数 值 = @ImGuiTableFlags_Borders>
+    常量 表体无边框 <公开 类型 = 整数 值 = @ImGuiTableFlags_NoBordersInBody>
+    常量 调整大小前表体无边框 <公开 类型 = 整数 值 = @ImGuiTableFlags_NoBordersInBodyUntilResize>
+    常量 固定适应宽度 <公开 类型 = 整数 值 = @ImGuiTableFlags_SizingFixedFit>
+    常量 固定相同宽度 <公开 类型 = 整数 值 = @ImGuiTableFlags_SizingFixedSame>
+    常量 按比例拉伸 <公开 类型 = 整数 值 = @ImGuiTableFlags_SizingStretchProp>
+    常量 相同拉伸 <公开 类型 = 整数 值 = @ImGuiTableFlags_SizingStretchSame>
+    常量 不横向扩展 <公开 类型 = 整数 值 = @ImGuiTableFlags_NoHostExtendX>
+    常量 不纵向扩展 <公开 类型 = 整数 值 = @ImGuiTableFlags_NoHostExtendY>
+    常量 不保持列可见 <公开 类型 = 整数 值 = @ImGuiTableFlags_NoKeepColumnsVisible>
+    常量 精确宽度 <公开 类型 = 整数 值 = @ImGuiTableFlags_PreciseWidths>
+    常量 禁止裁剪 <公开 类型 = 整数 值 = @ImGuiTableFlags_NoClip>
+    常量 外部水平内边距 <公开 类型 = 整数 值 = @ImGuiTableFlags_PadOuterX>
+    常量 无外部水平内边距 <公开 类型 = 整数 值 = @ImGuiTableFlags_NoPadOuterX>
+    常量 无内部水平内边距 <公开 类型 = 整数 值 = @ImGuiTableFlags_NoPadInnerX>
+    常量 水平滚动 <公开 类型 = 整数 值 = @ImGuiTableFlags_ScrollX>
+    常量 垂直滚动 <公开 类型 = 整数 值 = @ImGuiTableFlags_ScrollY>
+    常量 多列排序 <公开 类型 = 整数 值 = @ImGuiTableFlags_SortMulti>
+    常量 三态排序 <公开 类型 = 整数 值 = @ImGuiTableFlags_SortTristate>
+    常量 高亮悬停列 <公开 类型 = 整数 值 = @ImGuiTableFlags_HighlightHoveredColumn>
+}
+类 表格列标志 <公开 注释 = "表格列标志，用于界面表格.设置列" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 无 <公开 类型 = 整数 值 = @ImGuiTableColumnFlags_None>
+    常量 禁用 <公开 类型 = 整数 值 = @ImGuiTableColumnFlags_Disabled>
+    常量 默认隐藏 <公开 类型 = 整数 值 = @ImGuiTableColumnFlags_DefaultHide>
+    常量 默认排序列 <公开 类型 = 整数 值 = @ImGuiTableColumnFlags_DefaultSort>
+    常量 宽度拉伸 <公开 类型 = 整数 值 = @ImGuiTableColumnFlags_WidthStretch>
+    常量 宽度固定 <公开 类型 = 整数 值 = @ImGuiTableColumnFlags_WidthFixed>
+    常量 禁止调整宽度 <公开 类型 = 整数 值 = @ImGuiTableColumnFlags_NoResize>
+    常量 禁止重排 <公开 类型 = 整数 值 = @ImGuiTableColumnFlags_NoReorder>
+    常量 禁止隐藏 <公开 类型 = 整数 值 = @ImGuiTableColumnFlags_NoHide>
+    常量 禁止裁剪 <公开 类型 = 整数 值 = @ImGuiTableColumnFlags_NoClip>
+    常量 禁止排序 <公开 类型 = 整数 值 = @ImGuiTableColumnFlags_NoSort>
+    常量 禁止升序 <公开 类型 = 整数 值 = @ImGuiTableColumnFlags_NoSortAscending>
+    常量 禁止降序 <公开 类型 = 整数 值 = @ImGuiTableColumnFlags_NoSortDescending>
+    常量 无表头文本 <公开 类型 = 整数 值 = @ImGuiTableColumnFlags_NoHeaderLabel>
+    常量 无表头宽度 <公开 类型 = 整数 值 = @ImGuiTableColumnFlags_NoHeaderWidth>
+    常量 优先升序 <公开 类型 = 整数 值 = @ImGuiTableColumnFlags_PreferSortAscending>
+    常量 优先降序 <公开 类型 = 整数 值 = @ImGuiTableColumnFlags_PreferSortDescending>
+    常量 启用缩进 <公开 类型 = 整数 值 = @ImGuiTableColumnFlags_IndentEnable>
+    常量 禁止缩进 <公开 类型 = 整数 值 = @ImGuiTableColumnFlags_IndentDisable>
+    常量 倾斜表头 <公开 类型 = 整数 值 = @ImGuiTableColumnFlags_AngledHeader>
+    常量 已启用 <公开 类型 = 整数 值 = @ImGuiTableColumnFlags_IsEnabled>
+    常量 已显示 <公开 类型 = 整数 值 = @ImGuiTableColumnFlags_IsVisible>
+    常量 已排序 <公开 类型 = 整数 值 = @ImGuiTableColumnFlags_IsSorted>
+    常量 已悬停 <公开 类型 = 整数 值 = @ImGuiTableColumnFlags_IsHovered>
+}
+类 表格行标志 <公开 注释 = "表格行标志，用于界面表格.下一行" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 无 <公开 类型 = 整数 值 = @ImGuiTableRowFlags_None>
+    常量 表头行 <公开 类型 = 整数 值 = @ImGuiTableRowFlags_Headers>
+}
+类 表格背景目标 <公开 注释 = "表格背景目标，用于界面表格.置背景色" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 无 <公开 类型 = 整数 值 = @ImGuiTableBgTarget_None>
+    常量 行背景色0 <公开 类型 = 整数 值 = @ImGuiTableBgTarget_RowBg0>
+    常量 行背景色1 <公开 类型 = 整数 值 = @ImGuiTableBgTarget_RowBg1>
+    常量 单元格背景色 <公开 类型 = 整数 值 = @ImGuiTableBgTarget_CellBg>
+}

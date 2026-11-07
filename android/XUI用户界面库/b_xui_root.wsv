@@ -1,0 +1,516 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.安卓.XUI <注释 = "XUI 安卓 UI 工具库封装" @文档 = "category = \"XUI\"">
+
+
+类 XUI粘性滚动视图 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.StickyNestedScrollView)."
+        @文档 = "category = \"XUI.基础\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.StickyNestedScrollView\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI粘性滚动视图, StickyNestedScrollView, com.xuexiang.xui.widget.StickyNestedScrollView)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetStickyNestedScrollView ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI粘性滚动视图的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI粘性滚动视图.getAlpha()">
+    {
+        @ (double)@sn<this>.GetStickyNestedScrollView ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI粘性滚动视图的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI粘性滚动视图.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetStickyNestedScrollView ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI粘性滚动视图的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI粘性滚动视图.isEnabled()">
+    {
+        @ @sn<this>.GetStickyNestedScrollView ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI粘性滚动视图的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI粘性滚动视图.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetStickyNestedScrollView ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI粘性滚动视图的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI粘性滚动视图.isClickable()">
+    {
+        @ @sn<this>.GetStickyNestedScrollView ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI粘性滚动视图的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI粘性滚动视图.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetStickyNestedScrollView ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI粘性滚动视图的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI粘性滚动视图.getElevation()">
+    {
+        @ (double)@sn<this>.GetStickyNestedScrollView ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI粘性滚动视图的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI粘性滚动视图.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetStickyNestedScrollView ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI粘性滚动视图的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI粘性滚动视图.getMinimumHeight()">
+    {
+        @ @sn<this>.GetStickyNestedScrollView ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI粘性滚动视图的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI粘性滚动视图.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetStickyNestedScrollView ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI粘性滚动视图的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI粘性滚动视图.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetStickyNestedScrollView ().setBackgroundColor (@<新值>))
+    }
+
+    方法 清空响应视图粘性监听器 <公开 注释 = "用法：清空XUI粘性滚动视图的响应视图粘性监听器。 参数：无。 返回：无。 原方法：XUI粘性滚动视图.clearOnViewStickyListener()">
+    {
+        @ @m<RUN_UI_ACTION> (GetStickyNestedScrollView ().clearOnViewStickyListener ())
+    }
+
+    方法 设置阴影高度 <公开 注释 = "用法：把XUI粘性滚动视图的阴影高度设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI粘性滚动视图.setShadowHeight()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetStickyNestedScrollView ().setShadowHeight (@<值1>))
+    }
+
+    方法 设置阴影图形 <公开 注释 = "用法：把XUI粘性滚动视图的阴影图形设为给定值。 参数：值1=可绘制对象类。 返回：无。 原方法：XUI粘性滚动视图.setShadowDrawable()">
+    参数 值1 <类型 = 可绘制对象类>
+    {
+        @ @m<RUN_UI_ACTION> (GetStickyNestedScrollView ().setShadowDrawable (@<值1>))
+    }
+
+    方法 设定 <公开 注释 = "用法：设定XUI粘性滚动视图的相关内容。 参数：无。 返回：无。 原方法：XUI粘性滚动视图.setup()">
+    {
+        @ @m<RUN_UI_ACTION> (GetStickyNestedScrollView ().setup ())
+    }
+
+    方法 设置裁剪到内边距 <公开 注释 = "用法：把XUI粘性滚动视图的裁剪到内边距设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI粘性滚动视图.setClipToPadding()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetStickyNestedScrollView ().setClipToPadding (@<值1>))
+    }
+
+    方法 通知粘性属性已改变 <公开 注释 = "用法：通知XUI粘性滚动视图数据已变化, 需要重绘。 参数：无。 返回：无。 原方法：XUI粘性滚动视图.notifyStickyAttributeChanged()">
+    {
+        @ @m<RUN_UI_ACTION> (GetStickyNestedScrollView ().notifyStickyAttributeChanged ())
+    }
+
+}
+
+类 XUI键盘滚动视图 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.XUIKeyboardScrollView)."
+        @文档 = "category = \"XUI.基础\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.XUIKeyboardScrollView\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.ksv_auto_scroll\n        shown_name = \"键盘弹出后\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.ksv_scroll_height\n        shown_name = \"键盘弹出后（2）\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.ksv_scroll_delay\n        shown_name = \"键盘弹出后（3）\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.ksv_scroll_hide\n        shown_name = \"滚动是否隐藏键盘\"\n        data_type = boolean\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI键盘滚动视图, XUIKeyboardScrollView, com.xuexiang.xui.widget.XUIKeyboardScrollView)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetXUIKeyboardScrollView ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI键盘滚动视图的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI键盘滚动视图.getAlpha()">
+    {
+        @ (double)@sn<this>.GetXUIKeyboardScrollView ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI键盘滚动视图的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI键盘滚动视图.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIKeyboardScrollView ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI键盘滚动视图的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI键盘滚动视图.isEnabled()">
+    {
+        @ @sn<this>.GetXUIKeyboardScrollView ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI键盘滚动视图的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI键盘滚动视图.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIKeyboardScrollView ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI键盘滚动视图的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI键盘滚动视图.isClickable()">
+    {
+        @ @sn<this>.GetXUIKeyboardScrollView ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI键盘滚动视图的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI键盘滚动视图.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIKeyboardScrollView ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI键盘滚动视图的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI键盘滚动视图.getElevation()">
+    {
+        @ (double)@sn<this>.GetXUIKeyboardScrollView ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI键盘滚动视图的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI键盘滚动视图.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIKeyboardScrollView ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI键盘滚动视图的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI键盘滚动视图.getMinimumHeight()">
+    {
+        @ @sn<this>.GetXUIKeyboardScrollView ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI键盘滚动视图的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI键盘滚动视图.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIKeyboardScrollView ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI键盘滚动视图的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI键盘滚动视图.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIKeyboardScrollView ().setBackgroundColor (@<新值>))
+    }
+
+    方法 响应切换软键盘 <公开 注释 = "用法：XUI键盘滚动视图在切换软键盘时被 XUI 回调, 通常配合 挂接事件 使用。 参数：值1=真/假。 返回：无。 原方法：XUI键盘滚动视图.onToggleSoftKeyboard()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIKeyboardScrollView ().onToggleSoftKeyboard (@<值1>))
+    }
+
+    方法 设置是否滚动隐藏键盘 <公开 注释 = "用法：把XUI键盘滚动视图的是否滚动隐藏键盘设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI键盘滚动视图.setIsScrollHideKeyboard()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIKeyboardScrollView ().setIsScrollHideKeyboard (@<值1>))
+    }
+
+}
+
+类 XUI可观察滚动视图 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.XUIObservableScrollView)."
+        @文档 = "category = \"XUI.基础\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.XUIObservableScrollView\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI可观察滚动视图, XUIObservableScrollView, com.xuexiang.xui.widget.XUIObservableScrollView)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetXUIObservableScrollView ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI可观察滚动视图的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI可观察滚动视图.getAlpha()">
+    {
+        @ (double)@sn<this>.GetXUIObservableScrollView ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI可观察滚动视图的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI可观察滚动视图.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIObservableScrollView ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI可观察滚动视图的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI可观察滚动视图.isEnabled()">
+    {
+        @ @sn<this>.GetXUIObservableScrollView ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI可观察滚动视图的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI可观察滚动视图.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIObservableScrollView ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI可观察滚动视图的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI可观察滚动视图.isClickable()">
+    {
+        @ @sn<this>.GetXUIObservableScrollView ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI可观察滚动视图的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI可观察滚动视图.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIObservableScrollView ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI可观察滚动视图的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI可观察滚动视图.getElevation()">
+    {
+        @ (double)@sn<this>.GetXUIObservableScrollView ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI可观察滚动视图的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI可观察滚动视图.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIObservableScrollView ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI可观察滚动视图的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI可观察滚动视图.getMinimumHeight()">
+    {
+        @ @sn<this>.GetXUIObservableScrollView ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI可观察滚动视图的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI可观察滚动视图.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIObservableScrollView ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI可观察滚动视图的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI可观察滚动视图.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIObservableScrollView ().setBackgroundColor (@<新值>))
+    }
+
+    方法 取滚动偏移 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUI可观察滚动视图的滚动偏移。 参数：无。 返回：整数。 原方法：XUI可观察滚动视图.getScrollOffset()">
+    {
+        @ @sn<this>.GetXUIObservableScrollView ().getScrollOffset ()
+    }
+
+}
+
+类 XUI自适应可展开列表 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.XUIWrapContentExpandableListView)."
+        @文档 = "category = \"XUI.基础\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.XUIWrapContentExpandableListView\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.wcelv_max_height\n        shown_name = \"设置listView的最大高度\"\n        data_type = double\n        detail_type = dim\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI自适应可展开列表, XUIWrapContentExpandableListView, com.xuexiang.xui.widget.XUIWrapContentExpandableListView)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetXUIWrapContentExpandableListView ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI自适应可展开列表的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI自适应可展开列表.getAlpha()">
+    {
+        @ (double)@sn<this>.GetXUIWrapContentExpandableListView ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI自适应可展开列表的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI自适应可展开列表.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIWrapContentExpandableListView ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI自适应可展开列表的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI自适应可展开列表.isEnabled()">
+    {
+        @ @sn<this>.GetXUIWrapContentExpandableListView ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI自适应可展开列表的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI自适应可展开列表.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIWrapContentExpandableListView ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI自适应可展开列表的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI自适应可展开列表.isClickable()">
+    {
+        @ @sn<this>.GetXUIWrapContentExpandableListView ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI自适应可展开列表的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI自适应可展开列表.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIWrapContentExpandableListView ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI自适应可展开列表的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI自适应可展开列表.getElevation()">
+    {
+        @ (double)@sn<this>.GetXUIWrapContentExpandableListView ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI自适应可展开列表的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI自适应可展开列表.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIWrapContentExpandableListView ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI自适应可展开列表的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI自适应可展开列表.getMinimumHeight()">
+    {
+        @ @sn<this>.GetXUIWrapContentExpandableListView ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI自适应可展开列表的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI自适应可展开列表.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIWrapContentExpandableListView ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI自适应可展开列表的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI自适应可展开列表.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIWrapContentExpandableListView ().setBackgroundColor (@<新值>))
+    }
+
+    方法 设置最大高度 <公开 注释 = "用法：把XUI自适应可展开列表的最大高度设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI自适应可展开列表.setMaxHeight()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIWrapContentExpandableListView ().setMaxHeight (@<值1>))
+    }
+
+}
+
+类 XUI自适应列表 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.XUIWrapContentListView)."
+        @文档 = "category = \"XUI.基础\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.XUIWrapContentListView\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.wclv_max_height\n        shown_name = \"设置listView的最大高度\"\n        data_type = double\n        detail_type = dim\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI自适应列表, XUIWrapContentListView, com.xuexiang.xui.widget.XUIWrapContentListView)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetXUIWrapContentListView ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI自适应列表的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI自适应列表.getAlpha()">
+    {
+        @ (double)@sn<this>.GetXUIWrapContentListView ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI自适应列表的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI自适应列表.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIWrapContentListView ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI自适应列表的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI自适应列表.isEnabled()">
+    {
+        @ @sn<this>.GetXUIWrapContentListView ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI自适应列表的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI自适应列表.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIWrapContentListView ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI自适应列表的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI自适应列表.isClickable()">
+    {
+        @ @sn<this>.GetXUIWrapContentListView ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI自适应列表的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI自适应列表.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIWrapContentListView ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI自适应列表的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI自适应列表.getElevation()">
+    {
+        @ (double)@sn<this>.GetXUIWrapContentListView ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI自适应列表的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI自适应列表.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIWrapContentListView ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI自适应列表的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI自适应列表.getMinimumHeight()">
+    {
+        @ @sn<this>.GetXUIWrapContentListView ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI自适应列表的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI自适应列表.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIWrapContentListView ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI自适应列表的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI自适应列表.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIWrapContentListView ().setBackgroundColor (@<新值>))
+    }
+
+    方法 设置最大高度 <公开 注释 = "用法：把XUI自适应列表的最大高度设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI自适应列表.setMaxHeight()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIWrapContentListView ().setMaxHeight (@<值1>))
+    }
+
+}
+
+类 XUI自适应滚动视图 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.XUIWrapContentScrollView)."
+        @文档 = "category = \"XUI.基础\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.XUIWrapContentScrollView\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.wcsv_max_height\n        shown_name = \"设置ScrollView的最大高度\"\n        data_type = double\n        detail_type = dim\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI自适应滚动视图, XUIWrapContentScrollView, com.xuexiang.xui.widget.XUIWrapContentScrollView)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetXUIWrapContentScrollView ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI自适应滚动视图的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI自适应滚动视图.getAlpha()">
+    {
+        @ (double)@sn<this>.GetXUIWrapContentScrollView ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI自适应滚动视图的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI自适应滚动视图.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIWrapContentScrollView ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI自适应滚动视图的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI自适应滚动视图.isEnabled()">
+    {
+        @ @sn<this>.GetXUIWrapContentScrollView ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI自适应滚动视图的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI自适应滚动视图.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIWrapContentScrollView ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI自适应滚动视图的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI自适应滚动视图.isClickable()">
+    {
+        @ @sn<this>.GetXUIWrapContentScrollView ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI自适应滚动视图的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI自适应滚动视图.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIWrapContentScrollView ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI自适应滚动视图的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI自适应滚动视图.getElevation()">
+    {
+        @ (double)@sn<this>.GetXUIWrapContentScrollView ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI自适应滚动视图的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI自适应滚动视图.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIWrapContentScrollView ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI自适应滚动视图的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI自适应滚动视图.getMinimumHeight()">
+    {
+        @ @sn<this>.GetXUIWrapContentScrollView ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI自适应滚动视图的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI自适应滚动视图.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIWrapContentScrollView ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI自适应滚动视图的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI自适应滚动视图.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIWrapContentScrollView ().setBackgroundColor (@<新值>))
+    }
+
+    方法 设置最大高度 <公开 注释 = "用法：把XUI自适应滚动视图的最大高度设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI自适应滚动视图.setMaxHeight()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIWrapContentScrollView ().setMaxHeight (@<值1>))
+    }
+
+}

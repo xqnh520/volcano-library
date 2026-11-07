@@ -1,0 +1,3870 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.安卓.组件.MP图表
+
+类 MP图表数据类 <公开 @别名 = "com.github.mikephil.charting.data.ChartData" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.data.ChartData.">
+{
+
+    方法 通知数据已改变 <公开 静态 注释 = "java: public void notifyDataChanged()">
+    参数 当前对象 <类型 = MP图表数据类>
+    {
+        @ @<当前对象>.notifyDataChanged ();
+    }
+
+    方法 计算最小最大纵坐标 <公开 静态 注释 = "java: public void calcMinMaxY(float, float)">
+    参数 当前对象 <类型 = MP图表数据类>
+    参数 来自横坐标 <类型 = 小数>
+    参数 转为横坐标 <类型 = 小数>
+    {
+        @ @<当前对象>.calcMinMaxY ((float) @<来自横坐标>, (float) @<转为横坐标>);
+    }
+
+    方法 取数据集数量 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getDataSetCount()">
+    参数 当前对象 <类型 = MP图表数据类>
+    {
+        @ @<当前对象>.getDataSetCount ()
+    }
+
+    方法 取纵坐标最小 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getYMin()">
+    参数 当前对象 <类型 = MP图表数据类>
+    {
+        @ @<当前对象>.getYMin ()
+    }
+
+    方法 取纵坐标最小_2 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getYMin(com.github.mikephil.charting.components.YAxis$AxisDependency)">
+    参数 当前对象 <类型 = MP图表数据类>
+    参数 轴 <类型 = MP纵轴依附>
+    {
+        @ @<当前对象>.getYMin (@<轴>)
+    }
+
+    方法 取纵坐标最大 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getYMax()">
+    参数 当前对象 <类型 = MP图表数据类>
+    {
+        @ @<当前对象>.getYMax ()
+    }
+
+    方法 取纵坐标最大_2 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getYMax(com.github.mikephil.charting.components.YAxis$AxisDependency)">
+    参数 当前对象 <类型 = MP图表数据类>
+    参数 轴 <类型 = MP纵轴依附>
+    {
+        @ @<当前对象>.getYMax (@<轴>)
+    }
+
+    方法 取横坐标最小 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getXMin()">
+    参数 当前对象 <类型 = MP图表数据类>
+    {
+        @ @<当前对象>.getXMin ()
+    }
+
+    方法 取横坐标最大 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getXMax()">
+    参数 当前对象 <类型 = MP图表数据类>
+    {
+        @ @<当前对象>.getXMax ()
+    }
+
+    方法 取数据集 <公开 静态 类型 = MP列表类 @嵌入式方法 = "" 注释 = "java: public java.util.List<T> getDataSets()">
+    参数 当前对象 <类型 = MP图表数据类>
+    {
+        @ @<当前对象>.getDataSets ()
+    }
+
+    方法 取数据集标签集 <公开 静态 类型 = "文本型 []" @嵌入式方法 = "" 注释 = "java: public java.lang.String[] getDataSetLabels()">
+    参数 当前对象 <类型 = MP图表数据类>
+    {
+        @ @<当前对象>.getDataSetLabels ()
+    }
+
+    方法 取数据点对应高亮 <公开 静态 类型 = MP数据点类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.Entry getEntryForHighlight(com.github.mikephil.charting.highlight.Highlight)">
+    参数 当前对象 <类型 = MP图表数据类>
+    参数 高亮 <类型 = MP高亮信息类>
+    {
+        @ @<当前对象>.getEntryForHighlight (@<高亮>)
+    }
+
+    方法 取数据集按标签 <公开 静态 类型 = MP数据集接口 @嵌入式方法 = "" 注释 = "java: public T getDataSetByLabel(java.lang.String, boolean)">
+    参数 当前对象 <类型 = MP图表数据类>
+    参数 标签 <类型 = 文本型>
+    参数 忽略大小写 <类型 = 逻辑型>
+    {
+        @ @<当前对象>.getDataSetByLabel (@<标签>, @<忽略大小写>)
+    }
+
+    方法 取数据集按索引 <公开 静态 类型 = MP数据集接口 @嵌入式方法 = "" 注释 = "java: public T getDataSetByIndex(int)">
+    参数 当前对象 <类型 = MP图表数据类>
+    参数 索引 <类型 = 整数>
+    {
+        @ @<当前对象>.getDataSetByIndex (@<索引>)
+    }
+
+    方法 添加数据集 <公开 静态 注释 = "java: public void addDataSet(T)">
+    参数 当前对象 <类型 = MP图表数据类>
+    参数 数据集 <类型 = MP数据集接口>
+    {
+        @ @<当前对象>.addDataSet (@<数据集>);
+    }
+
+    方法 移除数据集 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean removeDataSet(T)">
+    参数 当前对象 <类型 = MP图表数据类>
+    参数 数据集 <类型 = MP数据集接口>
+    {
+        @ @<当前对象>.removeDataSet (@<数据集>)
+    }
+
+    方法 移除数据集_2 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean removeDataSet(int)">
+    参数 当前对象 <类型 = MP图表数据类>
+    参数 索引 <类型 = 整数>
+    {
+        @ @<当前对象>.removeDataSet (@<索引>)
+    }
+
+    方法 添加数据点 <公开 静态 注释 = "java: public void addEntry(com.github.mikephil.charting.data.Entry, int)">
+    参数 当前对象 <类型 = MP图表数据类>
+    参数 数据点 <类型 = MP数据点类>
+    参数 数据集索引 <类型 = 整数>
+    {
+        @ @<当前对象>.addEntry (@<数据点>, @<数据集索引>);
+    }
+
+    方法 移除数据点 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean removeEntry(com.github.mikephil.charting.data.Entry, int)">
+    参数 当前对象 <类型 = MP图表数据类>
+    参数 数据点 <类型 = MP数据点类>
+    参数 数据集索引 <类型 = 整数>
+    {
+        @ @<当前对象>.removeEntry (@<数据点>, @<数据集索引>)
+    }
+
+    方法 移除数据点_2 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean removeEntry(float, int)">
+    参数 当前对象 <类型 = MP图表数据类>
+    参数 横坐标数值 <类型 = 小数>
+    参数 数据集索引 <类型 = 整数>
+    {
+        @ @<当前对象>.removeEntry ((float) @<横坐标数值>, @<数据集索引>)
+    }
+
+    方法 取数据集对应数据点 <公开 静态 类型 = MP数据集接口 @嵌入式方法 = "" 注释 = "java: public T getDataSetForEntry(com.github.mikephil.charting.data.Entry)">
+    参数 当前对象 <类型 = MP图表数据类>
+    参数 数据点 <类型 = MP数据点类>
+    {
+        @ @<当前对象>.getDataSetForEntry (@<数据点>)
+    }
+
+    方法 取颜色集 <公开 静态 类型 = "整数 []" @嵌入式方法 = "" 注释 = "java: public int[] getColors()">
+    参数 当前对象 <类型 = MP图表数据类>
+    {
+        @ @<当前对象>.getColors ()
+    }
+
+    方法 取索引的数据集 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getIndexOfDataSet(T)">
+    参数 当前对象 <类型 = MP图表数据类>
+    参数 数据集 <类型 = MP数据集接口>
+    {
+        @ @<当前对象>.getIndexOfDataSet (@<数据集>)
+    }
+
+    方法 取首个右 <公开 静态 类型 = MP数据集接口 @嵌入式方法 = "" 注释 = "java: public T getFirstRight(java.util.List<T>)">
+    参数 当前对象 <类型 = MP图表数据类>
+    参数 数据集 <类型 = MP列表类>
+    {
+        @ @<当前对象>.getFirstRight (@<数据集>)
+    }
+
+    方法 设置数值格式器 <公开 静态 注释 = "java: public void setValueFormatter(com.github.mikephil.charting.formatter.IValueFormatter)">
+    参数 当前对象 <类型 = MP图表数据类>
+    参数 数值 <类型 = MP数值格式化接口>
+    {
+        @ @<当前对象>.setValueFormatter (@<数值>);
+    }
+
+    方法 设置数值文本颜色 <公开 静态 注释 = "java: public void setValueTextColor(int)">
+    参数 当前对象 <类型 = MP图表数据类>
+    参数 颜色 <类型 = 整数>
+    {
+        @ @<当前对象>.setValueTextColor (@<颜色>);
+    }
+
+    方法 设置数值文本颜色集 <公开 静态 注释 = "java: public void setValueTextColors(java.util.List<java.lang.Integer>)">
+    参数 当前对象 <类型 = MP图表数据类>
+    参数 颜色集 <类型 = MP列表类>
+    {
+        @ @<当前对象>.setValueTextColors (@<颜色集>);
+    }
+
+    方法 设置数值字体族 <公开 静态 注释 = "java: public void setValueTypeface(android.graphics.Typeface)">
+    参数 当前对象 <类型 = MP图表数据类>
+    参数 字体度量 <类型 = 字体类>
+    {
+        @ @<当前对象>.setValueTypeface (@<字体度量>);
+    }
+
+    方法 设置数值文本尺寸 <公开 静态 注释 = "java: public void setValueTextSize(float)">
+    参数 当前对象 <类型 = MP图表数据类>
+    参数 尺寸 <类型 = 小数>
+    {
+        @ @<当前对象>.setValueTextSize ((float) @<尺寸>);
+    }
+
+    方法 设置绘制数值集 <公开 静态 注释 = "java: public void setDrawValues(boolean)">
+    参数 当前对象 <类型 = MP图表数据类>
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @<当前对象>.setDrawValues (@<启用>);
+    }
+
+    方法 设置高亮启用 <公开 静态 注释 = "java: public void setHighlightEnabled(boolean)">
+    参数 当前对象 <类型 = MP图表数据类>
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @<当前对象>.setHighlightEnabled (@<启用>);
+    }
+
+    方法 是否高亮启用 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isHighlightEnabled()">
+    参数 当前对象 <类型 = MP图表数据类>
+    {
+        @ @<当前对象>.isHighlightEnabled ()
+    }
+
+    方法 清空数值集 <公开 静态 注释 = "java: public void clearValues()">
+    参数 当前对象 <类型 = MP图表数据类>
+    {
+        @ @<当前对象>.clearValues ();
+    }
+
+    方法 包含 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean contains(T)">
+    参数 当前对象 <类型 = MP图表数据类>
+    参数 数据集 <类型 = MP数据集接口>
+    {
+        @ @<当前对象>.contains (@<数据集>)
+    }
+
+    方法 取数据点数量 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getEntryCount()">
+    参数 当前对象 <类型 = MP图表数据类>
+    {
+        @ @<当前对象>.getEntryCount ()
+    }
+
+    方法 取最大数据点数量设置 <公开 静态 类型 = MP数据集接口 @嵌入式方法 = "" 注释 = "java: public T getMaxEntryCountSet()">
+    参数 当前对象 <类型 = MP图表数据类>
+    {
+        @ @<当前对象>.getMaxEntryCountSet ()
+    }
+
+}
+
+类 MP线柱散蜡气数据类 <公开 基础类 = MP图表数据类 @别名 = "com.github.mikephil.charting.data.BarLineScatterCandleBubbleData" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.data.BarLineScatterCandleBubbleData.">
+{
+
+}
+
+类 MP柱形数据类 <公开 基础类 = MP线柱散蜡气数据类 @别名 = "com.github.mikephil.charting.data.BarData" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.data.BarData.">
+{
+
+    方法 新建柱形数据 <公开 静态 类型 = MP柱形数据类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.BarData()">
+    {
+        @ new com.github.mikephil.charting.data.BarData ()
+    }
+
+    方法 新建柱形数据_2 <公开 静态 类型 = MP柱形数据类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.BarData(com.github.mikephil.charting.interfaces.datasets.IBarDataSet...)">
+    参数 数据集 <类型 = "MP柱形数据集接口 []">
+    {
+        @ new com.github.mikephil.charting.data.BarData (@<数据集>)
+    }
+
+    方法 新建柱形数据_3 <公开 静态 类型 = MP柱形数据类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.BarData(java.util.List<com.github.mikephil.charting.interfaces.datasets.IBarDataSet>)">
+    参数 数据集 <类型 = MP列表类>
+    {
+        @ new com.github.mikephil.charting.data.BarData (@<数据集>)
+    }
+
+    方法 设置柱宽度 <公开 静态 注释 = "java: public void setBarWidth(float)">
+    参数 当前对象 <类型 = MP柱形数据类>
+    参数 矩阵柱宽度 <类型 = 小数>
+    {
+        @ @<当前对象>.setBarWidth ((float) @<矩阵柱宽度>);
+    }
+
+    方法 取柱宽度 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getBarWidth()">
+    参数 当前对象 <类型 = MP柱形数据类>
+    {
+        @ @<当前对象>.getBarWidth ()
+    }
+
+    方法 分组柱集 <公开 静态 注释 = "java: public void groupBars(float, float, float)">
+    参数 当前对象 <类型 = MP柱形数据类>
+    参数 来自横坐标 <类型 = 小数>
+    参数 分组间距 <类型 = 小数>
+    参数 柱间距 <类型 = 小数>
+    {
+        @ @<当前对象>.groupBars ((float) @<来自横坐标>, (float) @<分组间距>, (float) @<柱间距>);
+    }
+
+    方法 取分组宽度 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getGroupWidth(float, float)">
+    参数 当前对象 <类型 = MP柱形数据类>
+    参数 分组间距 <类型 = 小数>
+    参数 柱间距 <类型 = 小数>
+    {
+        @ @<当前对象>.getGroupWidth ((float) @<分组间距>, (float) @<柱间距>)
+    }
+
+}
+
+类 MP数据集接口 <公开 @别名 = "com.github.mikephil.charting.interfaces.datasets.IDataSet" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.interfaces.datasets.IDataSet.">
+{
+
+    方法 取纵坐标最小 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public abstract float getYMin()">
+    参数 当前对象 <类型 = MP数据集接口>
+    {
+        @ @<当前对象>.getYMin ()
+    }
+
+    方法 取纵坐标最大 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public abstract float getYMax()">
+    参数 当前对象 <类型 = MP数据集接口>
+    {
+        @ @<当前对象>.getYMax ()
+    }
+
+    方法 取横坐标最小 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public abstract float getXMin()">
+    参数 当前对象 <类型 = MP数据集接口>
+    {
+        @ @<当前对象>.getXMin ()
+    }
+
+    方法 取横坐标最大 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public abstract float getXMax()">
+    参数 当前对象 <类型 = MP数据集接口>
+    {
+        @ @<当前对象>.getXMax ()
+    }
+
+    方法 取数据点数量 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public abstract int getEntryCount()">
+    参数 当前对象 <类型 = MP数据集接口>
+    {
+        @ @<当前对象>.getEntryCount ()
+    }
+
+    方法 计算最小最大 <公开 静态 注释 = "java: public abstract void calcMinMax()">
+    参数 当前对象 <类型 = MP数据集接口>
+    {
+        @ @<当前对象>.calcMinMax ();
+    }
+
+    方法 计算最小最大纵坐标 <公开 静态 注释 = "java: public abstract void calcMinMaxY(float, float)">
+    参数 当前对象 <类型 = MP数据集接口>
+    参数 来自横坐标 <类型 = 小数>
+    参数 转为横坐标 <类型 = 小数>
+    {
+        @ @<当前对象>.calcMinMaxY ((float) @<来自横坐标>, (float) @<转为横坐标>);
+    }
+
+    方法 取数据点对应横坐标数值 <公开 静态 类型 = MP数据点类 @嵌入式方法 = "" 注释 = "java: public abstract T getEntryForXValue(float, float, com.github.mikephil.charting.data.DataSet$Rounding)">
+    参数 当前对象 <类型 = MP数据集接口>
+    参数 横坐标数值 <类型 = 小数>
+    参数 最近至纵坐标 <类型 = 小数>
+    参数 取整 <类型 = MP取整方式>
+    {
+        @ @<当前对象>.getEntryForXValue ((float) @<横坐标数值>, (float) @<最近至纵坐标>, @<取整>)
+    }
+
+    方法 取数据点对应横坐标数值_2 <公开 静态 类型 = MP数据点类 @嵌入式方法 = "" 注释 = "java: public abstract T getEntryForXValue(float, float)">
+    参数 当前对象 <类型 = MP数据集接口>
+    参数 横坐标数值 <类型 = 小数>
+    参数 最近至纵坐标 <类型 = 小数>
+    {
+        @ @<当前对象>.getEntryForXValue ((float) @<横坐标数值>, (float) @<最近至纵坐标>)
+    }
+
+    方法 取数据点集对应横坐标数值 <公开 静态 类型 = MP列表类 @嵌入式方法 = "" 注释 = "java: public abstract java.util.List<T> getEntriesForXValue(float)">
+    参数 当前对象 <类型 = MP数据集接口>
+    参数 横坐标数值 <类型 = 小数>
+    {
+        @ @<当前对象>.getEntriesForXValue ((float) @<横坐标数值>)
+    }
+
+    方法 取数据点对应索引 <公开 静态 类型 = MP数据点类 @嵌入式方法 = "" 注释 = "java: public abstract T getEntryForIndex(int)">
+    参数 当前对象 <类型 = MP数据集接口>
+    参数 索引 <类型 = 整数>
+    {
+        @ @<当前对象>.getEntryForIndex (@<索引>)
+    }
+
+    方法 取数据点索引 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public abstract int getEntryIndex(float, float, com.github.mikephil.charting.data.DataSet$Rounding)">
+    参数 当前对象 <类型 = MP数据集接口>
+    参数 横坐标数值 <类型 = 小数>
+    参数 最近至纵坐标 <类型 = 小数>
+    参数 取整 <类型 = MP取整方式>
+    {
+        @ @<当前对象>.getEntryIndex ((float) @<横坐标数值>, (float) @<最近至纵坐标>, @<取整>)
+    }
+
+    方法 取数据点索引_2 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public abstract int getEntryIndex(T)">
+    参数 当前对象 <类型 = MP数据集接口>
+    参数 数据点 <类型 = MP数据点类>
+    {
+        @ @<当前对象>.getEntryIndex (@<数据点>)
+    }
+
+    方法 取索引内数据点集 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public abstract int getIndexInEntries(int)">
+    参数 当前对象 <类型 = MP数据集接口>
+    参数 横坐标索引 <类型 = 整数>
+    {
+        @ @<当前对象>.getIndexInEntries (@<横坐标索引>)
+    }
+
+    方法 添加数据点 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public abstract boolean addEntry(T)">
+    参数 当前对象 <类型 = MP数据集接口>
+    参数 数据点 <类型 = MP数据点类>
+    {
+        @ @<当前对象>.addEntry (@<数据点>)
+    }
+
+    方法 添加数据点已排序 <公开 静态 注释 = "java: public abstract void addEntryOrdered(T)">
+    参数 当前对象 <类型 = MP数据集接口>
+    参数 数据点 <类型 = MP数据点类>
+    {
+        @ @<当前对象>.addEntryOrdered (@<数据点>);
+    }
+
+    方法 移除首个 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public abstract boolean removeFirst()">
+    参数 当前对象 <类型 = MP数据集接口>
+    {
+        @ @<当前对象>.removeFirst ()
+    }
+
+    方法 移除末个 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public abstract boolean removeLast()">
+    参数 当前对象 <类型 = MP数据集接口>
+    {
+        @ @<当前对象>.removeLast ()
+    }
+
+    方法 移除数据点 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public abstract boolean removeEntry(T)">
+    参数 当前对象 <类型 = MP数据集接口>
+    参数 数据点 <类型 = MP数据点类>
+    {
+        @ @<当前对象>.removeEntry (@<数据点>)
+    }
+
+    方法 移除数据点按横坐标数值 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public abstract boolean removeEntryByXValue(float)">
+    参数 当前对象 <类型 = MP数据集接口>
+    参数 横坐标数值 <类型 = 小数>
+    {
+        @ @<当前对象>.removeEntryByXValue ((float) @<横坐标数值>)
+    }
+
+    方法 移除数据点_2 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public abstract boolean removeEntry(int)">
+    参数 当前对象 <类型 = MP数据集接口>
+    参数 索引 <类型 = 整数>
+    {
+        @ @<当前对象>.removeEntry (@<索引>)
+    }
+
+    方法 包含 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public abstract boolean contains(T)">
+    参数 当前对象 <类型 = MP数据集接口>
+    参数 数据点 <类型 = MP数据点类>
+    {
+        @ @<当前对象>.contains (@<数据点>)
+    }
+
+    方法 清空 <公开 静态 注释 = "java: public abstract void clear()">
+    参数 当前对象 <类型 = MP数据集接口>
+    {
+        @ @<当前对象>.clear ();
+    }
+
+    方法 取标签 <公开 静态 类型 = 文本型 @嵌入式方法 = "" 注释 = "java: public abstract java.lang.String getLabel()">
+    参数 当前对象 <类型 = MP数据集接口>
+    {
+        @ @<当前对象>.getLabel ()
+    }
+
+    方法 设置标签 <公开 静态 注释 = "java: public abstract void setLabel(java.lang.String)">
+    参数 当前对象 <类型 = MP数据集接口>
+    参数 标签 <类型 = 文本型>
+    {
+        @ @<当前对象>.setLabel (@<标签>);
+    }
+
+    方法 取轴依赖 <公开 静态 类型 = MP纵轴依附 @嵌入式方法 = "" 注释 = "java: public abstract com.github.mikephil.charting.components.YAxis$AxisDependency getAxisDependency()">
+    参数 当前对象 <类型 = MP数据集接口>
+    {
+        @ @<当前对象>.getAxisDependency ()
+    }
+
+    方法 设置轴依赖 <公开 静态 注释 = "java: public abstract void setAxisDependency(com.github.mikephil.charting.components.YAxis$AxisDependency)">
+    参数 当前对象 <类型 = MP数据集接口>
+    参数 依赖 <类型 = MP纵轴依附>
+    {
+        @ @<当前对象>.setAxisDependency (@<依赖>);
+    }
+
+    方法 取颜色集 <公开 静态 类型 = MP列表类 @嵌入式方法 = "" 注释 = "java: public abstract java.util.List<java.lang.Integer> getColors()">
+    参数 当前对象 <类型 = MP数据集接口>
+    {
+        @ @<当前对象>.getColors ()
+    }
+
+    方法 取颜色 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public abstract int getColor()">
+    参数 当前对象 <类型 = MP数据集接口>
+    {
+        @ @<当前对象>.getColor ()
+    }
+
+    方法 取颜色_2 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public abstract int getColor(int)">
+    参数 当前对象 <类型 = MP数据集接口>
+    参数 索引 <类型 = 整数>
+    {
+        @ @<当前对象>.getColor (@<索引>)
+    }
+
+    方法 是否高亮启用 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public abstract boolean isHighlightEnabled()">
+    参数 当前对象 <类型 = MP数据集接口>
+    {
+        @ @<当前对象>.isHighlightEnabled ()
+    }
+
+    方法 设置高亮启用 <公开 静态 注释 = "java: public abstract void setHighlightEnabled(boolean)">
+    参数 当前对象 <类型 = MP数据集接口>
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @<当前对象>.setHighlightEnabled (@<启用>);
+    }
+
+    方法 设置数值格式器 <公开 静态 注释 = "java: public abstract void setValueFormatter(com.github.mikephil.charting.formatter.IValueFormatter)">
+    参数 当前对象 <类型 = MP数据集接口>
+    参数 数值 <类型 = MP数值格式化接口>
+    {
+        @ @<当前对象>.setValueFormatter (@<数值>);
+    }
+
+    方法 取数值格式器 <公开 静态 类型 = MP数值格式化接口 @嵌入式方法 = "" 注释 = "java: public abstract com.github.mikephil.charting.formatter.IValueFormatter getValueFormatter()">
+    参数 当前对象 <类型 = MP数据集接口>
+    {
+        @ @<当前对象>.getValueFormatter ()
+    }
+
+    方法 需要格式器 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public abstract boolean needsFormatter()">
+    参数 当前对象 <类型 = MP数据集接口>
+    {
+        @ @<当前对象>.needsFormatter ()
+    }
+
+    方法 设置数值文本颜色 <公开 静态 注释 = "java: public abstract void setValueTextColor(int)">
+    参数 当前对象 <类型 = MP数据集接口>
+    参数 颜色 <类型 = 整数>
+    {
+        @ @<当前对象>.setValueTextColor (@<颜色>);
+    }
+
+    方法 设置数值文本颜色集 <公开 静态 注释 = "java: public abstract void setValueTextColors(java.util.List<java.lang.Integer>)">
+    参数 当前对象 <类型 = MP数据集接口>
+    参数 颜色集 <类型 = MP列表类>
+    {
+        @ @<当前对象>.setValueTextColors (@<颜色集>);
+    }
+
+    方法 设置数值字体族 <公开 静态 注释 = "java: public abstract void setValueTypeface(android.graphics.Typeface)">
+    参数 当前对象 <类型 = MP数据集接口>
+    参数 字体度量 <类型 = 字体类>
+    {
+        @ @<当前对象>.setValueTypeface (@<字体度量>);
+    }
+
+    方法 设置数值文本尺寸 <公开 静态 注释 = "java: public abstract void setValueTextSize(float)">
+    参数 当前对象 <类型 = MP数据集接口>
+    参数 尺寸 <类型 = 小数>
+    {
+        @ @<当前对象>.setValueTextSize ((float) @<尺寸>);
+    }
+
+    方法 取数值文本颜色 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public abstract int getValueTextColor()">
+    参数 当前对象 <类型 = MP数据集接口>
+    {
+        @ @<当前对象>.getValueTextColor ()
+    }
+
+    方法 取数值文本颜色_2 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public abstract int getValueTextColor(int)">
+    参数 当前对象 <类型 = MP数据集接口>
+    参数 索引 <类型 = 整数>
+    {
+        @ @<当前对象>.getValueTextColor (@<索引>)
+    }
+
+    方法 取数值字体族 <公开 静态 类型 = 字体类 @嵌入式方法 = "" 注释 = "java: public abstract android.graphics.Typeface getValueTypeface()">
+    参数 当前对象 <类型 = MP数据集接口>
+    {
+        @ @<当前对象>.getValueTypeface ()
+    }
+
+    方法 取数值文本尺寸 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public abstract float getValueTextSize()">
+    参数 当前对象 <类型 = MP数据集接口>
+    {
+        @ @<当前对象>.getValueTextSize ()
+    }
+
+    方法 取外形 <公开 静态 类型 = MP图例形状 @嵌入式方法 = "" 注释 = "java: public abstract com.github.mikephil.charting.components.Legend$LegendForm getForm()">
+    参数 当前对象 <类型 = MP数据集接口>
+    {
+        @ @<当前对象>.getForm ()
+    }
+
+    方法 取外形尺寸 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public abstract float getFormSize()">
+    参数 当前对象 <类型 = MP数据集接口>
+    {
+        @ @<当前对象>.getFormSize ()
+    }
+
+    方法 取外形线宽度 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public abstract float getFormLineWidth()">
+    参数 当前对象 <类型 = MP数据集接口>
+    {
+        @ @<当前对象>.getFormLineWidth ()
+    }
+
+    方法 取外形线虚线效果 <公开 静态 类型 = MP虚线效果类 @嵌入式方法 = "" 注释 = "java: public abstract android.graphics.DashPathEffect getFormLineDashEffect()">
+    参数 当前对象 <类型 = MP数据集接口>
+    {
+        @ @<当前对象>.getFormLineDashEffect ()
+    }
+
+    方法 设置绘制数值集 <公开 静态 注释 = "java: public abstract void setDrawValues(boolean)">
+    参数 当前对象 <类型 = MP数据集接口>
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @<当前对象>.setDrawValues (@<启用>);
+    }
+
+    方法 是否绘制数值集启用 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public abstract boolean isDrawValuesEnabled()">
+    参数 当前对象 <类型 = MP数据集接口>
+    {
+        @ @<当前对象>.isDrawValuesEnabled ()
+    }
+
+    方法 设置绘制图标集 <公开 静态 注释 = "java: public abstract void setDrawIcons(boolean)">
+    参数 当前对象 <类型 = MP数据集接口>
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @<当前对象>.setDrawIcons (@<启用>);
+    }
+
+    方法 是否绘制图标集启用 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public abstract boolean isDrawIconsEnabled()">
+    参数 当前对象 <类型 = MP数据集接口>
+    {
+        @ @<当前对象>.isDrawIconsEnabled ()
+    }
+
+    方法 设置图标集偏移 <公开 静态 注释 = "java: public abstract void setIconsOffset(com.github.mikephil.charting.utils.MPPointF)">
+    参数 当前对象 <类型 = MP数据集接口>
+    参数 偏移 <类型 = MP单精度坐标类>
+    {
+        @ @<当前对象>.setIconsOffset (@<偏移>);
+    }
+
+    方法 取图标集偏移 <公开 静态 类型 = MP单精度坐标类 @嵌入式方法 = "" 注释 = "java: public abstract com.github.mikephil.charting.utils.MPPointF getIconsOffset()">
+    参数 当前对象 <类型 = MP数据集接口>
+    {
+        @ @<当前对象>.getIconsOffset ()
+    }
+
+    方法 设置可见 <公开 静态 注释 = "java: public abstract void setVisible(boolean)">
+    参数 当前对象 <类型 = MP数据集接口>
+    参数 可见 <类型 = 逻辑型>
+    {
+        @ @<当前对象>.setVisible (@<可见>);
+    }
+
+    方法 是否可见 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public abstract boolean isVisible()">
+    参数 当前对象 <类型 = MP数据集接口>
+    {
+        @ @<当前对象>.isVisible ()
+    }
+
+}
+
+类 MP数据集基础类 <公开 基础类 = MP数据集接口 @别名 = "com.github.mikephil.charting.data.BaseDataSet" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.data.BaseDataSet.">
+{
+
+    方法 通知数据集已改变 <公开 静态 注释 = "java: public void notifyDataSetChanged()">
+    参数 当前对象 <类型 = MP数据集基础类>
+    {
+        @ @<当前对象>.notifyDataSetChanged ();
+    }
+
+    方法 取数值颜色集 <公开 静态 类型 = MP列表类 @嵌入式方法 = "" 注释 = "java: public java.util.List<java.lang.Integer> getValueColors()">
+    参数 当前对象 <类型 = MP数据集基础类>
+    {
+        @ @<当前对象>.getValueColors ()
+    }
+
+    方法 取颜色_3 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getColor(int)">
+    参数 当前对象 <类型 = MP数据集基础类>
+    参数 索引 <类型 = 整数>
+    {
+        @ @<当前对象>.getColor (@<索引>)
+    }
+
+    方法 设置颜色集 <公开 静态 注释 = "java: public void setColors(java.util.List<java.lang.Integer>)">
+    参数 当前对象 <类型 = MP数据集基础类>
+    参数 颜色集 <类型 = MP列表类>
+    {
+        @ @<当前对象>.setColors (@<颜色集>);
+    }
+
+    方法 设置颜色集_2 <公开 静态 注释 = "java: public void setColors(int...)">
+    参数 当前对象 <类型 = MP数据集基础类>
+    参数 颜色集 <类型 = "整数 []">
+    {
+        @ @<当前对象>.setColors (@<颜色集>);
+    }
+
+    方法 设置颜色集_3 <公开 静态 注释 = "java: public void setColors(int[], android.content.Context)">
+    参数 当前对象 <类型 = MP数据集基础类>
+    参数 颜色集 <类型 = "整数 []">
+    参数 颜色 <类型 = 安卓窗口环境>
+    {
+        @ @<当前对象>.setColors (@<颜色集>, @<颜色>);
+    }
+
+    方法 添加颜色 <公开 静态 注释 = "java: public void addColor(int)">
+    参数 当前对象 <类型 = MP数据集基础类>
+    参数 颜色 <类型 = 整数>
+    {
+        @ @<当前对象>.addColor (@<颜色>);
+    }
+
+    方法 设置颜色 <公开 静态 注释 = "java: public void setColor(int)">
+    参数 当前对象 <类型 = MP数据集基础类>
+    参数 颜色 <类型 = 整数>
+    {
+        @ @<当前对象>.setColor (@<颜色>);
+    }
+
+    方法 设置颜色_2 <公开 静态 注释 = "java: public void setColor(int, int)">
+    参数 当前对象 <类型 = MP数据集基础类>
+    参数 颜色 <类型 = 整数>
+    参数 透明度 <类型 = 整数>
+    {
+        @ @<当前对象>.setColor (@<颜色>, @<透明度>);
+    }
+
+    方法 设置颜色集_4 <公开 静态 注释 = "java: public void setColors(int[], int)">
+    参数 当前对象 <类型 = MP数据集基础类>
+    参数 颜色集 <类型 = "整数 []">
+    参数 透明度 <类型 = 整数>
+    {
+        @ @<当前对象>.setColors (@<颜色集>, @<透明度>);
+    }
+
+    方法 重置颜色集 <公开 静态 注释 = "java: public void resetColors()">
+    参数 当前对象 <类型 = MP数据集基础类>
+    {
+        @ @<当前对象>.resetColors ();
+    }
+
+    方法 取数值文本颜色_3 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getValueTextColor(int)">
+    参数 当前对象 <类型 = MP数据集基础类>
+    参数 索引 <类型 = 整数>
+    {
+        @ @<当前对象>.getValueTextColor (@<索引>)
+    }
+
+    方法 设置外形 <公开 静态 注释 = "java: public void setForm(com.github.mikephil.charting.components.Legend$LegendForm)">
+    参数 当前对象 <类型 = MP数据集基础类>
+    参数 外形 <类型 = MP图例形状>
+    {
+        @ @<当前对象>.setForm (@<外形>);
+    }
+
+    方法 设置外形尺寸 <公开 静态 注释 = "java: public void setFormSize(float)">
+    参数 当前对象 <类型 = MP数据集基础类>
+    参数 外形尺寸 <类型 = 小数>
+    {
+        @ @<当前对象>.setFormSize ((float) @<外形尺寸>);
+    }
+
+    方法 设置外形线宽度 <公开 静态 注释 = "java: public void setFormLineWidth(float)">
+    参数 当前对象 <类型 = MP数据集基础类>
+    参数 外形线宽度 <类型 = 小数>
+    {
+        @ @<当前对象>.setFormLineWidth ((float) @<外形线宽度>);
+    }
+
+    方法 设置外形线虚线效果 <公开 静态 注释 = "java: public void setFormLineDashEffect(android.graphics.DashPathEffect)">
+    参数 当前对象 <类型 = MP数据集基础类>
+    参数 虚线路径效果 <类型 = MP虚线效果类>
+    {
+        @ @<当前对象>.setFormLineDashEffect (@<虚线路径效果>);
+    }
+
+    方法 移除数据点_3 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean removeEntry(int)">
+    参数 当前对象 <类型 = MP数据集基础类>
+    参数 索引 <类型 = 整数>
+    {
+        @ @<当前对象>.removeEntry (@<索引>)
+    }
+
+}
+
+类 MP数据集类 <公开 基础类 = MP数据集基础类 @别名 = "com.github.mikephil.charting.data.DataSet" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.data.DataSet.">
+{
+
+    方法 取数值集 <公开 静态 类型 = MP列表类 @嵌入式方法 = "" 注释 = "java: public java.util.List<T> getValues()">
+    参数 当前对象 <类型 = MP数据集类>
+    {
+        @ @<当前对象>.getValues ()
+    }
+
+    方法 取数据点集 <公开 静态 类型 = MP列表类 @嵌入式方法 = "" 注释 = "java: public java.util.List<T> getEntries()">
+    参数 当前对象 <类型 = MP数据集类>
+    {
+        @ @<当前对象>.getEntries ()
+    }
+
+    方法 设置数值集 <公开 静态 注释 = "java: public void setValues(java.util.List<T>)">
+    参数 当前对象 <类型 = MP数据集类>
+    参数 数值集 <类型 = MP列表类>
+    {
+        @ @<当前对象>.setValues (@<数值集>);
+    }
+
+    方法 设置数据点集 <公开 静态 注释 = "java: public void setEntries(java.util.List<T>)">
+    参数 当前对象 <类型 = MP数据集类>
+    参数 数据点集 <类型 = MP列表类>
+    {
+        @ @<当前对象>.setEntries (@<数据点集>);
+    }
+
+    方法 复制 <公开 静态 类型 = MP数据集类 @嵌入式方法 = "" 注释 = "java: public abstract com.github.mikephil.charting.data.DataSet<T> copy()">
+    参数 当前对象 <类型 = MP数据集类>
+    {
+        @ @<当前对象>.copy ()
+    }
+
+    方法 转为字符串 <公开 静态 类型 = 文本型 @嵌入式方法 = "" 注释 = "java: public java.lang.String toString()">
+    参数 当前对象 <类型 = MP数据集类>
+    {
+        @ @<当前对象>.toString ()
+    }
+
+    方法 转为简单字符串 <公开 静态 类型 = 文本型 @嵌入式方法 = "" 注释 = "java: public java.lang.String toSimpleString()">
+    参数 当前对象 <类型 = MP数据集类>
+    {
+        @ @<当前对象>.toSimpleString ()
+    }
+
+    方法 取数据点索引_3 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getEntryIndex(com.github.mikephil.charting.data.Entry)">
+    参数 当前对象 <类型 = MP数据集类>
+    参数 数据点 <类型 = MP数据点类>
+    {
+        @ @<当前对象>.getEntryIndex (@<数据点>)
+    }
+
+    方法 取数据点对应横坐标数值_3 <公开 静态 类型 = MP数据点类 @嵌入式方法 = "" 注释 = "java: public T getEntryForXValue(float, float)">
+    参数 当前对象 <类型 = MP数据集类>
+    参数 横坐标数值 <类型 = 小数>
+    参数 最近至纵坐标 <类型 = 小数>
+    {
+        @ @<当前对象>.getEntryForXValue ((float) @<横坐标数值>, (float) @<最近至纵坐标>)
+    }
+
+}
+
+类 MP线柱散蜡气数据集类 <公开 基础类 = MP数据集类 @别名 = "com.github.mikephil.charting.data.BarLineScatterCandleBubbleDataSet" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.data.BarLineScatterCandleBubbleDataSet.">
+{
+
+    方法 设置高亮颜色 <公开 静态 注释 = "java: public void setHighLightColor(int)">
+    参数 当前对象 <类型 = MP线柱散蜡气数据集类>
+    参数 颜色 <类型 = 整数>
+    {
+        @ @<当前对象>.setHighLightColor (@<颜色>);
+    }
+
+    方法 取高亮颜色 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getHighLightColor()">
+    参数 当前对象 <类型 = MP线柱散蜡气数据集类>
+    {
+        @ @<当前对象>.getHighLightColor ()
+    }
+
+    方法 取高亮颜色_2 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public abstract int getHighLightColor() (承自 com.github.mikephil.charting.interfaces.datasets.IBarLineScatterCandleBubbleDataSet)">
+    参数 当前对象 <类型 = MP线柱散蜡气数据集类>
+    {
+        @ @<当前对象>.getHighLightColor ()
+    }
+
+}
+
+类 MP柱形数据集类 <公开 基础类 = MP线柱散蜡气数据集类 @别名 = "com.github.mikephil.charting.data.BarDataSet" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.data.BarDataSet.">
+{
+
+    方法 新建柱形数据集 <公开 静态 类型 = MP柱形数据集类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.BarDataSet(java.util.List<com.github.mikephil.charting.data.BarEntry>, java.lang.String)">
+    参数 纵坐标数值集 <类型 = MP列表类>
+    参数 标签 <类型 = 文本型>
+    {
+        @ new com.github.mikephil.charting.data.BarDataSet (@<纵坐标数值集>, @<标签>)
+    }
+
+    方法 取填充集 <公开 静态 类型 = MP列表类 @嵌入式方法 = "" 注释 = "java: public java.util.List<com.github.mikephil.charting.utils.Fill> getFills()">
+    参数 当前对象 <类型 = MP柱形数据集类>
+    {
+        @ @<当前对象>.getFills ()
+    }
+
+    方法 取填充 <公开 静态 类型 = MP填充类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.utils.Fill getFill(int)">
+    参数 当前对象 <类型 = MP柱形数据集类>
+    参数 索引 <类型 = 整数>
+    {
+        @ @<当前对象>.getFill (@<索引>)
+    }
+
+    方法 取渐变集 <公开 静态 类型 = MP列表类 @嵌入式方法 = "" 注释 = "java: public java.util.List<com.github.mikephil.charting.utils.Fill> getGradients()">
+    参数 当前对象 <类型 = MP柱形数据集类>
+    {
+        @ @<当前对象>.getGradients ()
+    }
+
+    方法 取渐变 <公开 静态 类型 = MP填充类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.utils.Fill getGradient(int)">
+    参数 当前对象 <类型 = MP柱形数据集类>
+    参数 索引 <类型 = 整数>
+    {
+        @ @<当前对象>.getGradient (@<索引>)
+    }
+
+    方法 设置渐变颜色 <公开 静态 注释 = "java: public void setGradientColor(int, int)">
+    参数 当前对象 <类型 = MP柱形数据集类>
+    参数 起始颜色 <类型 = 整数>
+    参数 结束颜色 <类型 = 整数>
+    {
+        @ @<当前对象>.setGradientColor (@<起始颜色>, @<结束颜色>);
+    }
+
+    方法 设置渐变颜色集 <公开 静态 注释 = "java: public void setGradientColors(java.util.List<com.github.mikephil.charting.utils.Fill>)">
+    参数 当前对象 <类型 = MP柱形数据集类>
+    参数 渐变颜色集 <类型 = MP列表类>
+    {
+        @ @<当前对象>.setGradientColors (@<渐变颜色集>);
+    }
+
+    方法 设置填充集 <公开 静态 注释 = "java: public void setFills(java.util.List<com.github.mikephil.charting.utils.Fill>)">
+    参数 当前对象 <类型 = MP柱形数据集类>
+    参数 填充集 <类型 = MP列表类>
+    {
+        @ @<当前对象>.setFills (@<填充集>);
+    }
+
+    方法 取堆叠尺寸 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getStackSize()">
+    参数 当前对象 <类型 = MP柱形数据集类>
+    {
+        @ @<当前对象>.getStackSize ()
+    }
+
+    方法 是否已堆叠 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isStacked()">
+    参数 当前对象 <类型 = MP柱形数据集类>
+    {
+        @ @<当前对象>.isStacked ()
+    }
+
+    方法 取数据点数量堆叠集 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getEntryCountStacks()">
+    参数 当前对象 <类型 = MP柱形数据集类>
+    {
+        @ @<当前对象>.getEntryCountStacks ()
+    }
+
+    方法 设置柱阴影颜色 <公开 静态 注释 = "java: public void setBarShadowColor(int)">
+    参数 当前对象 <类型 = MP柱形数据集类>
+    参数 颜色 <类型 = 整数>
+    {
+        @ @<当前对象>.setBarShadowColor (@<颜色>);
+    }
+
+    方法 取柱阴影颜色 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getBarShadowColor()">
+    参数 当前对象 <类型 = MP柱形数据集类>
+    {
+        @ @<当前对象>.getBarShadowColor ()
+    }
+
+    方法 设置柱边框宽度 <公开 静态 注释 = "java: public void setBarBorderWidth(float)">
+    参数 当前对象 <类型 = MP柱形数据集类>
+    参数 宽度 <类型 = 小数>
+    {
+        @ @<当前对象>.setBarBorderWidth ((float) @<宽度>);
+    }
+
+    方法 取柱边框宽度 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getBarBorderWidth()">
+    参数 当前对象 <类型 = MP柱形数据集类>
+    {
+        @ @<当前对象>.getBarBorderWidth ()
+    }
+
+    方法 设置柱边框颜色 <公开 静态 注释 = "java: public void setBarBorderColor(int)">
+    参数 当前对象 <类型 = MP柱形数据集类>
+    参数 颜色 <类型 = 整数>
+    {
+        @ @<当前对象>.setBarBorderColor (@<颜色>);
+    }
+
+    方法 取柱边框颜色 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getBarBorderColor()">
+    参数 当前对象 <类型 = MP柱形数据集类>
+    {
+        @ @<当前对象>.getBarBorderColor ()
+    }
+
+    方法 设置高亮透明度 <公开 静态 注释 = "java: public void setHighLightAlpha(int)">
+    参数 当前对象 <类型 = MP柱形数据集类>
+    参数 透明度 <类型 = 整数>
+    {
+        @ @<当前对象>.setHighLightAlpha (@<透明度>);
+    }
+
+    方法 取高亮透明度 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getHighLightAlpha()">
+    参数 当前对象 <类型 = MP柱形数据集类>
+    {
+        @ @<当前对象>.getHighLightAlpha ()
+    }
+
+    方法 设置堆叠标签集 <公开 静态 注释 = "java: public void setStackLabels(java.lang.String[])">
+    参数 当前对象 <类型 = MP柱形数据集类>
+    参数 标签集 <类型 = "文本型 []">
+    {
+        @ @<当前对象>.setStackLabels (@<标签集>);
+    }
+
+    方法 取堆叠标签集 <公开 静态 类型 = "文本型 []" @嵌入式方法 = "" 注释 = "java: public java.lang.String[] getStackLabels()">
+    参数 当前对象 <类型 = MP柱形数据集类>
+    {
+        @ @<当前对象>.getStackLabels ()
+    }
+
+    方法 是否已堆叠_2 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public abstract boolean isStacked() (承自 com.github.mikephil.charting.interfaces.datasets.IBarDataSet)">
+    参数 当前对象 <类型 = MP柱形数据集类>
+    {
+        @ @<当前对象>.isStacked ()
+    }
+
+    方法 取填充_2 <公开 静态 类型 = MP填充类 @嵌入式方法 = "" 注释 = "java: public abstract com.github.mikephil.charting.utils.Fill getFill(int) (承自 com.github.mikephil.charting.interfaces.datasets.IBarDataSet)">
+    参数 当前对象 <类型 = MP柱形数据集类>
+    参数 索引 <类型 = 整数>
+    {
+        @ @<当前对象>.getFill (@<索引>)
+    }
+
+    方法 取柱边框宽度_2 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public abstract float getBarBorderWidth() (承自 com.github.mikephil.charting.interfaces.datasets.IBarDataSet)">
+    参数 当前对象 <类型 = MP柱形数据集类>
+    {
+        @ @<当前对象>.getBarBorderWidth ()
+    }
+
+    方法 取柱边框颜色_2 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public abstract int getBarBorderColor() (承自 com.github.mikephil.charting.interfaces.datasets.IBarDataSet)">
+    参数 当前对象 <类型 = MP柱形数据集类>
+    {
+        @ @<当前对象>.getBarBorderColor ()
+    }
+
+    方法 取柱阴影颜色_2 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public abstract int getBarShadowColor() (承自 com.github.mikephil.charting.interfaces.datasets.IBarDataSet)">
+    参数 当前对象 <类型 = MP柱形数据集类>
+    {
+        @ @<当前对象>.getBarShadowColor ()
+    }
+
+    方法 取高亮透明度_2 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public abstract int getHighLightAlpha() (承自 com.github.mikephil.charting.interfaces.datasets.IBarDataSet)">
+    参数 当前对象 <类型 = MP柱形数据集类>
+    {
+        @ @<当前对象>.getHighLightAlpha ()
+    }
+
+    方法 取堆叠尺寸_2 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public abstract int getStackSize() (承自 com.github.mikephil.charting.interfaces.datasets.IBarDataSet)">
+    参数 当前对象 <类型 = MP柱形数据集类>
+    {
+        @ @<当前对象>.getStackSize ()
+    }
+
+    方法 取堆叠标签集_2 <公开 静态 类型 = "文本型 []" @嵌入式方法 = "" 注释 = "java: public abstract java.lang.String[] getStackLabels() (承自 com.github.mikephil.charting.interfaces.datasets.IBarDataSet)">
+    参数 当前对象 <类型 = MP柱形数据集类>
+    {
+        @ @<当前对象>.getStackLabels ()
+    }
+
+    方法 取填充集_2 <公开 静态 类型 = MP列表类 @嵌入式方法 = "" 注释 = "java: public abstract java.util.List<com.github.mikephil.charting.utils.Fill> getFills() (承自 com.github.mikephil.charting.interfaces.datasets.IBarDataSet)">
+    参数 当前对象 <类型 = MP柱形数据集类>
+    {
+        @ @<当前对象>.getFills ()
+    }
+
+}
+
+类 MP基础数据点类 <公开 @别名 = "com.github.mikephil.charting.data.BaseEntry" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.data.BaseEntry.">
+{
+
+    方法 取纵坐标 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getY()">
+    参数 当前对象 <类型 = MP基础数据点类>
+    {
+        @ @<当前对象>.getY ()
+    }
+
+    方法 设置图标 <公开 静态 注释 = "java: public void setIcon(android.graphics.drawable.Drawable)">
+    参数 当前对象 <类型 = MP基础数据点类>
+    参数 图标 <类型 = 可绘制对象类>
+    {
+        @ @<当前对象>.setIcon (@<图标>);
+    }
+
+    方法 取图标 <公开 静态 类型 = 可绘制对象类 @嵌入式方法 = "" 注释 = "java: public android.graphics.drawable.Drawable getIcon()">
+    参数 当前对象 <类型 = MP基础数据点类>
+    {
+        @ @<当前对象>.getIcon ()
+    }
+
+    方法 设置纵坐标 <公开 静态 注释 = "java: public void setY(float)">
+    参数 当前对象 <类型 = MP基础数据点类>
+    参数 纵坐标 <类型 = 小数>
+    {
+        @ @<当前对象>.setY ((float) @<纵坐标>);
+    }
+
+    方法 取数据 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "java: public java.lang.Object getData()">
+    参数 当前对象 <类型 = MP基础数据点类>
+    {
+        @ @<当前对象>.getData ()
+    }
+
+    方法 设置数据 <公开 静态 注释 = "java: public void setData(java.lang.Object)">
+    参数 当前对象 <类型 = MP基础数据点类>
+    参数 数据 <类型 = 对象类>
+    {
+        @ @<当前对象>.setData (@<数据>);
+    }
+
+}
+
+类 MP数据点类 <公开 基础类 = MP基础数据点类 @别名 = "com.github.mikephil.charting.data.Entry" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.data.Entry.">
+{
+
+    方法 新建数据点 <公开 静态 类型 = MP数据点类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.Entry()">
+    {
+        @ new com.github.mikephil.charting.data.Entry ()
+    }
+
+    方法 新建数据点_2 <公开 静态 类型 = MP数据点类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.Entry(float, float)">
+    参数 横坐标 <类型 = 小数>
+    参数 纵坐标 <类型 = 小数>
+    {
+        @ new com.github.mikephil.charting.data.Entry ((float) @<横坐标>, (float) @<纵坐标>)
+    }
+
+    方法 新建数据点_3 <公开 静态 类型 = MP数据点类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.Entry(float, float, java.lang.Object)">
+    参数 横坐标 <类型 = 小数>
+    参数 纵坐标 <类型 = 小数>
+    参数 数据 <类型 = 对象类>
+    {
+        @ new com.github.mikephil.charting.data.Entry ((float) @<横坐标>, (float) @<纵坐标>, @<数据>)
+    }
+
+    方法 新建数据点_4 <公开 静态 类型 = MP数据点类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.Entry(float, float, android.graphics.drawable.Drawable)">
+    参数 横坐标 <类型 = 小数>
+    参数 纵坐标 <类型 = 小数>
+    参数 图标 <类型 = 可绘制对象类>
+    {
+        @ new com.github.mikephil.charting.data.Entry ((float) @<横坐标>, (float) @<纵坐标>, @<图标>)
+    }
+
+    方法 新建数据点_5 <公开 静态 类型 = MP数据点类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.Entry(float, float, android.graphics.drawable.Drawable, java.lang.Object)">
+    参数 横坐标 <类型 = 小数>
+    参数 纵坐标 <类型 = 小数>
+    参数 图标 <类型 = 可绘制对象类>
+    参数 数据 <类型 = 对象类>
+    {
+        @ new com.github.mikephil.charting.data.Entry ((float) @<横坐标>, (float) @<纵坐标>, @<图标>, @<数据>)
+    }
+
+    方法 取横坐标 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getX()">
+    参数 当前对象 <类型 = MP数据点类>
+    {
+        @ @<当前对象>.getX ()
+    }
+
+    方法 设置横坐标 <公开 静态 注释 = "java: public void setX(float)">
+    参数 当前对象 <类型 = MP数据点类>
+    参数 横坐标 <类型 = 小数>
+    {
+        @ @<当前对象>.setX ((float) @<横坐标>);
+    }
+
+    方法 复制 <公开 静态 类型 = MP数据点类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.Entry copy()">
+    参数 当前对象 <类型 = MP数据点类>
+    {
+        @ @<当前对象>.copy ()
+    }
+
+    方法 相等至 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean equalTo(com.github.mikephil.charting.data.Entry)">
+    参数 当前对象 <类型 = MP数据点类>
+    参数 数据点 <类型 = MP数据点类>
+    {
+        @ @<当前对象>.equalTo (@<数据点>)
+    }
+
+    方法 转为字符串 <公开 静态 类型 = 文本型 @嵌入式方法 = "" 注释 = "java: public java.lang.String toString()">
+    参数 当前对象 <类型 = MP数据点类>
+    {
+        @ @<当前对象>.toString ()
+    }
+
+    方法 描述内容 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int describeContents()">
+    参数 当前对象 <类型 = MP数据点类>
+    {
+        @ @<当前对象>.describeContents ()
+    }
+
+    方法 写入至打包序列化 <公开 静态 注释 = "java: public void writeToParcel(android.os.Parcel, int)">
+    参数 当前对象 <类型 = MP数据点类>
+    参数 目标 <类型 = 序列化包装类>
+    参数 标志集 <类型 = 整数>
+    {
+        @ @<当前对象>.writeToParcel (@<目标>, @<标志集>);
+    }
+
+    方法 取生成器 <公开 静态 类型 = MP序列化生成器接口 @嵌入式方法 = "" 注释 = "java 常量: public static final android.os.Parcelable$Creator<com.github.mikephil.charting.data.Entry> CREATOR">
+    {
+        @ com.github.mikephil.charting.data.Entry.CREATOR
+    }
+
+}
+
+类 MP柱形数据点类 <公开 基础类 = MP数据点类 @别名 = "com.github.mikephil.charting.data.BarEntry" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.data.BarEntry.">
+{
+
+    方法 新建柱形数据点 <公开 静态 类型 = MP柱形数据点类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.BarEntry(float, float)">
+    参数 横坐标 <类型 = 小数>
+    参数 纵坐标 <类型 = 小数>
+    {
+        @ new com.github.mikephil.charting.data.BarEntry ((float) @<横坐标>, (float) @<纵坐标>)
+    }
+
+    方法 新建柱形数据点_2 <公开 静态 类型 = MP柱形数据点类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.BarEntry(float, float, java.lang.Object)">
+    参数 横坐标 <类型 = 小数>
+    参数 纵坐标 <类型 = 小数>
+    参数 数据 <类型 = 对象类>
+    {
+        @ new com.github.mikephil.charting.data.BarEntry ((float) @<横坐标>, (float) @<纵坐标>, @<数据>)
+    }
+
+    方法 新建柱形数据点_3 <公开 静态 类型 = MP柱形数据点类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.BarEntry(float, float, android.graphics.drawable.Drawable)">
+    参数 横坐标 <类型 = 小数>
+    参数 纵坐标 <类型 = 小数>
+    参数 图标 <类型 = 可绘制对象类>
+    {
+        @ new com.github.mikephil.charting.data.BarEntry ((float) @<横坐标>, (float) @<纵坐标>, @<图标>)
+    }
+
+    方法 新建柱形数据点_4 <公开 静态 类型 = MP柱形数据点类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.BarEntry(float, float, android.graphics.drawable.Drawable, java.lang.Object)">
+    参数 横坐标 <类型 = 小数>
+    参数 纵坐标 <类型 = 小数>
+    参数 图标 <类型 = 可绘制对象类>
+    参数 数据 <类型 = 对象类>
+    {
+        @ new com.github.mikephil.charting.data.BarEntry ((float) @<横坐标>, (float) @<纵坐标>, @<图标>, @<数据>)
+    }
+
+    方法 新建柱形数据点_5 <公开 静态 类型 = MP柱形数据点类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.BarEntry(float, float[])">
+    参数 横坐标 <类型 = 小数>
+    参数 数值集 <类型 = "小数 []">
+    {
+        @ new com.github.mikephil.charting.data.BarEntry ((float) @<横坐标>, @<数值集>)
+    }
+
+    方法 新建柱形数据点_6 <公开 静态 类型 = MP柱形数据点类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.BarEntry(float, float[], java.lang.Object)">
+    参数 横坐标 <类型 = 小数>
+    参数 数值集 <类型 = "小数 []">
+    参数 数据 <类型 = 对象类>
+    {
+        @ new com.github.mikephil.charting.data.BarEntry ((float) @<横坐标>, @<数值集>, @<数据>)
+    }
+
+    方法 新建柱形数据点_7 <公开 静态 类型 = MP柱形数据点类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.BarEntry(float, float[], android.graphics.drawable.Drawable)">
+    参数 横坐标 <类型 = 小数>
+    参数 数值集 <类型 = "小数 []">
+    参数 图标 <类型 = 可绘制对象类>
+    {
+        @ new com.github.mikephil.charting.data.BarEntry ((float) @<横坐标>, @<数值集>, @<图标>)
+    }
+
+    方法 新建柱形数据点_8 <公开 静态 类型 = MP柱形数据点类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.BarEntry(float, float[], android.graphics.drawable.Drawable, java.lang.Object)">
+    参数 横坐标 <类型 = 小数>
+    参数 数值集 <类型 = "小数 []">
+    参数 图标 <类型 = 可绘制对象类>
+    参数 数据 <类型 = 对象类>
+    {
+        @ new com.github.mikephil.charting.data.BarEntry ((float) @<横坐标>, @<数值集>, @<图标>, @<数据>)
+    }
+
+    方法 取纵坐标数值集 <公开 静态 类型 = "小数 []" @嵌入式方法 = "" 注释 = "java: public float[] getYVals()">
+    参数 当前对象 <类型 = MP柱形数据点类>
+    {
+        @ @<当前对象>.getYVals ()
+    }
+
+    方法 设置数值集 <公开 静态 注释 = "java: public void setVals(float[])">
+    参数 当前对象 <类型 = MP柱形数据点类>
+    参数 数值集 <类型 = "小数 []">
+    {
+        @ @<当前对象>.setVals (@<数值集>);
+    }
+
+    方法 取范围集 <公开 静态 类型 = "MP高亮区间类 []" @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.highlight.Range[] getRanges()">
+    参数 当前对象 <类型 = MP柱形数据点类>
+    {
+        @ @<当前对象>.getRanges ()
+    }
+
+    方法 是否已堆叠 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isStacked()">
+    参数 当前对象 <类型 = MP柱形数据点类>
+    {
+        @ @<当前对象>.isStacked ()
+    }
+
+    方法 取下方求和 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getBelowSum(int)">
+    参数 当前对象 <类型 = MP柱形数据点类>
+    参数 堆叠索引 <类型 = 整数>
+    {
+        @ @<当前对象>.getBelowSum (@<堆叠索引>)
+    }
+
+    方法 取求和下方 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getSumBelow(int)">
+    参数 当前对象 <类型 = MP柱形数据点类>
+    参数 堆叠索引 <类型 = 整数>
+    {
+        @ @<当前对象>.getSumBelow (@<堆叠索引>)
+    }
+
+    方法 取正求和 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getPositiveSum()">
+    参数 当前对象 <类型 = MP柱形数据点类>
+    {
+        @ @<当前对象>.getPositiveSum ()
+    }
+
+    方法 取负求和 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getNegativeSum()">
+    参数 当前对象 <类型 = MP柱形数据点类>
+    {
+        @ @<当前对象>.getNegativeSum ()
+    }
+
+}
+
+类 MP气泡数据类 <公开 基础类 = MP线柱散蜡气数据类 @别名 = "com.github.mikephil.charting.data.BubbleData" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.data.BubbleData.">
+{
+
+    方法 新建气泡数据 <公开 静态 类型 = MP气泡数据类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.BubbleData()">
+    {
+        @ new com.github.mikephil.charting.data.BubbleData ()
+    }
+
+    方法 新建气泡数据_2 <公开 静态 类型 = MP气泡数据类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.BubbleData(com.github.mikephil.charting.interfaces.datasets.IBubbleDataSet...)">
+    参数 数据集 <类型 = "MP气泡数据集接口 []">
+    {
+        @ new com.github.mikephil.charting.data.BubbleData (@<数据集>)
+    }
+
+    方法 新建气泡数据_3 <公开 静态 类型 = MP气泡数据类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.BubbleData(java.util.List<com.github.mikephil.charting.interfaces.datasets.IBubbleDataSet>)">
+    参数 数据集 <类型 = MP列表类>
+    {
+        @ new com.github.mikephil.charting.data.BubbleData (@<数据集>)
+    }
+
+    方法 设置高亮圆形宽度 <公开 静态 注释 = "java: public void setHighlightCircleWidth(float)">
+    参数 当前对象 <类型 = MP气泡数据类>
+    参数 宽度 <类型 = 小数>
+    {
+        @ @<当前对象>.setHighlightCircleWidth ((float) @<宽度>);
+    }
+
+}
+
+类 MP气泡数据集类 <公开 基础类 = MP线柱散蜡气数据集类 @别名 = "com.github.mikephil.charting.data.BubbleDataSet" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.data.BubbleDataSet.">
+{
+
+    方法 新建气泡数据集 <公开 静态 类型 = MP气泡数据集类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.BubbleDataSet(java.util.List<com.github.mikephil.charting.data.BubbleEntry>, java.lang.String)">
+    参数 纵坐标数值集 <类型 = MP列表类>
+    参数 标签 <类型 = 文本型>
+    {
+        @ new com.github.mikephil.charting.data.BubbleDataSet (@<纵坐标数值集>, @<标签>)
+    }
+
+    方法 设置高亮圆形宽度 <公开 静态 注释 = "java: public void setHighlightCircleWidth(float)">
+    参数 当前对象 <类型 = MP气泡数据集类>
+    参数 宽度 <类型 = 小数>
+    {
+        @ @<当前对象>.setHighlightCircleWidth ((float) @<宽度>);
+    }
+
+    方法 取高亮圆形宽度 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getHighlightCircleWidth()">
+    参数 当前对象 <类型 = MP气泡数据集类>
+    {
+        @ @<当前对象>.getHighlightCircleWidth ()
+    }
+
+    方法 取最大尺寸 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getMaxSize()">
+    参数 当前对象 <类型 = MP气泡数据集类>
+    {
+        @ @<当前对象>.getMaxSize ()
+    }
+
+    方法 是否归一化尺寸启用 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isNormalizeSizeEnabled()">
+    参数 当前对象 <类型 = MP气泡数据集类>
+    {
+        @ @<当前对象>.isNormalizeSizeEnabled ()
+    }
+
+    方法 设置归一化尺寸启用 <公开 静态 注释 = "java: public void setNormalizeSizeEnabled(boolean)">
+    参数 当前对象 <类型 = MP气泡数据集类>
+    参数 归一化尺寸 <类型 = 逻辑型>
+    {
+        @ @<当前对象>.setNormalizeSizeEnabled (@<归一化尺寸>);
+    }
+
+    方法 是否归一化尺寸启用_2 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public abstract boolean isNormalizeSizeEnabled() (承自 com.github.mikephil.charting.interfaces.datasets.IBubbleDataSet)">
+    参数 当前对象 <类型 = MP气泡数据集类>
+    {
+        @ @<当前对象>.isNormalizeSizeEnabled ()
+    }
+
+    方法 取高亮圆形宽度_2 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public abstract float getHighlightCircleWidth() (承自 com.github.mikephil.charting.interfaces.datasets.IBubbleDataSet)">
+    参数 当前对象 <类型 = MP气泡数据集类>
+    {
+        @ @<当前对象>.getHighlightCircleWidth ()
+    }
+
+    方法 取最大尺寸_2 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public abstract float getMaxSize() (承自 com.github.mikephil.charting.interfaces.datasets.IBubbleDataSet)">
+    参数 当前对象 <类型 = MP气泡数据集类>
+    {
+        @ @<当前对象>.getMaxSize ()
+    }
+
+    方法 设置高亮圆形宽度_2 <公开 静态 注释 = "java: public abstract void setHighlightCircleWidth(float) (承自 com.github.mikephil.charting.interfaces.datasets.IBubbleDataSet)">
+    参数 当前对象 <类型 = MP气泡数据集类>
+    参数 宽度 <类型 = 小数>
+    {
+        @ @<当前对象>.setHighlightCircleWidth ((float) @<宽度>);
+    }
+
+}
+
+类 MP气泡数据点类 <公开 基础类 = MP数据点类 @别名 = "com.github.mikephil.charting.data.BubbleEntry" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.data.BubbleEntry.">
+{
+
+    方法 新建气泡数据点 <公开 静态 类型 = MP气泡数据点类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.BubbleEntry(float, float, float)">
+    参数 横坐标 <类型 = 小数>
+    参数 纵坐标 <类型 = 小数>
+    参数 尺寸 <类型 = 小数>
+    {
+        @ new com.github.mikephil.charting.data.BubbleEntry ((float) @<横坐标>, (float) @<纵坐标>, (float) @<尺寸>)
+    }
+
+    方法 新建气泡数据点_2 <公开 静态 类型 = MP气泡数据点类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.BubbleEntry(float, float, float, java.lang.Object)">
+    参数 横坐标 <类型 = 小数>
+    参数 纵坐标 <类型 = 小数>
+    参数 尺寸 <类型 = 小数>
+    参数 数据 <类型 = 对象类>
+    {
+        @ new com.github.mikephil.charting.data.BubbleEntry ((float) @<横坐标>, (float) @<纵坐标>, (float) @<尺寸>, @<数据>)
+    }
+
+    方法 新建气泡数据点_3 <公开 静态 类型 = MP气泡数据点类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.BubbleEntry(float, float, float, android.graphics.drawable.Drawable)">
+    参数 横坐标 <类型 = 小数>
+    参数 纵坐标 <类型 = 小数>
+    参数 尺寸 <类型 = 小数>
+    参数 图标 <类型 = 可绘制对象类>
+    {
+        @ new com.github.mikephil.charting.data.BubbleEntry ((float) @<横坐标>, (float) @<纵坐标>, (float) @<尺寸>, @<图标>)
+    }
+
+    方法 新建气泡数据点_4 <公开 静态 类型 = MP气泡数据点类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.BubbleEntry(float, float, float, android.graphics.drawable.Drawable, java.lang.Object)">
+    参数 横坐标 <类型 = 小数>
+    参数 纵坐标 <类型 = 小数>
+    参数 尺寸 <类型 = 小数>
+    参数 图标 <类型 = 可绘制对象类>
+    参数 数据 <类型 = 对象类>
+    {
+        @ new com.github.mikephil.charting.data.BubbleEntry ((float) @<横坐标>, (float) @<纵坐标>, (float) @<尺寸>, @<图标>, @<数据>)
+    }
+
+    方法 取尺寸 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getSize()">
+    参数 当前对象 <类型 = MP气泡数据点类>
+    {
+        @ @<当前对象>.getSize ()
+    }
+
+    方法 设置尺寸 <公开 静态 注释 = "java: public void setSize(float)">
+    参数 当前对象 <类型 = MP气泡数据点类>
+    参数 尺寸 <类型 = 小数>
+    {
+        @ @<当前对象>.setSize ((float) @<尺寸>);
+    }
+
+}
+
+类 MP蜡烛数据类 <公开 基础类 = MP线柱散蜡气数据类 @别名 = "com.github.mikephil.charting.data.CandleData" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.data.CandleData.">
+{
+
+    方法 新建蜡烛数据 <公开 静态 类型 = MP蜡烛数据类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.CandleData()">
+    {
+        @ new com.github.mikephil.charting.data.CandleData ()
+    }
+
+    方法 新建蜡烛数据_2 <公开 静态 类型 = MP蜡烛数据类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.CandleData(java.util.List<com.github.mikephil.charting.interfaces.datasets.ICandleDataSet>)">
+    参数 数据集 <类型 = MP列表类>
+    {
+        @ new com.github.mikephil.charting.data.CandleData (@<数据集>)
+    }
+
+    方法 新建蜡烛数据_3 <公开 静态 类型 = MP蜡烛数据类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.CandleData(com.github.mikephil.charting.interfaces.datasets.ICandleDataSet...)">
+    参数 数据集 <类型 = "MP蜡烛数据集接口 []">
+    {
+        @ new com.github.mikephil.charting.data.CandleData (@<数据集>)
+    }
+
+}
+
+类 MP线散蜡径数据集类 <公开 基础类 = MP线柱散蜡气数据集类 @别名 = "com.github.mikephil.charting.data.LineScatterCandleRadarDataSet" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.data.LineScatterCandleRadarDataSet.">
+{
+
+    方法 设置绘制横向高亮指示器 <公开 静态 注释 = "java: public void setDrawHorizontalHighlightIndicator(boolean)">
+    参数 当前对象 <类型 = MP线散蜡径数据集类>
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @<当前对象>.setDrawHorizontalHighlightIndicator (@<启用>);
+    }
+
+    方法 设置绘制纵向高亮指示器 <公开 静态 注释 = "java: public void setDrawVerticalHighlightIndicator(boolean)">
+    参数 当前对象 <类型 = MP线散蜡径数据集类>
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @<当前对象>.setDrawVerticalHighlightIndicator (@<启用>);
+    }
+
+    方法 设置绘制高亮指示器集 <公开 静态 注释 = "java: public void setDrawHighlightIndicators(boolean)">
+    参数 当前对象 <类型 = MP线散蜡径数据集类>
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @<当前对象>.setDrawHighlightIndicators (@<启用>);
+    }
+
+    方法 是否纵向高亮指示器启用 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isVerticalHighlightIndicatorEnabled()">
+    参数 当前对象 <类型 = MP线散蜡径数据集类>
+    {
+        @ @<当前对象>.isVerticalHighlightIndicatorEnabled ()
+    }
+
+    方法 是否横向高亮指示器启用 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isHorizontalHighlightIndicatorEnabled()">
+    参数 当前对象 <类型 = MP线散蜡径数据集类>
+    {
+        @ @<当前对象>.isHorizontalHighlightIndicatorEnabled ()
+    }
+
+    方法 设置高亮线宽度 <公开 静态 注释 = "java: public void setHighlightLineWidth(float)">
+    参数 当前对象 <类型 = MP线散蜡径数据集类>
+    参数 宽度 <类型 = 小数>
+    {
+        @ @<当前对象>.setHighlightLineWidth ((float) @<宽度>);
+    }
+
+    方法 取高亮线宽度 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getHighlightLineWidth()">
+    参数 当前对象 <类型 = MP线散蜡径数据集类>
+    {
+        @ @<当前对象>.getHighlightLineWidth ()
+    }
+
+    方法 启用虚线高亮线 <公开 静态 注释 = "java: public void enableDashedHighlightLine(float, float, float)">
+    参数 当前对象 <类型 = MP线散蜡径数据集类>
+    参数 线长度 <类型 = 小数>
+    参数 间距长度 <类型 = 小数>
+    参数 相位 <类型 = 小数>
+    {
+        @ @<当前对象>.enableDashedHighlightLine ((float) @<线长度>, (float) @<间距长度>, (float) @<相位>);
+    }
+
+    方法 停用虚线高亮线 <公开 静态 注释 = "java: public void disableDashedHighlightLine()">
+    参数 当前对象 <类型 = MP线散蜡径数据集类>
+    {
+        @ @<当前对象>.disableDashedHighlightLine ();
+    }
+
+    方法 是否虚线高亮线启用 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isDashedHighlightLineEnabled()">
+    参数 当前对象 <类型 = MP线散蜡径数据集类>
+    {
+        @ @<当前对象>.isDashedHighlightLineEnabled ()
+    }
+
+    方法 取虚线路径效果高亮 <公开 静态 类型 = MP虚线效果类 @嵌入式方法 = "" 注释 = "java: public android.graphics.DashPathEffect getDashPathEffectHighlight()">
+    参数 当前对象 <类型 = MP线散蜡径数据集类>
+    {
+        @ @<当前对象>.getDashPathEffectHighlight ()
+    }
+
+    方法 取虚线路径效果高亮_2 <公开 静态 类型 = MP虚线效果类 @嵌入式方法 = "" 注释 = "java: public abstract android.graphics.DashPathEffect getDashPathEffectHighlight() (承自 com.github.mikephil.charting.interfaces.datasets.ILineScatterCandleRadarDataSet)">
+    参数 当前对象 <类型 = MP线散蜡径数据集类>
+    {
+        @ @<当前对象>.getDashPathEffectHighlight ()
+    }
+
+    方法 是否横向高亮指示器启用_2 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public abstract boolean isHorizontalHighlightIndicatorEnabled() (承自 com.github.mikephil.charting.interfaces.datasets.ILineScatterCandleRadarDataSet)">
+    参数 当前对象 <类型 = MP线散蜡径数据集类>
+    {
+        @ @<当前对象>.isHorizontalHighlightIndicatorEnabled ()
+    }
+
+    方法 是否纵向高亮指示器启用_2 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public abstract boolean isVerticalHighlightIndicatorEnabled() (承自 com.github.mikephil.charting.interfaces.datasets.ILineScatterCandleRadarDataSet)">
+    参数 当前对象 <类型 = MP线散蜡径数据集类>
+    {
+        @ @<当前对象>.isVerticalHighlightIndicatorEnabled ()
+    }
+
+    方法 取高亮线宽度_2 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public abstract float getHighlightLineWidth() (承自 com.github.mikephil.charting.interfaces.datasets.ILineScatterCandleRadarDataSet)">
+    参数 当前对象 <类型 = MP线散蜡径数据集类>
+    {
+        @ @<当前对象>.getHighlightLineWidth ()
+    }
+
+}
+
+类 MP蜡烛数据集类 <公开 基础类 = MP线散蜡径数据集类 @别名 = "com.github.mikephil.charting.data.CandleDataSet" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.data.CandleDataSet.">
+{
+
+    方法 新建蜡烛数据集 <公开 静态 类型 = MP蜡烛数据集类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.CandleDataSet(java.util.List<com.github.mikephil.charting.data.CandleEntry>, java.lang.String)">
+    参数 纵坐标数值集 <类型 = MP列表类>
+    参数 标签 <类型 = 文本型>
+    {
+        @ new com.github.mikephil.charting.data.CandleDataSet (@<纵坐标数值集>, @<标签>)
+    }
+
+    方法 设置柱间距 <公开 静态 注释 = "java: public void setBarSpace(float)">
+    参数 当前对象 <类型 = MP蜡烛数据集类>
+    参数 间距 <类型 = 小数>
+    {
+        @ @<当前对象>.setBarSpace ((float) @<间距>);
+    }
+
+    方法 取柱间距 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getBarSpace()">
+    参数 当前对象 <类型 = MP蜡烛数据集类>
+    {
+        @ @<当前对象>.getBarSpace ()
+    }
+
+    方法 设置阴影宽度 <公开 静态 注释 = "java: public void setShadowWidth(float)">
+    参数 当前对象 <类型 = MP蜡烛数据集类>
+    参数 宽度 <类型 = 小数>
+    {
+        @ @<当前对象>.setShadowWidth ((float) @<宽度>);
+    }
+
+    方法 取阴影宽度 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getShadowWidth()">
+    参数 当前对象 <类型 = MP蜡烛数据集类>
+    {
+        @ @<当前对象>.getShadowWidth ()
+    }
+
+    方法 设置显示蜡烛柱 <公开 静态 注释 = "java: public void setShowCandleBar(boolean)">
+    参数 当前对象 <类型 = MP蜡烛数据集类>
+    参数 显示蜡烛柱 <类型 = 逻辑型>
+    {
+        @ @<当前对象>.setShowCandleBar (@<显示蜡烛柱>);
+    }
+
+    方法 取显示蜡烛柱 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean getShowCandleBar()">
+    参数 当前对象 <类型 = MP蜡烛数据集类>
+    {
+        @ @<当前对象>.getShowCandleBar ()
+    }
+
+    方法 设置中性颜色 <公开 静态 注释 = "java: public void setNeutralColor(int)">
+    参数 当前对象 <类型 = MP蜡烛数据集类>
+    参数 颜色 <类型 = 整数>
+    {
+        @ @<当前对象>.setNeutralColor (@<颜色>);
+    }
+
+    方法 取中性颜色 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getNeutralColor()">
+    参数 当前对象 <类型 = MP蜡烛数据集类>
+    {
+        @ @<当前对象>.getNeutralColor ()
+    }
+
+    方法 设置递增颜色 <公开 静态 注释 = "java: public void setIncreasingColor(int)">
+    参数 当前对象 <类型 = MP蜡烛数据集类>
+    参数 颜色 <类型 = 整数>
+    {
+        @ @<当前对象>.setIncreasingColor (@<颜色>);
+    }
+
+    方法 取递增颜色 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getIncreasingColor()">
+    参数 当前对象 <类型 = MP蜡烛数据集类>
+    {
+        @ @<当前对象>.getIncreasingColor ()
+    }
+
+    方法 设置递减颜色 <公开 静态 注释 = "java: public void setDecreasingColor(int)">
+    参数 当前对象 <类型 = MP蜡烛数据集类>
+    参数 颜色 <类型 = 整数>
+    {
+        @ @<当前对象>.setDecreasingColor (@<颜色>);
+    }
+
+    方法 取递减颜色 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getDecreasingColor()">
+    参数 当前对象 <类型 = MP蜡烛数据集类>
+    {
+        @ @<当前对象>.getDecreasingColor ()
+    }
+
+    方法 取递增画笔样式 <公开 静态 类型 = MP画笔样式类 @嵌入式方法 = "" 注释 = "java: public android.graphics.Paint$Style getIncreasingPaintStyle()">
+    参数 当前对象 <类型 = MP蜡烛数据集类>
+    {
+        @ @<当前对象>.getIncreasingPaintStyle ()
+    }
+
+    方法 设置递增画笔样式 <公开 静态 注释 = "java: public void setIncreasingPaintStyle(android.graphics.Paint$Style)">
+    参数 当前对象 <类型 = MP蜡烛数据集类>
+    参数 画笔样式 <类型 = MP画笔样式类>
+    {
+        @ @<当前对象>.setIncreasingPaintStyle (@<画笔样式>);
+    }
+
+    方法 取递减画笔样式 <公开 静态 类型 = MP画笔样式类 @嵌入式方法 = "" 注释 = "java: public android.graphics.Paint$Style getDecreasingPaintStyle()">
+    参数 当前对象 <类型 = MP蜡烛数据集类>
+    {
+        @ @<当前对象>.getDecreasingPaintStyle ()
+    }
+
+    方法 设置递减画笔样式 <公开 静态 注释 = "java: public void setDecreasingPaintStyle(android.graphics.Paint$Style)">
+    参数 当前对象 <类型 = MP蜡烛数据集类>
+    参数 递减画笔样式 <类型 = MP画笔样式类>
+    {
+        @ @<当前对象>.setDecreasingPaintStyle (@<递减画笔样式>);
+    }
+
+    方法 取阴影颜色 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getShadowColor()">
+    参数 当前对象 <类型 = MP蜡烛数据集类>
+    {
+        @ @<当前对象>.getShadowColor ()
+    }
+
+    方法 设置阴影颜色 <公开 静态 注释 = "java: public void setShadowColor(int)">
+    参数 当前对象 <类型 = MP蜡烛数据集类>
+    参数 阴影颜色 <类型 = 整数>
+    {
+        @ @<当前对象>.setShadowColor (@<阴影颜色>);
+    }
+
+    方法 取阴影颜色相同作为蜡烛 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean getShadowColorSameAsCandle()">
+    参数 当前对象 <类型 = MP蜡烛数据集类>
+    {
+        @ @<当前对象>.getShadowColorSameAsCandle ()
+    }
+
+    方法 设置阴影颜色相同作为蜡烛 <公开 静态 注释 = "java: public void setShadowColorSameAsCandle(boolean)">
+    参数 当前对象 <类型 = MP蜡烛数据集类>
+    参数 阴影颜色相同作为蜡烛 <类型 = 逻辑型>
+    {
+        @ @<当前对象>.setShadowColorSameAsCandle (@<阴影颜色相同作为蜡烛>);
+    }
+
+    方法 取递减画笔样式_2 <公开 静态 类型 = MP画笔样式类 @嵌入式方法 = "" 注释 = "java: public abstract android.graphics.Paint$Style getDecreasingPaintStyle() (承自 com.github.mikephil.charting.interfaces.datasets.ICandleDataSet)">
+    参数 当前对象 <类型 = MP蜡烛数据集类>
+    {
+        @ @<当前对象>.getDecreasingPaintStyle ()
+    }
+
+    方法 取递增画笔样式_2 <公开 静态 类型 = MP画笔样式类 @嵌入式方法 = "" 注释 = "java: public abstract android.graphics.Paint$Style getIncreasingPaintStyle() (承自 com.github.mikephil.charting.interfaces.datasets.ICandleDataSet)">
+    参数 当前对象 <类型 = MP蜡烛数据集类>
+    {
+        @ @<当前对象>.getIncreasingPaintStyle ()
+    }
+
+    方法 取阴影颜色相同作为蜡烛_2 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public abstract boolean getShadowColorSameAsCandle() (承自 com.github.mikephil.charting.interfaces.datasets.ICandleDataSet)">
+    参数 当前对象 <类型 = MP蜡烛数据集类>
+    {
+        @ @<当前对象>.getShadowColorSameAsCandle ()
+    }
+
+    方法 取显示蜡烛柱_2 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public abstract boolean getShowCandleBar() (承自 com.github.mikephil.charting.interfaces.datasets.ICandleDataSet)">
+    参数 当前对象 <类型 = MP蜡烛数据集类>
+    {
+        @ @<当前对象>.getShowCandleBar ()
+    }
+
+    方法 取柱间距_2 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public abstract float getBarSpace() (承自 com.github.mikephil.charting.interfaces.datasets.ICandleDataSet)">
+    参数 当前对象 <类型 = MP蜡烛数据集类>
+    {
+        @ @<当前对象>.getBarSpace ()
+    }
+
+    方法 取阴影宽度_2 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public abstract float getShadowWidth() (承自 com.github.mikephil.charting.interfaces.datasets.ICandleDataSet)">
+    参数 当前对象 <类型 = MP蜡烛数据集类>
+    {
+        @ @<当前对象>.getShadowWidth ()
+    }
+
+    方法 取递减颜色_2 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public abstract int getDecreasingColor() (承自 com.github.mikephil.charting.interfaces.datasets.ICandleDataSet)">
+    参数 当前对象 <类型 = MP蜡烛数据集类>
+    {
+        @ @<当前对象>.getDecreasingColor ()
+    }
+
+    方法 取递增颜色_2 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public abstract int getIncreasingColor() (承自 com.github.mikephil.charting.interfaces.datasets.ICandleDataSet)">
+    参数 当前对象 <类型 = MP蜡烛数据集类>
+    {
+        @ @<当前对象>.getIncreasingColor ()
+    }
+
+    方法 取中性颜色_2 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public abstract int getNeutralColor() (承自 com.github.mikephil.charting.interfaces.datasets.ICandleDataSet)">
+    参数 当前对象 <类型 = MP蜡烛数据集类>
+    {
+        @ @<当前对象>.getNeutralColor ()
+    }
+
+    方法 取阴影颜色_2 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public abstract int getShadowColor() (承自 com.github.mikephil.charting.interfaces.datasets.ICandleDataSet)">
+    参数 当前对象 <类型 = MP蜡烛数据集类>
+    {
+        @ @<当前对象>.getShadowColor ()
+    }
+
+}
+
+类 MP蜡烛数据点类 <公开 基础类 = MP数据点类 @别名 = "com.github.mikephil.charting.data.CandleEntry" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.data.CandleEntry.">
+{
+
+    方法 新建蜡烛数据点 <公开 静态 类型 = MP蜡烛数据点类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.CandleEntry(float, float, float, float, float)">
+    参数 横坐标 <类型 = 小数>
+    参数 阴影高亮 <类型 = 小数>
+    参数 阴影左 <类型 = 小数>
+    参数 打开 <类型 = 小数>
+    参数 闭合 <类型 = 小数>
+    {
+        @ new com.github.mikephil.charting.data.CandleEntry ((float) @<横坐标>, (float) @<阴影高亮>, (float) @<阴影左>, (float) @<打开>, (float) @<闭合>)
+    }
+
+    方法 新建蜡烛数据点_2 <公开 静态 类型 = MP蜡烛数据点类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.CandleEntry(float, float, float, float, float, java.lang.Object)">
+    参数 横坐标 <类型 = 小数>
+    参数 阴影高亮 <类型 = 小数>
+    参数 阴影左 <类型 = 小数>
+    参数 打开 <类型 = 小数>
+    参数 闭合 <类型 = 小数>
+    参数 数据 <类型 = 对象类>
+    {
+        @ new com.github.mikephil.charting.data.CandleEntry ((float) @<横坐标>, (float) @<阴影高亮>, (float) @<阴影左>, (float) @<打开>, (float) @<闭合>, @<数据>)
+    }
+
+    方法 新建蜡烛数据点_3 <公开 静态 类型 = MP蜡烛数据点类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.CandleEntry(float, float, float, float, float, android.graphics.drawable.Drawable)">
+    参数 横坐标 <类型 = 小数>
+    参数 阴影高亮 <类型 = 小数>
+    参数 阴影左 <类型 = 小数>
+    参数 打开 <类型 = 小数>
+    参数 闭合 <类型 = 小数>
+    参数 图标 <类型 = 可绘制对象类>
+    {
+        @ new com.github.mikephil.charting.data.CandleEntry ((float) @<横坐标>, (float) @<阴影高亮>, (float) @<阴影左>, (float) @<打开>, (float) @<闭合>, @<图标>)
+    }
+
+    方法 新建蜡烛数据点_4 <公开 静态 类型 = MP蜡烛数据点类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.CandleEntry(float, float, float, float, float, android.graphics.drawable.Drawable, java.lang.Object)">
+    参数 横坐标 <类型 = 小数>
+    参数 阴影高亮 <类型 = 小数>
+    参数 阴影左 <类型 = 小数>
+    参数 打开 <类型 = 小数>
+    参数 闭合 <类型 = 小数>
+    参数 图标 <类型 = 可绘制对象类>
+    参数 数据 <类型 = 对象类>
+    {
+        @ new com.github.mikephil.charting.data.CandleEntry ((float) @<横坐标>, (float) @<阴影高亮>, (float) @<阴影左>, (float) @<打开>, (float) @<闭合>, @<图标>, @<数据>)
+    }
+
+    方法 取阴影范围 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getShadowRange()">
+    参数 当前对象 <类型 = MP蜡烛数据点类>
+    {
+        @ @<当前对象>.getShadowRange ()
+    }
+
+    方法 取本体范围 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getBodyRange()">
+    参数 当前对象 <类型 = MP蜡烛数据点类>
+    {
+        @ @<当前对象>.getBodyRange ()
+    }
+
+    方法 取高 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getHigh()">
+    参数 当前对象 <类型 = MP蜡烛数据点类>
+    {
+        @ @<当前对象>.getHigh ()
+    }
+
+    方法 设置高 <公开 静态 注释 = "java: public void setHigh(float)">
+    参数 当前对象 <类型 = MP蜡烛数据点类>
+    参数 矩阵阴影高 <类型 = 小数>
+    {
+        @ @<当前对象>.setHigh ((float) @<矩阵阴影高>);
+    }
+
+    方法 取低 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getLow()">
+    参数 当前对象 <类型 = MP蜡烛数据点类>
+    {
+        @ @<当前对象>.getLow ()
+    }
+
+    方法 设置低 <公开 静态 注释 = "java: public void setLow(float)">
+    参数 当前对象 <类型 = MP蜡烛数据点类>
+    参数 矩阵阴影低 <类型 = 小数>
+    {
+        @ @<当前对象>.setLow ((float) @<矩阵阴影低>);
+    }
+
+    方法 取闭合 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getClose()">
+    参数 当前对象 <类型 = MP蜡烛数据点类>
+    {
+        @ @<当前对象>.getClose ()
+    }
+
+    方法 设置闭合 <公开 静态 注释 = "java: public void setClose(float)">
+    参数 当前对象 <类型 = MP蜡烛数据点类>
+    参数 矩阵闭合 <类型 = 小数>
+    {
+        @ @<当前对象>.setClose ((float) @<矩阵闭合>);
+    }
+
+    方法 取打开 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getOpen()">
+    参数 当前对象 <类型 = MP蜡烛数据点类>
+    {
+        @ @<当前对象>.getOpen ()
+    }
+
+    方法 设置打开 <公开 静态 注释 = "java: public void setOpen(float)">
+    参数 当前对象 <类型 = MP蜡烛数据点类>
+    参数 矩阵打开 <类型 = 小数>
+    {
+        @ @<当前对象>.setOpen ((float) @<矩阵打开>);
+    }
+
+}
+
+类 MP复合数据类 <公开 基础类 = MP线柱散蜡气数据类 @别名 = "com.github.mikephil.charting.data.CombinedData" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.data.CombinedData.">
+{
+
+    方法 新建复合数据 <公开 静态 类型 = MP复合数据类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.CombinedData()">
+    {
+        @ new com.github.mikephil.charting.data.CombinedData ()
+    }
+
+    方法 设置数据 <公开 静态 注释 = "java: public void setData(com.github.mikephil.charting.data.LineData)">
+    参数 当前对象 <类型 = MP复合数据类>
+    参数 数据 <类型 = MP折线数据类>
+    {
+        @ @<当前对象>.setData (@<数据>);
+    }
+
+    方法 设置数据_2 <公开 静态 注释 = "java: public void setData(com.github.mikephil.charting.data.BarData)">
+    参数 当前对象 <类型 = MP复合数据类>
+    参数 数据 <类型 = MP柱形数据类>
+    {
+        @ @<当前对象>.setData (@<数据>);
+    }
+
+    方法 设置数据_3 <公开 静态 注释 = "java: public void setData(com.github.mikephil.charting.data.ScatterData)">
+    参数 当前对象 <类型 = MP复合数据类>
+    参数 数据 <类型 = MP散点数据类>
+    {
+        @ @<当前对象>.setData (@<数据>);
+    }
+
+    方法 设置数据_4 <公开 静态 注释 = "java: public void setData(com.github.mikephil.charting.data.CandleData)">
+    参数 当前对象 <类型 = MP复合数据类>
+    参数 数据 <类型 = MP蜡烛数据类>
+    {
+        @ @<当前对象>.setData (@<数据>);
+    }
+
+    方法 设置数据_5 <公开 静态 注释 = "java: public void setData(com.github.mikephil.charting.data.BubbleData)">
+    参数 当前对象 <类型 = MP复合数据类>
+    参数 数据 <类型 = MP气泡数据类>
+    {
+        @ @<当前对象>.setData (@<数据>);
+    }
+
+    方法 计算最小最大 <公开 静态 注释 = "java: public void calcMinMax()">
+    参数 当前对象 <类型 = MP复合数据类>
+    {
+        @ @<当前对象>.calcMinMax ();
+    }
+
+    方法 取气泡数据 <公开 静态 类型 = MP气泡数据类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.BubbleData getBubbleData()">
+    参数 当前对象 <类型 = MP复合数据类>
+    {
+        @ @<当前对象>.getBubbleData ()
+    }
+
+    方法 取线数据 <公开 静态 类型 = MP折线数据类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.LineData getLineData()">
+    参数 当前对象 <类型 = MP复合数据类>
+    {
+        @ @<当前对象>.getLineData ()
+    }
+
+    方法 取柱数据 <公开 静态 类型 = MP柱形数据类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.BarData getBarData()">
+    参数 当前对象 <类型 = MP复合数据类>
+    {
+        @ @<当前对象>.getBarData ()
+    }
+
+    方法 取散点数据 <公开 静态 类型 = MP散点数据类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.ScatterData getScatterData()">
+    参数 当前对象 <类型 = MP复合数据类>
+    {
+        @ @<当前对象>.getScatterData ()
+    }
+
+    方法 取蜡烛数据 <公开 静态 类型 = MP蜡烛数据类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.CandleData getCandleData()">
+    参数 当前对象 <类型 = MP复合数据类>
+    {
+        @ @<当前对象>.getCandleData ()
+    }
+
+    方法 取全部数据 <公开 静态 类型 = MP列表类 @嵌入式方法 = "" 注释 = "java: public java.util.List<com.github.mikephil.charting.data.BarLineScatterCandleBubbleData> getAllData()">
+    参数 当前对象 <类型 = MP复合数据类>
+    {
+        @ @<当前对象>.getAllData ()
+    }
+
+    方法 取数据按索引 <公开 静态 类型 = MP线柱散蜡气数据类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.BarLineScatterCandleBubbleData getDataByIndex(int)">
+    参数 当前对象 <类型 = MP复合数据类>
+    参数 索引 <类型 = 整数>
+    {
+        @ @<当前对象>.getDataByIndex (@<索引>)
+    }
+
+    方法 取数据集按高亮 <公开 静态 类型 = MP线柱散蜡气数据集接口 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.interfaces.datasets.IBarLineScatterCandleBubbleDataSet<? extends com.github.mikephil.charting.data.Entry> getDataSetByHighlight(com.github.mikephil.charting.highlight.Highlight)">
+    参数 当前对象 <类型 = MP复合数据类>
+    参数 高亮 <类型 = MP高亮信息类>
+    {
+        @ @<当前对象>.getDataSetByHighlight (@<高亮>)
+    }
+
+    方法 取数据索引 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getDataIndex(com.github.mikephil.charting.data.ChartData)">
+    参数 当前对象 <类型 = MP复合数据类>
+    参数 数据 <类型 = MP图表数据类>
+    {
+        @ @<当前对象>.getDataIndex (@<数据>)
+    }
+
+    方法 移除数据集_3 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean removeDataSet(com.github.mikephil.charting.interfaces.datasets.IBarLineScatterCandleBubbleDataSet<? extends com.github.mikephil.charting.data.Entry>)">
+    参数 当前对象 <类型 = MP复合数据类>
+    参数 数据集 <类型 = MP线柱散蜡气数据集接口>
+    {
+        @ @<当前对象>.removeDataSet (@<数据集>)
+    }
+
+    方法 移除数据集_4 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean removeDataSet(int)">
+    参数 当前对象 <类型 = MP复合数据类>
+    参数 索引 <类型 = 整数>
+    {
+        @ @<当前对象>.removeDataSet (@<索引>)
+    }
+
+    方法 移除数据点_3 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean removeEntry(float, int)">
+    参数 当前对象 <类型 = MP复合数据类>
+    参数 横坐标数值 <类型 = 小数>
+    参数 数据集索引 <类型 = 整数>
+    {
+        @ @<当前对象>.removeEntry ((float) @<横坐标数值>, @<数据集索引>)
+    }
+
+}
+
+类 MP取整方式 <公开 @别名 = "com.github.mikephil.charting.data.DataSet$Rounding" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.data.DataSet$Rounding.">
+{
+
+    方法 数值集 <公开 静态 类型 = "MP取整方式 []" @嵌入式方法 = "" 注释 = "java: public static com.github.mikephil.charting.data.DataSet$Rounding[] values()">
+    参数 当前对象 <类型 = MP取整方式>
+    {
+        @ com.github.mikephil.charting.data.DataSet$Rounding.values ()
+    }
+
+    方法 取枚举值 <公开 静态 类型 = MP取整方式 @嵌入式方法 = "" 注释 = "java: public static com.github.mikephil.charting.data.DataSet$Rounding valueOf(java.lang.String)">
+    参数 当前对象 <类型 = MP取整方式>
+    参数 名称 <类型 = 文本型>
+    {
+        @ com.github.mikephil.charting.data.DataSet$Rounding.valueOf (@<名称>)
+    }
+
+    方法 取向上 <公开 静态 类型 = MP取整方式 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.data.DataSet$Rounding UP">
+    {
+        @ com.github.mikephil.charting.data.DataSet$Rounding.UP
+    }
+
+    方法 取向下 <公开 静态 类型 = MP取整方式 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.data.DataSet$Rounding DOWN">
+    {
+        @ com.github.mikephil.charting.data.DataSet$Rounding.DOWN
+    }
+
+    方法 取最近 <公开 静态 类型 = MP取整方式 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.data.DataSet$Rounding CLOSEST">
+    {
+        @ com.github.mikephil.charting.data.DataSet$Rounding.CLOSEST
+    }
+
+}
+
+类 MP折线数据类 <公开 基础类 = MP线柱散蜡气数据类 @别名 = "com.github.mikephil.charting.data.LineData" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.data.LineData.">
+{
+
+    方法 新建折线数据 <公开 静态 类型 = MP折线数据类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.LineData()">
+    {
+        @ new com.github.mikephil.charting.data.LineData ()
+    }
+
+    方法 新建折线数据_2 <公开 静态 类型 = MP折线数据类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.LineData(com.github.mikephil.charting.interfaces.datasets.ILineDataSet...)">
+    参数 数据集 <类型 = "MP折线数据集接口 []">
+    {
+        @ new com.github.mikephil.charting.data.LineData (@<数据集>)
+    }
+
+    方法 新建折线数据_3 <公开 静态 类型 = MP折线数据类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.LineData(java.util.List<com.github.mikephil.charting.interfaces.datasets.ILineDataSet>)">
+    参数 数据集 <类型 = MP列表类>
+    {
+        @ new com.github.mikephil.charting.data.LineData (@<数据集>)
+    }
+
+}
+
+类 MP线径数据集类 <公开 基础类 = MP线散蜡径数据集类 @别名 = "com.github.mikephil.charting.data.LineRadarDataSet" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.data.LineRadarDataSet.">
+{
+
+    方法 取填充颜色 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getFillColor()">
+    参数 当前对象 <类型 = MP线径数据集类>
+    {
+        @ @<当前对象>.getFillColor ()
+    }
+
+    方法 设置填充颜色 <公开 静态 注释 = "java: public void setFillColor(int)">
+    参数 当前对象 <类型 = MP线径数据集类>
+    参数 颜色 <类型 = 整数>
+    {
+        @ @<当前对象>.setFillColor (@<颜色>);
+    }
+
+    方法 取填充可绘制对象 <公开 静态 类型 = 可绘制对象类 @嵌入式方法 = "" 注释 = "java: public android.graphics.drawable.Drawable getFillDrawable()">
+    参数 当前对象 <类型 = MP线径数据集类>
+    {
+        @ @<当前对象>.getFillDrawable ()
+    }
+
+    方法 设置填充可绘制对象 <公开 静态 注释 = "java: public void setFillDrawable(android.graphics.drawable.Drawable)">
+    参数 当前对象 <类型 = MP线径数据集类>
+    参数 可绘制对象 <类型 = 可绘制对象类>
+    {
+        @ @<当前对象>.setFillDrawable (@<可绘制对象>);
+    }
+
+    方法 取填充透明度 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getFillAlpha()">
+    参数 当前对象 <类型 = MP线径数据集类>
+    {
+        @ @<当前对象>.getFillAlpha ()
+    }
+
+    方法 设置填充透明度 <公开 静态 注释 = "java: public void setFillAlpha(int)">
+    参数 当前对象 <类型 = MP线径数据集类>
+    参数 透明度 <类型 = 整数>
+    {
+        @ @<当前对象>.setFillAlpha (@<透明度>);
+    }
+
+    方法 设置线宽度 <公开 静态 注释 = "java: public void setLineWidth(float)">
+    参数 当前对象 <类型 = MP线径数据集类>
+    参数 宽度 <类型 = 小数>
+    {
+        @ @<当前对象>.setLineWidth ((float) @<宽度>);
+    }
+
+    方法 取线宽度 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getLineWidth()">
+    参数 当前对象 <类型 = MP线径数据集类>
+    {
+        @ @<当前对象>.getLineWidth ()
+    }
+
+    方法 设置绘制已填充 <公开 静态 注释 = "java: public void setDrawFilled(boolean)">
+    参数 当前对象 <类型 = MP线径数据集类>
+    参数 已填充 <类型 = 逻辑型>
+    {
+        @ @<当前对象>.setDrawFilled (@<已填充>);
+    }
+
+    方法 是否绘制已填充启用 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isDrawFilledEnabled()">
+    参数 当前对象 <类型 = MP线径数据集类>
+    {
+        @ @<当前对象>.isDrawFilledEnabled ()
+    }
+
+    方法 取填充可绘制对象_2 <公开 静态 类型 = 可绘制对象类 @嵌入式方法 = "" 注释 = "java: public abstract android.graphics.drawable.Drawable getFillDrawable() (承自 com.github.mikephil.charting.interfaces.datasets.ILineRadarDataSet)">
+    参数 当前对象 <类型 = MP线径数据集类>
+    {
+        @ @<当前对象>.getFillDrawable ()
+    }
+
+    方法 是否绘制已填充启用_2 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public abstract boolean isDrawFilledEnabled() (承自 com.github.mikephil.charting.interfaces.datasets.ILineRadarDataSet)">
+    参数 当前对象 <类型 = MP线径数据集类>
+    {
+        @ @<当前对象>.isDrawFilledEnabled ()
+    }
+
+    方法 取线宽度_2 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public abstract float getLineWidth() (承自 com.github.mikephil.charting.interfaces.datasets.ILineRadarDataSet)">
+    参数 当前对象 <类型 = MP线径数据集类>
+    {
+        @ @<当前对象>.getLineWidth ()
+    }
+
+    方法 取填充透明度_2 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public abstract int getFillAlpha() (承自 com.github.mikephil.charting.interfaces.datasets.ILineRadarDataSet)">
+    参数 当前对象 <类型 = MP线径数据集类>
+    {
+        @ @<当前对象>.getFillAlpha ()
+    }
+
+    方法 取填充颜色_2 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public abstract int getFillColor() (承自 com.github.mikephil.charting.interfaces.datasets.ILineRadarDataSet)">
+    参数 当前对象 <类型 = MP线径数据集类>
+    {
+        @ @<当前对象>.getFillColor ()
+    }
+
+    方法 设置绘制已填充_2 <公开 静态 注释 = "java: public abstract void setDrawFilled(boolean) (承自 com.github.mikephil.charting.interfaces.datasets.ILineRadarDataSet)">
+    参数 当前对象 <类型 = MP线径数据集类>
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @<当前对象>.setDrawFilled (@<启用>);
+    }
+
+}
+
+类 MP折线数据集类 <公开 基础类 = MP线径数据集类 @别名 = "com.github.mikephil.charting.data.LineDataSet" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.data.LineDataSet.">
+{
+
+    方法 新建折线数据集 <公开 静态 类型 = MP折线数据集类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.LineDataSet(java.util.List<com.github.mikephil.charting.data.Entry>, java.lang.String)">
+    参数 纵坐标数值集 <类型 = MP列表类>
+    参数 标签 <类型 = 文本型>
+    {
+        @ new com.github.mikephil.charting.data.LineDataSet (@<纵坐标数值集>, @<标签>)
+    }
+
+    方法 取模式 <公开 静态 类型 = MP折线模式 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.LineDataSet$Mode getMode()">
+    参数 当前对象 <类型 = MP折线数据集类>
+    {
+        @ @<当前对象>.getMode ()
+    }
+
+    方法 设置模式 <公开 静态 注释 = "java: public void setMode(com.github.mikephil.charting.data.LineDataSet$Mode)">
+    参数 当前对象 <类型 = MP折线数据集类>
+    参数 模式 <类型 = MP折线模式>
+    {
+        @ @<当前对象>.setMode (@<模式>);
+    }
+
+    方法 设置三次强度 <公开 静态 注释 = "java: public void setCubicIntensity(float)">
+    参数 当前对象 <类型 = MP折线数据集类>
+    参数 强度 <类型 = 小数>
+    {
+        @ @<当前对象>.setCubicIntensity ((float) @<强度>);
+    }
+
+    方法 取三次强度 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getCubicIntensity()">
+    参数 当前对象 <类型 = MP折线数据集类>
+    {
+        @ @<当前对象>.getCubicIntensity ()
+    }
+
+    方法 设置圆形半径 <公开 静态 注释 = "java: public void setCircleRadius(float)">
+    参数 当前对象 <类型 = MP折线数据集类>
+    参数 半径 <类型 = 小数>
+    {
+        @ @<当前对象>.setCircleRadius ((float) @<半径>);
+    }
+
+    方法 取圆形半径 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getCircleRadius()">
+    参数 当前对象 <类型 = MP折线数据集类>
+    {
+        @ @<当前对象>.getCircleRadius ()
+    }
+
+    方法 设置圆形中心孔半径 <公开 静态 注释 = "java: public void setCircleHoleRadius(float)">
+    参数 当前对象 <类型 = MP折线数据集类>
+    参数 中心孔半径 <类型 = 小数>
+    {
+        @ @<当前对象>.setCircleHoleRadius ((float) @<中心孔半径>);
+    }
+
+    方法 取圆形中心孔半径 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getCircleHoleRadius()">
+    参数 当前对象 <类型 = MP折线数据集类>
+    {
+        @ @<当前对象>.getCircleHoleRadius ()
+    }
+
+    方法 设置圆形尺寸 <公开 静态 注释 = "java: public void setCircleSize(float)">
+    参数 当前对象 <类型 = MP折线数据集类>
+    参数 尺寸 <类型 = 小数>
+    {
+        @ @<当前对象>.setCircleSize ((float) @<尺寸>);
+    }
+
+    方法 取圆形尺寸 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getCircleSize()">
+    参数 当前对象 <类型 = MP折线数据集类>
+    {
+        @ @<当前对象>.getCircleSize ()
+    }
+
+    方法 启用虚线 <公开 静态 注释 = "java: public void enableDashedLine(float, float, float)">
+    参数 当前对象 <类型 = MP折线数据集类>
+    参数 线长度 <类型 = 小数>
+    参数 间距长度 <类型 = 小数>
+    参数 相位 <类型 = 小数>
+    {
+        @ @<当前对象>.enableDashedLine ((float) @<线长度>, (float) @<间距长度>, (float) @<相位>);
+    }
+
+    方法 停用虚线 <公开 静态 注释 = "java: public void disableDashedLine()">
+    参数 当前对象 <类型 = MP折线数据集类>
+    {
+        @ @<当前对象>.disableDashedLine ();
+    }
+
+    方法 是否虚线启用 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isDashedLineEnabled()">
+    参数 当前对象 <类型 = MP折线数据集类>
+    {
+        @ @<当前对象>.isDashedLineEnabled ()
+    }
+
+    方法 取虚线路径效果 <公开 静态 类型 = MP虚线效果类 @嵌入式方法 = "" 注释 = "java: public android.graphics.DashPathEffect getDashPathEffect()">
+    参数 当前对象 <类型 = MP折线数据集类>
+    {
+        @ @<当前对象>.getDashPathEffect ()
+    }
+
+    方法 设置绘制圆形集 <公开 静态 注释 = "java: public void setDrawCircles(boolean)">
+    参数 当前对象 <类型 = MP折线数据集类>
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @<当前对象>.setDrawCircles (@<启用>);
+    }
+
+    方法 是否绘制圆形集启用 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isDrawCirclesEnabled()">
+    参数 当前对象 <类型 = MP折线数据集类>
+    {
+        @ @<当前对象>.isDrawCirclesEnabled ()
+    }
+
+    方法 是否绘制三次启用 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isDrawCubicEnabled()">
+    参数 当前对象 <类型 = MP折线数据集类>
+    {
+        @ @<当前对象>.isDrawCubicEnabled ()
+    }
+
+    方法 是否绘制阶梯启用 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isDrawSteppedEnabled()">
+    参数 当前对象 <类型 = MP折线数据集类>
+    {
+        @ @<当前对象>.isDrawSteppedEnabled ()
+    }
+
+    方法 取圆形颜色集 <公开 静态 类型 = MP列表类 @嵌入式方法 = "" 注释 = "java: public java.util.List<java.lang.Integer> getCircleColors()">
+    参数 当前对象 <类型 = MP折线数据集类>
+    {
+        @ @<当前对象>.getCircleColors ()
+    }
+
+    方法 取圆形颜色 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getCircleColor(int)">
+    参数 当前对象 <类型 = MP折线数据集类>
+    参数 索引 <类型 = 整数>
+    {
+        @ @<当前对象>.getCircleColor (@<索引>)
+    }
+
+    方法 取圆形颜色数量 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getCircleColorCount()">
+    参数 当前对象 <类型 = MP折线数据集类>
+    {
+        @ @<当前对象>.getCircleColorCount ()
+    }
+
+    方法 设置圆形颜色集 <公开 静态 注释 = "java: public void setCircleColors(java.util.List<java.lang.Integer>)">
+    参数 当前对象 <类型 = MP折线数据集类>
+    参数 颜色集 <类型 = MP列表类>
+    {
+        @ @<当前对象>.setCircleColors (@<颜色集>);
+    }
+
+    方法 设置圆形颜色集_2 <公开 静态 注释 = "java: public void setCircleColors(int...)">
+    参数 当前对象 <类型 = MP折线数据集类>
+    参数 颜色集 <类型 = "整数 []">
+    {
+        @ @<当前对象>.setCircleColors (@<颜色集>);
+    }
+
+    方法 设置圆形颜色集_3 <公开 静态 注释 = "java: public void setCircleColors(int[], android.content.Context)">
+    参数 当前对象 <类型 = MP折线数据集类>
+    参数 颜色集 <类型 = "整数 []">
+    参数 颜色 <类型 = 安卓窗口环境>
+    {
+        @ @<当前对象>.setCircleColors (@<颜色集>, @<颜色>);
+    }
+
+    方法 设置圆形颜色 <公开 静态 注释 = "java: public void setCircleColor(int)">
+    参数 当前对象 <类型 = MP折线数据集类>
+    参数 颜色 <类型 = 整数>
+    {
+        @ @<当前对象>.setCircleColor (@<颜色>);
+    }
+
+    方法 重置圆形颜色集 <公开 静态 注释 = "java: public void resetCircleColors()">
+    参数 当前对象 <类型 = MP折线数据集类>
+    {
+        @ @<当前对象>.resetCircleColors ();
+    }
+
+    方法 设置圆形中心孔颜色 <公开 静态 注释 = "java: public void setCircleHoleColor(int)">
+    参数 当前对象 <类型 = MP折线数据集类>
+    参数 颜色 <类型 = 整数>
+    {
+        @ @<当前对象>.setCircleHoleColor (@<颜色>);
+    }
+
+    方法 取圆形中心孔颜色 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getCircleHoleColor()">
+    参数 当前对象 <类型 = MP折线数据集类>
+    {
+        @ @<当前对象>.getCircleHoleColor ()
+    }
+
+    方法 设置绘制圆形中心孔 <公开 静态 注释 = "java: public void setDrawCircleHole(boolean)">
+    参数 当前对象 <类型 = MP折线数据集类>
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @<当前对象>.setDrawCircleHole (@<启用>);
+    }
+
+    方法 是否绘制圆形中心孔启用 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isDrawCircleHoleEnabled()">
+    参数 当前对象 <类型 = MP折线数据集类>
+    {
+        @ @<当前对象>.isDrawCircleHoleEnabled ()
+    }
+
+    方法 设置填充格式器 <公开 静态 注释 = "java: public void setFillFormatter(com.github.mikephil.charting.formatter.IFillFormatter)">
+    参数 当前对象 <类型 = MP折线数据集类>
+    参数 格式器 <类型 = MP填充格式化接口>
+    {
+        @ @<当前对象>.setFillFormatter (@<格式器>);
+    }
+
+    方法 取填充格式器 <公开 静态 类型 = MP填充格式化接口 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.formatter.IFillFormatter getFillFormatter()">
+    参数 当前对象 <类型 = MP折线数据集类>
+    {
+        @ @<当前对象>.getFillFormatter ()
+    }
+
+    方法 取虚线路径效果_2 <公开 静态 类型 = MP虚线效果类 @嵌入式方法 = "" 注释 = "java: public abstract android.graphics.DashPathEffect getDashPathEffect() (承自 com.github.mikephil.charting.interfaces.datasets.ILineDataSet)">
+    参数 当前对象 <类型 = MP折线数据集类>
+    {
+        @ @<当前对象>.getDashPathEffect ()
+    }
+
+    方法 是否虚线启用_2 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public abstract boolean isDashedLineEnabled() (承自 com.github.mikephil.charting.interfaces.datasets.ILineDataSet)">
+    参数 当前对象 <类型 = MP折线数据集类>
+    {
+        @ @<当前对象>.isDashedLineEnabled ()
+    }
+
+    方法 是否绘制圆形中心孔启用_2 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public abstract boolean isDrawCircleHoleEnabled() (承自 com.github.mikephil.charting.interfaces.datasets.ILineDataSet)">
+    参数 当前对象 <类型 = MP折线数据集类>
+    {
+        @ @<当前对象>.isDrawCircleHoleEnabled ()
+    }
+
+    方法 是否绘制圆形集启用_2 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public abstract boolean isDrawCirclesEnabled() (承自 com.github.mikephil.charting.interfaces.datasets.ILineDataSet)">
+    参数 当前对象 <类型 = MP折线数据集类>
+    {
+        @ @<当前对象>.isDrawCirclesEnabled ()
+    }
+
+    方法 是否绘制三次启用_2 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public abstract boolean isDrawCubicEnabled() (承自 com.github.mikephil.charting.interfaces.datasets.ILineDataSet)">
+    参数 当前对象 <类型 = MP折线数据集类>
+    {
+        @ @<当前对象>.isDrawCubicEnabled ()
+    }
+
+    方法 是否绘制阶梯启用_2 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public abstract boolean isDrawSteppedEnabled() (承自 com.github.mikephil.charting.interfaces.datasets.ILineDataSet)">
+    参数 当前对象 <类型 = MP折线数据集类>
+    {
+        @ @<当前对象>.isDrawSteppedEnabled ()
+    }
+
+    方法 取模式_2 <公开 静态 类型 = MP折线模式 @嵌入式方法 = "" 注释 = "java: public abstract com.github.mikephil.charting.data.LineDataSet$Mode getMode() (承自 com.github.mikephil.charting.interfaces.datasets.ILineDataSet)">
+    参数 当前对象 <类型 = MP折线数据集类>
+    {
+        @ @<当前对象>.getMode ()
+    }
+
+    方法 取填充格式器_2 <公开 静态 类型 = MP填充格式化接口 @嵌入式方法 = "" 注释 = "java: public abstract com.github.mikephil.charting.formatter.IFillFormatter getFillFormatter() (承自 com.github.mikephil.charting.interfaces.datasets.ILineDataSet)">
+    参数 当前对象 <类型 = MP折线数据集类>
+    {
+        @ @<当前对象>.getFillFormatter ()
+    }
+
+    方法 取圆形中心孔半径_2 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public abstract float getCircleHoleRadius() (承自 com.github.mikephil.charting.interfaces.datasets.ILineDataSet)">
+    参数 当前对象 <类型 = MP折线数据集类>
+    {
+        @ @<当前对象>.getCircleHoleRadius ()
+    }
+
+    方法 取圆形半径_2 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public abstract float getCircleRadius() (承自 com.github.mikephil.charting.interfaces.datasets.ILineDataSet)">
+    参数 当前对象 <类型 = MP折线数据集类>
+    {
+        @ @<当前对象>.getCircleRadius ()
+    }
+
+    方法 取三次强度_2 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public abstract float getCubicIntensity() (承自 com.github.mikephil.charting.interfaces.datasets.ILineDataSet)">
+    参数 当前对象 <类型 = MP折线数据集类>
+    {
+        @ @<当前对象>.getCubicIntensity ()
+    }
+
+    方法 取圆形颜色_2 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public abstract int getCircleColor(int) (承自 com.github.mikephil.charting.interfaces.datasets.ILineDataSet)">
+    参数 当前对象 <类型 = MP折线数据集类>
+    参数 索引 <类型 = 整数>
+    {
+        @ @<当前对象>.getCircleColor (@<索引>)
+    }
+
+    方法 取圆形颜色数量_2 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public abstract int getCircleColorCount() (承自 com.github.mikephil.charting.interfaces.datasets.ILineDataSet)">
+    参数 当前对象 <类型 = MP折线数据集类>
+    {
+        @ @<当前对象>.getCircleColorCount ()
+    }
+
+    方法 取圆形中心孔颜色_2 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public abstract int getCircleHoleColor() (承自 com.github.mikephil.charting.interfaces.datasets.ILineDataSet)">
+    参数 当前对象 <类型 = MP折线数据集类>
+    {
+        @ @<当前对象>.getCircleHoleColor ()
+    }
+
+}
+
+类 MP折线模式 <公开 @别名 = "com.github.mikephil.charting.data.LineDataSet$Mode" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.data.LineDataSet$Mode.">
+{
+
+    方法 数值集 <公开 静态 类型 = "MP折线模式 []" @嵌入式方法 = "" 注释 = "java: public static com.github.mikephil.charting.data.LineDataSet$Mode[] values()">
+    参数 当前对象 <类型 = MP折线模式>
+    {
+        @ com.github.mikephil.charting.data.LineDataSet$Mode.values ()
+    }
+
+    方法 取枚举值 <公开 静态 类型 = MP折线模式 @嵌入式方法 = "" 注释 = "java: public static com.github.mikephil.charting.data.LineDataSet$Mode valueOf(java.lang.String)">
+    参数 当前对象 <类型 = MP折线模式>
+    参数 名称 <类型 = 文本型>
+    {
+        @ com.github.mikephil.charting.data.LineDataSet$Mode.valueOf (@<名称>)
+    }
+
+    方法 取线性 <公开 静态 类型 = MP折线模式 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.data.LineDataSet$Mode LINEAR">
+    {
+        @ com.github.mikephil.charting.data.LineDataSet$Mode.LINEAR
+    }
+
+    方法 取阶梯 <公开 静态 类型 = MP折线模式 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.data.LineDataSet$Mode STEPPED">
+    {
+        @ com.github.mikephil.charting.data.LineDataSet$Mode.STEPPED
+    }
+
+    方法 取三次贝塞尔 <公开 静态 类型 = MP折线模式 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.data.LineDataSet$Mode CUBIC_BEZIER">
+    {
+        @ com.github.mikephil.charting.data.LineDataSet$Mode.CUBIC_BEZIER
+    }
+
+    方法 取横向贝塞尔 <公开 静态 类型 = MP折线模式 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.data.LineDataSet$Mode HORIZONTAL_BEZIER">
+    {
+        @ com.github.mikephil.charting.data.LineDataSet$Mode.HORIZONTAL_BEZIER
+    }
+
+}
+
+类 MP饼状数据类 <公开 基础类 = MP图表数据类 @别名 = "com.github.mikephil.charting.data.PieData" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.data.PieData.">
+{
+
+    方法 新建饼状数据 <公开 静态 类型 = MP饼状数据类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.PieData()">
+    {
+        @ new com.github.mikephil.charting.data.PieData ()
+    }
+
+    方法 新建饼状数据_2 <公开 静态 类型 = MP饼状数据类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.PieData(com.github.mikephil.charting.interfaces.datasets.IPieDataSet)">
+    参数 数据集 <类型 = MP饼状数据集接口>
+    {
+        @ new com.github.mikephil.charting.data.PieData (@<数据集>)
+    }
+
+    方法 设置数据集 <公开 静态 注释 = "java: public void setDataSet(com.github.mikephil.charting.interfaces.datasets.IPieDataSet)">
+    参数 当前对象 <类型 = MP饼状数据类>
+    参数 数据集 <类型 = MP饼状数据集接口>
+    {
+        @ @<当前对象>.setDataSet (@<数据集>);
+    }
+
+    方法 取数据集_2 <公开 静态 类型 = MP饼状数据集接口 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.interfaces.datasets.IPieDataSet getDataSet()">
+    参数 当前对象 <类型 = MP饼状数据类>
+    {
+        @ @<当前对象>.getDataSet ()
+    }
+
+    方法 取纵坐标数值求和 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getYValueSum()">
+    参数 当前对象 <类型 = MP饼状数据类>
+    {
+        @ @<当前对象>.getYValueSum ()
+    }
+
+}
+
+类 MP饼状数据集类 <公开 基础类 = MP数据集类 @别名 = "com.github.mikephil.charting.data.PieDataSet" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.data.PieDataSet.">
+{
+
+    方法 新建饼状数据集 <公开 静态 类型 = MP饼状数据集类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.PieDataSet(java.util.List<com.github.mikephil.charting.data.PieEntry>, java.lang.String)">
+    参数 纵坐标数值集 <类型 = MP列表类>
+    参数 标签 <类型 = 文本型>
+    {
+        @ new com.github.mikephil.charting.data.PieDataSet (@<纵坐标数值集>, @<标签>)
+    }
+
+    方法 设置扇区间距 <公开 静态 注释 = "java: public void setSliceSpace(float)">
+    参数 当前对象 <类型 = MP饼状数据集类>
+    参数 间距设备独立像素 <类型 = 小数>
+    {
+        @ @<当前对象>.setSliceSpace ((float) @<间距设备独立像素>);
+    }
+
+    方法 取扇区间距 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getSliceSpace()">
+    参数 当前对象 <类型 = MP饼状数据集类>
+    {
+        @ @<当前对象>.getSliceSpace ()
+    }
+
+    方法 设置自动地停用扇区间距 <公开 静态 注释 = "java: public void setAutomaticallyDisableSliceSpacing(boolean)">
+    参数 当前对象 <类型 = MP饼状数据集类>
+    参数 自动停用 <类型 = 逻辑型>
+    {
+        @ @<当前对象>.setAutomaticallyDisableSliceSpacing (@<自动停用>);
+    }
+
+    方法 是否自动地停用扇区间距启用 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isAutomaticallyDisableSliceSpacingEnabled()">
+    参数 当前对象 <类型 = MP饼状数据集类>
+    {
+        @ @<当前对象>.isAutomaticallyDisableSliceSpacingEnabled ()
+    }
+
+    方法 设置选取位移 <公开 静态 注释 = "java: public void setSelectionShift(float)">
+    参数 当前对象 <类型 = MP饼状数据集类>
+    参数 位移 <类型 = 小数>
+    {
+        @ @<当前对象>.setSelectionShift ((float) @<位移>);
+    }
+
+    方法 取选取位移 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getSelectionShift()">
+    参数 当前对象 <类型 = MP饼状数据集类>
+    {
+        @ @<当前对象>.getSelectionShift ()
+    }
+
+    方法 取横坐标数值位置 <公开 静态 类型 = MP饼图数值位置 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.PieDataSet$ValuePosition getXValuePosition()">
+    参数 当前对象 <类型 = MP饼状数据集类>
+    {
+        @ @<当前对象>.getXValuePosition ()
+    }
+
+    方法 设置横坐标数值位置 <公开 静态 注释 = "java: public void setXValuePosition(com.github.mikephil.charting.data.PieDataSet$ValuePosition)">
+    参数 当前对象 <类型 = MP饼状数据集类>
+    参数 横坐标数值位置 <类型 = MP饼图数值位置>
+    {
+        @ @<当前对象>.setXValuePosition (@<横坐标数值位置>);
+    }
+
+    方法 取纵坐标数值位置 <公开 静态 类型 = MP饼图数值位置 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.PieDataSet$ValuePosition getYValuePosition()">
+    参数 当前对象 <类型 = MP饼状数据集类>
+    {
+        @ @<当前对象>.getYValuePosition ()
+    }
+
+    方法 设置纵坐标数值位置 <公开 静态 注释 = "java: public void setYValuePosition(com.github.mikephil.charting.data.PieDataSet$ValuePosition)">
+    参数 当前对象 <类型 = MP饼状数据集类>
+    参数 纵坐标数值位置 <类型 = MP饼图数值位置>
+    {
+        @ @<当前对象>.setYValuePosition (@<纵坐标数值位置>);
+    }
+
+    方法 是否使用扇区颜色作为数值线颜色 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isUsingSliceColorAsValueLineColor()">
+    参数 当前对象 <类型 = MP饼状数据集类>
+    {
+        @ @<当前对象>.isUsingSliceColorAsValueLineColor ()
+    }
+
+    方法 设置使用扇区颜色作为数值线颜色 <公开 静态 注释 = "java: public void setUsingSliceColorAsValueLineColor(boolean)">
+    参数 当前对象 <类型 = MP饼状数据集类>
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @<当前对象>.setUsingSliceColorAsValueLineColor (@<启用>);
+    }
+
+    方法 取数值线颜色 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getValueLineColor()">
+    参数 当前对象 <类型 = MP饼状数据集类>
+    {
+        @ @<当前对象>.getValueLineColor ()
+    }
+
+    方法 设置数值线颜色 <公开 静态 注释 = "java: public void setValueLineColor(int)">
+    参数 当前对象 <类型 = MP饼状数据集类>
+    参数 数值线颜色 <类型 = 整数>
+    {
+        @ @<当前对象>.setValueLineColor (@<数值线颜色>);
+    }
+
+    方法 是否使用数值颜色对应线启用 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isUseValueColorForLineEnabled()">
+    参数 当前对象 <类型 = MP饼状数据集类>
+    {
+        @ @<当前对象>.isUseValueColorForLineEnabled ()
+    }
+
+    方法 设置使用数值颜色对应线 <公开 静态 注释 = "java: public void setUseValueColorForLine(boolean)">
+    参数 当前对象 <类型 = MP饼状数据集类>
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @<当前对象>.setUseValueColorForLine (@<启用>);
+    }
+
+    方法 取数值线宽度 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getValueLineWidth()">
+    参数 当前对象 <类型 = MP饼状数据集类>
+    {
+        @ @<当前对象>.getValueLineWidth ()
+    }
+
+    方法 设置数值线宽度 <公开 静态 注释 = "java: public void setValueLineWidth(float)">
+    参数 当前对象 <类型 = MP饼状数据集类>
+    参数 数值线宽度 <类型 = 小数>
+    {
+        @ @<当前对象>.setValueLineWidth ((float) @<数值线宽度>);
+    }
+
+    方法 取数值线局部一偏移百分比 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getValueLinePart1OffsetPercentage()">
+    参数 当前对象 <类型 = MP饼状数据集类>
+    {
+        @ @<当前对象>.getValueLinePart1OffsetPercentage ()
+    }
+
+    方法 设置数值线局部一偏移百分比 <公开 静态 注释 = "java: public void setValueLinePart1OffsetPercentage(float)">
+    参数 当前对象 <类型 = MP饼状数据集类>
+    参数 数值线局部一偏移百分比 <类型 = 小数>
+    {
+        @ @<当前对象>.setValueLinePart1OffsetPercentage ((float) @<数值线局部一偏移百分比>);
+    }
+
+    方法 取数值线局部一长度 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getValueLinePart1Length()">
+    参数 当前对象 <类型 = MP饼状数据集类>
+    {
+        @ @<当前对象>.getValueLinePart1Length ()
+    }
+
+    方法 设置数值线局部一长度 <公开 静态 注释 = "java: public void setValueLinePart1Length(float)">
+    参数 当前对象 <类型 = MP饼状数据集类>
+    参数 数值线局部一长度 <类型 = 小数>
+    {
+        @ @<当前对象>.setValueLinePart1Length ((float) @<数值线局部一长度>);
+    }
+
+    方法 取数值线局部二长度 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getValueLinePart2Length()">
+    参数 当前对象 <类型 = MP饼状数据集类>
+    {
+        @ @<当前对象>.getValueLinePart2Length ()
+    }
+
+    方法 设置数值线局部二长度 <公开 静态 注释 = "java: public void setValueLinePart2Length(float)">
+    参数 当前对象 <类型 = MP饼状数据集类>
+    参数 数值线局部二长度 <类型 = 小数>
+    {
+        @ @<当前对象>.setValueLinePart2Length ((float) @<数值线局部二长度>);
+    }
+
+    方法 是否数值线变量长度 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isValueLineVariableLength()">
+    参数 当前对象 <类型 = MP饼状数据集类>
+    {
+        @ @<当前对象>.isValueLineVariableLength ()
+    }
+
+    方法 设置数值线变量长度 <公开 静态 注释 = "java: public void setValueLineVariableLength(boolean)">
+    参数 当前对象 <类型 = MP饼状数据集类>
+    参数 数值线变量长度 <类型 = 逻辑型>
+    {
+        @ @<当前对象>.setValueLineVariableLength (@<数值线变量长度>);
+    }
+
+    方法 取高亮颜色 <公开 静态 类型 = MP整数对象类 @嵌入式方法 = "" 注释 = "java: public java.lang.Integer getHighlightColor()">
+    参数 当前对象 <类型 = MP饼状数据集类>
+    {
+        @ @<当前对象>.getHighlightColor ()
+    }
+
+    方法 设置高亮颜色 <公开 静态 注释 = "java: public void setHighlightColor(java.lang.Integer)">
+    参数 当前对象 <类型 = MP饼状数据集类>
+    参数 颜色 <类型 = MP整数对象类>
+    {
+        @ @<当前对象>.setHighlightColor (@<颜色>);
+    }
+
+    方法 是否自动地停用扇区间距启用_2 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public abstract boolean isAutomaticallyDisableSliceSpacingEnabled() (承自 com.github.mikephil.charting.interfaces.datasets.IPieDataSet)">
+    参数 当前对象 <类型 = MP饼状数据集类>
+    {
+        @ @<当前对象>.isAutomaticallyDisableSliceSpacingEnabled ()
+    }
+
+    方法 是否使用数值颜色对应线启用_2 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public abstract boolean isUseValueColorForLineEnabled() (承自 com.github.mikephil.charting.interfaces.datasets.IPieDataSet)">
+    参数 当前对象 <类型 = MP饼状数据集类>
+    {
+        @ @<当前对象>.isUseValueColorForLineEnabled ()
+    }
+
+    方法 是否数值线变量长度_2 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public abstract boolean isValueLineVariableLength() (承自 com.github.mikephil.charting.interfaces.datasets.IPieDataSet)">
+    参数 当前对象 <类型 = MP饼状数据集类>
+    {
+        @ @<当前对象>.isValueLineVariableLength ()
+    }
+
+    方法 取横坐标数值位置_2 <公开 静态 类型 = MP饼图数值位置 @嵌入式方法 = "" 注释 = "java: public abstract com.github.mikephil.charting.data.PieDataSet$ValuePosition getXValuePosition() (承自 com.github.mikephil.charting.interfaces.datasets.IPieDataSet)">
+    参数 当前对象 <类型 = MP饼状数据集类>
+    {
+        @ @<当前对象>.getXValuePosition ()
+    }
+
+    方法 取纵坐标数值位置_2 <公开 静态 类型 = MP饼图数值位置 @嵌入式方法 = "" 注释 = "java: public abstract com.github.mikephil.charting.data.PieDataSet$ValuePosition getYValuePosition() (承自 com.github.mikephil.charting.interfaces.datasets.IPieDataSet)">
+    参数 当前对象 <类型 = MP饼状数据集类>
+    {
+        @ @<当前对象>.getYValuePosition ()
+    }
+
+    方法 取选取位移_2 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public abstract float getSelectionShift() (承自 com.github.mikephil.charting.interfaces.datasets.IPieDataSet)">
+    参数 当前对象 <类型 = MP饼状数据集类>
+    {
+        @ @<当前对象>.getSelectionShift ()
+    }
+
+    方法 取扇区间距_2 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public abstract float getSliceSpace() (承自 com.github.mikephil.charting.interfaces.datasets.IPieDataSet)">
+    参数 当前对象 <类型 = MP饼状数据集类>
+    {
+        @ @<当前对象>.getSliceSpace ()
+    }
+
+    方法 取数值线局部一长度_2 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public abstract float getValueLinePart1Length() (承自 com.github.mikephil.charting.interfaces.datasets.IPieDataSet)">
+    参数 当前对象 <类型 = MP饼状数据集类>
+    {
+        @ @<当前对象>.getValueLinePart1Length ()
+    }
+
+    方法 取数值线局部一偏移百分比_2 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public abstract float getValueLinePart1OffsetPercentage() (承自 com.github.mikephil.charting.interfaces.datasets.IPieDataSet)">
+    参数 当前对象 <类型 = MP饼状数据集类>
+    {
+        @ @<当前对象>.getValueLinePart1OffsetPercentage ()
+    }
+
+    方法 取数值线局部二长度_2 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public abstract float getValueLinePart2Length() (承自 com.github.mikephil.charting.interfaces.datasets.IPieDataSet)">
+    参数 当前对象 <类型 = MP饼状数据集类>
+    {
+        @ @<当前对象>.getValueLinePart2Length ()
+    }
+
+    方法 取数值线宽度_2 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public abstract float getValueLineWidth() (承自 com.github.mikephil.charting.interfaces.datasets.IPieDataSet)">
+    参数 当前对象 <类型 = MP饼状数据集类>
+    {
+        @ @<当前对象>.getValueLineWidth ()
+    }
+
+    方法 取数值线颜色_2 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public abstract int getValueLineColor() (承自 com.github.mikephil.charting.interfaces.datasets.IPieDataSet)">
+    参数 当前对象 <类型 = MP饼状数据集类>
+    {
+        @ @<当前对象>.getValueLineColor ()
+    }
+
+    方法 取高亮颜色_2 <公开 静态 类型 = MP整数对象类 @嵌入式方法 = "" 注释 = "java: public abstract java.lang.Integer getHighlightColor() (承自 com.github.mikephil.charting.interfaces.datasets.IPieDataSet)">
+    参数 当前对象 <类型 = MP饼状数据集类>
+    {
+        @ @<当前对象>.getHighlightColor ()
+    }
+
+}
+
+类 MP饼图数值位置 <公开 @别名 = "com.github.mikephil.charting.data.PieDataSet$ValuePosition" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.data.PieDataSet$ValuePosition.">
+{
+
+    方法 数值集 <公开 静态 类型 = "MP饼图数值位置 []" @嵌入式方法 = "" 注释 = "java: public static com.github.mikephil.charting.data.PieDataSet$ValuePosition[] values()">
+    参数 当前对象 <类型 = MP饼图数值位置>
+    {
+        @ com.github.mikephil.charting.data.PieDataSet$ValuePosition.values ()
+    }
+
+    方法 取枚举值 <公开 静态 类型 = MP饼图数值位置 @嵌入式方法 = "" 注释 = "java: public static com.github.mikephil.charting.data.PieDataSet$ValuePosition valueOf(java.lang.String)">
+    参数 当前对象 <类型 = MP饼图数值位置>
+    参数 名称 <类型 = 文本型>
+    {
+        @ com.github.mikephil.charting.data.PieDataSet$ValuePosition.valueOf (@<名称>)
+    }
+
+    方法 取内部扇区 <公开 静态 类型 = MP饼图数值位置 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.data.PieDataSet$ValuePosition INSIDE_SLICE">
+    {
+        @ com.github.mikephil.charting.data.PieDataSet$ValuePosition.INSIDE_SLICE
+    }
+
+    方法 取外部扇区 <公开 静态 类型 = MP饼图数值位置 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.data.PieDataSet$ValuePosition OUTSIDE_SLICE">
+    {
+        @ com.github.mikephil.charting.data.PieDataSet$ValuePosition.OUTSIDE_SLICE
+    }
+
+}
+
+类 MP饼状数据点类 <公开 基础类 = MP数据点类 @别名 = "com.github.mikephil.charting.data.PieEntry" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.data.PieEntry.">
+{
+
+    方法 新建饼状数据点 <公开 静态 类型 = MP饼状数据点类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.PieEntry(float)">
+    参数 数值 <类型 = 小数>
+    {
+        @ new com.github.mikephil.charting.data.PieEntry ((float) @<数值>)
+    }
+
+    方法 新建饼状数据点_2 <公开 静态 类型 = MP饼状数据点类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.PieEntry(float, java.lang.Object)">
+    参数 数值 <类型 = 小数>
+    参数 数据 <类型 = 对象类>
+    {
+        @ new com.github.mikephil.charting.data.PieEntry ((float) @<数值>, @<数据>)
+    }
+
+    方法 新建饼状数据点_3 <公开 静态 类型 = MP饼状数据点类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.PieEntry(float, android.graphics.drawable.Drawable)">
+    参数 数值 <类型 = 小数>
+    参数 图标 <类型 = 可绘制对象类>
+    {
+        @ new com.github.mikephil.charting.data.PieEntry ((float) @<数值>, @<图标>)
+    }
+
+    方法 新建饼状数据点_4 <公开 静态 类型 = MP饼状数据点类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.PieEntry(float, android.graphics.drawable.Drawable, java.lang.Object)">
+    参数 数值 <类型 = 小数>
+    参数 图标 <类型 = 可绘制对象类>
+    参数 数据 <类型 = 对象类>
+    {
+        @ new com.github.mikephil.charting.data.PieEntry ((float) @<数值>, @<图标>, @<数据>)
+    }
+
+    方法 新建饼状数据点_5 <公开 静态 类型 = MP饼状数据点类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.PieEntry(float, java.lang.String)">
+    参数 数值 <类型 = 小数>
+    参数 标签 <类型 = 文本型>
+    {
+        @ new com.github.mikephil.charting.data.PieEntry ((float) @<数值>, @<标签>)
+    }
+
+    方法 新建饼状数据点_6 <公开 静态 类型 = MP饼状数据点类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.PieEntry(float, java.lang.String, java.lang.Object)">
+    参数 数值 <类型 = 小数>
+    参数 标签 <类型 = 文本型>
+    参数 数据 <类型 = 对象类>
+    {
+        @ new com.github.mikephil.charting.data.PieEntry ((float) @<数值>, @<标签>, @<数据>)
+    }
+
+    方法 新建饼状数据点_7 <公开 静态 类型 = MP饼状数据点类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.PieEntry(float, java.lang.String, android.graphics.drawable.Drawable)">
+    参数 数值 <类型 = 小数>
+    参数 标签 <类型 = 文本型>
+    参数 图标 <类型 = 可绘制对象类>
+    {
+        @ new com.github.mikephil.charting.data.PieEntry ((float) @<数值>, @<标签>, @<图标>)
+    }
+
+    方法 新建饼状数据点_8 <公开 静态 类型 = MP饼状数据点类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.PieEntry(float, java.lang.String, android.graphics.drawable.Drawable, java.lang.Object)">
+    参数 数值 <类型 = 小数>
+    参数 标签 <类型 = 文本型>
+    参数 图标 <类型 = 可绘制对象类>
+    参数 数据 <类型 = 对象类>
+    {
+        @ new com.github.mikephil.charting.data.PieEntry ((float) @<数值>, @<标签>, @<图标>, @<数据>)
+    }
+
+    方法 取数值 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getValue()">
+    参数 当前对象 <类型 = MP饼状数据点类>
+    {
+        @ @<当前对象>.getValue ()
+    }
+
+    方法 取标签 <公开 静态 类型 = 文本型 @嵌入式方法 = "" 注释 = "java: public java.lang.String getLabel()">
+    参数 当前对象 <类型 = MP饼状数据点类>
+    {
+        @ @<当前对象>.getLabel ()
+    }
+
+    方法 设置标签 <公开 静态 注释 = "java: public void setLabel(java.lang.String)">
+    参数 当前对象 <类型 = MP饼状数据点类>
+    参数 标签 <类型 = 文本型>
+    {
+        @ @<当前对象>.setLabel (@<标签>);
+    }
+
+}
+
+类 MP雷达数据类 <公开 基础类 = MP图表数据类 @别名 = "com.github.mikephil.charting.data.RadarData" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.data.RadarData.">
+{
+
+    方法 新建雷达数据 <公开 静态 类型 = MP雷达数据类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.RadarData()">
+    {
+        @ new com.github.mikephil.charting.data.RadarData ()
+    }
+
+    方法 新建雷达数据_2 <公开 静态 类型 = MP雷达数据类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.RadarData(java.util.List<com.github.mikephil.charting.interfaces.datasets.IRadarDataSet>)">
+    参数 数据集 <类型 = MP列表类>
+    {
+        @ new com.github.mikephil.charting.data.RadarData (@<数据集>)
+    }
+
+    方法 新建雷达数据_3 <公开 静态 类型 = MP雷达数据类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.RadarData(com.github.mikephil.charting.interfaces.datasets.IRadarDataSet...)">
+    参数 数据集 <类型 = "MP雷达数据集接口 []">
+    {
+        @ new com.github.mikephil.charting.data.RadarData (@<数据集>)
+    }
+
+    方法 设置标签集 <公开 静态 注释 = "java: public void setLabels(java.util.List<java.lang.String>)">
+    参数 当前对象 <类型 = MP雷达数据类>
+    参数 标签集 <类型 = MP列表类>
+    {
+        @ @<当前对象>.setLabels (@<标签集>);
+    }
+
+    方法 设置标签集_2 <公开 静态 注释 = "java: public void setLabels(java.lang.String...)">
+    参数 当前对象 <类型 = MP雷达数据类>
+    参数 标签集 <类型 = "文本型 []">
+    {
+        @ @<当前对象>.setLabels (@<标签集>);
+    }
+
+    方法 取标签集 <公开 静态 类型 = MP列表类 @嵌入式方法 = "" 注释 = "java: public java.util.List<java.lang.String> getLabels()">
+    参数 当前对象 <类型 = MP雷达数据类>
+    {
+        @ @<当前对象>.getLabels ()
+    }
+
+}
+
+类 MP雷达数据集类 <公开 基础类 = MP线径数据集类 @别名 = "com.github.mikephil.charting.data.RadarDataSet" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.data.RadarDataSet.">
+{
+
+    方法 新建雷达数据集 <公开 静态 类型 = MP雷达数据集类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.RadarDataSet(java.util.List<com.github.mikephil.charting.data.RadarEntry>, java.lang.String)">
+    参数 纵坐标数值集 <类型 = MP列表类>
+    参数 标签 <类型 = 文本型>
+    {
+        @ new com.github.mikephil.charting.data.RadarDataSet (@<纵坐标数值集>, @<标签>)
+    }
+
+    方法 是否绘制高亮圆形启用 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isDrawHighlightCircleEnabled()">
+    参数 当前对象 <类型 = MP雷达数据集类>
+    {
+        @ @<当前对象>.isDrawHighlightCircleEnabled ()
+    }
+
+    方法 设置绘制高亮圆形启用 <公开 静态 注释 = "java: public void setDrawHighlightCircleEnabled(boolean)">
+    参数 当前对象 <类型 = MP雷达数据集类>
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @<当前对象>.setDrawHighlightCircleEnabled (@<启用>);
+    }
+
+    方法 取高亮圆形填充颜色 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getHighlightCircleFillColor()">
+    参数 当前对象 <类型 = MP雷达数据集类>
+    {
+        @ @<当前对象>.getHighlightCircleFillColor ()
+    }
+
+    方法 设置高亮圆形填充颜色 <公开 静态 注释 = "java: public void setHighlightCircleFillColor(int)">
+    参数 当前对象 <类型 = MP雷达数据集类>
+    参数 颜色 <类型 = 整数>
+    {
+        @ @<当前对象>.setHighlightCircleFillColor (@<颜色>);
+    }
+
+    方法 取高亮圆形描边颜色 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getHighlightCircleStrokeColor()">
+    参数 当前对象 <类型 = MP雷达数据集类>
+    {
+        @ @<当前对象>.getHighlightCircleStrokeColor ()
+    }
+
+    方法 设置高亮圆形描边颜色 <公开 静态 注释 = "java: public void setHighlightCircleStrokeColor(int)">
+    参数 当前对象 <类型 = MP雷达数据集类>
+    参数 颜色 <类型 = 整数>
+    {
+        @ @<当前对象>.setHighlightCircleStrokeColor (@<颜色>);
+    }
+
+    方法 取高亮圆形描边透明度 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getHighlightCircleStrokeAlpha()">
+    参数 当前对象 <类型 = MP雷达数据集类>
+    {
+        @ @<当前对象>.getHighlightCircleStrokeAlpha ()
+    }
+
+    方法 设置高亮圆形描边透明度 <公开 静态 注释 = "java: public void setHighlightCircleStrokeAlpha(int)">
+    参数 当前对象 <类型 = MP雷达数据集类>
+    参数 透明度 <类型 = 整数>
+    {
+        @ @<当前对象>.setHighlightCircleStrokeAlpha (@<透明度>);
+    }
+
+    方法 取高亮圆形内半径 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getHighlightCircleInnerRadius()">
+    参数 当前对象 <类型 = MP雷达数据集类>
+    {
+        @ @<当前对象>.getHighlightCircleInnerRadius ()
+    }
+
+    方法 设置高亮圆形内半径 <公开 静态 注释 = "java: public void setHighlightCircleInnerRadius(float)">
+    参数 当前对象 <类型 = MP雷达数据集类>
+    参数 半径 <类型 = 小数>
+    {
+        @ @<当前对象>.setHighlightCircleInnerRadius ((float) @<半径>);
+    }
+
+    方法 取高亮圆形外半径 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getHighlightCircleOuterRadius()">
+    参数 当前对象 <类型 = MP雷达数据集类>
+    {
+        @ @<当前对象>.getHighlightCircleOuterRadius ()
+    }
+
+    方法 设置高亮圆形外半径 <公开 静态 注释 = "java: public void setHighlightCircleOuterRadius(float)">
+    参数 当前对象 <类型 = MP雷达数据集类>
+    参数 半径 <类型 = 小数>
+    {
+        @ @<当前对象>.setHighlightCircleOuterRadius ((float) @<半径>);
+    }
+
+    方法 取高亮圆形描边宽度 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getHighlightCircleStrokeWidth()">
+    参数 当前对象 <类型 = MP雷达数据集类>
+    {
+        @ @<当前对象>.getHighlightCircleStrokeWidth ()
+    }
+
+    方法 设置高亮圆形描边宽度 <公开 静态 注释 = "java: public void setHighlightCircleStrokeWidth(float)">
+    参数 当前对象 <类型 = MP雷达数据集类>
+    参数 描边宽度 <类型 = 小数>
+    {
+        @ @<当前对象>.setHighlightCircleStrokeWidth ((float) @<描边宽度>);
+    }
+
+    方法 是否绘制高亮圆形启用_2 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public abstract boolean isDrawHighlightCircleEnabled() (承自 com.github.mikephil.charting.interfaces.datasets.IRadarDataSet)">
+    参数 当前对象 <类型 = MP雷达数据集类>
+    {
+        @ @<当前对象>.isDrawHighlightCircleEnabled ()
+    }
+
+    方法 取高亮圆形内半径_2 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public abstract float getHighlightCircleInnerRadius() (承自 com.github.mikephil.charting.interfaces.datasets.IRadarDataSet)">
+    参数 当前对象 <类型 = MP雷达数据集类>
+    {
+        @ @<当前对象>.getHighlightCircleInnerRadius ()
+    }
+
+    方法 取高亮圆形外半径_2 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public abstract float getHighlightCircleOuterRadius() (承自 com.github.mikephil.charting.interfaces.datasets.IRadarDataSet)">
+    参数 当前对象 <类型 = MP雷达数据集类>
+    {
+        @ @<当前对象>.getHighlightCircleOuterRadius ()
+    }
+
+    方法 取高亮圆形描边宽度_2 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public abstract float getHighlightCircleStrokeWidth() (承自 com.github.mikephil.charting.interfaces.datasets.IRadarDataSet)">
+    参数 当前对象 <类型 = MP雷达数据集类>
+    {
+        @ @<当前对象>.getHighlightCircleStrokeWidth ()
+    }
+
+    方法 取高亮圆形填充颜色_2 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public abstract int getHighlightCircleFillColor() (承自 com.github.mikephil.charting.interfaces.datasets.IRadarDataSet)">
+    参数 当前对象 <类型 = MP雷达数据集类>
+    {
+        @ @<当前对象>.getHighlightCircleFillColor ()
+    }
+
+    方法 取高亮圆形描边透明度_2 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public abstract int getHighlightCircleStrokeAlpha() (承自 com.github.mikephil.charting.interfaces.datasets.IRadarDataSet)">
+    参数 当前对象 <类型 = MP雷达数据集类>
+    {
+        @ @<当前对象>.getHighlightCircleStrokeAlpha ()
+    }
+
+    方法 取高亮圆形描边颜色_2 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public abstract int getHighlightCircleStrokeColor() (承自 com.github.mikephil.charting.interfaces.datasets.IRadarDataSet)">
+    参数 当前对象 <类型 = MP雷达数据集类>
+    {
+        @ @<当前对象>.getHighlightCircleStrokeColor ()
+    }
+
+    方法 设置绘制高亮圆形启用_2 <公开 静态 注释 = "java: public abstract void setDrawHighlightCircleEnabled(boolean) (承自 com.github.mikephil.charting.interfaces.datasets.IRadarDataSet)">
+    参数 当前对象 <类型 = MP雷达数据集类>
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @<当前对象>.setDrawHighlightCircleEnabled (@<启用>);
+    }
+
+}
+
+类 MP雷达数据点类 <公开 基础类 = MP数据点类 @别名 = "com.github.mikephil.charting.data.RadarEntry" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.data.RadarEntry.">
+{
+
+    方法 新建雷达数据点 <公开 静态 类型 = MP雷达数据点类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.RadarEntry(float)">
+    参数 数值 <类型 = 小数>
+    {
+        @ new com.github.mikephil.charting.data.RadarEntry ((float) @<数值>)
+    }
+
+    方法 新建雷达数据点_2 <公开 静态 类型 = MP雷达数据点类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.RadarEntry(float, java.lang.Object)">
+    参数 数值 <类型 = 小数>
+    参数 数据 <类型 = 对象类>
+    {
+        @ new com.github.mikephil.charting.data.RadarEntry ((float) @<数值>, @<数据>)
+    }
+
+    方法 取数值 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getValue()">
+    参数 当前对象 <类型 = MP雷达数据点类>
+    {
+        @ @<当前对象>.getValue ()
+    }
+
+}
+
+类 MP散点数据类 <公开 基础类 = MP线柱散蜡气数据类 @别名 = "com.github.mikephil.charting.data.ScatterData" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.data.ScatterData.">
+{
+
+    方法 新建散点数据 <公开 静态 类型 = MP散点数据类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.ScatterData()">
+    {
+        @ new com.github.mikephil.charting.data.ScatterData ()
+    }
+
+    方法 新建散点数据_2 <公开 静态 类型 = MP散点数据类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.ScatterData(java.util.List<com.github.mikephil.charting.interfaces.datasets.IScatterDataSet>)">
+    参数 数据集 <类型 = MP列表类>
+    {
+        @ new com.github.mikephil.charting.data.ScatterData (@<数据集>)
+    }
+
+    方法 新建散点数据_3 <公开 静态 类型 = MP散点数据类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.ScatterData(com.github.mikephil.charting.interfaces.datasets.IScatterDataSet...)">
+    参数 数据集 <类型 = "MP散点数据集接口 []">
+    {
+        @ new com.github.mikephil.charting.data.ScatterData (@<数据集>)
+    }
+
+    方法 取最大形状尺寸 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getGreatestShapeSize()">
+    参数 当前对象 <类型 = MP散点数据类>
+    {
+        @ @<当前对象>.getGreatestShapeSize ()
+    }
+
+}
+
+类 MP散点数据集类 <公开 基础类 = MP线散蜡径数据集类 @别名 = "com.github.mikephil.charting.data.ScatterDataSet" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.data.ScatterDataSet.">
+{
+
+    方法 新建散点数据集 <公开 静态 类型 = MP散点数据集类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.ScatterDataSet(java.util.List<com.github.mikephil.charting.data.Entry>, java.lang.String)">
+    参数 纵坐标数值集 <类型 = MP列表类>
+    参数 标签 <类型 = 文本型>
+    {
+        @ new com.github.mikephil.charting.data.ScatterDataSet (@<纵坐标数值集>, @<标签>)
+    }
+
+    方法 设置散点形状尺寸 <公开 静态 注释 = "java: public void setScatterShapeSize(float)">
+    参数 当前对象 <类型 = MP散点数据集类>
+    参数 尺寸 <类型 = 小数>
+    {
+        @ @<当前对象>.setScatterShapeSize ((float) @<尺寸>);
+    }
+
+    方法 取散点形状尺寸 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getScatterShapeSize()">
+    参数 当前对象 <类型 = MP散点数据集类>
+    {
+        @ @<当前对象>.getScatterShapeSize ()
+    }
+
+    方法 设置散点形状 <公开 静态 注释 = "java: public void setScatterShape(com.github.mikephil.charting.charts.ScatterChart$ScatterShape)">
+    参数 当前对象 <类型 = MP散点数据集类>
+    参数 形状 <类型 = MP散点形状>
+    {
+        @ @<当前对象>.setScatterShape (@<形状>);
+    }
+
+    方法 设置形状渲染器 <公开 静态 注释 = "java: public void setShapeRenderer(com.github.mikephil.charting.renderer.scatter.IShapeRenderer)">
+    参数 当前对象 <类型 = MP散点数据集类>
+    参数 形状渲染器 <类型 = MP散点形状渲染器接口>
+    {
+        @ @<当前对象>.setShapeRenderer (@<形状渲染器>);
+    }
+
+    方法 取形状渲染器 <公开 静态 类型 = MP散点形状渲染器接口 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.renderer.scatter.IShapeRenderer getShapeRenderer()">
+    参数 当前对象 <类型 = MP散点数据集类>
+    {
+        @ @<当前对象>.getShapeRenderer ()
+    }
+
+    方法 设置散点形状中心孔半径 <公开 静态 注释 = "java: public void setScatterShapeHoleRadius(float)">
+    参数 当前对象 <类型 = MP散点数据集类>
+    参数 中心孔半径 <类型 = 小数>
+    {
+        @ @<当前对象>.setScatterShapeHoleRadius ((float) @<中心孔半径>);
+    }
+
+    方法 取散点形状中心孔半径 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getScatterShapeHoleRadius()">
+    参数 当前对象 <类型 = MP散点数据集类>
+    {
+        @ @<当前对象>.getScatterShapeHoleRadius ()
+    }
+
+    方法 设置散点形状中心孔颜色 <公开 静态 注释 = "java: public void setScatterShapeHoleColor(int)">
+    参数 当前对象 <类型 = MP散点数据集类>
+    参数 中心孔颜色 <类型 = 整数>
+    {
+        @ @<当前对象>.setScatterShapeHoleColor (@<中心孔颜色>);
+    }
+
+    方法 取散点形状中心孔颜色 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getScatterShapeHoleColor()">
+    参数 当前对象 <类型 = MP散点数据集类>
+    {
+        @ @<当前对象>.getScatterShapeHoleColor ()
+    }
+
+    方法 取渲染器对应形状 <公开 静态 类型 = MP散点形状渲染器接口 @嵌入式方法 = "" 注释 = "java: public static com.github.mikephil.charting.renderer.scatter.IShapeRenderer getRendererForShape(com.github.mikephil.charting.charts.ScatterChart$ScatterShape)">
+    参数 当前对象 <类型 = MP散点数据集类>
+    参数 形状 <类型 = MP散点形状>
+    {
+        @ com.github.mikephil.charting.data.ScatterDataSet.getRendererForShape (@<形状>)
+    }
+
+    方法 取形状渲染器_2 <公开 静态 类型 = MP散点形状渲染器接口 @嵌入式方法 = "" 注释 = "java: public abstract com.github.mikephil.charting.renderer.scatter.IShapeRenderer getShapeRenderer() (承自 com.github.mikephil.charting.interfaces.datasets.IScatterDataSet)">
+    参数 当前对象 <类型 = MP散点数据集类>
+    {
+        @ @<当前对象>.getShapeRenderer ()
+    }
+
+    方法 取散点形状中心孔半径_2 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public abstract float getScatterShapeHoleRadius() (承自 com.github.mikephil.charting.interfaces.datasets.IScatterDataSet)">
+    参数 当前对象 <类型 = MP散点数据集类>
+    {
+        @ @<当前对象>.getScatterShapeHoleRadius ()
+    }
+
+    方法 取散点形状尺寸_2 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public abstract float getScatterShapeSize() (承自 com.github.mikephil.charting.interfaces.datasets.IScatterDataSet)">
+    参数 当前对象 <类型 = MP散点数据集类>
+    {
+        @ @<当前对象>.getScatterShapeSize ()
+    }
+
+    方法 取散点形状中心孔颜色_2 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public abstract int getScatterShapeHoleColor() (承自 com.github.mikephil.charting.interfaces.datasets.IScatterDataSet)">
+    参数 当前对象 <类型 = MP散点数据集类>
+    {
+        @ @<当前对象>.getScatterShapeHoleColor ()
+    }
+
+}
+
+类 MP逼近器类 <公开 @别名 = "com.github.mikephil.charting.data.filter.Approximator" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.data.filter.Approximator.">
+{
+
+    方法 新建逼近器 <公开 静态 类型 = MP逼近器类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.filter.Approximator()">
+    {
+        @ new com.github.mikephil.charting.data.filter.Approximator ()
+    }
+
+    方法 缩减连同道格拉斯普克 <公开 静态 类型 = "小数 []" @嵌入式方法 = "" 注释 = "java: public float[] reduceWithDouglasPeucker(float[], float)">
+    参数 当前对象 <类型 = MP逼近器类>
+    参数 点集 <类型 = "小数 []">
+    参数 容差 <类型 = 小数>
+    {
+        @ @<当前对象>.reduceWithDouglasPeucker (@<点集>, (float) @<容差>)
+    }
+
+}
+
+类 MP分段逼近器类 <公开 @别名 = "com.github.mikephil.charting.data.filter.ApproximatorN" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.data.filter.ApproximatorN.">
+{
+
+    方法 新建分段逼近器 <公开 静态 类型 = MP分段逼近器类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.data.filter.ApproximatorN()">
+    {
+        @ new com.github.mikephil.charting.data.filter.ApproximatorN ()
+    }
+
+    方法 缩减连同道格拉斯普克 <公开 静态 类型 = "小数 []" @嵌入式方法 = "" 注释 = "java: public float[] reduceWithDouglasPeucker(float[], float)">
+    参数 当前对象 <类型 = MP分段逼近器类>
+    参数 点集 <类型 = "小数 []">
+    参数 结果数量 <类型 = 小数>
+    {
+        @ @<当前对象>.reduceWithDouglasPeucker (@<点集>, (float) @<结果数量>)
+    }
+
+}
+
+类 MP线柱散蜡气数据集接口 <公开 基础类 = MP数据集接口 @别名 = "com.github.mikephil.charting.interfaces.datasets.IBarLineScatterCandleBubbleDataSet" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.interfaces.datasets.IBarLineScatterCandleBubbleDataSet.">
+{
+
+    方法 取高亮颜色 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public abstract int getHighLightColor()">
+    参数 当前对象 <类型 = MP线柱散蜡气数据集接口>
+    {
+        @ @<当前对象>.getHighLightColor ()
+    }
+
+}
+
+类 MP柱形数据集接口 <公开 基础类 = MP线柱散蜡气数据集接口 @别名 = "com.github.mikephil.charting.interfaces.datasets.IBarDataSet" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.interfaces.datasets.IBarDataSet.">
+{
+
+    方法 取填充集 <公开 静态 类型 = MP列表类 @嵌入式方法 = "" 注释 = "java: public abstract java.util.List<com.github.mikephil.charting.utils.Fill> getFills()">
+    参数 当前对象 <类型 = MP柱形数据集接口>
+    {
+        @ @<当前对象>.getFills ()
+    }
+
+    方法 取填充 <公开 静态 类型 = MP填充类 @嵌入式方法 = "" 注释 = "java: public abstract com.github.mikephil.charting.utils.Fill getFill(int)">
+    参数 当前对象 <类型 = MP柱形数据集接口>
+    参数 索引 <类型 = 整数>
+    {
+        @ @<当前对象>.getFill (@<索引>)
+    }
+
+    方法 是否已堆叠 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public abstract boolean isStacked()">
+    参数 当前对象 <类型 = MP柱形数据集接口>
+    {
+        @ @<当前对象>.isStacked ()
+    }
+
+    方法 取堆叠尺寸 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public abstract int getStackSize()">
+    参数 当前对象 <类型 = MP柱形数据集接口>
+    {
+        @ @<当前对象>.getStackSize ()
+    }
+
+    方法 取柱阴影颜色 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public abstract int getBarShadowColor()">
+    参数 当前对象 <类型 = MP柱形数据集接口>
+    {
+        @ @<当前对象>.getBarShadowColor ()
+    }
+
+    方法 取柱边框宽度 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public abstract float getBarBorderWidth()">
+    参数 当前对象 <类型 = MP柱形数据集接口>
+    {
+        @ @<当前对象>.getBarBorderWidth ()
+    }
+
+    方法 取柱边框颜色 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public abstract int getBarBorderColor()">
+    参数 当前对象 <类型 = MP柱形数据集接口>
+    {
+        @ @<当前对象>.getBarBorderColor ()
+    }
+
+    方法 取高亮透明度 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public abstract int getHighLightAlpha()">
+    参数 当前对象 <类型 = MP柱形数据集接口>
+    {
+        @ @<当前对象>.getHighLightAlpha ()
+    }
+
+    方法 取堆叠标签集 <公开 静态 类型 = "文本型 []" @嵌入式方法 = "" 注释 = "java: public abstract java.lang.String[] getStackLabels()">
+    参数 当前对象 <类型 = MP柱形数据集接口>
+    {
+        @ @<当前对象>.getStackLabels ()
+    }
+
+}
+
+类 MP气泡数据集接口 <公开 基础类 = MP线柱散蜡气数据集接口 @别名 = "com.github.mikephil.charting.interfaces.datasets.IBubbleDataSet" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.interfaces.datasets.IBubbleDataSet.">
+{
+
+    方法 设置高亮圆形宽度 <公开 静态 注释 = "java: public abstract void setHighlightCircleWidth(float)">
+    参数 当前对象 <类型 = MP气泡数据集接口>
+    参数 宽度 <类型 = 小数>
+    {
+        @ @<当前对象>.setHighlightCircleWidth ((float) @<宽度>);
+    }
+
+    方法 取最大尺寸 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public abstract float getMaxSize()">
+    参数 当前对象 <类型 = MP气泡数据集接口>
+    {
+        @ @<当前对象>.getMaxSize ()
+    }
+
+    方法 是否归一化尺寸启用 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public abstract boolean isNormalizeSizeEnabled()">
+    参数 当前对象 <类型 = MP气泡数据集接口>
+    {
+        @ @<当前对象>.isNormalizeSizeEnabled ()
+    }
+
+    方法 取高亮圆形宽度 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public abstract float getHighlightCircleWidth()">
+    参数 当前对象 <类型 = MP气泡数据集接口>
+    {
+        @ @<当前对象>.getHighlightCircleWidth ()
+    }
+
+}
+
+类 MP线散蜡径数据集接口 <公开 基础类 = MP线柱散蜡气数据集接口 @别名 = "com.github.mikephil.charting.interfaces.datasets.ILineScatterCandleRadarDataSet" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.interfaces.datasets.ILineScatterCandleRadarDataSet.">
+{
+
+    方法 是否纵向高亮指示器启用 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public abstract boolean isVerticalHighlightIndicatorEnabled()">
+    参数 当前对象 <类型 = MP线散蜡径数据集接口>
+    {
+        @ @<当前对象>.isVerticalHighlightIndicatorEnabled ()
+    }
+
+    方法 是否横向高亮指示器启用 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public abstract boolean isHorizontalHighlightIndicatorEnabled()">
+    参数 当前对象 <类型 = MP线散蜡径数据集接口>
+    {
+        @ @<当前对象>.isHorizontalHighlightIndicatorEnabled ()
+    }
+
+    方法 取高亮线宽度 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public abstract float getHighlightLineWidth()">
+    参数 当前对象 <类型 = MP线散蜡径数据集接口>
+    {
+        @ @<当前对象>.getHighlightLineWidth ()
+    }
+
+    方法 取虚线路径效果高亮 <公开 静态 类型 = MP虚线效果类 @嵌入式方法 = "" 注释 = "java: public abstract android.graphics.DashPathEffect getDashPathEffectHighlight()">
+    参数 当前对象 <类型 = MP线散蜡径数据集接口>
+    {
+        @ @<当前对象>.getDashPathEffectHighlight ()
+    }
+
+}
+
+类 MP蜡烛数据集接口 <公开 基础类 = MP线散蜡径数据集接口 @别名 = "com.github.mikephil.charting.interfaces.datasets.ICandleDataSet" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.interfaces.datasets.ICandleDataSet.">
+{
+
+    方法 取柱间距 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public abstract float getBarSpace()">
+    参数 当前对象 <类型 = MP蜡烛数据集接口>
+    {
+        @ @<当前对象>.getBarSpace ()
+    }
+
+    方法 取显示蜡烛柱 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public abstract boolean getShowCandleBar()">
+    参数 当前对象 <类型 = MP蜡烛数据集接口>
+    {
+        @ @<当前对象>.getShowCandleBar ()
+    }
+
+    方法 取阴影宽度 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public abstract float getShadowWidth()">
+    参数 当前对象 <类型 = MP蜡烛数据集接口>
+    {
+        @ @<当前对象>.getShadowWidth ()
+    }
+
+    方法 取阴影颜色 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public abstract int getShadowColor()">
+    参数 当前对象 <类型 = MP蜡烛数据集接口>
+    {
+        @ @<当前对象>.getShadowColor ()
+    }
+
+    方法 取中性颜色 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public abstract int getNeutralColor()">
+    参数 当前对象 <类型 = MP蜡烛数据集接口>
+    {
+        @ @<当前对象>.getNeutralColor ()
+    }
+
+    方法 取递增颜色 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public abstract int getIncreasingColor()">
+    参数 当前对象 <类型 = MP蜡烛数据集接口>
+    {
+        @ @<当前对象>.getIncreasingColor ()
+    }
+
+    方法 取递减颜色 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public abstract int getDecreasingColor()">
+    参数 当前对象 <类型 = MP蜡烛数据集接口>
+    {
+        @ @<当前对象>.getDecreasingColor ()
+    }
+
+    方法 取递增画笔样式 <公开 静态 类型 = MP画笔样式类 @嵌入式方法 = "" 注释 = "java: public abstract android.graphics.Paint$Style getIncreasingPaintStyle()">
+    参数 当前对象 <类型 = MP蜡烛数据集接口>
+    {
+        @ @<当前对象>.getIncreasingPaintStyle ()
+    }
+
+    方法 取递减画笔样式 <公开 静态 类型 = MP画笔样式类 @嵌入式方法 = "" 注释 = "java: public abstract android.graphics.Paint$Style getDecreasingPaintStyle()">
+    参数 当前对象 <类型 = MP蜡烛数据集接口>
+    {
+        @ @<当前对象>.getDecreasingPaintStyle ()
+    }
+
+    方法 取阴影颜色相同作为蜡烛 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public abstract boolean getShadowColorSameAsCandle()">
+    参数 当前对象 <类型 = MP蜡烛数据集接口>
+    {
+        @ @<当前对象>.getShadowColorSameAsCandle ()
+    }
+
+}
+
+类 MP线径数据集接口 <公开 基础类 = MP线散蜡径数据集接口 @别名 = "com.github.mikephil.charting.interfaces.datasets.ILineRadarDataSet" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.interfaces.datasets.ILineRadarDataSet.">
+{
+
+    方法 取填充颜色 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public abstract int getFillColor()">
+    参数 当前对象 <类型 = MP线径数据集接口>
+    {
+        @ @<当前对象>.getFillColor ()
+    }
+
+    方法 取填充可绘制对象 <公开 静态 类型 = 可绘制对象类 @嵌入式方法 = "" 注释 = "java: public abstract android.graphics.drawable.Drawable getFillDrawable()">
+    参数 当前对象 <类型 = MP线径数据集接口>
+    {
+        @ @<当前对象>.getFillDrawable ()
+    }
+
+    方法 取填充透明度 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public abstract int getFillAlpha()">
+    参数 当前对象 <类型 = MP线径数据集接口>
+    {
+        @ @<当前对象>.getFillAlpha ()
+    }
+
+    方法 取线宽度 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public abstract float getLineWidth()">
+    参数 当前对象 <类型 = MP线径数据集接口>
+    {
+        @ @<当前对象>.getLineWidth ()
+    }
+
+    方法 是否绘制已填充启用 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public abstract boolean isDrawFilledEnabled()">
+    参数 当前对象 <类型 = MP线径数据集接口>
+    {
+        @ @<当前对象>.isDrawFilledEnabled ()
+    }
+
+    方法 设置绘制已填充 <公开 静态 注释 = "java: public abstract void setDrawFilled(boolean)">
+    参数 当前对象 <类型 = MP线径数据集接口>
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @<当前对象>.setDrawFilled (@<启用>);
+    }
+
+}
+
+类 MP折线数据集接口 <公开 基础类 = MP线径数据集接口 @别名 = "com.github.mikephil.charting.interfaces.datasets.ILineDataSet" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.interfaces.datasets.ILineDataSet.">
+{
+
+    方法 取模式 <公开 静态 类型 = MP折线模式 @嵌入式方法 = "" 注释 = "java: public abstract com.github.mikephil.charting.data.LineDataSet$Mode getMode()">
+    参数 当前对象 <类型 = MP折线数据集接口>
+    {
+        @ @<当前对象>.getMode ()
+    }
+
+    方法 取三次强度 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public abstract float getCubicIntensity()">
+    参数 当前对象 <类型 = MP折线数据集接口>
+    {
+        @ @<当前对象>.getCubicIntensity ()
+    }
+
+    方法 是否绘制三次启用 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public abstract boolean isDrawCubicEnabled()">
+    参数 当前对象 <类型 = MP折线数据集接口>
+    {
+        @ @<当前对象>.isDrawCubicEnabled ()
+    }
+
+    方法 是否绘制阶梯启用 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public abstract boolean isDrawSteppedEnabled()">
+    参数 当前对象 <类型 = MP折线数据集接口>
+    {
+        @ @<当前对象>.isDrawSteppedEnabled ()
+    }
+
+    方法 取圆形半径 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public abstract float getCircleRadius()">
+    参数 当前对象 <类型 = MP折线数据集接口>
+    {
+        @ @<当前对象>.getCircleRadius ()
+    }
+
+    方法 取圆形中心孔半径 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public abstract float getCircleHoleRadius()">
+    参数 当前对象 <类型 = MP折线数据集接口>
+    {
+        @ @<当前对象>.getCircleHoleRadius ()
+    }
+
+    方法 取圆形颜色 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public abstract int getCircleColor(int)">
+    参数 当前对象 <类型 = MP折线数据集接口>
+    参数 索引 <类型 = 整数>
+    {
+        @ @<当前对象>.getCircleColor (@<索引>)
+    }
+
+    方法 取圆形颜色数量 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public abstract int getCircleColorCount()">
+    参数 当前对象 <类型 = MP折线数据集接口>
+    {
+        @ @<当前对象>.getCircleColorCount ()
+    }
+
+    方法 是否绘制圆形集启用 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public abstract boolean isDrawCirclesEnabled()">
+    参数 当前对象 <类型 = MP折线数据集接口>
+    {
+        @ @<当前对象>.isDrawCirclesEnabled ()
+    }
+
+    方法 取圆形中心孔颜色 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public abstract int getCircleHoleColor()">
+    参数 当前对象 <类型 = MP折线数据集接口>
+    {
+        @ @<当前对象>.getCircleHoleColor ()
+    }
+
+    方法 是否绘制圆形中心孔启用 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public abstract boolean isDrawCircleHoleEnabled()">
+    参数 当前对象 <类型 = MP折线数据集接口>
+    {
+        @ @<当前对象>.isDrawCircleHoleEnabled ()
+    }
+
+    方法 取虚线路径效果 <公开 静态 类型 = MP虚线效果类 @嵌入式方法 = "" 注释 = "java: public abstract android.graphics.DashPathEffect getDashPathEffect()">
+    参数 当前对象 <类型 = MP折线数据集接口>
+    {
+        @ @<当前对象>.getDashPathEffect ()
+    }
+
+    方法 是否虚线启用 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public abstract boolean isDashedLineEnabled()">
+    参数 当前对象 <类型 = MP折线数据集接口>
+    {
+        @ @<当前对象>.isDashedLineEnabled ()
+    }
+
+    方法 取填充格式器 <公开 静态 类型 = MP填充格式化接口 @嵌入式方法 = "" 注释 = "java: public abstract com.github.mikephil.charting.formatter.IFillFormatter getFillFormatter()">
+    参数 当前对象 <类型 = MP折线数据集接口>
+    {
+        @ @<当前对象>.getFillFormatter ()
+    }
+
+}
+
+类 MP饼状数据集接口 <公开 基础类 = MP数据集接口 @别名 = "com.github.mikephil.charting.interfaces.datasets.IPieDataSet" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.interfaces.datasets.IPieDataSet.">
+{
+
+    方法 取扇区间距 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public abstract float getSliceSpace()">
+    参数 当前对象 <类型 = MP饼状数据集接口>
+    {
+        @ @<当前对象>.getSliceSpace ()
+    }
+
+    方法 是否自动地停用扇区间距启用 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public abstract boolean isAutomaticallyDisableSliceSpacingEnabled()">
+    参数 当前对象 <类型 = MP饼状数据集接口>
+    {
+        @ @<当前对象>.isAutomaticallyDisableSliceSpacingEnabled ()
+    }
+
+    方法 取选取位移 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public abstract float getSelectionShift()">
+    参数 当前对象 <类型 = MP饼状数据集接口>
+    {
+        @ @<当前对象>.getSelectionShift ()
+    }
+
+    方法 取横坐标数值位置 <公开 静态 类型 = MP饼图数值位置 @嵌入式方法 = "" 注释 = "java: public abstract com.github.mikephil.charting.data.PieDataSet$ValuePosition getXValuePosition()">
+    参数 当前对象 <类型 = MP饼状数据集接口>
+    {
+        @ @<当前对象>.getXValuePosition ()
+    }
+
+    方法 取纵坐标数值位置 <公开 静态 类型 = MP饼图数值位置 @嵌入式方法 = "" 注释 = "java: public abstract com.github.mikephil.charting.data.PieDataSet$ValuePosition getYValuePosition()">
+    参数 当前对象 <类型 = MP饼状数据集接口>
+    {
+        @ @<当前对象>.getYValuePosition ()
+    }
+
+    方法 取数值线颜色 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public abstract int getValueLineColor()">
+    参数 当前对象 <类型 = MP饼状数据集接口>
+    {
+        @ @<当前对象>.getValueLineColor ()
+    }
+
+    方法 是否使用数值颜色对应线启用 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public abstract boolean isUseValueColorForLineEnabled()">
+    参数 当前对象 <类型 = MP饼状数据集接口>
+    {
+        @ @<当前对象>.isUseValueColorForLineEnabled ()
+    }
+
+    方法 取数值线宽度 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public abstract float getValueLineWidth()">
+    参数 当前对象 <类型 = MP饼状数据集接口>
+    {
+        @ @<当前对象>.getValueLineWidth ()
+    }
+
+    方法 取数值线局部一偏移百分比 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public abstract float getValueLinePart1OffsetPercentage()">
+    参数 当前对象 <类型 = MP饼状数据集接口>
+    {
+        @ @<当前对象>.getValueLinePart1OffsetPercentage ()
+    }
+
+    方法 取数值线局部一长度 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public abstract float getValueLinePart1Length()">
+    参数 当前对象 <类型 = MP饼状数据集接口>
+    {
+        @ @<当前对象>.getValueLinePart1Length ()
+    }
+
+    方法 取数值线局部二长度 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public abstract float getValueLinePart2Length()">
+    参数 当前对象 <类型 = MP饼状数据集接口>
+    {
+        @ @<当前对象>.getValueLinePart2Length ()
+    }
+
+    方法 是否数值线变量长度 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public abstract boolean isValueLineVariableLength()">
+    参数 当前对象 <类型 = MP饼状数据集接口>
+    {
+        @ @<当前对象>.isValueLineVariableLength ()
+    }
+
+    方法 取高亮颜色 <公开 静态 类型 = MP整数对象类 @嵌入式方法 = "" 注释 = "java: public abstract java.lang.Integer getHighlightColor()">
+    参数 当前对象 <类型 = MP饼状数据集接口>
+    {
+        @ @<当前对象>.getHighlightColor ()
+    }
+
+}
+
+类 MP雷达数据集接口 <公开 基础类 = MP线径数据集接口 @别名 = "com.github.mikephil.charting.interfaces.datasets.IRadarDataSet" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.interfaces.datasets.IRadarDataSet.">
+{
+
+    方法 是否绘制高亮圆形启用 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public abstract boolean isDrawHighlightCircleEnabled()">
+    参数 当前对象 <类型 = MP雷达数据集接口>
+    {
+        @ @<当前对象>.isDrawHighlightCircleEnabled ()
+    }
+
+    方法 设置绘制高亮圆形启用 <公开 静态 注释 = "java: public abstract void setDrawHighlightCircleEnabled(boolean)">
+    参数 当前对象 <类型 = MP雷达数据集接口>
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @<当前对象>.setDrawHighlightCircleEnabled (@<启用>);
+    }
+
+    方法 取高亮圆形填充颜色 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public abstract int getHighlightCircleFillColor()">
+    参数 当前对象 <类型 = MP雷达数据集接口>
+    {
+        @ @<当前对象>.getHighlightCircleFillColor ()
+    }
+
+    方法 取高亮圆形描边颜色 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public abstract int getHighlightCircleStrokeColor()">
+    参数 当前对象 <类型 = MP雷达数据集接口>
+    {
+        @ @<当前对象>.getHighlightCircleStrokeColor ()
+    }
+
+    方法 取高亮圆形描边透明度 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public abstract int getHighlightCircleStrokeAlpha()">
+    参数 当前对象 <类型 = MP雷达数据集接口>
+    {
+        @ @<当前对象>.getHighlightCircleStrokeAlpha ()
+    }
+
+    方法 取高亮圆形内半径 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public abstract float getHighlightCircleInnerRadius()">
+    参数 当前对象 <类型 = MP雷达数据集接口>
+    {
+        @ @<当前对象>.getHighlightCircleInnerRadius ()
+    }
+
+    方法 取高亮圆形外半径 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public abstract float getHighlightCircleOuterRadius()">
+    参数 当前对象 <类型 = MP雷达数据集接口>
+    {
+        @ @<当前对象>.getHighlightCircleOuterRadius ()
+    }
+
+    方法 取高亮圆形描边宽度 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public abstract float getHighlightCircleStrokeWidth()">
+    参数 当前对象 <类型 = MP雷达数据集接口>
+    {
+        @ @<当前对象>.getHighlightCircleStrokeWidth ()
+    }
+
+}
+
+类 MP散点数据集接口 <公开 基础类 = MP线散蜡径数据集接口 @别名 = "com.github.mikephil.charting.interfaces.datasets.IScatterDataSet" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.interfaces.datasets.IScatterDataSet.">
+{
+
+    方法 取散点形状尺寸 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public abstract float getScatterShapeSize()">
+    参数 当前对象 <类型 = MP散点数据集接口>
+    {
+        @ @<当前对象>.getScatterShapeSize ()
+    }
+
+    方法 取散点形状中心孔半径 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public abstract float getScatterShapeHoleRadius()">
+    参数 当前对象 <类型 = MP散点数据集接口>
+    {
+        @ @<当前对象>.getScatterShapeHoleRadius ()
+    }
+
+    方法 取散点形状中心孔颜色 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public abstract int getScatterShapeHoleColor()">
+    参数 当前对象 <类型 = MP散点数据集接口>
+    {
+        @ @<当前对象>.getScatterShapeHoleColor ()
+    }
+
+    方法 取形状渲染器 <公开 静态 类型 = MP散点形状渲染器接口 @嵌入式方法 = "" 注释 = "java: public abstract com.github.mikephil.charting.renderer.scatter.IShapeRenderer getShapeRenderer()">
+    参数 当前对象 <类型 = MP散点数据集接口>
+    {
+        @ @<当前对象>.getShapeRenderer ()
+    }
+
+}
+

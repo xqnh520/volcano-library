@@ -1,0 +1,2193 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.安卓.OCCT几何 <注释 = "OpenCASCADE 7.8.0 全库封装 (自动生成, 请勿手改). 名称已汉化为中文显示名, 注释内附英文原名. TK 库 libTKernel: 10 个类 / 312 个方法.">
+
+类 颜色 <公开 注释 = "颜色: 原类 Quantity_Color (libTKernel, 头文件 Quantity/Quantity_Color.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 此类允许用 3 个归一化浮点值的三元组(红, 绿, 蓝)定义 RGB 颜色." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: Quantity_Color. 官方简介: 创建 Quantity_NOC_YELLOW 颜色(出于历史原因)." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKernel.Quantity_Color.构造 ()
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: Quantity_Color. 官方简介: 由枚举值创建颜色." @嵌入式方法 = "">
+    参数 名称 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Quantity_Color.构造_2 (@<名称>)
+    }
+
+    方法 创建_3 <公开 静态 类型 = 长整数 注释 = "创建_3. 原构造器: Quantity_Color. 官方简介: 按定义系统 theType 创建颜色. 若值超出范围则抛出异常." @嵌入式方法 = "">
+    参数 C1 <类型 = 小数>
+    参数 C2 <类型 = 小数>
+    参数 C3 <类型 = 小数>
+    参数 类型 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Quantity_Color.构造_3 (@<C1>, @<C2>, @<C3>, @<类型>)
+    }
+
+    方法 名称 <公开 静态 类型 = 整数 注释 = "名称. 原方法: Name. 官方简介: 返回 Quantity_NameOfColor 枚举中最接近颜色的名称." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Quantity_Color.Name (@<对象>)
+    }
+
+    方法 设置值 <公开 静态 注释 = "设置值. 原方法: SetValues. 官方简介: 用指定的命名颜色更新颜色." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 名称 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Quantity_Color.SetValues (@<对象>, @<名称>)
+    }
+
+    方法 求值 <公开 静态 注释 = "求值. 原方法: Values. 官方简介: 根据颜色系统定义 theType, 在 theC1, theC2 与 theC3 中返回该颜色的各分量." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 输出C1 <类型 = "小数 []">
+    参数 输出C2 <类型 = "小数 []">
+    参数 输出C3 <类型 = "小数 []">
+    参数 类型 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Quantity_Color.Values (@<对象>, @<输出C1>, @<输出C2>, @<输出C3>, @<类型>)
+    }
+
+    方法 设置值_2 <公开 静态 注释 = "设置值_2. 原方法: SetValues. 官方简介: 按 theType 指定的模式更新颜色. 若值超出范围则抛出异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 C1 <类型 = 小数>
+    参数 C2 <类型 = 小数>
+    参数 C3 <类型 = 小数>
+    参数 类型 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Quantity_Color.SetValues_2 (@<对象>, @<C1>, @<C2>, @<C3>, @<类型>)
+    }
+
+    方法 红 <公开 静态 类型 = 小数 注释 = "红. 原方法: Red. 官方简介: 返回颜色的红色分量(红色的量), 范围为 [0.0; 1.0]." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Quantity_Color.Red (@<对象>)
+    }
+
+    方法 绿 <公开 静态 类型 = 小数 注释 = "绿. 原方法: Green. 官方简介: 返回颜色的绿色分量(绿色的量), 范围为 [0.0; 1.0]." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Quantity_Color.Green (@<对象>)
+    }
+
+    方法 蓝 <公开 静态 类型 = 小数 注释 = "蓝. 原方法: Blue. 官方简介: 返回颜色的蓝色分量(蓝色的量), 范围为 [0.0; 1.0]." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Quantity_Color.Blue (@<对象>)
+    }
+
+    方法 色相 <公开 静态 类型 = 小数 注释 = "色相. 原方法: Hue. 官方简介: 返回颜色的 Hue 分量(色相角), 单位为度, 范围 [0.0; 360.0], 0.0 为红色. -1.0 是保留给灰度色的特殊值(S 应为 0.0)" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Quantity_Color.Hue (@<对象>)
+    }
+
+    方法 明度 <公开 静态 类型 = 小数 注释 = "明度. 原方法: Light. 官方简介: 返回颜色的亮度分量(亮度的值), 范围为 [0.0; 1.0]." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Quantity_Color.Light (@<对象>)
+    }
+
+    方法 修改强度 <公开 静态 注释 = "修改强度. 原方法: ChangeIntensity. 官方简介: 增加或减小强度(亮度的变化). delta 是百分比. 任何大于零的值都将增加强度. 变化量表示为当前值的百分比." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 差值 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Quantity_Color.ChangeIntensity (@<对象>, @<差值>)
+    }
+
+    方法 饱和度 <公开 静态 类型 = 小数 注释 = "饱和度. 原方法: Saturation. 官方简介: 返回颜色的饱和度分量(饱和度的值), 范围为 [0.0; 1.0]." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Quantity_Color.Saturation (@<对象>)
+    }
+
+    方法 修改对比度 <公开 静态 注释 = "修改对比度. 原方法: ChangeContrast. 官方简介: 增加或减小对比度(饱和度的变化). delta 是百分比. 任何大于零的值都将增加对比度. 变化量表示为当前值的百分比." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 差值 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Quantity_Color.ChangeContrast (@<对象>, @<差值>)
+    }
+
+    方法 是否不同 <公开 静态 类型 = 逻辑型 注释 = "是否不同. 原方法: IsDifferent. 官方简介: 若两个颜色之间距离大于 Epsilon() 则返回 TRUE." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Quantity_Color.IsDifferent (@<对象>, @<另一个>)
+    }
+
+    方法 是否相等 <公开 静态 类型 = 逻辑型 注释 = "是否相等. 原方法: IsEqual. 官方简介: 若两个颜色之间距离不大于 Epsilon() 则返回 TRUE." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Quantity_Color.IsEqual (@<对象>, @<另一个>)
+    }
+
+    方法 距离 <公开 静态 类型 = 小数 注释 = "距离. 原方法: Distance. 官方简介: 返回两个颜色之间的距离. 它是 0 与 3 的平方根之间的一个值(黑白距离)." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 颜色 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Quantity_Color.Distance (@<对象>, @<颜色>)
+    }
+
+    方法 平方距离 <公开 静态 类型 = 小数 注释 = "平方距离. 原方法: SquareDistance. 官方简介: 返回两个颜色之间距离的平方." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 颜色 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Quantity_Color.SquareDistance (@<对象>, @<颜色>)
+    }
+
+    方法 差值 <公开 静态 注释 = "差值. 原方法: Delta. 官方简介: 返回该颜色与另一颜色之间对比度与强度的百分比变化. <DC> 与 <DI> 是百分比, 可正可负. 计算是相对于该颜色进行的. 若 <DC> 为正, 则 <me> 对比度更高. 若 <DI> 为正, 则 <me> 强度更高." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 颜色 <类型 = 长整数>
+    参数 输出DC <类型 = "小数 []">
+    参数 输出DI <类型 = "小数 []">
+    {
+        @ com.volcano.occt.Gen_TKernel.Quantity_Color.Delta (@<对象>, @<颜色>, @<输出DC>, @<输出DI>)
+    }
+
+    方法 色差E2000 <公开 静态 类型 = 小数 注释 = "色差E2000. 原方法: DeltaE2000. 官方简介: 返回该颜色与 @p theOther 之间使用 CIEDE2000 公式计算的可感知差异值. 差异范围为 [0, 100.], 其中 1 大约对应最小可感知差异(通常差异达到 5 或更大才能在实用中辨认出差异)." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Quantity_Color.DeltaE2000 (@<对象>, @<另一个>)
+    }
+
+    方法 名称_2 <公开 静态 类型 = 整数 注释 = "名称_2. 原方法: Name. 官方简介: 返回 Quantity_NameOfColor 枚举中最接近指定 RGB 值的颜色." @嵌入式方法 = "">
+    参数 R <类型 = 小数>
+    参数 G <类型 = 小数>
+    参数 B <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Quantity_Color.Name_2 (@<R>, @<G>, @<B>)
+    }
+
+    方法 字符串名称 <公开 静态 类型 = 文本型 注释 = "字符串名称. 原方法: StringName. 官方简介: 返回给定 Quantity_NameOfColor 枚举值所标识的颜色名称." @嵌入式方法 = "">
+    参数 颜色 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Quantity_Color.StringName (@<颜色>)
+    }
+
+    方法 名称转颜色 <公开 静态 类型 = 逻辑型 注释 = "名称转颜色. 原方法: ColorFromName. 官方简介: 从预定义名称中查找颜色. 例如, 与 \"BLACK\" 对应的颜色名是 Quantity_NOC_BLACK. 若名称未知则返回 FALSE." @嵌入式方法 = "">
+    参数 名称 <类型 = 文本型>
+    参数 输出颜色 <类型 = "整数 []">
+    {
+        @ com.volcano.occt.Gen_TKernel.Quantity_Color.ColorFromName (@<名称>, @<输出颜色>)
+    }
+
+    方法 名称转颜色_2 <公开 静态 类型 = 逻辑型 注释 = "名称转颜色_2. 原方法: ColorFromName. 官方简介: 从预定义名称中查找颜色. @param theColorNameString 颜色名称 @param theColor 找到的颜色 @return 若颜色名称未知则返回 false, 或若按颜色名称查找成功则返回 true" @嵌入式方法 = "">
+    参数 颜色名称字符串 <类型 = 文本型>
+    参数 输出颜色 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Quantity_Color.ColorFromName_2 (@<颜色名称字符串>, @<输出颜色>)
+    }
+
+    方法 十六进制转颜色 <公开 静态 类型 = 逻辑型 注释 = "十六进制转颜色. 原方法: ColorFromHex. 官方简介: 把字符串解析为十六进制颜色(如 \"#FF0\" 表示短 sRGB 颜色, 或 \"#FFFF00\" 表示 sRGB 颜色). @param theHexColorString 要解析的字符串 @param theColor 解析结果颜色 @return 若解析成功则返回 true, 否则返回 false" @嵌入式方法 = "">
+    参数 十六进制颜色字符串 <类型 = 文本型>
+    参数 输出颜色 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Quantity_Color.ColorFromHex (@<十六进制颜色字符串>, @<输出颜色>)
+    }
+
+    方法 颜色转十六进制 <公开 静态 类型 = 文本型 注释 = "颜色转十六进制. 原方法: ColorToHex. 官方简介: 返回格式为 \"#FFAAFF\" 的十六进制 sRGB 字符串." @嵌入式方法 = "">
+    参数 颜色 <类型 = 长整数>
+    参数 带井号前缀 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKernel.Quantity_Color.ColorToHex (@<颜色>, @<带井号前缀>)
+    }
+
+    方法 颜色转ARGB <公开 静态 注释 = "颜色转ARGB. 原方法: Color2argb. 官方简介: 把颜色值转换为 ARGB 整数, alpha 等于 0. 因此输出格式为 0x00RRGGBB. 注意, 该解包不涉及非线性 sRGB -> 线性 RGB 转换, 而这通常是把 RGB 颜色打包进 4 字节时所期望的. @param theColor [in] 要转换的颜色 @param theARGB [out] 编码为整数的结果颜色" @嵌入式方法 = "">
+    参数 颜色 <类型 = 长整数>
+    参数 输出ARGB <类型 = "整数 []">
+    {
+        @ com.volcano.occt.Gen_TKernel.Quantity_Color.Color2argb (@<颜色>, @<输出ARGB>)
+    }
+
+    方法 ARGB转颜色 <公开 静态 注释 = "ARGB转颜色. 原方法: Argb2color. 官方简介: 把整数 ARGB 值转换为颜色. Alpha 位被忽略. 注意, 该打包不涉及线性 -> 非线性 sRGB 转换, 而人们通常期望该转换能在 4 字节中保留更高(对人眼而言)的颜色精度." @嵌入式方法 = "">
+    参数 ARGB <类型 = 整数>
+    参数 输出颜色 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Quantity_Color.Argb2color (@<ARGB>, @<输出颜色>)
+    }
+
+    方法 线性RGB转sRGB近似22 <公开 静态 类型 = 小数 注释 = "线性RGB转sRGB近似22. 原方法: Convert_LinearRGB_To_sRGB_approx22. 官方简介: 使用近似均匀的伽马系数 2.2 把线性 RGB 分量转换为 sRGB." @嵌入式方法 = "">
+    参数 线性值 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Quantity_Color.Convert_LinearRGB_To_sRGB_approx22 (@<线性值>)
+    }
+
+    方法 sRGB转线性RGB近似22 <公开 静态 类型 = 小数 注释 = "sRGB转线性RGB近似22. 原方法: Convert_sRGB_To_LinearRGB_approx22. 官方简介: 使用近似均匀的伽马系数 2.2 把 sRGB 分量转换为线性 RGB" @嵌入式方法 = "">
+    参数 sRGB值 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Quantity_Color.Convert_sRGB_To_LinearRGB_approx22 (@<sRGB值>)
+    }
+
+    方法 HLSRGB <公开 静态 注释 = "HLSRGB. 原方法: HlsRgb. 官方简介: 把 HLS 分量转换为 sRGB 分量." @嵌入式方法 = "">
+    参数 H <类型 = 小数>
+    参数 L <类型 = 小数>
+    参数 S <类型 = 小数>
+    参数 输出R <类型 = "小数 []">
+    参数 输出G <类型 = "小数 []">
+    参数 输出B <类型 = "小数 []">
+    {
+        @ com.volcano.occt.Gen_TKernel.Quantity_Color.HlsRgb (@<H>, @<L>, @<S>, @<输出R>, @<输出G>, @<输出B>)
+    }
+
+    方法 RGBHLS <公开 静态 注释 = "RGBHLS. 原方法: RgbHls. 官方简介: 把 sRGB 分量转换为 HLS 分量." @嵌入式方法 = "">
+    参数 R <类型 = 小数>
+    参数 G <类型 = 小数>
+    参数 B <类型 = 小数>
+    参数 输出H <类型 = "小数 []">
+    参数 输出L <类型 = "小数 []">
+    参数 输出S <类型 = "小数 []">
+    {
+        @ com.volcano.occt.Gen_TKernel.Quantity_Color.RgbHls (@<R>, @<G>, @<B>, @<输出H>, @<输出L>, @<输出S>)
+    }
+
+    方法 极小值 <公开 静态 类型 = 小数 注释 = "极小值. 原方法: Epsilon. 官方简介: 返回用于比较两个颜色是否相等的值; 默认为 0.0001." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKernel.Quantity_Color.Epsilon ()
+    }
+
+    方法 设置极小值 <公开 静态 注释 = "设置极小值. 原方法: SetEpsilon. 官方简介: 设置用于比较两个颜色是否相等的值." @嵌入式方法 = "">
+    参数 极小值 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Quantity_Color.SetEpsilon (@<极小值>)
+    }
+
+    方法 转储JSON <公开 静态 类型 = 文本型 注释 = "转储JSON. 原方法: DumpJson. 官方简介: 把自身内容转储到流中" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 深度 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Quantity_Color.DumpJson (@<对象>, @<深度>)
+    }
+
+    方法 初始化起始JSON <公开 静态 类型 = 逻辑型 注释 = "桩(本地不可用): 参数类型 const Standard_SStream& 未支持. 初始化起始JSON. 原方法: InitFromJson. 官方简介: 从流中初始化自身内容" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 字符串流 <类型 = 文本型>
+    参数 输出流位置 <类型 = "整数 []">
+    {
+        @ com.volcano.occt.Gen_TKernel.Quantity_Color.InitFromJson (@<对象>, @<字符串流>, @<输出流位置>)
+    }
+
+}
+
+类 RGBA颜色 <公开 注释 = "RGBA颜色: 原类 Quantity_ColorRGBA (libTKernel, 头文件 Quantity/Quantity_ColorRGBA.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: Quantity_Color 与 Alpha 分量(1.0 不透明, 0.0 透明)的组合." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: Quantity_ColorRGBA. 官方简介: 用默认值创建颜色." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKernel.Quantity_ColorRGBA.构造 ()
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: Quantity_ColorRGBA. 官方简介: 用指定的 RGB 值创建颜色." @嵌入式方法 = "">
+    参数 RGB <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Quantity_ColorRGBA.构造_2 (@<RGB>)
+    }
+
+    方法 创建_3 <公开 静态 类型 = 长整数 注释 = "创建_3. 原构造器: Quantity_ColorRGBA. 官方简介: 用指定的 RGBA 值创建颜色." @嵌入式方法 = "">
+    参数 RGB <类型 = 长整数>
+    参数 Alpha <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Quantity_ColorRGBA.构造_3 (@<RGB>, @<Alpha>)
+    }
+
+    方法 创建_4 <公开 静态 类型 = 长整数 注释 = "创建_4. 原构造器: Quantity_ColorRGBA. 官方简介: 由 RGBA 值创建颜色." @嵌入式方法 = "">
+    参数 红 <类型 = 小数>
+    参数 绿 <类型 = 小数>
+    参数 蓝 <类型 = 小数>
+    参数 Alpha <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Quantity_ColorRGBA.构造_4 (@<红>, @<绿>, @<蓝>, @<Alpha>)
+    }
+
+    方法 设置值 <公开 静态 注释 = "设置值. 原方法: SetValues. 官方简介: 为颜色赋予新值." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 红 <类型 = 小数>
+    参数 绿 <类型 = 小数>
+    参数 蓝 <类型 = 小数>
+    参数 Alpha <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Quantity_ColorRGBA.SetValues (@<对象>, @<红>, @<绿>, @<蓝>, @<Alpha>)
+    }
+
+    方法 取RGB <公开 静态 类型 = 长整数 注释 = "取RGB. 原方法: GetRGB. 官方简介: 返回 RGB 颜色值." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Quantity_ColorRGBA.GetRGB (@<对象>)
+    }
+
+    方法 修改RGB <公开 静态 类型 = 长整数 注释 = "修改RGB. 原方法: ChangeRGB. 官方简介: 修改 RGB 颜色分量, 不影响 alpha 值." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Quantity_ColorRGBA.ChangeRGB (@<对象>)
+    }
+
+    方法 设置RGB <公开 静态 注释 = "设置RGB. 原方法: SetRGB. 官方简介: 赋 RGB 颜色分量, 不影响 alpha 值." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 RGB <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Quantity_ColorRGBA.SetRGB (@<对象>, @<RGB>)
+    }
+
+    方法 Alpha <公开 静态 类型 = 小数 注释 = "Alpha. 原方法: Alpha. 官方简介: 返回 alpha 值(1.0 表示不透明, 0.0 表示完全透明)." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Quantity_ColorRGBA.Alpha (@<对象>)
+    }
+
+    方法 设置Alpha <公开 静态 注释 = "设置Alpha. 原方法: SetAlpha. 官方简介: 赋予 alpha 值." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 Alpha <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Quantity_ColorRGBA.SetAlpha (@<对象>, @<Alpha>)
+    }
+
+    方法 是否不同 <公开 静态 类型 = 逻辑型 注释 = "是否不同. 原方法: IsDifferent. 官方简介: 若两个颜色之间距离大于 Epsilon() 则返回 true." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Quantity_ColorRGBA.IsDifferent (@<对象>, @<另一个>)
+    }
+
+    方法 是否相等 <公开 静态 类型 = 逻辑型 注释 = "是否相等. 原方法: IsEqual. 官方简介: 若两个颜色之间的距离不大于 Epsilon() 则视为相等." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Quantity_ColorRGBA.IsEqual (@<对象>, @<另一个>)
+    }
+
+    方法 名称转颜色 <公开 静态 类型 = 逻辑型 注释 = "名称转颜色. 原方法: ColorFromName. 官方简介: 从预定义名称中查找颜色. 例如, 与 \"BLACK\" 对应的颜色名称是 Quantity_NOC_BLACK. alpha 分量被设为 1.0. @param theColorNameString 颜色名称 @param theColor 找到的颜色 @return 若颜色名称未知则返回 false, 或若按颜色名称查找成功则返回 true" @嵌入式方法 = "">
+    参数 颜色名称字符串 <类型 = 文本型>
+    参数 输出颜色 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Quantity_ColorRGBA.ColorFromName (@<颜色名称字符串>, @<输出颜色>)
+    }
+
+    方法 十六进制转颜色 <公开 静态 类型 = 逻辑型 注释 = "十六进制转颜色. 原方法: ColorFromHex. 官方简介: 把字符串解析为十六进制颜色(如 \"#FF0\" 表示短 sRGB 颜色, \"#FF0F\" 表示短 sRGBA 颜色, \"#FFFF00\" 表示 RGB 颜色, 或 \"#FFFF00FF\" 表示 RGBA 颜色) @param theHexColorString 要解析的字符串 @param theColor 解析结果颜色 @param theAlphaComponentIsOff 指示输入字符串中是否呈现颜色 alpha 分量的标志(false 表示呈现, true 表示不呈现) @return 若解析成功则返回 true, 否则返回 false" @嵌入式方法 = "">
+    参数 十六进制颜色字符串 <类型 = 文本型>
+    参数 输出颜色 <类型 = 长整数>
+    参数 关闭Alpha分量 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKernel.Quantity_ColorRGBA.ColorFromHex (@<十六进制颜色字符串>, @<输出颜色>, @<关闭Alpha分量>)
+    }
+
+    方法 颜色转十六进制 <公开 静态 类型 = 文本型 注释 = "颜色转十六进制. 原方法: ColorToHex. 官方简介: 返回格式为 \"#RRGGBBAA\" 的十六进制 sRGBA 字符串." @嵌入式方法 = "">
+    参数 颜色 <类型 = 长整数>
+    参数 带井号前缀 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKernel.Quantity_ColorRGBA.ColorToHex (@<颜色>, @<带井号前缀>)
+    }
+
+    方法 转储JSON <公开 静态 类型 = 文本型 注释 = "转储JSON. 原方法: DumpJson. 官方简介: 把自身内容转储到流中" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 深度 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Quantity_ColorRGBA.DumpJson (@<对象>, @<深度>)
+    }
+
+    方法 初始化起始JSON <公开 静态 类型 = 逻辑型 注释 = "桩(本地不可用): 参数类型 const Standard_SStream& 未支持. 初始化起始JSON. 原方法: InitFromJson. 官方简介: 从流中初始化自身内容" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 字符串流 <类型 = 文本型>
+    参数 输出流位置 <类型 = "整数 []">
+    {
+        @ com.volcano.occt.Gen_TKernel.Quantity_ColorRGBA.InitFromJson (@<对象>, @<字符串流>, @<输出流位置>)
+    }
+
+}
+
+类 异常基类 <公开 注释 = "异常基类: 原类 Standard_Failure (libTKernel, 头文件 Standard/Standard_Failure.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 构成整个异常层次的根." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: Standard_Failure. 官方简介: 创建类型为 \"Failure\" 的状态对象." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKernel.Standard_Failure.构造 ()
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: Standard_Failure. 官方简介: 拷贝构造函数" @嵌入式方法 = "">
+    参数 f <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Standard_Failure.构造_2 (@<f>)
+    }
+
+    方法 创建_3 <公开 静态 类型 = 长整数 注释 = "创建_3. 原构造器: Standard_Failure. 官方简介: 创建类型为 \"Failure\" 的状态对象. @param theDesc [in] 异常描述" @嵌入式方法 = "">
+    参数 描述 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.Standard_Failure.构造_3 (@<描述>)
+    }
+
+    方法 创建_4 <公开 静态 类型 = 长整数 注释 = "创建_4. 原构造器: Standard_Failure. 官方简介: 创建带堆栈跟踪的类型为 \"Failure\" 的状态对象. @param theDesc [in] 异常描述 @param theStackTrace [in] 关联的堆栈跟踪" @嵌入式方法 = "">
+    参数 描述 <类型 = 文本型>
+    参数 栈跟踪 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.Standard_Failure.构造_4 (@<描述>, @<栈跟踪>)
+    }
+
+    方法 打印 <公开 静态 类型 = 文本型 注释 = "打印. 原方法: Print. 官方简介: 在流 @p theStream 上打印异常名称, 随后是错误消息." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Standard_Failure.Print (@<对象>)
+    }
+
+    方法 取消息字符串 <公开 静态 类型 = 文本型 注释 = "取消息字符串. 原方法: GetMessageString. 官方简介: 返回错误消息" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Standard_Failure.GetMessageString (@<对象>)
+    }
+
+    方法 设置消息字符串 <公开 静态 注释 = "设置消息字符串. 原方法: SetMessageString. 官方简介: 设置错误消息" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 消息 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.Standard_Failure.SetMessageString (@<对象>, @<消息>)
+    }
+
+    方法 取栈字符串 <公开 静态 类型 = 文本型 注释 = "取栈字符串. 原方法: GetStackString. 官方简介: 返回堆栈跟踪字符串" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Standard_Failure.GetStackString (@<对象>)
+    }
+
+    方法 设置栈字符串 <公开 静态 注释 = "设置栈字符串. 原方法: SetStackString. 官方简介: 设置堆栈跟踪字符串" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 栈 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.Standard_Failure.SetStackString (@<对象>, @<栈>)
+    }
+
+    方法 重抛 <公开 静态 注释 = "重抛. 原方法: Reraise." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Standard_Failure.Reraise (@<对象>)
+    }
+
+    方法 重抛_2 <公开 静态 注释 = "重抛_2. 原方法: Reraise." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 消息 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.Standard_Failure.Reraise_2 (@<对象>, @<消息>)
+    }
+
+    方法 重抛_3 <公开 静态 注释 = "桩(本地不可用): 参数类型 const Standard_SStream& 未支持. 重抛_3. 原方法: Reraise. 官方简介: 重新抛出已捕获的异常并修改其错误消息." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 原因 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.Standard_Failure.Reraise_3 (@<对象>, @<原因>)
+    }
+
+    方法 抛出 <公开 静态 注释 = "抛出. 原方法: Raise. 官方简介: 抛出类型为 \"Failure\" 的异常并为其关联错误消息. 该消息可以在异常处理程序中打印." @嵌入式方法 = "">
+    参数 消息 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.Standard_Failure.Raise (@<消息>)
+    }
+
+    方法 抛出_2 <公开 静态 注释 = "桩(本地不可用): 参数类型 const Standard_SStream& 未支持. 抛出_2. 原方法: Raise. 官方简介: 抛出类型为 \"Failure\" 的异常并为其关联错误消息. 该消息可以在运行时构造." @嵌入式方法 = "">
+    参数 原因 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.Standard_Failure.Raise_2 (@<原因>)
+    }
+
+    方法 新实例 <公开 静态 类型 = 长整数 注释 = "新实例. 原方法: NewInstance. 官方简介: 用于把异常对象的实例构造为句柄. 应使用它来防止在 C 栈中构造异常对象, 这很危险, 因为某些方法要求对象是动态分配的." @嵌入式方法 = "">
+    参数 消息 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.Standard_Failure.NewInstance (@<消息>)
+    }
+
+    方法 新实例_2 <公开 静态 类型 = 长整数 注释 = "新实例_2. 原方法: NewInstance. 官方简介: 用于以句柄形式构造异常对象的实例." @嵌入式方法 = "">
+    参数 消息 <类型 = 文本型>
+    参数 栈跟踪 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.Standard_Failure.NewInstance_2 (@<消息>, @<栈跟踪>)
+    }
+
+    方法 默认栈跟踪长度 <公开 静态 类型 = 整数 注释 = "默认栈跟踪长度. 原方法: DefaultStackTraceLength. 官方简介: 返回 Standard_Failure 构造器捕获的堆栈跟踪默认长度; 默认为 0 表示不捕获堆栈跟踪." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKernel.Standard_Failure.DefaultStackTraceLength ()
+    }
+
+    方法 设置默认栈跟踪长度 <公开 静态 注释 = "设置默认栈跟踪长度. 原方法: SetDefaultStackTraceLength. 官方简介: 设置 Standard_Failure 构造器捕获的堆栈跟踪默认长度." @嵌入式方法 = "">
+    参数 堆栈跟踪条数 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Standard_Failure.SetDefaultStackTraceLength (@<堆栈跟踪条数>)
+    }
+
+    方法 跳变 <公开 静态 注释 = "跳变. 原方法: Jump. 官方简介: 用于从 C 信号处理程序抛出 CASCADE 异常. 在不允许从该处理程序抛出 C++ 异常的平台上(例如 Linux), 使用 longjump 到达当前活动的信号处理程序, 然后才被转换为 C++ 异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Standard_Failure.Jump (@<对象>)
+    }
+
+}
+
+类 全局唯一标识 <公开 注释 = "全局唯一标识: 原类 Standard_GUID (libTKernel, 头文件 Standard/Standard_GUID.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: Standard_GUID." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKernel.Standard_GUID.构造 ()
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: Standard_GUID. 官方简介: 用如下格式的 ascii 字符串构建 GUID: 长度: 36 个字符 \"00000000-0000-0000-0000-000000000000\"" @嵌入式方法 = "">
+    参数 GUID <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.Standard_GUID.构造_2 (@<GUID>)
+    }
+
+    方法 创建_3 <公开 静态 类型 = 长整数 注释 = "创建_3. 原构造器: Standard_GUID. 官方简介: 用如下格式的 unicode 字符串构建 GUID:" @嵌入式方法 = "">
+    参数 GUID <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.Standard_GUID.构造_3 (@<GUID>)
+    }
+
+    方法 创建_4 <公开 静态 类型 = 长整数 注释 = "创建_4. 原构造器: Standard_GUID." @嵌入式方法 = "">
+    参数 GUID <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Standard_GUID.构造_4 (@<GUID>)
+    }
+
+    方法 转C字符串 <公开 静态 类型 = 文本型 注释 = "转C字符串. 原方法: ToCString. 官方简介: 把 GUID 翻译为 ascii 字符串, aStrGuid 由用户分配. 该 guid 具有以下格式:" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Standard_GUID.ToCString (@<对象>)
+    }
+
+    方法 转扩展字符串 <公开 静态 类型 = 文本型 注释 = "转扩展字符串. 原方法: ToExtString. 官方简介: 把 GUID 翻译为 unicode 字符串, aStrGuid 由用户分配. 该 guid 具有以下格式:" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Standard_GUID.ToExtString (@<对象>)
+    }
+
+    方法 是否相同 <公开 静态 类型 = 逻辑型 注释 = "是否相同. 原方法: IsSame." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 标识 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Standard_GUID.IsSame (@<对象>, @<标识>)
+    }
+
+    方法 是否非相同 <公开 静态 类型 = 逻辑型 注释 = "是否非相同. 原方法: IsNotSame." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 标识 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Standard_GUID.IsNotSame (@<对象>, @<标识>)
+    }
+
+    方法 赋值 <公开 静态 注释 = "赋值. 原方法: Assign." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 标识 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Standard_GUID.Assign (@<对象>, @<标识>)
+    }
+
+    方法 浅转储 <公开 静态 类型 = 文本型 注释 = "浅转储. 原方法: ShallowDump. 官方简介: 以下列格式显示 GUID:" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Standard_GUID.ShallowDump (@<对象>)
+    }
+
+    方法 检查GUID格式 <公开 静态 类型 = 逻辑型 注释 = "检查GUID格式. 原方法: CheckGUIDFormat. 官方简介: 检查 GUID 字符串的格式. 它检查长度, '-' 的位置以及各字段的正确长度." @嵌入式方法 = "">
+    参数 GUID <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.Standard_GUID.CheckGUIDFormat (@<GUID>)
+    }
+
+}
+
+类 引用计数基类 <公开 注释 = "引用计数基类: 原类 Standard_Transient (libTKernel, 头文件 Standard/Standard_Transient.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 构成整个 Transient 类层次根的抽象类." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: Standard_Transient. 官方简介: 空构造函数" @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKernel.Standard_Transient.构造 ()
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: Standard_Transient. 官方简介: 拷贝构造函数 -- 不做任何事" @嵌入式方法 = "">
+    参数 a0 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Standard_Transient.构造_2 (@<a0>)
+    }
+
+    方法 取类型名称 <公开 静态 类型 = 文本型 注释 = "取类型名称. 原方法: get_type_name." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKernel.Standard_Transient.get_type_name ()
+    }
+
+    方法 取类型描述符 <公开 静态 类型 = 长整数 注释 = "取类型描述符. 原方法: get_type_descriptor. 官方简介: 返回 Standard_Transient 类的类型描述符" @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKernel.Standard_Transient.get_type_descriptor ()
+    }
+
+    方法 动态类型 <公开 静态 类型 = 长整数 注释 = "动态类型. 原方法: DynamicType. 官方简介: 返回关于该对象的类型描述符." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Standard_Transient.DynamicType (@<对象>)
+    }
+
+    方法 是否实例 <公开 静态 类型 = 逻辑型 注释 = "是否实例. 原方法: IsInstance. 官方简介: 若该对象是 Type 的实例则返回真值." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 类型 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Standard_Transient.IsInstance (@<对象>, @<类型>)
+    }
+
+    方法 是否实例_2 <公开 静态 类型 = 逻辑型 注释 = "是否实例_2. 原方法: IsInstance. 官方简介: 若该对象是 TypeName 的实例则返回真值." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 类型名称 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.Standard_Transient.IsInstance_2 (@<对象>, @<类型名称>)
+    }
+
+    方法 是否类型 <公开 静态 类型 = 逻辑型 注释 = "是否类型. 原方法: IsKind. 官方简介: 若这是 Type 的实例, 或任何继承自 Type 的类的实例, 则返回 true. 注意 OCCT RTTI 机制不支持多重继承." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 类型 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Standard_Transient.IsKind (@<对象>, @<类型>)
+    }
+
+    方法 是否类型_2 <公开 静态 类型 = 逻辑型 注释 = "是否类型_2. 原方法: IsKind. 官方简介: 若这是 TypeName 的实例, 或任何继承自 TypeName 的类的实例, 则返回 true. 注意 OCCT RTTI 机制不支持多重继承." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 类型名称 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.Standard_Transient.IsKind_2 (@<对象>, @<类型名称>)
+    }
+
+    方法 此 <公开 静态 类型 = 长整数 注释 = "此. 原方法: This. 官方简介: 返回指向该对象的非 const 指针(类似 const_cast). 为防止创建指向栈上分配对象或从构造函数调用的句柄, 若引用计数为零它将抛出异常 Standard_ProgramError." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Standard_Transient.This (@<对象>)
+    }
+
+    方法 取参考计数 <公开 静态 类型 = 整数 注释 = "取参考计数. 原方法: GetRefCount. 官方简介: 获取该对象的引用计数器" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Standard_Transient.GetRefCount (@<对象>)
+    }
+
+    方法 增量参考计数器 <公开 静态 注释 = "增量参考计数器. 原方法: IncrementRefCounter. 官方简介: 增加该对象的引用计数器" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Standard_Transient.IncrementRefCounter (@<对象>)
+    }
+
+    方法 递减参考计数器 <公开 静态 类型 = 整数 注释 = "递减参考计数器. 原方法: DecrementRefCounter. 官方简介: 减少该对象的引用计数; 返回减少后的值" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Standard_Transient.DecrementRefCounter (@<对象>)
+    }
+
+}
+
+类 类型信息 <公开 注释 = "类型信息: 原类 Standard_Type (libTKernel, 头文件 Standard/Standard_Type.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 此类为继承自 Standard_Transient 的 OCCT 类提供运行期类型信息(RTTI)的旧式接口(类型描述符)." @禁止创建对象 = 真>
+{
+
+    方法 系统名称 <公开 静态 类型 = 文本型 注释 = "系统名称. 原方法: SystemName. 官方简介: 返回类的系统类型名 (typeinfo.name)" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Standard_Type.SystemName (@<对象>)
+    }
+
+    方法 名称 <公开 静态 类型 = 文本型 注释 = "名称. 原方法: Name. 官方简介: 返回类类型的给定名称 (get_type_name)" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Standard_Type.Name (@<对象>)
+    }
+
+    方法 尺寸 <公开 静态 类型 = 长整数 注释 = "尺寸. 原方法: Size. 官方简介: 返回类实例的字节大小" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Standard_Type.Size (@<对象>)
+    }
+
+    方法 父 <公开 静态 类型 = 长整数 注释 = "父. 原方法: Parent. 官方简介: 返回层次结构中基类的描述符" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Standard_Type.Parent (@<对象>)
+    }
+
+    方法 子项类型 <公开 静态 类型 = 逻辑型 注释 = "子项类型. 原方法: SubType. 官方简介: 若该类型与 theOther 相同或继承自 theOther 则返回 True. 注意不支持多重继承." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Standard_Type.SubType (@<对象>, @<另一个>)
+    }
+
+    方法 子项类型_2 <公开 静态 类型 = 逻辑型 注释 = "子项类型_2. 原方法: SubType. 官方简介: 若该类型与 theOther 相同或继承自 theOther 则返回 True. 注意不支持多重继承." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.Standard_Type.SubType_2 (@<对象>, @<另一个>)
+    }
+
+    方法 打印 <公开 静态 类型 = 文本型 注释 = "打印. 原方法: Print. 官方简介: 把类型(描述符地址 + 名称)打印到流" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.Standard_Type.Print (@<对象>)
+    }
+
+}
+
+类 ASCII字符串 <公开 注释 = "ASCII字符串: 原类 TCollection_AsciiString (libTKernel, 头文件 TCollection/TCollection_AsciiString.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 类定义 8 位字符的可变长度序列. 尽管类名如此(出于历史原因保留), 它旨在存储 UTF-8 字符串, 而不仅是 ASCII 字符. 但是, 以下方法不考虑 UTF-8 的多字节性质: - 方法 ::Length() 返回字节数, 而非 Unicode 符号数. - 接受/返回符号索引的方法按 8 位代码单元工作, 而非真正的 Unicode 符号, 包括 ::Remove(), ::SetValue(), ::Value(), ::Search(), ::Trunc() 等. 若应用需显式处理多字节 Unicode 符号, 可用 NCollection_Utf8Iter 类遍历 Unicode 字符串(每个位置返回 UTF-32 代码单元)." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: TCollection_AsciiString. 官方简介: 把 AsciiString 初始化为空 AsciiString." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.构造 ()
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: TCollection_AsciiString. 官方简介: 用 CString 初始化 AsciiString." @嵌入式方法 = "">
+    参数 消息 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.构造_2 (@<消息>)
+    }
+
+    方法 创建_3 <公开 静态 类型 = 长整数 注释 = "创建_3. 原构造器: TCollection_AsciiString. 官方简介: 用 CString 初始化 AsciiString." @嵌入式方法 = "">
+    参数 消息 <类型 = 文本型>
+    参数 长度 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.构造_3 (@<消息>, @<长度>)
+    }
+
+    方法 创建_4 <公开 静态 类型 = 长整数 注释 = "创建_4. 原构造器: TCollection_AsciiString. 官方简介: 用单个字符初始化 AsciiString." @嵌入式方法 = "">
+    参数 字符值 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.构造_4 (@<字符值>)
+    }
+
+    方法 创建_5 <公开 静态 类型 = 长整数 注释 = "创建_5. 原构造器: TCollection_AsciiString. 官方简介: 用已分配的 <length> 空间初始化 AsciiString, 并填充 <filler>. 这对缓冲区很有用." @嵌入式方法 = "">
+    参数 长度 <类型 = 整数>
+    参数 填充符 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.构造_5 (@<长度>, @<填充符>)
+    }
+
+    方法 创建_6 <公开 静态 类型 = 长整数 注释 = "创建_6. 原构造器: TCollection_AsciiString. 官方简介: 用整数值初始化 AsciiString" @嵌入式方法 = "">
+    参数 值 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.构造_6 (@<值>)
+    }
+
+    方法 创建_7 <公开 静态 类型 = 长整数 注释 = "创建_7. 原构造器: TCollection_AsciiString. 官方简介: 用实数值初始化 AsciiString" @嵌入式方法 = "">
+    参数 值 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.构造_7 (@<值>)
+    }
+
+    方法 创建_8 <公开 静态 类型 = 长整数 注释 = "创建_8. 原构造器: TCollection_AsciiString. 官方简介: 用另一个 AsciiString 初始化 AsciiString." @嵌入式方法 = "">
+    参数 字符串 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.构造_8 (@<字符串>)
+    }
+
+    方法 创建_9 <公开 静态 类型 = 长整数 注释 = "桩(本地不可用): 参数类型 TCollection_AsciiString&& 未支持. 创建_9. 原构造器: TCollection_AsciiString. 官方简介: 移动构造函数" @嵌入式方法 = "">
+    参数 输出另一个 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.构造_9 (@<输出另一个>)
+    }
+
+    方法 创建_10 <公开 静态 类型 = 长整数 注释 = "创建_10. 原构造器: TCollection_AsciiString. 官方简介: 用与消息字符连接的另一 AsciiString 的副本初始化 AsciiString." @嵌入式方法 = "">
+    参数 字符串 <类型 = 文本型>
+    参数 消息 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.构造_10 (@<字符串>, @<消息>)
+    }
+
+    方法 创建_11 <公开 静态 类型 = 长整数 注释 = "创建_11. 原构造器: TCollection_AsciiString. 官方简介: 用另一个 AsciiString 的副本与消息字符串拼接来初始化 AsciiString." @嵌入式方法 = "">
+    参数 字符串 <类型 = 文本型>
+    参数 消息 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.构造_11 (@<字符串>, @<消息>)
+    }
+
+    方法 创建_12 <公开 静态 类型 = 长整数 注释 = "创建_12. 原构造器: TCollection_AsciiString. 官方简介: 用另一个 AsciiString 的副本与消息字符串拼接来初始化 AsciiString." @嵌入式方法 = "">
+    参数 字符串 <类型 = 文本型>
+    参数 消息 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.构造_12 (@<字符串>, @<消息>)
+    }
+
+    方法 创建_13 <公开 静态 类型 = 长整数 注释 = "创建_13. 原构造器: TCollection_AsciiString. 官方简介: 通过把扩展字符串转换为 ascii 字符串来创建. 若 replaceNonAscii 是非空字符, 则用它替代源字符串中发现的任何非 ascii 字符. 否则, 创建 UTF-8 unicode 字符串." @嵌入式方法 = "">
+    参数 字符串 <类型 = 文本型>
+    参数 替换非ASCII <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.构造_13 (@<字符串>, @<替换非ASCII>)
+    }
+
+    方法 创建_14 <公开 静态 类型 = 长整数 注释 = "创建_14. 原构造器: TCollection_AsciiString. 官方简介: 从宽字符字符串初始化 UTF-8 Unicode 字符串, 将其视为 Unicode 字符串(宽字符的大小取决于平台 - 例如在 Windows 上 wchar_t 为 UTF-16)." @嵌入式方法 = "">
+    参数 宽字符字符串 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.构造_14 (@<宽字符字符串>)
+    }
+
+    方法 追加 <公开 静态 注释 = "追加. 原方法: AssignCat. 官方简介: 把 <other> 追加到自身. 这是一元运算符." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.AssignCat (@<对象>, @<另一个>)
+    }
+
+    方法 追加_2 <公开 静态 注释 = "追加_2. 原方法: AssignCat. 官方简介: 把 <other> 追加到自身. 这是一元运算符." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.AssignCat_2 (@<对象>, @<另一个>)
+    }
+
+    方法 追加_3 <公开 静态 注释 = "追加_3. 原方法: AssignCat. 官方简介: 把 <other> 追加到自身. 这是一元运算符." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.AssignCat_3 (@<对象>, @<另一个>)
+    }
+
+    方法 追加_4 <公开 静态 注释 = "追加_4. 原方法: AssignCat. 官方简介: 把 <other> 追加到 me. 这是一元运算符. 例如: aString += \"Dummy\" 要串联多个 CString, 必须在前面放置一个 AsciiString. 示例: aString += \"Hello \" + \"Dolly\" 无效 ! 但 astring += anotherString + \"Hello \" + \"Dolly\" 有效." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.AssignCat_4 (@<对象>, @<另一个>)
+    }
+
+    方法 追加_5 <公开 静态 注释 = "追加_5. 原方法: AssignCat. 官方简介: 把 <other> 追加到 me 之后. 这是一元运算符. 示例: aString += anotherString" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.AssignCat_5 (@<对象>, @<另一个>)
+    }
+
+    方法 首字母大写 <公开 静态 注释 = "首字母大写. 原方法: Capitalize. 官方简介: 把第一个字符转换为相应的大写字符, 其余字符转换为小写. 例如: 变换前 me = \"hellO \" 变换后 me = \"Hello \"" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.Capitalize (@<对象>)
+    }
+
+    方法 拼接 <公开 静态 类型 = 文本型 注释 = "拼接. 原方法: Cat. 官方简介: 把 <other> 追加到自身. 语法: aString = aString + \"Dummy\" 例如: aString 包含 \"I say \", aString = aString + \"Hello \" + \"Dolly\" 得到 \"I say Hello Dolly\" 要连接多个 CString, 必须在其前面放置一个 String. 因此下面的例子是错误的 ! aString = \"Hello \" + \"Dolly\" 这是不允许的 该规则同样适用于 AssignCat (运算符 +=)." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.Cat (@<对象>, @<另一个>)
+    }
+
+    方法 拼接_2 <公开 静态 类型 = 文本型 注释 = "拼接_2. 原方法: Cat. 官方简介: 把 <other> 追加到自身. 语法: aString = aString + 15; 例如: aString 包含 \"I say \" 得到 \"I say 15\" 要连接多个 CString, 必须在其前面放置一个 String. 因此下面的例子是错误的 ! aString = \"Hello \" + \"Dolly\" 这是不允许的 该规则同样适用于 AssignCat (运算符 +=)." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.Cat_2 (@<对象>, @<另一个>)
+    }
+
+    方法 拼接_3 <公开 静态 类型 = 文本型 注释 = "拼接_3. 原方法: Cat. 官方简介: 把 <other> 追加到自身. 语法: aString = aString + 15.15; 例如: aString 包含 \"I say \" 得到 \"I say 15.15\" 要连接多个 CString, 必须在其前面放置一个 String. 因此下面的例子是错误的 ! aString = \"Hello \" + \"Dolly\" 这是不允许的 该规则同样适用于 AssignCat (运算符 +=)." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.Cat_3 (@<对象>, @<另一个>)
+    }
+
+    方法 拼接_4 <公开 静态 类型 = 文本型 注释 = "拼接_4. 原方法: Cat. 官方简介: 把 <other> 追加到自身. 语法: aString = aString + \"Dummy\" 例如: aString 包含 \"I say \", aString = aString + \"Hello \" + \"Dolly\" 得到 \"I say Hello Dolly\" 要连接多个 CString, 必须在其前面放置一个 String. 因此下面的例子是错误的 ! aString = \"Hello \" + \"Dolly\" 这是不允许的 该规则同样适用于 AssignCat (运算符 +=)." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.Cat_4 (@<对象>, @<另一个>)
+    }
+
+    方法 拼接_5 <公开 静态 类型 = 文本型 注释 = "拼接_5. 原方法: Cat. 官方简介: 把 <other> 追加到自身. 例如: aString = aString + anotherString" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.Cat_5 (@<对象>, @<另一个>)
+    }
+
+    方法 中心 <公开 静态 注释 = "中心. 原方法: Center. 官方简介: 修改该 ASCII 字符串, 使其长度等于 Width, 新字符等于 Filler. 新字符同时添加在该字符串的开头与结尾. 若 Width 小于该 ASCII 字符串的长度, 则不做任何事. 示例 TCollection_AsciiString myAlphabet(\"abcdef\"); myAlphabet.Center(9,' '); assert ( myAlphabet == \" abcdef \" );" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 宽度 <类型 = 整数>
+    参数 填充符 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.Center (@<对象>, @<宽度>, @<填充符>)
+    }
+
+    方法 修改全部 <公开 静态 注释 = "修改全部. 原方法: ChangeAll. 官方简介: 把 AsciiString <me> 中所有等于 aChar 的字符替换为 NewChar. 替换可以区分大小写. 若你不使用默认的区分大小写, 则无论 aChar 是否大写都不影响. 示例: me = \"Histake\" -> ChangeAll('H','M',Standard_True) 得到 me = \"Mistake\"" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 字符值 <类型 = 整数>
+    参数 新字符值 <类型 = 整数>
+    参数 大小写敏感 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.ChangeAll (@<对象>, @<字符值>, @<新字符值>, @<大小写敏感>)
+    }
+
+    方法 清除 <公开 静态 注释 = "清除. 原方法: Clear. 官方简介: 删除 <me> 中包含的所有字符. 这会产生空 AsciiString." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.Clear (@<对象>)
+    }
+
+    方法 复制 <公开 静态 注释 = "复制. 原方法: Copy. 官方简介: 把 <fromwhere> 复制到 <me>. 用作运算符 = 示例: aString = anotherCString;" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 起始位置 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.Copy (@<对象>, @<起始位置>)
+    }
+
+    方法 复制_2 <公开 静态 注释 = "复制_2. 原方法: Copy. 官方简介: 把 <fromwhere> 复制到 <me>. 用作运算符 = 示例: aString = anotherString;" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 起始位置 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.Copy_2 (@<对象>, @<起始位置>)
+    }
+
+    方法 移动 <公开 静态 注释 = "桩(本地不可用): 参数类型 TCollection_AsciiString&& 未支持. 移动. 原方法: Move. 官方简介: 移动字符串而不进行重新分配" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 输出另一个 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.Move (@<对象>, @<输出另一个>)
+    }
+
+    方法 交换 <公开 静态 注释 = "桩(本地不可用): 参数类型 TCollection_AsciiString& 未支持. 交换. 原方法: Swap. 官方简介: 交换两个字符串的数据(不重新分配内存)." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 输出另一个 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.Swap (@<对象>, @<输出另一个>)
+    }
+
+    方法 集合中首个位置 <公开 静态 类型 = 整数 注释 = "集合中首个位置. 原方法: FirstLocationInSet. 官方简介: 返回 <me> 中第一个出现在 <Set> 中的字符的索引. 搜索从索引 FromIndex 开始, 到索引 ToIndex 结束. 若失败则返回零. 若 FromIndex 或 ToIndex 超出范围则抛出异常. 示例: 之前 me = \"aabAcAa\", S = \"Aa\", FromIndex = 1, Toindex = 7 之后 me = \"aabAcAa\" 返回 1" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 设置 <类型 = 文本型>
+    参数 起始索引 <类型 = 整数>
+    参数 终止索引 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.FirstLocationInSet (@<对象>, @<设置>, @<起始索引>, @<终止索引>)
+    }
+
+    方法 集合外首个位置 <公开 静态 类型 = 整数 注释 = "集合外首个位置. 原方法: FirstLocationNotInSet. 官方简介: 返回 <me> 中第一个不在集合 <Set> 中的字符的索引. 搜索从索引 FromIndex 开始, 到 <me> 中的索引 ToIndex 结束. 失败时返回零. 若 FromIndex 或 ToIndex 越界则抛出异常. 例如: 之前 me = \"aabAcAa\", S = \"Aa\", FromIndex = 1, Toindex = 7 之后 me = \"aabAcAa\" 返回 3" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 设置 <类型 = 文本型>
+    参数 起始索引 <类型 = 整数>
+    参数 终止索引 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.FirstLocationNotInSet (@<对象>, @<设置>, @<起始索引>, @<终止索引>)
+    }
+
+    方法 插入 <公开 静态 注释 = "插入. 原方法: Insert. 官方简介: 在位置 <where> 处插入一个字符. 示例: aString 包含 \"hy not ?\" aString.Insert(1,'W'); 得到 \"Why not ?\" aString 包含 \"Wh\" aString.Insert(3,'y'); 得到 \"Why\" aString 包含 \"Way\" aString.Insert(2,'h'); 得到 \"Why\"" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 处理位置 <类型 = 整数>
+    参数 信息 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.Insert (@<对象>, @<处理位置>, @<信息>)
+    }
+
+    方法 插入_2 <公开 静态 注释 = "插入_2. 原方法: Insert. 官方简介: 在位置 <where> 插入一个 CString. 例: aString 含 \"O more\", aString.Insert(2,\"nce\"); 得到 \"Once more\"" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 处理位置 <类型 = 整数>
+    参数 信息 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.Insert_2 (@<对象>, @<处理位置>, @<信息>)
+    }
+
+    方法 插入_3 <公开 静态 注释 = "插入_3. 原方法: Insert. 官方简介: 在位置 <where> 插入一个 AsciiString." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 处理位置 <类型 = 整数>
+    参数 信息 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.Insert_3 (@<对象>, @<处理位置>, @<信息>)
+    }
+
+    方法 插入之后 <公开 静态 注释 = "插入之后. 原方法: InsertAfter. 官方简介: 把字符串插入到字符串 <me> 中指定索引之后. 若 Index 超出边界则抛出异常. - 小于 0(InsertAfter), 或小于 1(InsertBefore), 或 - 大于该 ASCII 字符串中的字符数. 示例: 之前 me = \"cde\" , Index = 0 , other = \"ab\" 之后 me = \"abcde\" , other = \"ab\"" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    参数 另一个 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.InsertAfter (@<对象>, @<索引>, @<另一个>)
+    }
+
+    方法 插入之前 <公开 静态 注释 = "插入之前. 原方法: InsertBefore. 官方简介: 把字符串插入到字符串 <me> 中指定索引之前. 若 Index 超出边界则抛出异常. - 小于 0(InsertAfter), 或小于 1(InsertBefore), 或 - 大于该 ASCII 字符串中的字符数. 示例: 之前 me = \"cde\" , Index = 1 , other = \"ab\" 之后 me = \"abcde\" , other = \"ab\"" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    参数 另一个 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.InsertBefore (@<对象>, @<索引>, @<另一个>)
+    }
+
+    方法 是否相等 <公开 静态 类型 = 逻辑型 注释 = "是否相等. 原方法: IsEqual. 官方简介: 若该 ASCII 字符串的字符与 ASCII 字符串 other 的字符完全相同则返回 true. 注意该方法是运算符 == 的别名." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.IsEqual (@<对象>, @<另一个>)
+    }
+
+    方法 是否相等_2 <公开 静态 类型 = 逻辑型 注释 = "是否相等_2. 原方法: IsEqual. 官方简介: 若该 ASCII 字符串的字符与 ASCII 字符串 other 的字符完全相同则返回 true. 注意该方法是运算符 == 的别名." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.IsEqual_2 (@<对象>, @<另一个>)
+    }
+
+    方法 是否不同 <公开 静态 类型 = 逻辑型 注释 = "是否不同. 原方法: IsDifferent. 官方简介: 若该 ASCII 字符串与 ASCII 字符串 other 的字符存在差异则返回 true. 注意该方法是不等运算符 != 的别名" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.IsDifferent (@<对象>, @<另一个>)
+    }
+
+    方法 是否不同_2 <公开 静态 类型 = 逻辑型 注释 = "是否不同_2. 原方法: IsDifferent. 官方简介: 若该 ASCII 字符串与 ASCII 字符串 other 的字符存在差异则返回 true. 注意该方法是不等运算符 != 的别名" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.IsDifferent_2 (@<对象>, @<另一个>)
+    }
+
+    方法 是否小于 <公开 静态 类型 = 逻辑型 注释 = "是否小于. 原方法: IsLess. 官方简介: 若 <me> 按 'ASCII' 序小于 <other> 则返回 TRUE." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.IsLess (@<对象>, @<另一个>)
+    }
+
+    方法 是否小于_2 <公开 静态 类型 = 逻辑型 注释 = "是否小于_2. 原方法: IsLess. 官方简介: 若 <me> 按 'ASCII' 序小于 <other> 则返回 TRUE." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.IsLess_2 (@<对象>, @<另一个>)
+    }
+
+    方法 是否大于 <公开 静态 类型 = 逻辑型 注释 = "是否大于. 原方法: IsGreater. 官方简介: 若 <me> 按 'ASCII' 序大于 <other> 则返回 TRUE." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.IsGreater (@<对象>, @<另一个>)
+    }
+
+    方法 是否大于_2 <公开 静态 类型 = 逻辑型 注释 = "是否大于_2. 原方法: IsGreater. 官方简介: 若 <me> 按 'ASCII' 序大于 <other> 则返回 TRUE." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.IsGreater_2 (@<对象>, @<另一个>)
+    }
+
+    方法 是否前缀 <公开 静态 类型 = 逻辑型 注释 = "是否前缀. 原方法: StartsWith. 官方简介: 判断该字符串实例的开头是否与指定字符串匹配." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 起点字符串 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.StartsWith (@<对象>, @<起点字符串>)
+    }
+
+    方法 是否后缀 <公开 静态 类型 = 逻辑型 注释 = "是否后缀. 原方法: EndsWith. 官方简介: 判断该字符串实例的结尾是否与指定字符串匹配." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 后缀字符串 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.EndsWith (@<对象>, @<后缀字符串>)
+    }
+
+    方法 整数值 <公开 静态 类型 = 整数 注释 = "整数值. 原方法: IntegerValue. 官方简介: 把含有数值表达式的 AsciiString 转换为整数. 例: \"215\" 返回 215." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.IntegerValue (@<对象>)
+    }
+
+    方法 是否整数值 <公开 静态 类型 = 逻辑型 注释 = "是否整数值. 原方法: IsIntegerValue. 官方简介: 若 AsciiString 包含整数值则返回 True. 注意: 整数值也被视为实数值." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.IsIntegerValue (@<对象>)
+    }
+
+    方法 是否实数值 <公开 静态 类型 = 逻辑型 注释 = "是否实数值. 原方法: IsRealValue. 官方简介: 若 AsciiString 以可解释为整数或实数值的若干字符开头则返回 True. @param theToCheckFull [in] 当为 TRUE 时, 检查整个字符串是否定义实数值; 否则检查字符串是否以实数值开头. 注意: 整数值也被视为实数值." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 完整检查 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.IsRealValue (@<对象>, @<完整检查>)
+    }
+
+    方法 是否ASCII <公开 静态 类型 = 逻辑型 注释 = "是否ASCII. 原方法: IsAscii. 官方简介: 若 AsciiString 仅包含介于 ' ' 与 '~' 之间的 ASCII 字符则返回 True. 这意味着没有控制字符, 也没有扩展 ASCII 码." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.IsAscii (@<对象>)
+    }
+
+    方法 左调整 <公开 静态 注释 = "左调整. 原方法: LeftAdjust. 官方简介: 删除字符串开头处的所有空格字符." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.LeftAdjust (@<对象>)
+    }
+
+    方法 左对齐 <公开 静态 注释 = "左对齐. 原方法: LeftJustify. 官方简介: 左对齐. 长度变为等于 Width, 新字符等于 Filler. 若 Width < Length 则不发生任何事. 若 Width 小于零则抛出异常. 示例: 之前 me = \"abcdef\" , Width = 9 , Filler = ' ' 之后 me = \"abcdef \"" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 宽度 <类型 = 整数>
+    参数 填充符 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.LeftJustify (@<对象>, @<宽度>, @<填充符>)
+    }
+
+    方法 取长度 <公开 静态 类型 = 整数 注释 = "取长度. 原方法: Length. 官方简介: 返回 <me> 中的字符数量. 这与 C 中 'strlen' 的功能相同. 示例 TCollection_AsciiString myAlphabet(\"abcdef\"); assert ( myAlphabet.Length() == 6 ); - 1 是该字符串中第一个字符的位置. - 该字符串的长度给出其最后一个字符的位置. - 在按位置识别该字符串字符的函数中, 小于或等于零、或大于该字符串长度的位置无效." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.Length (@<对象>)
+    }
+
+    方法 位置 <公开 静态 类型 = 整数 注释 = "位置. 原方法: Location. 官方简介: 返回在字符串 <me> 中从起始索引 FromIndex 到结束索引 ToIndex 的范围内首次出现字符串 S 的索引 若失败则返回零 若 FromIndex 或 ToIndex 超出范围则抛出异常. 示例: 之前 me = \"aabAaAa\", S = \"Aa\", FromIndex = 1, ToIndex = 7 之后 me = \"aabAaAa\" 返回 4" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 文本型>
+    参数 起始索引 <类型 = 整数>
+    参数 终止索引 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.Location (@<对象>, @<另一个>, @<起始索引>, @<终止索引>)
+    }
+
+    方法 位置_2 <公开 静态 类型 = 整数 注释 = "位置_2. 原方法: Location. 官方简介: 返回在字符串 <me> 中从起始索引 FromIndex 到结束索引 ToIndex 的范围内第 N 次出现字符 C 的索引. 若失败则返回零. 若 FromIndex 或 ToIndex 超出范围则抛出异常. 示例: 之前 me = \"aabAa\", N = 3, C = 'a', FromIndex = 1, ToIndex = 5 之后 me = \"aabAa\" 返回 5" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 N <类型 = 整数>
+    参数 C <类型 = 整数>
+    参数 起始索引 <类型 = 整数>
+    参数 终止索引 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.Location_2 (@<对象>, @<N>, @<C>, @<起始索引>, @<终止索引>)
+    }
+
+    方法 转小写 <公开 静态 注释 = "转小写. 原方法: LowerCase. 官方简介: 把 <me> 转换为其小写形式. 示例 TCollection_AsciiString myString(\"Hello Dolly\"); myString.UpperCase(); assert ( myString == \"HELLO DOLLY\" ); myString.LowerCase(); assert ( myString == \"hello dolly\" );" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.LowerCase (@<对象>)
+    }
+
+    方法 前置 <公开 静态 注释 = "前置. 原方法: Prepend. 官方简介: 在该 ASCII 字符串的开头插入字符串 other. 示例 TCollection_AsciiString myAlphabet(\"cde\"); TCollection_AsciiString myBegin(\"ab\"); myAlphabet.Prepend(myBegin); assert ( myAlphabet == \"abcde\" );" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.Prepend (@<对象>, @<另一个>)
+    }
+
+    方法 打印 <公开 静态 类型 = 文本型 注释 = "打印. 原方法: Print. 官方简介: 在流上显示 <me>." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.Print (@<对象>)
+    }
+
+    方法 实数值 <公开 静态 类型 = 小数 注释 = "实数值. 原方法: RealValue. 官方简介: 把含有数值表达式的 AsciiString 转换为实数. 例: ex: \"215\" 返回 215.0. ex: \"3.14159267\" 返回 3.14159267." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.RealValue (@<对象>)
+    }
+
+    方法 移除全部 <公开 静态 注释 = "移除全部. 原方法: RemoveAll. 官方简介: 移除字符串中字符 C 的所有出现. 例: 之前 me = \"HellLLo\", C = 'L', CaseSensitive = True 之后 me = \"Hello\"" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 C <类型 = 整数>
+    参数 大小写敏感 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.RemoveAll (@<对象>, @<C>, @<大小写敏感>)
+    }
+
+    方法 移除全部_2 <公开 静态 注释 = "移除全部_2. 原方法: RemoveAll. 官方简介: 从 <me> 中删除所有 <what> 字符." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 信息 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.RemoveAll_2 (@<对象>, @<信息>)
+    }
+
+    方法 移除 <公开 静态 注释 = "移除. 原方法: Remove. 官方简介: 从位置 <where> 起擦除 <ahowmany> 个字符, 包含 <where>. 例如: aString 包含 \"Hello\", aString.Remove(2,2) 从位置 2 擦除 2 个字符, 结果为 \"Hlo\"." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 处理位置 <类型 = 整数>
+    参数 数量 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.Remove (@<对象>, @<处理位置>, @<数量>)
+    }
+
+    方法 右调整 <公开 静态 注释 = "右调整. 原方法: RightAdjust. 官方简介: 删除字符串末尾的所有空格字符." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.RightAdjust (@<对象>)
+    }
+
+    方法 右对齐 <公开 静态 注释 = "右对齐. 原方法: RightJustify. 官方简介: 右对齐. 长度变为等于 Width, 新字符等于 Filler. 若 Width < Length 则不发生任何事. 若 Width 小于零则抛出异常. 示例: 之前 me = \"abcdef\" , Width = 9 , Filler = ' ' 之后 me = \" abcdef\"" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 宽度 <类型 = 整数>
+    参数 填充符 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.RightJustify (@<对象>, @<宽度>, @<填充符>)
+    }
+
+    方法 搜索 <公开 静态 类型 = 整数 注释 = "搜索. 原方法: Search. 官方简介: 从头开始在 <me> 中搜索 CString, 返回第一个匹配项 <what> 的位置. 若未找到则返回 -1. 示例: aString 包含 \"Sample single test\" aString.Search(\"le\") 返回 5" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 信息 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.Search (@<对象>, @<信息>)
+    }
+
+    方法 搜索_2 <公开 静态 类型 = 整数 注释 = "搜索_2. 原方法: Search. 官方简介: 从开头在 <me> 中搜索 AsciiString, 返回第一个匹配项 <what> 的位置. 若未找到则返回 -1." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 信息 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.Search_2 (@<对象>, @<信息>)
+    }
+
+    方法 从末端搜索 <公开 静态 类型 = 整数 注释 = "从末端搜索. 原方法: SearchFromEnd. 官方简介: 从末尾开始在 AsciiString 中搜索 CString, 返回第一个匹配项 <what> 的位置. 若未找到则返回 -1. 示例: aString 包含 \"Sample single test\" aString.SearchFromEnd(\"le\") 返回 12" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 信息 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.SearchFromEnd (@<对象>, @<信息>)
+    }
+
+    方法 从末端搜索_2 <公开 静态 类型 = 整数 注释 = "从末端搜索_2. 原方法: SearchFromEnd. 官方简介: 从末尾在另一个 AsciiString 中搜索 AsciiString, 返回第一个匹配项 <what> 的位置. 若未找到则返回 -1." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 信息 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.SearchFromEnd_2 (@<对象>, @<信息>)
+    }
+
+    方法 设置值 <公开 静态 注释 = "设置值. 原方法: SetValue. 官方简介: 替换 AsciiString 中位置 <where> 处的一个字符. 若 <where> 小于零或大于 <me> 的长度则抛出异常. 示例: aString 包含 \"Garbake\" astring.Replace(6,'g') 得到 <me> = \"Garbage\"" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 处理位置 <类型 = 整数>
+    参数 信息 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.SetValue (@<对象>, @<处理位置>, @<信息>)
+    }
+
+    方法 设置值_2 <公开 静态 注释 = "设置值_2. 原方法: SetValue. 官方简介: 用 CString 替换 <me> 的一部分. 若 <where> 小于零或大于 <me> 的长度则抛出异常. 示例: aString 包含 \"abcde\" aString.SetValue(4,\"1234567\") 得到 <me> = \"abc1234567\"" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 处理位置 <类型 = 整数>
+    参数 信息 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.SetValue_2 (@<对象>, @<处理位置>, @<信息>)
+    }
+
+    方法 设置值_3 <公开 静态 注释 = "设置值_3. 原方法: SetValue. 官方简介: 用另一个 AsciiString 替换 <me> 的一部分." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 处理位置 <类型 = 整数>
+    参数 信息 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.SetValue_3 (@<对象>, @<处理位置>, @<信息>)
+    }
+
+    方法 分割 <公开 静态 类型 = 文本型 注释 = "分割. 原方法: Split. 官方简介: 把 AsciiString 拆分为两个子字符串. 例: aString 含 \"abcdefg\", aString.Split(3) 使 <me> = \"abc\" 并返回 \"defg\"" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 处理位置 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.Split (@<对象>, @<处理位置>)
+    }
+
+    方法 取子串 <公开 静态 类型 = 文本型 注释 = "取子串. 原方法: SubString. 官方简介: 创建字符串 <me> 的子串. 子串从索引 Fromindex 开始, 到索引 ToIndex 结束. 若 ToIndex 或 FromIndex 越界则抛出异常. 例如: 之前 me = \"abcdefg\", ToIndex=3, FromIndex=6 之后 me = \"abcdefg\" 返回 \"cdef\"" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 起始索引 <类型 = 整数>
+    参数 终止索引 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.SubString (@<对象>, @<起始索引>, @<终止索引>)
+    }
+
+    方法 转C字符串 <公开 静态 类型 = 文本型 注释 = "转C字符串. 原方法: ToCString. 官方简介: 返回指向 AsciiString 的指针(char *). 这对某些临时操作很有用. 警告: 因为该 \"char *\" 是 'const' 的, 不能修改其内容." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.ToCString (@<对象>)
+    }
+
+    方法 取词元 <公开 静态 类型 = 文本型 注释 = "取词元. 原方法: Token. 官方简介: 从 <me> 提取第 <whichone> 个词元. 默认情况下, <separators> 设为空格与制表符. 默认情况下, 提取的词元是第一个(whichone = 1). <separators> 包含你需要的所有分隔符. 若未找到由 <whichone> 索引的词元, 则返回空 AsciiString. 示例: aString 包含 \"This is a message\" aString.Token() 返回 \"This\" aString.Token(\" \",4) 返回 \"message\" aString.Token(\" \",2) 返回 \"is\" aString.Token(\" \",9) 返回 \"\" 允许使用空格字符与制表符以外的其他分隔符 : aString 包含 \"1234; test:message , value\" aString.Token(\"; :,\",4) 返回 \"value\" aString.Token(\"; :,\",2) 返回 \"test\"" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 分隔符 <类型 = 文本型>
+    参数 目标项 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.Token (@<对象>, @<分隔符>, @<目标项>)
+    }
+
+    方法 截断 <公开 静态 注释 = "截断. 原方法: Trunc. 官方简介: 把 <me> 截断为 <ahowmany> 个字符. 例如: me = \"Hello Dolly\" -> Trunc(3) -> me = \"Hel\"" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 数量 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.Trunc (@<对象>, @<数量>)
+    }
+
+    方法 转大写 <公开 静态 注释 = "转大写. 原方法: UpperCase. 官方简介: 把 <me> 转换为其大写形式." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.UpperCase (@<对象>)
+    }
+
+    方法 有效长度 <公开 静态 类型 = 整数 注释 = "有效长度. 原方法: UsefullLength. 官方简介: 字符串长度, 忽略所有空格(' ')和末尾的控制字符." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.UsefullLength (@<对象>)
+    }
+
+    方法 取值 <公开 静态 类型 = 整数 注释 = "取值. 原方法: Value. 官方简介: 返回 <me> 中位置 <where> 处的字符. 若 <where> 小于零或大于 <me> 的长度, 则抛出异常. 例如: aString 包含 \"Hello\", aString.Value(2) 返回 'e'" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 处理位置 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.Value (@<对象>, @<处理位置>)
+    }
+
+    方法 哈希码 <公开 静态 类型 = 长整数 注释 = "哈希码. 原方法: HashCode. 官方简介: 计算给定 ascii 字符串的哈希码. 返回与 TCollection_ExtendedString 的哈希函数相同的整数值. @return 计算出的哈希码" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.HashCode (@<对象>)
+    }
+
+    方法 是否相等_3 <公开 静态 类型 = 逻辑型 注释 = "是否相等_3. 原方法: IsEqual. 官方简介: 当两个字符串相同时返回 True. (仅用于 AsciiString 的 HashCode)" @嵌入式方法 = "">
+    参数 字符串1 <类型 = 文本型>
+    参数 字符串2 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.IsEqual_3 (@<字符串1>, @<字符串2>)
+    }
+
+    方法 是否相等_4 <公开 静态 类型 = 逻辑型 注释 = "是否相等_4. 原方法: IsEqual. 官方简介: 当两个字符串相同时返回 True. (仅用于 AsciiString 的 HashCode)" @嵌入式方法 = "">
+    参数 字符串1 <类型 = 文本型>
+    参数 字符串2 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.IsEqual_4 (@<字符串1>, @<字符串2>)
+    }
+
+    方法 是否相同字符串 <公开 静态 类型 = 逻辑型 注释 = "是否相同字符串. 原方法: IsSameString. 官方简介: 若字符串包含相同字符则返回 True." @嵌入式方法 = "">
+    参数 字符串1 <类型 = 文本型>
+    参数 字符串2 <类型 = 文本型>
+    参数 是否大小写敏感 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_AsciiString.IsSameString (@<字符串1>, @<字符串2>, @<是否大小写敏感>)
+    }
+
+}
+
+类 扩展字符串 <公开 注释 = "扩展字符串: 原类 TCollection_ExtendedString (libTKernel, 头文件 TCollection/TCollection_ExtendedString.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 可变长度的 \"扩展\"(UNICODE) 字符(16 位字符类型)序列. 它提供带内建内存管理的编辑操作, 使 ExtendedString 对象比普通扩展字符数组更易使用. ExtendedString 对象遵循 \"值语义\", 即它们是字符串本身而非字符串句柄, 并通过赋值复制. 可使用 HExtendedString 对象获取字符串句柄." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: TCollection_ExtendedString. 官方简介: 把 ExtendedString 初始化为空 ExtendedString." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_ExtendedString.构造 ()
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: TCollection_ExtendedString. 官方简介: 通过把 CString 转换为扩展字符串来创建. 若 <isMultiByte> 为 true, 则该字符串按 UTF-8 编码处理. 若不是 UTF-8, 则 <isMultiByte> 被忽略, 且每个字符被复制到 ExtCharacter." @嵌入式方法 = "">
+    参数 字符串 <类型 = 文本型>
+    参数 是否多字节 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_ExtendedString.构造_2 (@<字符串>, @<是否多字节>)
+    }
+
+    方法 创建_3 <公开 静态 类型 = 长整数 注释 = "创建_3. 原构造器: TCollection_ExtendedString. 官方简介: 通过把 ExtString 转换为扩展字符串来创建." @嵌入式方法 = "">
+    参数 字符串 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_ExtendedString.构造_3 (@<字符串>)
+    }
+
+    方法 创建_4 <公开 静态 类型 = 长整数 注释 = "创建_4. 原构造器: TCollection_ExtendedString. 官方简介: 从宽字符串初始化, 将其视为 Unicode 字符串(宽字符的大小依平台而定 - 例如在 Windows 上 wchar_t 是 UTF-16)." @嵌入式方法 = "">
+    参数 宽字符字符串 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_ExtendedString.构造_4 (@<宽字符字符串>)
+    }
+
+    方法 创建_5 <公开 静态 类型 = 长整数 注释 = "创建_5. 原构造器: TCollection_ExtendedString. 官方简介: 用单个字符初始化 AsciiString." @嵌入式方法 = "">
+    参数 字符值 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_ExtendedString.构造_5 (@<字符值>)
+    }
+
+    方法 创建_6 <公开 静态 类型 = 长整数 注释 = "创建_6. 原构造器: TCollection_ExtendedString. 官方简介: 用单个字符初始化 ExtendedString." @嵌入式方法 = "">
+    参数 字符值 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_ExtendedString.构造_6 (@<字符值>)
+    }
+
+    方法 创建_7 <公开 静态 类型 = 长整数 注释 = "创建_7. 原构造器: TCollection_ExtendedString. 官方简介: 用已分配的 <length> 空间初始化 ExtendedString, 并填充 <filler>. 这对缓冲区很有用." @嵌入式方法 = "">
+    参数 长度 <类型 = 整数>
+    参数 填充符 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_ExtendedString.构造_7 (@<长度>, @<填充符>)
+    }
+
+    方法 创建_8 <公开 静态 类型 = 长整数 注释 = "创建_8. 原构造器: TCollection_ExtendedString. 官方简介: 用整数值初始化 ExtendedString" @嵌入式方法 = "">
+    参数 值 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_ExtendedString.构造_8 (@<值>)
+    }
+
+    方法 创建_9 <公开 静态 类型 = 长整数 注释 = "创建_9. 原构造器: TCollection_ExtendedString. 官方简介: 用实数值初始化 ExtendedString" @嵌入式方法 = "">
+    参数 值 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_ExtendedString.构造_9 (@<值>)
+    }
+
+    方法 创建_10 <公开 静态 类型 = 长整数 注释 = "创建_10. 原构造器: TCollection_ExtendedString. 官方简介: 用另一个 ExtendedString 初始化 ExtendedString." @嵌入式方法 = "">
+    参数 字符串 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_ExtendedString.构造_10 (@<字符串>)
+    }
+
+    方法 创建_11 <公开 静态 类型 = 长整数 注释 = "桩(本地不可用): 参数类型 TCollection_ExtendedString&& 未支持. 创建_11. 原构造器: TCollection_ExtendedString. 官方简介: 移动构造函数" @嵌入式方法 = "">
+    参数 输出另一个 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_ExtendedString.构造_11 (@<输出另一个>)
+    }
+
+    方法 创建_12 <公开 静态 类型 = 长整数 注释 = "创建_12. 原构造器: TCollection_ExtendedString. 官方简介: 通过把 ascii 字符串转换为扩展字符串来创建. 该字符串被视为采用 UTF-8 编码. 若它不是 UTF-8 或多字节, 则每个字符被复制到 ExtCharacter." @嵌入式方法 = "">
+    参数 字符串 <类型 = 文本型>
+    参数 是否多字节 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_ExtendedString.构造_12 (@<字符串>, @<是否多字节>)
+    }
+
+    方法 追加 <公开 静态 注释 = "追加. 原方法: AssignCat. 官方简介: 把另一个扩展字符串追加到该扩展字符串. 注意此方法是运算符 += 的别名. 例: aString += anotherString" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_ExtendedString.AssignCat (@<对象>, @<另一个>)
+    }
+
+    方法 追加_2 <公开 静态 注释 = "追加_2. 原方法: AssignCat. 官方简介: 把 utf16 字符追加到该扩展字符串." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 字符值 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_ExtendedString.AssignCat_2 (@<对象>, @<字符值>)
+    }
+
+    方法 拼接 <公开 静态 类型 = 文本型 注释 = "拼接. 原方法: Cat. 官方简介: 把 <other> 追加到自身." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_ExtendedString.Cat (@<对象>, @<另一个>)
+    }
+
+    方法 修改全部 <公开 静态 注释 = "修改全部. 原方法: ChangeAll. 官方简介: 把 ExtendedString <me> 中所有等于 aChar 的字符替换为 NewChar. 该替换可以区分大小写. 若不使用默认的区分大小写, 则无论 aChar 是否为大写都无关紧要." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 字符值 <类型 = 整数>
+    参数 新字符值 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_ExtendedString.ChangeAll (@<对象>, @<字符值>, @<新字符值>)
+    }
+
+    方法 清除 <公开 静态 注释 = "清除. 原方法: Clear. 官方简介: 删除 <me> 中包含的所有字符. 这会产生空 ExtendedString." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_ExtendedString.Clear (@<对象>)
+    }
+
+    方法 复制 <公开 静态 注释 = "复制. 原方法: Copy. 官方简介: 把 <fromwhere> 复制到 <me>. 用作运算符 =" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 起始位置 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_ExtendedString.Copy (@<对象>, @<起始位置>)
+    }
+
+    方法 移动 <公开 静态 注释 = "桩(本地不可用): 参数类型 TCollection_ExtendedString&& 未支持. 移动. 原方法: Move. 官方简介: 移动字符串而不进行重新分配" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 输出另一个 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_ExtendedString.Move (@<对象>, @<输出另一个>)
+    }
+
+    方法 交换 <公开 静态 注释 = "桩(本地不可用): 参数类型 TCollection_ExtendedString& 未支持. 交换. 原方法: Swap. 官方简介: 交换两个字符串的数据(不重新分配内存)." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 输出另一个 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_ExtendedString.Swap (@<对象>, @<输出另一个>)
+    }
+
+    方法 插入 <公开 静态 注释 = "插入. 原方法: Insert. 官方简介: 在位置 <where> 插入一个字符." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 处理位置 <类型 = 整数>
+    参数 信息 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_ExtendedString.Insert (@<对象>, @<处理位置>, @<信息>)
+    }
+
+    方法 插入_2 <公开 静态 注释 = "插入_2. 原方法: Insert. 官方简介: 在位置 <where> 插入一个 ExtendedString." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 处理位置 <类型 = 整数>
+    参数 信息 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_ExtendedString.Insert_2 (@<对象>, @<处理位置>, @<信息>)
+    }
+
+    方法 是否相等 <公开 静态 类型 = 逻辑型 注释 = "是否相等. 原方法: IsEqual. 官方简介: 若该扩展字符串的字符与另一扩展字符串的字符完全相同则返回 true. 注意该方法是运算符 == 的别名" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_ExtendedString.IsEqual (@<对象>, @<另一个>)
+    }
+
+    方法 是否相等_2 <公开 静态 类型 = 逻辑型 注释 = "是否相等_2. 原方法: IsEqual. 官方简介: 若该扩展字符串的字符与另一扩展字符串的字符完全相同则返回 true. 注意该方法是运算符 == 的别名" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_ExtendedString.IsEqual_2 (@<对象>, @<另一个>)
+    }
+
+    方法 是否不同 <公开 静态 类型 = 逻辑型 注释 = "是否不同. 原方法: IsDifferent. 官方简介: 若该扩展字符串与另一扩展字符串的字符存在差异则返回 true. 注意该方法是运算符 != 的别名." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_ExtendedString.IsDifferent (@<对象>, @<另一个>)
+    }
+
+    方法 是否不同_2 <公开 静态 类型 = 逻辑型 注释 = "是否不同_2. 原方法: IsDifferent. 官方简介: 若该扩展字符串与另一扩展字符串的字符存在差异则返回 true. 注意该方法是运算符 != 的别名." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_ExtendedString.IsDifferent_2 (@<对象>, @<另一个>)
+    }
+
+    方法 是否小于 <公开 静态 类型 = 逻辑型 注释 = "是否小于. 原方法: IsLess. 官方简介: 若 <me> 小于 <other> 则返回 TRUE." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_ExtendedString.IsLess (@<对象>, @<另一个>)
+    }
+
+    方法 是否小于_2 <公开 静态 类型 = 逻辑型 注释 = "是否小于_2. 原方法: IsLess. 官方简介: 若 <me> 小于 <other> 则返回 TRUE." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_ExtendedString.IsLess_2 (@<对象>, @<另一个>)
+    }
+
+    方法 是否大于 <公开 静态 类型 = 逻辑型 注释 = "是否大于. 原方法: IsGreater. 官方简介: 若 <me> 大于 <other> 则返回 TRUE." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_ExtendedString.IsGreater (@<对象>, @<另一个>)
+    }
+
+    方法 是否大于_2 <公开 静态 类型 = 逻辑型 注释 = "是否大于_2. 原方法: IsGreater. 官方简介: 若 <me> 大于 <other> 则返回 TRUE." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_ExtendedString.IsGreater_2 (@<对象>, @<另一个>)
+    }
+
+    方法 是否前缀 <公开 静态 类型 = 逻辑型 注释 = "是否前缀. 原方法: StartsWith. 官方简介: 判断该字符串实例的开头是否与指定字符串匹配." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 起点字符串 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_ExtendedString.StartsWith (@<对象>, @<起点字符串>)
+    }
+
+    方法 是否后缀 <公开 静态 类型 = 逻辑型 注释 = "是否后缀. 原方法: EndsWith. 官方简介: 判断该字符串实例的结尾是否与指定字符串匹配." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 后缀字符串 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_ExtendedString.EndsWith (@<对象>, @<后缀字符串>)
+    }
+
+    方法 是否ASCII <公开 静态 类型 = 逻辑型 注释 = "是否ASCII. 原方法: IsAscii. 官方简介: 若 ExtendedString 仅包含 \"Ascii Range\" 字符则返回 True." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_ExtendedString.IsAscii (@<对象>)
+    }
+
+    方法 取长度 <公开 静态 类型 = 整数 注释 = "取长度. 原方法: Length. 官方简介: 返回 16 位码元的数量(若字符串包含代理项对, 可能大于 Unicode 符号的数量)." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_ExtendedString.Length (@<对象>)
+    }
+
+    方法 打印 <公开 静态 类型 = 文本型 注释 = "打印. 原方法: Print. 官方简介: 显示 <me> ." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_ExtendedString.Print (@<对象>)
+    }
+
+    方法 移除全部 <公开 静态 注释 = "移除全部. 原方法: RemoveAll. 官方简介: 从 <me> 中删除所有 <what> 字符." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 信息 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_ExtendedString.RemoveAll (@<对象>, @<信息>)
+    }
+
+    方法 移除 <公开 静态 注释 = "移除. 原方法: Remove. 官方简介: 从位置 <where> 起删除 <ahowmany> 个字符(含 <where>)." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 处理位置 <类型 = 整数>
+    参数 数量 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_ExtendedString.Remove (@<对象>, @<处理位置>, @<数量>)
+    }
+
+    方法 搜索 <公开 静态 类型 = 整数 注释 = "搜索. 原方法: Search. 官方简介: 从开头在 <me> 中搜索 ExtendedString, 返回第一个匹配项 <what> 的位置. 若未找到则返回 -1." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 信息 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_ExtendedString.Search (@<对象>, @<信息>)
+    }
+
+    方法 从末端搜索 <公开 静态 类型 = 整数 注释 = "从末端搜索. 原方法: SearchFromEnd. 官方简介: 从末尾在另一个 ExtendedString 中搜索 ExtendedString, 返回第一个匹配项 <what> 的位置. 若未找到则返回 -1." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 信息 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_ExtendedString.SearchFromEnd (@<对象>, @<信息>)
+    }
+
+    方法 设置值 <公开 静态 注释 = "设置值. 原方法: SetValue. 官方简介: 替换扩展字符串中位置 <where> 处的一个字符. 若 <where> 小于零或大于 <me> 的长度则抛出异常." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 处理位置 <类型 = 整数>
+    参数 信息 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_ExtendedString.SetValue (@<对象>, @<处理位置>, @<信息>)
+    }
+
+    方法 设置值_2 <公开 静态 注释 = "设置值_2. 原方法: SetValue. 官方简介: 用另一个 ExtendedString 替换 <me> 的一部分, 见上文." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 处理位置 <类型 = 整数>
+    参数 信息 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_ExtendedString.SetValue_2 (@<对象>, @<处理位置>, @<信息>)
+    }
+
+    方法 分割 <公开 静态 类型 = 文本型 注释 = "分割. 原方法: Split. 官方简介: 在位置 where 处把该扩展字符串分割为两个子字符串. - 第二个子字符串(从该字符串的位置 where + 1 到末尾)在新的扩展字符串中返回. - 该扩展字符串被修改: 其最后的字符被移除, 它变为等于第一个子字符串(从第一个字符到位置 where). 示例: aString 包含 \"abcdefg\" aString.Split(3) 得到 <me> = \"abc\" 并返回 \"defg\"" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 处理位置 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_ExtendedString.Split (@<对象>, @<处理位置>)
+    }
+
+    方法 取词元 <公开 静态 类型 = 文本型 注释 = "取词元. 原方法: Token. 官方简介: 从 <me> 提取第 <whichone> 个词元. 默认情况下, <separators> 设为空格与制表符. 默认情况下, 提取的词元是第一个(whichone = 1). <separators> 包含你需要的所有分隔符. 若未找到由 <whichone> 索引的词元, 则返回空 AsciiString. 示例: aString 包含 \"This is a message\" aString.Token() 返回 \"This\" aString.Token(\" \",4) 返回 \"message\" aString.Token(\" \",2) 返回 \"is\" aString.Token(\" \",9) 返回 \"\" 允许使用空格字符与制表符以外的其他分隔符 : aString 包含 \"1234; test:message , value\" aString.Token(\"; :,\",4) 返回 \"value\" aString.Token(\"; :,\",2) 返回 \"test\"" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 分隔符 <类型 = 文本型>
+    参数 目标项 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_ExtendedString.Token (@<对象>, @<分隔符>, @<目标项>)
+    }
+
+    方法 转扩展字符串 <公开 静态 类型 = 文本型 注释 = "转扩展字符串. 原方法: ToExtString. 官方简介: 返回指向 ExtString 的指针" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_ExtendedString.ToExtString (@<对象>)
+    }
+
+    方法 截断 <公开 静态 注释 = "截断. 原方法: Trunc. 官方简介: 把 <me> 截断为 <ahowmany> 个字符. 例如: me = \"Hello Dolly\" -> Trunc(3) -> me = \"Hel\" 若 ahowmany 大于该字符串长度则抛出 Standard_OutOfRange." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 数量 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_ExtendedString.Trunc (@<对象>, @<数量>)
+    }
+
+    方法 取值 <公开 静态 类型 = 整数 注释 = "取值. 原方法: Value. 官方简介: 返回 <me> 中位置 <where> 处的字符. 若 <where> 小于零或大于 <me> 的长度, 则抛出异常. 示例: aString 包含 \"Hello\", aString.Value(2) 返回 'e'. 异常: 若 where 位于该扩展字符串的边界之外, 则抛出 Standard_OutOfRange." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 处理位置 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_ExtendedString.Value (@<对象>, @<处理位置>)
+    }
+
+    方法 哈希码 <公开 静态 类型 = 长整数 注释 = "哈希码. 原方法: HashCode. 官方简介: 返回该扩展字符串的哈希值. 注意: 若字符串是 ASCII, 则计算值与对由等价 ASCII 字符组成的 TCollection_AsciiString 字符串使用 HashCode 函数计算的值相同. @return 计算出的哈希码" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_ExtendedString.HashCode (@<对象>)
+    }
+
+    方法 是否相等_3 <公开 静态 类型 = 逻辑型 注释 = "是否相等_3. 原方法: IsEqual. 官方简介: 若该扩展字符串中的字符与另一扩展字符串中的字符完全相同则返回 true. 注意该方法是对 operator == 的别名." @嵌入式方法 = "">
+    参数 字符串1 <类型 = 文本型>
+    参数 字符串2 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_ExtendedString.IsEqual_3 (@<字符串1>, @<字符串2>)
+    }
+
+    方法 转UTF8C字符串 <公开 静态 类型 = 整数 注释 = "桩(本地不可用): 参数类型 Standard_PCharacter& 未支持. 转UTF8C字符串. 原方法: ToUTF8CString. 官方简介: 把内部 <mystring> 转换为 UTF8 编码, 并返回输出 CString 的长度. 调用前应为 <theCString> 分配内存!" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 输出C字符串 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_ExtendedString.ToUTF8CString (@<对象>, @<输出C字符串>)
+    }
+
+    方法 长度C字符串 <公开 静态 类型 = 整数 注释 = "长度C字符串. 原方法: LengthOfCString. 官方简介: 返回 UTF8 编码下预期的 CString 长度. 它可用于在转换为含 UTF8 编码符号的 CString 之前进行内存计算." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_ExtendedString.LengthOfCString (@<对象>)
+    }
+
+}
+
+类 ASCII字符串句柄 <公开 注释 = "ASCII字符串句柄: 原类 TCollection_HAsciiString (libTKernel, 头文件 TCollection/TCollection_HAsciiString.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 可变长度的 ASCII 字符(普通 8 位字符类型)序列. 它提供带内建内存管理的编辑操作, 使 HAsciiString 对象比普通字符数组更易使用. HAsciiString 对象是字符串句柄. - HAsciiString 字符串可由多个对象共享. - 可使用 AsciiString 对象获取实际字符串. 注意: HAsciiString 对象以 AsciiString 字符串为字段." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: TCollection_HAsciiString. 官方简介: 把 HAsciiString 初始化为空 AsciiString." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.构造 ()
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: TCollection_HAsciiString. 官方简介: 用 CString 初始化 HAsciiString." @嵌入式方法 = "">
+    参数 消息 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.构造_2 (@<消息>)
+    }
+
+    方法 创建_3 <公开 静态 类型 = 长整数 注释 = "创建_3. 原构造器: TCollection_HAsciiString. 官方简介: 用单个字符初始化 HAsciiString." @嵌入式方法 = "">
+    参数 字符值 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.构造_3 (@<字符值>)
+    }
+
+    方法 创建_4 <公开 静态 类型 = 长整数 注释 = "创建_4. 原构造器: TCollection_HAsciiString. 官方简介: 用已分配的 <length> 空间初始化 HAsciiString, 并填充 <filler>. 这对缓冲区很有用." @嵌入式方法 = "">
+    参数 长度 <类型 = 整数>
+    参数 填充符 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.构造_4 (@<长度>, @<填充符>)
+    }
+
+    方法 创建_5 <公开 静态 类型 = 长整数 注释 = "创建_5. 原构造器: TCollection_HAsciiString. 官方简介: 用整数值初始化 HAsciiString" @嵌入式方法 = "">
+    参数 值 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.构造_5 (@<值>)
+    }
+
+    方法 创建_6 <公开 静态 类型 = 长整数 注释 = "创建_6. 原构造器: TCollection_HAsciiString. 官方简介: 用实数值初始化 HAsciiString" @嵌入式方法 = "">
+    参数 值 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.构造_6 (@<值>)
+    }
+
+    方法 创建_7 <公开 静态 类型 = 长整数 注释 = "创建_7. 原构造器: TCollection_HAsciiString. 官方简介: 用 AsciiString 初始化 HAsciiString." @嵌入式方法 = "">
+    参数 字符串 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.构造_7 (@<字符串>)
+    }
+
+    方法 创建_8 <公开 静态 类型 = 长整数 注释 = "桩(本地不可用): 参数类型 TCollection_AsciiString&& 未支持. 创建_8. 原构造器: TCollection_HAsciiString. 官方简介: 用 AsciiString 初始化 HAsciiString." @嵌入式方法 = "">
+    参数 输出字符串 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.构造_8 (@<输出字符串>)
+    }
+
+    方法 创建_9 <公开 静态 类型 = 长整数 注释 = "创建_9. 原构造器: TCollection_HAsciiString. 官方简介: 用 HAsciiString 初始化 HAsciiString." @嵌入式方法 = "">
+    参数 字符串 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.构造_9 (@<字符串>)
+    }
+
+    方法 创建_10 <公开 静态 类型 = 长整数 注释 = "创建_10. 原构造器: TCollection_HAsciiString. 官方简介: 用 HExtendedString 初始化 HAsciiString. 若 replaceNonAscii 是非空字符, 则用它替代源字符串中发现的任何非 ascii 字符. 否则, 创建 UTF-8 unicode 字符串." @嵌入式方法 = "">
+    参数 字符串 <类型 = 文本型>
+    参数 替换非ASCII <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.构造_10 (@<字符串>, @<替换非ASCII>)
+    }
+
+    方法 追加 <公开 静态 注释 = "追加. 原方法: AssignCat. 官方简介: 把 <other> 追加到自身." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.AssignCat (@<对象>, @<另一个>)
+    }
+
+    方法 追加_2 <公开 静态 注释 = "追加_2. 原方法: AssignCat. 官方简介: 把 <other> 追加到自身. 例如: aString = aString + anotherString" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.AssignCat_2 (@<对象>, @<另一个>)
+    }
+
+    方法 首字母大写 <公开 静态 注释 = "首字母大写. 原方法: Capitalize. 官方简介: 把第一个字符转换为相应的大写字符, 其余字符转换为小写. 例如: 变换前 me = \"hellO \" 变换后 me = \"Hello \"" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.Capitalize (@<对象>)
+    }
+
+    方法 拼接 <公开 静态 类型 = 文本型 注释 = "拼接. 原方法: Cat. 官方简介: 通过连接该 ASCII 字符串与另一个 ASCII 字符串创建新字符串. 示例: aString = aString + anotherString aString = aString + \"Dummy\" aString 包含 \"I say \" aString = aString + \"Hello \" + \"Dolly\" 得到 \"I say Hello Dolly\" 警告: 要连接多个 CString, 你必须先放一个 String. 因此以下示例是错误的! aString = \"Hello \" + \"Dolly\" 这是不允许的 该规则同样适用于 AssignCat(operator +=)." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.Cat (@<对象>, @<另一个>)
+    }
+
+    方法 拼接_2 <公开 静态 类型 = 文本型 注释 = "拼接_2. 原方法: Cat. 官方简介: 通过拼接该 ASCII 字符串与另一个 ASCII 字符串来创建新字符串. 例: aString = aString + anotherString" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.Cat_2 (@<对象>, @<另一个>)
+    }
+
+    方法 中心 <公开 静态 注释 = "中心. 原方法: Center. 官方简介: 修改该 ASCII 字符串, 使其长度等于 Width, 新字符等于 Filler. 新字符同时添加在该字符串的开头与结尾. 若 Width 小于该 ASCII 字符串的长度, 则不做任何事. 示例 Handle(TCollection_HAsciiString) myAlphabet = new TCollection_HAsciiString (\"abcdef\"); myAlphabet->Center(9,' '); assert ( !strcmp( myAlphabet->ToCString(), \" abcdef \") );" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 宽度 <类型 = 整数>
+    参数 填充符 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.Center (@<对象>, @<宽度>, @<填充符>)
+    }
+
+    方法 修改全部 <公开 静态 注释 = "修改全部. 原方法: ChangeAll. 官方简介: 在该 ASCII 字符串中把所有等于 aChar 的字符替换为 NewChar. 若 CaseSensitive 为 true(默认值), 则替换区分大小写. 若你不使用默认的区分大小写选项, 则 aChar 是否大写无关紧要. 示例 Handle(TCollection_HAsciiString) myMistake = new TCollection_HAsciiString (\"Hather\"); myMistake->ChangeAll('H','F'); assert ( !strcmp( myMistake->ToCString(), \"Father\") );" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 字符值 <类型 = 整数>
+    参数 新字符值 <类型 = 整数>
+    参数 大小写敏感 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.ChangeAll (@<对象>, @<字符值>, @<新字符值>, @<大小写敏感>)
+    }
+
+    方法 清除 <公开 静态 注释 = "清除. 原方法: Clear. 官方简介: 删除 <me> 中包含的所有字符. 这会产生空 HAsciiString." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.Clear (@<对象>)
+    }
+
+    方法 集合中首个位置 <公开 静态 类型 = 整数 注释 = "集合中首个位置. 原方法: FirstLocationInSet. 官方简介: 返回 <me> 中第一个出现在 <Set> 中的字符的索引. 搜索从索引 FromIndex 开始, 到索引 ToIndex 结束. 若失败则返回零. 若 FromIndex 或 ToIndex 超出范围则抛出异常. 示例: 之前 me = \"aabAcAa\", S = \"Aa\", FromIndex = 1, Toindex = 7 之后 me = \"aabAcAa\" 返回 1" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 设置 <类型 = 文本型>
+    参数 起始索引 <类型 = 整数>
+    参数 终止索引 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.FirstLocationInSet (@<对象>, @<设置>, @<起始索引>, @<终止索引>)
+    }
+
+    方法 集合外首个位置 <公开 静态 类型 = 整数 注释 = "集合外首个位置. 原方法: FirstLocationNotInSet. 官方简介: 返回 <me> 中第一个不在集合 <Set> 中的字符的索引. 搜索从索引 FromIndex 开始, 到 <me> 中的索引 ToIndex 结束. 失败时返回零. 若 FromIndex 或 ToIndex 越界则抛出异常. 例如: 之前 me = \"aabAcAa\", S = \"Aa\", FromIndex = 1, Toindex = 7 之后 me = \"aabAcAa\" 返回 3" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 设置 <类型 = 文本型>
+    参数 起始索引 <类型 = 整数>
+    参数 终止索引 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.FirstLocationNotInSet (@<对象>, @<设置>, @<起始索引>, @<终止索引>)
+    }
+
+    方法 插入 <公开 静态 注释 = "插入. 原方法: Insert. 官方简介: 在位置 <where> 处插入一个字符. 示例: aString 包含 \"hy not ?\" aString.Insert(1,'W'); 得到 \"Why not ?\" aString 包含 \"Wh\" aString.Insert(3,'y'); 得到 \"Why\" aString 包含 \"Way\" aString.Insert(2,'h'); 得到 \"Why\"" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 处理位置 <类型 = 整数>
+    参数 信息 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.Insert (@<对象>, @<处理位置>, @<信息>)
+    }
+
+    方法 插入_2 <公开 静态 注释 = "插入_2. 原方法: Insert. 官方简介: 在位置 <where> 插入一个 HAsciiString." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 处理位置 <类型 = 整数>
+    参数 信息 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.Insert_2 (@<对象>, @<处理位置>, @<信息>)
+    }
+
+    方法 插入_3 <公开 静态 注释 = "插入_3. 原方法: Insert. 官方简介: 在位置 <where> 插入一个 HAsciiString." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 处理位置 <类型 = 整数>
+    参数 信息 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.Insert_3 (@<对象>, @<处理位置>, @<信息>)
+    }
+
+    方法 插入之后 <公开 静态 注释 = "插入之后. 原方法: InsertAfter. 官方简介: 在字符串 <me> 中指定索引之后插入另一 ascii 字符串 a. 例如: 变换前 me = \"cde\" , Index = 0 , other = \"ab\" 变换后 me = \"abcde\" , other = \"ab\"" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    参数 另一个 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.InsertAfter (@<对象>, @<索引>, @<另一个>)
+    }
+
+    方法 插入之前 <公开 静态 注释 = "插入之前. 原方法: InsertBefore. 官方简介: 在字符串 <me> 的特定索引之前插入另一个 ASCII 字符串 a. 若 Index 超出边界则抛出异常. 示例: 之前 me = \"cde\" , Index = 1 , other = \"ab\" 之后 me = \"abcde\" , other = \"ab\"" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    参数 另一个 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.InsertBefore (@<对象>, @<索引>, @<另一个>)
+    }
+
+    方法 是否为空 <公开 静态 类型 = 逻辑型 注释 = "是否为空. 原方法: IsEmpty. 官方简介: 若字符串 <me> 包含零字符则返回 True" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.IsEmpty (@<对象>)
+    }
+
+    方法 是否小于 <公开 静态 类型 = 逻辑型 注释 = "是否小于. 原方法: IsLess. 官方简介: 若 <me> 按 'ASCII' 序小于 <other> 则返回 TRUE." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.IsLess (@<对象>, @<另一个>)
+    }
+
+    方法 是否大于 <公开 静态 类型 = 逻辑型 注释 = "是否大于. 原方法: IsGreater. 官方简介: 若 <me> 按 'ASCII' 序大于 <other> 则返回 TRUE." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.IsGreater (@<对象>, @<另一个>)
+    }
+
+    方法 整数值 <公开 静态 类型 = 整数 注释 = "整数值. 原方法: IntegerValue. 官方简介: 把含有数值表达式的 HAsciiString 转换为整数. 例: \"215\" 返回 215." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.IntegerValue (@<对象>)
+    }
+
+    方法 是否整数值 <公开 静态 类型 = 逻辑型 注释 = "是否整数值. 原方法: IsIntegerValue. 官方简介: 若字符串包含整数值则返回 True." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.IsIntegerValue (@<对象>)
+    }
+
+    方法 是否实数值 <公开 静态 类型 = 逻辑型 注释 = "是否实数值. 原方法: IsRealValue. 官方简介: 若字符串包含实数值则返回 True." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.IsRealValue (@<对象>)
+    }
+
+    方法 是否ASCII <公开 静态 类型 = 逻辑型 注释 = "是否ASCII. 原方法: IsAscii. 官方简介: 若字符串仅包含介于 ' ' 与 '~' 之间的 ASCII 字符则返回 True. 这意味着没有控制字符, 也没有扩展 ASCII 码." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.IsAscii (@<对象>)
+    }
+
+    方法 是否不同 <公开 静态 类型 = 逻辑型 注释 = "是否不同. 原方法: IsDifferent. 官方简介: 若字符串 S 与字符串 <me> 不含相同字符则返回 True." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.IsDifferent (@<对象>, @<S>)
+    }
+
+    方法 是否相同字符串 <公开 静态 类型 = 逻辑型 注释 = "是否相同字符串. 原方法: IsSameString. 官方简介: 若字符串 S 与字符串 <me> 包含相同字符则返回 True." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.IsSameString (@<对象>, @<S>)
+    }
+
+    方法 是否相同字符串_2 <公开 静态 类型 = 逻辑型 注释 = "是否相同字符串_2. 原方法: IsSameString. 官方简介: 若字符串 S 与字符串 <me> 包含相同字符则返回 True." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 文本型>
+    参数 大小写敏感 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.IsSameString_2 (@<对象>, @<S>, @<大小写敏感>)
+    }
+
+    方法 左调整 <公开 静态 注释 = "左调整. 原方法: LeftAdjust. 官方简介: 删除字符串开头处的所有空格字符" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.LeftAdjust (@<对象>)
+    }
+
+    方法 左对齐 <公开 静态 注释 = "左对齐. 原方法: LeftJustify. 官方简介: 左对齐. 长度变为等于 Width, 新字符等于 Filler. 若 Width < Length 则不发生任何事. 若 Width 小于零则抛出异常. 示例: 之前 me = \"abcdef\" , Width = 9 , Filler = ' ' 之后 me = \"abcdef \"" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 宽度 <类型 = 整数>
+    参数 填充符 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.LeftJustify (@<对象>, @<宽度>, @<填充符>)
+    }
+
+    方法 取长度 <公开 静态 类型 = 整数 注释 = "取长度. 原方法: Length. 官方简介: 返回 <me> 中的字符数. 其功能与 C 中的 'strlen' 相同." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.Length (@<对象>)
+    }
+
+    方法 位置 <公开 静态 类型 = 整数 注释 = "位置. 原方法: Location. 官方简介: 返回在字符串 <me> 中从起始索引 FromIndex 到结束索引 ToIndex 的范围内首次出现字符串 S 的索引 若失败则返回零 若 FromIndex 或 ToIndex 超出范围则抛出异常. 示例: 之前 me = \"aabAaAa\", S = \"Aa\", FromIndex = 1, ToIndex = 7 之后 me = \"aabAaAa\" 返回 4" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 文本型>
+    参数 起始索引 <类型 = 整数>
+    参数 终止索引 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.Location (@<对象>, @<另一个>, @<起始索引>, @<终止索引>)
+    }
+
+    方法 位置_2 <公开 静态 类型 = 整数 注释 = "位置_2. 原方法: Location. 官方简介: 返回在字符串 <me> 中从起始索引 FromIndex 到结束索引 ToIndex 的范围内第 N 次出现字符 C 的索引. 若失败则返回零. 若 FromIndex 或 ToIndex 超出范围则抛出异常. 示例: 之前 me = \"aabAa\", N = 3, C = 'a', FromIndex = 1, ToIndex = 5 之后 me = \"aabAa\" 返回 5" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 N <类型 = 整数>
+    参数 C <类型 = 整数>
+    参数 起始索引 <类型 = 整数>
+    参数 终止索引 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.Location_2 (@<对象>, @<N>, @<C>, @<起始索引>, @<终止索引>)
+    }
+
+    方法 转小写 <公开 静态 注释 = "转小写. 原方法: LowerCase. 官方简介: 把 <me> 转换为其小写形式." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.LowerCase (@<对象>)
+    }
+
+    方法 前置 <公开 静态 注释 = "前置. 原方法: Prepend. 官方简介: 把另一个字符串插入字符串 <me> 的开头 例: 之前 me = \"cde\", S = \"ab\" 之后 me = \"abcde\", S = \"ab\"" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.Prepend (@<对象>, @<另一个>)
+    }
+
+    方法 打印 <公开 静态 类型 = 文本型 注释 = "打印. 原方法: Print. 官方简介: 在流 <astream> 上打印该字符串." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.Print (@<对象>)
+    }
+
+    方法 实数值 <公开 静态 类型 = 小数 注释 = "实数值. 原方法: RealValue. 官方简介: 把含有数值表达式的字符串转换为实数. 例: \"215\" 返回 215.0. \"3.14159267\" 返回 3.14159267." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.RealValue (@<对象>)
+    }
+
+    方法 移除全部 <公开 静态 注释 = "移除全部. 原方法: RemoveAll. 官方简介: 移除字符串中字符 C 的所有出现 例: 之前 me = \"HellLLo\", C = 'L', CaseSensitive = True 之后 me = \"Hello\"" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 C <类型 = 整数>
+    参数 大小写敏感 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.RemoveAll (@<对象>, @<C>, @<大小写敏感>)
+    }
+
+    方法 移除全部_2 <公开 静态 注释 = "移除全部_2. 原方法: RemoveAll. 官方简介: 从 <me> 中删除所有 <what> 字符" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 信息 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.RemoveAll_2 (@<对象>, @<信息>)
+    }
+
+    方法 移除 <公开 静态 注释 = "移除. 原方法: Remove. 官方简介: 从位置 <where> 起擦除 <ahowmany> 个字符, 包含 <where>. 例如: aString 包含 \"Hello\", aString.Erase(2,2) 从位置 1 擦除 2 个字符, 结果为 \"Hlo\"." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 处理位置 <类型 = 整数>
+    参数 数量 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.Remove (@<对象>, @<处理位置>, @<数量>)
+    }
+
+    方法 右调整 <公开 静态 注释 = "右调整. 原方法: RightAdjust. 官方简介: 删除字符串末尾的所有空格字符." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.RightAdjust (@<对象>)
+    }
+
+    方法 右对齐 <公开 静态 注释 = "右对齐. 原方法: RightJustify. 官方简介: 右对齐. 长度变为等于 Width, 新字符等于 Filler. 若 Width < Length 则不发生任何事. 若 Width 小于零则抛出异常. 示例: 之前 me = \"abcdef\" , Width = 9 , Filler = ' ' 之后 me = \" abcdef\"" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 宽度 <类型 = 整数>
+    参数 填充符 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.RightJustify (@<对象>, @<宽度>, @<填充符>)
+    }
+
+    方法 搜索 <公开 静态 类型 = 整数 注释 = "搜索. 原方法: Search. 官方简介: 从头开始在 <me> 中搜索 CString, 返回第一个匹配项 <what> 的位置. 若未找到则返回 -1. 示例: aString 包含 \"Sample single test\" aString.Search(\"le\") 返回 5" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 信息 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.Search (@<对象>, @<信息>)
+    }
+
+    方法 搜索_2 <公开 静态 类型 = 整数 注释 = "搜索_2. 原方法: Search. 官方简介: 从开头在 <me> 中搜索字符串, 返回第一个匹配项 <what> 的位置. 若未找到则返回 -1." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 信息 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.Search_2 (@<对象>, @<信息>)
+    }
+
+    方法 从末端搜索 <公开 静态 类型 = 整数 注释 = "从末端搜索. 原方法: SearchFromEnd. 官方简介: 从末尾开始在字符串中搜索 CString, 返回第一个匹配项 <what> 的位置. 若未找到则返回 -1. 示例: aString 包含 \"Sample single test\" aString.SearchFromEnd(\"le\") 返回 12" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 信息 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.SearchFromEnd (@<对象>, @<信息>)
+    }
+
+    方法 从末端搜索_2 <公开 静态 类型 = 整数 注释 = "从末端搜索_2. 原方法: SearchFromEnd. 官方简介: 从末尾在另一个 HAsciiString 中搜索 HAsciiString, 返回第一个匹配项 <what> 的位置. 若未找到则返回 -1." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 信息 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.SearchFromEnd_2 (@<对象>, @<信息>)
+    }
+
+    方法 设置值 <公开 静态 注释 = "设置值. 原方法: SetValue. 官方简介: 替换字符串中位置 <where> 处的一个字符. 若 <where> 小于零或大于 <me> 的长度则抛出异常. 示例: aString 包含 \"Garbake\" astring.Replace(6,'g') 得到 <me> = \"Garbage\"" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 处理位置 <类型 = 整数>
+    参数 信息 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.SetValue (@<对象>, @<处理位置>, @<信息>)
+    }
+
+    方法 设置值_2 <公开 静态 注释 = "设置值_2. 原方法: SetValue. 官方简介: 替换字符串中位置 <where> 处的一部分 <me>. 若 <where> 小于零或大于 <me> 的长度则抛出异常. 示例: aString 包含 \"Garbake\" astring.Replace(6,'g') 得到 <me> = \"Garbage\"" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 处理位置 <类型 = 整数>
+    参数 信息 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.SetValue_2 (@<对象>, @<处理位置>, @<信息>)
+    }
+
+    方法 设置值_3 <公开 静态 注释 = "设置值_3. 原方法: SetValue. 官方简介: 用另一个字符串替换 <me> 的一部分." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 处理位置 <类型 = 整数>
+    参数 信息 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.SetValue_3 (@<对象>, @<处理位置>, @<信息>)
+    }
+
+    方法 分割 <公开 静态 类型 = 文本型 注释 = "分割. 原方法: Split. 官方简介: 把 HAsciiString 拆分为两个子字符串. 例: aString 含 \"abcdefg\", aString.Split(3) 使 <me> = \"abc\" 并返回 \"defg\"" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 处理位置 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.Split (@<对象>, @<处理位置>)
+    }
+
+    方法 取子串 <公开 静态 类型 = 文本型 注释 = "取子串. 原方法: SubString. 官方简介: 创建字符串 <me> 的子串. 子串从索引 Fromindex 开始, 到索引 ToIndex 结束. 若 ToIndex 或 FromIndex 越界则抛出异常. 例如: 之前 me = \"abcdefg\", ToIndex=3, FromIndex=6 之后 me = \"abcdefg\" 返回 \"cdef\"" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 起始索引 <类型 = 整数>
+    参数 终止索引 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.SubString (@<对象>, @<起始索引>, @<终止索引>)
+    }
+
+    方法 转C字符串 <公开 静态 类型 = 文本型 注释 = "转C字符串. 原方法: ToCString. 官方简介: 返回字符串指针 (char *). 这对一些临时操作很有用. 由于该 \"char *\" 是 'const', 你不能修改其内容." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.ToCString (@<对象>)
+    }
+
+    方法 取词元 <公开 静态 类型 = 文本型 注释 = "取词元. 原方法: Token. 官方简介: 从 <me> 提取第 <whichone> 个词元. 默认情况下, <separators> 设为空格与制表符. 默认情况下, 提取的词元是第一个(whichone = 1). <separators> 包含你需要的所有分隔符. 若未找到由 <whichone> 索引的词元, 则返回空 String. 示例: aString 包含 \"This is a message\" aString.Token() 返回 \"This\" aString.Token(\" \",4) 返回 \"message\" aString.Token(\" \",2) 返回 \"is\" aString.Token(\" \",9) 返回 \"\" 允许使用空格字符与制表符以外的其他分隔符 aString 包含 \"1234; test:message , value\" aString.Token(\"; :,\",4) 返回 \"value\" aString.Token(\"; :,\",2) 返回 \"test\"" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 分隔符 <类型 = 文本型>
+    参数 目标项 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.Token (@<对象>, @<分隔符>, @<目标项>)
+    }
+
+    方法 截断 <公开 静态 注释 = "截断. 原方法: Trunc. 官方简介: 把 <me> 截断为 <ahowmany> 个字符. 例如: me = \"Hello Dolly\" -> Trunc(3) -> me = \"Hel\"" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 数量 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.Trunc (@<对象>, @<数量>)
+    }
+
+    方法 转大写 <公开 静态 注释 = "转大写. 原方法: UpperCase. 官方简介: 把 <me> 转换为其大写形式." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.UpperCase (@<对象>)
+    }
+
+    方法 有效长度 <公开 静态 类型 = 整数 注释 = "有效长度. 原方法: UsefullLength. 官方简介: 字符串长度, 忽略所有空格(' ')和末尾的控制字符." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.UsefullLength (@<对象>)
+    }
+
+    方法 取值 <公开 静态 类型 = 整数 注释 = "取值. 原方法: Value. 官方简介: 返回 <me> 中位置 <where> 处的字符. 若 <where> 小于零或大于 <me> 的长度, 则抛出异常. 例如: aString 包含 \"Hello\", aString.Value(2) 返回 'e'" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 处理位置 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.Value (@<对象>, @<处理位置>)
+    }
+
+    方法 字符串 <公开 静态 类型 = 文本型 注释 = "字符串. 原方法: String. 官方简介: 返回字段 myString." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.String (@<对象>)
+    }
+
+    方法 是否相同状态 <公开 静态 类型 = 逻辑型 注释 = "是否相同状态. 原方法: IsSameState." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.TCollection_HAsciiString.IsSameState (@<对象>, @<另一个>)
+    }
+
+}
+
+类 单位换算 <公开 注释 = "单位换算: 原类 Units (libTKernel, 头文件 Units/Units.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 此包提供创建与查询单位词典的全部设施, 以及操纵带单位实数值(量测值)的功能." @禁止创建对象 = 真>
+{
+
+    方法 单位文件 <公开 静态 注释 = "单位文件. 原方法: UnitsFile. 官方简介: 定义文件的位置, 该文件包含创建系统已知所有单位的字典所需的全部信息." @嵌入式方法 = "">
+    参数 文件 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.Units.UnitsFile (@<文件>)
+    }
+
+    方法 词典文件 <公开 静态 注释 = "词典文件. 原方法: LexiconFile. 官方简介: 定义包含词典的文件位置, 该词典用于操作复合单位." @嵌入式方法 = "">
+    参数 文件 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.Units.LexiconFile (@<文件>)
+    }
+
+    方法 取首个物理量 <公开 静态 类型 = 文本型 注释 = "取首个物理量. 原方法: FirstQuantity. 官方简介: 返回从单位 <aUnit> 找到的第一个物理量字符串." @嵌入式方法 = "">
+    参数 单位 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.Units.FirstQuantity (@<单位>)
+    }
+
+    方法 转换 <公开 静态 类型 = 小数 注释 = "转换. 原方法: Convert. 官方简介: 把以 <afirstunit> 表示的 <avalue> 转换为 <asecondunit>." @嵌入式方法 = "">
+    参数 值 <类型 = 小数>
+    参数 起始单位 <类型 = 文本型>
+    参数 目标单位 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.Units.Convert (@<值>, @<起始单位>, @<目标单位>)
+    }
+
+    方法 转SI <公开 静态 类型 = 小数 注释 = "转SI. 原方法: ToSI." @嵌入式方法 = "">
+    参数 数据 <类型 = 小数>
+    参数 单位 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.Units.ToSI (@<数据>, @<单位>)
+    }
+
+    方法 起始SI <公开 静态 类型 = 小数 注释 = "起始SI. 原方法: FromSI." @嵌入式方法 = "">
+    参数 数据 <类型 = 小数>
+    参数 单位 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKernel.Units.FromSI (@<数据>, @<单位>)
+    }
+
+}

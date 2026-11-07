@@ -1,0 +1,21 @@
+doc_format_version = 1
+project_identifier = "wutao.vproject.pc.win.1"
+author = "Box2D封装"
+name = "Box2D"
+version = 1
+unique_mark = box2dvol
+explain = "Box2D 3.2.0 二维物理引擎全量封装（仅单精度）"
+dependence = "*\\sys\\base\\base.vgrp"
+file
+{
+    name = "w_Box2D_基础.wsv"
+    name = "w_Box2D_数学.wsv"
+    name = "w_Box2D_标识.wsv"
+    name = "w_Box2D_几何.wsv"
+    name = "w_Box2D_形状.wsv"
+    name = "w_Box2D_刚体.wsv"
+    name = "w_Box2D_关节.wsv"
+    name = "w_Box2D_调试.wsv"
+    name = "w_Box2D_世界.wsv"
+    name = "w_Box2D_回放.wsv"
+}

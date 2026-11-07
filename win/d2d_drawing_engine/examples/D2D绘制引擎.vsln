@@ -1,0 +1,21 @@
+doc_format_version = 1
+name = D2D绘制引擎
+property.settings.active_project_name = D2D绘制引擎类库
+
+root_filter
+{
+    child_filter
+    {
+        filter1
+        {
+            build_order = 0
+            project_file_name = "D2D绘制引擎.vprj"
+            projects_dependent
+            type = project
+        }
+
+        num_child_filters = 1
+    }
+
+    name = root
+}

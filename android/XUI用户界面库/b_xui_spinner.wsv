@@ -1,0 +1,497 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.安卓.XUI <注释 = "XUI 安卓 UI 工具库封装" @文档 = "category = \"XUI\"">
+
+
+类 XUI下拉菜单 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.spinner.DropDownMenu)."
+        @文档 = "category = \"XUI.下拉框\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.spinner.DropDownMenu\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.ddm_dividerColor\n        shown_name = \"菜单垂直分割线的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.ddm_dividerWidth\n        shown_name = \"菜单垂直分割线的宽度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.ddm_dividerMargin\n        shown_name = \"菜单垂直分割线的Margin\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.ddm_underlineColor\n        shown_name = \"菜单底线的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.ddm_underlineHeight\n        shown_name = \"菜单底线的高度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.ddm_maskColor\n        shown_name = \"半透明遮罩颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.ddm_menuTextSize\n        shown_name = \"菜单文字的字体大小\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.ddm_menuTextPaddingHorizontal\n        shown_name = \"菜单文字水平padding\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.ddm_menuTextPaddingVertical\n        shown_name = \"菜单文字垂直padding\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.ddm_menuTextSelectedColor\n        shown_name = \"菜单文字选中的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.ddm_menuTextUnselectedColor\n        shown_name = \"菜单文字未选中的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.ddm_menuSelectedIcon\n        shown_name = \"菜单选择时的图标\"\n        data_type = string\n        detail_type = drawable_res_file\n    }\n    attr\n    {\n        name = app.ddm_menuUnselectedIcon\n        shown_name = \"菜单未选择时的图标\"\n        data_type = string\n        detail_type = drawable_res_file\n    }\n    attr\n    {\n        name = app.ddm_menuBackgroundColor\n        shown_name = \"菜单的背景颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.ddm_menuHeightPercent\n        shown_name = \"选择菜单的高度/屏幕高度 占比\"\n        data_type = double\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI下拉菜单, DropDownMenu, com.xuexiang.xui.widget.spinner.DropDownMenu)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetDropDownMenu ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI下拉菜单的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI下拉菜单.getAlpha()">
+    {
+        @ (double)@sn<this>.GetDropDownMenu ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI下拉菜单的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI下拉菜单.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetDropDownMenu ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI下拉菜单的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI下拉菜单.isEnabled()">
+    {
+        @ @sn<this>.GetDropDownMenu ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI下拉菜单的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI下拉菜单.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetDropDownMenu ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI下拉菜单的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI下拉菜单.isClickable()">
+    {
+        @ @sn<this>.GetDropDownMenu ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI下拉菜单的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI下拉菜单.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetDropDownMenu ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI下拉菜单的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI下拉菜单.getElevation()">
+    {
+        @ (double)@sn<this>.GetDropDownMenu ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI下拉菜单的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI下拉菜单.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetDropDownMenu ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI下拉菜单的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI下拉菜单.getMinimumHeight()">
+    {
+        @ @sn<this>.GetDropDownMenu ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI下拉菜单的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI下拉菜单.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetDropDownMenu ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI下拉菜单的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI下拉菜单.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetDropDownMenu ().setBackgroundColor (@<新值>))
+    }
+
+    方法 设置标签页菜单文本 <公开 注释 = "用法：把XUI下拉菜单的标签页菜单文本设为给定值。 参数：值1=文本。 返回：无。 原方法：XUI下拉菜单.setTabMenuText()">
+    参数 值1 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetDropDownMenu ().setTabMenuText (@<值1>))
+    }
+
+    方法 设置标签页菜单可点击 <公开 注释 = "用法：把XUI下拉菜单的标签页菜单可点击设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI下拉菜单.setTabMenuClickable()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetDropDownMenu ().setTabMenuClickable (@<值1>))
+    }
+
+    方法 关闭菜单 <公开 注释 = "用法：关闭XUI下拉菜单。 参数：无。 返回：无。 原方法：XUI下拉菜单.closeMenu()">
+    {
+        @ @m<RUN_UI_ACTION> (GetDropDownMenu ().closeMenu ())
+    }
+
+    方法 是否显示中 <公开 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：判断XUI下拉菜单是否显示中。 参数：无。 返回：逻辑型。 原方法：XUI下拉菜单.isShowing()">
+    {
+        @ @sn<this>.GetDropDownMenu ().isShowing ()
+    }
+
+}
+
+类 XUI可编辑下拉框 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.spinner.editspinner.EditSpinner)."
+        @文档 = "category = \"XUI.下拉框\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.spinner.editspinner.EditSpinner\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.es_hint\n        shown_name = \"输入提示\"\n        data_type = string\n    }\n    attr\n    {\n        name = app.es_height\n        shown_name = \"输入框的高度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.es_textSize\n        shown_name = \"输入框的字体大小\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.es_textColor\n        shown_name = \"输入框的字体颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.es_arrowMargin\n        shown_name = \"箭头图标的margin\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.es_arrowImage\n        shown_name = \"箭头图标的资源\"\n        data_type = string\n        detail_type = drawable_res_file\n    }\n    attr\n    {\n        name = app.es_background\n        shown_name = \"输入框的背景\"\n        data_type = string\n        detail_type = drawable_res_file\n    }\n    attr\n    {\n        name = app.es_maxLine\n        shown_name = \"maxLine\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.es_dropdown_bg\n        shown_name = \"下拉框 下拉条目的背景\"\n        data_type = string\n        detail_type = drawable_res_file\n    }\n    attr\n    {\n        name = app.es_enable\n        shown_name = \"输入下拉框是否可编辑\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.es_maxLength\n        shown_name = \"输入下拉框可输入的最大字符长度\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.es_maxEms\n        shown_name = \"输入下拉框可输入的最大字符宽度\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.es_isShowFilterData\n        shown_name = \"输入下拉框在输入时是否显示筛选到的信\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.es_isFilterKey\n        shown_name = \"输入下拉框显示筛选信息时\"\n        data_type = boolean\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI可编辑下拉框, EditSpinner, com.xuexiang.xui.widget.spinner.editspinner.EditSpinner)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetEditSpinner ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI可编辑下拉框的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI可编辑下拉框.getAlpha()">
+    {
+        @ (double)@sn<this>.GetEditSpinner ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI可编辑下拉框的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI可编辑下拉框.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetEditSpinner ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI可编辑下拉框的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI可编辑下拉框.isEnabled()">
+    {
+        @ @sn<this>.GetEditSpinner ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI可编辑下拉框的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI可编辑下拉框.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetEditSpinner ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI可编辑下拉框的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI可编辑下拉框.isClickable()">
+    {
+        @ @sn<this>.GetEditSpinner ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI可编辑下拉框的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI可编辑下拉框.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetEditSpinner ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI可编辑下拉框的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI可编辑下拉框.getElevation()">
+    {
+        @ (double)@sn<this>.GetEditSpinner ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI可编辑下拉框的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI可编辑下拉框.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetEditSpinner ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI可编辑下拉框的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI可编辑下拉框.getMinimumHeight()">
+    {
+        @ @sn<this>.GetEditSpinner ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI可编辑下拉框的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI可编辑下拉框.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetEditSpinner ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI可编辑下拉框的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI可编辑下拉框.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetEditSpinner ().setBackgroundColor (@<新值>))
+    }
+
+    方法 之前文本已改变 <公开 注释 = "用法：调用XUI可编辑下拉框的之前文本已改变。 参数：值1=文本、值2=整数、值3=整数、值4=整数。 返回：无。 原方法：XUI可编辑下拉框.beforeTextChanged()">
+    参数 值1 <类型 = 文本型>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetEditSpinner ().beforeTextChanged (@<值1>, @<值2>, @<值3>, @<值4>))
+    }
+
+    方法 响应文本已改变 <公开 注释 = "用法：XUI可编辑下拉框在文本已改变时被 XUI 回调, 通常配合 挂接事件 使用。 参数：值1=文本、值2=整数、值3=整数、值4=整数。 返回：无。 原方法：XUI可编辑下拉框.onTextChanged()">
+    参数 值1 <类型 = 文本型>
+    参数 值2 <类型 = 整数>
+    参数 值3 <类型 = 整数>
+    参数 值4 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetEditSpinner ().onTextChanged (@<值1>, @<值2>, @<值3>, @<值4>))
+    }
+
+    方法 取文本 <公开 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读出XUI可编辑下拉框的文本。 参数：无。 返回：文本型。 原方法：XUI可编辑下拉框.getText()">
+    {
+        @ @sn<this>.GetEditSpinner ().getText ()
+    }
+
+    方法 设置项集 <公开 注释 = "用法：把XUI可编辑下拉框的项集设为给定值。 参数：值1=文本型。 返回：无。 原方法：XUI可编辑下拉框.setItems()">
+    参数 值1 <类型 = "文本型 []">
+    {
+        @ @m<RUN_UI_ACTION> (GetEditSpinner ().setItems (@<值1>))
+    }
+
+    方法 设置文本 <公开 注释 = "用法：把XUI可编辑下拉框的文本设为给定值。 参数：值1=文本。 返回：无。 原方法：XUI可编辑下拉框.setText()">
+    参数 值1 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetEditSpinner ().setText (@<值1>))
+    }
+
+    方法 设置文本颜色 <公开 注释 = "用法：把XUI可编辑下拉框的文本颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI可编辑下拉框.setTextColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetEditSpinner ().setTextColor (@<值1>))
+    }
+
+    方法 设置背景选择器 <公开 注释 = "用法：把XUI可编辑下拉框的背景选择器设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI可编辑下拉框.setBackgroundSelector()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetEditSpinner ().setBackgroundSelector (@<值1>))
+    }
+
+    方法 设置是否滤镜键 <公开 注释 = "用法：把XUI可编辑下拉框的是否滤镜键设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI可编辑下拉框.setIsFilterKey()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetEditSpinner ().setIsFilterKey (@<值1>))
+    }
+
+    方法 设置滤镜颜色 <公开 注释 = "用法：把XUI可编辑下拉框的滤镜颜色设为给定值。 参数：值1=文本。 返回：无。 原方法：XUI可编辑下拉框.setFilterColor()">
+    参数 值1 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetEditSpinner ().setFilterColor (@<值1>))
+    }
+
+    方法 设置文本大小 <公开 注释 = "用法：把XUI可编辑下拉框的文本大小设为给定值。 参数：值1=小数。 返回：无。 原方法：XUI可编辑下拉框.setTextSize()">
+    参数 值1 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetEditSpinner ().setTextSize ((float) @<值1>))
+    }
+
+    方法 设置提示 <公开 注释 = "用法：把XUI可编辑下拉框的提示设为给定值。 参数：值1=文本。 返回：无。 原方法：XUI可编辑下拉框.setHint()">
+    参数 值1 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetEditSpinner ().setHint (@<值1>))
+    }
+
+    方法 设置箭头图片图形 <公开 注释 = "用法：把XUI可编辑下拉框的箭头图片图形设为给定值。 参数：值1=可绘制对象类。 返回：无。 原方法：XUI可编辑下拉框.setArrowImageDrawable()">
+    参数 值1 <类型 = 可绘制对象类>
+    {
+        @ @m<RUN_UI_ACTION> (GetEditSpinner ().setArrowImageDrawable (@<值1>))
+    }
+
+    方法 设置箭头图片资源 <公开 注释 = "用法：把XUI可编辑下拉框的箭头图片资源设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI可编辑下拉框.setArrowImageResource()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetEditSpinner ().setArrowImageResource (@<值1>))
+    }
+
+    方法 设置最大行 <公开 注释 = "用法：把XUI可编辑下拉框的最大行设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI可编辑下拉框.setMaxLine()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetEditSpinner ().setMaxLine (@<值1>))
+    }
+
+    方法 设置编辑文本高度 <公开 注释 = "用法：把XUI可编辑下拉框的编辑文本高度设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI可编辑下拉框.setEditTextHeight()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetEditSpinner ().setEditTextHeight (@<值1>))
+    }
+
+    方法 设置编辑文本宽度 <公开 注释 = "用法：把XUI可编辑下拉框的编辑文本宽度设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI可编辑下拉框.setEditTextWidth()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetEditSpinner ().setEditTextWidth (@<值1>))
+    }
+
+    方法 设置可用 <公开 注释 = "用法：把XUI可编辑下拉框的可用设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI可编辑下拉框.setEnabled()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetEditSpinner ().setEnabled (@<值1>))
+    }
+
+    方法 设置最大长度 <公开 注释 = "用法：把XUI可编辑下拉框的最大长度设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI可编辑下拉框.setMaxLength()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetEditSpinner ().setMaxLength (@<值1>))
+    }
+
+    方法 设置最大EM宽度 <公开 注释 = "用法：把XUI可编辑下拉框的最大EM宽度设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI可编辑下拉框.setMaxEms()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetEditSpinner ().setMaxEms (@<值1>))
+    }
+
+    方法 设置输入类型 <公开 注释 = "用法：把XUI可编辑下拉框的输入类型设为给定值。 参数：值1=整数。 返回：无。 原方法：XUI可编辑下拉框.setInputType()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetEditSpinner ().setInputType (@<值1>))
+    }
+
+}
+
+类 XUIMaterial下拉框 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.spinner.materialspinner.MaterialSpinner)."
+        @文档 = "category = \"XUI.下拉框\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.spinner.materialspinner.MaterialSpinner\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n    attr\n    {\n        name = app.ms_arrow_image\n        shown_name = \"下拉框箭头的资源\"\n        data_type = string\n        detail_type = drawable_res_file\n    }\n    attr\n    {\n        name = app.ms_arrow_tint\n        shown_name = \"下拉框箭头的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.ms_hide_arrow\n        shown_name = \"下拉框是否有箭头\"\n        data_type = boolean\n    }\n    attr\n    {\n        name = app.ms_background_color\n        shown_name = \"下拉框背景的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.ms_background_selector\n        shown_name = \"下拉框背景点击的效果\"\n        data_type = int\n    }\n    attr\n    {\n        name = app.ms_text_color\n        shown_name = \"下拉框字体的颜色\"\n        data_type = string\n        detail_type = color\n    }\n    attr\n    {\n        name = app.ms_dropdown_max_height\n        shown_name = \"下拉框 下拉条目最大的高度\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.ms_dropdown_height\n        shown_name = \"下拉框 下拉条目的样式\"\n        data_type = double\n        detail_type = dim\n    }\n    attr\n    {\n        name = app.ms_dropdown_bg\n        shown_name = \"下拉框 下拉条目的背景\"\n        data_type = string\n        detail_type = drawable_res_file\n    }\n    attr\n    {\n        name = app.ms_in_dialog\n        shown_name = \"是否在dialog中\"\n        data_type = boolean\n    }\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUIMaterial下拉框, MaterialSpinner, com.xuexiang.xui.widget.spinner.materialspinner.MaterialSpinner)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetMaterialSpinner ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUIMaterial下拉框的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUIMaterial下拉框.getAlpha()">
+    {
+        @ (double)@sn<this>.GetMaterialSpinner ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUIMaterial下拉框的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUIMaterial下拉框.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialSpinner ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUIMaterial下拉框的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUIMaterial下拉框.isEnabled()">
+    {
+        @ @sn<this>.GetMaterialSpinner ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUIMaterial下拉框的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUIMaterial下拉框.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialSpinner ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUIMaterial下拉框的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUIMaterial下拉框.isClickable()">
+    {
+        @ @sn<this>.GetMaterialSpinner ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUIMaterial下拉框的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUIMaterial下拉框.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialSpinner ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUIMaterial下拉框的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUIMaterial下拉框.getElevation()">
+    {
+        @ (double)@sn<this>.GetMaterialSpinner ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUIMaterial下拉框的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUIMaterial下拉框.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialSpinner ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUIMaterial下拉框的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUIMaterial下拉框.getMinimumHeight()">
+    {
+        @ @sn<this>.GetMaterialSpinner ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUIMaterial下拉框的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUIMaterial下拉框.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialSpinner ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUIMaterial下拉框的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUIMaterial下拉框.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialSpinner ().setBackgroundColor (@<新值>))
+    }
+
+    方法 XUI文本 <公开 属性读 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读取XUIMaterial下拉框的XUI文本当前值。 参数：无。 返回：文本型。 原方法：XUIMaterial下拉框.getText()">
+    {
+        @ java.lang.String.valueOf (@sn<this>.GetMaterialSpinner ().getText ())
+    }
+
+    方法 XUI文本 <公开 属性写 注释 = "用法：设置XUIMaterial下拉框的XUI文本, 传入新值后立刻生效。 参数：新值=文本。 返回：无。 原方法：XUIMaterial下拉框.setText()">
+    参数 新值 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialSpinner ().setText (@<新值>))
+    }
+
+    方法 XUI文字颜色 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUIMaterial下拉框的XUI文字颜色当前值。 参数：无。 返回：整数。 原方法：XUIMaterial下拉框.getCurrentTextColor()">
+    {
+        @ @sn<this>.GetMaterialSpinner ().getCurrentTextColor ()
+    }
+
+    方法 XUI文字颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUIMaterial下拉框的XUI文字颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUIMaterial下拉框.setTextColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialSpinner ().setTextColor (@<新值>))
+    }
+
+    方法 XUI文字大小 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUIMaterial下拉框的XUI文字大小当前值。 参数：无。 返回：小数。 原方法：XUIMaterial下拉框.getTextSize()">
+    {
+        @ (double)@sn<this>.GetMaterialSpinner ().getTextSize ()
+    }
+
+    方法 XUI文字大小 <公开 属性写 注释 = "用法：设置XUIMaterial下拉框的XUI文字大小, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUIMaterial下拉框.setTextSize()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialSpinner ().setTextSize ((float) @<新值>))
+    }
+
+    方法 XUI提示文字 <公开 属性读 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读取XUIMaterial下拉框的XUI提示文字当前值。 参数：无。 返回：文本型。 原方法：XUIMaterial下拉框.getHint()">
+    {
+        @ java.lang.String.valueOf (@sn<this>.GetMaterialSpinner ().getHint ())
+    }
+
+    方法 XUI提示文字 <公开 属性写 注释 = "用法：设置XUIMaterial下拉框的XUI提示文字, 传入新值后立刻生效。 参数：新值=文本。 返回：无。 原方法：XUIMaterial下拉框.setHint()">
+    参数 新值 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialSpinner ().setHint (@<新值>))
+    }
+
+    方法 XUI最大行数 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUIMaterial下拉框的XUI最大行数当前值。 参数：无。 返回：整数。 原方法：XUIMaterial下拉框.getMaxLines()">
+    {
+        @ @sn<this>.GetMaterialSpinner ().getMaxLines ()
+    }
+
+    方法 XUI最大行数 <公开 属性写 注释 = "用法：设置XUIMaterial下拉框的XUI最大行数, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUIMaterial下拉框.setMaxLines()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialSpinner ().setMaxLines (@<新值>))
+    }
+
+    方法 XUI单行 <公开 属性写 注释 = "用法：设置XUIMaterial下拉框的XUI单行, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUIMaterial下拉框.setSingleLine()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialSpinner ().setSingleLine (@<新值>))
+    }
+
+    方法 设置背景颜色 <公开 注释 = "用法：把XUIMaterial下拉框的背景颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUIMaterial下拉框.setBackgroundColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialSpinner ().setBackgroundColor (@<值1>))
+    }
+
+    方法 设置文本颜色 <公开 注释 = "用法：把XUIMaterial下拉框的文本颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUIMaterial下拉框.setTextColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialSpinner ().setTextColor (@<值1>))
+    }
+
+    方法 设置可用 <公开 注释 = "用法：把XUIMaterial下拉框的可用设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUIMaterial下拉框.setEnabled()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialSpinner ().setEnabled (@<值1>))
+    }
+
+    方法 取选中索引 <公开 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读出XUIMaterial下拉框的选中索引。 参数：无。 返回：整数。 原方法：XUIMaterial下拉框.getSelectedIndex()">
+    {
+        @ @sn<this>.GetMaterialSpinner ().getSelectedIndex ()
+    }
+
+    方法 设置选中索引 <公开 注释 = "用法：把XUIMaterial下拉框的选中索引设为给定值。 参数：值1=整数。 返回：无。 原方法：XUIMaterial下拉框.setSelectedIndex()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialSpinner ().setSelectedIndex (@<值1>))
+    }
+
+    方法 设置下拉按下背景选择器 <公开 注释 = "用法：把XUIMaterial下拉框的下拉按下背景选择器设为给定值。 参数：值1=整数。 返回：无。 原方法：XUIMaterial下拉框.setDropDownBackgroundSelector()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialSpinner ().setDropDownBackgroundSelector (@<值1>))
+    }
+
+    方法 展开 <公开 注释 = "用法：展开XUIMaterial下拉框的相关内容。 参数：无。 返回：无。 原方法：XUIMaterial下拉框.expand()">
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialSpinner ().expand ())
+    }
+
+    方法 折叠 <公开 注释 = "用法：折叠XUIMaterial下拉框的相关内容。 参数：无。 返回：无。 原方法：XUIMaterial下拉框.collapse()">
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialSpinner ().collapse ())
+    }
+
+    方法 设置箭头颜色 <公开 注释 = "用法：把XUIMaterial下拉框的箭头颜色设为给定值。 参数：值1=整数。 返回：无。 原方法：XUIMaterial下拉框.setArrowColor()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialSpinner ().setArrowColor (@<值1>))
+    }
+
+    方法 设置下拉框最大高度 <公开 注释 = "用法：把XUIMaterial下拉框的下拉框最大高度设为给定值。 参数：值1=整数。 返回：无。 原方法：XUIMaterial下拉框.setDropdownMaxHeight()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialSpinner ().setDropdownMaxHeight (@<值1>))
+    }
+
+    方法 设置下拉框高度 <公开 注释 = "用法：把XUIMaterial下拉框的下拉框高度设为给定值。 参数：值1=整数。 返回：无。 原方法：XUIMaterial下拉框.setDropdownHeight()">
+    参数 值1 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetMaterialSpinner ().setDropdownHeight (@<值1>))
+    }
+
+}

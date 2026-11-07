@@ -1,0 +1,2093 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.安卓.组件.MP图表
+
+类 MP组件配置基础类 <公开 @别名 = "com.github.mikephil.charting.components.ComponentBase" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.components.ComponentBase.">
+{
+
+    方法 取横坐标偏移 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getXOffset()">
+    参数 当前对象 <类型 = MP组件配置基础类>
+    {
+        @ @<当前对象>.getXOffset ()
+    }
+
+    方法 设置横坐标偏移 <公开 静态 注释 = "java: public void setXOffset(float)">
+    参数 当前对象 <类型 = MP组件配置基础类>
+    参数 横坐标偏移 <类型 = 小数>
+    {
+        @ @<当前对象>.setXOffset ((float) @<横坐标偏移>);
+    }
+
+    方法 取纵坐标偏移 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getYOffset()">
+    参数 当前对象 <类型 = MP组件配置基础类>
+    {
+        @ @<当前对象>.getYOffset ()
+    }
+
+    方法 设置纵坐标偏移 <公开 静态 注释 = "java: public void setYOffset(float)">
+    参数 当前对象 <类型 = MP组件配置基础类>
+    参数 纵坐标偏移 <类型 = 小数>
+    {
+        @ @<当前对象>.setYOffset ((float) @<纵坐标偏移>);
+    }
+
+    方法 取字体族 <公开 静态 类型 = 字体类 @嵌入式方法 = "" 注释 = "java: public android.graphics.Typeface getTypeface()">
+    参数 当前对象 <类型 = MP组件配置基础类>
+    {
+        @ @<当前对象>.getTypeface ()
+    }
+
+    方法 设置字体族 <公开 静态 注释 = "java: public void setTypeface(android.graphics.Typeface)">
+    参数 当前对象 <类型 = MP组件配置基础类>
+    参数 字体度量 <类型 = 字体类>
+    {
+        @ @<当前对象>.setTypeface (@<字体度量>);
+    }
+
+    方法 设置文本尺寸 <公开 静态 注释 = "java: public void setTextSize(float)">
+    参数 当前对象 <类型 = MP组件配置基础类>
+    参数 尺寸 <类型 = 小数>
+    {
+        @ @<当前对象>.setTextSize ((float) @<尺寸>);
+    }
+
+    方法 取文本尺寸 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getTextSize()">
+    参数 当前对象 <类型 = MP组件配置基础类>
+    {
+        @ @<当前对象>.getTextSize ()
+    }
+
+    方法 设置文本颜色 <公开 静态 注释 = "java: public void setTextColor(int)">
+    参数 当前对象 <类型 = MP组件配置基础类>
+    参数 颜色 <类型 = 整数>
+    {
+        @ @<当前对象>.setTextColor (@<颜色>);
+    }
+
+    方法 取文本颜色 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getTextColor()">
+    参数 当前对象 <类型 = MP组件配置基础类>
+    {
+        @ @<当前对象>.getTextColor ()
+    }
+
+    方法 设置启用 <公开 静态 注释 = "java: public void setEnabled(boolean)">
+    参数 当前对象 <类型 = MP组件配置基础类>
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @<当前对象>.setEnabled (@<启用>);
+    }
+
+    方法 是否启用 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isEnabled()">
+    参数 当前对象 <类型 = MP组件配置基础类>
+    {
+        @ @<当前对象>.isEnabled ()
+    }
+
+}
+
+类 MP轴线基础类 <公开 基础类 = MP组件配置基础类 @别名 = "com.github.mikephil.charting.components.AxisBase" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.components.AxisBase.">
+{
+
+    方法 取轴最小标签集 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getAxisMinLabels()">
+    参数 当前对象 <类型 = MP轴线基础类>
+    {
+        @ @<当前对象>.getAxisMinLabels ()
+    }
+
+    方法 设置轴最小标签集 <公开 静态 注释 = "java: public void setAxisMinLabels(int)">
+    参数 当前对象 <类型 = MP轴线基础类>
+    参数 标签集 <类型 = 整数>
+    {
+        @ @<当前对象>.setAxisMinLabels (@<标签集>);
+    }
+
+    方法 取轴最大标签集 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getAxisMaxLabels()">
+    参数 当前对象 <类型 = MP轴线基础类>
+    {
+        @ @<当前对象>.getAxisMaxLabels ()
+    }
+
+    方法 设置轴最大标签集 <公开 静态 注释 = "java: public void setAxisMaxLabels(int)">
+    参数 当前对象 <类型 = MP轴线基础类>
+    参数 标签集 <类型 = 整数>
+    {
+        @ @<当前对象>.setAxisMaxLabels (@<标签集>);
+    }
+
+    方法 设置绘制网格线集 <公开 静态 注释 = "java: public void setDrawGridLines(boolean)">
+    参数 当前对象 <类型 = MP轴线基础类>
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @<当前对象>.setDrawGridLines (@<启用>);
+    }
+
+    方法 是否绘制网格线集启用 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isDrawGridLinesEnabled()">
+    参数 当前对象 <类型 = MP轴线基础类>
+    {
+        @ @<当前对象>.isDrawGridLinesEnabled ()
+    }
+
+    方法 设置绘制轴线 <公开 静态 注释 = "java: public void setDrawAxisLine(boolean)">
+    参数 当前对象 <类型 = MP轴线基础类>
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @<当前对象>.setDrawAxisLine (@<启用>);
+    }
+
+    方法 是否绘制轴线启用 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isDrawAxisLineEnabled()">
+    参数 当前对象 <类型 = MP轴线基础类>
+    {
+        @ @<当前对象>.isDrawAxisLineEnabled ()
+    }
+
+    方法 设置中心轴标签集 <公开 静态 注释 = "java: public void setCenterAxisLabels(boolean)">
+    参数 当前对象 <类型 = MP轴线基础类>
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @<当前对象>.setCenterAxisLabels (@<启用>);
+    }
+
+    方法 是否中心轴标签集启用 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isCenterAxisLabelsEnabled()">
+    参数 当前对象 <类型 = MP轴线基础类>
+    {
+        @ @<当前对象>.isCenterAxisLabelsEnabled ()
+    }
+
+    方法 设置网格颜色 <公开 静态 注释 = "java: public void setGridColor(int)">
+    参数 当前对象 <类型 = MP轴线基础类>
+    参数 颜色 <类型 = 整数>
+    {
+        @ @<当前对象>.setGridColor (@<颜色>);
+    }
+
+    方法 取网格颜色 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getGridColor()">
+    参数 当前对象 <类型 = MP轴线基础类>
+    {
+        @ @<当前对象>.getGridColor ()
+    }
+
+    方法 设置轴线宽度 <公开 静态 注释 = "java: public void setAxisLineWidth(float)">
+    参数 当前对象 <类型 = MP轴线基础类>
+    参数 宽度 <类型 = 小数>
+    {
+        @ @<当前对象>.setAxisLineWidth ((float) @<宽度>);
+    }
+
+    方法 取轴线宽度 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getAxisLineWidth()">
+    参数 当前对象 <类型 = MP轴线基础类>
+    {
+        @ @<当前对象>.getAxisLineWidth ()
+    }
+
+    方法 设置网格线宽度 <公开 静态 注释 = "java: public void setGridLineWidth(float)">
+    参数 当前对象 <类型 = MP轴线基础类>
+    参数 宽度 <类型 = 小数>
+    {
+        @ @<当前对象>.setGridLineWidth ((float) @<宽度>);
+    }
+
+    方法 取网格线宽度 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getGridLineWidth()">
+    参数 当前对象 <类型 = MP轴线基础类>
+    {
+        @ @<当前对象>.getGridLineWidth ()
+    }
+
+    方法 设置轴线颜色 <公开 静态 注释 = "java: public void setAxisLineColor(int)">
+    参数 当前对象 <类型 = MP轴线基础类>
+    参数 颜色 <类型 = 整数>
+    {
+        @ @<当前对象>.setAxisLineColor (@<颜色>);
+    }
+
+    方法 取轴线颜色 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getAxisLineColor()">
+    参数 当前对象 <类型 = MP轴线基础类>
+    {
+        @ @<当前对象>.getAxisLineColor ()
+    }
+
+    方法 设置绘制标签集 <公开 静态 注释 = "java: public void setDrawLabels(boolean)">
+    参数 当前对象 <类型 = MP轴线基础类>
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @<当前对象>.setDrawLabels (@<启用>);
+    }
+
+    方法 是否绘制标签集启用 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isDrawLabelsEnabled()">
+    参数 当前对象 <类型 = MP轴线基础类>
+    {
+        @ @<当前对象>.isDrawLabelsEnabled ()
+    }
+
+    方法 设置标签数量 <公开 静态 注释 = "java: public void setLabelCount(int)">
+    参数 当前对象 <类型 = MP轴线基础类>
+    参数 数量 <类型 = 整数>
+    {
+        @ @<当前对象>.setLabelCount (@<数量>);
+    }
+
+    方法 设置标签数量_2 <公开 静态 注释 = "java: public void setLabelCount(int, boolean)">
+    参数 当前对象 <类型 = MP轴线基础类>
+    参数 数量 <类型 = 整数>
+    参数 强制 <类型 = 逻辑型>
+    {
+        @ @<当前对象>.setLabelCount (@<数量>, @<强制>);
+    }
+
+    方法 是否强制标签集启用 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isForceLabelsEnabled()">
+    参数 当前对象 <类型 = MP轴线基础类>
+    {
+        @ @<当前对象>.isForceLabelsEnabled ()
+    }
+
+    方法 取标签数量 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getLabelCount()">
+    参数 当前对象 <类型 = MP轴线基础类>
+    {
+        @ @<当前对象>.getLabelCount ()
+    }
+
+    方法 是否取整粒度启用 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isGranularityEnabled()">
+    参数 当前对象 <类型 = MP轴线基础类>
+    {
+        @ @<当前对象>.isGranularityEnabled ()
+    }
+
+    方法 设置取整粒度启用 <公开 静态 注释 = "java: public void setGranularityEnabled(boolean)">
+    参数 当前对象 <类型 = MP轴线基础类>
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @<当前对象>.setGranularityEnabled (@<启用>);
+    }
+
+    方法 取取整粒度 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getGranularity()">
+    参数 当前对象 <类型 = MP轴线基础类>
+    {
+        @ @<当前对象>.getGranularity ()
+    }
+
+    方法 设置取整粒度 <公开 静态 注释 = "java: public void setGranularity(float)">
+    参数 当前对象 <类型 = MP轴线基础类>
+    参数 取整粒度 <类型 = 小数>
+    {
+        @ @<当前对象>.setGranularity ((float) @<取整粒度>);
+    }
+
+    方法 添加限制线 <公开 静态 注释 = "java: public void addLimitLine(com.github.mikephil.charting.components.LimitLine)">
+    参数 当前对象 <类型 = MP轴线基础类>
+    参数 左 <类型 = MP限制线类>
+    {
+        @ @<当前对象>.addLimitLine (@<左>);
+    }
+
+    方法 移除限制线 <公开 静态 注释 = "java: public void removeLimitLine(com.github.mikephil.charting.components.LimitLine)">
+    参数 当前对象 <类型 = MP轴线基础类>
+    参数 左 <类型 = MP限制线类>
+    {
+        @ @<当前对象>.removeLimitLine (@<左>);
+    }
+
+    方法 移除全部限制线集 <公开 静态 注释 = "java: public void removeAllLimitLines()">
+    参数 当前对象 <类型 = MP轴线基础类>
+    {
+        @ @<当前对象>.removeAllLimitLines ();
+    }
+
+    方法 取限制线集 <公开 静态 类型 = MP列表类 @嵌入式方法 = "" 注释 = "java: public java.util.List<com.github.mikephil.charting.components.LimitLine> getLimitLines()">
+    参数 当前对象 <类型 = MP轴线基础类>
+    {
+        @ @<当前对象>.getLimitLines ()
+    }
+
+    方法 设置绘制限制线集背后数据 <公开 静态 注释 = "java: public void setDrawLimitLinesBehindData(boolean)">
+    参数 当前对象 <类型 = MP轴线基础类>
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @<当前对象>.setDrawLimitLinesBehindData (@<启用>);
+    }
+
+    方法 是否绘制限制线集背后数据启用 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isDrawLimitLinesBehindDataEnabled()">
+    参数 当前对象 <类型 = MP轴线基础类>
+    {
+        @ @<当前对象>.isDrawLimitLinesBehindDataEnabled ()
+    }
+
+    方法 设置绘制网格线集背后数据 <公开 静态 注释 = "java: public void setDrawGridLinesBehindData(boolean)">
+    参数 当前对象 <类型 = MP轴线基础类>
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @<当前对象>.setDrawGridLinesBehindData (@<启用>);
+    }
+
+    方法 是否绘制网格线集背后数据启用 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isDrawGridLinesBehindDataEnabled()">
+    参数 当前对象 <类型 = MP轴线基础类>
+    {
+        @ @<当前对象>.isDrawGridLinesBehindDataEnabled ()
+    }
+
+    方法 取最长标签 <公开 静态 类型 = 文本型 @嵌入式方法 = "" 注释 = "java: public java.lang.String getLongestLabel()">
+    参数 当前对象 <类型 = MP轴线基础类>
+    {
+        @ @<当前对象>.getLongestLabel ()
+    }
+
+    方法 取已格式化标签 <公开 静态 类型 = 文本型 @嵌入式方法 = "" 注释 = "java: public java.lang.String getFormattedLabel(int)">
+    参数 当前对象 <类型 = MP轴线基础类>
+    参数 索引 <类型 = 整数>
+    {
+        @ @<当前对象>.getFormattedLabel (@<索引>)
+    }
+
+    方法 设置数值格式器 <公开 静态 注释 = "java: public void setValueFormatter(com.github.mikephil.charting.formatter.IAxisValueFormatter)">
+    参数 当前对象 <类型 = MP轴线基础类>
+    参数 数值 <类型 = MP轴值格式化接口>
+    {
+        @ @<当前对象>.setValueFormatter (@<数值>);
+    }
+
+    方法 取数值格式器 <公开 静态 类型 = MP轴值格式化接口 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.formatter.IAxisValueFormatter getValueFormatter()">
+    参数 当前对象 <类型 = MP轴线基础类>
+    {
+        @ @<当前对象>.getValueFormatter ()
+    }
+
+    方法 启用网格虚线 <公开 静态 注释 = "java: public void enableGridDashedLine(float, float, float)">
+    参数 当前对象 <类型 = MP轴线基础类>
+    参数 线长度 <类型 = 小数>
+    参数 间距长度 <类型 = 小数>
+    参数 相位 <类型 = 小数>
+    {
+        @ @<当前对象>.enableGridDashedLine ((float) @<线长度>, (float) @<间距长度>, (float) @<相位>);
+    }
+
+    方法 设置网格虚线 <公开 静态 注释 = "java: public void setGridDashedLine(android.graphics.DashPathEffect)">
+    参数 当前对象 <类型 = MP轴线基础类>
+    参数 效果 <类型 = MP虚线效果类>
+    {
+        @ @<当前对象>.setGridDashedLine (@<效果>);
+    }
+
+    方法 停用网格虚线 <公开 静态 注释 = "java: public void disableGridDashedLine()">
+    参数 当前对象 <类型 = MP轴线基础类>
+    {
+        @ @<当前对象>.disableGridDashedLine ();
+    }
+
+    方法 是否网格虚线启用 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isGridDashedLineEnabled()">
+    参数 当前对象 <类型 = MP轴线基础类>
+    {
+        @ @<当前对象>.isGridDashedLineEnabled ()
+    }
+
+    方法 取网格虚线路径效果 <公开 静态 类型 = MP虚线效果类 @嵌入式方法 = "" 注释 = "java: public android.graphics.DashPathEffect getGridDashPathEffect()">
+    参数 当前对象 <类型 = MP轴线基础类>
+    {
+        @ @<当前对象>.getGridDashPathEffect ()
+    }
+
+    方法 启用轴线虚线 <公开 静态 注释 = "java: public void enableAxisLineDashedLine(float, float, float)">
+    参数 当前对象 <类型 = MP轴线基础类>
+    参数 线长度 <类型 = 小数>
+    参数 间距长度 <类型 = 小数>
+    参数 相位 <类型 = 小数>
+    {
+        @ @<当前对象>.enableAxisLineDashedLine ((float) @<线长度>, (float) @<间距长度>, (float) @<相位>);
+    }
+
+    方法 设置轴线虚线 <公开 静态 注释 = "java: public void setAxisLineDashedLine(android.graphics.DashPathEffect)">
+    参数 当前对象 <类型 = MP轴线基础类>
+    参数 效果 <类型 = MP虚线效果类>
+    {
+        @ @<当前对象>.setAxisLineDashedLine (@<效果>);
+    }
+
+    方法 停用轴线虚线 <公开 静态 注释 = "java: public void disableAxisLineDashedLine()">
+    参数 当前对象 <类型 = MP轴线基础类>
+    {
+        @ @<当前对象>.disableAxisLineDashedLine ();
+    }
+
+    方法 是否轴线虚线启用 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isAxisLineDashedLineEnabled()">
+    参数 当前对象 <类型 = MP轴线基础类>
+    {
+        @ @<当前对象>.isAxisLineDashedLineEnabled ()
+    }
+
+    方法 取轴线虚线路径效果 <公开 静态 类型 = MP虚线效果类 @嵌入式方法 = "" 注释 = "java: public android.graphics.DashPathEffect getAxisLineDashPathEffect()">
+    参数 当前对象 <类型 = MP轴线基础类>
+    {
+        @ @<当前对象>.getAxisLineDashPathEffect ()
+    }
+
+    方法 取轴最大值 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getAxisMaximum()">
+    参数 当前对象 <类型 = MP轴线基础类>
+    {
+        @ @<当前对象>.getAxisMaximum ()
+    }
+
+    方法 取轴最小值 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getAxisMinimum()">
+    参数 当前对象 <类型 = MP轴线基础类>
+    {
+        @ @<当前对象>.getAxisMinimum ()
+    }
+
+    方法 重置轴最大值 <公开 静态 注释 = "java: public void resetAxisMaximum()">
+    参数 当前对象 <类型 = MP轴线基础类>
+    {
+        @ @<当前对象>.resetAxisMaximum ();
+    }
+
+    方法 是否轴最大自定义 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isAxisMaxCustom()">
+    参数 当前对象 <类型 = MP轴线基础类>
+    {
+        @ @<当前对象>.isAxisMaxCustom ()
+    }
+
+    方法 重置轴最小值 <公开 静态 注释 = "java: public void resetAxisMinimum()">
+    参数 当前对象 <类型 = MP轴线基础类>
+    {
+        @ @<当前对象>.resetAxisMinimum ();
+    }
+
+    方法 是否轴最小自定义 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isAxisMinCustom()">
+    参数 当前对象 <类型 = MP轴线基础类>
+    {
+        @ @<当前对象>.isAxisMinCustom ()
+    }
+
+    方法 设置轴最小值 <公开 静态 注释 = "java: public void setAxisMinimum(float)">
+    参数 当前对象 <类型 = MP轴线基础类>
+    参数 最小 <类型 = 小数>
+    {
+        @ @<当前对象>.setAxisMinimum ((float) @<最小>);
+    }
+
+    方法 设置轴最小数值 <公开 静态 注释 = "java: public void setAxisMinValue(float)">
+    参数 当前对象 <类型 = MP轴线基础类>
+    参数 最小 <类型 = 小数>
+    {
+        @ @<当前对象>.setAxisMinValue ((float) @<最小>);
+    }
+
+    方法 设置轴最大值 <公开 静态 注释 = "java: public void setAxisMaximum(float)">
+    参数 当前对象 <类型 = MP轴线基础类>
+    参数 最大 <类型 = 小数>
+    {
+        @ @<当前对象>.setAxisMaximum ((float) @<最大>);
+    }
+
+    方法 设置轴最大数值 <公开 静态 注释 = "java: public void setAxisMaxValue(float)">
+    参数 当前对象 <类型 = MP轴线基础类>
+    参数 最大 <类型 = 小数>
+    {
+        @ @<当前对象>.setAxisMaxValue ((float) @<最大>);
+    }
+
+    方法 计算 <公开 静态 注释 = "java: public void calculate(float, float)">
+    参数 当前对象 <类型 = MP轴线基础类>
+    参数 数据最小 <类型 = 小数>
+    参数 数据最大 <类型 = 小数>
+    {
+        @ @<当前对象>.calculate ((float) @<数据最小>, (float) @<数据最大>);
+    }
+
+    方法 取间距最小 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getSpaceMin()">
+    参数 当前对象 <类型 = MP轴线基础类>
+    {
+        @ @<当前对象>.getSpaceMin ()
+    }
+
+    方法 设置间距最小 <公开 静态 注释 = "java: public void setSpaceMin(float)">
+    参数 当前对象 <类型 = MP轴线基础类>
+    参数 矩阵间距最小 <类型 = 小数>
+    {
+        @ @<当前对象>.setSpaceMin ((float) @<矩阵间距最小>);
+    }
+
+    方法 取间距最大 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getSpaceMax()">
+    参数 当前对象 <类型 = MP轴线基础类>
+    {
+        @ @<当前对象>.getSpaceMax ()
+    }
+
+    方法 设置间距最大 <公开 静态 注释 = "java: public void setSpaceMax(float)">
+    参数 当前对象 <类型 = MP轴线基础类>
+    参数 矩阵间距最大 <类型 = 小数>
+    {
+        @ @<当前对象>.setSpaceMax ((float) @<矩阵间距最大>);
+    }
+
+    方法 取数据点集 <公开 静态 类型 = "小数 []" @嵌入式方法 = "" 注释 = "java 常量: public float[] mEntries">
+    {
+        @ com.github.mikephil.charting.components.AxisBase.mEntries
+    }
+
+    方法 取居中数据点集 <公开 静态 类型 = "小数 []" @嵌入式方法 = "" 注释 = "java 常量: public float[] mCenteredEntries">
+    {
+        @ com.github.mikephil.charting.components.AxisBase.mCenteredEntries
+    }
+
+    方法 取数据点数量 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java 常量: public int mEntryCount">
+    {
+        @ com.github.mikephil.charting.components.AxisBase.mEntryCount
+    }
+
+    方法 取小数位 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java 常量: public int mDecimals">
+    {
+        @ com.github.mikephil.charting.components.AxisBase.mDecimals
+    }
+
+    方法 取轴最大值_2 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java 常量: public float mAxisMaximum">
+    {
+        @ com.github.mikephil.charting.components.AxisBase.mAxisMaximum
+    }
+
+    方法 取轴最小值_2 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java 常量: public float mAxisMinimum">
+    {
+        @ com.github.mikephil.charting.components.AxisBase.mAxisMinimum
+    }
+
+    方法 取轴范围 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java 常量: public float mAxisRange">
+    {
+        @ com.github.mikephil.charting.components.AxisBase.mAxisRange
+    }
+
+}
+
+类 MP描述文字类 <公开 基础类 = MP组件配置基础类 @别名 = "com.github.mikephil.charting.components.Description" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.components.Description.">
+{
+
+    方法 新建描述文字 <公开 静态 类型 = MP描述文字类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.components.Description()">
+    {
+        @ new com.github.mikephil.charting.components.Description ()
+    }
+
+    方法 设置文本 <公开 静态 注释 = "java: public void setText(java.lang.String)">
+    参数 当前对象 <类型 = MP描述文字类>
+    参数 文本 <类型 = 文本型>
+    {
+        @ @<当前对象>.setText (@<文本>);
+    }
+
+    方法 取文本 <公开 静态 类型 = 文本型 @嵌入式方法 = "" 注释 = "java: public java.lang.String getText()">
+    参数 当前对象 <类型 = MP描述文字类>
+    {
+        @ @<当前对象>.getText ()
+    }
+
+    方法 设置位置 <公开 静态 注释 = "java: public void setPosition(float, float)">
+    参数 当前对象 <类型 = MP描述文字类>
+    参数 横坐标 <类型 = 小数>
+    参数 纵坐标 <类型 = 小数>
+    {
+        @ @<当前对象>.setPosition ((float) @<横坐标>, (float) @<纵坐标>);
+    }
+
+    方法 取位置 <公开 静态 类型 = MP单精度坐标类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.utils.MPPointF getPosition()">
+    参数 当前对象 <类型 = MP描述文字类>
+    {
+        @ @<当前对象>.getPosition ()
+    }
+
+    方法 设置文本对齐 <公开 静态 注释 = "java: public void setTextAlign(android.graphics.Paint$Align)">
+    参数 当前对象 <类型 = MP描述文字类>
+    参数 对齐 <类型 = MP画笔对齐方式类>
+    {
+        @ @<当前对象>.setTextAlign (@<对齐>);
+    }
+
+    方法 取文本对齐 <公开 静态 类型 = MP画笔对齐方式类 @嵌入式方法 = "" 注释 = "java: public android.graphics.Paint$Align getTextAlign()">
+    参数 当前对象 <类型 = MP描述文字类>
+    {
+        @ @<当前对象>.getTextAlign ()
+    }
+
+}
+
+类 MP标记接口 <公开 @别名 = "com.github.mikephil.charting.components.IMarker" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.components.IMarker.">
+{
+
+    方法 取偏移 <公开 静态 类型 = MP单精度坐标类 @嵌入式方法 = "" 注释 = "java: public abstract com.github.mikephil.charting.utils.MPPointF getOffset()">
+    参数 当前对象 <类型 = MP标记接口>
+    {
+        @ @<当前对象>.getOffset ()
+    }
+
+    方法 取偏移对应绘制在点 <公开 静态 类型 = MP单精度坐标类 @嵌入式方法 = "" 注释 = "java: public abstract com.github.mikephil.charting.utils.MPPointF getOffsetForDrawingAtPoint(float, float)">
+    参数 当前对象 <类型 = MP标记接口>
+    参数 位置横坐标 <类型 = 小数>
+    参数 位置纵坐标 <类型 = 小数>
+    {
+        @ @<当前对象>.getOffsetForDrawingAtPoint ((float) @<位置横坐标>, (float) @<位置纵坐标>)
+    }
+
+    方法 刷新内容 <公开 静态 注释 = "java: public abstract void refreshContent(com.github.mikephil.charting.data.Entry, com.github.mikephil.charting.highlight.Highlight)">
+    参数 当前对象 <类型 = MP标记接口>
+    参数 数据点 <类型 = MP数据点类>
+    参数 高亮 <类型 = MP高亮信息类>
+    {
+        @ @<当前对象>.refreshContent (@<数据点>, @<高亮>);
+    }
+
+    方法 绘制 <公开 静态 注释 = "java: public abstract void draw(android.graphics.Canvas, float, float)">
+    参数 当前对象 <类型 = MP标记接口>
+    参数 画布 <类型 = 画板类>
+    参数 位置横坐标 <类型 = 小数>
+    参数 位置纵坐标 <类型 = 小数>
+    {
+        @ @<当前对象>.draw (@<画布>, (float) @<位置横坐标>, (float) @<位置纵坐标>);
+    }
+
+}
+
+类 MP图例类 <公开 基础类 = MP组件配置基础类 @别名 = "com.github.mikephil.charting.components.Legend" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.components.Legend.">
+{
+
+    方法 新建图例 <公开 静态 类型 = MP图例类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.components.Legend()">
+    {
+        @ new com.github.mikephil.charting.components.Legend ()
+    }
+
+    方法 新建图例_2 <公开 静态 类型 = MP图例类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.components.Legend(com.github.mikephil.charting.components.LegendEntry[])">
+    参数 数据点集 <类型 = "MP图例条目类 []">
+    {
+        @ new com.github.mikephil.charting.components.Legend (@<数据点集>)
+    }
+
+    方法 设置数据点集 <公开 静态 注释 = "java: public void setEntries(java.util.List<com.github.mikephil.charting.components.LegendEntry>)">
+    参数 当前对象 <类型 = MP图例类>
+    参数 数据点集 <类型 = MP列表类>
+    {
+        @ @<当前对象>.setEntries (@<数据点集>);
+    }
+
+    方法 取数据点集 <公开 静态 类型 = "MP图例条目类 []" @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.components.LegendEntry[] getEntries()">
+    参数 当前对象 <类型 = MP图例类>
+    {
+        @ @<当前对象>.getEntries ()
+    }
+
+    方法 取最大值数据点宽度 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getMaximumEntryWidth(android.graphics.Paint)">
+    参数 当前对象 <类型 = MP图例类>
+    参数 点 <类型 = 画笔类>
+    {
+        @ @<当前对象>.getMaximumEntryWidth (@<点>)
+    }
+
+    方法 取最大值数据点高度 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getMaximumEntryHeight(android.graphics.Paint)">
+    参数 当前对象 <类型 = MP图例类>
+    参数 点 <类型 = 画笔类>
+    {
+        @ @<当前对象>.getMaximumEntryHeight (@<点>)
+    }
+
+    方法 取额外数据点集 <公开 静态 类型 = "MP图例条目类 []" @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.components.LegendEntry[] getExtraEntries()">
+    参数 当前对象 <类型 = MP图例类>
+    {
+        @ @<当前对象>.getExtraEntries ()
+    }
+
+    方法 设置额外 <公开 静态 注释 = "java: public void setExtra(java.util.List<com.github.mikephil.charting.components.LegendEntry>)">
+    参数 当前对象 <类型 = MP图例类>
+    参数 数据点集 <类型 = MP列表类>
+    {
+        @ @<当前对象>.setExtra (@<数据点集>);
+    }
+
+    方法 设置额外_2 <公开 静态 注释 = "java: public void setExtra(com.github.mikephil.charting.components.LegendEntry[])">
+    参数 当前对象 <类型 = MP图例类>
+    参数 数据点集 <类型 = "MP图例条目类 []">
+    {
+        @ @<当前对象>.setExtra (@<数据点集>);
+    }
+
+    方法 设置额外_3 <公开 静态 注释 = "java: public void setExtra(int[], java.lang.String[])">
+    参数 当前对象 <类型 = MP图例类>
+    参数 颜色集 <类型 = "整数 []">
+    参数 标签集 <类型 = "文本型 []">
+    {
+        @ @<当前对象>.setExtra (@<颜色集>, @<标签集>);
+    }
+
+    方法 设置自定义 <公开 静态 注释 = "java: public void setCustom(com.github.mikephil.charting.components.LegendEntry[])">
+    参数 当前对象 <类型 = MP图例类>
+    参数 数据点集 <类型 = "MP图例条目类 []">
+    {
+        @ @<当前对象>.setCustom (@<数据点集>);
+    }
+
+    方法 设置自定义_2 <公开 静态 注释 = "java: public void setCustom(java.util.List<com.github.mikephil.charting.components.LegendEntry>)">
+    参数 当前对象 <类型 = MP图例类>
+    参数 数据点集 <类型 = MP列表类>
+    {
+        @ @<当前对象>.setCustom (@<数据点集>);
+    }
+
+    方法 重置自定义 <公开 静态 注释 = "java: public void resetCustom()">
+    参数 当前对象 <类型 = MP图例类>
+    {
+        @ @<当前对象>.resetCustom ();
+    }
+
+    方法 是否图例自定义 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isLegendCustom()">
+    参数 当前对象 <类型 = MP图例类>
+    {
+        @ @<当前对象>.isLegendCustom ()
+    }
+
+    方法 取横向对齐方式 <公开 静态 类型 = MP图例水平对齐 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.components.Legend$LegendHorizontalAlignment getHorizontalAlignment()">
+    参数 当前对象 <类型 = MP图例类>
+    {
+        @ @<当前对象>.getHorizontalAlignment ()
+    }
+
+    方法 设置横向对齐方式 <公开 静态 注释 = "java: public void setHorizontalAlignment(com.github.mikephil.charting.components.Legend$LegendHorizontalAlignment)">
+    参数 当前对象 <类型 = MP图例类>
+    参数 数值 <类型 = MP图例水平对齐>
+    {
+        @ @<当前对象>.setHorizontalAlignment (@<数值>);
+    }
+
+    方法 取纵向对齐方式 <公开 静态 类型 = MP图例垂直对齐 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.components.Legend$LegendVerticalAlignment getVerticalAlignment()">
+    参数 当前对象 <类型 = MP图例类>
+    {
+        @ @<当前对象>.getVerticalAlignment ()
+    }
+
+    方法 设置纵向对齐方式 <公开 静态 注释 = "java: public void setVerticalAlignment(com.github.mikephil.charting.components.Legend$LegendVerticalAlignment)">
+    参数 当前对象 <类型 = MP图例类>
+    参数 数值 <类型 = MP图例垂直对齐>
+    {
+        @ @<当前对象>.setVerticalAlignment (@<数值>);
+    }
+
+    方法 取朝向 <公开 静态 类型 = MP图例排列方向 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.components.Legend$LegendOrientation getOrientation()">
+    参数 当前对象 <类型 = MP图例类>
+    {
+        @ @<当前对象>.getOrientation ()
+    }
+
+    方法 设置朝向 <公开 静态 注释 = "java: public void setOrientation(com.github.mikephil.charting.components.Legend$LegendOrientation)">
+    参数 当前对象 <类型 = MP图例类>
+    参数 数值 <类型 = MP图例排列方向>
+    {
+        @ @<当前对象>.setOrientation (@<数值>);
+    }
+
+    方法 是否绘制内部启用 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isDrawInsideEnabled()">
+    参数 当前对象 <类型 = MP图例类>
+    {
+        @ @<当前对象>.isDrawInsideEnabled ()
+    }
+
+    方法 设置绘制内部 <公开 静态 注释 = "java: public void setDrawInside(boolean)">
+    参数 当前对象 <类型 = MP图例类>
+    参数 数值 <类型 = 逻辑型>
+    {
+        @ @<当前对象>.setDrawInside (@<数值>);
+    }
+
+    方法 取方向 <公开 静态 类型 = MP图例方向 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.components.Legend$LegendDirection getDirection()">
+    参数 当前对象 <类型 = MP图例类>
+    {
+        @ @<当前对象>.getDirection ()
+    }
+
+    方法 设置方向 <公开 静态 注释 = "java: public void setDirection(com.github.mikephil.charting.components.Legend$LegendDirection)">
+    参数 当前对象 <类型 = MP图例类>
+    参数 位置 <类型 = MP图例方向>
+    {
+        @ @<当前对象>.setDirection (@<位置>);
+    }
+
+    方法 取外形 <公开 静态 类型 = MP图例形状 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.components.Legend$LegendForm getForm()">
+    参数 当前对象 <类型 = MP图例类>
+    {
+        @ @<当前对象>.getForm ()
+    }
+
+    方法 设置外形 <公开 静态 注释 = "java: public void setForm(com.github.mikephil.charting.components.Legend$LegendForm)">
+    参数 当前对象 <类型 = MP图例类>
+    参数 形状 <类型 = MP图例形状>
+    {
+        @ @<当前对象>.setForm (@<形状>);
+    }
+
+    方法 设置外形尺寸 <公开 静态 注释 = "java: public void setFormSize(float)">
+    参数 当前对象 <类型 = MP图例类>
+    参数 尺寸 <类型 = 小数>
+    {
+        @ @<当前对象>.setFormSize ((float) @<尺寸>);
+    }
+
+    方法 取外形尺寸 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getFormSize()">
+    参数 当前对象 <类型 = MP图例类>
+    {
+        @ @<当前对象>.getFormSize ()
+    }
+
+    方法 设置外形线宽度 <公开 静态 注释 = "java: public void setFormLineWidth(float)">
+    参数 当前对象 <类型 = MP图例类>
+    参数 尺寸 <类型 = 小数>
+    {
+        @ @<当前对象>.setFormLineWidth ((float) @<尺寸>);
+    }
+
+    方法 取外形线宽度 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getFormLineWidth()">
+    参数 当前对象 <类型 = MP图例类>
+    {
+        @ @<当前对象>.getFormLineWidth ()
+    }
+
+    方法 设置外形线虚线效果 <公开 静态 注释 = "java: public void setFormLineDashEffect(android.graphics.DashPathEffect)">
+    参数 当前对象 <类型 = MP图例类>
+    参数 虚线路径效果 <类型 = MP虚线效果类>
+    {
+        @ @<当前对象>.setFormLineDashEffect (@<虚线路径效果>);
+    }
+
+    方法 取外形线虚线效果 <公开 静态 类型 = MP虚线效果类 @嵌入式方法 = "" 注释 = "java: public android.graphics.DashPathEffect getFormLineDashEffect()">
+    参数 当前对象 <类型 = MP图例类>
+    {
+        @ @<当前对象>.getFormLineDashEffect ()
+    }
+
+    方法 取横坐标数据点间距 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getXEntrySpace()">
+    参数 当前对象 <类型 = MP图例类>
+    {
+        @ @<当前对象>.getXEntrySpace ()
+    }
+
+    方法 设置横坐标数据点间距 <公开 静态 注释 = "java: public void setXEntrySpace(float)">
+    参数 当前对象 <类型 = MP图例类>
+    参数 间距 <类型 = 小数>
+    {
+        @ @<当前对象>.setXEntrySpace ((float) @<间距>);
+    }
+
+    方法 取纵坐标数据点间距 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getYEntrySpace()">
+    参数 当前对象 <类型 = MP图例类>
+    {
+        @ @<当前对象>.getYEntrySpace ()
+    }
+
+    方法 设置纵坐标数据点间距 <公开 静态 注释 = "java: public void setYEntrySpace(float)">
+    参数 当前对象 <类型 = MP图例类>
+    参数 间距 <类型 = 小数>
+    {
+        @ @<当前对象>.setYEntrySpace ((float) @<间距>);
+    }
+
+    方法 取外形至文本间距 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getFormToTextSpace()">
+    参数 当前对象 <类型 = MP图例类>
+    {
+        @ @<当前对象>.getFormToTextSpace ()
+    }
+
+    方法 设置外形至文本间距 <公开 静态 注释 = "java: public void setFormToTextSpace(float)">
+    参数 当前对象 <类型 = MP图例类>
+    参数 间距 <类型 = 小数>
+    {
+        @ @<当前对象>.setFormToTextSpace ((float) @<间距>);
+    }
+
+    方法 取堆叠间距 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getStackSpace()">
+    参数 当前对象 <类型 = MP图例类>
+    {
+        @ @<当前对象>.getStackSpace ()
+    }
+
+    方法 设置堆叠间距 <公开 静态 注释 = "java: public void setStackSpace(float)">
+    参数 当前对象 <类型 = MP图例类>
+    参数 间距 <类型 = 小数>
+    {
+        @ @<当前对象>.setStackSpace ((float) @<间距>);
+    }
+
+    方法 设置词包裹启用 <公开 静态 注释 = "java: public void setWordWrapEnabled(boolean)">
+    参数 当前对象 <类型 = MP图例类>
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @<当前对象>.setWordWrapEnabled (@<启用>);
+    }
+
+    方法 是否词包裹启用 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isWordWrapEnabled()">
+    参数 当前对象 <类型 = MP图例类>
+    {
+        @ @<当前对象>.isWordWrapEnabled ()
+    }
+
+    方法 取最大尺寸百分比 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getMaxSizePercent()">
+    参数 当前对象 <类型 = MP图例类>
+    {
+        @ @<当前对象>.getMaxSizePercent ()
+    }
+
+    方法 设置最大尺寸百分比 <公开 静态 注释 = "java: public void setMaxSizePercent(float)">
+    参数 当前对象 <类型 = MP图例类>
+    参数 最大尺寸 <类型 = 小数>
+    {
+        @ @<当前对象>.setMaxSizePercent ((float) @<最大尺寸>);
+    }
+
+    方法 取已计算标签尺寸集 <公开 静态 类型 = MP列表类 @嵌入式方法 = "" 注释 = "java: public java.util.List<com.github.mikephil.charting.utils.FSize> getCalculatedLabelSizes()">
+    参数 当前对象 <类型 = MP图例类>
+    {
+        @ @<当前对象>.getCalculatedLabelSizes ()
+    }
+
+    方法 取已计算标签断开点集 <公开 静态 类型 = MP列表类 @嵌入式方法 = "" 注释 = "java: public java.util.List<java.lang.Boolean> getCalculatedLabelBreakPoints()">
+    参数 当前对象 <类型 = MP图例类>
+    {
+        @ @<当前对象>.getCalculatedLabelBreakPoints ()
+    }
+
+    方法 取已计算线尺寸集 <公开 静态 类型 = MP列表类 @嵌入式方法 = "" 注释 = "java: public java.util.List<com.github.mikephil.charting.utils.FSize> getCalculatedLineSizes()">
+    参数 当前对象 <类型 = MP图例类>
+    {
+        @ @<当前对象>.getCalculatedLineSizes ()
+    }
+
+    方法 计算尺寸集 <公开 静态 注释 = "java: public void calculateDimensions(android.graphics.Paint, com.github.mikephil.charting.utils.ViewPortHandler)">
+    参数 当前对象 <类型 = MP图例类>
+    参数 标签画笔 <类型 = 画笔类>
+    参数 视口处理器 <类型 = MP视图区域处理类>
+    {
+        @ @<当前对象>.calculateDimensions (@<标签画笔>, @<视口处理器>);
+    }
+
+    方法 取所需宽度 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java 常量: public float mNeededWidth">
+    {
+        @ com.github.mikephil.charting.components.Legend.mNeededWidth
+    }
+
+    方法 取所需高度 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java 常量: public float mNeededHeight">
+    {
+        @ com.github.mikephil.charting.components.Legend.mNeededHeight
+    }
+
+    方法 取文本高度最大 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java 常量: public float mTextHeightMax">
+    {
+        @ com.github.mikephil.charting.components.Legend.mTextHeightMax
+    }
+
+    方法 取文本宽度最大 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java 常量: public float mTextWidthMax">
+    {
+        @ com.github.mikephil.charting.components.Legend.mTextWidthMax
+    }
+
+}
+
+类 MP图例方向 <公开 @别名 = "com.github.mikephil.charting.components.Legend$LegendDirection" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.components.Legend$LegendDirection.">
+{
+
+    方法 数值集 <公开 静态 类型 = "MP图例方向 []" @嵌入式方法 = "" 注释 = "java: public static com.github.mikephil.charting.components.Legend$LegendDirection[] values()">
+    参数 当前对象 <类型 = MP图例方向>
+    {
+        @ com.github.mikephil.charting.components.Legend$LegendDirection.values ()
+    }
+
+    方法 取枚举值 <公开 静态 类型 = MP图例方向 @嵌入式方法 = "" 注释 = "java: public static com.github.mikephil.charting.components.Legend$LegendDirection valueOf(java.lang.String)">
+    参数 当前对象 <类型 = MP图例方向>
+    参数 名称 <类型 = 文本型>
+    {
+        @ com.github.mikephil.charting.components.Legend$LegendDirection.valueOf (@<名称>)
+    }
+
+    方法 取左至右 <公开 静态 类型 = MP图例方向 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.components.Legend$LegendDirection LEFT_TO_RIGHT">
+    {
+        @ com.github.mikephil.charting.components.Legend$LegendDirection.LEFT_TO_RIGHT
+    }
+
+    方法 取右至左 <公开 静态 类型 = MP图例方向 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.components.Legend$LegendDirection RIGHT_TO_LEFT">
+    {
+        @ com.github.mikephil.charting.components.Legend$LegendDirection.RIGHT_TO_LEFT
+    }
+
+}
+
+类 MP图例形状 <公开 @别名 = "com.github.mikephil.charting.components.Legend$LegendForm" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.components.Legend$LegendForm.">
+{
+
+    方法 数值集 <公开 静态 类型 = "MP图例形状 []" @嵌入式方法 = "" 注释 = "java: public static com.github.mikephil.charting.components.Legend$LegendForm[] values()">
+    参数 当前对象 <类型 = MP图例形状>
+    {
+        @ com.github.mikephil.charting.components.Legend$LegendForm.values ()
+    }
+
+    方法 取枚举值 <公开 静态 类型 = MP图例形状 @嵌入式方法 = "" 注释 = "java: public static com.github.mikephil.charting.components.Legend$LegendForm valueOf(java.lang.String)">
+    参数 当前对象 <类型 = MP图例形状>
+    参数 名称 <类型 = 文本型>
+    {
+        @ com.github.mikephil.charting.components.Legend$LegendForm.valueOf (@<名称>)
+    }
+
+    方法 取无形状 <公开 静态 类型 = MP图例形状 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.components.Legend$LegendForm NONE">
+    {
+        @ com.github.mikephil.charting.components.Legend$LegendForm.NONE
+    }
+
+    方法 取空 <公开 静态 类型 = MP图例形状 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.components.Legend$LegendForm EMPTY">
+    {
+        @ com.github.mikephil.charting.components.Legend$LegendForm.EMPTY
+    }
+
+    方法 取默认 <公开 静态 类型 = MP图例形状 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.components.Legend$LegendForm DEFAULT">
+    {
+        @ com.github.mikephil.charting.components.Legend$LegendForm.DEFAULT
+    }
+
+    方法 取方形 <公开 静态 类型 = MP图例形状 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.components.Legend$LegendForm SQUARE">
+    {
+        @ com.github.mikephil.charting.components.Legend$LegendForm.SQUARE
+    }
+
+    方法 取圆形 <公开 静态 类型 = MP图例形状 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.components.Legend$LegendForm CIRCLE">
+    {
+        @ com.github.mikephil.charting.components.Legend$LegendForm.CIRCLE
+    }
+
+    方法 取线 <公开 静态 类型 = MP图例形状 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.components.Legend$LegendForm LINE">
+    {
+        @ com.github.mikephil.charting.components.Legend$LegendForm.LINE
+    }
+
+}
+
+类 MP图例水平对齐 <公开 @别名 = "com.github.mikephil.charting.components.Legend$LegendHorizontalAlignment" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.components.Legend$LegendHorizontalAlignment.">
+{
+
+    方法 数值集 <公开 静态 类型 = "MP图例水平对齐 []" @嵌入式方法 = "" 注释 = "java: public static com.github.mikephil.charting.components.Legend$LegendHorizontalAlignment[] values()">
+    参数 当前对象 <类型 = MP图例水平对齐>
+    {
+        @ com.github.mikephil.charting.components.Legend$LegendHorizontalAlignment.values ()
+    }
+
+    方法 取枚举值 <公开 静态 类型 = MP图例水平对齐 @嵌入式方法 = "" 注释 = "java: public static com.github.mikephil.charting.components.Legend$LegendHorizontalAlignment valueOf(java.lang.String)">
+    参数 当前对象 <类型 = MP图例水平对齐>
+    参数 名称 <类型 = 文本型>
+    {
+        @ com.github.mikephil.charting.components.Legend$LegendHorizontalAlignment.valueOf (@<名称>)
+    }
+
+    方法 取左 <公开 静态 类型 = MP图例水平对齐 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.components.Legend$LegendHorizontalAlignment LEFT">
+    {
+        @ com.github.mikephil.charting.components.Legend$LegendHorizontalAlignment.LEFT
+    }
+
+    方法 取中心 <公开 静态 类型 = MP图例水平对齐 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.components.Legend$LegendHorizontalAlignment CENTER">
+    {
+        @ com.github.mikephil.charting.components.Legend$LegendHorizontalAlignment.CENTER
+    }
+
+    方法 取右 <公开 静态 类型 = MP图例水平对齐 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.components.Legend$LegendHorizontalAlignment RIGHT">
+    {
+        @ com.github.mikephil.charting.components.Legend$LegendHorizontalAlignment.RIGHT
+    }
+
+}
+
+类 MP图例排列方向 <公开 @别名 = "com.github.mikephil.charting.components.Legend$LegendOrientation" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.components.Legend$LegendOrientation.">
+{
+
+    方法 数值集 <公开 静态 类型 = "MP图例排列方向 []" @嵌入式方法 = "" 注释 = "java: public static com.github.mikephil.charting.components.Legend$LegendOrientation[] values()">
+    参数 当前对象 <类型 = MP图例排列方向>
+    {
+        @ com.github.mikephil.charting.components.Legend$LegendOrientation.values ()
+    }
+
+    方法 取枚举值 <公开 静态 类型 = MP图例排列方向 @嵌入式方法 = "" 注释 = "java: public static com.github.mikephil.charting.components.Legend$LegendOrientation valueOf(java.lang.String)">
+    参数 当前对象 <类型 = MP图例排列方向>
+    参数 名称 <类型 = 文本型>
+    {
+        @ com.github.mikephil.charting.components.Legend$LegendOrientation.valueOf (@<名称>)
+    }
+
+    方法 取横向 <公开 静态 类型 = MP图例排列方向 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.components.Legend$LegendOrientation HORIZONTAL">
+    {
+        @ com.github.mikephil.charting.components.Legend$LegendOrientation.HORIZONTAL
+    }
+
+    方法 取纵向 <公开 静态 类型 = MP图例排列方向 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.components.Legend$LegendOrientation VERTICAL">
+    {
+        @ com.github.mikephil.charting.components.Legend$LegendOrientation.VERTICAL
+    }
+
+}
+
+类 MP图例垂直对齐 <公开 @别名 = "com.github.mikephil.charting.components.Legend$LegendVerticalAlignment" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.components.Legend$LegendVerticalAlignment.">
+{
+
+    方法 数值集 <公开 静态 类型 = "MP图例垂直对齐 []" @嵌入式方法 = "" 注释 = "java: public static com.github.mikephil.charting.components.Legend$LegendVerticalAlignment[] values()">
+    参数 当前对象 <类型 = MP图例垂直对齐>
+    {
+        @ com.github.mikephil.charting.components.Legend$LegendVerticalAlignment.values ()
+    }
+
+    方法 取枚举值 <公开 静态 类型 = MP图例垂直对齐 @嵌入式方法 = "" 注释 = "java: public static com.github.mikephil.charting.components.Legend$LegendVerticalAlignment valueOf(java.lang.String)">
+    参数 当前对象 <类型 = MP图例垂直对齐>
+    参数 名称 <类型 = 文本型>
+    {
+        @ com.github.mikephil.charting.components.Legend$LegendVerticalAlignment.valueOf (@<名称>)
+    }
+
+    方法 取上 <公开 静态 类型 = MP图例垂直对齐 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.components.Legend$LegendVerticalAlignment TOP">
+    {
+        @ com.github.mikephil.charting.components.Legend$LegendVerticalAlignment.TOP
+    }
+
+    方法 取中心 <公开 静态 类型 = MP图例垂直对齐 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.components.Legend$LegendVerticalAlignment CENTER">
+    {
+        @ com.github.mikephil.charting.components.Legend$LegendVerticalAlignment.CENTER
+    }
+
+    方法 取下 <公开 静态 类型 = MP图例垂直对齐 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.components.Legend$LegendVerticalAlignment BOTTOM">
+    {
+        @ com.github.mikephil.charting.components.Legend$LegendVerticalAlignment.BOTTOM
+    }
+
+}
+
+类 MP图例条目类 <公开 @别名 = "com.github.mikephil.charting.components.LegendEntry" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.components.LegendEntry.">
+{
+
+    方法 新建图例条目 <公开 静态 类型 = MP图例条目类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.components.LegendEntry()">
+    {
+        @ new com.github.mikephil.charting.components.LegendEntry ()
+    }
+
+    方法 新建图例条目_2 <公开 静态 类型 = MP图例条目类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.components.LegendEntry(java.lang.String, com.github.mikephil.charting.components.Legend$LegendForm, float, float, android.graphics.DashPathEffect, int)">
+    参数 标签 <类型 = 文本型>
+    参数 外形 <类型 = MP图例形状>
+    参数 外形尺寸 <类型 = 小数>
+    参数 外形线宽度 <类型 = 小数>
+    参数 外形线虚线效果 <类型 = MP虚线效果类>
+    参数 外形颜色 <类型 = 整数>
+    {
+        @ new com.github.mikephil.charting.components.LegendEntry (@<标签>, @<外形>, (float) @<外形尺寸>, (float) @<外形线宽度>, @<外形线虚线效果>, @<外形颜色>)
+    }
+
+    方法 取标签 <公开 静态 类型 = 文本型 @嵌入式方法 = "" 注释 = "java 常量: public java.lang.String label">
+    {
+        @ com.github.mikephil.charting.components.LegendEntry.label
+    }
+
+    方法 取外形 <公开 静态 类型 = MP图例形状 @嵌入式方法 = "" 注释 = "java 常量: public com.github.mikephil.charting.components.Legend$LegendForm form">
+    {
+        @ com.github.mikephil.charting.components.LegendEntry.form
+    }
+
+    方法 取外形尺寸 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java 常量: public float formSize">
+    {
+        @ com.github.mikephil.charting.components.LegendEntry.formSize
+    }
+
+    方法 取外形线宽度 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java 常量: public float formLineWidth">
+    {
+        @ com.github.mikephil.charting.components.LegendEntry.formLineWidth
+    }
+
+    方法 取外形线虚线效果 <公开 静态 类型 = MP虚线效果类 @嵌入式方法 = "" 注释 = "java 常量: public android.graphics.DashPathEffect formLineDashEffect">
+    {
+        @ com.github.mikephil.charting.components.LegendEntry.formLineDashEffect
+    }
+
+    方法 取外形颜色 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java 常量: public int formColor">
+    {
+        @ com.github.mikephil.charting.components.LegendEntry.formColor
+    }
+
+}
+
+类 MP限制线类 <公开 基础类 = MP组件配置基础类 @别名 = "com.github.mikephil.charting.components.LimitLine" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.components.LimitLine.">
+{
+
+    方法 新建限制线 <公开 静态 类型 = MP限制线类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.components.LimitLine(float)">
+    参数 限制 <类型 = 小数>
+    {
+        @ new com.github.mikephil.charting.components.LimitLine ((float) @<限制>)
+    }
+
+    方法 新建限制线_2 <公开 静态 类型 = MP限制线类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.components.LimitLine(float, java.lang.String)">
+    参数 限制 <类型 = 小数>
+    参数 标签 <类型 = 文本型>
+    {
+        @ new com.github.mikephil.charting.components.LimitLine ((float) @<限制>, @<标签>)
+    }
+
+    方法 取限制 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getLimit()">
+    参数 当前对象 <类型 = MP限制线类>
+    {
+        @ @<当前对象>.getLimit ()
+    }
+
+    方法 设置线宽度 <公开 静态 注释 = "java: public void setLineWidth(float)">
+    参数 当前对象 <类型 = MP限制线类>
+    参数 宽度 <类型 = 小数>
+    {
+        @ @<当前对象>.setLineWidth ((float) @<宽度>);
+    }
+
+    方法 取线宽度 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getLineWidth()">
+    参数 当前对象 <类型 = MP限制线类>
+    {
+        @ @<当前对象>.getLineWidth ()
+    }
+
+    方法 设置线颜色 <公开 静态 注释 = "java: public void setLineColor(int)">
+    参数 当前对象 <类型 = MP限制线类>
+    参数 颜色 <类型 = 整数>
+    {
+        @ @<当前对象>.setLineColor (@<颜色>);
+    }
+
+    方法 取线颜色 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getLineColor()">
+    参数 当前对象 <类型 = MP限制线类>
+    {
+        @ @<当前对象>.getLineColor ()
+    }
+
+    方法 启用虚线 <公开 静态 注释 = "java: public void enableDashedLine(float, float, float)">
+    参数 当前对象 <类型 = MP限制线类>
+    参数 线长度 <类型 = 小数>
+    参数 间距长度 <类型 = 小数>
+    参数 相位 <类型 = 小数>
+    {
+        @ @<当前对象>.enableDashedLine ((float) @<线长度>, (float) @<间距长度>, (float) @<相位>);
+    }
+
+    方法 停用虚线 <公开 静态 注释 = "java: public void disableDashedLine()">
+    参数 当前对象 <类型 = MP限制线类>
+    {
+        @ @<当前对象>.disableDashedLine ();
+    }
+
+    方法 是否虚线启用 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isDashedLineEnabled()">
+    参数 当前对象 <类型 = MP限制线类>
+    {
+        @ @<当前对象>.isDashedLineEnabled ()
+    }
+
+    方法 取虚线路径效果 <公开 静态 类型 = MP虚线效果类 @嵌入式方法 = "" 注释 = "java: public android.graphics.DashPathEffect getDashPathEffect()">
+    参数 当前对象 <类型 = MP限制线类>
+    {
+        @ @<当前对象>.getDashPathEffect ()
+    }
+
+    方法 设置文本样式 <公开 静态 注释 = "java: public void setTextStyle(android.graphics.Paint$Style)">
+    参数 当前对象 <类型 = MP限制线类>
+    参数 样式 <类型 = MP画笔样式类>
+    {
+        @ @<当前对象>.setTextStyle (@<样式>);
+    }
+
+    方法 取文本样式 <公开 静态 类型 = MP画笔样式类 @嵌入式方法 = "" 注释 = "java: public android.graphics.Paint$Style getTextStyle()">
+    参数 当前对象 <类型 = MP限制线类>
+    {
+        @ @<当前对象>.getTextStyle ()
+    }
+
+    方法 设置标签位置 <公开 静态 注释 = "java: public void setLabelPosition(com.github.mikephil.charting.components.LimitLine$LimitLabelPosition)">
+    参数 当前对象 <类型 = MP限制线类>
+    参数 位置 <类型 = MP限制线标签位置>
+    {
+        @ @<当前对象>.setLabelPosition (@<位置>);
+    }
+
+    方法 取标签位置 <公开 静态 类型 = MP限制线标签位置 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.components.LimitLine$LimitLabelPosition getLabelPosition()">
+    参数 当前对象 <类型 = MP限制线类>
+    {
+        @ @<当前对象>.getLabelPosition ()
+    }
+
+    方法 设置标签 <公开 静态 注释 = "java: public void setLabel(java.lang.String)">
+    参数 当前对象 <类型 = MP限制线类>
+    参数 标签 <类型 = 文本型>
+    {
+        @ @<当前对象>.setLabel (@<标签>);
+    }
+
+    方法 取标签 <公开 静态 类型 = 文本型 @嵌入式方法 = "" 注释 = "java: public java.lang.String getLabel()">
+    参数 当前对象 <类型 = MP限制线类>
+    {
+        @ @<当前对象>.getLabel ()
+    }
+
+}
+
+类 MP限制线标签位置 <公开 @别名 = "com.github.mikephil.charting.components.LimitLine$LimitLabelPosition" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.components.LimitLine$LimitLabelPosition.">
+{
+
+    方法 数值集 <公开 静态 类型 = "MP限制线标签位置 []" @嵌入式方法 = "" 注释 = "java: public static com.github.mikephil.charting.components.LimitLine$LimitLabelPosition[] values()">
+    参数 当前对象 <类型 = MP限制线标签位置>
+    {
+        @ com.github.mikephil.charting.components.LimitLine$LimitLabelPosition.values ()
+    }
+
+    方法 取枚举值 <公开 静态 类型 = MP限制线标签位置 @嵌入式方法 = "" 注释 = "java: public static com.github.mikephil.charting.components.LimitLine$LimitLabelPosition valueOf(java.lang.String)">
+    参数 当前对象 <类型 = MP限制线标签位置>
+    参数 名称 <类型 = 文本型>
+    {
+        @ com.github.mikephil.charting.components.LimitLine$LimitLabelPosition.valueOf (@<名称>)
+    }
+
+    方法 取左上 <公开 静态 类型 = MP限制线标签位置 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.components.LimitLine$LimitLabelPosition LEFT_TOP">
+    {
+        @ com.github.mikephil.charting.components.LimitLine$LimitLabelPosition.LEFT_TOP
+    }
+
+    方法 取左下 <公开 静态 类型 = MP限制线标签位置 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.components.LimitLine$LimitLabelPosition LEFT_BOTTOM">
+    {
+        @ com.github.mikephil.charting.components.LimitLine$LimitLabelPosition.LEFT_BOTTOM
+    }
+
+    方法 取右上 <公开 静态 类型 = MP限制线标签位置 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.components.LimitLine$LimitLabelPosition RIGHT_TOP">
+    {
+        @ com.github.mikephil.charting.components.LimitLine$LimitLabelPosition.RIGHT_TOP
+    }
+
+    方法 取右下 <公开 静态 类型 = MP限制线标签位置 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.components.LimitLine$LimitLabelPosition RIGHT_BOTTOM">
+    {
+        @ com.github.mikephil.charting.components.LimitLine$LimitLabelPosition.RIGHT_BOTTOM
+    }
+
+}
+
+类 MP标记图片类 <公开 基础类 = MP标记接口 @别名 = "com.github.mikephil.charting.components.MarkerImage" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.components.MarkerImage.">
+{
+
+    方法 新建标记图片 <公开 静态 类型 = MP标记图片类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.components.MarkerImage(android.content.Context, int)">
+    参数 上下文 <类型 = 安卓窗口环境>
+    参数 可绘制对象资源标识 <类型 = 整数>
+    {
+        @ new com.github.mikephil.charting.components.MarkerImage (@<上下文>, @<可绘制对象资源标识>)
+    }
+
+    方法 设置偏移 <公开 静态 注释 = "java: public void setOffset(com.github.mikephil.charting.utils.MPPointF)">
+    参数 当前对象 <类型 = MP标记图片类>
+    参数 偏移 <类型 = MP单精度坐标类>
+    {
+        @ @<当前对象>.setOffset (@<偏移>);
+    }
+
+    方法 设置偏移_2 <公开 静态 注释 = "java: public void setOffset(float, float)">
+    参数 当前对象 <类型 = MP标记图片类>
+    参数 偏移横坐标 <类型 = 小数>
+    参数 偏移纵坐标 <类型 = 小数>
+    {
+        @ @<当前对象>.setOffset ((float) @<偏移横坐标>, (float) @<偏移纵坐标>);
+    }
+
+    方法 设置尺寸 <公开 静态 注释 = "java: public void setSize(com.github.mikephil.charting.utils.FSize)">
+    参数 当前对象 <类型 = MP标记图片类>
+    参数 尺寸 <类型 = MP小数尺寸类>
+    {
+        @ @<当前对象>.setSize (@<尺寸>);
+    }
+
+    方法 取尺寸 <公开 静态 类型 = MP小数尺寸类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.utils.FSize getSize()">
+    参数 当前对象 <类型 = MP标记图片类>
+    {
+        @ @<当前对象>.getSize ()
+    }
+
+    方法 设置图表视图 <公开 静态 注释 = "java: public void setChartView(com.github.mikephil.charting.charts.Chart)">
+    参数 当前对象 <类型 = MP标记图片类>
+    参数 图表 <类型 = MP图表基础类>
+    {
+        @ @<当前对象>.setChartView (@<图表>);
+    }
+
+    方法 取图表视图 <公开 静态 类型 = MP图表基础类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.charts.Chart getChartView()">
+    参数 当前对象 <类型 = MP标记图片类>
+    {
+        @ @<当前对象>.getChartView ()
+    }
+
+}
+
+类 MP标记视图类 <公开 基础类 = MP标记接口 @别名 = "com.github.mikephil.charting.components.MarkerView" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.components.MarkerView.">
+{
+
+    方法 新建标记视图 <公开 静态 类型 = MP标记视图类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.components.MarkerView(android.content.Context, int)">
+    参数 上下文 <类型 = 安卓窗口环境>
+    参数 布局资源 <类型 = 整数>
+    {
+        @ new com.github.mikephil.charting.components.MarkerView (@<上下文>, @<布局资源>)
+    }
+
+    方法 设置偏移 <公开 静态 注释 = "java: public void setOffset(com.github.mikephil.charting.utils.MPPointF)">
+    参数 当前对象 <类型 = MP标记视图类>
+    参数 偏移 <类型 = MP单精度坐标类>
+    {
+        @ @<当前对象>.setOffset (@<偏移>);
+    }
+
+    方法 设置偏移_2 <公开 静态 注释 = "java: public void setOffset(float, float)">
+    参数 当前对象 <类型 = MP标记视图类>
+    参数 偏移横坐标 <类型 = 小数>
+    参数 偏移纵坐标 <类型 = 小数>
+    {
+        @ @<当前对象>.setOffset ((float) @<偏移横坐标>, (float) @<偏移纵坐标>);
+    }
+
+    方法 设置图表视图 <公开 静态 注释 = "java: public void setChartView(com.github.mikephil.charting.charts.Chart)">
+    参数 当前对象 <类型 = MP标记视图类>
+    参数 图表 <类型 = MP图表基础类>
+    {
+        @ @<当前对象>.setChartView (@<图表>);
+    }
+
+    方法 取图表视图 <公开 静态 类型 = MP图表基础类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.charts.Chart getChartView()">
+    参数 当前对象 <类型 = MP标记视图类>
+    {
+        @ @<当前对象>.getChartView ()
+    }
+
+}
+
+类 MP横轴类 <公开 基础类 = MP轴线基础类 @别名 = "com.github.mikephil.charting.components.XAxis" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.components.XAxis.">
+{
+
+    方法 新建横轴 <公开 静态 类型 = MP横轴类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.components.XAxis()">
+    {
+        @ new com.github.mikephil.charting.components.XAxis ()
+    }
+
+    方法 取位置 <公开 静态 类型 = MP横轴位置 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.components.XAxis$XAxisPosition getPosition()">
+    参数 当前对象 <类型 = MP横轴类>
+    {
+        @ @<当前对象>.getPosition ()
+    }
+
+    方法 设置位置 <公开 静态 注释 = "java: public void setPosition(com.github.mikephil.charting.components.XAxis$XAxisPosition)">
+    参数 当前对象 <类型 = MP横轴类>
+    参数 位置 <类型 = MP横轴位置>
+    {
+        @ @<当前对象>.setPosition (@<位置>);
+    }
+
+    方法 取标签旋转角角度 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getLabelRotationAngle()">
+    参数 当前对象 <类型 = MP横轴类>
+    {
+        @ @<当前对象>.getLabelRotationAngle ()
+    }
+
+    方法 设置标签旋转角角度 <公开 静态 注释 = "java: public void setLabelRotationAngle(float)">
+    参数 当前对象 <类型 = MP横轴类>
+    参数 角度 <类型 = 小数>
+    {
+        @ @<当前对象>.setLabelRotationAngle ((float) @<角度>);
+    }
+
+    方法 设置避开首个末个裁剪 <公开 静态 注释 = "java: public void setAvoidFirstLastClipping(boolean)">
+    参数 当前对象 <类型 = MP横轴类>
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @<当前对象>.setAvoidFirstLastClipping (@<启用>);
+    }
+
+    方法 是否避开首个末个裁剪启用 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isAvoidFirstLastClippingEnabled()">
+    参数 当前对象 <类型 = MP横轴类>
+    {
+        @ @<当前对象>.isAvoidFirstLastClippingEnabled ()
+    }
+
+    方法 取标签宽度 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java 常量: public int mLabelWidth">
+    {
+        @ com.github.mikephil.charting.components.XAxis.mLabelWidth
+    }
+
+    方法 取标签高度 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java 常量: public int mLabelHeight">
+    {
+        @ com.github.mikephil.charting.components.XAxis.mLabelHeight
+    }
+
+    方法 取标签已旋转宽度 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java 常量: public int mLabelRotatedWidth">
+    {
+        @ com.github.mikephil.charting.components.XAxis.mLabelRotatedWidth
+    }
+
+    方法 取标签已旋转高度 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java 常量: public int mLabelRotatedHeight">
+    {
+        @ com.github.mikephil.charting.components.XAxis.mLabelRotatedHeight
+    }
+
+}
+
+类 MP横轴位置 <公开 @别名 = "com.github.mikephil.charting.components.XAxis$XAxisPosition" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.components.XAxis$XAxisPosition.">
+{
+
+    方法 数值集 <公开 静态 类型 = "MP横轴位置 []" @嵌入式方法 = "" 注释 = "java: public static com.github.mikephil.charting.components.XAxis$XAxisPosition[] values()">
+    参数 当前对象 <类型 = MP横轴位置>
+    {
+        @ com.github.mikephil.charting.components.XAxis$XAxisPosition.values ()
+    }
+
+    方法 取枚举值 <公开 静态 类型 = MP横轴位置 @嵌入式方法 = "" 注释 = "java: public static com.github.mikephil.charting.components.XAxis$XAxisPosition valueOf(java.lang.String)">
+    参数 当前对象 <类型 = MP横轴位置>
+    参数 名称 <类型 = 文本型>
+    {
+        @ com.github.mikephil.charting.components.XAxis$XAxisPosition.valueOf (@<名称>)
+    }
+
+    方法 取上 <公开 静态 类型 = MP横轴位置 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.components.XAxis$XAxisPosition TOP">
+    {
+        @ com.github.mikephil.charting.components.XAxis$XAxisPosition.TOP
+    }
+
+    方法 取下 <公开 静态 类型 = MP横轴位置 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.components.XAxis$XAxisPosition BOTTOM">
+    {
+        @ com.github.mikephil.charting.components.XAxis$XAxisPosition.BOTTOM
+    }
+
+    方法 取两者带边 <公开 静态 类型 = MP横轴位置 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.components.XAxis$XAxisPosition BOTH_SIDED">
+    {
+        @ com.github.mikephil.charting.components.XAxis$XAxisPosition.BOTH_SIDED
+    }
+
+    方法 取上内部 <公开 静态 类型 = MP横轴位置 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.components.XAxis$XAxisPosition TOP_INSIDE">
+    {
+        @ com.github.mikephil.charting.components.XAxis$XAxisPosition.TOP_INSIDE
+    }
+
+    方法 取下内部 <公开 静态 类型 = MP横轴位置 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.components.XAxis$XAxisPosition BOTTOM_INSIDE">
+    {
+        @ com.github.mikephil.charting.components.XAxis$XAxisPosition.BOTTOM_INSIDE
+    }
+
+}
+
+类 MP纵轴类 <公开 基础类 = MP轴线基础类 @别名 = "com.github.mikephil.charting.components.YAxis" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.components.YAxis.">
+{
+
+    方法 新建纵轴 <公开 静态 类型 = MP纵轴类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.components.YAxis()">
+    {
+        @ new com.github.mikephil.charting.components.YAxis ()
+    }
+
+    方法 新建纵轴_2 <公开 静态 类型 = MP纵轴类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.components.YAxis(com.github.mikephil.charting.components.YAxis$AxisDependency)">
+    参数 位置 <类型 = MP纵轴依附>
+    {
+        @ new com.github.mikephil.charting.components.YAxis (@<位置>)
+    }
+
+    方法 取轴依赖 <公开 静态 类型 = MP纵轴依附 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.components.YAxis$AxisDependency getAxisDependency()">
+    参数 当前对象 <类型 = MP纵轴类>
+    {
+        @ @<当前对象>.getAxisDependency ()
+    }
+
+    方法 取最小宽度 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getMinWidth()">
+    参数 当前对象 <类型 = MP纵轴类>
+    {
+        @ @<当前对象>.getMinWidth ()
+    }
+
+    方法 设置最小宽度 <公开 静态 注释 = "java: public void setMinWidth(float)">
+    参数 当前对象 <类型 = MP纵轴类>
+    参数 最小宽度 <类型 = 小数>
+    {
+        @ @<当前对象>.setMinWidth ((float) @<最小宽度>);
+    }
+
+    方法 取最大宽度 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getMaxWidth()">
+    参数 当前对象 <类型 = MP纵轴类>
+    {
+        @ @<当前对象>.getMaxWidth ()
+    }
+
+    方法 设置最大宽度 <公开 静态 注释 = "java: public void setMaxWidth(float)">
+    参数 当前对象 <类型 = MP纵轴类>
+    参数 最大宽度 <类型 = 小数>
+    {
+        @ @<当前对象>.setMaxWidth ((float) @<最大宽度>);
+    }
+
+    方法 取标签位置 <公开 静态 类型 = MP纵轴标签位置 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.components.YAxis$YAxisLabelPosition getLabelPosition()">
+    参数 当前对象 <类型 = MP纵轴类>
+    {
+        @ @<当前对象>.getLabelPosition ()
+    }
+
+    方法 设置位置 <公开 静态 注释 = "java: public void setPosition(com.github.mikephil.charting.components.YAxis$YAxisLabelPosition)">
+    参数 当前对象 <类型 = MP纵轴类>
+    参数 位置 <类型 = MP纵轴标签位置>
+    {
+        @ @<当前对象>.setPosition (@<位置>);
+    }
+
+    方法 取标签横坐标偏移 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getLabelXOffset()">
+    参数 当前对象 <类型 = MP纵轴类>
+    {
+        @ @<当前对象>.getLabelXOffset ()
+    }
+
+    方法 设置标签横坐标偏移 <公开 静态 注释 = "java: public void setLabelXOffset(float)">
+    参数 当前对象 <类型 = MP纵轴类>
+    参数 横坐标偏移 <类型 = 小数>
+    {
+        @ @<当前对象>.setLabelXOffset ((float) @<横坐标偏移>);
+    }
+
+    方法 是否绘制上纵坐标标签数据点启用 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isDrawTopYLabelEntryEnabled()">
+    参数 当前对象 <类型 = MP纵轴类>
+    {
+        @ @<当前对象>.isDrawTopYLabelEntryEnabled ()
+    }
+
+    方法 是否绘制下纵坐标标签数据点启用 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isDrawBottomYLabelEntryEnabled()">
+    参数 当前对象 <类型 = MP纵轴类>
+    {
+        @ @<当前对象>.isDrawBottomYLabelEntryEnabled ()
+    }
+
+    方法 设置绘制上纵坐标标签数据点 <公开 静态 注释 = "java: public void setDrawTopYLabelEntry(boolean)">
+    参数 当前对象 <类型 = MP纵轴类>
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @<当前对象>.setDrawTopYLabelEntry (@<启用>);
+    }
+
+    方法 设置已反转 <公开 静态 注释 = "java: public void setInverted(boolean)">
+    参数 当前对象 <类型 = MP纵轴类>
+    参数 启用 <类型 = 逻辑型>
+    {
+        @ @<当前对象>.setInverted (@<启用>);
+    }
+
+    方法 是否已反转 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isInverted()">
+    参数 当前对象 <类型 = MP纵轴类>
+    {
+        @ @<当前对象>.isInverted ()
+    }
+
+    方法 设置起始在零 <公开 静态 注释 = "java: public void setStartAtZero(boolean)">
+    参数 当前对象 <类型 = MP纵轴类>
+    参数 起始在零 <类型 = 逻辑型>
+    {
+        @ @<当前对象>.setStartAtZero (@<起始在零>);
+    }
+
+    方法 设置间距上 <公开 静态 注释 = "java: public void setSpaceTop(float)">
+    参数 当前对象 <类型 = MP纵轴类>
+    参数 百分比 <类型 = 小数>
+    {
+        @ @<当前对象>.setSpaceTop ((float) @<百分比>);
+    }
+
+    方法 取间距上 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getSpaceTop()">
+    参数 当前对象 <类型 = MP纵轴类>
+    {
+        @ @<当前对象>.getSpaceTop ()
+    }
+
+    方法 设置间距下 <公开 静态 注释 = "java: public void setSpaceBottom(float)">
+    参数 当前对象 <类型 = MP纵轴类>
+    参数 百分比 <类型 = 小数>
+    {
+        @ @<当前对象>.setSpaceBottom ((float) @<百分比>);
+    }
+
+    方法 取间距下 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getSpaceBottom()">
+    参数 当前对象 <类型 = MP纵轴类>
+    {
+        @ @<当前对象>.getSpaceBottom ()
+    }
+
+    方法 是否绘制零线启用 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isDrawZeroLineEnabled()">
+    参数 当前对象 <类型 = MP纵轴类>
+    {
+        @ @<当前对象>.isDrawZeroLineEnabled ()
+    }
+
+    方法 设置绘制零线 <公开 静态 注释 = "java: public void setDrawZeroLine(boolean)">
+    参数 当前对象 <类型 = MP纵轴类>
+    参数 矩阵绘制零线 <类型 = 逻辑型>
+    {
+        @ @<当前对象>.setDrawZeroLine (@<矩阵绘制零线>);
+    }
+
+    方法 取零线颜色 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getZeroLineColor()">
+    参数 当前对象 <类型 = MP纵轴类>
+    {
+        @ @<当前对象>.getZeroLineColor ()
+    }
+
+    方法 设置零线颜色 <公开 静态 注释 = "java: public void setZeroLineColor(int)">
+    参数 当前对象 <类型 = MP纵轴类>
+    参数 颜色 <类型 = 整数>
+    {
+        @ @<当前对象>.setZeroLineColor (@<颜色>);
+    }
+
+    方法 取零线宽度 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getZeroLineWidth()">
+    参数 当前对象 <类型 = MP纵轴类>
+    {
+        @ @<当前对象>.getZeroLineWidth ()
+    }
+
+    方法 设置零线宽度 <公开 静态 注释 = "java: public void setZeroLineWidth(float)">
+    参数 当前对象 <类型 = MP纵轴类>
+    参数 宽度 <类型 = 小数>
+    {
+        @ @<当前对象>.setZeroLineWidth ((float) @<宽度>);
+    }
+
+    方法 取必需宽度间距 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getRequiredWidthSpace(android.graphics.Paint)">
+    参数 当前对象 <类型 = MP纵轴类>
+    参数 点 <类型 = 画笔类>
+    {
+        @ @<当前对象>.getRequiredWidthSpace (@<点>)
+    }
+
+    方法 取必需高度间距 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public float getRequiredHeightSpace(android.graphics.Paint)">
+    参数 当前对象 <类型 = MP纵轴类>
+    参数 点 <类型 = 画笔类>
+    {
+        @ @<当前对象>.getRequiredHeightSpace (@<点>)
+    }
+
+    方法 需要偏移 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean needsOffset()">
+    参数 当前对象 <类型 = MP纵轴类>
+    {
+        @ @<当前对象>.needsOffset ()
+    }
+
+    方法 是否使用自动比例最小限制集 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isUseAutoScaleMinRestriction()">
+    参数 当前对象 <类型 = MP纵轴类>
+    {
+        @ @<当前对象>.isUseAutoScaleMinRestriction ()
+    }
+
+    方法 设置使用自动比例最小限制集 <公开 静态 注释 = "java: public void setUseAutoScaleMinRestriction(boolean)">
+    参数 当前对象 <类型 = MP纵轴类>
+    参数 是否启用 <类型 = 逻辑型>
+    {
+        @ @<当前对象>.setUseAutoScaleMinRestriction (@<是否启用>);
+    }
+
+    方法 是否使用自动比例最大限制集 <公开 静态 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "java: public boolean isUseAutoScaleMaxRestriction()">
+    参数 当前对象 <类型 = MP纵轴类>
+    {
+        @ @<当前对象>.isUseAutoScaleMaxRestriction ()
+    }
+
+    方法 设置使用自动比例最大限制集 <公开 静态 注释 = "java: public void setUseAutoScaleMaxRestriction(boolean)">
+    参数 当前对象 <类型 = MP纵轴类>
+    参数 是否启用 <类型 = 逻辑型>
+    {
+        @ @<当前对象>.setUseAutoScaleMaxRestriction (@<是否启用>);
+    }
+
+}
+
+类 MP纵轴依附 <公开 @别名 = "com.github.mikephil.charting.components.YAxis$AxisDependency" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.components.YAxis$AxisDependency.">
+{
+
+    方法 数值集 <公开 静态 类型 = "MP纵轴依附 []" @嵌入式方法 = "" 注释 = "java: public static com.github.mikephil.charting.components.YAxis$AxisDependency[] values()">
+    参数 当前对象 <类型 = MP纵轴依附>
+    {
+        @ com.github.mikephil.charting.components.YAxis$AxisDependency.values ()
+    }
+
+    方法 取枚举值 <公开 静态 类型 = MP纵轴依附 @嵌入式方法 = "" 注释 = "java: public static com.github.mikephil.charting.components.YAxis$AxisDependency valueOf(java.lang.String)">
+    参数 当前对象 <类型 = MP纵轴依附>
+    参数 名称 <类型 = 文本型>
+    {
+        @ com.github.mikephil.charting.components.YAxis$AxisDependency.valueOf (@<名称>)
+    }
+
+    方法 取左 <公开 静态 类型 = MP纵轴依附 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.components.YAxis$AxisDependency LEFT">
+    {
+        @ com.github.mikephil.charting.components.YAxis$AxisDependency.LEFT
+    }
+
+    方法 取右 <公开 静态 类型 = MP纵轴依附 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.components.YAxis$AxisDependency RIGHT">
+    {
+        @ com.github.mikephil.charting.components.YAxis$AxisDependency.RIGHT
+    }
+
+}
+
+类 MP纵轴标签位置 <公开 @别名 = "com.github.mikephil.charting.components.YAxis$YAxisLabelPosition" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.components.YAxis$YAxisLabelPosition.">
+{
+
+    方法 数值集 <公开 静态 类型 = "MP纵轴标签位置 []" @嵌入式方法 = "" 注释 = "java: public static com.github.mikephil.charting.components.YAxis$YAxisLabelPosition[] values()">
+    参数 当前对象 <类型 = MP纵轴标签位置>
+    {
+        @ com.github.mikephil.charting.components.YAxis$YAxisLabelPosition.values ()
+    }
+
+    方法 取枚举值 <公开 静态 类型 = MP纵轴标签位置 @嵌入式方法 = "" 注释 = "java: public static com.github.mikephil.charting.components.YAxis$YAxisLabelPosition valueOf(java.lang.String)">
+    参数 当前对象 <类型 = MP纵轴标签位置>
+    参数 名称 <类型 = 文本型>
+    {
+        @ com.github.mikephil.charting.components.YAxis$YAxisLabelPosition.valueOf (@<名称>)
+    }
+
+    方法 取外部图表 <公开 静态 类型 = MP纵轴标签位置 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.components.YAxis$YAxisLabelPosition OUTSIDE_CHART">
+    {
+        @ com.github.mikephil.charting.components.YAxis$YAxisLabelPosition.OUTSIDE_CHART
+    }
+
+    方法 取内部图表 <公开 静态 类型 = MP纵轴标签位置 @嵌入式方法 = "" 注释 = "java 常量: public static final com.github.mikephil.charting.components.YAxis$YAxisLabelPosition INSIDE_CHART">
+    {
+        @ com.github.mikephil.charting.components.YAxis$YAxisLabelPosition.INSIDE_CHART
+    }
+
+}
+
+类 MP颜色格式化接口 <公开 @别名 = "com.github.mikephil.charting.formatter.ColorFormatter" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.formatter.ColorFormatter.">
+{
+
+    方法 取颜色 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public abstract int getColor(int, com.github.mikephil.charting.data.Entry, com.github.mikephil.charting.interfaces.datasets.IDataSet)">
+    参数 当前对象 <类型 = MP颜色格式化接口>
+    参数 索引 <类型 = 整数>
+    参数 数据点 <类型 = MP数据点类>
+    参数 设置 <类型 = MP数据集接口>
+    {
+        @ @<当前对象>.getColor (@<索引>, @<数据点>, @<设置>)
+    }
+
+}
+
+类 MP轴值格式化接口 <公开 @别名 = "com.github.mikephil.charting.formatter.IAxisValueFormatter" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.formatter.IAxisValueFormatter.">
+{
+
+    方法 取已格式化数值 <公开 静态 类型 = 文本型 @嵌入式方法 = "" 注释 = "java: public abstract java.lang.String getFormattedValue(float, com.github.mikephil.charting.components.AxisBase)">
+    参数 当前对象 <类型 = MP轴值格式化接口>
+    参数 数值 <类型 = 小数>
+    参数 轴 <类型 = MP轴线基础类>
+    {
+        @ @<当前对象>.getFormattedValue ((float) @<数值>, @<轴>)
+    }
+
+}
+
+类 MP默认轴值格式化类 <公开 基础类 = MP轴值格式化接口 @别名 = "com.github.mikephil.charting.formatter.DefaultAxisValueFormatter" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.formatter.DefaultAxisValueFormatter.">
+{
+
+    方法 新建默认轴值格式化 <公开 静态 类型 = MP默认轴值格式化类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.formatter.DefaultAxisValueFormatter(int)">
+    参数 数位 <类型 = 整数>
+    {
+        @ new com.github.mikephil.charting.formatter.DefaultAxisValueFormatter (@<数位>)
+    }
+
+    方法 取小数数位 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getDecimalDigits()">
+    参数 当前对象 <类型 = MP默认轴值格式化类>
+    {
+        @ @<当前对象>.getDecimalDigits ()
+    }
+
+}
+
+类 MP填充格式化接口 <公开 @别名 = "com.github.mikephil.charting.formatter.IFillFormatter" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.formatter.IFillFormatter.">
+{
+
+    方法 取填充线位置 <公开 静态 类型 = 小数 @嵌入式方法 = "" 注释 = "java: public abstract float getFillLinePosition(com.github.mikephil.charting.interfaces.datasets.ILineDataSet, com.github.mikephil.charting.interfaces.dataprovider.LineDataProvider)">
+    参数 当前对象 <类型 = MP填充格式化接口>
+    参数 数据集 <类型 = MP折线数据集接口>
+    参数 数据提供者 <类型 = MP折线数据供给接口>
+    {
+        @ @<当前对象>.getFillLinePosition (@<数据集>, @<数据提供者>)
+    }
+
+}
+
+类 MP默认填充格式化类 <公开 基础类 = MP填充格式化接口 @别名 = "com.github.mikephil.charting.formatter.DefaultFillFormatter" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.formatter.DefaultFillFormatter.">
+{
+
+    方法 新建默认填充格式化 <公开 静态 类型 = MP默认填充格式化类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.formatter.DefaultFillFormatter()">
+    {
+        @ new com.github.mikephil.charting.formatter.DefaultFillFormatter ()
+    }
+
+}
+
+类 MP数值格式化接口 <公开 @别名 = "com.github.mikephil.charting.formatter.IValueFormatter" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.formatter.IValueFormatter.">
+{
+
+    方法 取已格式化数值 <公开 静态 类型 = 文本型 @嵌入式方法 = "" 注释 = "java: public abstract java.lang.String getFormattedValue(float, com.github.mikephil.charting.data.Entry, int, com.github.mikephil.charting.utils.ViewPortHandler)">
+    参数 当前对象 <类型 = MP数值格式化接口>
+    参数 数值 <类型 = 小数>
+    参数 数据点 <类型 = MP数据点类>
+    参数 数据集索引 <类型 = 整数>
+    参数 视口处理器 <类型 = MP视图区域处理类>
+    {
+        @ @<当前对象>.getFormattedValue ((float) @<数值>, @<数据点>, @<数据集索引>, @<视口处理器>)
+    }
+
+}
+
+类 MP默认数值格式化类 <公开 基础类 = MP数值格式化接口 @别名 = "com.github.mikephil.charting.formatter.DefaultValueFormatter" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.formatter.DefaultValueFormatter.">
+{
+
+    方法 新建默认数值格式化 <公开 静态 类型 = MP默认数值格式化类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.formatter.DefaultValueFormatter(int)">
+    参数 数位 <类型 = 整数>
+    {
+        @ new com.github.mikephil.charting.formatter.DefaultValueFormatter (@<数位>)
+    }
+
+    方法 装配 <公开 静态 注释 = "java: public void setup(int)">
+    参数 当前对象 <类型 = MP默认数值格式化类>
+    参数 数位 <类型 = 整数>
+    {
+        @ @<当前对象>.setup (@<数位>);
+    }
+
+    方法 取小数数位 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getDecimalDigits()">
+    参数 当前对象 <类型 = MP默认数值格式化类>
+    {
+        @ @<当前对象>.getDecimalDigits ()
+    }
+
+}
+
+类 MP索引轴值格式化类 <公开 基础类 = MP轴值格式化接口 @别名 = "com.github.mikephil.charting.formatter.IndexAxisValueFormatter" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.formatter.IndexAxisValueFormatter.">
+{
+
+    方法 新建索引轴值格式化 <公开 静态 类型 = MP索引轴值格式化类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.formatter.IndexAxisValueFormatter()">
+    {
+        @ new com.github.mikephil.charting.formatter.IndexAxisValueFormatter ()
+    }
+
+    方法 新建索引轴值格式化_2 <公开 静态 类型 = MP索引轴值格式化类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.formatter.IndexAxisValueFormatter(java.lang.String[])">
+    参数 数值集 <类型 = "文本型 []">
+    {
+        @ new com.github.mikephil.charting.formatter.IndexAxisValueFormatter (@<数值集>)
+    }
+
+    方法 新建索引轴值格式化_3 <公开 静态 类型 = MP索引轴值格式化类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.formatter.IndexAxisValueFormatter(java.util.Collection<java.lang.String>)">
+    参数 数值集 <类型 = MP集合类>
+    {
+        @ new com.github.mikephil.charting.formatter.IndexAxisValueFormatter (@<数值集>)
+    }
+
+    方法 取数值集 <公开 静态 类型 = "文本型 []" @嵌入式方法 = "" 注释 = "java: public java.lang.String[] getValues()">
+    参数 当前对象 <类型 = MP索引轴值格式化类>
+    {
+        @ @<当前对象>.getValues ()
+    }
+
+    方法 设置数值集 <公开 静态 注释 = "java: public void setValues(java.lang.String[])">
+    参数 当前对象 <类型 = MP索引轴值格式化类>
+    参数 数值集 <类型 = "文本型 []">
+    {
+        @ @<当前对象>.setValues (@<数值集>);
+    }
+
+}
+
+类 MP大数值格式化类 <公开 @别名 = "com.github.mikephil.charting.formatter.LargeValueFormatter" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.formatter.LargeValueFormatter.">
+{
+
+    方法 新建大数值格式化 <公开 静态 类型 = MP大数值格式化类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.formatter.LargeValueFormatter()">
+    {
+        @ new com.github.mikephil.charting.formatter.LargeValueFormatter ()
+    }
+
+    方法 新建大数值格式化_2 <公开 静态 类型 = MP大数值格式化类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.formatter.LargeValueFormatter(java.lang.String)">
+    参数 附录页 <类型 = 文本型>
+    {
+        @ new com.github.mikephil.charting.formatter.LargeValueFormatter (@<附录页>)
+    }
+
+    方法 取已格式化数值 <公开 静态 类型 = 文本型 @嵌入式方法 = "" 注释 = "java: public java.lang.String getFormattedValue(float, com.github.mikephil.charting.data.Entry, int, com.github.mikephil.charting.utils.ViewPortHandler)">
+    参数 当前对象 <类型 = MP大数值格式化类>
+    参数 数值 <类型 = 小数>
+    参数 数据点 <类型 = MP数据点类>
+    参数 数据集索引 <类型 = 整数>
+    参数 视口处理器 <类型 = MP视图区域处理类>
+    {
+        @ @<当前对象>.getFormattedValue ((float) @<数值>, @<数据点>, @<数据集索引>, @<视口处理器>)
+    }
+
+    方法 取已格式化数值_2 <公开 静态 类型 = 文本型 @嵌入式方法 = "" 注释 = "java: public java.lang.String getFormattedValue(float, com.github.mikephil.charting.components.AxisBase)">
+    参数 当前对象 <类型 = MP大数值格式化类>
+    参数 数值 <类型 = 小数>
+    参数 轴 <类型 = MP轴线基础类>
+    {
+        @ @<当前对象>.getFormattedValue ((float) @<数值>, @<轴>)
+    }
+
+    方法 设置附录页 <公开 静态 注释 = "java: public void setAppendix(java.lang.String)">
+    参数 当前对象 <类型 = MP大数值格式化类>
+    参数 附录页 <类型 = 文本型>
+    {
+        @ @<当前对象>.setAppendix (@<附录页>);
+    }
+
+    方法 设置后缀 <公开 静态 注释 = "java: public void setSuffix(java.lang.String[])">
+    参数 当前对象 <类型 = MP大数值格式化类>
+    参数 后缀 <类型 = "文本型 []">
+    {
+        @ @<当前对象>.setSuffix (@<后缀>);
+    }
+
+    方法 设置最大长度 <公开 静态 注释 = "java: public void setMaxLength(int)">
+    参数 当前对象 <类型 = MP大数值格式化类>
+    参数 最大长度 <类型 = 整数>
+    {
+        @ @<当前对象>.setMaxLength (@<最大长度>);
+    }
+
+    方法 取小数数位 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getDecimalDigits()">
+    参数 当前对象 <类型 = MP大数值格式化类>
+    {
+        @ @<当前对象>.getDecimalDigits ()
+    }
+
+}
+
+类 MP百分比格式化类 <公开 @别名 = "com.github.mikephil.charting.formatter.PercentFormatter" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.formatter.PercentFormatter.">
+{
+
+    方法 新建百分比格式化 <公开 静态 类型 = MP百分比格式化类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.formatter.PercentFormatter()">
+    {
+        @ new com.github.mikephil.charting.formatter.PercentFormatter ()
+    }
+
+    方法 新建百分比格式化_2 <公开 静态 类型 = MP百分比格式化类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.formatter.PercentFormatter(java.text.DecimalFormat)">
+    参数 格式化 <类型 = MP小数格式器类>
+    {
+        @ new com.github.mikephil.charting.formatter.PercentFormatter (@<格式化>)
+    }
+
+    方法 取已格式化数值 <公开 静态 类型 = 文本型 @嵌入式方法 = "" 注释 = "java: public java.lang.String getFormattedValue(float, com.github.mikephil.charting.data.Entry, int, com.github.mikephil.charting.utils.ViewPortHandler)">
+    参数 当前对象 <类型 = MP百分比格式化类>
+    参数 数值 <类型 = 小数>
+    参数 数据点 <类型 = MP数据点类>
+    参数 数据集索引 <类型 = 整数>
+    参数 视口处理器 <类型 = MP视图区域处理类>
+    {
+        @ @<当前对象>.getFormattedValue ((float) @<数值>, @<数据点>, @<数据集索引>, @<视口处理器>)
+    }
+
+    方法 取已格式化数值_2 <公开 静态 类型 = 文本型 @嵌入式方法 = "" 注释 = "java: public java.lang.String getFormattedValue(float, com.github.mikephil.charting.components.AxisBase)">
+    参数 当前对象 <类型 = MP百分比格式化类>
+    参数 数值 <类型 = 小数>
+    参数 轴 <类型 = MP轴线基础类>
+    {
+        @ @<当前对象>.getFormattedValue ((float) @<数值>, @<轴>)
+    }
+
+    方法 取小数数位 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: public int getDecimalDigits()">
+    参数 当前对象 <类型 = MP百分比格式化类>
+    {
+        @ @<当前对象>.getDecimalDigits ()
+    }
+
+}
+
+类 MP堆叠值格式化类 <公开 基础类 = MP数值格式化接口 @别名 = "com.github.mikephil.charting.formatter.StackedValueFormatter" @禁止创建对象 = 真 注释 = "★ 封装自 MPAndroidChart v3.1.0 com.github.mikephil.charting.formatter.StackedValueFormatter.">
+{
+
+    方法 新建堆叠值格式化 <公开 静态 类型 = MP堆叠值格式化类 @嵌入式方法 = "" 注释 = "java: public com.github.mikephil.charting.formatter.StackedValueFormatter(boolean, java.lang.String, int)">
+    参数 绘制整体堆叠 <类型 = 逻辑型>
+    参数 附录页 <类型 = 文本型>
+    参数 小数位 <类型 = 整数>
+    {
+        @ new com.github.mikephil.charting.formatter.StackedValueFormatter (@<绘制整体堆叠>, @<附录页>, @<小数位>)
+    }
+
+}
+

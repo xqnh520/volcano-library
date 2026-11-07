@@ -1,0 +1,768 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.安卓.OCCT几何 <注释 = "OpenCASCADE 7.8.0 全库封装 (自动生成, 请勿手改). 名称已汉化为中文显示名, 注释内附英文原名. TK 库 libTKPrim: 12 个类 / 93 个方法.">
+
+类 长方体构造器 <公开 注释 = "长方体构造器: 原类 BRepPrimAPI_MakeBox (libTKPrim, 头文件 BRepPrimAPI/BRepPrimAPI_MakeBox.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 描述构建平行六面体(长方体)的功能. MakeBox 对象提供以下框架: - 定义长方体的构造 - 实现构造算法 - 查询结果. 构造的长方体其棱平行于 - 全局坐标系, 或 - 局部坐标系 Axis 的各轴, 并且 - 角点在 (0, 0, 0), 尺寸为 (dx, dy, dz), 或 - 角点在点 P, 尺寸为 (dx, dy, dz), 或 - 角点在点 P1 与 P2. 异常 Standard_DomainError, 若: dx, dy, dz 小于等于 Precision::Confusion(), 或 - 连接点 P1 与 P2 的向量投影到全局坐标系的某分量小于等于 Precision::Confusion(). 这些情况下长方体将退化为平面." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: BRepPrimAPI_MakeBox. 官方简介: 默认构造函数" @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeBox.构造 ()
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: BRepPrimAPI_MakeBox. 官方简介: 构造角点在 0,0,0, 另一角点在 dx,dy,dz 的长方体" @嵌入式方法 = "">
+    参数 dx <类型 = 小数>
+    参数 dy <类型 = 小数>
+    参数 dz <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeBox.构造_2 (@<dx>, @<dy>, @<dz>)
+    }
+
+    方法 创建_3 <公开 静态 类型 = 长整数 注释 = "创建_3. 原构造器: BRepPrimAPI_MakeBox. 官方简介: 构造角点在 P, 尺寸为 dx, dy, dz 的长方体." @嵌入式方法 = "">
+    参数 P <类型 = 长整数>
+    参数 dx <类型 = 小数>
+    参数 dy <类型 = 小数>
+    参数 dz <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeBox.构造_3 (@<P>, @<dx>, @<dy>, @<dz>)
+    }
+
+    方法 创建_4 <公开 静态 类型 = 长整数 注释 = "创建_4. 原构造器: BRepPrimAPI_MakeBox. 官方简介: 用角点 P1,P2 构造包围盒." @嵌入式方法 = "">
+    参数 P1 <类型 = 长整数>
+    参数 P2 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeBox.构造_4 (@<P1>, @<P2>)
+    }
+
+    方法 创建_5 <公开 静态 类型 = 长整数 注释 = "创建_5. 原构造器: BRepPrimAPI_MakeBox. 官方简介: 用 Ax2(左角点与轴)和尺寸 dx, dy, dz 构造长方体." @嵌入式方法 = "">
+    参数 轴 <类型 = 长整数>
+    参数 dx <类型 = 小数>
+    参数 dy <类型 = 小数>
+    参数 dz <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeBox.构造_5 (@<轴>, @<dx>, @<dy>, @<dz>)
+    }
+
+    方法 初始化 <公开 静态 注释 = "初始化. 原方法: Init. 官方简介: 初始化角点在 0,0,0, 另一角点在 theDX, theDY, theDZ 的长方体" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 DX <类型 = 小数>
+    参数 DY <类型 = 小数>
+    参数 DZ <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeBox.Init (@<对象>, @<DX>, @<DY>, @<DZ>)
+    }
+
+    方法 初始化_2 <公开 静态 注释 = "初始化_2. 原方法: Init. 官方简介: 用角点 thePnt 和尺寸 theDX, theDY, theDZ 初始化长方体." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 点 <类型 = 长整数>
+    参数 DX <类型 = 小数>
+    参数 DY <类型 = 小数>
+    参数 DZ <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeBox.Init_2 (@<对象>, @<点>, @<DX>, @<DY>, @<DZ>)
+    }
+
+    方法 初始化_3 <公开 静态 注释 = "初始化_3. 原方法: Init. 官方简介: 用角点 thePnt1, thePnt2 初始化包围盒." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 点1 <类型 = 长整数>
+    参数 点2 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeBox.Init_3 (@<对象>, @<点1>, @<点2>)
+    }
+
+    方法 初始化_4 <公开 静态 注释 = "初始化_4. 原方法: Init. 官方简介: 用 Ax2(左角点与坐标轴)和尺寸 theDX, theDY, theDZ 初始化长方体." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 轴 <类型 = 长整数>
+    参数 DX <类型 = 小数>
+    参数 DY <类型 = 小数>
+    参数 DZ <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeBox.Init_4 (@<对象>, @<轴>, @<DX>, @<DY>, @<DZ>)
+    }
+
+    方法 构建 <公开 静态 注释 = "构建. 原方法: Build. 官方简介: 把实体存入 myShape." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeBox.Build (@<对象>)
+    }
+
+    方法 壳 <公开 静态 类型 = 长整数 注释 = "壳. 原方法: Shell. 官方简介: 以壳形式返回构造的长方体." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeBox.Shell (@<对象>)
+    }
+
+    方法 转拓扑壳 <公开 静态 类型 = 长整数 注释 = "转拓扑壳. 原转换: operator TopoDS_Shell." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeBox.转TopoDS_Shell (@<对象>)
+    }
+
+    方法 实体 <公开 静态 类型 = 长整数 注释 = "实体. 原方法: Solid. 官方简介: 以实体形式返回构造的长方体." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeBox.Solid (@<对象>)
+    }
+
+    方法 转拓扑实体 <公开 静态 类型 = 长整数 注释 = "转拓扑实体. 原转换: operator TopoDS_Solid." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeBox.转TopoDS_Solid (@<对象>)
+    }
+
+    方法 底面 <公开 静态 类型 = 长整数 注释 = "底面. 原方法: BottomFace. 官方简介: 返回 ZMin 面" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeBox.BottomFace (@<对象>)
+    }
+
+    方法 后面 <公开 静态 类型 = 长整数 注释 = "后面. 原方法: BackFace. 官方简介: 返回 XMin 面" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeBox.BackFace (@<对象>)
+    }
+
+    方法 前面 <公开 静态 类型 = 长整数 注释 = "前面. 原方法: FrontFace. 官方简介: 返回 XMax 面" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeBox.FrontFace (@<对象>)
+    }
+
+    方法 左面 <公开 静态 类型 = 长整数 注释 = "左面. 原方法: LeftFace. 官方简介: 返回 YMin 面" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeBox.LeftFace (@<对象>)
+    }
+
+    方法 右面 <公开 静态 类型 = 长整数 注释 = "右面. 原方法: RightFace. 官方简介: 返回 YMax 面" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeBox.RightFace (@<对象>)
+    }
+
+    方法 顶面 <公开 静态 类型 = 长整数 注释 = "顶面. 原方法: TopFace. 官方简介: 返回 ZMax 面" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeBox.TopFace (@<对象>)
+    }
+
+}
+
+类 圆锥构造器 <公开 注释 = "圆锥构造器: 原类 BRepPrimAPI_MakeCone (libTKPrim, 头文件 BRepPrimAPI/BRepPrimAPI_MakeCone.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 描述构建圆锥或圆锥片的功能. MakeCone 对象提供以下框架: - 定义圆锥的构造 - 实现构造算法 - 查询结果." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: BRepPrimAPI_MakeCone. 官方简介: 构造圆锥. @param R1 [in] 圆锥底半径, 可为零 (z = 0) @param R2 [in] 圆锥顶半径, 可为零 (z = H) @param H [in] 圆锥高度" @嵌入式方法 = "">
+    参数 R1 <类型 = 小数>
+    参数 R2 <类型 = 小数>
+    参数 H <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeCone.构造 (@<R1>, @<R2>, @<H>)
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: BRepPrimAPI_MakeCone. 官方简介: 构造圆锥. @param R1 [in] 圆锥底半径, 可为零 (z = 0) @param R2 [in] 圆锥顶半径, 可为零 (z = H) @param H [in] 圆锥高度 @param angle [in] 用于构造部分圆锥的角度" @嵌入式方法 = "">
+    参数 R1 <类型 = 小数>
+    参数 R2 <类型 = 小数>
+    参数 H <类型 = 小数>
+    参数 角度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeCone.构造_2 (@<R1>, @<R2>, @<H>, @<角度>)
+    }
+
+    方法 创建_3 <公开 静态 类型 = 长整数 注释 = "创建_3. 原构造器: BRepPrimAPI_MakeCone. 官方简介: 构造圆锥. @param R1 [in] 圆锥底半径, 可为零 (z = 0) @param R2 [in] 圆锥顶半径, 可为零 (z = H) @param H [in] 圆锥高度 @param angle [in] 用于构造部分圆锥的角度" @嵌入式方法 = "">
+    参数 轴 <类型 = 长整数>
+    参数 R1 <类型 = 小数>
+    参数 R2 <类型 = 小数>
+    参数 H <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeCone.构造_3 (@<轴>, @<R1>, @<R2>, @<H>)
+    }
+
+    方法 创建_4 <公开 静态 类型 = 长整数 注释 = "创建_4. 原构造器: BRepPrimAPI_MakeCone. 官方简介: 构造高度为 H、在平面 z = 0 中半径为 R1、在平面 Z = H 中半径为 R2 的圆锥. R1 与 R2 可以为空. 取 <angle> 的一部分. 构造高度 H、在平面 z = 0 中半径 R1 且在平面 z = H 中半径 R2 的圆锥或圆锥的一部分. 若 R1 或 R2 等于 0 则结果是尖圆锥. 圆锥绕以下之一的 \"Z Axis\" 构造: - 全局坐标系, 或 - 局部坐标系 Axes. 它在这些坐标系中如下被限制: - 在 v 参数方向(Z 坐标)上, 由两个参数值 0 与 H, - 在 u 参数方向(由绕 Z 轴的旋转角定义)上, 在圆锥部分的情形, 由两个参数值 0 与 angle. Angle 以弧度给出. 结果形状由以下组成: - 一个侧向圆锥面 - 平面 z = 0 与 z = H 内的两个平面, 或若某个半径值为空则只在这两个平面之一内的一个平面(在完整圆锥的情形, 这些面是圆), 且 - 在圆锥部分的情形, 两个用于封闭形状的平面. (平面 u = 0 与 u = angle 内的两个平行四边形或两个三角形). 异常: 若以下情形则抛出 Standard_DomainError: - H 小于或等于 Precision::Confusion(), 或 - 由 R1, R2 与 H 定义的圆锥顶点处的半角小于 Precision::Confusion()/H, 或大于 (Pi/2)-Precision::Confusion()/H." @嵌入式方法 = "">
+    参数 轴 <类型 = 长整数>
+    参数 R1 <类型 = 小数>
+    参数 R2 <类型 = 小数>
+    参数 H <类型 = 小数>
+    参数 角度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeCone.构造_4 (@<轴>, @<R1>, @<R2>, @<H>, @<角度>)
+    }
+
+}
+
+类 圆柱构造器 <公开 注释 = "圆柱构造器: 原类 BRepPrimAPI_MakeCylinder (libTKPrim, 头文件 BRepPrimAPI/BRepPrimAPI_MakeCylinder.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 描述构建圆柱或圆柱部分的功能. MakeCylinder 对象提供以下框架: - 定义圆柱的构造 - 实现构造算法 - 查询结果." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: BRepPrimAPI_MakeCylinder. 官方简介: 构造圆柱. @param R [in] 圆柱半径 @param H [in] 圆柱高度" @嵌入式方法 = "">
+    参数 R <类型 = 小数>
+    参数 H <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeCylinder.构造 (@<R>, @<H>)
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: BRepPrimAPI_MakeCylinder. 官方简介: 构造圆柱(部分圆柱). @param R [in] 圆柱半径 @param H [in] 圆柱高度 @param Angle [in] 定义圆柱缺失的部分" @嵌入式方法 = "">
+    参数 R <类型 = 小数>
+    参数 H <类型 = 小数>
+    参数 角度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeCylinder.构造_2 (@<R>, @<H>, @<角度>)
+    }
+
+    方法 创建_3 <公开 静态 类型 = 长整数 注释 = "创建_3. 原构造器: BRepPrimAPI_MakeCylinder. 官方简介: 构造圆柱(部分圆柱). @param R [in] 圆柱半径 @param H [in] 圆柱高度 @param Angle [in] 定义圆柱缺失的部分" @嵌入式方法 = "">
+    参数 轴 <类型 = 长整数>
+    参数 R <类型 = 小数>
+    参数 H <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeCylinder.构造_3 (@<轴>, @<R>, @<H>)
+    }
+
+    方法 创建_4 <公开 静态 类型 = 长整数 注释 = "创建_4. 原构造器: BRepPrimAPI_MakeCylinder. 官方简介: 构造半径为 R、长度为 H 且角度为 Angle 的圆柱. 构造 - 半径为 R、高度为 H 的圆柱, 或 - 半径为 R、高度为 H、角度为 Angle(定义圆柱缺失部分)的圆柱的一部分. 圆柱绕以下之一的 \"Z Axis\" 构造: - 全局坐标系, 或 - 局部坐标系 Axes. 它在该坐标系中如下被限制: - 在 v 参数方向(Z 轴)上, 由两个参数值 0 与 H, - 在 u 参数方向(绕 Z Axis 的旋转角)上, 在圆柱部分的情形, 由两个参数值 0 与 Angle. Angle 以弧度给出. 结果形状由以下组成: - 一个侧向圆柱面, - 平面 z = 0 与 z = H 内的两个平面(在完整圆柱的情形, 这些面是圆), 且 - 在圆柱部分的情形, 两个用于封闭形状的附加平面.(平面 u = 0 与 u = Angle 内的两个矩形). 异常: 若以下情形则抛出 Standard_DomainError: - R 小于或等于 Precision::Confusion(), 或 - H 小于或等于 Precision::Confusion()." @嵌入式方法 = "">
+    参数 轴 <类型 = 长整数>
+    参数 R <类型 = 小数>
+    参数 H <类型 = 小数>
+    参数 角度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeCylinder.构造_4 (@<轴>, @<R>, @<H>, @<角度>)
+    }
+
+}
+
+类 半空间构造器 <公开 注释 = "半空间构造器: 原类 BRepPrimAPI_MakeHalfSpace (libTKPrim, 头文件 BRepPrimAPI/BRepPrimAPI_MakeHalfSpace.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 描述构建半空间的功能. 半空间是由曲面限定的无限实体. 它由界定它的一个面或壳与一个参考点(指定半空间物质所在曲面一侧)构建. 半空间是拓扑运算中常用的切割另一形状的工具. MakeHalfSpace 对象提供以下框架: - 定义并实现半空间的构造 - 查询结果." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: BRepPrimAPI_MakeHalfSpace. 官方简介: 构造由面与点定义的半空间." @嵌入式方法 = "">
+    参数 面 <类型 = 长整数>
+    参数 参考点 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeHalfSpace.构造 (@<面>, @<参考点>)
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: BRepPrimAPI_MakeHalfSpace. 官方简介: 构造由壳与点定义的半空间." @嵌入式方法 = "">
+    参数 壳 <类型 = 长整数>
+    参数 参考点 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeHalfSpace.构造_2 (@<壳>, @<参考点>)
+    }
+
+    方法 实体 <公开 静态 类型 = 长整数 注释 = "实体. 原方法: Solid. 官方简介: 以实体形式返回构造的半空间." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeHalfSpace.Solid (@<对象>)
+    }
+
+    方法 转拓扑实体 <公开 静态 类型 = 长整数 注释 = "转拓扑实体. 原转换: operator TopoDS_Solid." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeHalfSpace.转TopoDS_Solid (@<对象>)
+    }
+
+}
+
+类 单轴回转构造器 <公开 注释 = "单轴回转构造器: 原类 BRepPrimAPI_MakeOneAxis (libTKPrim, 头文件 BRepPrimAPI/BRepPrimAPI_MakeOneAxis.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 抽象类 MakeOneAxis 是构造旋转基本体算法的根类." @禁止创建对象 = 真>
+{
+
+    方法 构建 <公开 静态 注释 = "构建. 原方法: Build. 官方简介: 把实体存入 myShape." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeOneAxis.Build (@<对象>)
+    }
+
+    方法 面 <公开 静态 类型 = 长整数 注释 = "面. 原方法: Face. 官方简介: 返回旋转基本体的侧面." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeOneAxis.Face (@<对象>)
+    }
+
+    方法 转拓扑面 <公开 静态 类型 = 长整数 注释 = "转拓扑面. 原转换: operator TopoDS_Face." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeOneAxis.转TopoDS_Face (@<对象>)
+    }
+
+    方法 壳 <公开 静态 类型 = 长整数 注释 = "壳. 原方法: Shell. 官方简介: 以壳形式返回构造的旋转基本体." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeOneAxis.Shell (@<对象>)
+    }
+
+    方法 转拓扑壳 <公开 静态 类型 = 长整数 注释 = "转拓扑壳. 原转换: operator TopoDS_Shell." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeOneAxis.转TopoDS_Shell (@<对象>)
+    }
+
+    方法 实体 <公开 静态 类型 = 长整数 注释 = "实体. 原方法: Solid. 官方简介: 以实体形式返回构造的旋转基本体." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeOneAxis.Solid (@<对象>)
+    }
+
+    方法 转拓扑实体 <公开 静态 类型 = 长整数 注释 = "转拓扑实体. 原转换: operator TopoDS_Solid." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeOneAxis.转TopoDS_Solid (@<对象>)
+    }
+
+}
+
+类 棱柱构造器 <公开 注释 = "棱柱构造器: 原类 BRepPrimAPI_MakePrism (libTKPrim, 头文件 BRepPrimAPI/BRepPrimAPI_MakePrism.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 描述构建线性扫掠拓扑(棱柱)的功能. 棱柱由以下定义: - 被扫掠的基础形状, 以及 - 扫掠方向, 即: - 有限棱柱用向量, 或 - 无限或半无限棱柱用方向. 基础形状不得包含任何实体. 轮廓按以下规则生成对象: - 顶点生成边 - 边生成面. - 线框生成壳. - 面生成实体. - 壳生成复合实体. MakePrism 对象提供以下框架: - 定义棱柱的构造 - 实现构造算法 - 查询结果." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: BRepPrimAPI_MakePrism. 官方简介: 构造以 S 为底面, V 为向量的棱柱. 若 C 为 true, 则复制 S. 若 Canonize 为 true, 则尝试把生成的曲面规范化为简单类型" @嵌入式方法 = "">
+    参数 S <类型 = 长整数>
+    参数 V <类型 = 长整数>
+    参数 复制 <类型 = 逻辑型>
+    参数 规范化 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakePrism.构造 (@<S>, @<V>, @<复制>, @<规范化>)
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: BRepPrimAPI_MakePrism. 官方简介: 构建底为 S 的半无限或无限棱柱. 若 Inf 为 true, 棱柱为无限; 若 Inf 为 false, 棱柱为半无限(沿方向 D). 若 C 为 true, 则复制 S(用于半无限棱柱). 若 Canonize 为 true, 则尝试把生成的曲面规范化为简单类型." @嵌入式方法 = "">
+    参数 S <类型 = 长整数>
+    参数 D <类型 = 长整数>
+    参数 无穷 <类型 = 逻辑型>
+    参数 复制 <类型 = 逻辑型>
+    参数 规范化 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakePrism.构造_2 (@<S>, @<D>, @<无穷>, @<复制>, @<规范化>)
+    }
+
+    方法 构建 <公开 静态 注释 = "构建. 原方法: Build. 官方简介: 构造结果形状(重定义自 MakeShape)." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakePrism.Build (@<对象>)
+    }
+
+    方法 首个形状 <公开 静态 类型 = 长整数 注释 = "首个形状. 原方法: FirstShape. 官方简介: 返回棱柱底部的 TopoDS 形状." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakePrism.FirstShape (@<对象>)
+    }
+
+    方法 末个形状 <公开 静态 类型 = 长整数 注释 = "末个形状. 原方法: LastShape. 官方简介: 返回棱柱顶部的 TopoDS 形状. 对于有限棱柱, FirstShape 返回棱柱的底面, 即若 Copy 为 false 则返回 S; 否则返回属于棱柱的 S 的副本. LastShape 返回构造时按 V 平移的 S 的副本." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakePrism.LastShape (@<对象>)
+    }
+
+    方法 是否已删除 <公开 静态 类型 = 逻辑型 注释 = "是否已删除. 原方法: IsDeleted. 官方简介: 若形状 S 已被删除则返回 true." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakePrism.IsDeleted (@<对象>, @<S>)
+    }
+
+    方法 首个形状_2 <公开 静态 类型 = 长整数 注释 = "首个形状_2. 原方法: FirstShape. 官方简介: 返回棱柱底部的 TopoDS 形状, 用 theShape 生成(生成形状的子形状)." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 形状 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakePrism.FirstShape_2 (@<对象>, @<形状>)
+    }
+
+    方法 末个形状_2 <公开 静态 类型 = 长整数 注释 = "末个形状_2. 原方法: LastShape. 官方简介: 返回棱柱顶部的 TopoDS 形状, 用 theShape 生成(生成形状的子形状)." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 形状 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakePrism.LastShape_2 (@<对象>, @<形状>)
+    }
+
+}
+
+类 回转构造器 <公开 注释 = "回转构造器: 原类 BRepPrimAPI_MakeRevol (libTKPrim, 头文件 BRepPrimAPI/BRepPrimAPI_MakeRevol.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 用于构建旋转扫掠拓扑的类." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: BRepPrimAPI_MakeRevol. 官方简介: 构建基体 S, 轴 A 和角度 D 的回转体. 若 C 为 true, 则复制 S." @嵌入式方法 = "">
+    参数 S <类型 = 长整数>
+    参数 A <类型 = 长整数>
+    参数 D <类型 = 小数>
+    参数 复制 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeRevol.构造 (@<S>, @<A>, @<D>, @<复制>)
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: BRepPrimAPI_MakeRevol. 官方简介: 构建基体 S, 轴 A 和角度 2*Pi 的回转体. 若 C 为 true, 则复制 S." @嵌入式方法 = "">
+    参数 S <类型 = 长整数>
+    参数 A <类型 = 长整数>
+    参数 复制 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeRevol.构造_2 (@<S>, @<A>, @<复制>)
+    }
+
+    方法 构建 <公开 静态 注释 = "构建. 原方法: Build. 官方简介: 构造结果形状(重定义自 MakeShape)." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeRevol.Build (@<对象>)
+    }
+
+    方法 首个形状 <公开 静态 类型 = 长整数 注释 = "首个形状. 原方法: FirstShape. 官方简介: 返回回转体的第一个形状(与生成形状重合)." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeRevol.FirstShape (@<对象>)
+    }
+
+    方法 末个形状 <公开 静态 类型 = 长整数 注释 = "末个形状. 原方法: LastShape. 官方简介: 返回回转体末端的 TopoDS 形状." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeRevol.LastShape (@<对象>)
+    }
+
+    方法 是否已删除 <公开 静态 类型 = 逻辑型 注释 = "是否已删除. 原方法: IsDeleted. 官方简介: 若形状 S 已被删除则返回 true." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeRevol.IsDeleted (@<对象>, @<S>)
+    }
+
+    方法 首个形状_2 <公开 静态 类型 = 长整数 注释 = "首个形状_2. 原方法: FirstShape. 官方简介: 返回回转起点的 TopoDS 形状, 用 theShape 生成(生成形状的子形状)." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 形状 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeRevol.FirstShape_2 (@<对象>, @<形状>)
+    }
+
+    方法 末个形状_2 <公开 静态 类型 = 长整数 注释 = "末个形状_2. 原方法: LastShape. 官方简介: 返回回转终点的 TopoDS 形状, 用 theShape 生成(生成形状的子形状)." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 形状 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeRevol.LastShape_2 (@<对象>, @<形状>)
+    }
+
+    方法 是否有退化 <公开 静态 类型 = 逻辑型 注释 = "是否有退化. 原方法: HasDegenerated. 官方简介: 检查结果中是否存在退化边." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeRevol.HasDegenerated (@<对象>)
+    }
+
+}
+
+类 旋转体构造器 <公开 注释 = "旋转体构造器: 原类 BRepPrimAPI_MakeRevolution (libTKPrim, 头文件 BRepPrimAPI/BRepPrimAPI_MakeRevolution.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 描述构建旋转形状的功能. MakeRevolution 对象提供以下框架: - 定义旋转形状的构造 - 实现构造算法 - 查询结果." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: BRepPrimAPI_MakeRevolution. 官方简介: 通过把曲线绕 Z 轴旋转构造旋转体." @嵌入式方法 = "">
+    参数 经线 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeRevolution.构造 (@<经线>)
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: BRepPrimAPI_MakeRevolution. 官方简介: 通过把曲线绕 Z 轴旋转构造旋转体." @嵌入式方法 = "">
+    参数 经线 <类型 = 长整数>
+    参数 角度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeRevolution.构造_2 (@<经线>, @<角度>)
+    }
+
+    方法 创建_3 <公开 静态 类型 = 长整数 注释 = "创建_3. 原构造器: BRepPrimAPI_MakeRevolution. 官方简介: 通过把曲线绕 Z 轴旋转构造旋转体." @嵌入式方法 = "">
+    参数 经线 <类型 = 长整数>
+    参数 VMin <类型 = 小数>
+    参数 VMax <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeRevolution.构造_3 (@<经线>, @<VMin>, @<VMax>)
+    }
+
+    方法 创建_4 <公开 静态 类型 = 长整数 注释 = "创建_4. 原构造器: BRepPrimAPI_MakeRevolution. 官方简介: 通过把曲线绕 Z 轴旋转构造旋转体." @嵌入式方法 = "">
+    参数 经线 <类型 = 长整数>
+    参数 VMin <类型 = 小数>
+    参数 VMax <类型 = 小数>
+    参数 角度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeRevolution.构造_4 (@<经线>, @<VMin>, @<VMax>, @<角度>)
+    }
+
+    方法 创建_5 <公开 静态 类型 = 长整数 注释 = "创建_5. 原构造器: BRepPrimAPI_MakeRevolution. 官方简介: 通过把曲线绕 Z 轴旋转构造旋转体." @嵌入式方法 = "">
+    参数 轴 <类型 = 长整数>
+    参数 经线 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeRevolution.构造_5 (@<轴>, @<经线>)
+    }
+
+    方法 创建_6 <公开 静态 类型 = 长整数 注释 = "创建_6. 原构造器: BRepPrimAPI_MakeRevolution. 官方简介: 通过把曲线绕 Z 轴旋转构造旋转体." @嵌入式方法 = "">
+    参数 轴 <类型 = 长整数>
+    参数 经线 <类型 = 长整数>
+    参数 角度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeRevolution.构造_6 (@<轴>, @<经线>, @<角度>)
+    }
+
+    方法 创建_7 <公开 静态 类型 = 长整数 注释 = "创建_7. 原构造器: BRepPrimAPI_MakeRevolution. 官方简介: 通过把曲线绕 Z 轴旋转构造旋转体." @嵌入式方法 = "">
+    参数 轴 <类型 = 长整数>
+    参数 经线 <类型 = 长整数>
+    参数 VMin <类型 = 小数>
+    参数 VMax <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeRevolution.构造_7 (@<轴>, @<经线>, @<VMin>, @<VMax>)
+    }
+
+    方法 创建_8 <公开 静态 类型 = 长整数 注释 = "创建_8. 原构造器: BRepPrimAPI_MakeRevolution. 官方简介: 通过把曲线绕 Z 旋转构造回转体. 对于所有算法, 结果形状由以下组成: - 一个侧向回转面, - 两个位于平行于平面 z = 0 的平面内、经过子午线被回转部分端点的平面(若这些点不在 Z 轴上; 在完整回转形状的情形这些面是圆), - 以及在回转形状部分的情形, 两个用于封闭形状的平面(在平面 u = 0 与 u = angle 内)." @嵌入式方法 = "">
+    参数 轴 <类型 = 长整数>
+    参数 经线 <类型 = 长整数>
+    参数 VMin <类型 = 小数>
+    参数 VMax <类型 = 小数>
+    参数 角度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeRevolution.构造_8 (@<轴>, @<经线>, @<VMin>, @<VMax>, @<角度>)
+    }
+
+}
+
+类 球体构造器 <公开 注释 = "球体构造器: 原类 BRepPrimAPI_MakeSphere (libTKPrim, 头文件 BRepPrimAPI/BRepPrimAPI_MakeSphere.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 描述构建球体或球体部分的功能. MakeSphere 对象提供以下框架: - 定义球体的构造 - 实现构造算法 - 查询结果." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: BRepPrimAPI_MakeSphere. 官方简介: 构造球体. @param R [in] 球半径" @嵌入式方法 = "">
+    参数 R <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeSphere.构造 (@<R>)
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: BRepPrimAPI_MakeSphere. 官方简介: 构造球体(球楔). @param R [in] 球半径 @param angle [in] 位于界定半圆盘内的半径之间的角度" @嵌入式方法 = "">
+    参数 R <类型 = 小数>
+    参数 角度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeSphere.构造_2 (@<R>, @<角度>)
+    }
+
+    方法 创建_3 <公开 静态 类型 = 长整数 注释 = "创建_3. 原构造器: BRepPrimAPI_MakeSphere. 官方简介: 构造球体(球台). @param R [in] 球半径 @param angle1 [in] 定义球台的第一个角度 @param angle2 [in] 定义球台的第二个角度" @嵌入式方法 = "">
+    参数 R <类型 = 小数>
+    参数 起始角 <类型 = 小数>
+    参数 终止角 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeSphere.构造_3 (@<R>, @<起始角>, @<终止角>)
+    }
+
+    方法 创建_4 <公开 静态 类型 = 长整数 注释 = "创建_4. 原构造器: BRepPrimAPI_MakeSphere. 官方简介: 构造球体(球台). @param R [in] 球半径 @param angle1 [in] 定义球台的第一个角度 @param angle2 [in] 定义球台的第二个角度 @param angle3 [in] 位于界定半圆盘内的半径之间的角度" @嵌入式方法 = "">
+    参数 R <类型 = 小数>
+    参数 起始角 <类型 = 小数>
+    参数 终止角 <类型 = 小数>
+    参数 角度3 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeSphere.构造_4 (@<R>, @<起始角>, @<终止角>, @<角度3>)
+    }
+
+    方法 创建_5 <公开 静态 类型 = 长整数 注释 = "创建_5. 原构造器: BRepPrimAPI_MakeSphere. 官方简介: 构造球体(球楔). @param R [in] 球半径 @param angle [in] 位于界定半圆盘内的半径之间的角度" @嵌入式方法 = "">
+    参数 中心 <类型 = 长整数>
+    参数 R <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeSphere.构造_5 (@<中心>, @<R>)
+    }
+
+    方法 创建_6 <公开 静态 类型 = 长整数 注释 = "创建_6. 原构造器: BRepPrimAPI_MakeSphere. 官方简介: 构造球体(球台). @param R [in] 球半径 @param angle1 [in] 定义球台的第一个角度 @param angle2 [in] 定义球台的第二个角度" @嵌入式方法 = "">
+    参数 中心 <类型 = 长整数>
+    参数 R <类型 = 小数>
+    参数 角度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeSphere.构造_6 (@<中心>, @<R>, @<角度>)
+    }
+
+    方法 创建_7 <公开 静态 类型 = 长整数 注释 = "创建_7. 原构造器: BRepPrimAPI_MakeSphere. 官方简介: 构造球体(球台). @param R [in] 球半径 @param angle1 [in] 定义球台的第一个角度 @param angle2 [in] 定义球台的第二个角度 @param angle3 [in] 位于界定半圆盘内的半径之间的角度" @嵌入式方法 = "">
+    参数 中心 <类型 = 长整数>
+    参数 R <类型 = 小数>
+    参数 起始角 <类型 = 小数>
+    参数 终止角 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeSphere.构造_7 (@<中心>, @<R>, @<起始角>, @<终止角>)
+    }
+
+    方法 创建_8 <公开 静态 类型 = 长整数 注释 = "创建_8. 原构造器: BRepPrimAPI_MakeSphere. 官方简介: 构造球体(球台). @param Center [in] 球心坐标 @param R [in] 球半径 @param angle1 [in] 定义球台的第一个角度 @param angle2 [in] 定义球台的第二个角度 @param angle3 [in] 位于界定半圆盘内的半径之间的角度" @嵌入式方法 = "">
+    参数 中心 <类型 = 长整数>
+    参数 R <类型 = 小数>
+    参数 起始角 <类型 = 小数>
+    参数 终止角 <类型 = 小数>
+    参数 角度3 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeSphere.构造_8 (@<中心>, @<R>, @<起始角>, @<终止角>, @<角度3>)
+    }
+
+    方法 创建_9 <公开 静态 类型 = 长整数 注释 = "创建_9. 原构造器: BRepPrimAPI_MakeSphere. 官方简介: 构造球体(球楔). @param R [in] 球半径 @param angle [in] 位于界定半圆盘内的半径之间的角度" @嵌入式方法 = "">
+    参数 轴 <类型 = 长整数>
+    参数 R <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeSphere.构造_9 (@<轴>, @<R>)
+    }
+
+    方法 创建_10 <公开 静态 类型 = 长整数 注释 = "创建_10. 原构造器: BRepPrimAPI_MakeSphere. 官方简介: 构造球体(球台). @param R [in] 球半径 @param angle1 [in] 定义球台的第一个角度 @param angle2 [in] 定义球台的第二个角度" @嵌入式方法 = "">
+    参数 轴 <类型 = 长整数>
+    参数 R <类型 = 小数>
+    参数 角度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeSphere.构造_10 (@<轴>, @<R>, @<角度>)
+    }
+
+    方法 创建_11 <公开 静态 类型 = 长整数 注释 = "创建_11. 原构造器: BRepPrimAPI_MakeSphere. 官方简介: 构造球体(球台). @param R [in] 球半径 @param angle1 [in] 定义球台的第一个角度 @param angle2 [in] 定义球台的第二个角度 @param angle3 [in] 位于界定半圆盘内的半径之间的角度" @嵌入式方法 = "">
+    参数 轴 <类型 = 长整数>
+    参数 R <类型 = 小数>
+    参数 起始角 <类型 = 小数>
+    参数 终止角 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeSphere.构造_11 (@<轴>, @<R>, @<起始角>, @<终止角>)
+    }
+
+    方法 创建_12 <公开 静态 类型 = 长整数 注释 = "创建_12. 原构造器: BRepPrimAPI_MakeSphere. 官方简介: 构造半径为 R 的球体. 对于所有算法, 结果形状由以下组成: - 一个侧向球面, - 若球体在 v 参数方向被截断, 则两个平行于平面 z = 0 的平面, 或者若 angle1 等于 -p/2 或 angle2 等于 p/2 则只有一个平面(在完整截断球体的情形这些面是圆), - 以及在球体部分的情形, 两个用于封闭形状的平面(在平面 u = 0 与 u = angle 内)." @嵌入式方法 = "">
+    参数 轴 <类型 = 长整数>
+    参数 R <类型 = 小数>
+    参数 起始角 <类型 = 小数>
+    参数 终止角 <类型 = 小数>
+    参数 角度3 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeSphere.构造_12 (@<轴>, @<R>, @<起始角>, @<终止角>, @<角度3>)
+    }
+
+}
+
+类 扫掠构造器基类 <公开 注释 = "扫掠构造器基类: 原类 BRepPrimAPI_MakeSweep (libTKPrim, 头文件 BRepPrimAPI/BRepPrimAPI_MakeSweep.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 抽象类 MakeSweep 是扫掠基本体的根类. 扫掠是让轮廓沿路径扫掠得到的对象. 轮廓可以是任意拓扑, 路径通常是曲线或线框. 轮廓按以下规则生成对象: - 顶点生成边 - 边生成面. - 线框生成壳. - 面生成实体. - 壳生成复合实体. 不允许扫掠实体与复合实体. BRepPrimAPI 包实现两种扫掠: - 称为棱柱的线性扫掠 - 称为回转的旋转扫掠. BRepOffsetAPI 包中也提供沿复杂轮廓(如 B 样条曲线)的扫掠构造.." @禁止创建对象 = 真>
+{
+
+}
+
+类 圆环体构造器 <公开 注释 = "圆环体构造器: 原类 BRepPrimAPI_MakeTorus (libTKPrim, 头文件 BRepPrimAPI/BRepPrimAPI_MakeTorus.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 描述构建圆环或圆环片的功能. MakeTorus 对象提供以下框架: - 定义圆环的构造 - 实现构造算法 - 查询结果." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: BRepPrimAPI_MakeTorus. 官方简介: 构造圆环面. @param R1 [in] 从管道中心到圆环面中心的距离 @param R2 [in] 管道半径" @嵌入式方法 = "">
+    参数 R1 <类型 = 小数>
+    参数 R2 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeTorus.构造 (@<R1>, @<R2>)
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: BRepPrimAPI_MakeTorus. 官方简介: 构造圆环面的一段. @param R1 [in] 从管道中心到圆环面中心的距离 @param R2 [in] 管道半径 @param angle [in] 用于构造圆环管道段的角度" @嵌入式方法 = "">
+    参数 R1 <类型 = 小数>
+    参数 R2 <类型 = 小数>
+    参数 角度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeTorus.构造_2 (@<R1>, @<R2>, @<角度>)
+    }
+
+    方法 创建_3 <公开 静态 类型 = 长整数 注释 = "创建_3. 原构造器: BRepPrimAPI_MakeTorus. 官方简介: 构造小圆上带角度的圆环面. @param R1 [in] 从管道中心到圆环面中心的距离 @param R2 [in] 管道半径 @param angle1 [in] 用于构造圆环环段的第一角度 @param angle2 [in] 用于构造圆环环段的第二角度" @嵌入式方法 = "">
+    参数 R1 <类型 = 小数>
+    参数 R2 <类型 = 小数>
+    参数 起始角 <类型 = 小数>
+    参数 终止角 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeTorus.构造_3 (@<R1>, @<R2>, @<起始角>, @<终止角>)
+    }
+
+    方法 创建_4 <公开 静态 类型 = 长整数 注释 = "创建_4. 原构造器: BRepPrimAPI_MakeTorus. 官方简介: 构造小圆上带角度的圆环面. @param R1 [in] 从管道中心到圆环面中心的距离 @param R2 [in] 管道半径 @param angle1 [in] 用于构造圆环环段的第一角度 @param angle2 [in] 用于构造圆环环段的第二角度 @param angle [in] 用于构造圆环管道段的角度" @嵌入式方法 = "">
+    参数 R1 <类型 = 小数>
+    参数 R2 <类型 = 小数>
+    参数 起始角 <类型 = 小数>
+    参数 终止角 <类型 = 小数>
+    参数 角度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeTorus.构造_4 (@<R1>, @<R2>, @<起始角>, @<终止角>, @<角度>)
+    }
+
+    方法 创建_5 <公开 静态 类型 = 长整数 注释 = "创建_5. 原构造器: BRepPrimAPI_MakeTorus. 官方简介: 构造圆环面的一段. @param R1 [in] 从管道中心到圆环面中心的距离 @param R2 [in] 管道半径 @param angle [in] 用于构造圆环管道段的角度" @嵌入式方法 = "">
+    参数 轴 <类型 = 长整数>
+    参数 R1 <类型 = 小数>
+    参数 R2 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeTorus.构造_5 (@<轴>, @<R1>, @<R2>)
+    }
+
+    方法 创建_6 <公开 静态 类型 = 长整数 注释 = "创建_6. 原构造器: BRepPrimAPI_MakeTorus. 官方简介: 构造小圆上带角度的圆环面. @param R1 [in] 从管道中心到圆环面中心的距离 @param R2 [in] 管道半径 @param angle1 [in] 用于构造圆环环段的第一角度 @param angle2 [in] 用于构造圆环环段的第二角度" @嵌入式方法 = "">
+    参数 轴 <类型 = 长整数>
+    参数 R1 <类型 = 小数>
+    参数 R2 <类型 = 小数>
+    参数 角度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeTorus.构造_6 (@<轴>, @<R1>, @<R2>, @<角度>)
+    }
+
+    方法 创建_7 <公开 静态 类型 = 长整数 注释 = "创建_7. 原构造器: BRepPrimAPI_MakeTorus. 官方简介: 构造小圆上带角度的圆环面. @param R1 [in] 从管道中心到圆环面中心的距离 @param R2 [in] 管道半径 @param angle1 [in] 用于构造圆环环段的第一角度 @param angle2 [in] 用于构造圆环环段的第二角度 @param angle [in] 用于构造圆环管道段的角度" @嵌入式方法 = "">
+    参数 轴 <类型 = 长整数>
+    参数 R1 <类型 = 小数>
+    参数 R2 <类型 = 小数>
+    参数 起始角 <类型 = 小数>
+    参数 终止角 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeTorus.构造_7 (@<轴>, @<R1>, @<R2>, @<起始角>, @<终止角>)
+    }
+
+    方法 创建_8 <公开 静态 类型 = 长整数 注释 = "创建_8. 原构造器: BRepPrimAPI_MakeTorus. 官方简介: 构造半径为 R1 R2 的圆环体的一部分. 对于所有算法, 结果形状由以下组成: - 一个侧向圆环面, - 若圆环体在 v 参数方向被截断则两个圆锥面(由方程 v = angle1 与 v = angle2 定义)(在某些特定条件下它们可以是圆柱面), - 以及在圆环体部分的情形, 两个用于封闭形状的平面.(在平面 u = 0 与 u = angle 内). 注意: - u 参数对应于绕 Z 轴的旋转角. - 半径等于短半径、位于由 X 轴与 Z 轴定义的平面内、以 X 轴为中心、在其正侧、且距原点距离等于长半径的圆, 是圆环体的参考圆. 绕平行于 Y 轴且经过参考圆中心的轴的旋转给出参考圆上的 v 参数. X 轴给出 v 参数的原点. 接近 0 时, 随着 v 增大, Z 坐标减小." @嵌入式方法 = "">
+    参数 轴 <类型 = 长整数>
+    参数 R1 <类型 = 小数>
+    参数 R2 <类型 = 小数>
+    参数 起始角 <类型 = 小数>
+    参数 终止角 <类型 = 小数>
+    参数 角度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeTorus.构造_8 (@<轴>, @<R1>, @<R2>, @<起始角>, @<终止角>, @<角度>)
+    }
+
+}
+
+类 楔体构造器 <公开 注释 = "楔体构造器: 原类 BRepPrimAPI_MakeWedge (libTKPrim, 头文件 BRepPrimAPI/BRepPrimAPI_MakeWedge.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 描述构建楔形(即带斜面长方体)的功能. MakeWedge 对象提供以下框架: - 定义楔形的构造 - 实现构造算法 - 查询结果." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: BRepPrimAPI_MakeWedge. 官方简介: 构造一个 STEP 直角楔体. (ltx >= 0)" @嵌入式方法 = "">
+    参数 dx <类型 = 小数>
+    参数 dy <类型 = 小数>
+    参数 dz <类型 = 小数>
+    参数 顶面X向长度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeWedge.构造 (@<dx>, @<dy>, @<dz>, @<顶面X向长度>)
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: BRepPrimAPI_MakeWedge. 官方简介: 构造一个 STEP 直角楔体. (ltx >= 0)" @嵌入式方法 = "">
+    参数 轴 <类型 = 长整数>
+    参数 dx <类型 = 小数>
+    参数 dy <类型 = 小数>
+    参数 dz <类型 = 小数>
+    参数 顶面X向长度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeWedge.构造_2 (@<轴>, @<dx>, @<dy>, @<dz>, @<顶面X向长度>)
+    }
+
+    方法 创建_3 <公开 静态 类型 = 长整数 注释 = "创建_3. 原构造器: BRepPrimAPI_MakeWedge. 官方简介: 构造一个楔体. dy 处的面为 xmin,zmin xmax,zmax" @嵌入式方法 = "">
+    参数 dx <类型 = 小数>
+    参数 dy <类型 = 小数>
+    参数 dz <类型 = 小数>
+    参数 xmin <类型 = 小数>
+    参数 zmin <类型 = 小数>
+    参数 xmax <类型 = 小数>
+    参数 zmax <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeWedge.构造_3 (@<dx>, @<dy>, @<dz>, @<xmin>, @<zmin>, @<xmax>, @<zmax>)
+    }
+
+    方法 创建_4 <公开 静态 类型 = 长整数 注释 = "创建_4. 原构造器: BRepPrimAPI_MakeWedge. 官方简介: 构造一个楔体. dy 处的面为 xmin,zmin xmax,zmax" @嵌入式方法 = "">
+    参数 轴 <类型 = 长整数>
+    参数 dx <类型 = 小数>
+    参数 dy <类型 = 小数>
+    参数 dz <类型 = 小数>
+    参数 xmin <类型 = 小数>
+    参数 zmin <类型 = 小数>
+    参数 xmax <类型 = 小数>
+    参数 zmax <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeWedge.构造_4 (@<轴>, @<dx>, @<dy>, @<dz>, @<xmin>, @<zmin>, @<xmax>, @<zmax>)
+    }
+
+    方法 构建 <公开 静态 注释 = "构建. 原方法: Build. 官方简介: 把实体存入 myShape." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeWedge.Build (@<对象>)
+    }
+
+    方法 壳 <公开 静态 类型 = 长整数 注释 = "壳. 原方法: Shell. 官方简介: 以壳形式返回构造的楔体." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeWedge.Shell (@<对象>)
+    }
+
+    方法 转拓扑壳 <公开 静态 类型 = 长整数 注释 = "转拓扑壳. 原转换: operator TopoDS_Shell." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeWedge.转TopoDS_Shell (@<对象>)
+    }
+
+    方法 实体 <公开 静态 类型 = 长整数 注释 = "实体. 原方法: Solid. 官方简介: 以实体形式返回构造的楔体." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeWedge.Solid (@<对象>)
+    }
+
+    方法 转拓扑实体 <公开 静态 类型 = 长整数 注释 = "转拓扑实体. 原转换: operator TopoDS_Solid." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKPrim.BRepPrimAPI_MakeWedge.转TopoDS_Solid (@<对象>)
+    }
+
+}

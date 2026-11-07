@@ -1,0 +1,16 @@
+doc_format_version = 1
+project_identifier = "wutao.vproject.pc.win.1"
+author = "W"
+name = "模块试验"
+version = 1
+unique_mark = mtest001
+explain = "模块加载试验"
+dependence = "*\\sys\\base\\base.vgrp"
+file
+{
+    name = "w_02标志一.wsv"
+    name = "w_03标志二.wsv"
+    name = "w_04常量三.wsv"
+    name = "w_10类型.wsv"
+    name = "w_20核心.wsv"
+}

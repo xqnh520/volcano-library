@@ -1,0 +1,11 @@
+{
+  "Version": "1.0",
+  "Plugins": [
+    {
+      "Name": "Exchange.DWG",
+      "Url": "AnyCAD.Exchange.DWG",
+      "Enabled": true,
+      "Group": "IO"
+    }
+  ]
+}

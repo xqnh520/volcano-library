@@ -1,0 +1,214 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.安卓.组件.MP图表
+
+# 本文件只放『只作为成员签名出现』的类型, 不封任何成员:
+#   1) MPAndroidChart 内部被剔除的实现包 (renderer / jobs / buffer / matrix / exception / interfaces.dataprovider)
+#   2) 官方类库没有现成别名的 java/android 类型
+# 一律 @别名 + @禁止创建对象, 不重复声明 @安卓.外部库 (由 图表组件 文件带).
+
+类 MP图例渲染器类 <公开 @别名 = "com.github.mikephil.charting.renderer.LegendRenderer" @禁止创建对象 = 真 注释 = "★ 只作类型使用, 其实现包按全量口径已剔除.">
+{
+}
+
+类 MP复合数据供给接口 <公开 @别名 = "com.github.mikephil.charting.interfaces.dataprovider.CombinedDataProvider" @禁止创建对象 = 真 注释 = "★ 只作类型使用, 其实现包按全量口径已剔除.">
+{
+}
+
+类 MP折线数据供给接口 <公开 @别名 = "com.github.mikephil.charting.interfaces.dataprovider.LineDataProvider" @禁止创建对象 = 真 注释 = "★ 只作类型使用, 其实现包按全量口径已剔除.">
+{
+}
+
+类 MP散点形状渲染器接口 <公开 @别名 = "com.github.mikephil.charting.renderer.scatter.IShapeRenderer" @禁止创建对象 = 真 注释 = "★ 只作类型使用, 其实现包按全量口径已剔除.">
+{
+}
+
+类 MP数据渲染器接口 <公开 @别名 = "com.github.mikephil.charting.renderer.DataRenderer" @禁止创建对象 = 真 注释 = "★ 只作类型使用, 其实现包按全量口径已剔除.">
+{
+}
+
+类 MP柱形数据供给接口 <公开 @别名 = "com.github.mikephil.charting.interfaces.dataprovider.BarDataProvider" @禁止创建对象 = 真 注释 = "★ 只作类型使用, 其实现包按全量口径已剔除.">
+{
+}
+
+类 MP横轴渲染器类 <公开 @别名 = "com.github.mikephil.charting.renderer.XAxisRenderer" @禁止创建对象 = 真 注释 = "★ 只作类型使用, 其实现包按全量口径已剔除.">
+{
+}
+
+类 MP纵轴渲染器类 <公开 @别名 = "com.github.mikephil.charting.renderer.YAxisRenderer" @禁止创建对象 = 真 注释 = "★ 只作类型使用, 其实现包按全量口径已剔除.">
+{
+}
+
+类 MP线柱散蜡气数据供给接口 <公开 @别名 = "com.github.mikephil.charting.interfaces.dataprovider.BarLineScatterCandleBubbleDataProvider" @禁止创建对象 = 真 注释 = "★ 只作类型使用, 其实现包按全量口径已剔除.">
+{
+}
+
+类 MPtyped值类 <公开 @别名 = "android.util.TypedValue" @禁止创建对象 = 真 注释 = "★ 桥接类型, 供 MPAndroidChart 成员签名使用.">
+{
+}
+
+类 MP不重复集合类 <公开 @别名 = "java.util.Set" @禁止创建对象 = 真 注释 = "★ 桥接类型, 供 MPAndroidChart 成员签名使用.">
+{
+}
+
+类 MP位图压缩格式类 <公开 @别名 = "android.graphics.Bitmap$CompressFormat" @禁止创建对象 = 真 注释 = "★ 桥接类型, 供 MPAndroidChart 成员签名使用.">
+{
+}
+
+类 MP列表类 <公开 @别名 = "java.util.List" @禁止创建对象 = 真 注释 = "★ 桥接类型, 供 MPAndroidChart 成员签名使用.">
+{
+    方法 添加成员 <公开 静态 注释 = "java: boolean add(E)">
+    参数 当前对象 <类型 = MP列表类>
+    参数 新成员 <类型 = 对象类>
+    {
+        @ @<当前对象>.add (@<新成员>);
+    }
+
+    方法 取成员数 <公开 静态 类型 = 整数 @嵌入式方法 = "" 注释 = "java: int size()">
+    参数 当前对象 <类型 = MP列表类>
+    {
+        @ @<当前对象>.size ()
+    }
+
+    方法 取成员 <公开 静态 类型 = 对象类 @嵌入式方法 = "" 注释 = "java: E get(int)">
+    参数 当前对象 <类型 = MP列表类>
+    参数 位置 <类型 = 整数>
+    {
+        @ @<当前对象>.get (@<位置>)
+    }
+
+    方法 清空成员 <公开 静态 注释 = "java: void clear()">
+    参数 当前对象 <类型 = MP列表类>
+    {
+        @ @<当前对象>.clear ();
+    }
+
+}
+
+类 MP动画更新监听类 <公开 @别名 = "android.animation.ValueAnimator$AnimatorUpdateListener" @禁止创建对象 = 真 注释 = "★ 桥接类型, 供 MPAndroidChart 成员签名使用.">
+{
+}
+
+类 MP可序列化接口 <公开 @别名 = "android.os.Parcelable" @禁止创建对象 = 真 注释 = "★ 桥接类型, 供 MPAndroidChart 成员签名使用.">
+{
+}
+
+类 MP可运行任务类 <公开 @别名 = "java.lang.Runnable" @禁止创建对象 = 真 注释 = "★ 桥接类型, 供 MPAndroidChart 成员签名使用.">
+{
+}
+
+类 MP哈希表类 <公开 @别名 = "java.util.HashMap" @禁止创建对象 = 真 注释 = "★ 桥接类型, 供 MPAndroidChart 成员签名使用.">
+{
+}
+
+类 MP字符序列类 <公开 @别名 = "java.lang.CharSequence" @禁止创建对象 = 真 注释 = "★ 桥接类型, 供 MPAndroidChart 成员签名使用.">
+{
+}
+
+类 MP小数对象类 <公开 @别名 = "java.lang.Float" @禁止创建对象 = 真 注释 = "★ 桥接类型, 供 MPAndroidChart 成员签名使用.">
+{
+}
+
+类 MP小数格式器类 <公开 @别名 = "java.text.DecimalFormat" @禁止创建对象 = 真 注释 = "★ 桥接类型, 供 MPAndroidChart 成员签名使用.">
+{
+}
+
+类 MP属性集类 <公开 @别名 = "android.util.AttributeSet" @禁止创建对象 = 真 注释 = "★ 桥接类型, 供 MPAndroidChart 成员签名使用.">
+{
+}
+
+类 MP序列化生成器接口 <公开 @别名 = "android.os.Parcelable$Creator" @禁止创建对象 = 真 注释 = "★ 桥接类型, 供 MPAndroidChart 成员签名使用.">
+{
+}
+
+类 MP整数对象类 <公开 @别名 = "java.lang.Integer" @禁止创建对象 = 真 注释 = "★ 桥接类型, 供 MPAndroidChart 成员签名使用.">
+{
+}
+
+类 MP时间插值器类 <公开 @别名 = "android.animation.TimeInterpolator" @禁止创建对象 = 真 注释 = "★ 桥接类型, 供 MPAndroidChart 成员签名使用.">
+{
+}
+
+类 MP枚举基类 <公开 @别名 = "java.lang.Enum" @禁止创建对象 = 真 注释 = "★ 桥接类型, 供 MPAndroidChart 成员签名使用.">
+{
+}
+
+类 MP比较器接口 <公开 @别名 = "java.util.Comparator" @禁止创建对象 = 真 注释 = "★ 桥接类型, 供 MPAndroidChart 成员签名使用.">
+{
+}
+
+类 MP画笔字体度量类 <公开 @别名 = "android.graphics.Paint$FontMetrics" @禁止创建对象 = 真 注释 = "★ 桥接类型, 供 MPAndroidChart 成员签名使用.">
+{
+}
+
+类 MP画笔对齐方式类 <公开 @别名 = "android.graphics.Paint$Align" @禁止创建对象 = 真 注释 = "★ 桥接类型, 供 MPAndroidChart 成员签名使用.">
+{
+}
+
+类 MP画笔样式类 <公开 @别名 = "android.graphics.Paint$Style" @禁止创建对象 = 真 注释 = "★ 桥接类型, 供 MPAndroidChart 成员签名使用.">
+{
+}
+
+类 MP相对布局类 <公开 @别名 = "android.widget.RelativeLayout" @禁止创建对象 = 真 注释 = "★ 桥接类型, 供 MPAndroidChart 成员签名使用.">
+{
+}
+
+类 MP简易手势监听类 <公开 @别名 = "android.view.GestureDetector$SimpleOnGestureListener" @禁止创建对象 = 真 注释 = "★ 桥接类型, 供 MPAndroidChart 成员签名使用.">
+{
+}
+
+类 MP类对象类 <公开 @别名 = "java.lang.Class" @禁止创建对象 = 真 注释 = "★ 桥接类型, 供 MPAndroidChart 成员签名使用.">
+{
+}
+
+类 MP虚线效果类 <公开 @别名 = "android.graphics.DashPathEffect" @禁止创建对象 = 真 注释 = "★ 桥接类型, 供 MPAndroidChart 成员签名使用.">
+{
+}
+
+类 MP视图触摸监听类 <公开 @别名 = "android.view.View$OnTouchListener" @禁止创建对象 = 真 注释 = "★ 桥接类型, 供 MPAndroidChart 成员签名使用.">
+{
+}
+
+类 MP速度跟踪器类 <公开 @别名 = "android.view.VelocityTracker" @禁止创建对象 = 真 注释 = "★ 桥接类型, 供 MPAndroidChart 成员签名使用.">
+{
+}
+
+类 MP逻辑对象类 <公开 @别名 = "java.lang.Boolean" @禁止创建对象 = 真 注释 = "★ 桥接类型, 供 MPAndroidChart 成员签名使用.">
+{
+}
+
+类 MP配置类 <公开 @别名 = "android.content.res.Configuration" @禁止创建对象 = 真 注释 = "★ 桥接类型, 供 MPAndroidChart 成员签名使用.">
+{
+}
+
+类 MP键值表类 <公开 @别名 = "java.util.Map" @禁止创建对象 = 真 注释 = "★ 桥接类型, 供 MPAndroidChart 成员签名使用.">
+{
+}
+
+类 MP长整数对象类 <公开 @别名 = "java.lang.Long" @禁止创建对象 = 真 注释 = "★ 桥接类型, 供 MPAndroidChart 成员签名使用.">
+{
+}
+
+类 MP集合类 <公开 @别名 = "java.util.Collection" @禁止创建对象 = 真 注释 = "★ 桥接类型, 供 MPAndroidChart 成员签名使用.">
+{
+}
+
+类 MP数组列表类 <公开 基础类 = MP列表类 @别名 = "java.util.ArrayList" @禁止创建对象 = 真 注释 = "★ 桥接类型, 供 MPAndroidChart 成员签名使用.">
+{
+    方法 新建数组列表 <公开 静态 类型 = MP数组列表类 @嵌入式方法 = "" 注释 = "java: new ArrayList()">
+    {
+        @ new java.util.ArrayList()
+    }
+
+    方法 新建数组列表_容量 <公开 静态 类型 = MP数组列表类 @嵌入式方法 = "" 注释 = "java: new ArrayList(int)">
+    参数 容量 <类型 = 整数>
+    {
+        @ new java.util.ArrayList (@<容量>)
+    }
+
+}
+
+类 MP桥接载体类 <公开 @禁止创建对象 = 真 @安卓.外部库 = "src\\libs\\MPChartLib-release.aar" @安卓.编译时系统需求 = 28 注释 = "★ 只用于携带外部库声明.">
+{
+}
+

@@ -1,0 +1,33 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.即时界面 <注释 = "Dear ImGui v1.91.9b-docking 的火山视窗中文封装，全中文类名/方法名/参数名/注释。" @视窗.头文件搜寻目录 = "imgui"
+        @视窗.外部头文件 = "imcn_helper.h, imcn_host.h"
+        @视窗.外部源文件 = "imgui\\imgui.cpp, imgui\\imgui_draw.cpp, imgui\\imgui_tables.cpp, imgui\\imgui_widgets.cpp, imgui\\imgui_demo.cpp, imgui\\misc\\cpp\\imgui_stdlib.cpp, imgui\\backends\\imgui_impl_win32.cpp, imgui\\backends\\imgui_impl_dx11.cpp">
+
+类 拖放标志 <公开 注释 = "拖放标志" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 无 <公开 类型 = 整数 值 = @ImGuiDragDropFlags_None>
+    常量 源不显示预览提示 <公开 类型 = 整数 值 = @ImGuiDragDropFlags_SourceNoPreviewTooltip>
+    常量 源不禁用悬停 <公开 类型 = 整数 值 = @ImGuiDragDropFlags_SourceNoDisableHover>
+    常量 源不用长按展开其它 <公开 类型 = 整数 值 = @ImGuiDragDropFlags_SourceNoHoldToOpenOthers>
+    常量 源允许空ID <公开 类型 = 整数 值 = @ImGuiDragDropFlags_SourceAllowNullID>
+    常量 源为外部来源 <公开 类型 = 整数 值 = @ImGuiDragDropFlags_SourceExtern>
+    常量 载荷自动过期 <公开 类型 = 整数 值 = @ImGuiDragDropFlags_PayloadAutoExpire>
+    常量 载荷不跨上下文 <公开 类型 = 整数 值 = @ImGuiDragDropFlags_PayloadNoCrossContext>
+    常量 载荷不跨进程 <公开 类型 = 整数 值 = @ImGuiDragDropFlags_PayloadNoCrossProcess>
+    常量 投递前即接受 <公开 类型 = 整数 值 = @ImGuiDragDropFlags_AcceptBeforeDelivery>
+    常量 接受时不画默认矩形 <公开 类型 = 整数 值 = @ImGuiDragDropFlags_AcceptNoDrawDefaultRect>
+    常量 接受时不显示预览提示 <公开 类型 = 整数 值 = @ImGuiDragDropFlags_AcceptNoPreviewTooltip>
+    常量 仅查看 <公开 类型 = 整数 值 = @ImGuiDragDropFlags_AcceptPeekOnly>
+    常量 源自动过期载荷 <公开 类型 = 整数 值 = @ImGuiDragDropFlags_SourceAutoExpirePayload>
+}
+类 焦点标志 <公开 注释 = "焦点判定标志" 折叠 折叠2 @文档 = "category = \"标志类\"">
+{
+    常量 无 <公开 类型 = 整数 值 = @ImGuiFocusedFlags_None>
+    常量 包含子窗口 <公开 类型 = 整数 值 = @ImGuiFocusedFlags_ChildWindows>
+    常量 根窗口 <公开 类型 = 整数 值 = @ImGuiFocusedFlags_RootWindow>
+    常量 任意窗口 <公开 类型 = 整数 值 = @ImGuiFocusedFlags_AnyWindow>
+    常量 忽略弹出层级 <公开 类型 = 整数 值 = @ImGuiFocusedFlags_NoPopupHierarchy>
+    常量 包含停靠层级 <公开 类型 = 整数 值 = @ImGuiFocusedFlags_DockHierarchy>
+    常量 根窗口与子窗口 <公开 类型 = 整数 值 = @ImGuiFocusedFlags_RootAndChildWindows>
+}

@@ -1,0 +1,14 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.即时界面 <注释 = "Dear ImGui v1.91.9b-docking 的火山视窗中文封装，全中文类名/方法名/参数名/注释。" @视窗.头文件搜寻目录 = "imgui"
+        @视窗.外部头文件 = "imcn_helper.h, imcn_host.h"
+        @视窗.外部源文件 = "imgui\\imgui.cpp, imgui\\imgui_draw.cpp, imgui\\imgui_tables.cpp, imgui\\imgui_widgets.cpp, imgui\\imgui_demo.cpp, imgui\\misc\\cpp\\imgui_stdlib.cpp, imgui\\backends\\imgui_impl_win32.cpp, imgui\\backends\\imgui_impl_dx11.cpp">
+
+类 绘制列表 <公开 注释 = "对应 ImDrawList*，用于自绘线段、矩形、文字等图元。" 折叠 折叠2
+        @文档 = "category = \"指针类型\"" @别名 = "ImDrawList*" @别名类型 = 本地整数基本类型 @有效值范围 = "0,9223372036854775807">
+{
+}
+类 绘制数据 <公开 注释 = "对应 ImDrawData*，由\"即时界面.渲染\"之后取回，交给渲染后端绘制。" 折叠 折叠2
+        @文档 = "category = \"指针类型\"" @别名 = "ImDrawData*" @别名类型 = 本地整数基本类型 @有效值范围 = "0,9223372036854775807">
+{
+}

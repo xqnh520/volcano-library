@@ -1,0 +1,858 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.安卓.XUI <注释 = "XUI 安卓 UI 工具库封装" @文档 = "category = \"XUI\"">
+
+
+类 XUI透明按钮 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.alpha.XUIAlphaButton)."
+        @文档 = "category = \"XUI.透明度\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.alpha.XUIAlphaButton\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI透明按钮, XUIAlphaButton, com.xuexiang.xui.widget.alpha.XUIAlphaButton)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetXUIAlphaButton ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI透明按钮的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI透明按钮.getAlpha()">
+    {
+        @ (double)@sn<this>.GetXUIAlphaButton ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI透明按钮的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI透明按钮.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaButton ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI透明按钮的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI透明按钮.isEnabled()">
+    {
+        @ @sn<this>.GetXUIAlphaButton ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI透明按钮的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI透明按钮.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaButton ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI透明按钮的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI透明按钮.isClickable()">
+    {
+        @ @sn<this>.GetXUIAlphaButton ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI透明按钮的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI透明按钮.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaButton ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI透明按钮的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI透明按钮.getElevation()">
+    {
+        @ (double)@sn<this>.GetXUIAlphaButton ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI透明按钮的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI透明按钮.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaButton ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI透明按钮的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI透明按钮.getMinimumHeight()">
+    {
+        @ @sn<this>.GetXUIAlphaButton ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI透明按钮的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI透明按钮.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaButton ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI透明按钮的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI透明按钮.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaButton ().setBackgroundColor (@<新值>))
+    }
+
+    方法 XUI文本 <公开 属性读 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读取XUI透明按钮的XUI文本当前值。 参数：无。 返回：文本型。 原方法：XUI透明按钮.getText()">
+    {
+        @ java.lang.String.valueOf (@sn<this>.GetXUIAlphaButton ().getText ())
+    }
+
+    方法 XUI文本 <公开 属性写 注释 = "用法：设置XUI透明按钮的XUI文本, 传入新值后立刻生效。 参数：新值=文本。 返回：无。 原方法：XUI透明按钮.setText()">
+    参数 新值 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaButton ().setText (@<新值>))
+    }
+
+    方法 XUI文字颜色 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI透明按钮的XUI文字颜色当前值。 参数：无。 返回：整数。 原方法：XUI透明按钮.getCurrentTextColor()">
+    {
+        @ @sn<this>.GetXUIAlphaButton ().getCurrentTextColor ()
+    }
+
+    方法 XUI文字颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI透明按钮的XUI文字颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI透明按钮.setTextColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaButton ().setTextColor (@<新值>))
+    }
+
+    方法 XUI文字大小 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI透明按钮的XUI文字大小当前值。 参数：无。 返回：小数。 原方法：XUI透明按钮.getTextSize()">
+    {
+        @ (double)@sn<this>.GetXUIAlphaButton ().getTextSize ()
+    }
+
+    方法 XUI文字大小 <公开 属性写 注释 = "用法：设置XUI透明按钮的XUI文字大小, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI透明按钮.setTextSize()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaButton ().setTextSize ((float) @<新值>))
+    }
+
+    方法 XUI提示文字 <公开 属性读 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读取XUI透明按钮的XUI提示文字当前值。 参数：无。 返回：文本型。 原方法：XUI透明按钮.getHint()">
+    {
+        @ java.lang.String.valueOf (@sn<this>.GetXUIAlphaButton ().getHint ())
+    }
+
+    方法 XUI提示文字 <公开 属性写 注释 = "用法：设置XUI透明按钮的XUI提示文字, 传入新值后立刻生效。 参数：新值=文本。 返回：无。 原方法：XUI透明按钮.setHint()">
+    参数 新值 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaButton ().setHint (@<新值>))
+    }
+
+    方法 XUI最大行数 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI透明按钮的XUI最大行数当前值。 参数：无。 返回：整数。 原方法：XUI透明按钮.getMaxLines()">
+    {
+        @ @sn<this>.GetXUIAlphaButton ().getMaxLines ()
+    }
+
+    方法 XUI最大行数 <公开 属性写 注释 = "用法：设置XUI透明按钮的XUI最大行数, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI透明按钮.setMaxLines()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaButton ().setMaxLines (@<新值>))
+    }
+
+    方法 XUI单行 <公开 属性写 注释 = "用法：设置XUI透明按钮的XUI单行, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI透明按钮.setSingleLine()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaButton ().setSingleLine (@<新值>))
+    }
+
+    方法 设置已按下 <公开 注释 = "用法：把XUI透明按钮的已按下设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI透明按钮.setPressed()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaButton ().setPressed (@<值1>))
+    }
+
+    方法 设置可用 <公开 注释 = "用法：把XUI透明按钮的可用设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI透明按钮.setEnabled()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaButton ().setEnabled (@<值1>))
+    }
+
+    方法 设置改变透明度时机按压 <公开 注释 = "用法：把XUI透明按钮的改变透明度时机按压设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI透明按钮.setChangeAlphaWhenPress()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaButton ().setChangeAlphaWhenPress (@<值1>))
+    }
+
+    方法 设置改变透明度时机禁用 <公开 注释 = "用法：把XUI透明按钮的改变透明度时机禁用设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI透明按钮.setChangeAlphaWhenDisable()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaButton ().setChangeAlphaWhenDisable (@<值1>))
+    }
+
+}
+
+类 XUI透明框架布局 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.alpha.XUIAlphaFrameLayout)."
+        @文档 = "category = \"XUI.透明度\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.alpha.XUIAlphaFrameLayout\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI透明框架布局, XUIAlphaFrameLayout, com.xuexiang.xui.widget.alpha.XUIAlphaFrameLayout)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetXUIAlphaFrameLayout ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI透明框架布局的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI透明框架布局.getAlpha()">
+    {
+        @ (double)@sn<this>.GetXUIAlphaFrameLayout ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI透明框架布局的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI透明框架布局.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaFrameLayout ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI透明框架布局的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI透明框架布局.isEnabled()">
+    {
+        @ @sn<this>.GetXUIAlphaFrameLayout ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI透明框架布局的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI透明框架布局.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaFrameLayout ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI透明框架布局的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI透明框架布局.isClickable()">
+    {
+        @ @sn<this>.GetXUIAlphaFrameLayout ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI透明框架布局的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI透明框架布局.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaFrameLayout ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI透明框架布局的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI透明框架布局.getElevation()">
+    {
+        @ (double)@sn<this>.GetXUIAlphaFrameLayout ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI透明框架布局的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI透明框架布局.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaFrameLayout ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI透明框架布局的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI透明框架布局.getMinimumHeight()">
+    {
+        @ @sn<this>.GetXUIAlphaFrameLayout ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI透明框架布局的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI透明框架布局.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaFrameLayout ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI透明框架布局的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI透明框架布局.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaFrameLayout ().setBackgroundColor (@<新值>))
+    }
+
+    方法 设置已按下 <公开 注释 = "用法：把XUI透明框架布局的已按下设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI透明框架布局.setPressed()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaFrameLayout ().setPressed (@<值1>))
+    }
+
+    方法 设置可用 <公开 注释 = "用法：把XUI透明框架布局的可用设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI透明框架布局.setEnabled()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaFrameLayout ().setEnabled (@<值1>))
+    }
+
+    方法 设置改变透明度时机按压 <公开 注释 = "用法：把XUI透明框架布局的改变透明度时机按压设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI透明框架布局.setChangeAlphaWhenPress()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaFrameLayout ().setChangeAlphaWhenPress (@<值1>))
+    }
+
+    方法 设置改变透明度时机禁用 <公开 注释 = "用法：把XUI透明框架布局的改变透明度时机禁用设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI透明框架布局.setChangeAlphaWhenDisable()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaFrameLayout ().setChangeAlphaWhenDisable (@<值1>))
+    }
+
+}
+
+类 XUI透明图片按钮 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.alpha.XUIAlphaImageButton)."
+        @文档 = "category = \"XUI.透明度\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.alpha.XUIAlphaImageButton\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI透明图片按钮, XUIAlphaImageButton, com.xuexiang.xui.widget.alpha.XUIAlphaImageButton)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetXUIAlphaImageButton ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI透明图片按钮的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI透明图片按钮.getAlpha()">
+    {
+        @ (double)@sn<this>.GetXUIAlphaImageButton ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI透明图片按钮的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI透明图片按钮.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaImageButton ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI透明图片按钮的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI透明图片按钮.isEnabled()">
+    {
+        @ @sn<this>.GetXUIAlphaImageButton ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI透明图片按钮的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI透明图片按钮.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaImageButton ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI透明图片按钮的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI透明图片按钮.isClickable()">
+    {
+        @ @sn<this>.GetXUIAlphaImageButton ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI透明图片按钮的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI透明图片按钮.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaImageButton ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI透明图片按钮的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI透明图片按钮.getElevation()">
+    {
+        @ (double)@sn<this>.GetXUIAlphaImageButton ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI透明图片按钮的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI透明图片按钮.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaImageButton ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI透明图片按钮的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI透明图片按钮.getMinimumHeight()">
+    {
+        @ @sn<this>.GetXUIAlphaImageButton ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI透明图片按钮的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI透明图片按钮.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaImageButton ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI透明图片按钮的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI透明图片按钮.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaImageButton ().setBackgroundColor (@<新值>))
+    }
+
+    方法 XUI图片 <公开 属性写 注释 = "用法：设置XUI透明图片按钮的XUI图片, 传入新值后立刻生效。 参数：新值=可绘制对象类。 返回：无。 原方法：XUI透明图片按钮.setImageDrawable()">
+    参数 新值 <类型 = 可绘制对象类>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaImageButton ().setImageDrawable (@<新值>))
+    }
+
+    方法 XUI图片资源 <公开 属性写 注释 = "用法：设置XUI透明图片按钮的XUI图片资源, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI透明图片按钮.setImageResource()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaImageButton ().setImageResource (@<新值>))
+    }
+
+    方法 XUI图片位图 <公开 属性写 注释 = "用法：设置XUI透明图片按钮的XUI图片位图, 传入新值后立刻生效。 参数：新值=位图类。 返回：无。 原方法：XUI透明图片按钮.setImageBitmap()">
+    参数 新值 <类型 = 位图类>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaImageButton ().setImageBitmap (@<新值>))
+    }
+
+    方法 取XUI图片 <公开 类型 = 可绘制对象类 @嵌入式方法 = "" 注释 = "java: public Drawable getDrawable()">
+    {
+        @ @sn<this>.GetXUIAlphaImageButton ().getDrawable ()
+    }
+
+    方法 设置已按下 <公开 注释 = "用法：把XUI透明图片按钮的已按下设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI透明图片按钮.setPressed()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaImageButton ().setPressed (@<值1>))
+    }
+
+    方法 设置可用 <公开 注释 = "用法：把XUI透明图片按钮的可用设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI透明图片按钮.setEnabled()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaImageButton ().setEnabled (@<值1>))
+    }
+
+    方法 设置改变透明度时机按压 <公开 注释 = "用法：把XUI透明图片按钮的改变透明度时机按压设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI透明图片按钮.setChangeAlphaWhenPress()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaImageButton ().setChangeAlphaWhenPress (@<值1>))
+    }
+
+    方法 设置改变透明度时机禁用 <公开 注释 = "用法：把XUI透明图片按钮的改变透明度时机禁用设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI透明图片按钮.setChangeAlphaWhenDisable()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaImageButton ().setChangeAlphaWhenDisable (@<值1>))
+    }
+
+}
+
+类 XUI透明图片框 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.alpha.XUIAlphaImageView)."
+        @文档 = "category = \"XUI.透明度\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.alpha.XUIAlphaImageView\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI透明图片框, XUIAlphaImageView, com.xuexiang.xui.widget.alpha.XUIAlphaImageView)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetXUIAlphaImageView ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI透明图片框的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI透明图片框.getAlpha()">
+    {
+        @ (double)@sn<this>.GetXUIAlphaImageView ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI透明图片框的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI透明图片框.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaImageView ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI透明图片框的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI透明图片框.isEnabled()">
+    {
+        @ @sn<this>.GetXUIAlphaImageView ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI透明图片框的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI透明图片框.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaImageView ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI透明图片框的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI透明图片框.isClickable()">
+    {
+        @ @sn<this>.GetXUIAlphaImageView ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI透明图片框的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI透明图片框.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaImageView ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI透明图片框的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI透明图片框.getElevation()">
+    {
+        @ (double)@sn<this>.GetXUIAlphaImageView ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI透明图片框的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI透明图片框.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaImageView ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI透明图片框的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI透明图片框.getMinimumHeight()">
+    {
+        @ @sn<this>.GetXUIAlphaImageView ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI透明图片框的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI透明图片框.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaImageView ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI透明图片框的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI透明图片框.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaImageView ().setBackgroundColor (@<新值>))
+    }
+
+    方法 XUI图片 <公开 属性写 注释 = "用法：设置XUI透明图片框的XUI图片, 传入新值后立刻生效。 参数：新值=可绘制对象类。 返回：无。 原方法：XUI透明图片框.setImageDrawable()">
+    参数 新值 <类型 = 可绘制对象类>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaImageView ().setImageDrawable (@<新值>))
+    }
+
+    方法 XUI图片资源 <公开 属性写 注释 = "用法：设置XUI透明图片框的XUI图片资源, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI透明图片框.setImageResource()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaImageView ().setImageResource (@<新值>))
+    }
+
+    方法 XUI图片位图 <公开 属性写 注释 = "用法：设置XUI透明图片框的XUI图片位图, 传入新值后立刻生效。 参数：新值=位图类。 返回：无。 原方法：XUI透明图片框.setImageBitmap()">
+    参数 新值 <类型 = 位图类>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaImageView ().setImageBitmap (@<新值>))
+    }
+
+    方法 取XUI图片 <公开 类型 = 可绘制对象类 @嵌入式方法 = "" 注释 = "java: public Drawable getDrawable()">
+    {
+        @ @sn<this>.GetXUIAlphaImageView ().getDrawable ()
+    }
+
+    方法 设置已按下 <公开 注释 = "用法：把XUI透明图片框的已按下设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI透明图片框.setPressed()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaImageView ().setPressed (@<值1>))
+    }
+
+    方法 设置可用 <公开 注释 = "用法：把XUI透明图片框的可用设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI透明图片框.setEnabled()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaImageView ().setEnabled (@<值1>))
+    }
+
+    方法 设置改变透明度时机按压 <公开 注释 = "用法：把XUI透明图片框的改变透明度时机按压设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI透明图片框.setChangeAlphaWhenPress()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaImageView ().setChangeAlphaWhenPress (@<值1>))
+    }
+
+    方法 设置改变透明度时机禁用 <公开 注释 = "用法：把XUI透明图片框的改变透明度时机禁用设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI透明图片框.setChangeAlphaWhenDisable()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaImageView ().setChangeAlphaWhenDisable (@<值1>))
+    }
+
+}
+
+类 XUI透明线性布局 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.alpha.XUIAlphaLinearLayout)."
+        @文档 = "category = \"XUI.透明度\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.alpha.XUIAlphaLinearLayout\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI透明线性布局, XUIAlphaLinearLayout, com.xuexiang.xui.widget.alpha.XUIAlphaLinearLayout)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetXUIAlphaLinearLayout ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI透明线性布局的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI透明线性布局.getAlpha()">
+    {
+        @ (double)@sn<this>.GetXUIAlphaLinearLayout ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI透明线性布局的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI透明线性布局.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaLinearLayout ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI透明线性布局的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI透明线性布局.isEnabled()">
+    {
+        @ @sn<this>.GetXUIAlphaLinearLayout ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI透明线性布局的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI透明线性布局.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaLinearLayout ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI透明线性布局的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI透明线性布局.isClickable()">
+    {
+        @ @sn<this>.GetXUIAlphaLinearLayout ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI透明线性布局的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI透明线性布局.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaLinearLayout ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI透明线性布局的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI透明线性布局.getElevation()">
+    {
+        @ (double)@sn<this>.GetXUIAlphaLinearLayout ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI透明线性布局的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI透明线性布局.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaLinearLayout ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI透明线性布局的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI透明线性布局.getMinimumHeight()">
+    {
+        @ @sn<this>.GetXUIAlphaLinearLayout ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI透明线性布局的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI透明线性布局.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaLinearLayout ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI透明线性布局的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI透明线性布局.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaLinearLayout ().setBackgroundColor (@<新值>))
+    }
+
+    方法 设置已按下 <公开 注释 = "用法：把XUI透明线性布局的已按下设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI透明线性布局.setPressed()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaLinearLayout ().setPressed (@<值1>))
+    }
+
+    方法 设置可用 <公开 注释 = "用法：把XUI透明线性布局的可用设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI透明线性布局.setEnabled()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaLinearLayout ().setEnabled (@<值1>))
+    }
+
+    方法 设置改变透明度时机按压 <公开 注释 = "用法：把XUI透明线性布局的改变透明度时机按压设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI透明线性布局.setChangeAlphaWhenPress()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaLinearLayout ().setChangeAlphaWhenPress (@<值1>))
+    }
+
+    方法 设置改变透明度时机禁用 <公开 注释 = "用法：把XUI透明线性布局的改变透明度时机禁用设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI透明线性布局.setChangeAlphaWhenDisable()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaLinearLayout ().setChangeAlphaWhenDisable (@<值1>))
+    }
+
+}
+
+类 XUI透明相对布局 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.alpha.XUIAlphaRelativeLayout)."
+        @文档 = "category = \"XUI.透明度\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.alpha.XUIAlphaRelativeLayout\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI透明相对布局, XUIAlphaRelativeLayout, com.xuexiang.xui.widget.alpha.XUIAlphaRelativeLayout)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetXUIAlphaRelativeLayout ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI透明相对布局的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI透明相对布局.getAlpha()">
+    {
+        @ (double)@sn<this>.GetXUIAlphaRelativeLayout ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI透明相对布局的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI透明相对布局.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaRelativeLayout ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI透明相对布局的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI透明相对布局.isEnabled()">
+    {
+        @ @sn<this>.GetXUIAlphaRelativeLayout ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI透明相对布局的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI透明相对布局.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaRelativeLayout ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI透明相对布局的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI透明相对布局.isClickable()">
+    {
+        @ @sn<this>.GetXUIAlphaRelativeLayout ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI透明相对布局的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI透明相对布局.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaRelativeLayout ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI透明相对布局的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI透明相对布局.getElevation()">
+    {
+        @ (double)@sn<this>.GetXUIAlphaRelativeLayout ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI透明相对布局的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI透明相对布局.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaRelativeLayout ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI透明相对布局的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI透明相对布局.getMinimumHeight()">
+    {
+        @ @sn<this>.GetXUIAlphaRelativeLayout ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI透明相对布局的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI透明相对布局.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaRelativeLayout ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI透明相对布局的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI透明相对布局.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaRelativeLayout ().setBackgroundColor (@<新值>))
+    }
+
+    方法 设置已按下 <公开 注释 = "用法：把XUI透明相对布局的已按下设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI透明相对布局.setPressed()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaRelativeLayout ().setPressed (@<值1>))
+    }
+
+    方法 设置可用 <公开 注释 = "用法：把XUI透明相对布局的可用设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI透明相对布局.setEnabled()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaRelativeLayout ().setEnabled (@<值1>))
+    }
+
+    方法 设置改变透明度时机按压 <公开 注释 = "用法：把XUI透明相对布局的改变透明度时机按压设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI透明相对布局.setChangeAlphaWhenPress()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaRelativeLayout ().setChangeAlphaWhenPress (@<值1>))
+    }
+
+    方法 设置改变透明度时机禁用 <公开 注释 = "用法：把XUI透明相对布局的改变透明度时机禁用设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI透明相对布局.setChangeAlphaWhenDisable()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaRelativeLayout ().setChangeAlphaWhenDisable (@<值1>))
+    }
+
+}
+
+类 XUI透明文本框 <公开 基础类 = 窗口组件 注释 = "★ 本类封装自 XUI 1.2.2 (com.xuexiang.xui.widget.alpha.XUIAlphaTextView)."
+        @文档 = "category = \"XUI.透明度\""
+        @安卓.窗口组件.布局配置 = "native_class = com.xuexiang.xui.widget.alpha.XUIAlphaTextView\ncategory = \"XUI组件\"\ndefault_event = \"被单击\"\nself\n{\n}">
+{
+    # @ @m<DEFINE_CONTROL2> (XUI透明文本框, XUIAlphaTextView, com.xuexiang.xui.widget.alpha.XUIAlphaTextView)
+
+    方法 取原生对象 <公开 类型 = 对象类 注释 = "返回底层原生对象，供调用未封装的方法。" @嵌入式方法 = "">
+    {
+        @ @sn<this>.GetXUIAlphaTextView ()
+    }
+
+    方法 XUI透明度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI透明文本框的XUI透明度当前值。 参数：无。 返回：小数。 原方法：XUI透明文本框.getAlpha()">
+    {
+        @ (double)@sn<this>.GetXUIAlphaTextView ().getAlpha ()
+    }
+
+    方法 XUI透明度 <公开 属性写 注释 = "用法：设置XUI透明文本框的XUI透明度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI透明文本框.setAlpha()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaTextView ().setAlpha ((float) @<新值>))
+    }
+
+    方法 XUI启用状态 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI透明文本框的XUI启用状态当前值。 参数：无。 返回：逻辑型。 原方法：XUI透明文本框.isEnabled()">
+    {
+        @ @sn<this>.GetXUIAlphaTextView ().isEnabled ()
+    }
+
+    方法 XUI启用状态 <公开 属性写 注释 = "用法：设置XUI透明文本框的XUI启用状态, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI透明文本框.setEnabled()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaTextView ().setEnabled (@<新值>))
+    }
+
+    方法 XUI可单击 <公开 属性读 类型 = 逻辑型 @嵌入式方法 = "" 注释 = "用法：读取XUI透明文本框的XUI可单击当前值。 参数：无。 返回：逻辑型。 原方法：XUI透明文本框.isClickable()">
+    {
+        @ @sn<this>.GetXUIAlphaTextView ().isClickable ()
+    }
+
+    方法 XUI可单击 <公开 属性写 注释 = "用法：设置XUI透明文本框的XUI可单击, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI透明文本框.setClickable()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaTextView ().setClickable (@<新值>))
+    }
+
+    方法 XUI阴影高度 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI透明文本框的XUI阴影高度当前值。 参数：无。 返回：小数。 原方法：XUI透明文本框.getElevation()">
+    {
+        @ (double)@sn<this>.GetXUIAlphaTextView ().getElevation ()
+    }
+
+    方法 XUI阴影高度 <公开 属性写 注释 = "用法：设置XUI透明文本框的XUI阴影高度, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI透明文本框.setElevation()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaTextView ().setElevation ((float) @<新值>))
+    }
+
+    方法 XUI最小高度 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI透明文本框的XUI最小高度当前值。 参数：无。 返回：整数。 原方法：XUI透明文本框.getMinimumHeight()">
+    {
+        @ @sn<this>.GetXUIAlphaTextView ().getMinimumHeight ()
+    }
+
+    方法 XUI最小高度 <公开 属性写 注释 = "用法：设置XUI透明文本框的XUI最小高度, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI透明文本框.setMinimumHeight()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaTextView ().setMinimumHeight (@<新值>))
+    }
+
+    方法 XUI背景颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI透明文本框的XUI背景颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI透明文本框.setBackgroundColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaTextView ().setBackgroundColor (@<新值>))
+    }
+
+    方法 XUI文本 <公开 属性读 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读取XUI透明文本框的XUI文本当前值。 参数：无。 返回：文本型。 原方法：XUI透明文本框.getText()">
+    {
+        @ java.lang.String.valueOf (@sn<this>.GetXUIAlphaTextView ().getText ())
+    }
+
+    方法 XUI文本 <公开 属性写 注释 = "用法：设置XUI透明文本框的XUI文本, 传入新值后立刻生效。 参数：新值=文本。 返回：无。 原方法：XUI透明文本框.setText()">
+    参数 新值 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaTextView ().setText (@<新值>))
+    }
+
+    方法 XUI文字颜色 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI透明文本框的XUI文字颜色当前值。 参数：无。 返回：整数。 原方法：XUI透明文本框.getCurrentTextColor()">
+    {
+        @ @sn<this>.GetXUIAlphaTextView ().getCurrentTextColor ()
+    }
+
+    方法 XUI文字颜色 <公开 属性写 @值细节类型 = 颜色 注释 = "用法：设置XUI透明文本框的XUI文字颜色, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI透明文本框.setTextColor()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaTextView ().setTextColor (@<新值>))
+    }
+
+    方法 XUI文字大小 <公开 属性读 类型 = 小数 @嵌入式方法 = "" 注释 = "用法：读取XUI透明文本框的XUI文字大小当前值。 参数：无。 返回：小数。 原方法：XUI透明文本框.getTextSize()">
+    {
+        @ (double)@sn<this>.GetXUIAlphaTextView ().getTextSize ()
+    }
+
+    方法 XUI文字大小 <公开 属性写 注释 = "用法：设置XUI透明文本框的XUI文字大小, 传入新值后立刻生效。 参数：新值=小数。 返回：无。 原方法：XUI透明文本框.setTextSize()">
+    参数 新值 <类型 = 小数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaTextView ().setTextSize ((float) @<新值>))
+    }
+
+    方法 XUI提示文字 <公开 属性读 类型 = 文本型 @嵌入式方法 = "" 注释 = "用法：读取XUI透明文本框的XUI提示文字当前值。 参数：无。 返回：文本型。 原方法：XUI透明文本框.getHint()">
+    {
+        @ java.lang.String.valueOf (@sn<this>.GetXUIAlphaTextView ().getHint ())
+    }
+
+    方法 XUI提示文字 <公开 属性写 注释 = "用法：设置XUI透明文本框的XUI提示文字, 传入新值后立刻生效。 参数：新值=文本。 返回：无。 原方法：XUI透明文本框.setHint()">
+    参数 新值 <类型 = 文本型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaTextView ().setHint (@<新值>))
+    }
+
+    方法 XUI最大行数 <公开 属性读 类型 = 整数 @嵌入式方法 = "" 注释 = "用法：读取XUI透明文本框的XUI最大行数当前值。 参数：无。 返回：整数。 原方法：XUI透明文本框.getMaxLines()">
+    {
+        @ @sn<this>.GetXUIAlphaTextView ().getMaxLines ()
+    }
+
+    方法 XUI最大行数 <公开 属性写 注释 = "用法：设置XUI透明文本框的XUI最大行数, 传入新值后立刻生效。 参数：新值=整数。 返回：无。 原方法：XUI透明文本框.setMaxLines()">
+    参数 新值 <类型 = 整数>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaTextView ().setMaxLines (@<新值>))
+    }
+
+    方法 XUI单行 <公开 属性写 注释 = "用法：设置XUI透明文本框的XUI单行, 传入新值后立刻生效。 参数：新值=真/假。 返回：无。 原方法：XUI透明文本框.setSingleLine()">
+    参数 新值 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaTextView ().setSingleLine (@<新值>))
+    }
+
+    方法 设置已按下 <公开 注释 = "用法：把XUI透明文本框的已按下设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI透明文本框.setPressed()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaTextView ().setPressed (@<值1>))
+    }
+
+    方法 设置可用 <公开 注释 = "用法：把XUI透明文本框的可用设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI透明文本框.setEnabled()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaTextView ().setEnabled (@<值1>))
+    }
+
+    方法 设置改变透明度时机按压 <公开 注释 = "用法：把XUI透明文本框的改变透明度时机按压设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI透明文本框.setChangeAlphaWhenPress()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaTextView ().setChangeAlphaWhenPress (@<值1>))
+    }
+
+    方法 设置改变透明度时机禁用 <公开 注释 = "用法：把XUI透明文本框的改变透明度时机禁用设为给定值。 参数：值1=真/假。 返回：无。 原方法：XUI透明文本框.setChangeAlphaWhenDisable()">
+    参数 值1 <类型 = 逻辑型>
+    {
+        @ @m<RUN_UI_ACTION> (GetXUIAlphaTextView ().setChangeAlphaWhenDisable (@<值1>))
+    }
+
+}

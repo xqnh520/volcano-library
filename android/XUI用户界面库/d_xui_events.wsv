@@ -1,0 +1,113 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.安卓.XUI <注释 = "XUI 安卓 UI 工具库封装" @文档 = "category = \"XUI\"">
+
+
+类 XUI对话框按钮监听器 <公开 注释 = "MaterialDialog 单按钮回调监听器。将本类作为成员对象变量时，其事件会自动挂接；也可手工调用“挂接事件”。"
+        @文档 = "category = \"XUI.对话框\"" @java.后缀文本 = "implements com.xuexiang.xui.widget.dialog.materialdialog.MaterialDialog.SingleButtonCallback">
+{
+    # @begin
+    # @Override public void onClick (com.xuexiang.xui.widget.dialog.materialdialog.MaterialDialog dialog, com.xuexiang.xui.widget.dialog.materialdialog.DialogAction which) {
+    #     @<按钮被单击> (dialog, which.ordinal ());
+    # }
+    # @end
+
+    方法 按钮被单击 <公开 定义事件 类型 = 整数 注释 = "对话框按钮被单击时触发。">
+    参数 对话框 <类型 = 对象类 注释 = "被单击的 XUI材质对话框 原生对象。">
+    参数 按钮 <类型 = 整数 注释 = "0=确定, 1=中立, 2=取消（DialogAction 的序号）。">
+}
+
+
+类 XUI选项选择监听器 <公开 注释 = "OptionsPickerView 的确认/取消回调。事件返回值决定是否确认选择。"
+        @文档 = "category = \"XUI.选择器\""
+        @java.后缀文本 = "implements com.xuexiang.xui.widget.picker.widget.listener.OnOptionsSelectListener">
+{
+    # @begin
+    # @Override public boolean onOptionsSelect (android.view.View v, int option1, int option2, int option3) {
+    #     return (@<选项被选择> (option1, option2, option3) != 0);
+    # }
+    # @end
+
+    方法 选项被选择 <公开 定义事件 类型 = 整数 注释 = "点击“确定”时触发；返回非0表示确认，返回0表示取消。">
+    参数 选项1 <类型 = 整数 注释 = "第1列当前选中项索引（从0开始）。">
+    参数 选项2 <类型 = 整数 注释 = "第2列当前选中项索引。">
+    参数 选项3 <类型 = 整数 注释 = "第3列当前选中项索引。">
+}
+
+
+类 XUI选项选择变更监听器 <公开 注释 = "OptionsPickerView 滚动选中项变化回调。"
+        @文档 = "category = \"XUI.选择器\""
+        @java.后缀文本 = "implements com.xuexiang.xui.widget.picker.widget.listener.OnOptionsSelectChangeListener">
+{
+    # @begin
+    # @Override public void onOptionsSelectChanged (int option1, int option2, int option3) {
+    #     @<选项变更> (option1, option2, option3);
+    # }
+    # @end
+
+    方法 选项变更 <公开 定义事件 类型 = 整数 注释 = "选项滚动变化时触发。">
+    参数 选项1 <类型 = 整数>
+    参数 选项2 <类型 = 整数>
+    参数 选项3 <类型 = 整数>
+}
+
+
+类 XUI时间选择监听器 <公开 注释 = "TimePickerView 的确认/取消回调。"
+        @文档 = "category = \"XUI.选择器\""
+        @java.后缀文本 = "implements com.xuexiang.xui.widget.picker.widget.listener.OnTimeSelectListener">
+{
+    # @begin
+    # @Override public void onTimeSelected (java.util.Date date, android.view.View v) {
+    #     @<时间被选择> (date, new java.text.SimpleDateFormat ("yyyy-MM-dd HH:mm:ss").format (date));
+    # }
+    # @end
+
+    方法 时间被选择 <公开 定义事件 类型 = 整数 注释 = "点击“确定”时触发。">
+    参数 时间对象 <类型 = 对象类 注释 = "选中的 java.util.Date 原生对象。">
+    参数 时间文本 <类型 = 文本型 注释 = "按 yyyy-MM-dd HH:mm:ss 格式化后的时间。">
+}
+
+
+类 XUI时间选择变更监听器 <公开 注释 = "TimePickerView 滚动选中时间变化回调。"
+        @文档 = "category = \"XUI.选择器\""
+        @java.后缀文本 = "implements com.xuexiang.xui.widget.picker.widget.listener.OnTimeSelectChangeListener">
+{
+    # @begin
+    # @Override public void onTimeSelectChanged (java.util.Date date) {
+    #     @<时间变更> (date, new java.text.SimpleDateFormat ("yyyy-MM-dd HH:mm:ss").format (date));
+    # }
+    # @end
+
+    方法 时间变更 <公开 定义事件 类型 = 整数 注释 = "时间滚动变化时触发。">
+    参数 时间对象 <类型 = 对象类>
+    参数 时间文本 <类型 = 文本型>
+}
+
+
+类 XUI选择器关闭监听器 <公开 注释 = "选择器关闭回调。"
+        @文档 = "category = \"XUI.选择器\""
+        @java.后缀文本 = "implements com.xuexiang.xui.widget.picker.widget.listener.OnDismissListener">
+{
+    # @begin
+    # @Override public void onDismiss (com.xuexiang.xui.widget.picker.widget.BasePickerView picker) {
+    #     @<选择器被关闭> (picker);
+    # }
+    # @end
+
+    方法 选择器被关闭 <公开 定义事件 类型 = 整数 注释 = "用法：在XUI选择器关闭监听器中选择器被关闭。 参数：选择器=对象。 返回：整数。">
+    参数 选择器 <类型 = 对象类 注释 = "BasePickerView 原生对象。">
+}
+
+
+类 XUI侧滑回调 <公开 注释 = "侧滑返回手势回调。将本类作为成员对象变量时，其事件会自动挂接。"
+        @文档 = "category = \"XUI.布局\""
+        @java.后缀文本 = "implements com.xuexiang.xui.widget.slideback.callback.SlideBackCallBack">
+{
+    # @begin
+    # @Override public void onSlideBack () {
+    #     @<侧滑被触发> ();
+    # }
+    # @end
+
+    方法 侧滑被触发 <公开 定义事件 类型 = 整数 注释 = "用户从屏幕边缘侧滑触发返回时调用。">
+}

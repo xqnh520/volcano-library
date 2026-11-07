@@ -1,0 +1,2330 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.安卓.OCCT几何 <注释 = "OpenCASCADE 7.8.0 全库封装 (自动生成, 请勿手改). 名称已汉化为中文显示名, 注释内附英文原名. TK 库 libTKShHealing: 12 个类 / 324 个方法.">
+
+类 曲面分析 <公开 注释 = "曲面分析: 原类 ShapeAnalysis_Surface (libTKShHealing, 头文件 ShapeAnalysis/ShapeAnalysis_Surface.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 对标准工具 Geom_Surface 的补充, 提供曲面奇异性检测, 空间曲面闭合性检查以及三维点到曲面投影计算等附加功能." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: ShapeAnalysis_Surface. 官方简介: 在现有曲面的基础上创建分析器对象" @嵌入式方法 = "">
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Surface.构造 (@<S>)
+    }
+
+    方法 初始化 <公开 静态 注释 = "初始化. 原方法: Init. 官方简介: 加载已有曲面" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Surface.Init (@<对象>, @<S>)
+    }
+
+    方法 初始化_2 <公开 静态 注释 = "初始化_2. 原方法: Init. 官方简介: 从另一个曲面读入所有数据, 不重新计算" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Surface.Init_2 (@<对象>, @<另一个>)
+    }
+
+    方法 设置域 <公开 静态 注释 = "设置域. 原方法: SetDomain." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U1 <类型 = 小数>
+    参数 U2 <类型 = 小数>
+    参数 V1 <类型 = 小数>
+    参数 V2 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Surface.SetDomain (@<对象>, @<U1>, @<U2>, @<V1>, @<V2>)
+    }
+
+    方法 曲面 <公开 静态 类型 = 长整数 注释 = "曲面. 原方法: Surface. 官方简介: 返回正在分析的曲面" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Surface.Surface (@<对象>)
+    }
+
+    方法 取适配器 <公开 静态 类型 = 长整数 注释 = "取适配器. 原方法: Adaptor3d. 官方简介: 返回适配器. 若尚未创建则创建它." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Surface.Adaptor3d (@<对象>)
+    }
+
+    方法 取真适配器 <公开 静态 类型 = 长整数 注释 = "取真适配器. 原方法: TrueAdaptor3d. 官方简介: 返回适配器(若未调用 Adaptor() 方法则可能为 Null)" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Surface.TrueAdaptor3d (@<对象>)
+    }
+
+    方法 间隙 <公开 静态 类型 = 小数 注释 = "间隙. 原方法: Gap. 官方简介: 返回由以下方法之一找到的 3D 距离. IsDegenerated, DegeneratedValues, ProjectDegenerated(3D 点与找到的或最后的(若未找到)奇异点之间的距离), IsUClosed, IsVClosed(认为曲面闭合的最小精度值), ValueOfUV(3D 点与找到的解之间的距离)." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Surface.Gap (@<对象>)
+    }
+
+    方法 取值 <公开 静态 类型 = 长整数 注释 = "取值. 原方法: Value. 官方简介: 返回由曲面参数空间中的参数指定的三维点" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 u <类型 = 小数>
+    参数 v <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Surface.Value (@<对象>, @<u>, @<v>)
+    }
+
+    方法 取值_2 <公开 静态 类型 = 长整数 注释 = "取值_2. 原方法: Value. 官方简介: 返回由曲面参数空间中的一个点指定的三维点" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 p2d <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Surface.Value_2 (@<对象>, @<p2d>)
+    }
+
+    方法 是否有奇点 <公开 静态 类型 = 逻辑型 注释 = "是否有奇点. 原方法: HasSingularities. 官方简介: 若曲面在给定精度下存在奇异性(即存在大小不超过精度的曲面奇异性)则返回 True." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 精度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Surface.HasSingularities (@<对象>, @<精度>)
+    }
+
+    方法 奇点数 <公开 静态 类型 = 整数 注释 = "奇点数. 原方法: NbSingularities. 官方简介: 返回给定精度下的奇异性数量(即大小不超过精度的曲面奇异性数量)." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 精度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Surface.NbSingularities (@<对象>, @<精度>)
+    }
+
+    方法 奇点 <公开 静态 类型 = 逻辑型 注释 = "奇点. 原方法: Singularity. 官方简介: 返回由其序号 <num> 指定的奇异性的特征. 这意味着 <num> 不一定要在范围 [1, NbSingularities] 内, 但必须不大于可能值(见 ComputeSingularities). 返回的特征是: preci: 等参数线被视为退化的最小精度, P3d: 奇异性的 3D 点(曲面等参数线的中点), firstP2d 与 lastP2d: 参数曲面上等参数线的第一与最后 2D 点, firstpar 与 lastpar: 参数曲面上等参数线的第一与最后参数, uisodeg: 若退化等参数线是 U-iso(True)或 V-iso(False). 若 <num> 超出范围则返回 False, 否则返回 True." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 序号 <类型 = 整数>
+    参数 输出精度 <类型 = "小数 []">
+    参数 输出P3d <类型 = 长整数>
+    参数 输出二维首个P <类型 = 长整数>
+    参数 输出二维末个P <类型 = 长整数>
+    参数 输出起始参数 <类型 = "小数 []">
+    参数 输出终止参数 <类型 = "小数 []">
+    参数 输出是否U向退化 <类型 = "逻辑型 []">
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Surface.Singularity (@<对象>, @<序号>, @<输出精度>, @<输出P3d>, @<输出二维首个P>, @<输出二维末个P>, @<输出起始参数>, @<输出终止参数>, @<输出是否U向退化>)
+    }
+
+    方法 是否退化 <公开 静态 类型 = 逻辑型 注释 = "是否退化. 原方法: IsDegenerated. 官方简介: 若至少有一条曲面边界按 <preci> 被视为退化, 且 P3d 与对应奇异点之间的距离小于 <preci>, 则返回 True" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 P3d <类型 = 长整数>
+    参数 精度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Surface.IsDegenerated (@<对象>, @<P3d>, @<精度>)
+    }
+
+    方法 退化值 <公开 静态 类型 = 逻辑型 注释 = "退化值. 原方法: DegeneratedValues. 官方简介: 若至少存在一条曲面等参线, 依 <preci> 被视为退化, 且 P3d 与相应奇异点之间的距离小于 <preci>(如 IsDegenerated), 则返回 True. 返回第一个满足这些条件的边界的特征." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 P3d <类型 = 长整数>
+    参数 精度 <类型 = 小数>
+    参数 输出二维首个P <类型 = 长整数>
+    参数 输出二维末个P <类型 = 长整数>
+    参数 输出起始参数 <类型 = "小数 []">
+    参数 输出终止参数 <类型 = "小数 []">
+    参数 正向 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Surface.DegeneratedValues (@<对象>, @<P3d>, @<精度>, @<输出二维首个P>, @<输出二维末个P>, @<输出起始参数>, @<输出终止参数>, @<正向>)
+    }
+
+    方法 投影退化 <公开 静态 类型 = 逻辑型 注释 = "投影退化. 原方法: ProjectDegenerated. 官方简介: 通过计算预先算出的 <result> 的坐标之一, 把点 <P3d> 投影到奇点上." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 P3d <类型 = 长整数>
+    参数 精度 <类型 = 小数>
+    参数 邻居 <类型 = 长整数>
+    参数 输出结果 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Surface.ProjectDegenerated (@<对象>, @<P3d>, @<精度>, @<邻居>, @<输出结果>)
+    }
+
+    方法 是否退化_2 <公开 静态 类型 = 逻辑型 注释 = "是否退化_2. 原方法: IsDegenerated. 官方简介: 若从点 p2d1 到 p2d2 的直线 pcurve 退化, 即位于曲面的奇异性中, 则返回 True. 注意: 它使用与 ComputeSingularities() 等所用不同的奇异性检测方法! 为此, 计算点 p2d1, p2d2 与 0.5*(p2d1+p2d2) 之间的距离最大值, 以及相应 3d 点之间的距离最大值. 若以下情形则 pcurve (p2d1, p2d2) 被视为退化: - 3d 中的最大距离小于 <tol> - 2d 中的最大距离至少比由 3d 最大距离计算的 Resolution 大 <ratio> 倍 (max3d < tol && max2d > ratio * Resolution(max3d)) 注意: <ratio> 应 >1(例如 10)" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 二维p1 <类型 = 长整数>
+    参数 二维p2 <类型 = 长整数>
+    参数 容差 <类型 = 小数>
+    参数 比例 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Surface.IsDegenerated_2 (@<对象>, @<二维p1>, @<二维p2>, @<容差>, @<比例>)
+    }
+
+    方法 取边界 <公开 静态 注释 = "取边界. 原方法: Bounds. 官方简介: 返回曲面的边界(来自 Surface 的 Bounds, 但已缓冲)" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 输出U向起始参数 <类型 = "小数 []">
+    参数 输出U向终止参数 <类型 = "小数 []">
+    参数 输出V向起始参数 <类型 = "小数 []">
+    参数 输出V向终止参数 <类型 = "小数 []">
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Surface.Bounds (@<对象>, @<输出U向起始参数>, @<输出U向终止参数>, @<输出V向起始参数>, @<输出V向终止参数>)
+    }
+
+    方法 计算边界等参 <公开 静态 注释 = "计算边界等参. 原方法: ComputeBoundIsos. 官方简介: 计算边界等参数曲线(受异常保护)" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Surface.ComputeBoundIsos (@<对象>)
+    }
+
+    方法 U向等参线 <公开 静态 类型 = 长整数 注释 = "U向等参线. 原方法: UIso. 官方简介: 返回 U 等参数曲线. 若无法计算或失败则为 Null. 备注: 边界等参数曲线会被缓冲" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 U <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Surface.UIso (@<对象>, @<U>)
+    }
+
+    方法 V向等参线 <公开 静态 类型 = 长整数 注释 = "V向等参线. 原方法: VIso. 官方简介: 返回 V 等参数曲线. 若无法计算或失败则为 Null. 备注: 边界等参数曲线会被缓冲" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 V <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Surface.VIso (@<对象>, @<V>)
+    }
+
+    方法 是否U闭合 <公开 静态 类型 = 逻辑型 注释 = "是否U闭合. 原方法: IsUClosed. 官方简介: 告知曲面在给定精度下是否在 U 方向空间闭合. 若 <preci> < 0 则使用 Precision::Confusion. 若 Geom_Surface 表明该曲面是 U 闭合的, 则该方法也如此表明. 否则执行附加分析, 把给定精度与以下距离比较: - 周期 B-Spline 是闭合的, - 边界重数为 degree+1 的多项式 B-Spline 与 Bezier - 极点之间的最大距离, - 有理 B-Spline 或边界重数不是 degree+1 的 B-Spline - 在节点及其中点处计算的最大距离, - 拉伸曲面 - 基础曲线两端之间的距离, - 其他(RectangularTrimmed 与 Offset) - 在 100 个等距点处计算的最大距离." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 精度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Surface.IsUClosed (@<对象>, @<精度>)
+    }
+
+    方法 是否V闭合 <公开 静态 类型 = 逻辑型 注释 = "是否V闭合. 原方法: IsVClosed. 官方简介: 告知曲面在给定精度下是否在 V 方向空间闭合. 若 <preci> < 0 则使用 Precision::Confusion. 若 Geom_Surface 表明该曲面是 V 闭合的, 则该方法也如此表明. 否则执行附加分析, 把给定精度与以下距离比较: - 周期 B-Spline 是闭合的, - 边界重数为 degree+1 的多项式 B-Spline 与 Bezier - 极点之间的最大距离, - 有理 B-Spline 或边界重数不是 degree+1 的 B-Spline - 在节点及其中点处计算的最大距离, - 回转曲面 - 基础曲线两端之间的距离, - 其他(RectangularTrimmed 与 Offset) - 在 100 个等距点处计算的最大距离." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 精度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Surface.IsVClosed (@<对象>, @<精度>)
+    }
+
+    方法 值UV <公开 静态 类型 = 长整数 注释 = "值UV. 原方法: ValueOfUV. 官方简介: 计算 3D 点在曲面参数空间中的参数. 结果是该点投影到曲面上的参数. 该方法通过处理投影点接近曲面边界以及标准工具失败的情况, 增强了标准工具 GeomAPI_ProjectPointOnSurface 提供的功能." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 P3D <类型 = 长整数>
+    参数 精度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Surface.ValueOfUV (@<对象>, @<P3D>, @<精度>)
+    }
+
+    方法 UV迭代投影 <公开 静态 类型 = 长整数 注释 = "UV迭代投影. 原方法: NextValueOfUV. 官方简介: 把点 P3D 投影到曲面上. 功能与 ValueOfUV 相同, 但尝试通过考虑前一个点 <p2dPrev> 来优化计算: 在 UV 上走一步并尝试 Newton 算法. 若 <maxpreci> > 0. 且解与 P3D 之间的距离大于 <maxpreci>, 则该解被视为坏解, 并使用 ValueOfUV(). 若不成功, 则调用 ValueOfUV()" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 前一二维点 <类型 = 长整数>
+    参数 P3D <类型 = 长整数>
+    参数 精度 <类型 = 小数>
+    参数 最大精度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Surface.NextValueOfUV (@<对象>, @<前一二维点>, @<P3D>, @<精度>, @<最大精度>)
+    }
+
+    方法 等参线细化UV <公开 静态 类型 = 小数 注释 = "等参线细化UV. 原方法: UVFromIso. 官方简介: 通过把 3D 点投影到等参数线上来尝试细化已计算的点对 (U,V): 1. 曲面的边界, 2. 经过 (U,V) 的等参数线 3. 迭代得到的经过新 U 与新 V 的等参数线(每个方向的迭代次数限制为 5) 成功时返回 P3D 与 Value(U,V) 之间的最佳结果距离. 否则返回一个非常大的值." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 P3D <类型 = 长整数>
+    参数 精度 <类型 = 小数>
+    参数 输出U <类型 = "小数 []">
+    参数 输出V <类型 = "小数 []">
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Surface.UVFromIso (@<对象>, @<P3D>, @<精度>, @<输出U>, @<输出V>)
+    }
+
+    方法 U闭合值 <公开 静态 类型 = 小数 注释 = "U闭合值. 原方法: UCloseVal. 官方简介: 返回把曲面视为 U 向封闭的最小值" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Surface.UCloseVal (@<对象>)
+    }
+
+    方法 V闭合值 <公开 静态 类型 = 小数 注释 = "V闭合值. 原方法: VCloseVal. 官方简介: 返回把曲面视为 V 向封闭的最小值" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Surface.VCloseVal (@<对象>)
+    }
+
+    方法 取U起点盒 <公开 静态 类型 = 长整数 注释 = "取U起点盒. 原方法: GetBoxUF." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Surface.GetBoxUF (@<对象>)
+    }
+
+    方法 取U终点盒 <公开 静态 类型 = 长整数 注释 = "取U终点盒. 原方法: GetBoxUL." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Surface.GetBoxUL (@<对象>)
+    }
+
+    方法 取V起点盒 <公开 静态 类型 = 长整数 注释 = "取V起点盒. 原方法: GetBoxVF." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Surface.GetBoxVF (@<对象>)
+    }
+
+    方法 取V终点盒 <公开 静态 类型 = 长整数 注释 = "取V终点盒. 原方法: GetBoxVL." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Surface.GetBoxVL (@<对象>)
+    }
+
+}
+
+类 线框分析 <公开 注释 = "线框分析: 原类 ShapeAnalysis_Wire (libTKShHealing, 头文件 ShapeAnalysis/ShapeAnalysis_Wire.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 此类对线框是否符合 CAS.CADE 要求进行分析." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: ShapeAnalysis_Wire. 官方简介: 空构造函数" @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.构造 ()
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: ShapeAnalysis_Wire. 官方简介: 用标准 TopoDS_Wire, 面和精度创建对象" @嵌入式方法 = "">
+    参数 线框 <类型 = 长整数>
+    参数 面 <类型 = 长整数>
+    参数 精度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.构造_2 (@<线框>, @<面>, @<精度>)
+    }
+
+    方法 创建_3 <公开 静态 类型 = 长整数 注释 = "创建_3. 原构造器: ShapeAnalysis_Wire. 官方简介: 用 WireData 对象, 面和精度创建该对象" @嵌入式方法 = "">
+    参数 线框数据 <类型 = 长整数>
+    参数 面 <类型 = 长整数>
+    参数 精度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.构造_3 (@<线框数据>, @<面>, @<精度>)
+    }
+
+    方法 初始化 <公开 静态 注释 = "初始化. 原方法: Init. 官方简介: 用标准 TopoDS_Wire, 面和精度初始化该对象" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 线框 <类型 = 长整数>
+    参数 面 <类型 = 长整数>
+    参数 精度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.Init (@<对象>, @<线框>, @<面>, @<精度>)
+    }
+
+    方法 初始化_2 <公开 静态 注释 = "初始化_2. 原方法: Init. 官方简介: 用 WireData 对象, 面和精度初始化该对象" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 线框数据 <类型 = 长整数>
+    参数 面 <类型 = 长整数>
+    参数 精度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.Init_2 (@<对象>, @<线框数据>, @<面>, @<精度>)
+    }
+
+    方法 加载 <公开 静态 注释 = "加载. 原方法: Load. 官方简介: 用标准 TopoDS_Wire 加载该对象" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 线框 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.Load (@<对象>, @<线框>)
+    }
+
+    方法 加载_2 <公开 静态 注释 = "加载_2. 原方法: Load. 官方简介: 用 WireData 对象加载该对象" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 线框数据 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.Load_2 (@<对象>, @<线框数据>)
+    }
+
+    方法 设置面 <公开 静态 注释 = "设置面. 原方法: SetFace. 官方简介: 加载线框所在的面" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 面 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.SetFace (@<对象>, @<面>)
+    }
+
+    方法 设置曲面 <公开 静态 注释 = "设置曲面. 原方法: SetSurface. 官方简介: 加载线框所在的曲面" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 曲面 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.SetSurface (@<对象>, @<曲面>)
+    }
+
+    方法 设置曲面_2 <公开 静态 注释 = "设置曲面_2. 原方法: SetSurface. 官方简介: 加载线框所在的曲面" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 曲面 <类型 = 长整数>
+    参数 位置 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.SetSurface_2 (@<对象>, @<曲面>, @<位置>)
+    }
+
+    方法 设置精度 <公开 静态 注释 = "设置精度. 原方法: SetPrecision." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 精度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.SetPrecision (@<对象>, @<精度>)
+    }
+
+    方法 清除状态 <公开 静态 注释 = "清除状态. 原方法: ClearStatuses. 官方简介: 取消设置所有状态与距离字段, 线框, 面和精度不清除" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.ClearStatuses (@<对象>)
+    }
+
+    方法 是否已加载 <公开 静态 类型 = 逻辑型 注释 = "是否已加载. 原方法: IsLoaded. 官方简介: 若已载入线框且其边数 >0 则返回 True" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.IsLoaded (@<对象>)
+    }
+
+    方法 是否就绪 <公开 静态 类型 = 逻辑型 注释 = "是否就绪. 原方法: IsReady. 官方简介: 若已载入且底层面非空则返回 True" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.IsReady (@<对象>)
+    }
+
+    方法 精度 <公开 静态 类型 = 小数 注释 = "精度. 原方法: Precision. 官方简介: 返回精度值" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.Precision (@<对象>)
+    }
+
+    方法 线框数据 <公开 静态 类型 = 长整数 注释 = "线框数据. 原方法: WireData. 官方简介: 返回正在分析的线框对象" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.WireData (@<对象>)
+    }
+
+    方法 边数 <公开 静态 类型 = 整数 注释 = "边数. 原方法: NbEdges. 官方简介: 返回线框中的边数量, 若未载入则返回 0" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.NbEdges (@<对象>)
+    }
+
+    方法 面 <公开 静态 类型 = 长整数 注释 = "面. 原方法: Face. 官方简介: 返回工作面" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.Face (@<对象>)
+    }
+
+    方法 曲面 <公开 静态 类型 = 长整数 注释 = "曲面. 原方法: Surface. 官方简介: 返回工作曲面" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.Surface (@<对象>)
+    }
+
+    方法 执行 <公开 静态 类型 = 逻辑型 注释 = "执行. 原方法: Perform. 官方简介: 按以下顺序执行所有检查: CheckOrder, CheckSmall, CheckConnected, CheckEdgeCurves, CheckDegenerated, CheckSelfIntersection, CheckLacking, CheckClosed. 返回: 若至少一个方法返回 True 则返回 True; 更深入的分析请使用 Status...(status) 方法." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.Perform (@<对象>)
+    }
+
+    方法 检查顺序 <公开 静态 类型 = 逻辑型 注释 = "检查顺序. 原方法: CheckOrder. 官方简介: 调用 CheckOrder, 若线框已排序(首尾相接)则返回 False, 否则返回 True. 标志 <isClosed> 定义线框是否闭合. 标志 <mode3d> 定义使用哪种模式(3d 或 2d)" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 是否闭合 <类型 = 逻辑型>
+    参数 三维模式 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.CheckOrder (@<对象>, @<是否闭合>, @<三维模式>)
+    }
+
+    方法 检查已连接 <公开 静态 类型 = 逻辑型 注释 = "检查已连接. 原方法: CheckConnected. 官方简介: 对每条边调用 CheckConnected. 返回值: 若检测到至少一对不连通的边(不共享同一顶点)则为 True" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 精度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.CheckConnected (@<对象>, @<精度>)
+    }
+
+    方法 检查小边 <公开 静态 类型 = 逻辑型 注释 = "检查小边. 原方法: CheckSmall. 官方简介: 对每条边调用 CheckSmall. 返回值: 若检测到至少一条小边则为 True" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 小精度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.CheckSmall (@<对象>, @<小精度>)
+    }
+
+    方法 检查边曲线 <公开 静态 类型 = 逻辑型 注释 = "检查边曲线. 原方法: CheckEdgeCurves. 官方简介: 检查边的几何(2d 与 3d 朝向的一致性, 曲线与顶点的邻接性等). 检查顺序: 调用 ShapeAnalysis_Wire 检查: ShapeAnalysis_Edge::CheckCurve3dWithPCurve (1), ShapeAnalysis_Edge::CheckVertcesWithPCurve (2), ShapeAnalysis_Edge::CheckVertcesWithCurve3d (3), CheckSeam (4) 附加: CheckGap3d (5), CheckGap2d (6), ShapeAnalysis_Edge::CheckSameParameter (7) 返回: 若至少一项检查返回 True 则返回 True 备注: 括号中的数字表示可用哪个 DONEi 或 FAILi 查询状态" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.CheckEdgeCurves (@<对象>)
+    }
+
+    方法 检查退化 <公开 静态 类型 = 逻辑型 注释 = "检查退化. 原方法: CheckDegenerated. 官方简介: 对每条边调用 CheckDegenerated. 返回值: 若检测到至少一条不正确的退化边则为 True" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.CheckDegenerated (@<对象>)
+    }
+
+    方法 检查闭合 <公开 静态 类型 = 逻辑型 注释 = "检查闭合. 原方法: CheckClosed. 官方简介: 检查线框是否闭合, 对第一条和最后一条边执行 CheckConnected、CheckDegenerated 和 CheckLacking. 返回: 若至少一个检查返回 True 则为 True. 状态: FAIL1 或 DONE1: 参见 CheckConnected FAIL2 或 DONE2: 参见 CheckDegenerated" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 精度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.CheckClosed (@<对象>, @<精度>)
+    }
+
+    方法 检查自身相交 <公开 静态 类型 = 逻辑型 注释 = "检查自身相交. 原方法: CheckSelfIntersection. 官方简介: 检查线框的自交(考虑 pcurve). 查找自交的边以及每一对相交的边. 警告: 它不检查每条边与其他任何一边(仅检查每两条相邻边). 检查顺序: CheckSelfIntersectingEdge, CheckIntersectingEdges. 返回: 若至少一项检查返回 True 则返回 True. 状态: FAIL1 或 DONE1 - 见 CheckSelfIntersectingEdge FAIL2 或 DONE2 - 见 CheckIntersectingEdges" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.CheckSelfIntersection (@<对象>)
+    }
+
+    方法 检查缺失 <公开 静态 类型 = 逻辑型 注释 = "检查缺失. 原方法: CheckLacking. 官方简介: 对每条边调用 CheckLacking. 返回值: 若检测到至少一条缺失边则为 True" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.CheckLacking (@<对象>)
+    }
+
+    方法 三维检查间隙 <公开 静态 类型 = 逻辑型 注释 = "三维检查间隙. 原方法: CheckGaps3d." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.CheckGaps3d (@<对象>)
+    }
+
+    方法 二维检查间隙 <公开 静态 类型 = 逻辑型 注释 = "二维检查间隙. 原方法: CheckGaps2d." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.CheckGaps2d (@<对象>)
+    }
+
+    方法 检查曲线间隙 <公开 静态 类型 = 逻辑型 注释 = "检查曲线间隙. 原方法: CheckCurveGaps." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.CheckCurveGaps (@<对象>)
+    }
+
+    方法 检查顺序_2 <公开 静态 类型 = 逻辑型 注释 = "检查顺序_2. 原方法: CheckOrder. 官方简介: 分析线框中边的顺序, 为此使用类 WireOrder. 标志 <isClosed> 定义线框是否闭合 标志 <theMode3D> 定义 3D 或 2d 模式. 标志 <theModeBoth> 定义混合模式, 且标志 <theMode3D> 被忽略. 若线框已经有序(尾接头)则返回 False, 否则返回 True. 使用返回的 WireOrder 对象进行更深入的分析. 状态: OK : 相同的边朝向, 相同的边顺序 DONE1: 相同的边朝向, 不相同的边顺序 DONE2: 同 DONE1, 且间隙大于 myPrecision DONE3: 不相同的边朝向(某些需要被反转) DONE4: 同 DONE3, 且间隙大于 myPrecision FAIL : 算法失败(无法检测顺序)" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 输出带默认值 <类型 = 长整数>
+    参数 是否闭合 <类型 = 逻辑型>
+    参数 模式3D <类型 = 逻辑型>
+    参数 混合模式 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.CheckOrder_2 (@<对象>, @<输出带默认值>, @<是否闭合>, @<模式3D>, @<混合模式>)
+    }
+
+    方法 检查已连接_2 <公开 静态 类型 = 逻辑型 注释 = "检查已连接_2. 原方法: CheckConnected. 官方简介: 检查连通边(第 num 条及其前一条). 用起始 preci 从 <SBWD> 进行测试, 或者若 <prec> 更大则用 <prec> 测试. 考虑顶点. 返回: 若边由公共顶点相连则返回 False, 否则返回 True 状态 : OK : 顶点(第 num-1 条边的终点与第 num 条边的起点)已经相同 DONE1 : 完全混乱(gp::Resolution) DONE2 : 从 <SBWD> 起的起始 <preci> 下混乱 DONE3 : 在 <prec> 下混乱但在 <preci> 下不混乱 FAIL1 : 不混乱 FAIL2 : 不混乱, 但若反转第 num 条边则在 <preci> 下混乱" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 序号 <类型 = 整数>
+    参数 精度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.CheckConnected_2 (@<对象>, @<序号>, @<精度>)
+    }
+
+    方法 检查小边_2 <公开 静态 类型 = 逻辑型 注释 = "检查小边_2. 原方法: CheckSmall. 官方简介: 检查边长度是否不大于 myPreci 或 precsmall(若后者更小). 返回: 若其长度大于精度则返回 False. 状态: OK : 边不小也未退化 DONE1: 边很小, 顶点相同 DONE2: 边很小, 顶点不相同 FAIL : 没有 3d 曲线与 pcurve" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 序号 <类型 = 整数>
+    参数 小精度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.CheckSmall_2 (@<对象>, @<序号>, @<小精度>)
+    }
+
+    方法 检查接缝 <公开 静态 类型 = 逻辑型 注释 = "检查接缝. 原方法: CheckSeam. 官方简介: 检查缝合 pcurve 的朝向是否正确. 返回: 若给定边不是缝合边或它正常, 则返回 False(状态 OK). C1 - FORWARD 边的当前 pcurve, C2 - REVERSED 边的当前 pcurve(若返回 True, 则它们应针对缝合边交换), cf, cl - 曲线上的第一与最后参数. 状态: OK : Pcurve 正确或边不是缝合边 DONE : 应交换缝合 pcurve" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 序号 <类型 = 整数>
+    参数 输出C1 <类型 = "长整数 []">
+    参数 输出C2 <类型 = "长整数 []">
+    参数 输出起始参数 <类型 = "小数 []">
+    参数 输出终止参数 <类型 = "小数 []">
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.CheckSeam (@<对象>, @<序号>, @<输出C1>, @<输出C2>, @<输出起始参数>, @<输出终止参数>)
+    }
+
+    方法 检查接缝_2 <公开 静态 类型 = 逻辑型 注释 = "检查接缝_2. 原方法: CheckSeam. 官方简介: 检查缝合 pcurve 是否方位正确, 详情见前面的函数" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 序号 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.CheckSeam_2 (@<对象>, @<序号>)
+    }
+
+    方法 检查退化_2 <公开 静态 类型 = 逻辑型 注释 = "检查退化_2. 原方法: CheckDegenerated. 官方简介: 检查两条相邻边之间的退化边. 用参数空间中对应于奇异性的点填充参数 dgnr1 与 dgnr2(要么是需要由退化边填充的间隙, 要么是已被填充的间隙) 返回: 若无奇异性或边已退化则返回 False, 否则返回 True 状态: OK : 无曲面奇异性, 或边已退化 DONE1: 应插入退化边(2D 中的间隙) DONE2: 边 <num> 应被设为退化(重新计算 pcurve 并设置标志) FAIL1: 与退化边相邻的边之一没有 pcurve FAIL2: 边被标记为退化且没有 pcurve, 但未检测到奇异性" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 序号 <类型 = 整数>
+    参数 输出退化1 <类型 = 长整数>
+    参数 输出退化2 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.CheckDegenerated_2 (@<对象>, @<序号>, @<输出退化1>, @<输出退化2>)
+    }
+
+    方法 检查退化_3 <公开 静态 类型 = 逻辑型 注释 = "检查退化_3. 原方法: CheckDegenerated. 官方简介: 检查两条相邻边之间的退化边. 备注: 调用前一个函数 状态: 详情参见上面的函数" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 序号 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.CheckDegenerated_3 (@<对象>, @<序号>)
+    }
+
+    方法 三维检查间隙_2 <公开 静态 类型 = 逻辑型 注释 = "三维检查间隙_2. 原方法: CheckGap3d. 官方简介: 检查三维(3d 曲线)中边之间的间隙. 检查第 num 条边与其前一条边的 3d 曲线端点之间的距离. 该距离可通过 MinDistance3d 查询." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 序号 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.CheckGap3d (@<对象>, @<序号>)
+    }
+
+    方法 二维检查间隙_2 <公开 静态 类型 = 逻辑型 注释 = "二维检查间隙_2. 原方法: CheckGap2d. 官方简介: 检查二维(pcurve)中边之间的间隙. 检查第 num 条边与其前一条边的 pcurve 端点之间的距离. 该距离可通过 MinDistance2d 查询." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 序号 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.CheckGap2d (@<对象>, @<序号>)
+    }
+
+    方法 检查曲线间隙_2 <公开 静态 类型 = 逻辑型 注释 = "检查曲线间隙_2. 原方法: CheckCurveGap. 官方简介: 检查 3D 曲线上的点与第 num 条边的 pcurve 在曲面上生成的点之间的间隙. 距离可通过 MinDistance3d 查询." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 序号 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.CheckCurveGap (@<对象>, @<序号>)
+    }
+
+    方法 检查自身相交边 <公开 静态 类型 = 逻辑型 注释 = "检查自身相交边. 原方法: CheckSelfIntersectingEdge." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 序号 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.CheckSelfIntersectingEdge (@<对象>, @<序号>)
+    }
+
+    方法 检查相交边 <公开 静态 类型 = 逻辑型 注释 = "检查相交边. 原方法: CheckIntersectingEdges. 官方简介: 检查两条相邻边是否相交. 备注: 调用前一个方法 状态: 详情参见上面的函数" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 序号 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.CheckIntersectingEdges (@<对象>, @<序号>)
+    }
+
+    方法 检查相交边_2 <公开 静态 类型 = 逻辑型 注释 = "检查相交边_2. 原方法: CheckIntersectingEdges. 官方简介: 检查第 i 条与第 j 条边是否相交. 备注: 调用前一个方法. 状态: 详情参见上面的函数" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 序号1 <类型 = 整数>
+    参数 序号2 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.CheckIntersectingEdges_2 (@<对象>, @<序号1>, @<序号2>)
+    }
+
+    方法 检查缺失_2 <公开 静态 类型 = 逻辑型 注释 = "检查缺失_2. 原方法: CheckLacking. 官方简介: 检查边之间是否存在不被其公共顶点公差所覆盖的 2d 间隙. 若 <Tolerance> 大于 0. 且小于顶点的公差, 则用该值检查. 返回: 若检测到未闭合间隙则返回 True p2d1 与 p2d2 是 2d 中第 <num-1> 条边的终点与第 <num> 条边的起点. 状态: OK: 没有边缺失(3d 与 2d 连接) FAIL1: 边没有顶点(至少其中之一) FAIL2: 边既非由公共顶点相连, 也没有重合的顶点 FAIL1: 边没有 pcurve DONE1: 检测到不能由公共顶点公差(或用 <Tolerance> 的值)闭合的间隙 DONE2: 若检测到间隙且向量 (p2d2 - p2d1) 的方向与边的 pcurve 相反(若角度大于 0.9*PI)则(与 DONE1 一起)设置." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 序号 <类型 = 整数>
+    参数 容差 <类型 = 小数>
+    参数 输出二维p1 <类型 = 长整数>
+    参数 输出二维p2 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.CheckLacking_2 (@<对象>, @<序号>, @<容差>, @<输出二维p1>, @<输出二维p2>)
+    }
+
+    方法 检查缺失_3 <公开 静态 类型 = 逻辑型 注释 = "检查缺失_3. 原方法: CheckLacking. 官方简介: 检查 2D 中边之间是否存在未被顶点公差覆盖的间隙. 使用 SBWD.thepreci 的值. 返回: 若不应插入边则返回 False. 状态: OK : 没有缺失的边(3d 与 2d 连接) DONE1 : 应仅增加顶点公差(2d 间隙很小) DONE2 : 可以插入边(3d 与 2d 间隙足够大)" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 序号 <类型 = 整数>
+    参数 容差 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.CheckLacking_3 (@<对象>, @<序号>, @<容差>)
+    }
+
+    方法 检查外边界 <公开 静态 类型 = 逻辑型 注释 = "检查外边界. 原方法: CheckOuterBound. 官方简介: 检查线框是否在面上定义外边界. 使用 ShapeAnalysis::IsOuterBound 进行分析. 若 <APIMake> 为 True, 则使用 BRepAPI_MakeWire 构建线框; 若为 False(仅当边共享公共顶点时使用), 则使用 BRep_Builder 构建线框" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 构造器入口 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.CheckOuterBound (@<对象>, @<构造器入口>)
+    }
+
+    方法 检查带缺口边 <公开 静态 类型 = 逻辑型 注释 = "检查带缺口边. 原方法: CheckNotchedEdges. 官方简介: 检测凹口" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 序号 <类型 = 整数>
+    参数 输出短边编号 <类型 = "整数 []">
+    参数 输出参数 <类型 = "小数 []">
+    参数 容差 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.CheckNotchedEdges (@<对象>, @<序号>, @<输出短边编号>, @<输出参数>, @<容差>)
+    }
+
+    方法 检查小面积 <公开 静态 类型 = 逻辑型 注释 = "检查小面积. 原方法: CheckSmallArea. 官方简介: 检查线框的参数面积是否小于精度." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 线框 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.CheckSmallArea (@<对象>, @<线框>)
+    }
+
+    方法 检查形状连接 <公开 静态 类型 = 逻辑型 注释 = "检查形状连接. 原方法: CheckShapeConnect. 官方简介: 检查 <shape>(线框或边)能以何种朝向连接到线框. 首先用起始 <preci> 测试距离(精细混淆), 但若给定的 <prec> 更大, 则用 <prec> 测试(粗略混淆). 找到的最小距离可由 MinDistance3d 返回." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 形状 <类型 = 长整数>
+    参数 精度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.CheckShapeConnect (@<对象>, @<形状>, @<精度>)
+    }
+
+    方法 检查形状连接_2 <公开 静态 类型 = 逻辑型 注释 = "检查形状连接_2. 原方法: CheckShapeConnect. 官方简介: 与上一个 CheckShapeConnect 相同但更高级. 它返回 <sbwd> 的每一端与 <shape> 的每一端之间的距离. 例如, <tailhead> 存储 <sbwd> 的尾端与 <shape> 的首端之间的距离. 备注: 第一个方法 CheckShapeConnect 调用此方法." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 输出尾头 <类型 = "小数 []">
+    参数 输出尾尾 <类型 = "小数 []">
+    参数 输出头尾 <类型 = "小数 []">
+    参数 输出头头 <类型 = "小数 []">
+    参数 形状 <类型 = 长整数>
+    参数 精度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.CheckShapeConnect_2 (@<对象>, @<输出尾头>, @<输出尾尾>, @<输出头尾>, @<输出头头>, @<形状>, @<精度>)
+    }
+
+    方法 检查尾 <公开 静态 类型 = 逻辑型 注释 = "检查尾. 原方法: CheckTail." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 边1 <类型 = 长整数>
+    参数 边2 <类型 = 长整数>
+    参数 最大正弦 <类型 = 小数>
+    参数 最大宽度 <类型 = 小数>
+    参数 最大容差 <类型 = 小数>
+    参数 输出边11 <类型 = 长整数>
+    参数 输出边12 <类型 = 长整数>
+    参数 输出边21 <类型 = 长整数>
+    参数 输出边22 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.CheckTail (@<对象>, @<边1>, @<边2>, @<最大正弦>, @<最大宽度>, @<最大容差>, @<输出边11>, @<输出边12>, @<输出边21>, @<输出边22>)
+    }
+
+    方法 状态顺序 <公开 静态 类型 = 逻辑型 注释 = "状态顺序. 原方法: StatusOrder." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 状态 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.StatusOrder (@<对象>, @<状态>)
+    }
+
+    方法 状态已连接 <公开 静态 类型 = 逻辑型 注释 = "状态已连接. 原方法: StatusConnected." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 状态 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.StatusConnected (@<对象>, @<状态>)
+    }
+
+    方法 状态边曲线 <公开 静态 类型 = 逻辑型 注释 = "状态边曲线. 原方法: StatusEdgeCurves." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 状态 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.StatusEdgeCurves (@<对象>, @<状态>)
+    }
+
+    方法 状态退化 <公开 静态 类型 = 逻辑型 注释 = "状态退化. 原方法: StatusDegenerated." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 状态 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.StatusDegenerated (@<对象>, @<状态>)
+    }
+
+    方法 状态闭合 <公开 静态 类型 = 逻辑型 注释 = "状态闭合. 原方法: StatusClosed." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 状态 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.StatusClosed (@<对象>, @<状态>)
+    }
+
+    方法 状态小边 <公开 静态 类型 = 逻辑型 注释 = "状态小边. 原方法: StatusSmall." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 状态 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.StatusSmall (@<对象>, @<状态>)
+    }
+
+    方法 状态自身相交 <公开 静态 类型 = 逻辑型 注释 = "状态自身相交. 原方法: StatusSelfIntersection." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 状态 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.StatusSelfIntersection (@<对象>, @<状态>)
+    }
+
+    方法 状态缺失 <公开 静态 类型 = 逻辑型 注释 = "状态缺失. 原方法: StatusLacking." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 状态 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.StatusLacking (@<对象>, @<状态>)
+    }
+
+    方法 三维状态间隙 <公开 静态 类型 = 逻辑型 注释 = "三维状态间隙. 原方法: StatusGaps3d." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 状态 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.StatusGaps3d (@<对象>, @<状态>)
+    }
+
+    方法 二维状态间隙 <公开 静态 类型 = 逻辑型 注释 = "二维状态间隙. 原方法: StatusGaps2d." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 状态 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.StatusGaps2d (@<对象>, @<状态>)
+    }
+
+    方法 状态曲线间隙 <公开 静态 类型 = 逻辑型 注释 = "状态曲线间隙. 原方法: StatusCurveGaps." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 状态 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.StatusCurveGaps (@<对象>, @<状态>)
+    }
+
+    方法 状态环检测 <公开 静态 类型 = 逻辑型 注释 = "状态环检测. 原方法: StatusLoop." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 状态 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.StatusLoop (@<对象>, @<状态>)
+    }
+
+    方法 末个检查状态 <公开 静态 类型 = 逻辑型 注释 = "末个检查状态. 原方法: LastCheckStatus. 官方简介: 查询最后执行的 'Advanced' 检查过程的状态" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 状态 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.LastCheckStatus (@<对象>, @<状态>)
+    }
+
+    方法 三维最小距离 <公开 静态 类型 = 小数 注释 = "三维最小距离. 原方法: MinDistance3d. 官方简介: 返回 CheckOrientation, CheckConnected, CheckContinuity3d, CheckVertex, CheckNewVertex 在 3D 中计算出的最后最小距离" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.MinDistance3d (@<对象>)
+    }
+
+    方法 二维最小距离 <公开 静态 类型 = 小数 注释 = "二维最小距离. 原方法: MinDistance2d. 官方简介: 返回 CheckContinuity2d 在二维 UV 中计算出的最后最小距离" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.MinDistance2d (@<对象>)
+    }
+
+    方法 三维最大距离 <公开 静态 类型 = 小数 注释 = "三维最大距离. 原方法: MaxDistance3d. 官方简介: 返回 CheckOrientation, CheckConnected, CheckContinuity3d, CheckVertex, CheckNewVertex, CheckSameParameter 在 3D 中计算出的最后最大距离" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.MaxDistance3d (@<对象>)
+    }
+
+    方法 二维最大距离 <公开 静态 类型 = 小数 注释 = "二维最大距离. 原方法: MaxDistance2d. 官方简介: 返回 CheckContinuity2d 在二维 UV 中计算出的最后最大距离" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_Wire.MaxDistance2d (@<对象>)
+    }
+
+}
+
+类 线框排序分析 <公开 注释 = "线框排序分析: 原类 ShapeAnalysis_WireOrder (libTKShHealing, 头文件 ShapeAnalysis/ShapeAnalysis_WireOrder.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 此类用于控制并在可能时重排定义线框的边列表顺序. 边不以对象直接给出, 而是以起点, 终点范围给出." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: ShapeAnalysis_WireOrder. 官方简介: 空构造函数" @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_WireOrder.构造 ()
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: ShapeAnalysis_WireOrder. 官方简介: 创建 WireOrder. 标志 <theMode3D> 定义三维或 2d 模式. 标志 <theModeBoth> 定义混合模式, 此时标志 <theMode3D> 被忽略. 警告: 参数 <theTolerance> 在算法中未使用." @嵌入式方法 = "">
+    参数 模式3D <类型 = 逻辑型>
+    参数 容差 <类型 = 小数>
+    参数 混合模式 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_WireOrder.构造_2 (@<模式3D>, @<容差>, @<混合模式>)
+    }
+
+    方法 设置模式 <公开 静态 注释 = "设置模式. 原方法: SetMode. 官方简介: 设置新值. 若模式(<theMode3D> 或 <theModeBoth>)改变则清空边列表. 清空连接列表. 警告: 参数 <theTolerance> 在算法中未使用." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 模式3D <类型 = 逻辑型>
+    参数 容差 <类型 = 小数>
+    参数 混合模式 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_WireOrder.SetMode (@<对象>, @<模式3D>, @<容差>, @<混合模式>)
+    }
+
+    方法 容差 <公开 静态 类型 = 小数 注释 = "容差. 原方法: Tolerance. 官方简介: 返回工作公差" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_WireOrder.Tolerance (@<对象>)
+    }
+
+    方法 清除 <公开 静态 注释 = "清除. 原方法: Clear. 官方简介: 清空边列表, 但不改变模式与公差" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_WireOrder.Clear (@<对象>)
+    }
+
+    方法 添加 <公开 静态 注释 = "添加. 原方法: Add. 官方简介: 添加三维点对(起点, 终点)" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 三维起点 <类型 = 长整数>
+    参数 三维端点 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_WireOrder.Add (@<对象>, @<三维起点>, @<三维端点>)
+    }
+
+    方法 添加_2 <公开 静态 注释 = "添加_2. 原方法: Add. 官方简介: 添加二维点对(起点, 终点)" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 二维起点 <类型 = 长整数>
+    参数 二维端点 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_WireOrder.Add_2 (@<对象>, @<二维起点>, @<二维端点>)
+    }
+
+    方法 添加_3 <公开 静态 注释 = "添加_3. 原方法: Add. 官方简介: 添加三维与二维点对(起点, 终点)" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 三维起点 <类型 = 长整数>
+    参数 三维端点 <类型 = 长整数>
+    参数 二维起点 <类型 = 长整数>
+    参数 二维端点 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_WireOrder.Add_3 (@<对象>, @<三维起点>, @<三维端点>, @<二维起点>, @<二维端点>)
+    }
+
+    方法 边数 <公开 静态 类型 = 整数 注释 = "边数. 原方法: NbEdges. 官方简介: 返回已添加的点对数量(每条边一对)" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_WireOrder.NbEdges (@<对象>)
+    }
+
+    方法 保留环模式 <公开 静态 类型 = 逻辑型 注释 = "保留环模式. 原方法: KeepLoopsMode. 官方简介: 若该模式为 True, Perform 方法不排序不同环的边. 结果的顺序是第一个环, 第二个环等..." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_WireOrder.KeepLoopsMode (@<对象>)
+    }
+
+    方法 执行 <公开 静态 注释 = "执行. 原方法: Perform. 官方简介: 若各对已经有序, 则计算更优顺序 Optimised. 判据是: 若 end-prec 与 start-cur 之间的距离小于起始公差 <tol>, 则两对有序. 否则, 以最小距离为准. 警告: 参数 <closed> 未使用." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 闭合 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_WireOrder.Perform (@<对象>, @<闭合>)
+    }
+
+    方法 是否完成 <公开 静态 类型 = 逻辑型 注释 = "是否完成. 原方法: IsDone. 官方简介: 告知是否已执行 Perform. 否则, 以下方法返回原始值" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_WireOrder.IsDone (@<对象>)
+    }
+
+    方法 状态 <公开 静态 类型 = 整数 注释 = "状态. 原方法: Status. 官方简介: 返回顺序状态(若未执行则为 0): 0 : 所有边均为正向且有序 1 : 所有边均为正向但有些未按顺序 -1 : 有些边被反转, 但无间隙残留 3 : 排序的边只是按正向或反向方式移位" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_WireOrder.Status (@<对象>)
+    }
+
+    方法 有序 <公开 静态 类型 = 整数 注释 = "有序. 原方法: Ordered. 官方简介: 返回与新排序号 <n> 对应的原始边号 警告: 若边应被反转, 则返回值是负数" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_WireOrder.Ordered (@<对象>, @<索引>)
+    }
+
+    方法 XYZ <公开 静态 注释 = "XYZ. 原方法: XYZ. 官方简介: 以三维值形式返回节点对 <num> 的值" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    参数 输出起点3D <类型 = 长整数>
+    参数 输出三维端点 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_WireOrder.XYZ (@<对象>, @<索引>, @<输出起点3D>, @<输出三维端点>)
+    }
+
+    方法 XY <公开 静态 注释 = "XY. 原方法: XY. 官方简介: 以二维值形式返回节点对 <num> 的值" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 索引 <类型 = 整数>
+    参数 输出起点2D <类型 = 长整数>
+    参数 输出二维端点 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_WireOrder.XY (@<对象>, @<索引>, @<输出起点2D>, @<输出二维端点>)
+    }
+
+    方法 间隙 <公开 静态 类型 = 小数 注释 = "间隙. 原方法: Gap. 官方简介: 返回边对与其前一个之间的间隙. <num> 被视为有序. 若 <num> = 0 (D), 返回找到的最大间隙." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 序号 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_WireOrder.Gap (@<对象>, @<序号>)
+    }
+
+    方法 设置链 <公开 静态 注释 = "设置链. 原方法: SetChains. 官方简介: 确定内部相继边之间的间隙小于给定值的链. 通过 NbChains 与 Chain 查询" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 间隙 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_WireOrder.SetChains (@<对象>, @<间隙>)
+    }
+
+    方法 链数 <公开 静态 类型 = 整数 注释 = "链数. 原方法: NbChains. 官方简介: 返回计算的链数量" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_WireOrder.NbChains (@<对象>)
+    }
+
+    方法 链 <公开 静态 注释 = "链. 原方法: Chain. 官方简介: 对于链号 num, 返回起始与结束边号. 在有序边列表中(原始项见 Ordered)" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 序号 <类型 = 整数>
+    参数 输出n1 <类型 = "整数 []">
+    参数 输出n2 <类型 = "整数 []">
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_WireOrder.Chain (@<对象>, @<序号>, @<输出n1>, @<输出n2>)
+    }
+
+    方法 设置对 <公开 静态 注释 = "设置对. 原方法: SetCouples. 官方简介: 确定首尾位于给定间隙内的边对. 通过 NbCouples 与 Couple 查询 警告: 函数未实现" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 间隙 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_WireOrder.SetCouples (@<对象>, @<间隙>)
+    }
+
+    方法 配对数 <公开 静态 类型 = 整数 注释 = "配对数. 原方法: NbCouples. 官方简介: 返回计算的对数量" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_WireOrder.NbCouples (@<对象>)
+    }
+
+    方法 取配对 <公开 静态 注释 = "取配对. 原方法: Couple. 官方简介: 对于第 num 个节点对, 返回有序边列表中涉及的两条边" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 序号 <类型 = 整数>
+    参数 输出n1 <类型 = "整数 []">
+    参数 输出n2 <类型 = "整数 []">
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeAnalysis_WireOrder.Couple (@<对象>, @<序号>, @<输出n1>, @<输出n2>)
+    }
+
+}
+
+类 形状构建替换器 <公开 注释 = "形状构建替换器: 原类 ShapeBuild_ReShape (libTKShHealing, 头文件 ShapeBuild/ShapeBuild_ReShape.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 通过对形状的某些部件执行预定义替换来重建形状." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: ShapeBuild_ReShape. 官方简介: 返回空 Reshape" @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeBuild_ReShape.构造 ()
+    }
+
+    方法 应用 <公开 静态 类型 = 长整数 注释 = "应用. 原方法: Apply. 官方简介: 对形状施加替换请求" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 形状 <类型 = 长整数>
+    参数 直到 <类型 = 整数>
+    参数 构建模式 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeBuild_ReShape.Apply (@<对象>, @<形状>, @<直到>, @<构建模式>)
+    }
+
+    方法 应用_2 <公开 静态 类型 = 长整数 注释 = "应用_2. 原方法: Apply. 官方简介: 对形状施加替换请求." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 形状 <类型 = 长整数>
+    参数 直到 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeBuild_ReShape.Apply_2 (@<对象>, @<形状>, @<直到>)
+    }
+
+    方法 状态 <公开 静态 类型 = 整数 注释 = "状态. 原方法: Status. 官方简介: 返回形状的完整替换状态 0 : 未记录, <newsh> = 原始 <shape> < 0: 待移除, <newsh> 为 NULL > 0: 待替换, <newsh> 是新项 若 <last> 为 False, 则直接返回该形状在映射中记录的状态与新形状; 若为 True 且状态 > 0, 则递归搜索最后的状态与新形状." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 形状 <类型 = 长整数>
+    参数 输出新形状 <类型 = 长整数>
+    参数 末个 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeBuild_ReShape.Status (@<对象>, @<形状>, @<输出新形状>, @<末个>)
+    }
+
+    方法 状态_2 <公开 静态 类型 = 逻辑型 注释 = "状态_2. 原方法: Status. 官方简介: 查询最后一次调用 Apply(shape,enum) 的状态. OK : 没有(子)形状被替换或移除 DONE1: 源(起始)形状被替换 DONE2: 源(起始)形状被移除 DONE3: 一些子形状被替换 DONE4: 一些子形状被移除 FAIL1: 由于子形状类型错误, 一些替换未完成" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 状态 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeBuild_ReShape.Status_2 (@<对象>, @<状态>)
+    }
+
+}
+
+类 曲线投影构建 <公开 注释 = "曲线投影构建: 原类 ShapeConstruct_ProjectCurveOnSurface (libTKShHealing, 头文件 ShapeConstruct/ShapeConstruct_ProjectCurveOnSurface.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 本工具提供把三维曲线投影到曲面以计算参数曲线(pcurve)的方法. 投影由 23 个或更多点完成(对 B 样条该数目按以下规则改变: 总点数不少于段数 * (次数 + 1); 从 23 开始递归增加, 每次加 22 直到满足条件). 等参数情形(曲线对应曲面上 U=常量 或 V=常量)以给定精度识别." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: ShapeConstruct_ProjectCurveOnSurface. 官方简介: 空构造函数." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeConstruct_ProjectCurveOnSurface.构造 ()
+    }
+
+    方法 初始化 <公开 静态 注释 = "初始化. 原方法: Init. 官方简介: 用所有必要参数初始化对象, 即曲面与精度" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 曲面 <类型 = 长整数>
+    参数 精度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeConstruct_ProjectCurveOnSurface.Init (@<对象>, @<曲面>, @<精度>)
+    }
+
+    方法 初始化_2 <公开 静态 注释 = "初始化_2. 原方法: Init. 官方简介: 用所有必要参数初始化对象, 即曲面与精度" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 曲面 <类型 = 长整数>
+    参数 精度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeConstruct_ProjectCurveOnSurface.Init_2 (@<对象>, @<曲面>, @<精度>)
+    }
+
+    方法 设置曲面 <公开 静态 注释 = "设置曲面. 原方法: SetSurface. 官方简介: 载入曲面(以 Geom_Surface 形式)以在其上投影" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 曲面 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeConstruct_ProjectCurveOnSurface.SetSurface (@<对象>, @<曲面>)
+    }
+
+    方法 设置曲面_2 <公开 静态 注释 = "设置曲面_2. 原方法: SetSurface. 官方简介: 载入曲面(以 ShapeAnalysis_Surface 形式)以在其上投影" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 曲面 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeConstruct_ProjectCurveOnSurface.SetSurface_2 (@<对象>, @<曲面>)
+    }
+
+    方法 设置精度 <公开 静态 注释 = "设置精度. 原方法: SetPrecision. 官方简介: 设置当前精度值" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 精度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeConstruct_ProjectCurveOnSurface.SetPrecision (@<对象>, @<精度>)
+    }
+
+    方法 构建曲线模式 <公开 静态 类型 = 逻辑型 注释 = "构建曲线模式. 原方法: BuildCurveMode. 官方简介: 返回(可修改的)构造三维曲线模式, 默认为 False. 若为 True, 当投影曲线已通过插值重新计算时, 三维曲线也通过插值重建." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeConstruct_ProjectCurveOnSurface.BuildCurveMode (@<对象>)
+    }
+
+    方法 调整退化接缝模式 <公开 静态 类型 = 整数 注释 = "调整退化接缝模式. 原方法: AdjustOverDegenMode. 官方简介: 返回(可修改的)标志, 指定把位于缝合边上的部分 pcurve 调整到参数空间的哪一侧. 这在非常罕见的情况下是必需的: 待投影的 3d 曲线部分沿带奇异性的闭合曲面(如球面)上的缝合边延伸, 经过退化点并部分位于曲面的内部区域." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeConstruct_ProjectCurveOnSurface.AdjustOverDegenMode (@<对象>)
+    }
+
+    方法 状态 <公开 静态 类型 = 逻辑型 注释 = "状态. 原方法: Status. 官方简介: 返回最近一次 Perform 的状态" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 状态 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeConstruct_ProjectCurveOnSurface.Status (@<对象>, @<状态>)
+    }
+
+    方法 执行 <公开 静态 类型 = 逻辑型 注释 = "执行. 原方法: Perform. 官方简介: 使用专用算法计算 3d 曲线到曲面的投影. 若投影器失败则返回 False, 否则, 若 pcurve 计算成功则返回 True. 输出 2D 曲线保证在区间 [First, Last] 上与输入 3D 曲线同参数. 若输出曲线位于一条直线上, 则在同参数条件满足的情形返回无限直线. TolFirst 与 TolLast 是输入 3D 曲线两端处的公差." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 输出c3d <类型 = "长整数 []">
+    参数 首个 <类型 = 小数>
+    参数 末个 <类型 = 小数>
+    参数 输出c2d <类型 = "长整数 []">
+    参数 起始容差 <类型 = 小数>
+    参数 终止容差 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeConstruct_ProjectCurveOnSurface.Perform (@<对象>, @<输出c3d>, @<首个>, @<末个>, @<输出c2d>, @<起始容差>, @<终止容差>)
+    }
+
+    方法 按投影库执行 <公开 静态 类型 = 逻辑型 注释 = "按投影库执行. 原方法: PerformByProjLib. 官方简介: 使用 ProjLib 的标准算法计算 3d 曲线到曲面的投影. 若标准投影器失败、抛出异常或被曲面的参数边界截断曲线, 则返回 False. 否则, 若 pcurve 计算成功, 则返回 True. continuity, maxdeg 与 nbinterval 是调用 Approx_CurveOnSurface 的参数. 若 nbinterval 等于 -1(默认), 则该值根据源 3d 曲线与曲面计算." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 输出c3d <类型 = "长整数 []">
+    参数 首个 <类型 = 小数>
+    参数 末个 <类型 = 小数>
+    参数 输出c2d <类型 = "长整数 []">
+    参数 连续性 <类型 = 整数>
+    参数 最大阶次 <类型 = 整数>
+    参数 区间数 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeConstruct_ProjectCurveOnSurface.PerformByProjLib (@<对象>, @<输出c3d>, @<首个>, @<末个>, @<输出c2d>, @<连续性>, @<最大阶次>, @<区间数>)
+    }
+
+}
+
+类 线框数据 <公开 注释 = "线框数据: 原类 ShapeExtend_WireData (libTKShHealing, 头文件 ShapeExtend/ShapeExtend_WireData.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 此类提供把线框作为有序边列表处理所需的数据结构, 这是许多算法所要求的. 此类的优势在于它允许处理不正确的线框. ShapeExtend_WireData 类的对象可以由 TopoDS_Wire 初始化, 并可转换回 TopoDS_Wire. 线框中的边由其序号定义. 提供了按给定序号访问, 添加和移除边的操作. 对整个线框, 还提供循环置换和反转(同时反转所有边的朝向和边的顺序)操作. 此类还提供一个方法检查线框中的边是否为缝合边(若线框位于某个面上). 此类按引用处理. 这种做法具有以下优势: 1. 共享此类对象极大地优化了以该类形式存储的线框上并行执行的分析与修复过程. 修复工具(如 ShapeFix_Wire)使用分析工具(如 ShapeAnalysis_Wire)逐个修复问题. 共享可以避免每次用修改后的 ShapeExtend_WireData 重新初始化分析工具, 从而节省一定时间. 2. 不复制内容. ShapeExtend_WireData 类对象尺寸相当大, 如果该类按值处理, 把它作为函数结果返回将导致额外的内容复制. 此外, 该类作为字段存储在其他类中, 而这些类又作为函数结果返回, 只存储指向 ShapeExtend_WireData 的句柄可节省时间和内存." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: ShapeExtend_WireData. 官方简介: 空构造器, 创建不含边的空线框" @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeExtend_WireData.构造 ()
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: ShapeExtend_WireData. 官方简介: 构造器, 从 TopoDS_Wire 初始化数据. 调用 Init(wire,chained)." @嵌入式方法 = "">
+    参数 线框 <类型 = 长整数>
+    参数 链式 <类型 = 逻辑型>
+    参数 流形模式 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeExtend_WireData.构造_2 (@<线框>, @<链式>, @<流形模式>)
+    }
+
+    方法 初始化 <公开 静态 注释 = "初始化. 原方法: Init. 官方简介: 从另一个 WireData 复制数据" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 另一个 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeExtend_WireData.Init (@<对象>, @<另一个>)
+    }
+
+    方法 初始化_2 <公开 静态 类型 = 逻辑型 注释 = "初始化_2. 原方法: Init. 官方简介: 加载已存在的线框. 若 <chained> 为 True(默认), 则边按 TopoDS_Iterator 探查它们的顺序添加. 否则, 若 <chained> 为 False, 则线框由 BRepTools_WireExplorer 探查, 并保证边将顺序相连. 备注: 在后一种情况下可能无法找到所有边(因为 BRepTools_WireExplorer 对不连通线框和带缝合边的线框的局限)." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 线框 <类型 = 长整数>
+    参数 链式 <类型 = 逻辑型>
+    参数 流形模式 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeExtend_WireData.Init_2 (@<对象>, @<线框>, @<链式>, @<流形模式>)
+    }
+
+    方法 清除 <公开 静态 注释 = "清除. 原方法: Clear. 官方简介: 清除关于线框的数据." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeExtend_WireData.Clear (@<对象>)
+    }
+
+    方法 计算接缝 <公开 静态 注释 = "计算接缝. 原方法: ComputeSeams. 官方简介: 计算缝合边的列表. 默认情况下(直接调用), 强制执行计算. 对于间接调用(来自 IsSeam), 仅当尚未完成或边列表已改变时才重做. 备注: 缝合边是在列表中出现两次的边, 一次为 FORWARD, 一次为 REVERSED. 每个朝向都有自己的 PCurve, FORWARD 的那个必须首先设置." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 强制执行 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeExtend_WireData.ComputeSeams (@<对象>, @<强制执行>)
+    }
+
+    方法 设置末边 <公开 静态 注释 = "设置末边. 原方法: SetLast. 官方简介: 做循环置换, 以便把第 <num> 条边置于末尾" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 序号 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeExtend_WireData.SetLast (@<对象>, @<序号>)
+    }
+
+    方法 设置退化末个 <公开 静态 注释 = "设置退化末个. 原方法: SetDegeneratedLast. 官方简介: 当线框包含至少一条退化边时, 将其设为最后一条. 注意: 例如, 处理 pcurve 时这很有用: 由于 DGNR 的 pcurve 无法从其 3D 部分计算(不存在该部分), 需在其他边计算并串联之后再计算该 pcurve." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeExtend_WireData.SetDegeneratedLast (@<对象>)
+    }
+
+    方法 添加 <公开 静态 注释 = "添加. 原方法: Add. 官方简介: 向正在定义的(尚未结束的)线框添加一条边. 这是添加边的普通基本函数. <num> = 0 (D): 追加到末尾 <num> = 1: 前插到开头 否则, 插入到 <num> 之前 备注: 空边被直接忽略" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 边 <类型 = 长整数>
+    参数 序号 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeExtend_WireData.Add (@<对象>, @<边>, @<序号>)
+    }
+
+    方法 添加_2 <公开 静态 注释 = "添加_2. 原方法: Add. 官方简介: 添加整条线框, 视为边的列表 备注: 假定线框是有序的(使用 TopoDS_Iterator)" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 线框 <类型 = 长整数>
+    参数 序号 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeExtend_WireData.Add_2 (@<对象>, @<线框>, @<序号>)
+    }
+
+    方法 添加_3 <公开 静态 注释 = "添加_3. 原方法: Add. 官方简介: 以 WireData 形式添加线框" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 线框 <类型 = 长整数>
+    参数 序号 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeExtend_WireData.Add_3 (@<对象>, @<线框>, @<序号>)
+    }
+
+    方法 添加_4 <公开 静态 注释 = "添加_4. 原方法: Add. 官方简介: 添加边或线框并调用相应的 Add 方法" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 形状 <类型 = 长整数>
+    参数 序号 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeExtend_WireData.Add_4 (@<对象>, @<形状>, @<序号>)
+    }
+
+    方法 添加有向 <公开 静态 注释 = "添加有向. 原方法: AddOriented. 官方简介: 按 <mode> 向 <me> 的起点或终点添加边 0: 添加到终点, 正向 1: 添加到终点, 反向 2: 添加到起点, 正向 3: 添加到起点, 反向 < 0: 不添加" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 边 <类型 = 长整数>
+    参数 模式 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeExtend_WireData.AddOriented (@<对象>, @<边>, @<模式>)
+    }
+
+    方法 添加有向_2 <公开 静态 注释 = "添加有向_2. 原方法: AddOriented. 官方简介: 按 <mode> 向 <me> 的起点或终点添加线框 0: 添加到终点, 正向 1: 添加到终点, 反向 2: 添加到起点, 正向 3: 添加到起点, 反向 < 0: 不添加" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 线框 <类型 = 长整数>
+    参数 模式 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeExtend_WireData.AddOriented_2 (@<对象>, @<线框>, @<模式>)
+    }
+
+    方法 添加有向_3 <公开 静态 注释 = "添加有向_3. 原方法: AddOriented. 官方简介: 添加边或线框并调用相应的 AddOriented 方法" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 形状 <类型 = 长整数>
+    参数 模式 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeExtend_WireData.AddOriented_3 (@<对象>, @<形状>, @<模式>)
+    }
+
+    方法 移除 <公开 静态 注释 = "移除. 原方法: Remove. 官方简介: 按序号删除一条边. 默认删除最后一条边." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 序号 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeExtend_WireData.Remove (@<对象>, @<序号>)
+    }
+
+    方法 设置 <公开 静态 注释 = "设置. 原方法: Set. 官方简介: 用一条新边替换给定序号 <num> 处的边. 默认是最后一条边(<num> = 0)." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 边 <类型 = 长整数>
+    参数 序号 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeExtend_WireData.Set (@<对象>, @<边>, @<序号>)
+    }
+
+    方法 反转 <公开 静态 注释 = "反转. 原方法: Reverse. 官方简介: 反转列表的方向以及每条边的朝向. 当线框没有缝合边或面不可用时, 应调用此方法" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeExtend_WireData.Reverse (@<对象>)
+    }
+
+    方法 反转_2 <公开 静态 注释 = "反转_2. 原方法: Reverse. 官方简介: 反转列表的顺序与每条边的朝向. 面是缝合边交换 pcurve 所必需的(第一个 pcurve 对应朝向 FORWARD, 第二个对应 REVERSED; 当边被反转时, 必须交换 pcurve). 若 face 为 NULL, 则不进行交换." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 面 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeExtend_WireData.Reverse_2 (@<对象>, @<面>)
+    }
+
+    方法 边数 <公开 静态 类型 = 整数 注释 = "边数. 原方法: NbEdges. 官方简介: 返回当前记录的边数量" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeExtend_WireData.NbEdges (@<对象>)
+    }
+
+    方法 非流形边数 <公开 静态 类型 = 整数 注释 = "非流形边数. 原方法: NbNonManifoldEdges. 官方简介: 返回当前记录的非流形边数量" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeExtend_WireData.NbNonManifoldEdges (@<对象>)
+    }
+
+    方法 非流形边 <公开 静态 类型 = 长整数 注释 = "非流形边. 原方法: NonmanifoldEdge. 官方简介: 返回第 <num> 条非流形边" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 序号 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeExtend_WireData.NonmanifoldEdge (@<对象>, @<序号>)
+    }
+
+    方法 流形模式 <公开 静态 类型 = 逻辑型 注释 = "流形模式. 原方法: ManifoldMode. 官方简介: 返回定义是否为流形线框数据的模式. 若为流形, 则在操作期间非流形边将不被考虑(先前行为), 且它们只会被添加到结果线框中; 否则在操作期间将考虑非流形边" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeExtend_WireData.ManifoldMode (@<对象>)
+    }
+
+    方法 边 <公开 静态 类型 = 长整数 注释 = "边. 原方法: Edge. 官方简介: 返回第 <num> 条边" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 序号 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeExtend_WireData.Edge (@<对象>, @<序号>)
+    }
+
+    方法 索引 <公开 静态 类型 = 整数 注释 = "索引. 原方法: Index. 官方简介: 返回边的索引. 若该边是缝合边, 还会检查朝向. 若在列表中未找到该边则返回 0" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 边 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeExtend_WireData.Index (@<对象>, @<边>)
+    }
+
+    方法 是否接缝 <公开 静态 类型 = 逻辑型 注释 = "是否接缝. 原方法: IsSeam. 官方简介: 判断边是否为缝合边(参见 ComputeSeams). 若边在边列表中出现两次, 一次为 FORWARD 一次为 REVERSED, 则视为缝合边." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 序号 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeExtend_WireData.IsSeam (@<对象>, @<序号>)
+    }
+
+    方法 线框 <公开 静态 类型 = 长整数 注释 = "线框. 原方法: Wire. 官方简介: 用 BRep_Builder 创建 TopoDS_Wire(仅创建 TopoDS_Wire 对象并把所有边加入其中). 当线框正确时(例如在 ShapeFix_Wire 成功修复之后)且相邻边共享公共顶点时, 应调用该方法. 若相邻边不共享相同顶点, 则结果的 TopoDS_Wire 将无效." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeExtend_WireData.Wire (@<对象>)
+    }
+
+    方法 API生成线框 <公开 静态 类型 = 长整数 注释 = "API生成线框. 原方法: WireAPIMake. 官方简介: 使用 BRepAPI_MakeWire 构建 TopoDS_Wire. 类 BRepAPI_MakeWire 合并几何上重合的顶点, 可能扰乱线框中边的正确顺序. 若该类失败, 则返回空形状." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeExtend_WireData.WireAPIMake (@<对象>)
+    }
+
+}
+
+类 形状修复 <公开 注释 = "形状修复: 原类 ShapeFix_Shape (libTKShHealing, 头文件 ShapeFix/ShapeFix_Shape.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 形状的通用修复." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: ShapeFix_Shape. 官方简介: 空构造函数" @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Shape.构造 ()
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: ShapeFix_Shape. 官方简介: 按形状初始化." @嵌入式方法 = "">
+    参数 形状 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Shape.构造_2 (@<形状>)
+    }
+
+    方法 初始化 <公开 静态 注释 = "初始化. 原方法: Init. 官方简介: 按形状初始化." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 形状 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Shape.Init (@<对象>, @<形状>)
+    }
+
+    方法 执行 <公开 静态 类型 = 逻辑型 注释 = "执行. 原方法: Perform. 官方简介: 遍历子形状并执行修复" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Shape.Perform (@<对象>)
+    }
+
+    方法 形状 <公开 静态 类型 = 长整数 注释 = "形状. 原方法: Shape. 官方简介: 返回结果形状" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Shape.Shape (@<对象>)
+    }
+
+    方法 修复壳工具 <公开 静态 类型 = 长整数 注释 = "修复壳工具. 原方法: FixShellTool. 官方简介: 返回修复壳的工具." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Shape.FixShellTool (@<对象>)
+    }
+
+    方法 修复线框工具 <公开 静态 类型 = 长整数 注释 = "修复线框工具. 原方法: FixWireTool. 官方简介: 返回修复线框的工具." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Shape.FixWireTool (@<对象>)
+    }
+
+    方法 状态 <公开 静态 类型 = 逻辑型 注释 = "状态. 原方法: Status. 官方简介: 返回上一次 Fix 的状态. 这可以是以下标志的组合: ShapeExtend_DONE1: 修复了一些自由边 ShapeExtend_DONE2: 修复了一些自由线框 ShapeExtend_DONE3: 修复了一些自由面 ShapeExtend_DONE4: 修复了一些自由壳 ShapeExtend_DONE5: 修复了一些自由实体 ShapeExtend_DONE6: 修复了复合体中的形状" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 状态 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Shape.Status (@<对象>, @<状态>)
+    }
+
+    方法 设置精度 <公开 静态 注释 = "设置精度. 原方法: SetPrecision. 官方简介: 设置基本精度值(同时设置到 FixSolidTool)" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 精度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Shape.SetPrecision (@<对象>, @<精度>)
+    }
+
+    方法 设置最小容差 <公开 静态 注释 = "设置最小容差. 原方法: SetMinTolerance. 官方简介: 设置允许的最小公差(同时设置到 FixSolidTool)" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 最小容差 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Shape.SetMinTolerance (@<对象>, @<最小容差>)
+    }
+
+    方法 设置最大容差 <公开 静态 注释 = "设置最大容差. 原方法: SetMaxTolerance. 官方简介: 设置允许的最大公差(同时设置到 FixSolidTool)" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 最大容差 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Shape.SetMaxTolerance (@<对象>, @<最大容差>)
+    }
+
+    方法 修复实体模式 <公开 静态 类型 = 整数 注释 = "修复实体模式. 原方法: FixSolidMode. 官方简介: 返回(可修改的)ShapeFix_Solid 应用修复的模式, 默认为 True." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Shape.FixSolidMode (@<对象>)
+    }
+
+    方法 修复自由壳模式 <公开 静态 类型 = 整数 注释 = "修复自由壳模式. 原方法: FixFreeShellMode. 官方简介: 返回(可修改的)ShapeFix_Shell 应用修复的模式, 默认为 True." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Shape.FixFreeShellMode (@<对象>)
+    }
+
+    方法 修复自由面模式 <公开 静态 类型 = 整数 注释 = "修复自由面模式. 原方法: FixFreeFaceMode. 官方简介: 返回(可修改的)ShapeFix_Face 应用修复的模式, 默认为 True." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Shape.FixFreeFaceMode (@<对象>)
+    }
+
+    方法 修复自由线框模式 <公开 静态 类型 = 整数 注释 = "修复自由线框模式. 原方法: FixFreeWireMode. 官方简介: 返回(可修改的)ShapeFix_Wire 应用修复的模式, 默认为 True." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Shape.FixFreeWireMode (@<对象>)
+    }
+
+    方法 修复相同参数模式 <公开 静态 类型 = 整数 注释 = "修复相同参数模式. 原方法: FixSameParameterMode. 官方简介: 返回(可修改的)所有修复后应用 ShapeFix::SameParameter 的模式, 默认为 True." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Shape.FixSameParameterMode (@<对象>)
+    }
+
+    方法 修复顶点位置模式 <公开 静态 类型 = 整数 注释 = "修复顶点位置模式. 原方法: FixVertexPositionMode. 官方简介: 返回(可修改的)所有修复前应用 ShapeFix::FixVertexPosition 的模式, 默认为 False." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Shape.FixVertexPositionMode (@<对象>)
+    }
+
+    方法 修复顶点容差模式 <公开 静态 类型 = 整数 注释 = "修复顶点容差模式. 原方法: FixVertexTolMode. 官方简介: 返回(可修改的)执行所有修复后修正整个形状上顶点公差的模式" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Shape.FixVertexTolMode (@<对象>)
+    }
+
+}
+
+类 壳修复 <公开 注释 = "壳修复: 原类 ShapeFix_Shell (libTKShHealing, 头文件 ShapeFix/ShapeFix_Shell.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 修复壳中面的朝向." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: ShapeFix_Shell. 官方简介: 空构造函数" @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Shell.构造 ()
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: ShapeFix_Shell. 官方简介: 按壳初始化." @嵌入式方法 = "">
+    参数 形状 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Shell.构造_2 (@<形状>)
+    }
+
+    方法 初始化 <公开 静态 注释 = "初始化. 原方法: Init. 官方简介: 按壳初始化." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 壳 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Shell.Init (@<对象>, @<壳>)
+    }
+
+    方法 执行 <公开 静态 类型 = 逻辑型 注释 = "执行. 原方法: Perform. 官方简介: 遍历子形状并执行修复(对每个面调用 ShapeFix_Face::Perform, 然后调用 FixFaceOrientation). 传入的进度指示器允许用户查看当前进度阶段并在需要时中止算法." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Shell.Perform (@<对象>)
+    }
+
+    方法 修复面朝向 <公开 静态 类型 = 逻辑型 注释 = "修复面朝向. 原方法: FixFaceOrientation. 官方简介: 修复壳中面的朝向. 若某个面在壳中的朝向与相邻面相反, 则改变它的朝向. 若无法对壳中所有面定向(如莫比乌斯带的情形), 该方法只对面的子集定向. 其他面存储在 Error 复合体中. 模式 : isAccountMultiConex - 考虑多连通情形的模式. 若该模式等于 Standard_True, 在多连通情形将创建分离的壳. 若该模式等于 Standard_False, 将创建一个不考虑多连通的壳.默认 - Standard_True; NonManifold - 创建非流形壳的模式. 若该模式等于 Standard_True, 将从包含多重共享边的壳创建一个非流形壳. 否则若该模式等于 Standard_False, 将只创建流形壳. 默认 - Standard_False." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 壳 <类型 = 长整数>
+    参数 考虑多重连接 <类型 = 逻辑型>
+    参数 非流形 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Shell.FixFaceOrientation (@<对象>, @<壳>, @<考虑多重连接>, @<非流形>)
+    }
+
+    方法 壳 <公开 静态 类型 = 长整数 注释 = "壳. 原方法: Shell. 官方简介: 返回修复后的壳(或定向面的子集)." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Shell.Shell (@<对象>)
+    }
+
+    方法 形状 <公开 静态 类型 = 长整数 注释 = "形状. 原方法: Shape. 官方简介: 若为多重连通则返回修复壳的复合体, 否则返回单个壳." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Shell.Shape (@<对象>)
+    }
+
+    方法 壳数 <公开 静态 类型 = 整数 注释 = "壳数. 原方法: NbShells. 官方简介: 返回得到的壳数量;" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Shell.NbShells (@<对象>)
+    }
+
+    方法 错误面 <公开 静态 类型 = 长整数 注释 = "错误面. 原方法: ErrorFaces. 官方简介: 返回未定向的面子集." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Shell.ErrorFaces (@<对象>)
+    }
+
+    方法 状态 <公开 静态 类型 = 逻辑型 注释 = "状态. 原方法: Status. 官方简介: 返回最近一次 Fix 的状态." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 状态 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Shell.Status (@<对象>, @<状态>)
+    }
+
+    方法 设置精度 <公开 静态 注释 = "设置精度. 原方法: SetPrecision. 官方简介: 设置基本精度值(同时设置到 FixWireTool)" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 精度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Shell.SetPrecision (@<对象>, @<精度>)
+    }
+
+    方法 设置最小容差 <公开 静态 注释 = "设置最小容差. 原方法: SetMinTolerance. 官方简介: 设置允许的最小公差(同时设置到 FixWireTool)" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 最小容差 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Shell.SetMinTolerance (@<对象>, @<最小容差>)
+    }
+
+    方法 设置最大容差 <公开 静态 注释 = "设置最大容差. 原方法: SetMaxTolerance. 官方简介: 设置允许的最大公差(同时设置到 FixWireTool)" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 最大容差 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Shell.SetMaxTolerance (@<对象>, @<最大容差>)
+    }
+
+    方法 修复面模式 <公开 静态 类型 = 整数 注释 = "修复面模式. 原方法: FixFaceMode. 官方简介: 返回(可修改的)ShapeFix_Face 应用修复的模式, 默认为 True." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Shell.FixFaceMode (@<对象>)
+    }
+
+    方法 修复朝向模式 <公开 静态 类型 = 整数 注释 = "修复朝向模式. 原方法: FixOrientationMode. 官方简介: 返回(可修改的)应用 FixFaceOrientation 的模式, 默认为 True." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Shell.FixOrientationMode (@<对象>)
+    }
+
+    方法 设置非流形标志 <公开 静态 注释 = "设置非流形标志. 原方法: SetNonManifoldFlag. 官方简介: 设置非流形标志" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 非流形 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Shell.SetNonManifoldFlag (@<对象>, @<非流形>)
+    }
+
+}
+
+类 线框修复 <公开 注释 = "线框修复: 原类 ShapeFix_Wire (libTKShHealing, 头文件 ShapeFix/ShapeFix_Wire.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 此类提供一整套线框修复工具." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: ShapeFix_Wire. 官方简介: 空构造器, 创建带默认标志的空对象" @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.构造 ()
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: ShapeFix_Wire. 官方简介: 用默认标志创建新对象并准备使用(用线框与面的所有数据加载分析器)" @嵌入式方法 = "">
+    参数 线框 <类型 = 长整数>
+    参数 面 <类型 = 长整数>
+    参数 精度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.构造_2 (@<线框>, @<面>, @<精度>)
+    }
+
+    方法 清除模式 <公开 静态 注释 = "清除模式. 原方法: ClearModes. 官方简介: 把所有模式设为默认" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.ClearModes (@<对象>)
+    }
+
+    方法 清除状态 <公开 静态 注释 = "清除状态. 原方法: ClearStatuses. 官方简介: 清除所有状态" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.ClearStatuses (@<对象>)
+    }
+
+    方法 初始化 <公开 静态 注释 = "初始化. 原方法: Init. 官方简介: 用线框与面的所有数据加载分析器, 并丢弃所有修复状态" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 线框 <类型 = 长整数>
+    参数 面 <类型 = 长整数>
+    参数 精度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.Init (@<对象>, @<线框>, @<面>, @<精度>)
+    }
+
+    方法 初始化_2 <公开 静态 注释 = "初始化_2. 原方法: Init. 官方简介: 用所有已准备好的数据加载分析器, 并丢弃所有修复状态. 若分析器包含面, 则无需通过 SetFace 或 SetSurface 设置." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 线框分析 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.Init_2 (@<对象>, @<线框分析>)
+    }
+
+    方法 加载 <公开 静态 注释 = "加载. 原方法: Load. 官方简介: 加载线框数据, 并丢弃所有固定状态" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 线框 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.Load (@<对象>, @<线框>)
+    }
+
+    方法 加载_2 <公开 静态 注释 = "加载_2. 原方法: Load. 官方简介: 加载线框数据, 并丢弃所有固定状态" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 线框数据 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.Load_2 (@<对象>, @<线框数据>)
+    }
+
+    方法 设置面 <公开 静态 注释 = "设置面. 原方法: SetFace. 官方简介: 为线框设置工作面" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 面 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.SetFace (@<对象>, @<面>)
+    }
+
+    方法 设置曲面 <公开 静态 注释 = "设置曲面. 原方法: SetSurface. 官方简介: 为线框设置曲面" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 曲面 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.SetSurface (@<对象>, @<曲面>)
+    }
+
+    方法 设置曲面_2 <公开 静态 注释 = "设置曲面_2. 原方法: SetSurface. 官方简介: 为线框设置曲面" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 曲面 <类型 = 长整数>
+    参数 位置 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.SetSurface_2 (@<对象>, @<曲面>, @<位置>)
+    }
+
+    方法 设置精度 <公开 静态 注释 = "设置精度. 原方法: SetPrecision. 官方简介: 设置工作精度(用于根与分析器)" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 精度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.SetPrecision (@<对象>, @<精度>)
+    }
+
+    方法 设置最大尾角度 <公开 静态 注释 = "设置最大尾角度. 原方法: SetMaxTailAngle. 官方简介: 设置允许的最大尾角度(以弧度为单位)." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 最大尾角度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.SetMaxTailAngle (@<对象>, @<最大尾角度>)
+    }
+
+    方法 设置最大尾宽度 <公开 静态 注释 = "设置最大尾宽度. 原方法: SetMaxTailWidth. 官方简介: 设置允许的最大尾部宽度." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 最大尾宽度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.SetMaxTailWidth (@<对象>, @<最大尾宽度>)
+    }
+
+    方法 是否已加载 <公开 静态 类型 = 逻辑型 注释 = "是否已加载. 原方法: IsLoaded. 官方简介: 判断线框是否已加载" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.IsLoaded (@<对象>)
+    }
+
+    方法 是否就绪 <公开 静态 类型 = 逻辑型 注释 = "是否就绪. 原方法: IsReady. 官方简介: 判断线框与面是否已加载" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.IsReady (@<对象>)
+    }
+
+    方法 边数 <公开 静态 类型 = 整数 注释 = "边数. 原方法: NbEdges. 官方简介: 返回工作线框中的边数" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.NbEdges (@<对象>)
+    }
+
+    方法 线框 <公开 静态 类型 = 长整数 注释 = "线框. 原方法: Wire. 官方简介: 生成结果线框(由基本 Brep_Builder)" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.Wire (@<对象>)
+    }
+
+    方法 API生成线框 <公开 静态 类型 = 长整数 注释 = "API生成线框. 原方法: WireAPIMake. 官方简介: 生成结果线框(由 BRepAPI_MakeWire)" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.WireAPIMake (@<对象>)
+    }
+
+    方法 分析器 <公开 静态 类型 = 长整数 注释 = "分析器. 原方法: Analyzer. 官方简介: 返回字段 Analyzer(工作工具)" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.Analyzer (@<对象>)
+    }
+
+    方法 线框数据 <公开 静态 类型 = 长整数 注释 = "线框数据. 原方法: WireData. 官方简介: 返回工作线框" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.WireData (@<对象>)
+    }
+
+    方法 面 <公开 静态 类型 = 长整数 注释 = "面. 原方法: Face. 官方简介: 返回工作面 (Analyzer.Face())" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.Face (@<对象>)
+    }
+
+    方法 修改拓扑模式 <公开 静态 类型 = 逻辑型 注释 = "修改拓扑模式. 原方法: ModifyTopologyMode. 官方简介: 返回(可修改的)标志, 定义修复期间是否允许修改线框的拓扑(添加/移除边等)" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.ModifyTopologyMode (@<对象>)
+    }
+
+    方法 修改几何模式 <公开 静态 类型 = 逻辑型 注释 = "修改几何模式. 原方法: ModifyGeometryMode. 官方简介: 返回(可修改的)标志, 定义是否允许 Fix..() 方法修改边与顶点的几何" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.ModifyGeometryMode (@<对象>)
+    }
+
+    方法 修改移除环模式 <公开 静态 类型 = 整数 注释 = "修改移除环模式. 原方法: ModifyRemoveLoopMode. 官方简介: 返回(可修改的)标志, 定义是否允许 Fix..() 方法修改边的 RemoveLoop" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.ModifyRemoveLoopMode (@<对象>)
+    }
+
+    方法 闭合线框模式 <公开 静态 类型 = 逻辑型 注释 = "闭合线框模式. 原方法: ClosedWireMode. 官方简介: 返回(可修改的)标志, 它定义线框是否要闭合(通过为最后一条边和第一条边调用 FixDegenerated() 和 FixConnected() 等方法)." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.ClosedWireMode (@<对象>)
+    }
+
+    方法 偏好P曲线模式 <公开 静态 类型 = 逻辑型 注释 = "偏好P曲线模式. 原方法: PreferencePCurveMode. 官方简介: 返回(可修改的)标志, 它定义线框的二维(True)表示是否优于三维表示(在 FixEdgeCurves 中存在歧义的情况下)." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.PreferencePCurveMode (@<对象>)
+    }
+
+    方法 修复间隙按范围模式 <公开 静态 类型 = 逻辑型 注释 = "修复间隙按范围模式. 原方法: FixGapsByRangesMode. 官方简介: 返回(可修改的)标志, 它定义工具是否首先尝试通过更改曲线范围(即使用相交, 极值, 投影)来修复间隙." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.FixGapsByRangesMode (@<对象>)
+    }
+
+    方法 修复重排模式 <公开 静态 类型 = 整数 注释 = "修复重排模式. 原方法: FixReorderMode." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.FixReorderMode (@<对象>)
+    }
+
+    方法 修复小模式 <公开 静态 类型 = 整数 注释 = "修复小模式. 原方法: FixSmallMode." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.FixSmallMode (@<对象>)
+    }
+
+    方法 修复已连接模式 <公开 静态 类型 = 整数 注释 = "修复已连接模式. 原方法: FixConnectedMode." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.FixConnectedMode (@<对象>)
+    }
+
+    方法 修复边曲线模式 <公开 静态 类型 = 整数 注释 = "修复边曲线模式. 原方法: FixEdgeCurvesMode." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.FixEdgeCurvesMode (@<对象>)
+    }
+
+    方法 修复退化模式 <公开 静态 类型 = 整数 注释 = "修复退化模式. 原方法: FixDegeneratedMode." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.FixDegeneratedMode (@<对象>)
+    }
+
+    方法 修复自身相交模式 <公开 静态 类型 = 整数 注释 = "修复自身相交模式. 原方法: FixSelfIntersectionMode." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.FixSelfIntersectionMode (@<对象>)
+    }
+
+    方法 修复缺失模式 <公开 静态 类型 = 整数 注释 = "修复缺失模式. 原方法: FixLackingMode." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.FixLackingMode (@<对象>)
+    }
+
+    方法 三维修复间隙模式 <公开 静态 类型 = 整数 注释 = "三维修复间隙模式. 原方法: FixGaps3dMode." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.FixGaps3dMode (@<对象>)
+    }
+
+    方法 二维修复间隙模式 <公开 静态 类型 = 整数 注释 = "二维修复间隙模式. 原方法: FixGaps2dMode. 官方简介: 返回(可修改的)对应 Fix..() 方法的标志, 它定义该方法是否将从方法 APIFix() 被调用: -1 默认 1 将调用该方法 0 将不调用该方法" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.FixGaps2dMode (@<对象>)
+    }
+
+    方法 修复反转二维曲线模式 <公开 静态 类型 = 整数 注释 = "修复反转二维曲线模式. 原方法: FixReversed2dMode." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.FixReversed2dMode (@<对象>)
+    }
+
+    方法 修复移除P曲线模式 <公开 静态 类型 = 整数 注释 = "修复移除P曲线模式. 原方法: FixRemovePCurveMode." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.FixRemovePCurveMode (@<对象>)
+    }
+
+    方法 修复添加P曲线模式 <公开 静态 类型 = 整数 注释 = "修复添加P曲线模式. 原方法: FixAddPCurveMode." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.FixAddPCurveMode (@<对象>)
+    }
+
+    方法 三维修复移除曲线模式 <公开 静态 类型 = 整数 注释 = "三维修复移除曲线模式. 原方法: FixRemoveCurve3dMode." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.FixRemoveCurve3dMode (@<对象>)
+    }
+
+    方法 三维修复添加曲线模式 <公开 静态 类型 = 整数 注释 = "三维修复添加曲线模式. 原方法: FixAddCurve3dMode." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.FixAddCurve3dMode (@<对象>)
+    }
+
+    方法 修复接缝模式 <公开 静态 类型 = 整数 注释 = "修复接缝模式. 原方法: FixSeamMode." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.FixSeamMode (@<对象>)
+    }
+
+    方法 修复偏移过的模式 <公开 静态 类型 = 整数 注释 = "修复偏移过的模式. 原方法: FixShiftedMode." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.FixShiftedMode (@<对象>)
+    }
+
+    方法 修复相同参数模式 <公开 静态 类型 = 整数 注释 = "修复相同参数模式. 原方法: FixSameParameterMode." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.FixSameParameterMode (@<对象>)
+    }
+
+    方法 修复顶点容差模式 <公开 静态 类型 = 整数 注释 = "修复顶点容差模式. 原方法: FixVertexToleranceMode." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.FixVertexToleranceMode (@<对象>)
+    }
+
+    方法 修复带缺口边模式 <公开 静态 类型 = 整数 注释 = "修复带缺口边模式. 原方法: FixNotchedEdgesMode." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.FixNotchedEdgesMode (@<对象>)
+    }
+
+    方法 修复自身相交边模式 <公开 静态 类型 = 整数 注释 = "修复自身相交边模式. 原方法: FixSelfIntersectingEdgeMode." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.FixSelfIntersectingEdgeMode (@<对象>)
+    }
+
+    方法 修复相交边模式 <公开 静态 类型 = 整数 注释 = "修复相交边模式. 原方法: FixIntersectingEdgesMode." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.FixIntersectingEdgesMode (@<对象>)
+    }
+
+    方法 修复非相邻相交边模式 <公开 静态 类型 = 整数 注释 = "修复非相邻相交边模式. 原方法: FixNonAdjacentIntersectingEdgesMode. 官方简介: 返回(可修改的)对应 Fix..() 方法的标志, 它定义该方法是否将从公共层次的对应 Fix..() 方法被调用: -1 默认 1 将调用该方法 0 将不调用该方法" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.FixNonAdjacentIntersectingEdgesMode (@<对象>)
+    }
+
+    方法 修复尾模式 <公开 静态 类型 = 整数 注释 = "修复尾模式. 原方法: FixTailMode." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.FixTailMode (@<对象>)
+    }
+
+    方法 执行 <公开 静态 类型 = 逻辑型 注释 = "执行. 原方法: Perform. 官方简介: 该方法执行所有可用的修复. 若某个修复由 Fix..Mode() 标志显式打开或关闭, 则该修复是否调用取决于该标志. 否则(即若标志为默认)修复是否调用取决于情况: 若线框中边的顺序不正确, 某些修复不会被调用或受限, 或取决于模式" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.Perform (@<对象>)
+    }
+
+    方法 修复重排 <公开 静态 类型 = 逻辑型 注释 = "修复重排. 原方法: FixReorder. 官方简介: 使用 WireOrder 类对线框中的边执行分析并重新排序. 标志 <theModeBoth> 决定必要时是否使用可混模式." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 混合模式 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.FixReorder (@<对象>, @<混合模式>)
+    }
+
+    方法 修复小 <公开 静态 类型 = 整数 注释 = "修复小. 原方法: FixSmall. 官方简介: 对线框中的所有边应用 FixSmall(num)" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 锁定顶点 <类型 = 逻辑型>
+    参数 小精度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.FixSmall (@<对象>, @<锁定顶点>, @<小精度>)
+    }
+
+    方法 修复已连接 <公开 静态 类型 = 逻辑型 注释 = "修复已连接. 原方法: FixConnected. 官方简介: 对线框中的所有边应用 FixConnected(num). 只有标志 ClosedMode 为 True 时才处理第一条边与最后一条边之间的连接. 若 <prec> 为 -1, 则取 MaxTolerance()." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 精度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.FixConnected (@<对象>, @<精度>)
+    }
+
+    方法 修复边曲线 <公开 静态 类型 = 逻辑型 注释 = "修复边曲线. 原方法: FixEdgeCurves. 官方简介: 分组处理边的 3d 与 pcurve 的修复. 修复的顺序与默认行为为: ShapeFix_Edge::FixReversed2d ShapeFix_Edge::FixRemovePCurve(仅在强制时) ShapeFix_Edge::FixAddPCurve ShapeFix_Edge::FixRemoveCurve3d(仅在强制时) ShapeFix_Edge::FixAddCurve3d FixSeam, FixShifted, ShapeFix_Edge::FixSameParameter" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.FixEdgeCurves (@<对象>)
+    }
+
+    方法 修复退化 <公开 静态 类型 = 逻辑型 注释 = "修复退化. 原方法: FixDegenerated. 官方简介: 对线框中的所有边应用 FixDegenerated(num). 仅当标志 ClosedMode 为 True 时才处理第一条与最后一条边之间的连接" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.FixDegenerated (@<对象>)
+    }
+
+    方法 修复自身相交 <公开 静态 类型 = 逻辑型 注释 = "修复自身相交. 原方法: FixSelfIntersection. 官方简介: 对线框中所有边应用 FixSelfIntersectingEdge(num) 和 FixIntersectingEdges(num), 并对所有满足 num2 >= num1 + 2 的配对 num1 和 num2 应用 FixIntersectingEdges(num1, num2), 并移除错误边(若有)" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.FixSelfIntersection (@<对象>)
+    }
+
+    方法 修复缺失 <公开 静态 类型 = 逻辑型 注释 = "修复缺失. 原方法: FixLacking. 官方简介: 对线框中的所有边应用 FixLacking(num). 仅当标志 ClosedMode 为 True 时才处理第一与最后边之间的连接. 若 <force> 为 False(默认), 则连接性测试用边之间顶点的精度进行, 否则用顶点公差与 Analyzer.Precision() 的最小值进行. 因此, <force> 会导致插入缺失的边以替换公差较大的顶点." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 强制 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.FixLacking (@<对象>, @<强制>)
+    }
+
+    方法 修复闭合 <公开 静态 类型 = 逻辑型 注释 = "修复闭合. 原方法: FixClosed. 官方简介: 修复线框使其良好闭合. 它在最后一条边与第一条边之间执行 FixConnected、FixDegenerated 和 FixLacking(与标志 ClosedMode 及这些修复的模式无关). 若 <prec> 为 -1 则取 MaxTolerance()." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 精度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.FixClosed (@<对象>, @<精度>)
+    }
+
+    方法 三维修复间隙 <公开 静态 类型 = 逻辑型 注释 = "三维修复间隙. 原方法: FixGaps3d. 官方简介: 修正相邻边上三维曲线端点之间的间隙. 用 myPrecision 检测间隙." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.FixGaps3d (@<对象>)
+    }
+
+    方法 二维修复间隙 <公开 静态 类型 = 逻辑型 注释 = "二维修复间隙. 原方法: FixGaps2d. 官方简介: 修正相邻边上 pcurve 端点之间的间隙. 用 myPrecision 检测间隙." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.FixGaps2d (@<对象>)
+    }
+
+    方法 修复重排_2 <公开 静态 类型 = 逻辑型 注释 = "修复重排_2. 原方法: FixReorder. 官方简介: 按 WireOrder 确定的顺序重排线框中的边, 该 WireOrder 应先填充并计算" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 线框 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.FixReorder_2 (@<对象>, @<线框>)
+    }
+
+    方法 修复小_2 <公开 静态 类型 = 逻辑型 注释 = "修复小_2. 原方法: FixSmall. 官方简介: 修复零长度边以将其移除. 若边具有零长度(依据 preci, 或 <precsmall> 中较小者), 则应将其移除. 若其两个顶点相同, 则可以无问题地移除. 否则, 若 lockvtx 为 False, 则将其移除并把其末端顶点放到前一条边上. 但若 lockvtx 为 True, 则必须保留该边 ..." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 序号 <类型 = 整数>
+    参数 锁定顶点 <类型 = 逻辑型>
+    参数 小精度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.FixSmall_2 (@<对象>, @<序号>, @<锁定顶点>, @<小精度>)
+    }
+
+    方法 修复已连接_2 <公开 静态 类型 = 逻辑型 注释 = "修复已连接_2. 原方法: FixConnected. 官方简介: 修复相连的边(前一条与当前边). 强制顶点(前一条边的端点—当前边的起点)为同一个. 用起始 preci 测试, 若给定值更大则用 <prec>. 若 <prec> 为 -1 则取 MaxTolerance()." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 序号 <类型 = 整数>
+    参数 精度 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.FixConnected_2 (@<对象>, @<序号>, @<精度>)
+    }
+
+    方法 修复接缝 <公开 静态 类型 = 逻辑型 注释 = "修复接缝. 原方法: FixSeam. 官方简介: 修复缝合边. 缝合边有两条 pcurves, 一条用于正向, 一条用于反向. 正向 pcurve 必须被设为第一条" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 序号 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.FixSeam (@<对象>, @<序号>)
+    }
+
+    方法 修复偏移过的 <公开 静态 类型 = 逻辑型 注释 = "修复偏移过的. 原方法: FixShifted. 官方简介: 修复在闭合曲面上 pcurve 被整参数范围平移的边(若边的 pcurve 由投影沿缝合线行进的 3d 曲线计算, 则可能出现该情形). 它比较每两条相继的边, 若端点之间的距离接近曲面的参数范围则尝试连接它们. 它还能检测并修复所有 pcurve 已相连但位于曲面参数边界之外的情形. 除 ShapeFix_Wire 的 FixShifted 之外, 还执行更精细的退化点检查, 并处理诸如由两条子午线给出的球面等特殊情形." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.FixShifted (@<对象>)
+    }
+
+    方法 修复退化_2 <公开 静态 类型 = 逻辑型 注释 = "修复退化_2. 原方法: FixDegenerated. 官方简介: 修复退化边. 检查第 <num> 条边或第 <num>-1 与第 <num> 条边之间的点, 以确定支撑曲面上是否存在奇异性. 若检测到奇异性, 则要么添加新的退化边(在第 <num> 条之前), 要么使第 <num> 条边退化." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 序号 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.FixDegenerated_2 (@<对象>, @<序号>)
+    }
+
+    方法 修复缺失_2 <公开 静态 类型 = 逻辑型 注释 = "修复缺失_2. 原方法: FixLacking. 官方简介: 修复缺失边. 测试两条相邻边是否在 2d 中不相连(而在 3d 中相连), 若是, 则增加顶点的公差或添加一条新边(2d 空间中的直线), 以便在 2d 中闭合线框. 若添加了边或增加了公差则返回 True." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 序号 <类型 = 整数>
+    参数 强制 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.FixLacking_2 (@<对象>, @<序号>, @<强制>)
+    }
+
+    方法 修复带缺口边 <公开 静态 类型 = 逻辑型 注释 = "修复带缺口边. 原方法: FixNotchedEdges." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.FixNotchedEdges (@<对象>)
+    }
+
+    方法 三维修复间隙_2 <公开 静态 类型 = 逻辑型 注释 = "三维修复间隙_2. 原方法: FixGap3d. 官方简介: 修复第 num-1 条边与第 num 条边上三维曲线端点之间的间隙. 用 myPrecision 检测间隙. 若 convert 为 True, 把曲线转换为 B 样条以便弯曲." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 序号 <类型 = 整数>
+    参数 转换 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.FixGap3d (@<对象>, @<序号>, @<转换>)
+    }
+
+    方法 二维修复间隙_2 <公开 静态 类型 = 逻辑型 注释 = "二维修复间隙_2. 原方法: FixGap2d. 官方简介: 修复第 num-1 条边与第 num 条边上 pcurve 端点之间的间隙. 用 myPrecision 检测间隙. 若 convert 为 True, 把 pcurve 转换为 B 样条以便弯曲." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 序号 <类型 = 整数>
+    参数 转换 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.FixGap2d (@<对象>, @<序号>, @<转换>)
+    }
+
+    方法 修复尾 <公开 静态 类型 = 逻辑型 注释 = "修复尾. 原方法: FixTails." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.FixTails (@<对象>)
+    }
+
+    方法 状态重排 <公开 静态 类型 = 逻辑型 注释 = "状态重排. 原方法: StatusReorder." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 状态 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.StatusReorder (@<对象>, @<状态>)
+    }
+
+    方法 状态小边 <公开 静态 类型 = 逻辑型 注释 = "状态小边. 原方法: StatusSmall." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 状态 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.StatusSmall (@<对象>, @<状态>)
+    }
+
+    方法 状态已连接 <公开 静态 类型 = 逻辑型 注释 = "状态已连接. 原方法: StatusConnected." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 状态 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.StatusConnected (@<对象>, @<状态>)
+    }
+
+    方法 状态边曲线 <公开 静态 类型 = 逻辑型 注释 = "状态边曲线. 原方法: StatusEdgeCurves." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 状态 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.StatusEdgeCurves (@<对象>, @<状态>)
+    }
+
+    方法 状态退化 <公开 静态 类型 = 逻辑型 注释 = "状态退化. 原方法: StatusDegenerated." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 状态 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.StatusDegenerated (@<对象>, @<状态>)
+    }
+
+    方法 状态自身相交 <公开 静态 类型 = 逻辑型 注释 = "状态自身相交. 原方法: StatusSelfIntersection." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 状态 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.StatusSelfIntersection (@<对象>, @<状态>)
+    }
+
+    方法 状态缺失 <公开 静态 类型 = 逻辑型 注释 = "状态缺失. 原方法: StatusLacking." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 状态 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.StatusLacking (@<对象>, @<状态>)
+    }
+
+    方法 状态闭合 <公开 静态 类型 = 逻辑型 注释 = "状态闭合. 原方法: StatusClosed." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 状态 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.StatusClosed (@<对象>, @<状态>)
+    }
+
+    方法 三维状态间隙 <公开 静态 类型 = 逻辑型 注释 = "三维状态间隙. 原方法: StatusGaps3d." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 状态 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.StatusGaps3d (@<对象>, @<状态>)
+    }
+
+    方法 二维状态间隙 <公开 静态 类型 = 逻辑型 注释 = "二维状态间隙. 原方法: StatusGaps2d." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 状态 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.StatusGaps2d (@<对象>, @<状态>)
+    }
+
+    方法 状态缺口 <公开 静态 类型 = 逻辑型 注释 = "状态缺口. 原方法: StatusNotches." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 状态 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.StatusNotches (@<对象>, @<状态>)
+    }
+
+    方法 状态已移除段 <公开 静态 类型 = 逻辑型 注释 = "状态已移除段. 原方法: StatusRemovedSegment. 官方简介: 查询已执行的 API 修复过程的状态. 每个 Status..() 方法给出关于 API 层对应 Fix..() 方法最后一次调用的信息: OK : 未检测到问题; 未做任何事 DONE: 检测到一些问题并成功修复 FAIL: 一些问题无法修复" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.StatusRemovedSegment (@<对象>)
+    }
+
+    方法 状态修复尾 <公开 静态 类型 = 逻辑型 注释 = "状态修复尾. 原方法: StatusFixTails." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 状态 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.StatusFixTails (@<对象>, @<状态>)
+    }
+
+    方法 末个修复状态 <公开 静态 类型 = 逻辑型 注释 = "末个修复状态. 原方法: LastFixStatus. 官方简介: 查询对高级层次 Fix... 方法的上次调用状态. 详情参见对应方法; 通用状态为: OK : 未检测到问题; 未做任何事 DONE: 检测到问题并已成功修复 FAIL: 问题无法修复" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 状态 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeFix_Wire.LastFixStatus (@<对象>, @<状态>)
+    }
+
+}
+
+类 形状处理上下文 <公开 注释 = "形状处理上下文: 原类 ShapeProcess_ShapeContext (libTKShHealing, 头文件 ShapeProcess/ShapeProcess_ShapeContext.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 扩展 Context 以处理形状, 包含形状-形状映射表以及附加到形状的消息." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: ShapeProcess_ShapeContext." @嵌入式方法 = "">
+    参数 文件 <类型 = 文本型>
+    参数 序列 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeProcess_ShapeContext.构造 (@<文件>, @<序列>)
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: ShapeProcess_ShapeContext. 官方简介: 用资源文件与待处理形状初始化工具" @嵌入式方法 = "">
+    参数 S <类型 = 长整数>
+    参数 文件 <类型 = 文本型>
+    参数 序列 <类型 = 文本型>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeProcess_ShapeContext.构造_2 (@<S>, @<文件>, @<序列>)
+    }
+
+    方法 初始化 <公开 静态 注释 = "初始化. 原方法: Init. 官方简介: 用新形状初始化工具并清空所有结果" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeProcess_ShapeContext.Init (@<对象>, @<S>)
+    }
+
+    方法 形状 <公开 静态 类型 = 长整数 注释 = "形状. 原方法: Shape. 官方简介: 返回正在处理的形状" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeProcess_ShapeContext.Shape (@<对象>)
+    }
+
+    方法 结果 <公开 静态 类型 = 长整数 注释 = "结果. 原方法: Result. 官方简介: 返回当前结果" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeProcess_ShapeContext.Result (@<对象>)
+    }
+
+    方法 设置细化级别 <公开 静态 注释 = "设置细化级别. 原方法: SetDetalisation." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 层级 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeProcess_ShapeContext.SetDetalisation (@<对象>, @<层级>)
+    }
+
+    方法 取细化级别 <公开 静态 类型 = 整数 注释 = "取细化级别. 原方法: GetDetalisation. 官方简介: 设置并获取细化级别的值. 只有类型从 TopoDS_COMPOUND 起、直到指定细化级别为止的形状才会被记录到映射表中. 要取消映射, 使用 TopAbs_SHAPE. 要强制完整映射, 使用 TopAbs_VERTEX. 默认级别是 TopAbs_FACE." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeProcess_ShapeContext.GetDetalisation (@<对象>)
+    }
+
+    方法 设置结果 <公开 静态 注释 = "设置结果. 原方法: SetResult. 官方简介: 设置新的结果形状. 注意: 应非常小心地使用该方法, 以保持修改的一致性. 建议使用 RecordModification() 方法, 并显式定义从当前结果到新结果的映射." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeProcess_ShapeContext.SetResult (@<对象>, @<S>)
+    }
+
+    方法 记录修改 <公开 静态 注释 = "桩(本地不可用): 参数类型 const TopTools_DataMapOfShapeShape& 未支持. 记录修改. 原方法: RecordModification." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 替换 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeProcess_ShapeContext.RecordModification (@<对象>, @<替换>)
+    }
+
+    方法 记录修改_2 <公开 静态 注释 = "记录修改_2. 原方法: RecordModification." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 替换 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeProcess_ShapeContext.RecordModification_2 (@<对象>, @<替换>)
+    }
+
+    方法 记录修改_3 <公开 静态 注释 = "记录修改_3. 原方法: RecordModification." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 形状 <类型 = 长整数>
+    参数 替换 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeProcess_ShapeContext.RecordModification_3 (@<对象>, @<形状>, @<替换>)
+    }
+
+    方法 取连续性 <公开 静态 类型 = 逻辑型 注释 = "取连续性. 原方法: GetContinuity. 官方简介: 获取类型为 GeomAbs_Shape 的参数值. 若参数未定义或类型错误则返回 False" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 参数 <类型 = 文本型>
+    参数 输出值 <类型 = "整数 []">
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeProcess_ShapeContext.GetContinuity (@<对象>, @<参数>, @<输出值>)
+    }
+
+    方法 连续性值 <公开 静态 类型 = 整数 注释 = "连续性值. 原方法: ContinuityVal. 官方简介: 获取类型为 GeomAbs_Shape 的参数值. 若参数未定义或没有预期类型, 则返回指定的默认值" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 参数 <类型 = 文本型>
+    参数 默认值 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeProcess_ShapeContext.ContinuityVal (@<对象>, @<参数>, @<默认值>)
+    }
+
+    方法 打印统计 <公开 静态 注释 = "打印统计. 原方法: PrintStatistics. 官方简介: 把形状处理的统计信息打印到当前 Messenger 上." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeProcess_ShapeContext.PrintStatistics (@<对象>)
+    }
+
+    方法 设置非流形 <公开 静态 注释 = "设置非流形. 原方法: SetNonManifold. 官方简介: 设置非流形标志" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 非流形 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeProcess_ShapeContext.SetNonManifold (@<对象>, @<非流形>)
+    }
+
+    方法 是否非流形 <公开 静态 类型 = 逻辑型 注释 = "是否非流形. 原方法: IsNonManifold. 官方简介: 获取非流形标志" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeProcess_ShapeContext.IsNonManifold (@<对象>)
+    }
+
+}
+
+类 曲面分割器 <公开 注释 = "曲面分割器: 原类 ShapeUpgrade_SplitSurface (libTKShHealing, 头文件 ShapeUpgrade/ShapeUpgrade_SplitSurface.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 按给定准则分割曲面." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: ShapeUpgrade_SplitSurface. 官方简介: 空构造函数." @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeUpgrade_SplitSurface.构造 ()
+    }
+
+    方法 初始化 <公开 静态 注释 = "初始化. 原方法: Init. 官方简介: 用单个支撑曲面初始化." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeUpgrade_SplitSurface.Init (@<对象>, @<S>)
+    }
+
+    方法 初始化_2 <公开 静态 注释 = "初始化_2. 原方法: Init. 官方简介: 用带边界参数的单个支撑曲面初始化." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 S <类型 = 长整数>
+    参数 U起点 <类型 = 小数>
+    参数 U终点 <类型 = 小数>
+    参数 V起点 <类型 = 小数>
+    参数 V终点 <类型 = 小数>
+    参数 面积 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeUpgrade_SplitSurface.Init_2 (@<对象>, @<S>, @<U起点>, @<U终点>, @<V起点>, @<V终点>, @<面积>)
+    }
+
+    方法 构建 <公开 静态 注释 = "构建. 原方法: Build. 官方简介: 执行支撑曲面的分割. 若结果曲面是 B-Spline 且 Segment 为 True, 则结果由 U 与 V SplitValues 限定的曲面段组成(使用 Geom_BSplineSurface::Segment 方法). 若 Segment 为 False, 则结果由基于同一完整曲面的 Geom_RectangularTrimmedSurface 组成. 必须设置字段 myNbResultingRow 与 myNbResultingCol 以指定结果曲面网格的尺寸." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 段 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeUpgrade_SplitSurface.Build (@<对象>, @<段>)
+    }
+
+    方法 计算 <公开 静态 注释 = "计算. 原方法: Compute. 官方简介: 计算用于曲面修正/分割的点." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 段 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeUpgrade_SplitSurface.Compute (@<对象>, @<段>)
+    }
+
+    方法 执行 <公开 静态 注释 = "执行. 原方法: Perform. 官方简介: 执行曲面的修正/分割. 首先通过方法 Compute() 定义分割值, 然后调用方法 Build()." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 段 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeUpgrade_SplitSurface.Perform (@<对象>, @<段>)
+    }
+
+    方法 状态 <公开 静态 类型 = 逻辑型 注释 = "状态. 原方法: Status. 官方简介: 返回状态 OK - 无需拆分 DONE1 - 需要拆分且给出多个面片 DONE2 - 需要拆分, 但只给出单个面片(初始) DONE3 - 曲面的几何形式或参数化被修改" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 状态 <类型 = 整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeUpgrade_SplitSurface.Status (@<对象>, @<状态>)
+    }
+
+}
+
+类 同域合并 <公开 注释 = "同域合并: 原类 ShapeUpgrade_UnifySameDomain (libTKShHealing, 头文件 ShapeUpgrade/ShapeUpgrade_UnifySameDomain.hxx). 方法均为静态封装, 句柄用 OCCT核心.释放句柄 释放." 注释 = "官方简介: 本工具尝试合并形状中位于同一几何上的面与边. 若一组相邻面/边位于重合的曲面/曲线上, 则被视为 '同域'. 此时这些面/边可合并为一个面/边. ShapeUpgrade_UnifySameDomain 由形状与以下可选参数初始化: UnifyFaces - 尝试合并所有可能的面 UnifyEdges - 尝试合并所有可能的边 ConcatBSplines - 若此标志设为 true, 则公共顶点上 C1 连续且位于 B 样条或 Bezier 曲线上的所有相邻边将合并为一条公共边." @禁止创建对象 = 真>
+{
+
+    方法 创建 <公开 静态 类型 = 长整数 注释 = "创建. 原构造器: ShapeUpgrade_UnifySameDomain. 官方简介: 空构造函数" @嵌入式方法 = "">
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeUpgrade_UnifySameDomain.构造 ()
+    }
+
+    方法 创建_2 <公开 静态 类型 = 长整数 注释 = "创建_2. 原构造器: ShapeUpgrade_UnifySameDomain. 官方简介: 构造器定义输入形状与必要标志. 它不执行合并." @嵌入式方法 = "">
+    参数 形状 <类型 = 长整数>
+    参数 统一边 <类型 = 逻辑型>
+    参数 统一面 <类型 = 逻辑型>
+    参数 拼接B样条 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeUpgrade_UnifySameDomain.构造_2 (@<形状>, @<统一边>, @<统一面>, @<拼接B样条>)
+    }
+
+    方法 初始化 <公开 静态 注释 = "初始化. 原方法: Initialize. 官方简介: 用形状和必要标志初始化. 它不执行统一化. 若打算把 History 占位符置空, 请在初始化之后进行." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 形状 <类型 = 长整数>
+    参数 统一边 <类型 = 逻辑型>
+    参数 统一面 <类型 = 逻辑型>
+    参数 拼接B样条 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeUpgrade_UnifySameDomain.Initialize (@<对象>, @<形状>, @<统一边>, @<统一面>, @<拼接B样条>)
+    }
+
+    方法 允许内部边 <公开 静态 注释 = "允许内部边. 原方法: AllowInternalEdges. 官方简介: 设置标志, 定义在非流形拓扑情况下是否允许在合并后的面内部创建内部边. 未设置该标志时, 经由多重连接边的合并不被允许. 默认值为 false." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 值 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeUpgrade_UnifySameDomain.AllowInternalEdges (@<对象>, @<值>)
+    }
+
+    方法 保留形状 <公开 静态 注释 = "保留形状. 原方法: KeepShape. 官方简介: 设置用于避免面/边合并的形状. 该形状可以是顶点或边. 若形状是顶点, 则禁止合并相连的边. 若形状是边, 则禁止合并相连的面. 可以多次调用该方法以保留多个形状." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 形状 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeUpgrade_UnifySameDomain.KeepShape (@<对象>, @<形状>)
+    }
+
+    方法 设置安全输入模式 <公开 静态 注释 = "设置安全输入模式. 原方法: SetSafeInputMode. 官方简介: 设置标志, 定义算法在修改输入形状方面的行为. 若该标志等于 True, 则在修改过程中输入(原始)形状不能被修改. 默认值为 true." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 值 <类型 = 逻辑型>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeUpgrade_UnifySameDomain.SetSafeInputMode (@<对象>, @<值>)
+    }
+
+    方法 设置线性容差 <公开 静态 注释 = "设置线性容差. 原方法: SetLinearTolerance. 官方简介: 设置线性容差. 在决定形状合并时它起到弦误差的作用. 默认值为 Precision::Confusion()." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 值 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeUpgrade_UnifySameDomain.SetLinearTolerance (@<对象>, @<值>)
+    }
+
+    方法 设置角度容差 <公开 静态 注释 = "设置角度容差. 原方法: SetAngularTolerance. 官方简介: 设置角度容差. 若两个形状形成的连接角大于该值, 则它们不会被合并. 默认值为 Precision::Angular()." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    参数 值 <类型 = 小数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeUpgrade_UnifySameDomain.SetAngularTolerance (@<对象>, @<值>)
+    }
+
+    方法 构建 <公开 静态 注释 = "构建. 原方法: Build. 官方简介: 执行同域合并并构建结果形状." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeUpgrade_UnifySameDomain.Build (@<对象>)
+    }
+
+    方法 形状 <公开 静态 类型 = 长整数 注释 = "形状. 原方法: Shape. 官方简介: 给出结果形状" @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeUpgrade_UnifySameDomain.Shape (@<对象>)
+    }
+
+    方法 历史 <公开 静态 类型 = 长整数 注释 = "历史. 原方法: History. 官方简介: 返回已处理形状的历史." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeUpgrade_UnifySameDomain.History (@<对象>)
+    }
+
+    方法 历史_2 <公开 静态 类型 = 长整数 注释 = "历史_2. 原方法: History. 官方简介: 返回已处理形状的历史." @嵌入式方法 = "">
+    参数 对象 <类型 = 长整数>
+    {
+        @ com.volcano.occt.Gen_TKShHealing.ShapeUpgrade_UnifySameDomain.History_2 (@<对象>)
+    }
+
+}

@@ -1,0 +1,630 @@
+<火山程序 类型 = "通常" 版本 = 1 />
+
+包 火山.Skia <注释 = "Skia 颜色空间域封装(批次3): Skia颜色空间(句柄) / SkiaICC配置(句柄) / Skia传递函数(值类 28 字节) / Skia色度矩阵(值类 36 字节) / Skia色度坐标(值类 32 字节)。"
+        注释 = "【值类字节数(实测核对)】Skia传递函数 = 28(7 个 float: G/A/B/C/D/E/F), Skia色度矩阵 = 36(9 个 float 行优先 fM00..fM22), Skia色度坐标 = 32(8 个 float: RX/RY/GX/GY/BX/BY/WX/WY)。三者都是值类, 用 取地址 () 传参, 没有 取句柄。"
+        注释 = "【可复用 vs 一次性】Skia颜色空间 有 ref 也有 unref → 可 加引用 后交给多个对象; SkiaICC配置 只有 new/delete → 一份引用, 不可复用。"
+        注释 = "【CICP 枚举非连续】色度主值 0/1/4/5/6/7/8/9/10/11/12/22; 传递特性 0/1/4/5/6/7/8/11/13/14/15/16/17/18 —— 不是 0..n 的连续编号, 逐值见各方法注释。"
+        注释 = "【必须显式释放】句柄类的 类_清理 一律空实现, 谁创建谁 释放。"
+        @视窗.头文件搜寻目录 = "deps\\skia"
+        @视窗.头文件搜寻目录 = "deps\\skia\\include\\c"
+        @视窗.头文件搜寻目录 = "native"
+        "@视窗.外部头文件.全局-100" = "skia_include.h">
+
+# ============================================================
+# 一、Skia传递函数(值类 28 字节)
+# ============================================================
+
+类 Skia传递函数 <公开 注释 = "传递函数曲线(sk_colorspace_transfer_fn_t, 28 字节): 偏移 0 G / 4 A / 8 B / 12 C / 16 D / 20 E / 24 F, 全部单精度。用 取地址 () 传参。">
+{
+    变量 数据 <公开 类型 = 字节集类 注释 = "28 字节缓冲, 对应 sk_colorspace_transfer_fn_t。">
+
+    方法 类_初始化 <公开 注释 = "分配 28 字节缓冲并置为标准 sRGB 曲线。">
+    {
+        数据 = 取空白字节集 (28)
+        标准sRGB ()
+    }
+
+    方法 标准sRGB <公开 类型 = 逻辑型 注释 = "把本对象就地填成标准 sRGB 曲线(不新建对象)。">
+    {
+        变量 地址 <类型 = 变整数>
+        地址 = 取地址 ()
+        @ sk_colorspace_transfer_fn_named_srgb((sk_colorspace_transfer_fn_t*)@<地址>);
+        返回 (真)
+    }
+
+    方法 新建_sRGB <公开 静态 类型 = Skia传递函数 注释 = "静态; 标准 sRGB 曲线。">
+    {
+        变量 结果 <类型 = Skia传递函数>
+        变量 地址 <类型 = 变整数>
+        地址 = 结果.取地址 ()
+        @ sk_colorspace_transfer_fn_named_srgb((sk_colorspace_transfer_fn_t*)@<地址>);
+        返回 (结果)
+    }
+
+    方法 新建_伽马2点2 <公开 静态 类型 = Skia传递函数 注释 = "静态; 纯 gamma 2.2 曲线。">
+    {
+        变量 结果 <类型 = Skia传递函数>
+        变量 地址 <类型 = 变整数>
+        地址 = 结果.取地址 ()
+        @ sk_colorspace_transfer_fn_named_2dot2((sk_colorspace_transfer_fn_t*)@<地址>);
+        返回 (结果)
+    }
+
+    方法 新建_线性 <公开 静态 类型 = Skia传递函数 注释 = "静态; 直线传递(线性光)。">
+    {
+        变量 结果 <类型 = Skia传递函数>
+        变量 地址 <类型 = 变整数>
+        地址 = 结果.取地址 ()
+        @ sk_colorspace_transfer_fn_named_linear((sk_colorspace_transfer_fn_t*)@<地址>);
+        返回 (结果)
+    }
+
+    方法 新建_Rec2020 <公开 静态 类型 = Skia传递函数 注释 = "静态; BT.2020 曲线。">
+    {
+        变量 结果 <类型 = Skia传递函数>
+        变量 地址 <类型 = 变整数>
+        地址 = 结果.取地址 ()
+        @ sk_colorspace_transfer_fn_named_rec2020((sk_colorspace_transfer_fn_t*)@<地址>);
+        返回 (结果)
+    }
+
+    方法 新建_PQ <公开 静态 类型 = Skia传递函数 注释 = "静态; SMPTE ST 2084 (HDR10)。">
+    {
+        变量 结果 <类型 = Skia传递函数>
+        变量 地址 <类型 = 变整数>
+        地址 = 结果.取地址 ()
+        @ sk_colorspace_transfer_fn_named_pq((sk_colorspace_transfer_fn_t*)@<地址>);
+        返回 (结果)
+    }
+
+    方法 新建_HLG <公开 静态 类型 = Skia传递函数 注释 = "静态; 混合对数伽马(HLG HDR)。">
+    {
+        变量 结果 <类型 = Skia传递函数>
+        变量 地址 <类型 = 变整数>
+        地址 = 结果.取地址 ()
+        @ sk_colorspace_transfer_fn_named_hlg((sk_colorspace_transfer_fn_t*)@<地址>);
+        返回 (结果)
+    }
+
+    方法 求值 <公开 类型 = 小数 注释 = "把编码值(0~1)转成线性光值(0~1)。">
+    参数 输入 <类型 = 小数>
+    {
+        变量 地址 <类型 = 变整数>
+        变量 结果 <类型 = 小数>
+        地址 = 取地址 ()
+        @ @<结果> = ((double)sk_colorspace_transfer_fn_eval((const sk_colorspace_transfer_fn_t*)@<地址>, (float)@<输入>));
+        返回 (结果)
+    }
+
+    方法 求反到 <公开 类型 = 逻辑型 注释 = "求逆曲线写入 结果传递函数; 不可逆时返回假。">
+    参数 结果传递函数 <类型 = Skia传递函数>
+    {
+        变量 地址 <类型 = 变整数>
+        变量 结果 <类型 = 逻辑型>
+        地址 = 取地址 ()
+        @ @<结果> = (sk_colorspace_transfer_fn_invert((const sk_colorspace_transfer_fn_t*)@<地址>, (sk_colorspace_transfer_fn_t*)@<结果传递函数>.@n<Skia传递函数.数据>.GetPtr()) != 0);
+        返回 (结果)
+    }
+
+    方法 G <公开 属性读 类型 = 小数 注释 = "G 分量。" 折叠 @嵌入式方法 = "">
+    {
+        @ ((double)((const sk_colorspace_transfer_fn_t*)@sn<this>.@n<Skia传递函数.数据>.GetPtr())->fG)
+    }
+
+    方法 A <公开 属性读 类型 = 小数 注释 = "A 分量。" 折叠 @嵌入式方法 = "">
+    {
+        @ ((double)((const sk_colorspace_transfer_fn_t*)@sn<this>.@n<Skia传递函数.数据>.GetPtr())->fA)
+    }
+
+    方法 B <公开 属性读 类型 = 小数 注释 = "B 分量。" 折叠 @嵌入式方法 = "">
+    {
+        @ ((double)((const sk_colorspace_transfer_fn_t*)@sn<this>.@n<Skia传递函数.数据>.GetPtr())->fB)
+    }
+
+    方法 C <公开 属性读 类型 = 小数 注释 = "C 分量。" 折叠 @嵌入式方法 = "">
+    {
+        @ ((double)((const sk_colorspace_transfer_fn_t*)@sn<this>.@n<Skia传递函数.数据>.GetPtr())->fC)
+    }
+
+    方法 D <公开 属性读 类型 = 小数 注释 = "D 分量。" 折叠 @嵌入式方法 = "">
+    {
+        @ ((double)((const sk_colorspace_transfer_fn_t*)@sn<this>.@n<Skia传递函数.数据>.GetPtr())->fD)
+    }
+
+    方法 E <公开 属性读 类型 = 小数 注释 = "E 分量。" 折叠 @嵌入式方法 = "">
+    {
+        @ ((double)((const sk_colorspace_transfer_fn_t*)@sn<this>.@n<Skia传递函数.数据>.GetPtr())->fE)
+    }
+
+    方法 F <公开 属性读 类型 = 小数 注释 = "F 分量。" 折叠 @嵌入式方法 = "">
+    {
+        @ ((double)((const sk_colorspace_transfer_fn_t*)@sn<this>.@n<Skia传递函数.数据>.GetPtr())->fF)
+    }
+
+    方法 取地址 <公开 类型 = 变整数 注释 = "缓冲首地址(即 sk_colorspace_transfer_fn_t*)。" 折叠 @嵌入式方法 = "">
+    {
+        @ ((intptr_t)@sn<this>.@n<Skia传递函数.数据>.GetPtr())
+    }
+}
+
+# ============================================================
+# 二、Skia色度矩阵(值类 36 字节)
+# ============================================================
+
+类 Skia色度矩阵 <公开 注释 = "到 XYZ D50 的 3x3 色度矩阵(sk_colorspace_xyz_t, 36 字节): 9 个单精度, 行优先 fM00..fM22。用 取地址 () 传参。">
+{
+    变量 数据 <公开 类型 = 字节集类 注释 = "36 字节缓冲, 对应 sk_colorspace_xyz_t。">
+
+    方法 类_初始化 <公开 注释 = "分配 36 字节缓冲并置为 sRGB 矩阵。">
+    {
+        数据 = 取空白字节集 (36)
+        标准sRGB ()
+    }
+
+    方法 标准sRGB <公开 类型 = 逻辑型 注释 = "把本对象就地填成 sRGB 的 XYZ D50 矩阵。">
+    {
+        变量 地址 <类型 = 变整数>
+        地址 = 取地址 ()
+        @ sk_colorspace_xyz_named_srgb((sk_colorspace_xyz_t*)@<地址>);
+        返回 (真)
+    }
+
+    方法 新建_sRGB <公开 静态 类型 = Skia色度矩阵 注释 = "静态; sRGB 的 XYZ D50 矩阵。">
+    {
+        变量 结果 <类型 = Skia色度矩阵>
+        变量 地址 <类型 = 变整数>
+        地址 = 结果.取地址 ()
+        @ sk_colorspace_xyz_named_srgb((sk_colorspace_xyz_t*)@<地址>);
+        返回 (结果)
+    }
+
+    方法 新建_AdobeRGB <公开 静态 类型 = Skia色度矩阵 注释 = "静态; Adobe RGB 的矩阵。">
+    {
+        变量 结果 <类型 = Skia色度矩阵>
+        变量 地址 <类型 = 变整数>
+        地址 = 结果.取地址 ()
+        @ sk_colorspace_xyz_named_adobe_rgb((sk_colorspace_xyz_t*)@<地址>);
+        返回 (结果)
+    }
+
+    方法 新建_DisplayP3 <公开 静态 类型 = Skia色度矩阵 注释 = "静态; Display P3 的矩阵。">
+    {
+        变量 结果 <类型 = Skia色度矩阵>
+        变量 地址 <类型 = 变整数>
+        地址 = 结果.取地址 ()
+        @ sk_colorspace_xyz_named_display_p3((sk_colorspace_xyz_t*)@<地址>);
+        返回 (结果)
+    }
+
+    方法 新建_Rec2020 <公开 静态 类型 = Skia色度矩阵 注释 = "静态; BT.2020 的矩阵。">
+    {
+        变量 结果 <类型 = Skia色度矩阵>
+        变量 地址 <类型 = 变整数>
+        地址 = 结果.取地址 ()
+        @ sk_colorspace_xyz_named_rec2020((sk_colorspace_xyz_t*)@<地址>);
+        返回 (结果)
+    }
+
+    方法 新建_XYZ <公开 静态 类型 = Skia色度矩阵 注释 = "静态; 单位矩阵(XYZ 到 XYZ)。">
+    {
+        变量 结果 <类型 = Skia色度矩阵>
+        变量 地址 <类型 = 变整数>
+        地址 = 结果.取地址 ()
+        @ sk_colorspace_xyz_named_xyz((sk_colorspace_xyz_t*)@<地址>);
+        返回 (结果)
+    }
+
+    方法 求反到 <公开 类型 = 逻辑型 注释 = "求逆矩阵写入 结果矩阵; 奇异矩阵返回假。">
+    参数 结果矩阵 <类型 = Skia色度矩阵>
+    {
+        变量 地址 <类型 = 变整数>
+        变量 结果 <类型 = 逻辑型>
+        地址 = 取地址 ()
+        @ @<结果> = (sk_colorspace_xyz_invert((const sk_colorspace_xyz_t*)@<地址>, (sk_colorspace_xyz_t*)@<结果矩阵>.@n<Skia色度矩阵.数据>.GetPtr()) != 0);
+        返回 (结果)
+    }
+
+    方法 连接 <公开 静态 注释 = "静态; 结果矩阵 = 甲矩阵 x 乙矩阵(先甲后乙)。" 折叠 @嵌入式方法 = "">
+    参数 甲矩阵 <类型 = Skia色度矩阵>
+    参数 乙矩阵 <类型 = Skia色度矩阵>
+    参数 结果矩阵 <类型 = Skia色度矩阵>
+    {
+        @ sk_colorspace_xyz_concat((const sk_colorspace_xyz_t*)@<甲矩阵>.@n<Skia色度矩阵.数据>.GetPtr(), (const sk_colorspace_xyz_t*)@<乙矩阵>.@n<Skia色度矩阵.数据>.GetPtr(), (sk_colorspace_xyz_t*)@<结果矩阵>.@n<Skia色度矩阵.数据>.GetPtr());
+    }
+
+    方法 取元素 <公开 类型 = 小数 注释 = "取第 行,列 个元素(行列 0~2)。">
+    参数 行 <类型 = 整数>
+    参数 列 <类型 = 整数>
+    {
+        变量 地址 <类型 = 变整数>
+        变量 结果 <类型 = 小数>
+        地址 = 取地址 ()
+        @ @<结果> = (double)((const float*)@<地址>)[@<行> * 3 + @<列>];
+        返回 (结果)
+    }
+
+    方法 置元素 <公开 类型 = 逻辑型 注释 = "设置第 行,列 个元素(行列 0~2)。">
+    参数 行 <类型 = 整数>
+    参数 列 <类型 = 整数>
+    参数 值 <类型 = 小数>
+    {
+        变量 地址 <类型 = 变整数>
+        地址 = 取地址 ()
+        @ ((float*)@<地址>)[@<行> * 3 + @<列>] = (float)@<值>;
+        返回 (真)
+    }
+
+    方法 取地址 <公开 类型 = 变整数 注释 = "缓冲首地址(即 sk_colorspace_xyz_t*)。" 折叠 @嵌入式方法 = "">
+    {
+        @ ((intptr_t)@sn<this>.@n<Skia色度矩阵.数据>.GetPtr())
+    }
+}
+
+# ============================================================
+# 三、Skia色度坐标(值类 32 字节)
+# ============================================================
+
+类 Skia色度坐标 <公开 注释 = "RGB 三基色与白点的 xy 坐标(sk_colorspace_primaries_t, 32 字节): RX@0 RY@4 GX@8 GY@12 BX@16 BY@20 WX@24 WY@28, 共 8 个单精度。">
+{
+    变量 数据 <公开 类型 = 字节集类 注释 = "32 字节缓冲, 对应 sk_colorspace_primaries_t。">
+
+    方法 类_初始化 <公开 注释 = "分配 32 字节缓冲并置为 sRGB 基色坐标(RGB 与 D65 白点)。">
+    {
+        数据 = 取空白字节集 (32)
+        置sRGB ()
+    }
+
+    方法 置sRGB <公开 类型 = 逻辑型 注释 = "置为 sRGB/Rec709 基色: R(0.64,0.33) G(0.30,0.60) B(0.15,0.06) 白点 D65(0.3127,0.3290)。">
+    {
+        变量 地址 <类型 = 变整数>
+        地址 = 取地址 ()
+        @ ([&]() -> bool { sk_colorspace_primaries_t* __p = (sk_colorspace_primaries_t*)@<地址>; __p->fRX = 0.64f; __p->fRY = 0.33f; __p->fGX = 0.30f; __p->fGY = 0.60f; __p->fBX = 0.15f; __p->fBY = 0.06f; __p->fWX = 0.3127f; __p->fWY = 0.3290f; return true; }());
+        返回 (真)
+    }
+
+    方法 置坐标 <公开 类型 = 逻辑型 注释 = "一次写入 8 个坐标值(顺序 R.x R.y G.x G.y B.x B.y 白点.x 白点.y)。">
+    参数 红X值 <类型 = 小数>
+    参数 红Y值 <类型 = 小数>
+    参数 绿X值 <类型 = 小数>
+    参数 绿Y值 <类型 = 小数>
+    参数 蓝X值 <类型 = 小数>
+    参数 蓝Y值 <类型 = 小数>
+    参数 白X值 <类型 = 小数>
+    参数 白Y值 <类型 = 小数>
+    {
+        变量 地址 <类型 = 变整数>
+        地址 = 取地址 ()
+        @ ([&]() -> bool { sk_colorspace_primaries_t* __p = (sk_colorspace_primaries_t*)@<地址>; __p->fRX = (float)@<红X值>; __p->fRY = (float)@<红Y值>; __p->fGX = (float)@<绿X值>; __p->fGY = (float)@<绿Y值>; __p->fBX = (float)@<蓝X值>; __p->fBY = (float)@<蓝Y值>; __p->fWX = (float)@<白X值>; __p->fWY = (float)@<白Y值>; return true; }());
+        返回 (真)
+    }
+
+    方法 转色度矩阵 <公开 类型 = 逻辑型 注释 = "由本坐标推算 到 XYZ D50 的 3x3 矩阵写入 结果矩阵; 坐标非法返回假。">
+    参数 结果矩阵 <类型 = Skia色度矩阵>
+    {
+        变量 地址 <类型 = 变整数>
+        变量 结果 <类型 = 逻辑型>
+        地址 = 取地址 ()
+        @ @<结果> = (sk_colorspace_primaries_to_xyzd50((const sk_colorspace_primaries_t*)@<地址>, (sk_colorspace_xyz_t*)@<结果矩阵>.@n<Skia色度矩阵.数据>.GetPtr()) != 0);
+        返回 (结果)
+    }
+
+    方法 红X <公开 属性读 类型 = 小数 注释 = "红基色 x。" 折叠 @嵌入式方法 = "">
+    {
+        @ ((double)((const sk_colorspace_primaries_t*)@sn<this>.@n<Skia色度坐标.数据>.GetPtr())->fRX)
+    }
+
+    方法 红Y <公开 属性读 类型 = 小数 注释 = "红基色 y。" 折叠 @嵌入式方法 = "">
+    {
+        @ ((double)((const sk_colorspace_primaries_t*)@sn<this>.@n<Skia色度坐标.数据>.GetPtr())->fRY)
+    }
+
+    方法 白X <公开 属性读 类型 = 小数 注释 = "白点 x。" 折叠 @嵌入式方法 = "">
+    {
+        @ ((double)((const sk_colorspace_primaries_t*)@sn<this>.@n<Skia色度坐标.数据>.GetPtr())->fWX)
+    }
+
+    方法 白Y <公开 属性读 类型 = 小数 注释 = "白点 y。" 折叠 @嵌入式方法 = "">
+    {
+        @ ((double)((const sk_colorspace_primaries_t*)@sn<this>.@n<Skia色度坐标.数据>.GetPtr())->fWY)
+    }
+
+    方法 取地址 <公开 类型 = 变整数 注释 = "缓冲首地址(即 sk_colorspace_primaries_t*)。" 折叠 @嵌入式方法 = "">
+    {
+        @ ((intptr_t)@sn<this>.@n<Skia色度坐标.数据>.GetPtr())
+    }
+}
+
+# ============================================================
+# 四、SkiaICC配置(句柄, new/delete)
+# ============================================================
+
+类 SkiaICC配置 <公开 注释 = "ICC 配置(sk_colorspace_icc_profile_t, 不透明句柄): 只有 new/delete, 一份引用, 不可复用。">
+{
+    变量 对象指针 <公开 类型 = 变整数 注释 = "原生句柄, 0 表示无效。">
+    变量 是否拥有句柄 <公开 类型 = 逻辑型 值 = 真 注释 = "为假时 释放 不销毁原生对象(借用句柄)。">
+
+    方法 取句柄 <公开 属性读 类型 = 变整数 注释 = "原生句柄(变整数)。" 折叠 @嵌入式方法 = "">
+    {
+        @ (@sn<this>.@n<SkiaICC配置.对象指针>)
+    }
+
+    方法 新建 <公开 静态 类型 = SkiaICC配置 注释 = "静态; 空 ICC 配置。">
+    {
+        变量 结果 <类型 = SkiaICC配置>
+        变量 新指针 <类型 = 变整数>
+        @ @<新指针> = (intptr_t)sk_colorspace_icc_profile_new();
+        如果 (新指针 == 0)
+        {
+            返回 (结果)
+        }
+        结果.对象指针 = 新指针
+        返回 (结果)
+    }
+
+    方法 释放 <公开 类型 = 逻辑型 注释 = "销毁原生对象; 可重复调用。">
+    {
+        变量 旧指针 <类型 = 变整数>
+        如果 (对象指针 == 0)
+        {
+            返回 (真)
+        }
+        如果 (是否拥有句柄 == 假)
+        {
+            对象指针 = 0
+            返回 (真)
+        }
+        旧指针 = 对象指针
+        @ sk_colorspace_icc_profile_delete((sk_colorspace_icc_profile_t*)@<旧指针>);
+        对象指针 = 0
+        返回 (真)
+    }
+
+    方法 类_清理 <公开 注释 = "对象销毁回调: 不做任何事(句柄由调用方显式 释放)。">
+    {
+    }
+
+    方法 是否有效 <公开 类型 = 逻辑型 注释 = "句柄是否有效(非 0)。" 折叠 @嵌入式方法 = "">
+    {
+        @ (@sn<this>.@n<SkiaICC配置.对象指针> != 0)
+    }
+
+    方法 解析 <公开 类型 = 逻辑型 注释 = "从 ICC 文件字节解析; 数据非法返回假。">
+    参数 配置数据 <类型 = 字节集类>
+    {
+        变量 句柄 <类型 = 变整数>
+        变量 长度 <类型 = 变整数>
+        变量 结果 <类型 = 逻辑型>
+        句柄 = 对象指针
+        长度 = 取字节集长度 (配置数据)
+        @ @<结果> = (sk_colorspace_icc_profile_parse((const void*)@<配置数据>.GetPtr(), (size_t)@<长度>, (sk_colorspace_icc_profile_t*)@<句柄>) != 0);
+        返回 (结果)
+    }
+
+    方法 取配置数据 <公开 类型 = 变整数 注释 = "返回 ICC 数据裸地址(不拷贝); 结果尺寸 需 4 字节缓冲以写入 uint32 长度; 无数据返回 0。">
+    参数 结果尺寸 <类型 = 字节集类>
+    {
+        变量 句柄 <类型 = 变整数>
+        变量 结果 <类型 = 变整数>
+        句柄 = 对象指针
+        @ @<结果> = ((intptr_t)sk_colorspace_icc_profile_get_buffer((const sk_colorspace_icc_profile_t*)@<句柄>, (uint32_t*)@<结果尺寸>.GetPtr()));
+        返回 (结果)
+    }
+
+    方法 取色度矩阵 <公开 类型 = 逻辑型 注释 = "输出到 XYZ D50 的 3x3 矩阵写入 结果矩阵。">
+    参数 结果矩阵 <类型 = Skia色度矩阵>
+    {
+        变量 句柄 <类型 = 变整数>
+        变量 结果 <类型 = 逻辑型>
+        句柄 = 对象指针
+        @ @<结果> = (sk_colorspace_icc_profile_get_to_xyzd50((const sk_colorspace_icc_profile_t*)@<句柄>, (sk_colorspace_xyz_t*)@<结果矩阵>.@n<Skia色度矩阵.数据>.GetPtr()) != 0);
+        返回 (结果)
+    }
+}
+
+# ============================================================
+# 五、Skia颜色空间(句柄, ref/unref 都有 → 可复用)
+# ============================================================
+
+类 Skia颜色空间 <公开 注释 = "颜色空间(sk_colorspace_t): ref/unref 都导出, 可 加引用 后交给多个对象; 传 0 通常等价 sRGB。">
+{
+    变量 对象指针 <公开 类型 = 变整数 注释 = "原生句柄, 0 表示默认 sRGB。">
+    变量 是否拥有句柄 <公开 类型 = 逻辑型 值 = 真 注释 = "为假时 释放 不销毁原生对象(借用句柄)。">
+
+    方法 取句柄 <公开 属性读 类型 = 变整数 注释 = "原生句柄(变整数)。" 折叠 @嵌入式方法 = "">
+    {
+        @ (@sn<this>.@n<Skia颜色空间.对象指针>)
+    }
+
+    方法 加引用 <公开 注释 = "增加一份引用, 可放心交给多个对象使用; 每个持有者用完各自 释放。sk_colorspace_ref 的参数是非 const。" 折叠 @嵌入式方法 = "">
+    {
+        @ sk_colorspace_ref((sk_colorspace_t*)@sn<this>.@n<Skia颜色空间.对象指针>)
+    }
+
+    方法 释放 <公开 类型 = 逻辑型 注释 = "仅减引用计数; 可重复调用。">
+    {
+        变量 旧指针 <类型 = 变整数>
+        如果 (对象指针 == 0)
+        {
+            返回 (真)
+        }
+        如果 (是否拥有句柄 == 假)
+        {
+            对象指针 = 0
+            返回 (真)
+        }
+        旧指针 = 对象指针
+        @ sk_colorspace_unref((sk_colorspace_t*)@<旧指针>);
+        对象指针 = 0
+        返回 (真)
+    }
+
+    方法 类_清理 <公开 注释 = "对象销毁回调: 不做任何事(句柄由调用方显式 释放)。">
+    {
+    }
+
+    方法 是否有效 <公开 类型 = 逻辑型 注释 = "句柄是否有效(非 0)。" 折叠 @嵌入式方法 = "">
+    {
+        @ (@sn<this>.@n<Skia颜色空间.对象指针> != 0)
+    }
+
+    方法 新建_sRGB <公开 静态 类型 = Skia颜色空间 注释 = "静态; 标准 sRGB(最常用, 与颜色空间传 0 等价)。">
+    {
+        变量 结果 <类型 = Skia颜色空间>
+        变量 新指针 <类型 = 变整数>
+        @ @<新指针> = (intptr_t)sk_colorspace_new_srgb();
+        如果 (新指针 == 0)
+        {
+            返回 (结果)
+        }
+        结果.对象指针 = 新指针
+        返回 (结果)
+    }
+
+    方法 新建_线性sRGB <公开 静态 类型 = Skia颜色空间 注释 = "静态; 线性光空间的 sRGB 基色。">
+    {
+        变量 结果 <类型 = Skia颜色空间>
+        变量 新指针 <类型 = 变整数>
+        @ @<新指针> = (intptr_t)sk_colorspace_new_srgb_linear();
+        如果 (新指针 == 0)
+        {
+            返回 (结果)
+        }
+        结果.对象指针 = 新指针
+        返回 (结果)
+    }
+
+    方法 新建_按RGB <公开 静态 类型 = Skia颜色空间 注释 = "静态; 自定义传递曲线 + 3x3 色度矩阵。">
+    参数 传递函数 <类型 = Skia传递函数>
+    参数 色度矩阵 <类型 = Skia色度矩阵>
+    {
+        变量 结果 <类型 = Skia颜色空间>
+        变量 新指针 <类型 = 变整数>
+        新指针 = 0
+        @ @<新指针> = (intptr_t)sk_colorspace_new_rgb((const sk_colorspace_transfer_fn_t*)@<传递函数>.@n<Skia传递函数.数据>.GetPtr(), (const sk_colorspace_xyz_t*)@<色度矩阵>.@n<Skia色度矩阵.数据>.GetPtr());
+        如果 (新指针 == 0)
+        {
+            返回 (结果)
+        }
+        结果.对象指针 = 新指针
+        返回 (结果)
+    }
+
+    方法 新建_按CICP <公开 静态 类型 = Skia颜色空间 注释 = "静态; 色度主值 0/1/4/5/6/7/8/9/10/11/12/22, 传递特性 0/1/4/5/6/7/8/11/13/14/15/16/17/18(非连续编号)。">
+    参数 色度主值 <类型 = 整数>
+    参数 传递特性 <类型 = 整数>
+    {
+        变量 结果 <类型 = Skia颜色空间>
+        变量 新指针 <类型 = 变整数>
+        @ @<新指针> = (intptr_t)sk_colorspace_new_cicp((sk_colorspace_primaries_cicp_t)@<色度主值>, (sk_colorspace_transfer_fn_cicp_t)@<传递特性>);
+        如果 (新指针 == 0)
+        {
+            返回 (结果)
+        }
+        结果.对象指针 = 新指针
+        返回 (结果)
+    }
+
+    方法 新建_按ICC <公开 静态 类型 = Skia颜色空间 注释 = "静态; 从 ICC 配置对象构造。">
+    参数 ICC配置 <类型 = SkiaICC配置>
+    {
+        变量 结果 <类型 = Skia颜色空间>
+        变量 配置句柄 <类型 = 变整数>
+        变量 新指针 <类型 = 变整数>
+        配置句柄 = ICC配置.对象指针
+        @ @<新指针> = (intptr_t)sk_colorspace_new_icc((const sk_colorspace_icc_profile_t*)@<配置句柄>);
+        如果 (新指针 == 0)
+        {
+            返回 (结果)
+        }
+        结果.对象指针 = 新指针
+        返回 (结果)
+    }
+
+    方法 导出为ICC配置 <公开 类型 = 逻辑型 注释 = "就地填充 ICC 配置对象(先用 SkiaICC配置.新建 创建)。">
+    参数 ICC配置 <类型 = SkiaICC配置>
+    {
+        变量 句柄 <类型 = 变整数>
+        变量 配置句柄 <类型 = 变整数>
+        句柄 = 对象指针
+        配置句柄 = ICC配置.对象指针
+        @ sk_colorspace_to_profile((const sk_colorspace_t*)@<句柄>, (sk_colorspace_icc_profile_t*)@<配置句柄>);
+        返回 (真)
+    }
+
+    方法 传递是否接近sRGB <公开 类型 = 逻辑型 注释 = "传递曲线与 sRGB 的误差在容差内为真。" 折叠 @嵌入式方法 = "">
+    {
+        @ (sk_colorspace_gamma_close_to_srgb((const sk_colorspace_t*)@sn<this>.@n<Skia颜色空间.对象指针>) != 0)
+    }
+
+    方法 传递是否线性 <公开 类型 = 逻辑型 注释 = "传递曲线为直线(线性光)时为真。" 折叠 @嵌入式方法 = "">
+    {
+        @ (sk_colorspace_gamma_is_linear((const sk_colorspace_t*)@sn<this>.@n<Skia颜色空间.对象指针>) != 0)
+    }
+
+    方法 取数值传递函数 <公开 类型 = 逻辑型 注释 = "可数值化时把 28 字节参数写入 结果传递函数; 参数式/查表式曲线返回假。">
+    参数 结果传递函数 <类型 = Skia传递函数>
+    {
+        变量 句柄 <类型 = 变整数>
+        变量 结果 <类型 = 逻辑型>
+        句柄 = 对象指针
+        @ @<结果> = (sk_colorspace_is_numerical_transfer_fn((const sk_colorspace_t*)@<句柄>, (sk_colorspace_transfer_fn_t*)@<结果传递函数>.@n<Skia传递函数.数据>.GetPtr()) != 0);
+        返回 (结果)
+    }
+
+    方法 取色度矩阵 <公开 类型 = 逻辑型 注释 = "输出到 XYZ D50 的 3x3 矩阵写入 结果矩阵; 非 RGB 空间返回假。">
+    参数 结果矩阵 <类型 = Skia色度矩阵>
+    {
+        变量 句柄 <类型 = 变整数>
+        变量 结果 <类型 = 逻辑型>
+        句柄 = 对象指针
+        @ @<结果> = (sk_colorspace_to_xyzd50((const sk_colorspace_t*)@<句柄>, (sk_colorspace_xyz_t*)@<结果矩阵>.@n<Skia色度矩阵.数据>.GetPtr()) != 0);
+        返回 (结果)
+    }
+
+    方法 转线性传递 <公开 类型 = Skia颜色空间 注释 = "返回同色度、线性传递的新对象(原对象不变)。">
+    {
+        变量 结果 <类型 = Skia颜色空间>
+        变量 句柄 <类型 = 变整数>
+        变量 新指针 <类型 = 变整数>
+        句柄 = 对象指针
+        @ @<新指针> = (intptr_t)sk_colorspace_make_linear_gamma((const sk_colorspace_t*)@<句柄>);
+        如果 (新指针 == 0)
+        {
+            返回 (结果)
+        }
+        结果.对象指针 = 新指针
+        返回 (结果)
+    }
+
+    方法 转sRGB传递 <公开 类型 = Skia颜色空间 注释 = "返回同色度、sRGB 传递的新对象(原对象不变)。">
+    {
+        变量 结果 <类型 = Skia颜色空间>
+        变量 句柄 <类型 = 变整数>
+        变量 新指针 <类型 = 变整数>
+        句柄 = 对象指针
+        @ @<新指针> = (intptr_t)sk_colorspace_make_srgb_gamma((const sk_colorspace_t*)@<句柄>);
+        如果 (新指针 == 0)
+        {
+            返回 (结果)
+        }
+        结果.对象指针 = 新指针
+        返回 (结果)
+    }
+
+    方法 是否sRGB <公开 类型 = 逻辑型 注释 = "是否等价于标准 sRGB。" 折叠 @嵌入式方法 = "">
+    {
+        @ (sk_colorspace_is_srgb((const sk_colorspace_t*)@sn<this>.@n<Skia颜色空间.对象指针>) != 0)
+    }
+
+    方法 是否相同 <公开 类型 = 逻辑型 注释 = "与另一颜色空间逐字段比较; 任一为空对象返回假。">
+    参数 另一颜色空间 <类型 = Skia颜色空间>
+    {
+        变量 句柄 <类型 = 变整数>
+        变量 另一句柄 <类型 = 变整数>
+        变量 结果 <类型 = 逻辑型>
+        句柄 = 对象指针
+        另一句柄 = 另一颜色空间.对象指针
+        @ @<结果> = (sk_colorspace_equals((const sk_colorspace_t*)@<句柄>, (const sk_colorspace_t*)@<另一句柄>) != 0);
+        返回 (结果)
+    }
+}
