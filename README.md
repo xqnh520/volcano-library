@@ -56,6 +56,36 @@ git push
 
 `* -text`：禁止 git 转换换行符，保证文件逐字节一致，客户端 SHA256 校验才可靠。
 
+## 可选：类库文件走对象存储 / CDN（加速下载）
+
+默认客户端从 git 仓库整包拉取（1.2GB，国内较慢）。把类库文件同步到 S3 兼容存储后，
+清单仍走 git（只有 6MB），文件按需逐个下载，速度取决于 CDN，且二次安装只补缺失文件。
+
+1. 装 [rclone](https://rclone.org/downloads/)，按 `scripts/rclone.conf.sample` 配好 remote（R2 / COS / OSS / MinIO）
+2. 同步文件并确保桶是公共读：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\upload.ps1 -Remote r2:volcano-library
+```
+
+3. 带上托管地址重新生成清单，提交推送：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\gen-index.ps1 -StorageBase https://cdn.example.com/volcano-library
+git add -A; git commit -m "清单切换到 CDN 托管"; git push
+```
+
+清单里会多出：
+
+```json
+"storage": { "type": "http", "base": "https://cdn.example.com/volcano-library" }
+```
+
+单个模块想用不同地址（比如 occt 单独放另一个桶），在该模块 `module.json` 里加 `"base": "https://..."` 即可覆盖全局。
+
+客户端行为：`storage.base` 存在 → 按文件列表逐个下载并校验 SHA256，缓存到
+`%LOCALAPPDATA%\VolLibHub\cache\files\仓库\平台\模块\版本`；没有该字段 → 回落 git 整包模式。
+
 ## 客户端读取方式
 
 优先 `git clone --depth 1` / `git pull` 到本地缓存；git 不可用时降级为 GitHub zip 归档下载。

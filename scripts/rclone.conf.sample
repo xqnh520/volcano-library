@@ -1,0 +1,40 @@
+# rclone 配置样例：把内容合并进 %APPDATA%\rclone\rclone.conf
+# 三个任选其一，remote 名字要和 upload.ps1 的 -Remote 对应
+
+# ---------- Cloudflare R2（10GB 免费存储，出流量免费，推荐）----------
+# 先建桶 volcano-library，桶设置里开启 Public Access（或用自定义域名 + CDN）
+[r2]
+type = s3
+provider = Cloudflare
+access_key_id = <R2 Access Key ID>
+secret_access_key = <R2 Secret Access Key>
+endpoint = https://<accountid>.r2.cloudflarestorage.com
+acl = public-read
+
+# ---------- 腾讯云 COS（国内高速）----------
+# 桶权限设为「公有读私有写」，否则客户端拿不到文件
+[cos]
+type = s3
+provider = TencentCOS
+access_key_id = <SecretId>
+secret_access_key = <SecretKey>
+endpoint = https://cos.ap-guangzhou.myqcloud.com
+acl = public-read
+
+# ---------- 阿里云 OSS ----------
+[oss]
+type = s3
+provider = Alibaba
+access_key_id = <AccessKeyId>
+secret_access_key = <AccessKeySecret>
+endpoint = https://oss-cn-hangzhou.aliyuncs.com
+acl = public-read
+
+# ---------- 自建 MinIO / 任意 S3 兼容 ----------
+[minio]
+type = s3
+provider = Other
+access_key_id = <key>
+secret_access_key = <secret>
+endpoint = http://192.168.1.10:9000
+acl = public-read

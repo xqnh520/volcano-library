@@ -1,6 +1,7 @@
 ﻿param(
     [string]$RepoRoot = (Split-Path -Parent $PSScriptRoot),
-    [string]$OutFile = 'index.json'
+    [string]$OutFile = 'index.json',
+    [string]$StorageBase = ''
 )
 
 $ErrorActionPreference = 'Stop'
@@ -17,6 +18,7 @@ foreach ($platform in $platforms) {
         $desc = ''
         $author = ''
         $entry = ''
+        $moduleBase = ''
 
         $metaPath = Join-Path $moduleDir.FullName 'module.json'
         if (Test-Path $metaPath) {
@@ -26,6 +28,7 @@ foreach ($platform in $platforms) {
             if ($meta.desc) { $desc = $meta.desc }
             if ($meta.author) { $author = $meta.author }
             if ($meta.entry) { $entry = $meta.entry }
+            if ($meta.base) { $moduleBase = $meta.base }
         }
 
         $files = New-Object System.Collections.ArrayList
@@ -43,7 +46,7 @@ foreach ($platform in $platforms) {
             })
         }
 
-        [void]$modules.Add([pscustomobject]@{
+        $moduleObj = [pscustomobject]@{
             name     = $name
             platform = $platform
             version  = $version
@@ -52,7 +55,9 @@ foreach ($platform in $platforms) {
             path     = "$platform/$($moduleDir.Name)"
             entry    = $entry
             files    = $files
-        })
+        }
+        if ($moduleBase) { $moduleObj | Add-Member -NotePropertyName base -NotePropertyValue $moduleBase -Force }
+        [void]$modules.Add($moduleObj)
 
         Write-Host ("[{0}] {1} {2} - {3} 个文件" -f $platform, $name, $version, $files.Count)
     }
